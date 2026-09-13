@@ -4,7 +4,7 @@
 
 This repository preserves the historical origin, recovered chronology, cryptographic custody, structural fingerprinting, causal-topology experiments, external-population testing, external rarity and reproducibility record associated with the RSOS architecture lineage.
 
-**Documented author / architecture lineage:** R.·A. Elu
+**Documented author / architecture lineage:** R.·A. Elu Architect
 
 ---
 
