@@ -1,12 +1,8 @@
-# RSOS-Architecture-Origin-Provenance-and-Lineage-Evidence
-Canonical provenance and forensic evidence for the RSOS → RSSO → RSIA → RSX architecture lineage: historical origin, recovered chronology, cryptographic custody, structural fingerprinting, causal-topology experiments, external rarity, and reproducible validation.
-
-
 # RSOS Architecture — Origin, Provenance and Lineage Evidence
 
 **Canonical provenance and forensic evidence for the RSOS → RSSO → RSIA → RSX architecture lineage.**
 
-This repository preserves the historical origin, recovered chronology, cryptographic custody, structural fingerprinting, causal-topology experiments, external-population testing, and reproducibility record associated with the RSOS architecture lineage.
+This repository preserves the historical origin, recovered chronology, cryptographic custody, structural fingerprinting, causal-topology experiments, external-population testing, external rarity and reproducibility record associated with the RSOS architecture lineage.
 
 **Documented author / architecture lineage:** R.·A. Elu
 
