@@ -1,0 +1,183 @@
+{
+  "experiment": "V8_COMPOSITIONAL_STRUCTURAL_CONTROL_CODE",
+  "completed_utc": "2026-09-10T21:09:27.682529+00:00",
+  "model": "gpt-5.6-luna",
+  "runner_sha256": "62f548906e26ee7b87a9354a631dc11c851e7ddb6d1af264c23620e61807dbb6",
+  "specification_sha256": "964cb4e78dd897bb492540af0bf6ccb71c071c3906b03a2b4fcd11cfb127387c",
+  "factor_names": [
+    "DIRECTION",
+    "ORDER",
+    "META_CONTROL",
+    "PRESERVATION",
+    "TERMINAL"
+  ],
+  "all_combinations": 32,
+  "training_combinations": 24,
+  "structurally_unseen_combinations": 8,
+  "development_seeds": 40,
+  "final_seeds": 20,
+  "n_reps": 3,
+  "expected_calls": 5760,
+  "successful_unique_cells": 5760,
+  "missing_cells": 0,
+  "seen_confirmation_R2": {
+    "RETURN": 0.03828829033581249,
+    "RECURRENCE": 0.012703151645273358,
+    "GENERATIVE_REUSE": 0.07015376755311731,
+    "META_CONTROL": 0.9409353386622844,
+    "PRESERVATION": 0.9622734134094004,
+    "COMPRESSION": 0.6506178218148557,
+    "TRANSFORMATION": 0.35682462130879866,
+    "CAUSAL": 0.3534089090423337
+  },
+  "seen_confirmation_mean_R2": 0.4231506642214845,
+  "unseen_combination_R2": {
+    "RETURN": -0.009099235698619035,
+    "RECURRENCE": 0.0,
+    "GENERATIVE_REUSE": -0.03834720906511069,
+    "META_CONTROL": 0.9235784970384706,
+    "PRESERVATION": 0.9665792650879037,
+    "COMPRESSION": 0.6789232749566845,
+    "TRANSFORMATION": 0.19273393175920606,
+    "CAUSAL": 0.3034966609588996
+  },
+  "unseen_combination_mean_R2": 0.37723314812967934,
+  "unseen_standardized_mean_cosine": 0.6660427231604527,
+  "prediction_null_permutations": 2000,
+  "prediction_null_p": 0.0004997501249375312,
+  "factor_decoding": [
+    {
+      "factor": "DIRECTION",
+      "balanced_accuracy": 0.9437500000000001,
+      "chance_reference": 0.5
+    },
+    {
+      "factor": "ORDER",
+      "balanced_accuracy": 0.5125,
+      "chance_reference": 0.5
+    },
+    {
+      "factor": "META_CONTROL",
+      "balanced_accuracy": 0.9654973649538867,
+      "chance_reference": 0.5
+    },
+    {
+      "factor": "PRESERVATION",
+      "balanced_accuracy": 0.8087819743281929,
+      "chance_reference": 0.5
+    },
+    {
+      "factor": "TERMINAL",
+      "balanced_accuracy": 0.575,
+      "chance_reference": 0.5
+    }
+  ],
+  "macro_factor_balanced_accuracy": 0.761105867856416,
+  "exact_five_bit_code_accuracy": 0.175,
+  "random_exact_code_reference": 0.03125,
+  "interaction_replication": [
+    {
+      "interaction": "DIRECTION_X_ORDER",
+      "development_coefficient": -0.17042514176779622,
+      "development_holm_p": 0.744345113097738,
+      "final_coefficient": -0.12507508221671526,
+      "final_holm_p": 1.0,
+      "same_sign": true,
+      "REPLICATED": false
+    },
+    {
+      "interaction": "DIRECTION_X_META_CONTROL",
+      "development_coefficient": 0.3042270857254945,
+      "development_holm_p": 0.1740565188696226,
+      "final_coefficient": 0.26713127260037123,
+      "final_holm_p": 0.5315893682126358,
+      "same_sign": true,
+      "REPLICATED": false
+    },
+    {
+      "interaction": "DIRECTION_X_PRESERVATION",
+      "development_coefficient": -0.038281238570963584,
+      "development_holm_p": 1.0,
+      "final_coefficient": 0.004163905100368195,
+      "final_holm_p": 1.0,
+      "same_sign": false,
+      "REPLICATED": false
+    },
+    {
+      "interaction": "DIRECTION_X_TERMINAL",
+      "development_coefficient": 0.05615068640148781,
+      "development_holm_p": 1.0,
+      "final_coefficient": 0.0825862181344327,
+      "final_holm_p": 1.0,
+      "same_sign": true,
+      "REPLICATED": false
+    },
+    {
+      "interaction": "ORDER_X_META_CONTROL",
+      "development_coefficient": -0.33237461689620157,
+      "development_holm_p": 0.003599928001439971,
+      "final_coefficient": -0.21826659594774495,
+      "final_holm_p": 1.0,
+      "same_sign": true,
+      "REPLICATED": false
+    },
+    {
+      "interaction": "ORDER_X_PRESERVATION",
+      "development_coefficient": -0.053374902794651534,
+      "development_holm_p": 1.0,
+      "final_coefficient": 0.09014165913204274,
+      "final_holm_p": 1.0,
+      "same_sign": false,
+      "REPLICATED": false
+    },
+    {
+      "interaction": "ORDER_X_TERMINAL",
+      "development_coefficient": 0.15242576667931002,
+      "development_holm_p": 0.6243875122497551,
+      "final_coefficient": -0.0638917538424817,
+      "final_holm_p": 1.0,
+      "same_sign": false,
+      "REPLICATED": false
+    },
+    {
+      "interaction": "META_CONTROL_X_PRESERVATION",
+      "development_coefficient": 0.2864389239931599,
+      "development_holm_p": 0.31823363532729343,
+      "final_coefficient": 0.22890875249128437,
+      "final_holm_p": 0.6530269394612108,
+      "same_sign": true,
+      "REPLICATED": false
+    },
+    {
+      "interaction": "META_CONTROL_X_TERMINAL",
+      "development_coefficient": -0.03449836686181168,
+      "development_holm_p": 1.0,
+      "final_coefficient": -0.1804787526077045,
+      "final_holm_p": 1.0,
+      "same_sign": true,
+      "REPLICATED": false
+    },
+    {
+      "interaction": "PRESERVATION_X_TERMINAL",
+      "development_coefficient": -0.11549812677990927,
+      "development_holm_p": 1.0,
+      "final_coefficient": 0.009641475954320012,
+      "final_holm_p": 1.0,
+      "same_sign": false,
+      "REPLICATED": false
+    }
+  ],
+  "replicated_pairwise_interactions": 0,
+  "unseen_token_R2": 0.7837937583593972,
+  "prediction_gate": false,
+  "decoder_gate": false,
+  "interaction_gate": false,
+  "classification": "PARTIAL_COMPOSITIONAL_STRUCTURAL_CONTROL_CODE",
+  "token_usage": {
+    "input_tokens": 1326240,
+    "output_tokens": 804004
+  },
+  "estimated_cost_usd": 1.2300528000000002,
+  "interpretation": "V8 asks whether a five-coordinate structural grammar behaves as a compositional behavioral control code. The strongest evidence would be successful prediction and decoding of structural combinations that were completely excluded from model fitting, together with independently replicated non-additive interactions.",
+  "hard_boundary": "Even a strong V8 result demonstrates behavioral compositional organization under frozen black-box interventions. It does not by itself prove that RSOS modified global model weights or identify the internal neural mechanism."
+}

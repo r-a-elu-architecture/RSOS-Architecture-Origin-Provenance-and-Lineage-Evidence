@@ -1,0 +1,61 @@
+{
+  "record_type": "WF3_BOUNDARY1_SEMANTIC_REPORTING_CORRECTION",
+  "correction_id": "WF3-B1-TF-001",
+  "affected_phase": "PHASE9A",
+  "affected_artifact": "C:\\RSOS\\RSOS_EXPERIMENTS_WF3_GENEALOGY_POPULATION_CONFIRMATION_R2\\00_CONTROL\\WF3_R2_CANONICAL_AUTHORITY_INTAKE.json",
+  "original_boundary_manifest": "C:\\RSOS\\RSOS_EXPERIMENTS_WF3_GENEALOGY_POPULATION_CONFIRMATION_R2\\09_FREEZE\\WF3_R2_BOUNDARY1_PREREGISTRATION_SHA256.csv",
+  "original_boundary_manifest_sha256": "f3ecb6960edd2b14bd0a58d9d9b0db41c757eeb3edff2da7ddd9d3f0002676b5",
+  "defect_class": "REPORTING_COUNT_SEMANTICS",
+  "defect": "Phase 9A counted canonical file-reference rows by ENTITY_TYPE and labeled those counts as experiment/run entities. The selected canonical references and unique entity membership were not changed.",
+  "scientific_input_changed": false,
+  "canonical_reference_selection_changed": false,
+  "preregistration_scientific_rules_changed": false,
+  "scientific_execution_occurred": false,
+  "original_boundary1_status": "PRESERVED_VALID_FOR_ORIGINAL_BYTES_BUT_SEMANTIC_INTAKE_SUPERSEDED",
+  "replacement_boundary": "WF3_R2_BOUNDARY_1_R2",
+  "correct_v15": {
+    "reference_files": 2933,
+    "experiment_file_references": 2645,
+    "run_file_references": 288,
+    "unique_experiment_entities": 7,
+    "unique_run_entities": 8,
+    "experiment_ids": [
+      "EXP-002",
+      "EXP-008",
+      "EXP-009",
+      "EXP-010",
+      "EXP-013",
+      "EXP-014",
+      "EXP-016"
+    ],
+    "run_ids": [
+      "RUN-001",
+      "RUN-002",
+      "RUN-003",
+      "RUN-004",
+      "RUN-005",
+      "RUN-006",
+      "RUN-007",
+      "RUN-008"
+    ]
+  },
+  "correct_v16": {
+    "reference_files": 2877,
+    "experiment_file_references": 2633,
+    "run_file_references": 244,
+    "unique_experiment_entities": 5,
+    "unique_run_entities": 2,
+    "experiment_ids": [
+      "EXP-010",
+      "EXP-011",
+      "EXP-012",
+      "EXP-015",
+      "EXP-016"
+    ],
+    "run_ids": [
+      "RUN-009",
+      "RUN-010"
+    ]
+  },
+  "created_utc": "2026-09-15T21:46:20.364726+00:00"
+}

@@ -1,0 +1,29 @@
+F1-DEV R4 — CORRECTED V12 GRAPH CALIBRATION
+
+Runner SHA256: 3ca461e8c4ab134c5fb17e33ae98da776bc3c237d33f0e3a1e79bcade072deb7
+Model SHA256: 8b66796db58164e5a92d7932be257d84319d4c8298be542eb09f3e703ec36fcd
+
+UNIT TESTS:
+                                        TEST    N  VALUE  FAILURES STATUS                                                                               NOTE
+               ISOMORPHIC_RELABEL_INVARIANCE 1000    0.0         0   PASS     Rounded invariant feature vector must be exactly identical under node relabel.
+                     THREE_CYCLE_COUNT_EXACT    1    1.0         0   PASS                                          No divide-by-three correction is applied.
+EDGE_COUNT_EXCLUDED_FROM_CLASSIFIER_FEATURES    1    0.0         0   PASS Prevents deletion-like conditions from being classified by trivial raw edge count.
+
+AUTHENTIC PERTURBATION SUMMARY:
+                  FAMILY   N  DETECTION_RATE  MEDIAN_L1  MEDIAN_L2  MEDIAN_CHANGED_FEATURES
+DEGREE_PRESERVING_REWIRE 500             1.0   2.386493   1.437185                      6.0
+  DELETE_ADD_COMPENSATED 500             1.0   2.466027   1.244627                      7.0
+                 REVERSE  10             1.0   2.550665   1.332863                      6.5
+
+Unseen-base-topology AUC: 0.987451
+Base graph overlap train/test: 0
+
+LEAVE-PERTURBATION-FAMILY-OUT:
+         HELD_OUT_FAMILY      AUC  TRAIN_BASES  TEST_BASES  BASE_OVERLAP   STATUS
+                 REVERSE 0.988417          941         259             0 MEASURED
+  DELETE_ADD_COMPENSATED 1.000000          941         259             0 MEASURED
+DEGREE_PRESERVING_REWIRE 0.971042          941         259             0 MEASURED
+
+RSOS-SPECIFIC STATUS: UNTESTED
+V12 GRAPH EXTRACTOR: DEVELOPMENT CALIBRATION ONLY
+00086 EXTERNAL CONTROLS READ: NO

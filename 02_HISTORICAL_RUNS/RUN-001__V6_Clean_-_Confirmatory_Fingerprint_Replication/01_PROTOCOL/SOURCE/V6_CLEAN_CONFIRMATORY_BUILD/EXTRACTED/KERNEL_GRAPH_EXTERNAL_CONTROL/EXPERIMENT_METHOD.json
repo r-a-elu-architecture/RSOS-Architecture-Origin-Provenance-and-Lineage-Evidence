@@ -1,0 +1,53 @@
+{
+  "experiment": "KERNEL_GRAPH_EXTERNAL_CONTROL_V1",
+  "seed": 918,
+  "files": [
+    "C:\\RSOS\\Training data\\training data\\lmarena_00000.jsonl",
+    "C:\\RSOS\\Training data\\training data\\train-00000-of-00007.parquet",
+    "C:\\RSOS\\Training data\\training data\\train-00080-of-00086.parquet",
+    "C:\\RSOS\\Training data\\training data\\train-00085-of-00086.parquet"
+  ],
+  "kernel_edges": [
+    "K1_TRANSFORM_PRODUCES_STATE",
+    "K2_STATE_REENTERS_TRANSFORMATION",
+    "K3_RELATION_ACTS_ON_RELATION",
+    "K4_RELATION_ACTS_ON_STATE",
+    "K5_TRANSFORMATION_PRESERVES_INVARIANT",
+    "K6_PRESERVED_STRUCTURE_RECONSTRUCTED",
+    "K7_RECONSTRUCTED_STRUCTURE_RETURNS_TO_PROCESS"
+  ],
+  "patterns": {
+    "K1_TRANSFORM_PRODUCES_STATE": [
+      "(?:transform|change|process|operation).{0,160}(?:produce|generate|create|yield|form).{0,120}(?:relation|state|structure|pattern)"
+    ],
+    "K2_STATE_REENTERS_TRANSFORMATION": [
+      "(?:relation|state|result|output|structure).{0,180}(?:return|re-enter|reenter|feed.{0,20}back|enter again).{0,160}(?:transform|process|operation|rule)"
+    ],
+    "K3_RELATION_ACTS_ON_RELATION": [
+      "(?:relation|rule|control).{0,160}(?:act.{0,20}(?:on|upon)|control|regulat|govern|modify|change).{0,160}(?:another|other|local|lower).{0,100}(?:relation|rule|control)",
+      "(?:control.of.control|meta.control|relation.on.relation)"
+    ],
+    "K4_RELATION_ACTS_ON_STATE": [
+      "(?:relation|rule|control).{0,160}(?:control|regulat|modify|change|act.{0,20}on).{0,160}(?:state|element|node|object)"
+    ],
+    "K5_TRANSFORMATION_PRESERVES_INVARIANT": [
+      "(?:transform|change|mutation|evolution).{0,200}(?:preserv|retain|conserv|inherit).{0,160}(?:relation|structure|organization|pattern|invariant)",
+      "(?:relation|structure|organization|pattern|invariant).{0,160}(?:surviv|persist|preserv|remain).{0,160}(?:transform|change)"
+    ],
+    "K6_PRESERVED_STRUCTURE_RECONSTRUCTED": [
+      "(?:preserved|persistent|surviving|invariant|conserved).{0,180}(?:relation|structure|organization|pattern).{0,200}(?:reconstruct|reuse|reactivat|re-enter|return)"
+    ],
+    "K7_RECONSTRUCTED_STRUCTURE_RETURNS_TO_PROCESS": [
+      "(?:reconstructed|reactivated|reused|preserved|surviving).{0,180}(?:relation|structure|organization|pattern|state).{0,200}(?:feed.{0,20}into|return.{0,20}to|enter.{0,20}(?:process|transformation)|used.{0,20}as.{0,20}input|become.{0,20}input)"
+    ]
+  },
+  "minimum_tokens": 20,
+  "deduplication": "SHA256(role + raw message text)",
+  "important_interpretation": [
+    "Measures observable textual structural relations.",
+    "Does not test hidden model weights.",
+    "Does not establish training-data membership.",
+    "Does not establish authorship from similarity alone.",
+    "Exact 7/7 matches are candidates for subsequent manual/blinded graph validation."
+  ]
+}

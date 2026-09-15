@@ -1,0 +1,32 @@
+WF1-A V12-R R1
+S2 OUTCOME-LEVEL STRUCTURED-MISSINGNESS SENSITIVITY
+========================================================================
+
+Frozen runner SHA256: 17c25511463d842b7b312aa3bf31bb31703cb1d2336bcaa6f8d5915bb016a1f2
+API calls: 0
+Imputation: NONE
+Additional R1 collection: NONE
+
+Original final observed main cells: 8131 / 8160
+Persistent missing cells: 29 / 8160
+
+Seeds with any 3/3 missing condition: [1087, 1104, 1130, 1153]
+Seeds touched by any missing cell: [1086, 1087, 1090, 1098, 1101, 1104, 1122, 1130, 1132, 1133, 1136, 1142, 1143, 1148, 1153]
+
+SCENARIO COMPARISON
+------------------------------------------------------------------------
+          SCENARIO  SEEDS  DEV  CONF  HOLD  OBSERVED_MAIN_CELLS                                    CLASSIFICATION  PRIMARY_STRONG_GATE  HARD_AUC_CONFIRMATION  HARD_AUC_FINAL  PURE9_DELETE_CONF_EXCESS  PURE9_DELETE_CONF_HOLM_P  PURE9_DELETE_FINAL_EXCESS  PURE9_DELETE_FINAL_HOLM_P  PURE8_REVERSE_CONF_EXCESS  PURE8_REVERSE_CONF_HOLM_P  PURE8_REVERSE_FINAL_EXCESS  PURE8_REVERSE_FINAL_HOLM_P NATIVE_TRIANGULATED
+S2A_GROUP_COMPLETE     76   38    19    19                 7738 STRONG_REPLICATED_RELATIONAL_TOPOLOGY_FINGERPRINT                 True                    1.0             1.0                 11.951808                    0.0005                  11.967098                    0.00050                  12.224285                     0.0005                   12.003096                     0.00050                None
+ S2B_SEED_COMPLETE     65   34    15    16                 6630 STRONG_REPLICATED_RELATIONAL_TOPOLOGY_FINGERPRINT                 True                    1.0             1.0                 11.140982                    0.0007                  11.531883                    0.00075                  11.630936                     0.0009                   11.785303                     0.00075                None
+
+ROBUSTNESS GATES
+------------------------------------------------------------------------
+Same classification across S2-A/S2-B: True
+Strong primary gate passes both: True
+Hard-control AUC >= 0.85 in CONF+HOLD for both: True
+
+INTERPRETATION BOUNDARY
+------------------------------------------------------------------------
+These are deletion sensitivities using exact frozen R1 analysis functions.
+No missing response is fabricated, imputed, replaced, or resampled.
+A robust result here means the core inference survives the observed structured missingness under both available-group and fully-balanced-seed restrictions.

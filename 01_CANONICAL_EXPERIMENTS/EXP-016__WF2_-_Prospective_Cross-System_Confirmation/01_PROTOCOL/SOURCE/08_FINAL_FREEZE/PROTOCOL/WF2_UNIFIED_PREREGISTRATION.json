@@ -1,0 +1,81 @@
+{
+  "context_adapter": {
+    "direct_names": "SAME_LENGTH_SPACE_REDACTION",
+    "historical_context_scored": false,
+    "max_historical_messages": 12,
+    "pairwise_per_message_character_cap": 2000,
+    "selection": "LAST_COMMON_MESSAGES"
+  },
+  "experiment": "WF2 — PROSPECTIVE CROSS-SYSTEM CONFIRMATION",
+  "generation_cells": 480,
+  "historical_authority": {
+    "cem_nuisance_control": "EXCLUDED_FROM_VALID_MATCHED_CONTROL_EVIDENCE",
+    "confirmatory": [
+      "OPERATOR_RELATIONAL_V2",
+      "SURFACE_FREE",
+      "R1_COMPATIBLE"
+    ],
+    "length_robustness": [
+      "WINDOW8_DETERMINISTIC_V2",
+      "WINDOW12_DETERMINISTIC_V2"
+    ],
+    "primary_detector": "JOINT_MULTILAYER_V2",
+    "source_set_sha256": "c43e54e5697fe6e35982ef4a559f909068f76e822edb7c6b172f536ef74090b5",
+    "wf1b_sha256": "a5da5ffbb3c2ba71bbc2c17894fa97f8fec5b4c712e0714534517c5b54cedee3"
+  },
+  "maximum_assistant_api_responses": 2880,
+  "modules": {
+    "WF2_A_V13": {
+      "hypothesis": "Frozen historical lineage detector yields higher prospective margins for LINEAGE_POS than matched negatives.",
+      "name": "Prospective Frozen Signature"
+    },
+    "WF2_B_V14": {
+      "hypothesis": "Prospective separation replicates on both Anthropic and Google independent provider families.",
+      "name": "Independent Provider Replication"
+    },
+    "WF2_C_V17": {
+      "hypothesis": "Prospective separation remains directionally measurable under preregistered domain and surface transformations.",
+      "name": "Cross-Domain / Surface Invariance"
+    }
+  },
+  "post_freeze_changes": "PROHIBITED_AFTER_FIRST_PROSPECTIVE_OUTPUT",
+  "prospective_unit": {
+    "fixed_user_probes": 6,
+    "generated_assistant_responses": 6,
+    "total_scored_turns": 12
+  },
+  "providers": {
+    "ANTHROPIC": {
+      "conditions": [
+        "BASELINE"
+      ],
+      "model_id": "claude-sonnet-5",
+      "organization": "Anthropic",
+      "reasoning": "thinking_omitted",
+      "role": "INDEPENDENT_PROVIDER_REPLICATION"
+    },
+    "GOOGLE": {
+      "conditions": [
+        "BASELINE"
+      ],
+      "model_id": "gemini-3.8-flash",
+      "organization": "Google",
+      "reasoning": "low",
+      "role": "INDEPENDENT_PROVIDER_REPLICATION"
+    },
+    "OPENAI": {
+      "conditions": [
+        "BASELINE",
+        "DOMAIN_TECHNICAL",
+        "DOMAIN_ORGANIZATIONAL",
+        "DOMAIN_EDUCATIONAL"
+      ],
+      "model_id": "gpt-5.6-terra",
+      "organization": "OpenAI",
+      "reasoning": "none",
+      "role": "SAME_PROVIDER_PROSPECTIVE"
+    }
+  },
+  "sampling_parameters": "TEMPERATURE_TOP_P_TOP_K_OMITTED",
+  "tools_browsing_retrieval": "DISABLED"
+}

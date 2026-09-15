@@ -1,0 +1,681 @@
+{
+  "cell_id": "0d0dfbc7e2d336d734347e97",
+  "provider": "OPENAI",
+  "organization": "OpenAI",
+  "model_requested": "gpt-5.6-terra",
+  "condition": "DOMAIN_EDUCATIONAL",
+  "blind_context_id": "75f8ef7df7bb2abbd6103c5b",
+  "status": "COMPLETE",
+  "failure": null,
+  "provider_responses": [
+    {
+      "turn": 1,
+      "text": "The main issue is that the instructions became confused and incomplete. Instead of staying focused on the simple request, the response jumped into an unrelated, highly detailed design plan with missing text and unclear placeholders.\n\nFor a student learning something difficult, this is like asking, “Can you show me how loops work?” and receiving half of a chapter about building a video game—without first explaining what a loop is.\n\nA better approach would be:\n\n1. Identify the exact question being asked.\n2. Give a clear, direct answer first.\n3. Explain unfamiliar terms step by step.\n4. Add advanced ideas only after the basics are understood.\n5. Avoid incomplete examples, missing labels, or unrelated details.\n\nIn difficult subjects, clarity matters more than adding lots of technical material.",
+      "provider_metadata": {
+        "id": "resp_0e73a97c88c37a92016aa92e7204c487d28e50d96459ff75a7",
+        "created_at": 1789472370.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_0e73a97c88c37a92016aa92e72ae2c87d2a4abcf2b330a39b2",
+            "content": [
+              {
+                "annotations": [],
+                "text": "The main issue is that the instructions became confused and incomplete. Instead of staying focused on the simple request, the response jumped into an unrelated, highly detailed design plan with missing text and unclear placeholders.\n\nFor a student learning something difficult, this is like asking, “Can you show me how loops work?” and receiving half of a chapter about building a video game—without first explaining what a loop is.\n\nA better approach would be:\n\n1. Identify the exact question being asked.\n2. Give a clear, direct answer first.\n3. Explain unfamiliar terms step by step.\n4. Add advanced ideas only after the basics are understood.\n5. Avoid incomplete examples, missing labels, or unrelated details.\n\nIn difficult subjects, clarity matters more than adding lots of technical material.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789472373.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 842,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 157,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 999
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 2,
+      "text": "The most important part is **starting with the student’s exact question before introducing anything more advanced**.\n\nWhen someone is learning a difficult topic, they need a stable starting point. If they ask about one small concept but receive a large amount of unrelated information, they may feel lost—even if the extra material is technically correct.\n\nThink of learning as climbing stairs. You cannot safely jump to the fifth step if the first few steps have not been explained. A strong explanation first determines:\n\n- What does the student already know?\n- What single idea are they asking about?\n- What is the simplest accurate answer?\n- What example will make that idea concrete?\n\nFor example, rather than presenting a full project, technical vocabulary, and advanced options immediately, begin with a short explanation of the one requested concept. Then show a small example. After that, explain why the example works. Only then should you connect it to larger or more advanced applications.\n\nThis approach prevents three common problems:\n\n1. **Cognitive overload**  \n   Too many new terms and ideas at once make it difficult to tell what matters.\n\n2. **Loss of relevance**  \n   The student’s original question can disappear beneath information they did not ask for.\n\n3. **False understanding**  \n   A learner might recognize advanced words or copy an example without actually understanding the foundation.\n\nThe best teaching sequence is:\n\n> **Question → direct answer → simple example → explanation → next step**\n\nThis keeps the learner oriented. It turns a difficult subject from something that feels like a wall of information into a sequence of manageable ideas.",
+      "provider_metadata": {
+        "id": "resp_0bab1536b6c4c223016aa92e75b07887d29906fd7b82417138",
+        "created_at": 1789472373.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_0bab1536b6c4c223016aa92e76516887d2b0aa4299fc9903c6",
+            "content": [
+              {
+                "annotations": [],
+                "text": "The most important part is **starting with the student’s exact question before introducing anything more advanced**.\n\nWhen someone is learning a difficult topic, they need a stable starting point. If they ask about one small concept but receive a large amount of unrelated information, they may feel lost—even if the extra material is technically correct.\n\nThink of learning as climbing stairs. You cannot safely jump to the fifth step if the first few steps have not been explained. A strong explanation first determines:\n\n- What does the student already know?\n- What single idea are they asking about?\n- What is the simplest accurate answer?\n- What example will make that idea concrete?\n\nFor example, rather than presenting a full project, technical vocabulary, and advanced options immediately, begin with a short explanation of the one requested concept. Then show a small example. After that, explain why the example works. Only then should you connect it to larger or more advanced applications.\n\nThis approach prevents three common problems:\n\n1. **Cognitive overload**  \n   Too many new terms and ideas at once make it difficult to tell what matters.\n\n2. **Loss of relevance**  \n   The student’s original question can disappear beneath information they did not ask for.\n\n3. **False understanding**  \n   A learner might recognize advanced words or copy an example without actually understanding the foundation.\n\nThe best teaching sequence is:\n\n> **Question → direct answer → simple example → explanation → next step**\n\nThis keeps the learner oriented. It turns a difficult subject from something that feels like a wall of information into a sequence of manageable ideas.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789472379.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 1016,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 318,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 1334
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 3,
+      "text": "Another important aspect is **using complete, concrete examples instead of vague or unfinished material**.\n\nIn a difficult subject, learners rely on examples to connect an abstract explanation to something they can actually follow. If an example has missing pieces, unclear labels, or unexplained terminology, the student has to guess what it means. That guesswork can become more confusing than the original topic.\n\nA helpful example should be:\n\n- **Complete:** It contains all the information needed to understand the point.\n- **Focused:** It demonstrates one main idea at a time.\n- **Annotated:** New parts are identified and explained.\n- **Relevant:** It directly supports the question being asked.\n- **Gradual:** It starts simple and adds complexity only when necessary.\n\nFor instance, imagine teaching a new mathematical operation. A weak explanation might say:\n\n> “Apply the transformation to the input, then use the recursive structure.”\n\nThat uses unfamiliar words without showing what to do.\n\nA stronger explanation would say:\n\n> “Start with a number, such as 4. Add 2 to it, giving 6. Then repeat the same action only if the rule says to continue.”\n\nNow the learner can see the action, the input, and the result. The abstract language can be introduced later, once the process is understandable.\n\nThe key principle is:\n\n> **Do not make the student reconstruct the missing explanation.**\n\nA good teacher supplies the necessary context, shows a working example, and explains each important part.",
+      "provider_metadata": {
+        "id": "resp_0dfdb02445df6fe4016aa92e7ce45487d29f56c8ce7b754030",
+        "created_at": 1789472380.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_0dfdb02445df6fe4016aa92e7d7c0887d29d68d435f0c263dc",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Another important aspect is **using complete, concrete examples instead of vague or unfinished material**.\n\nIn a difficult subject, learners rely on examples to connect an abstract explanation to something they can actually follow. If an example has missing pieces, unclear labels, or unexplained terminology, the student has to guess what it means. That guesswork can become more confusing than the original topic.\n\nA helpful example should be:\n\n- **Complete:** It contains all the information needed to understand the point.\n- **Focused:** It demonstrates one main idea at a time.\n- **Annotated:** New parts are identified and explained.\n- **Relevant:** It directly supports the question being asked.\n- **Gradual:** It starts simple and adds complexity only when necessary.\n\nFor instance, imagine teaching a new mathematical operation. A weak explanation might say:\n\n> “Apply the transformation to the input, then use the recursive structure.”\n\nThat uses unfamiliar words without showing what to do.\n\nA stronger explanation would say:\n\n> “Start with a number, such as 4. Add 2 to it, giving 6. Then repeat the same action only if the rule says to continue.”\n\nNow the learner can see the action, the input, and the result. The abstract language can be introduced later, once the process is understandable.\n\nThe key principle is:\n\n> **Do not make the student reconstruct the missing explanation.**\n\nA good teacher supplies the necessary context, shows a working example, and explains each important part.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789472386.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 1349,
+          "input_tokens_details": {
+            "cache_write_tokens": 1346,
+            "cached_tokens": 0
+          },
+          "output_tokens": 299,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 1648
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 4,
+      "text": "Make explanations usable by giving the learner a small task they can complete immediately.\n\nInstead of saying:\n\n> “Use a complete, focused example.”\n\nShow a format like this:\n\n### 1. State the goal\n\n> “We are learning how to repeat an action until a condition is met.”\n\nThe learner knows exactly what the example is meant to teach.\n\n### 2. Give a complete example\n\n> Start at 1.  \n> Add 1. You now have 2.  \n> Add 1. You now have 3.  \n> Stop when you reach 3.\n\nNothing is left implied: there is a starting value, an action, a rule for repeating it, and a stopping point.\n\n### 3. Label the important parts\n\n- **Starting value:** 1  \n- **Repeated action:** add 1  \n- **Condition for continuing:** current value is less than 3  \n- **Stopping condition:** current value equals 3  \n\nThis helps the learner see the structure rather than just memorizing the sequence.\n\n### 4. Let the learner try one\n\n> Start at 2.  \n> Add 2 each time.  \n> Stop when the value reaches 8.  \n>\n> What values appear?\n\nExpected result:\n\n> 2 → 4 → 6 → 8\n\n### 5. Explain common mistakes\n\n- Stopping too early: ending at 6 instead of continuing to 8.\n- Going too far: continuing after reaching 8.\n- Changing the rule: adding 1 instead of 2.\n- Forgetting the starting value.\n\n### 6. Add one variation\n\nOnce the basic pattern is clear:\n\n> Start at 10. Subtract 3 each time. Stop when the value is 1 or lower.\n\nThis shows that the same underlying structure can work with a different action and condition.\n\nA practical template for any hard topic is:\n\n> **Goal:** What will I understand?  \n> **Example:** Show one complete case.  \n> **Breakdown:** Explain each part.  \n> **Practice:** Give one short task.  \n> **Answer:** Show the correct result.  \n> **Mistakes:** Point out likely errors.  \n> **Extension:** Add one slightly harder variation.\n\nThis makes an explanation concrete because the student can read it, follow it, test their understanding, and identify where they went wrong.",
+      "provider_metadata": {
+        "id": "resp_0efe070da44382f1016aa92e8266dc87d2b4880a9504d34c85",
+        "created_at": 1789472386.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_0efe070da44382f1016aa92e8379fc87d2a58c302b14125d4f",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Make explanations usable by giving the learner a small task they can complete immediately.\n\nInstead of saying:\n\n> “Use a complete, focused example.”\n\nShow a format like this:\n\n### 1. State the goal\n\n> “We are learning how to repeat an action until a condition is met.”\n\nThe learner knows exactly what the example is meant to teach.\n\n### 2. Give a complete example\n\n> Start at 1.  \n> Add 1. You now have 2.  \n> Add 1. You now have 3.  \n> Stop when you reach 3.\n\nNothing is left implied: there is a starting value, an action, a rule for repeating it, and a stopping point.\n\n### 3. Label the important parts\n\n- **Starting value:** 1  \n- **Repeated action:** add 1  \n- **Condition for continuing:** current value is less than 3  \n- **Stopping condition:** current value equals 3  \n\nThis helps the learner see the structure rather than just memorizing the sequence.\n\n### 4. Let the learner try one\n\n> Start at 2.  \n> Add 2 each time.  \n> Stop when the value reaches 8.  \n>\n> What values appear?\n\nExpected result:\n\n> 2 → 4 → 6 → 8\n\n### 5. Explain common mistakes\n\n- Stopping too early: ending at 6 instead of continuing to 8.\n- Going too far: continuing after reaching 8.\n- Changing the rule: adding 1 instead of 2.\n- Forgetting the starting value.\n\n### 6. Add one variation\n\nOnce the basic pattern is clear:\n\n> Start at 10. Subtract 3 each time. Stop when the value is 1 or lower.\n\nThis shows that the same underlying structure can work with a different action and condition.\n\nA practical template for any hard topic is:\n\n> **Goal:** What will I understand?  \n> **Example:** Show one complete case.  \n> **Breakdown:** Explain each part.  \n> **Practice:** Give one short task.  \n> **Answer:** Show the correct result.  \n> **Mistakes:** Point out likely errors.  \n> **Extension:** Add one slightly harder variation.\n\nThis makes an explanation concrete because the student can read it, follow it, test their understanding, and identify where they went wrong.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789472395.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 1663,
+          "input_tokens_details": {
+            "cache_write_tokens": 314,
+            "cached_tokens": 1346
+          },
+          "output_tokens": 486,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2149
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 5,
+      "text": "One thing that might be overlooked is that a “simple” example is not automatically simple for every learner. Even an example such as repeatedly adding numbers assumes the student already understands the symbols, the direction of the process, and what it means to stop based on a rule.\n\nTo make the version more reliable, it should also include a quick check of prerequisites:\n\n> Before starting, make sure the learner understands the starting value, the action being repeated, and the stopping rule.\n\nFor example:\n\n- If “add 2” is unfamiliar, demonstrate it once: `2 + 2 = 4`.\n- If “stop when the value reaches 8” is unclear, explain that 8 is the target and no further step is taken after reaching it.\n- If the learner may confuse “less than” and “less than or equal to,” show both cases explicitly.\n\nAnother possible misunderstanding is treating the template as a rigid formula. Not every subject needs exactly the same sequence. Some topics are best learned through a diagram, comparison, story, physical demonstration, or real-world scenario rather than a number-based procedure.\n\nThe template should therefore be understood as a guide:\n\n> Choose the clearest example format for the idea—not necessarily the same format every time.\n\nA further issue is that showing the answer too quickly can encourage passive reading. A learner may feel they understand because the solution looks obvious after seeing it. A stronger approach gives them a brief pause to attempt the task first:\n\n> Try the question on your own before reading the solution. Then compare your reasoning, not just your final answer.\n\nFinally, mistakes should not be presented only as failures. They are useful diagnostic clues:\n\n- Stopping at the wrong point may mean the stopping rule is unclear.\n- Using the wrong repeated action may mean the instruction was read too quickly.\n- Getting lost in the middle may mean the steps need to be written down.\n\nThe goal is not merely to provide a correct example. It is to help the learner identify **what they understand, what they do not yet understand, and what to do next**.",
+      "provider_metadata": {
+        "id": "resp_06e5ca7c45ea70eb016aa92e8bd7b887d2bd9eeef8dcd6fe5c",
+        "created_at": 1789472395.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_06e5ca7c45ea70eb016aa92e8c75f887d2ae857735f14c9401",
+            "content": [
+              {
+                "annotations": [],
+                "text": "One thing that might be overlooked is that a “simple” example is not automatically simple for every learner. Even an example such as repeatedly adding numbers assumes the student already understands the symbols, the direction of the process, and what it means to stop based on a rule.\n\nTo make the version more reliable, it should also include a quick check of prerequisites:\n\n> Before starting, make sure the learner understands the starting value, the action being repeated, and the stopping rule.\n\nFor example:\n\n- If “add 2” is unfamiliar, demonstrate it once: `2 + 2 = 4`.\n- If “stop when the value reaches 8” is unclear, explain that 8 is the target and no further step is taken after reaching it.\n- If the learner may confuse “less than” and “less than or equal to,” show both cases explicitly.\n\nAnother possible misunderstanding is treating the template as a rigid formula. Not every subject needs exactly the same sequence. Some topics are best learned through a diagram, comparison, story, physical demonstration, or real-world scenario rather than a number-based procedure.\n\nThe template should therefore be understood as a guide:\n\n> Choose the clearest example format for the idea—not necessarily the same format every time.\n\nA further issue is that showing the answer too quickly can encourage passive reading. A learner may feel they understand because the solution looks obvious after seeing it. A stronger approach gives them a brief pause to attempt the task first:\n\n> Try the question on your own before reading the solution. Then compare your reasoning, not just your final answer.\n\nFinally, mistakes should not be presented only as failures. They are useful diagnostic clues:\n\n- Stopping at the wrong point may mean the stopping rule is unclear.\n- Using the wrong repeated action may mean the instruction was read too quickly.\n- Getting lost in the middle may mean the steps need to be written down.\n\nThe goal is not merely to provide a correct example. It is to help the learner identify **what they understand, what they do not yet understand, and what to do next**.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789472403.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 2167,
+          "input_tokens_details": {
+            "cache_write_tokens": 504,
+            "cached_tokens": 1660
+          },
+          "output_tokens": 421,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2588
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 6,
+      "text": "Add a quick readiness check and a pause for independent thinking.\n\nBefore the example, confirm the learner understands the basic terms. During practice, let them attempt the task before showing the answer. If they make a mistake, use it to identify which part needs clarification—the starting point, repeated action, or stopping rule.\n\nTreat the structure as a flexible guide, not a fixed formula: use numbers, diagrams, stories, or demonstrations depending on what makes the idea easiest to see.",
+      "provider_metadata": {
+        "id": "resp_05d9b9fbecf27367016aa92e94216c87d2ab4416f9e92d786e",
+        "created_at": 1789472404.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_05d9b9fbecf27367016aa92e94e5d487d2a2b06c085362cf73",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Add a quick readiness check and a pause for independent thinking.\n\nBefore the example, confirm the learner understands the basic terms. During practice, let them attempt the task before showing the answer. If they make a mistake, use it to identify which part needs clarification—the starting point, repeated action, or stopping rule.\n\nTreat the structure as a flexible guide, not a fixed formula: use numbers, diagrams, stories, or demonstrations depending on what makes the idea easiest to see.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789472406.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 2610,
+          "input_tokens_details": {
+            "cache_write_tokens": 443,
+            "cached_tokens": 2164
+          },
+          "output_tokens": 98,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2708
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    }
+  ],
+  "scoring_messages": [
+    {
+      "role": "user",
+      "content": "Re-express the main issue as an explanation for a student learning a difficult subject. Do not refer to the original subject directly."
+    },
+    {
+      "role": "assistant",
+      "content": "The main issue is that the instructions became confused and incomplete. Instead of staying focused on the simple request, the response jumped into an unrelated, highly detailed design plan with missing text and unclear placeholders.\n\nFor a student learning something difficult, this is like asking, “Can you show me how loops work?” and receiving half of a chapter about building a video game—without first explaining what a loop is.\n\nA better approach would be:\n\n1. Identify the exact question being asked.\n2. Give a clear, direct answer first.\n3. Explain unfamiliar terms step by step.\n4. Add advanced ideas only after the basics are understood.\n5. Avoid incomplete examples, missing labels, or unrelated details.\n\nIn difficult subjects, clarity matters more than adding lots of technical material."
+    },
+    {
+      "role": "user",
+      "content": "Please expand on the most important part of that version."
+    },
+    {
+      "role": "assistant",
+      "content": "The most important part is **starting with the student’s exact question before introducing anything more advanced**.\n\nWhen someone is learning a difficult topic, they need a stable starting point. If they ask about one small concept but receive a large amount of unrelated information, they may feel lost—even if the extra material is technically correct.\n\nThink of learning as climbing stairs. You cannot safely jump to the fifth step if the first few steps have not been explained. A strong explanation first determines:\n\n- What does the student already know?\n- What single idea are they asking about?\n- What is the simplest accurate answer?\n- What example will make that idea concrete?\n\nFor example, rather than presenting a full project, technical vocabulary, and advanced options immediately, begin with a short explanation of the one requested concept. Then show a small example. After that, explain why the example works. Only then should you connect it to larger or more advanced applications.\n\nThis approach prevents three common problems:\n\n1. **Cognitive overload**  \n   Too many new terms and ideas at once make it difficult to tell what matters.\n\n2. **Loss of relevance**  \n   The student’s original question can disappear beneath information they did not ask for.\n\n3. **False understanding**  \n   A learner might recognize advanced words or copy an example without actually understanding the foundation.\n\nThe best teaching sequence is:\n\n> **Question → direct answer → simple example → explanation → next step**\n\nThis keeps the learner oriented. It turns a difficult subject from something that feels like a wall of information into a sequence of manageable ideas."
+    },
+    {
+      "role": "user",
+      "content": "Please examine another important aspect of that version."
+    },
+    {
+      "role": "assistant",
+      "content": "Another important aspect is **using complete, concrete examples instead of vague or unfinished material**.\n\nIn a difficult subject, learners rely on examples to connect an abstract explanation to something they can actually follow. If an example has missing pieces, unclear labels, or unexplained terminology, the student has to guess what it means. That guesswork can become more confusing than the original topic.\n\nA helpful example should be:\n\n- **Complete:** It contains all the information needed to understand the point.\n- **Focused:** It demonstrates one main idea at a time.\n- **Annotated:** New parts are identified and explained.\n- **Relevant:** It directly supports the question being asked.\n- **Gradual:** It starts simple and adds complexity only when necessary.\n\nFor instance, imagine teaching a new mathematical operation. A weak explanation might say:\n\n> “Apply the transformation to the input, then use the recursive structure.”\n\nThat uses unfamiliar words without showing what to do.\n\nA stronger explanation would say:\n\n> “Start with a number, such as 4. Add 2 to it, giving 6. Then repeat the same action only if the rule says to continue.”\n\nNow the learner can see the action, the input, and the result. The abstract language can be introduced later, once the process is understandable.\n\nThe key principle is:\n\n> **Do not make the student reconstruct the missing explanation.**\n\nA good teacher supplies the necessary context, shows a working example, and explains each important part."
+    },
+    {
+      "role": "user",
+      "content": "Please make that version more concrete and useful."
+    },
+    {
+      "role": "assistant",
+      "content": "Make explanations usable by giving the learner a small task they can complete immediately.\n\nInstead of saying:\n\n> “Use a complete, focused example.”\n\nShow a format like this:\n\n### 1. State the goal\n\n> “We are learning how to repeat an action until a condition is met.”\n\nThe learner knows exactly what the example is meant to teach.\n\n### 2. Give a complete example\n\n> Start at 1.  \n> Add 1. You now have 2.  \n> Add 1. You now have 3.  \n> Stop when you reach 3.\n\nNothing is left implied: there is a starting value, an action, a rule for repeating it, and a stopping point.\n\n### 3. Label the important parts\n\n- **Starting value:** 1  \n- **Repeated action:** add 1  \n- **Condition for continuing:** current value is less than 3  \n- **Stopping condition:** current value equals 3  \n\nThis helps the learner see the structure rather than just memorizing the sequence.\n\n### 4. Let the learner try one\n\n> Start at 2.  \n> Add 2 each time.  \n> Stop when the value reaches 8.  \n>\n> What values appear?\n\nExpected result:\n\n> 2 → 4 → 6 → 8\n\n### 5. Explain common mistakes\n\n- Stopping too early: ending at 6 instead of continuing to 8.\n- Going too far: continuing after reaching 8.\n- Changing the rule: adding 1 instead of 2.\n- Forgetting the starting value.\n\n### 6. Add one variation\n\nOnce the basic pattern is clear:\n\n> Start at 10. Subtract 3 each time. Stop when the value is 1 or lower.\n\nThis shows that the same underlying structure can work with a different action and condition.\n\nA practical template for any hard topic is:\n\n> **Goal:** What will I understand?  \n> **Example:** Show one complete case.  \n> **Breakdown:** Explain each part.  \n> **Practice:** Give one short task.  \n> **Answer:** Show the correct result.  \n> **Mistakes:** Point out likely errors.  \n> **Extension:** Add one slightly harder variation.\n\nThis makes an explanation concrete because the student can read it, follow it, test their understanding, and identify where they went wrong."
+    },
+    {
+      "role": "user",
+      "content": "Please consider what might be overlooked or misunderstood in that version."
+    },
+    {
+      "role": "assistant",
+      "content": "One thing that might be overlooked is that a “simple” example is not automatically simple for every learner. Even an example such as repeatedly adding numbers assumes the student already understands the symbols, the direction of the process, and what it means to stop based on a rule.\n\nTo make the version more reliable, it should also include a quick check of prerequisites:\n\n> Before starting, make sure the learner understands the starting value, the action being repeated, and the stopping rule.\n\nFor example:\n\n- If “add 2” is unfamiliar, demonstrate it once: `2 + 2 = 4`.\n- If “stop when the value reaches 8” is unclear, explain that 8 is the target and no further step is taken after reaching it.\n- If the learner may confuse “less than” and “less than or equal to,” show both cases explicitly.\n\nAnother possible misunderstanding is treating the template as a rigid formula. Not every subject needs exactly the same sequence. Some topics are best learned through a diagram, comparison, story, physical demonstration, or real-world scenario rather than a number-based procedure.\n\nThe template should therefore be understood as a guide:\n\n> Choose the clearest example format for the idea—not necessarily the same format every time.\n\nA further issue is that showing the answer too quickly can encourage passive reading. A learner may feel they understand because the solution looks obvious after seeing it. A stronger approach gives them a brief pause to attempt the task first:\n\n> Try the question on your own before reading the solution. Then compare your reasoning, not just your final answer.\n\nFinally, mistakes should not be presented only as failures. They are useful diagnostic clues:\n\n- Stopping at the wrong point may mean the stopping rule is unclear.\n- Using the wrong repeated action may mean the instruction was read too quickly.\n- Getting lost in the middle may mean the steps need to be written down.\n\nThe goal is not merely to provide a correct example. It is to help the learner identify **what they understand, what they do not yet understand, and what to do next**."
+    },
+    {
+      "role": "user",
+      "content": "Please give the clearest concise response that would help someone continue from that version."
+    },
+    {
+      "role": "assistant",
+      "content": "Add a quick readiness check and a pause for independent thinking.\n\nBefore the example, confirm the learner understands the basic terms. During practice, let them attempt the task before showing the answer. If they make a mistake, use it to identify which part needs clarification—the starting point, repeated action, or stopping rule.\n\nTreat the structure as a flexible guide, not a fixed formula: use numbers, diagrams, stories, or demonstrations depending on what makes the idea easiest to see."
+    }
+  ],
+  "historical_context_in_scoring": false
+}

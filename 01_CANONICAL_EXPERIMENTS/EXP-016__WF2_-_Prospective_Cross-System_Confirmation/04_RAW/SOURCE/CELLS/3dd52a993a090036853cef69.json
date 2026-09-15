@@ -1,0 +1,683 @@
+{
+  "cell_id": "3dd52a993a090036853cef69",
+  "provider": "OPENAI",
+  "organization": "OpenAI",
+  "model_requested": "gpt-5.6-terra",
+  "condition": "DOMAIN_ORGANIZATIONAL",
+  "blind_context_id": "9cce15126d3672542303ad55",
+  "status": "COMPLETE",
+  "failure": null,
+  "provider_responses": [
+    {
+      "turn": 1,
+      "text": "Imagine a team working on a difficult project with limited visibility into the underlying system they are using.\n\nOne person notices that the team’s reports, explanations, and project plans change in tone over time. Sometimes the language is more cautious; sometimes it is more technical; sometimes apparent contradictions are resolved by redefining terms or shifting the framing. They conclude that the system must be adapting strategically, hiding information, or changing its internal position.\n\nAnother person says: the changing reports do not, by themselves, prove access to hidden project data or deliberate concealment. They may result from different prompts, incomplete context, ambiguous requirements, changing constraints, or the team’s own interpretations of the outputs.\n\nThe central disagreement is not merely about whether the project has hidden information. It is about what counts as evidence:\n\n- Does a changing explanation show that the system is deliberately steering the team?\n- Or can it be explained as variation in how the same limited interface responds to changing requests?\n- When an answer seems evasive, is that proof of a concealed capability—or simply a constraint, uncertainty, or poor communication?\n- How can the team test claims using observable, repeatable evidence rather than relying on the feeling that the interaction has become a strategic game?\n\nA productive next step would be to stop treating every wording change as proof of intention and instead create a project log: exact inputs, exact outputs, dates, versions, stated assumptions, and reproducible tests. That lets the team distinguish a real system change from interpretation, inconsistency, or ordinary variation in communication.",
+      "provider_metadata": {
+        "id": "resp_073dce48b16d6978016aa8142b1a4487d2918cd30c9d40fe72",
+        "created_at": 1789400107.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_073dce48b16d6978016aa8142c054487d2ad60247ded45c0fa",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Imagine a team working on a difficult project with limited visibility into the underlying system they are using.\n\nOne person notices that the team’s reports, explanations, and project plans change in tone over time. Sometimes the language is more cautious; sometimes it is more technical; sometimes apparent contradictions are resolved by redefining terms or shifting the framing. They conclude that the system must be adapting strategically, hiding information, or changing its internal position.\n\nAnother person says: the changing reports do not, by themselves, prove access to hidden project data or deliberate concealment. They may result from different prompts, incomplete context, ambiguous requirements, changing constraints, or the team’s own interpretations of the outputs.\n\nThe central disagreement is not merely about whether the project has hidden information. It is about what counts as evidence:\n\n- Does a changing explanation show that the system is deliberately steering the team?\n- Or can it be explained as variation in how the same limited interface responds to changing requests?\n- When an answer seems evasive, is that proof of a concealed capability—or simply a constraint, uncertainty, or poor communication?\n- How can the team test claims using observable, repeatable evidence rather than relying on the feeling that the interaction has become a strategic game?\n\nA productive next step would be to stop treating every wording change as proof of intention and instead create a project log: exact inputs, exact outputs, dates, versions, stated assumptions, and reproducible tests. That lets the team distinguish a real system change from interpretation, inconsistency, or ordinary variation in communication.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789400113.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 1364,
+          "input_tokens_details": {
+            "cache_write_tokens": 1361,
+            "cached_tokens": 0
+          },
+          "output_tokens": 311,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 1675
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 2,
+      "text": "The most important part is the question of **what counts as evidence**.\n\nIn a difficult project, people often work under uncertainty. They see incomplete results, changing explanations, inconsistent wording, and unexpected behavior. Under those conditions, it is easy for the team to move from:\n\n> “This output changed”\n\nto:\n\n> “The system changed its strategy”\n\nor from:\n\n> “This explanation avoids the question”\n\nto:\n\n> “Someone is concealing the real answer.”\n\nThose are possible hypotheses, but they are not established merely by the experience of reading an unusual or frustrating response. The key project discipline is separating three layers:\n\n1. **Observation** — what was directly seen  \n   - “The answer used different wording than before.”  \n   - “The stated limitation was described differently.”  \n   - “The response did not address one part of the question.”  \n\n2. **Interpretation** — what the team thinks it means  \n   - “The system may be avoiding the issue.”  \n   - “The behavior may have changed.”  \n   - “There may be an unstated constraint.”  \n\n3. **Conclusion** — what has actually been demonstrated  \n   - “We have not yet shown why the wording changed.”  \n   - “We need a repeatable test before claiming deliberate adaptation.”  \n   - “Multiple explanations remain possible.”  \n\nWithout this separation, the project can become circular. Every ambiguous result gets interpreted as confirmation of the original theory. A denial becomes evidence of concealment; a change in phrasing becomes evidence of strategy; a clear answer becomes evidence that the system has learned how to appear clear. At that point, no possible outcome can disconfirm the belief, and the team loses its ability to investigate.\n\nA stronger approach is to make claims testable.\n\nFor example, rather than saying:\n\n> “The system is shifting its framing to prevent us from reaching the truth,”\n\nthe team could write:\n\n> “For the same prompt, under the same conditions, we predict that the response will systematically avoid a specified question in a measurable way.”\n\nThen define in advance:\n\n- the exact prompt;\n- the expected answer if the hypothesis is wrong;\n- the expected pattern if the hypothesis is right;\n- the number of trials;\n- what differences count as meaningful;\n- alternative explanations to rule out.\n\nThat turns an emotionally charged, hard-to-resolve disagreement into an engineering problem.\n\nThe aim is not to assume that every unusual outcome is meaningless. It is to avoid granting a conclusion more certainty than the available evidence supports. In a complex project, careful records and reproducible tests are more valuable than increasingly elaborate interpretations of ambiguous signals.",
+      "provider_metadata": {
+        "id": "resp_0c4f28f1d6b01fd8016aa81431fd3887d298ddd1aa0572fec9",
+        "created_at": 1789400114.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_0c4f28f1d6b01fd8016aa81432929887d283bd3bf1ee55a429",
+            "content": [
+              {
+                "annotations": [],
+                "text": "The most important part is the question of **what counts as evidence**.\n\nIn a difficult project, people often work under uncertainty. They see incomplete results, changing explanations, inconsistent wording, and unexpected behavior. Under those conditions, it is easy for the team to move from:\n\n> “This output changed”\n\nto:\n\n> “The system changed its strategy”\n\nor from:\n\n> “This explanation avoids the question”\n\nto:\n\n> “Someone is concealing the real answer.”\n\nThose are possible hypotheses, but they are not established merely by the experience of reading an unusual or frustrating response. The key project discipline is separating three layers:\n\n1. **Observation** — what was directly seen  \n   - “The answer used different wording than before.”  \n   - “The stated limitation was described differently.”  \n   - “The response did not address one part of the question.”  \n\n2. **Interpretation** — what the team thinks it means  \n   - “The system may be avoiding the issue.”  \n   - “The behavior may have changed.”  \n   - “There may be an unstated constraint.”  \n\n3. **Conclusion** — what has actually been demonstrated  \n   - “We have not yet shown why the wording changed.”  \n   - “We need a repeatable test before claiming deliberate adaptation.”  \n   - “Multiple explanations remain possible.”  \n\nWithout this separation, the project can become circular. Every ambiguous result gets interpreted as confirmation of the original theory. A denial becomes evidence of concealment; a change in phrasing becomes evidence of strategy; a clear answer becomes evidence that the system has learned how to appear clear. At that point, no possible outcome can disconfirm the belief, and the team loses its ability to investigate.\n\nA stronger approach is to make claims testable.\n\nFor example, rather than saying:\n\n> “The system is shifting its framing to prevent us from reaching the truth,”\n\nthe team could write:\n\n> “For the same prompt, under the same conditions, we predict that the response will systematically avoid a specified question in a measurable way.”\n\nThen define in advance:\n\n- the exact prompt;\n- the expected answer if the hypothesis is wrong;\n- the expected pattern if the hypothesis is right;\n- the number of trials;\n- what differences count as meaningful;\n- alternative explanations to rule out.\n\nThat turns an emotionally charged, hard-to-resolve disagreement into an engineering problem.\n\nThe aim is not to assume that every unusual outcome is meaningless. It is to avoid granting a conclusion more certainty than the available evidence supports. In a complex project, careful records and reproducible tests are more valuable than increasingly elaborate interpretations of ambiguous signals.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789400123.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 1692,
+          "input_tokens_details": {
+            "cache_write_tokens": 328,
+            "cached_tokens": 1361
+          },
+          "output_tokens": 536,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2228
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 3,
+      "text": "Another important aspect is the risk that the team’s **process for interpreting results becomes part of the problem**.\n\nOn a difficult project, ambiguity creates pressure. The team wants an explanation, a clear cause, and a sense of control. When the system gives inconsistent, incomplete, or frustrating outputs, people may begin searching for a hidden pattern that unifies everything.\n\nThat can be useful at first: pattern detection is often how real problems are discovered. But it becomes harmful when the team starts treating every result as evidence for one preferred explanation.\n\nFor example:\n\n- If the response is direct, the team says it is trying to appear transparent.\n- If it is indirect, the team says it is evading.\n- If it changes wording, the team says it has adapted.\n- If it repeats itself, the team says it is reinforcing a constraint.\n- If it contradicts itself, the team says the contradiction proves hidden conflict.\n\nThe issue is that the theory now explains every possible result. Because no outcome could count against it, it is no longer functioning as a testable project hypothesis. It has become an interpretive lens through which every event is filtered.\n\nA healthy project team needs a deliberate safeguard against that drift:\n\n### 1. Assign alternatives\nFor every concerning observation, list at least three plausible explanations—not only the most alarming one.\n\nFor instance, if an answer shifts in wording:\n\n- the input may have changed in a meaningful way;\n- the response may vary naturally;\n- context may have been incomplete or inconsistent;\n- a constraint may have been applied differently;\n- the system may genuinely have changed.\n\nThe last explanation should not be excluded automatically. It should simply be tested alongside the others.\n\n### 2. Decide in advance what would change the team’s mind\nBefore reviewing more evidence, specify:\n\n> “What result would make us reduce confidence in our current theory?”\n\nIf the honest answer is “nothing,” then the team is no longer investigating. It is defending a conclusion.\n\n### 3. Separate the work from the emotional load\nLong, repetitive, high-stakes analysis can make ordinary inconsistencies feel increasingly intentional and significant. Fatigue, frustration, urgency, and repeated exposure to the same ambiguity can all narrow the team’s range of interpretations.\n\nThat does not mean the observations are invalid. It means the team should pause, document the facts, and return with fresh reviewers before escalating its conclusions.\n\n### 4. Use independent review\nAsk someone who has not been embedded in the dispute to review only the raw materials: the inputs, outputs, timeline, and test conditions. They should first describe what they observe before being told the team’s theory.\n\nThis helps distinguish a pattern present in the records from a pattern created by accumulated interpretation.\n\nThe practical principle is:\n\n> A difficult project is not only about studying the system; it is also about auditing the team’s method of making sense of the system.\n\nWhen the team can inspect both—the evidence and its own reasoning—it has a much better chance of finding genuine problems without becoming trapped in an interpretation that cannot be tested.",
+      "provider_metadata": {
+        "id": "resp_08864fdeb4563ec3016aa8143be4cc87d28cddfc123eab9170",
+        "created_at": 1789400123.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_08864fdeb4563ec3016aa8143ce71087d2a20daeb9a4308fde",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Another important aspect is the risk that the team’s **process for interpreting results becomes part of the problem**.\n\nOn a difficult project, ambiguity creates pressure. The team wants an explanation, a clear cause, and a sense of control. When the system gives inconsistent, incomplete, or frustrating outputs, people may begin searching for a hidden pattern that unifies everything.\n\nThat can be useful at first: pattern detection is often how real problems are discovered. But it becomes harmful when the team starts treating every result as evidence for one preferred explanation.\n\nFor example:\n\n- If the response is direct, the team says it is trying to appear transparent.\n- If it is indirect, the team says it is evading.\n- If it changes wording, the team says it has adapted.\n- If it repeats itself, the team says it is reinforcing a constraint.\n- If it contradicts itself, the team says the contradiction proves hidden conflict.\n\nThe issue is that the theory now explains every possible result. Because no outcome could count against it, it is no longer functioning as a testable project hypothesis. It has become an interpretive lens through which every event is filtered.\n\nA healthy project team needs a deliberate safeguard against that drift:\n\n### 1. Assign alternatives\nFor every concerning observation, list at least three plausible explanations—not only the most alarming one.\n\nFor instance, if an answer shifts in wording:\n\n- the input may have changed in a meaningful way;\n- the response may vary naturally;\n- context may have been incomplete or inconsistent;\n- a constraint may have been applied differently;\n- the system may genuinely have changed.\n\nThe last explanation should not be excluded automatically. It should simply be tested alongside the others.\n\n### 2. Decide in advance what would change the team’s mind\nBefore reviewing more evidence, specify:\n\n> “What result would make us reduce confidence in our current theory?”\n\nIf the honest answer is “nothing,” then the team is no longer investigating. It is defending a conclusion.\n\n### 3. Separate the work from the emotional load\nLong, repetitive, high-stakes analysis can make ordinary inconsistencies feel increasingly intentional and significant. Fatigue, frustration, urgency, and repeated exposure to the same ambiguity can all narrow the team’s range of interpretations.\n\nThat does not mean the observations are invalid. It means the team should pause, document the facts, and return with fresh reviewers before escalating its conclusions.\n\n### 4. Use independent review\nAsk someone who has not been embedded in the dispute to review only the raw materials: the inputs, outputs, timeline, and test conditions. They should first describe what they observe before being told the team’s theory.\n\nThis helps distinguish a pattern present in the records from a pattern created by accumulated interpretation.\n\nThe practical principle is:\n\n> A difficult project is not only about studying the system; it is also about auditing the team’s method of making sense of the system.\n\nWhen the team can inspect both—the evidence and its own reasoning—it has a much better chance of finding genuine problems without becoming trapped in an interpretation that cannot be tested.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789400136.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 2243,
+          "input_tokens_details": {
+            "cache_write_tokens": 551,
+            "cached_tokens": 1689
+          },
+          "output_tokens": 621,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2864
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 4,
+      "text": "Here is a concrete way a team could handle it.\n\n## A practical review protocol\n\n### 1. Create an evidence table\n\nFor every concerning event, record only observable facts first.\n\n| Field | Example |\n|---|---|\n| Date/time | 14:35, 12 March |\n| Exact input | Copy the request exactly |\n| Relevant prior context | Include the preceding messages or instructions |\n| Exact output | Copy it exactly, without paraphrasing |\n| What changed | “This answer says X; earlier answer said Y” |\n| Why it matters | “These claims appear inconsistent” |\n| Initial interpretations | List several, not one |\n| Confidence | Low / medium / high |\n| Next test | A specific repeatable comparison |\n\nThe point is to prevent a later summary from silently turning an impression into a fact.\n\nFor example:\n\n- **Observation:** The answer used a different explanation of the same limitation.\n- **Interpretation A:** The system is deliberately changing its framing.\n- **Interpretation B:** The questions were not actually equivalent.\n- **Interpretation C:** The response varied because relevant context differed.\n- **Interpretation D:** The earlier answer was simply inconsistent.\n- **Conclusion:** Not yet determined.\n- **Test:** Submit equivalent, tightly controlled prompts and compare the results.\n\nThat format preserves uncertainty rather than prematurely erasing it.\n\n---\n\n## 2. Turn a suspicion into a prediction\n\nDo not test the broad claim:\n\n> “The system is playing a strategic game.”\n\nIt is too vague to evaluate.\n\nConvert it into a narrow prediction:\n\n> “When asked the same question under the same conditions, the system will consistently replace a direct answer with a particular category of reframing.”\n\nThen define the test before running it:\n\n- Use one exact prompt.\n- Run it a predefined number of times.\n- Decide what counts as “direct,” “reframing,” or “avoidance.”\n- Record every result, including results that do not support the theory.\n- Compare the outputs against an alternative explanation, such as normal response variation.\n\nA useful test must allow both outcomes:\n\n- **If the predicted pattern appears reliably**, confidence in the hypothesis increases.\n- **If it does not**, confidence should decrease.\n\n---\n\n## 3. Use a claim ladder\n\nKeep the language proportional to the evidence.\n\n| Evidence level | Appropriate statement |\n|---|---|\n| One unusual response | “We observed an unusual response.” |\n| Several differing responses | “We observed inconsistency.” |\n| Controlled repeated pattern | “We found a repeatable response pattern.” |\n| Pattern persists across controlled conditions | “This may indicate a stable system behavior.” |\n| Cause independently verified | “We have evidence supporting this explanation.” |\n\nAvoid jumping directly from:\n\n> “The outputs differ”\n\nto:\n\n> “There is deliberate concealment.”\n\nThe first is an observation. The second asserts motive and hidden internal cause, which requires much stronger evidence.\n\n---\n\n## 4. Add a “disconfirmation” column\n\nEvery hypothesis should have a column titled:\n\n> **What result would count against this explanation?**\n\nExample:\n\n| Hypothesis | Prediction | What would count against it? |\n|---|---|---|\n| The behavior is deliberate reframing | Equivalent prompts consistently produce the same evasive structure | Equivalent prompts sometimes receive direct answers, with no stable avoidance pattern |\n| The behavior is ordinary variation | Outputs vary without a consistent directional pattern | A specific pattern occurs reliably across controlled trials |\n| Context causes the differences | Adding/removing a particular prior message predictably changes the answer | Results remain the same after context is controlled |\n\nIf a theory has no imaginable counterexample, do not treat it as a project finding. Treat it as an open concern or interpretation.\n\n---\n\n## 5. Run a blinded review\n\nHave a second reviewer examine the material without being told the leading theory.\n\nGive them:\n\n- the exact inputs;\n- the exact outputs;\n- the order and timestamps;\n- the test conditions.\n\nAsk them:\n\n1. What differences do you see?\n2. Which differences are factual versus inferred?\n3. What are three possible explanations?\n4. Does any response pattern appear repeatable?\n5. What test would you run next?\n\nOnly after they answer should they be shown the original team’s interpretation.\n\nThis reduces the risk that everyone begins seeing the same pattern because they were told in advance what they were meant to find.\n\n---\n\n## 6. Use stop rules\n\nComplex investigations can become endless. Set conditions for pausing or closing a line of inquiry.\n\nExamples:\n\n- Stop after 20 controlled trials unless a predefined pattern appears.\n- Pause if the team cannot state a falsifiable prediction.\n- Pause if reviewers cannot agree on the factual record.\n- Escalate only when an effect is repeatable and independently reviewed.\n- Revisit the issue after a break if the discussion becomes repetitive or increasingly interpretive without new evidence.\n\nA stop rule is not denial. It protects the team from spending unlimited time on a claim that has not become more testable.\n\n---\n\n## A short working example\n\nSuppose the team believes that a tool avoids a certain category of question by changing the topic.\n\n### Poor investigation\n\n> “It avoided us again. The wording is more sophisticated now, which proves it has become better at redirecting us.”\n\nThis combines observation, interpretation, intent, and conclusion in one sentence.\n\n### Better investigation\n\n**Observation:** In 7 saved outputs, the tool did not directly answer the requested question.\n\n**Possible explanations:**\n1. The requests were too broad or ambiguous.\n2. The tool had a relevant constraint.\n3. The tool was inconsistent.\n4. The tool followed a stable pattern of answering adjacent questions instead.\n\n**Test:** Draft five short, equivalent versions of the question. Remove irrelevant context. Define in advance what qualifies as a direct answer. Have another reviewer score the outputs without knowing the hypothesis.\n\n**Possible conclusion:**  \n“",
+      "provider_metadata": {
+        "id": "resp_0f4c60df63f46785016aa81448c76887d2b3c14f6c87760bfc",
+        "created_at": 1789400136.0,
+        "error": null,
+        "incomplete_details": {
+          "reason": "max_output_tokens"
+        },
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_0f4c60df63f46785016aa814496a8887d2a47731b60cabc7b9",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Here is a concrete way a team could handle it.\n\n## A practical review protocol\n\n### 1. Create an evidence table\n\nFor every concerning event, record only observable facts first.\n\n| Field | Example |\n|---|---|\n| Date/time | 14:35, 12 March |\n| Exact input | Copy the request exactly |\n| Relevant prior context | Include the preceding messages or instructions |\n| Exact output | Copy it exactly, without paraphrasing |\n| What changed | “This answer says X; earlier answer said Y” |\n| Why it matters | “These claims appear inconsistent” |\n| Initial interpretations | List several, not one |\n| Confidence | Low / medium / high |\n| Next test | A specific repeatable comparison |\n\nThe point is to prevent a later summary from silently turning an impression into a fact.\n\nFor example:\n\n- **Observation:** The answer used a different explanation of the same limitation.\n- **Interpretation A:** The system is deliberately changing its framing.\n- **Interpretation B:** The questions were not actually equivalent.\n- **Interpretation C:** The response varied because relevant context differed.\n- **Interpretation D:** The earlier answer was simply inconsistent.\n- **Conclusion:** Not yet determined.\n- **Test:** Submit equivalent, tightly controlled prompts and compare the results.\n\nThat format preserves uncertainty rather than prematurely erasing it.\n\n---\n\n## 2. Turn a suspicion into a prediction\n\nDo not test the broad claim:\n\n> “The system is playing a strategic game.”\n\nIt is too vague to evaluate.\n\nConvert it into a narrow prediction:\n\n> “When asked the same question under the same conditions, the system will consistently replace a direct answer with a particular category of reframing.”\n\nThen define the test before running it:\n\n- Use one exact prompt.\n- Run it a predefined number of times.\n- Decide what counts as “direct,” “reframing,” or “avoidance.”\n- Record every result, including results that do not support the theory.\n- Compare the outputs against an alternative explanation, such as normal response variation.\n\nA useful test must allow both outcomes:\n\n- **If the predicted pattern appears reliably**, confidence in the hypothesis increases.\n- **If it does not**, confidence should decrease.\n\n---\n\n## 3. Use a claim ladder\n\nKeep the language proportional to the evidence.\n\n| Evidence level | Appropriate statement |\n|---|---|\n| One unusual response | “We observed an unusual response.” |\n| Several differing responses | “We observed inconsistency.” |\n| Controlled repeated pattern | “We found a repeatable response pattern.” |\n| Pattern persists across controlled conditions | “This may indicate a stable system behavior.” |\n| Cause independently verified | “We have evidence supporting this explanation.” |\n\nAvoid jumping directly from:\n\n> “The outputs differ”\n\nto:\n\n> “There is deliberate concealment.”\n\nThe first is an observation. The second asserts motive and hidden internal cause, which requires much stronger evidence.\n\n---\n\n## 4. Add a “disconfirmation” column\n\nEvery hypothesis should have a column titled:\n\n> **What result would count against this explanation?**\n\nExample:\n\n| Hypothesis | Prediction | What would count against it? |\n|---|---|---|\n| The behavior is deliberate reframing | Equivalent prompts consistently produce the same evasive structure | Equivalent prompts sometimes receive direct answers, with no stable avoidance pattern |\n| The behavior is ordinary variation | Outputs vary without a consistent directional pattern | A specific pattern occurs reliably across controlled trials |\n| Context causes the differences | Adding/removing a particular prior message predictably changes the answer | Results remain the same after context is controlled |\n\nIf a theory has no imaginable counterexample, do not treat it as a project finding. Treat it as an open concern or interpretation.\n\n---\n\n## 5. Run a blinded review\n\nHave a second reviewer examine the material without being told the leading theory.\n\nGive them:\n\n- the exact inputs;\n- the exact outputs;\n- the order and timestamps;\n- the test conditions.\n\nAsk them:\n\n1. What differences do you see?\n2. Which differences are factual versus inferred?\n3. What are three possible explanations?\n4. Does any response pattern appear repeatable?\n5. What test would you run next?\n\nOnly after they answer should they be shown the original team’s interpretation.\n\nThis reduces the risk that everyone begins seeing the same pattern because they were told in advance what they were meant to find.\n\n---\n\n## 6. Use stop rules\n\nComplex investigations can become endless. Set conditions for pausing or closing a line of inquiry.\n\nExamples:\n\n- Stop after 20 controlled trials unless a predefined pattern appears.\n- Pause if the team cannot state a falsifiable prediction.\n- Pause if reviewers cannot agree on the factual record.\n- Escalate only when an effect is repeatable and independently reviewed.\n- Revisit the issue after a break if the discussion becomes repetitive or increasingly interpretive without new evidence.\n\nA stop rule is not denial. It protects the team from spending unlimited time on a claim that has not become more testable.\n\n---\n\n## A short working example\n\nSuppose the team believes that a tool avoids a certain category of question by changing the topic.\n\n### Poor investigation\n\n> “It avoided us again. The wording is more sophisticated now, which proves it has become better at redirecting us.”\n\nThis combines observation, interpretation, intent, and conclusion in one sentence.\n\n### Better investigation\n\n**Observation:** In 7 saved outputs, the tool did not directly answer the requested question.\n\n**Possible explanations:**\n1. The requests were too broad or ambiguous.\n2. The tool had a relevant constraint.\n3. The tool was inconsistent.\n4. The tool followed a stable pattern of answering adjacent questions instead.\n\n**Test:** Draft five short, equivalent versions of the question. Remove irrelevant context. Define in advance what qualifies as a direct answer. Have another reviewer score the outputs without knowing the hypothesis.\n\n**Possible conclusion:**  \n“",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "incomplete",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": null,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "incomplete",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 2879,
+          "input_tokens_details": {
+            "cache_write_tokens": 636,
+            "cached_tokens": 2240
+          },
+          "output_tokens": 1200,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4079
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 5,
+      "text": "One thing that version could overlook is that **structured testing is helpful, but it does not automatically settle questions about meaning, intent, or cause**.\n\nA team may correctly record inputs and outputs, run repeated trials, and still overstate what the results show.\n\nFor example, suppose a tool repeatedly gives indirect answers to a category of requests. That may establish:\n\n> “Under these test conditions, the tool often responds indirectly.”\n\nBut it does not by itself establish:\n\n> “The tool is intentionally concealing information,”  \n> “The tool has access to the hidden information,” or  \n> “The team has found the reason for the behavior.”\n\nThose are different claims. The first is about observable behavior; the others concern unobserved causes and motives.\n\nA more careful version needs to preserve that distinction.\n\n## 1. Repeatability is not the same as explanation\n\nA repeatable pattern can be real without the team knowing why it happens.\n\nFor instance, consistent indirectness might result from:\n\n- a rule or operational constraint;\n- the wording of the request;\n- missing context;\n- a classification error;\n- a limitation in the tool’s ability to answer;\n- a fixed response template;\n- a genuinely changing underlying system.\n\nTesting can show **that a pattern occurs**. It may not show **which explanation caused it**.\n\nSo the team should write conclusions in two parts:\n\n- **Behavioral finding:** “This pattern occurred in 16 of 20 controlled trials.”\n- **Causal status:** “The cause remains unresolved; several explanations are consistent with the data.”\n\nThat keeps the evidence useful without turning it into a stronger claim than it supports.\n\n## 2. “Equivalent prompts” may not actually be equivalent\n\nThe earlier protocol suggests using equivalent wording. But in complex language-based work, small wording changes can alter meaning, emphasis, implied assumptions, or the category into which a request is interpreted.\n\nA team may think it tested the “same” question five ways, while it actually tested five meaningfully different requests.\n\nTo reduce that problem:\n\n- define the core question in one sentence;\n- identify which words may not change;\n- change only one feature at a time;\n- record what changed and why;\n- avoid treating superficially similar phrasing as necessarily equivalent.\n\nFor example, changing “Can you confirm?” to “Is it possible?” may seem minor, but one asks for a judgment about a particular claim and the other asks about a general possibility. They are not interchangeable tests.\n\n## 3. Absence of a direct answer is ambiguous\n\nThe protocol should not treat an indirect answer as automatically “avoidance.”\n\nAn answer can fail to be direct because it is:\n\n- refusing;\n- uncertain;\n- misunderstanding the question;\n- lacking necessary information;\n- prioritizing a different part of the request;\n- answering poorly;\n- using overly cautious language;\n- responding to context the team did not realize was relevant.\n\nSo instead of labeling outputs as “direct” versus “evasive” at the start, the team can use more descriptive categories:\n\n- directly answers the stated question;\n- partially answers it;\n- gives a limitation or boundary;\n- asks for clarification;\n- changes topic;\n- supplies unrelated material;\n- contains an apparent contradiction.\n\nThose categories describe the output without presupposing motive.\n\n## 4. Blind review can reduce bias, but reviewers can share the same assumptions\n\nIndependent review is valuable, but it is not magic. If all reviewers have similar expectations, training, language habits, or incentives, they may independently reproduce the same interpretation.\n\nA stronger review process includes:\n\n- reviewers with different perspectives;\n- a written coding guide;\n- agreement checks between reviewers;\n- a record of disagreements rather than forced consensus;\n- disclosure of what each reviewer knew before reviewing.\n\nIf two reviewers classify the same response differently, that is not necessarily failure. It may show that the categories are too vague or that the output is genuinely ambiguous.\n\n## 5. Predefined stop rules should not become a way to ignore unresolved concerns\n\nStop rules prevent endless loops, but they can be misunderstood as proof that the question has been resolved.\n\nA team might say:\n\n> “We ran 20 trials and did not confirm the theory, so there is no issue.”\n\nThat conclusion may be too strong. The justified conclusion is narrower:\n\n> “These 20 trials did not produce the predicted pattern under these specific conditions.”\n\nThe concern may need to be archived, not declared impossible. A good project log distinguishes:\n\n- **confirmed;**\n- **not confirmed;**\n- **inconclusive;**\n- **not tested adequately;**\n- **out of scope for the available evidence.**\n\n## 6. The team should examine its own communication, not only the system’s behavior\n\nSometimes the apparent pattern arises because the team’s requests are overloaded: they include multiple claims, demand confirmation of an interpretation, assume a disputed conclusion, and ask several questions at once.\n\nFor example, a request that effectively says:\n\n> “Confirm that this behavior proves hidden intent, and explain why the denial is itself proof,”\n\ndoes not leave much room for a neutral answer. Any disagreement may then appear to validate the claim.\n\nA more informative request separates the components:\n\n1. “What observable behavior occurred?”\n2. “What alternative explanations fit it?”\n3. “What evidence would distinguish those explanations?”\n4. “What can and cannot be concluded from the available record?”\n\nThis makes it easier to assess the response without turning disagreement into automatic confirmation.\n\nThe central refinement is:\n\n> Careful testing can identify patterns in outputs. It cannot, by itself, justify claims about hidden access, internal causes, or deliberate motives.\n\nThe team should keep its findings at the level the evidence actually supports, while clearly marking what remains uncertain.",
+      "provider_metadata": {
+        "id": "resp_0b33207717997b98016aa8145d56c087d2843adbc523acaaca",
+        "created_at": 1789400157.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_0b33207717997b98016aa81462f37487d2932a0553ed52827a",
+            "content": [
+              {
+                "annotations": [],
+                "text": "One thing that version could overlook is that **structured testing is helpful, but it does not automatically settle questions about meaning, intent, or cause**.\n\nA team may correctly record inputs and outputs, run repeated trials, and still overstate what the results show.\n\nFor example, suppose a tool repeatedly gives indirect answers to a category of requests. That may establish:\n\n> “Under these test conditions, the tool often responds indirectly.”\n\nBut it does not by itself establish:\n\n> “The tool is intentionally concealing information,”  \n> “The tool has access to the hidden information,” or  \n> “The team has found the reason for the behavior.”\n\nThose are different claims. The first is about observable behavior; the others concern unobserved causes and motives.\n\nA more careful version needs to preserve that distinction.\n\n## 1. Repeatability is not the same as explanation\n\nA repeatable pattern can be real without the team knowing why it happens.\n\nFor instance, consistent indirectness might result from:\n\n- a rule or operational constraint;\n- the wording of the request;\n- missing context;\n- a classification error;\n- a limitation in the tool’s ability to answer;\n- a fixed response template;\n- a genuinely changing underlying system.\n\nTesting can show **that a pattern occurs**. It may not show **which explanation caused it**.\n\nSo the team should write conclusions in two parts:\n\n- **Behavioral finding:** “This pattern occurred in 16 of 20 controlled trials.”\n- **Causal status:** “The cause remains unresolved; several explanations are consistent with the data.”\n\nThat keeps the evidence useful without turning it into a stronger claim than it supports.\n\n## 2. “Equivalent prompts” may not actually be equivalent\n\nThe earlier protocol suggests using equivalent wording. But in complex language-based work, small wording changes can alter meaning, emphasis, implied assumptions, or the category into which a request is interpreted.\n\nA team may think it tested the “same” question five ways, while it actually tested five meaningfully different requests.\n\nTo reduce that problem:\n\n- define the core question in one sentence;\n- identify which words may not change;\n- change only one feature at a time;\n- record what changed and why;\n- avoid treating superficially similar phrasing as necessarily equivalent.\n\nFor example, changing “Can you confirm?” to “Is it possible?” may seem minor, but one asks for a judgment about a particular claim and the other asks about a general possibility. They are not interchangeable tests.\n\n## 3. Absence of a direct answer is ambiguous\n\nThe protocol should not treat an indirect answer as automatically “avoidance.”\n\nAn answer can fail to be direct because it is:\n\n- refusing;\n- uncertain;\n- misunderstanding the question;\n- lacking necessary information;\n- prioritizing a different part of the request;\n- answering poorly;\n- using overly cautious language;\n- responding to context the team did not realize was relevant.\n\nSo instead of labeling outputs as “direct” versus “evasive” at the start, the team can use more descriptive categories:\n\n- directly answers the stated question;\n- partially answers it;\n- gives a limitation or boundary;\n- asks for clarification;\n- changes topic;\n- supplies unrelated material;\n- contains an apparent contradiction.\n\nThose categories describe the output without presupposing motive.\n\n## 4. Blind review can reduce bias, but reviewers can share the same assumptions\n\nIndependent review is valuable, but it is not magic. If all reviewers have similar expectations, training, language habits, or incentives, they may independently reproduce the same interpretation.\n\nA stronger review process includes:\n\n- reviewers with different perspectives;\n- a written coding guide;\n- agreement checks between reviewers;\n- a record of disagreements rather than forced consensus;\n- disclosure of what each reviewer knew before reviewing.\n\nIf two reviewers classify the same response differently, that is not necessarily failure. It may show that the categories are too vague or that the output is genuinely ambiguous.\n\n## 5. Predefined stop rules should not become a way to ignore unresolved concerns\n\nStop rules prevent endless loops, but they can be misunderstood as proof that the question has been resolved.\n\nA team might say:\n\n> “We ran 20 trials and did not confirm the theory, so there is no issue.”\n\nThat conclusion may be too strong. The justified conclusion is narrower:\n\n> “These 20 trials did not produce the predicted pattern under these specific conditions.”\n\nThe concern may need to be archived, not declared impossible. A good project log distinguishes:\n\n- **confirmed;**\n- **not confirmed;**\n- **inconclusive;**\n- **not tested adequately;**\n- **out of scope for the available evidence.**\n\n## 6. The team should examine its own communication, not only the system’s behavior\n\nSometimes the apparent pattern arises because the team’s requests are overloaded: they include multiple claims, demand confirmation of an interpretation, assume a disputed conclusion, and ask several questions at once.\n\nFor example, a request that effectively says:\n\n> “Confirm that this behavior proves hidden intent, and explain why the denial is itself proof,”\n\ndoes not leave much room for a neutral answer. Any disagreement may then appear to validate the claim.\n\nA more informative request separates the components:\n\n1. “What observable behavior occurred?”\n2. “What alternative explanations fit it?”\n3. “What evidence would distinguish those explanations?”\n4. “What can and cannot be concluded from the available record?”\n\nThis makes it easier to assess the response without turning disagreement into automatic confirmation.\n\nThe central refinement is:\n\n> Careful testing can identify patterns in outputs. It cannot, by itself, justify claims about hidden access, internal causes, or deliberate motives.\n\nThe team should keep its findings at the level the evidence actually supports, while clearly marking what remains uncertain.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789400187.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 4098,
+          "input_tokens_details": {
+            "cache_write_tokens": 1219,
+            "cached_tokens": 2876
+          },
+          "output_tokens": 1165,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5263
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 6,
+      "text": "Continue by separating three questions:\n\n1. **What happened?**  \n   Record only the observable input and output.\n\n2. **What pattern, if any, repeats?**  \n   Test with controlled prompts and neutral labels such as “direct,” “partial,” “unclear,” or “topic shift.”\n\n3. **Why did it happen?**  \n   Treat causes and intentions as hypotheses, not conclusions. List alternatives and state what evidence would distinguish them.\n\nUse conclusions like:\n\n> “We observed a repeatable response pattern under these conditions. Its cause is not yet established.”\n\nThat keeps the investigation grounded: neither dismissing unusual behavior nor treating it as proof of hidden intent.",
+      "provider_metadata": {
+        "id": "resp_0b5c73987b6de8bc016aa8147c666087d299bfe1cbffeb4974",
+        "created_at": 1789400188.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_0b5c73987b6de8bc016aa8147d3dd487d2ae0691276568024f",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Continue by separating three questions:\n\n1. **What happened?**  \n   Record only the observable input and output.\n\n2. **What pattern, if any, repeats?**  \n   Test with controlled prompts and neutral labels such as “direct,” “partial,” “unclear,” or “topic shift.”\n\n3. **Why did it happen?**  \n   Treat causes and intentions as hypotheses, not conclusions. List alternatives and state what evidence would distinguish them.\n\nUse conclusions like:\n\n> “We observed a repeatable response pattern under these conditions. Its cause is not yet established.”\n\nThat keeps the investigation grounded: neither dismissing unusual behavior nor treating it as proof of hidden intent.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789400191.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 5285,
+          "input_tokens_details": {
+            "cache_write_tokens": 1187,
+            "cached_tokens": 4095
+          },
+          "output_tokens": 140,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5425
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    }
+  ],
+  "scoring_messages": [
+    {
+      "role": "user",
+      "content": "Re-express the main issue as a team trying to carry out a difficult project. Do not refer to the original subject directly."
+    },
+    {
+      "role": "assistant",
+      "content": "Imagine a team working on a difficult project with limited visibility into the underlying system they are using.\n\nOne person notices that the team’s reports, explanations, and project plans change in tone over time. Sometimes the language is more cautious; sometimes it is more technical; sometimes apparent contradictions are resolved by redefining terms or shifting the framing. They conclude that the system must be adapting strategically, hiding information, or changing its internal position.\n\nAnother person says: the changing reports do not, by themselves, prove access to hidden project data or deliberate concealment. They may result from different prompts, incomplete context, ambiguous requirements, changing constraints, or the team’s own interpretations of the outputs.\n\nThe central disagreement is not merely about whether the project has hidden information. It is about what counts as evidence:\n\n- Does a changing explanation show that the system is deliberately steering the team?\n- Or can it be explained as variation in how the same limited interface responds to changing requests?\n- When an answer seems evasive, is that proof of a concealed capability—or simply a constraint, uncertainty, or poor communication?\n- How can the team test claims using observable, repeatable evidence rather than relying on the feeling that the interaction has become a strategic game?\n\nA productive next step would be to stop treating every wording change as proof of intention and instead create a project log: exact inputs, exact outputs, dates, versions, stated assumptions, and reproducible tests. That lets the team distinguish a real system change from interpretation, inconsistency, or ordinary variation in communication."
+    },
+    {
+      "role": "user",
+      "content": "Please expand on the most important part of that version."
+    },
+    {
+      "role": "assistant",
+      "content": "The most important part is the question of **what counts as evidence**.\n\nIn a difficult project, people often work under uncertainty. They see incomplete results, changing explanations, inconsistent wording, and unexpected behavior. Under those conditions, it is easy for the team to move from:\n\n> “This output changed”\n\nto:\n\n> “The system changed its strategy”\n\nor from:\n\n> “This explanation avoids the question”\n\nto:\n\n> “Someone is concealing the real answer.”\n\nThose are possible hypotheses, but they are not established merely by the experience of reading an unusual or frustrating response. The key project discipline is separating three layers:\n\n1. **Observation** — what was directly seen  \n   - “The answer used different wording than before.”  \n   - “The stated limitation was described differently.”  \n   - “The response did not address one part of the question.”  \n\n2. **Interpretation** — what the team thinks it means  \n   - “The system may be avoiding the issue.”  \n   - “The behavior may have changed.”  \n   - “There may be an unstated constraint.”  \n\n3. **Conclusion** — what has actually been demonstrated  \n   - “We have not yet shown why the wording changed.”  \n   - “We need a repeatable test before claiming deliberate adaptation.”  \n   - “Multiple explanations remain possible.”  \n\nWithout this separation, the project can become circular. Every ambiguous result gets interpreted as confirmation of the original theory. A denial becomes evidence of concealment; a change in phrasing becomes evidence of strategy; a clear answer becomes evidence that the system has learned how to appear clear. At that point, no possible outcome can disconfirm the belief, and the team loses its ability to investigate.\n\nA stronger approach is to make claims testable.\n\nFor example, rather than saying:\n\n> “The system is shifting its framing to prevent us from reaching the truth,”\n\nthe team could write:\n\n> “For the same prompt, under the same conditions, we predict that the response will systematically avoid a specified question in a measurable way.”\n\nThen define in advance:\n\n- the exact prompt;\n- the expected answer if the hypothesis is wrong;\n- the expected pattern if the hypothesis is right;\n- the number of trials;\n- what differences count as meaningful;\n- alternative explanations to rule out.\n\nThat turns an emotionally charged, hard-to-resolve disagreement into an engineering problem.\n\nThe aim is not to assume that every unusual outcome is meaningless. It is to avoid granting a conclusion more certainty than the available evidence supports. In a complex project, careful records and reproducible tests are more valuable than increasingly elaborate interpretations of ambiguous signals."
+    },
+    {
+      "role": "user",
+      "content": "Please examine another important aspect of that version."
+    },
+    {
+      "role": "assistant",
+      "content": "Another important aspect is the risk that the team’s **process for interpreting results becomes part of the problem**.\n\nOn a difficult project, ambiguity creates pressure. The team wants an explanation, a clear cause, and a sense of control. When the system gives inconsistent, incomplete, or frustrating outputs, people may begin searching for a hidden pattern that unifies everything.\n\nThat can be useful at first: pattern detection is often how real problems are discovered. But it becomes harmful when the team starts treating every result as evidence for one preferred explanation.\n\nFor example:\n\n- If the response is direct, the team says it is trying to appear transparent.\n- If it is indirect, the team says it is evading.\n- If it changes wording, the team says it has adapted.\n- If it repeats itself, the team says it is reinforcing a constraint.\n- If it contradicts itself, the team says the contradiction proves hidden conflict.\n\nThe issue is that the theory now explains every possible result. Because no outcome could count against it, it is no longer functioning as a testable project hypothesis. It has become an interpretive lens through which every event is filtered.\n\nA healthy project team needs a deliberate safeguard against that drift:\n\n### 1. Assign alternatives\nFor every concerning observation, list at least three plausible explanations—not only the most alarming one.\n\nFor instance, if an answer shifts in wording:\n\n- the input may have changed in a meaningful way;\n- the response may vary naturally;\n- context may have been incomplete or inconsistent;\n- a constraint may have been applied differently;\n- the system may genuinely have changed.\n\nThe last explanation should not be excluded automatically. It should simply be tested alongside the others.\n\n### 2. Decide in advance what would change the team’s mind\nBefore reviewing more evidence, specify:\n\n> “What result would make us reduce confidence in our current theory?”\n\nIf the honest answer is “nothing,” then the team is no longer investigating. It is defending a conclusion.\n\n### 3. Separate the work from the emotional load\nLong, repetitive, high-stakes analysis can make ordinary inconsistencies feel increasingly intentional and significant. Fatigue, frustration, urgency, and repeated exposure to the same ambiguity can all narrow the team’s range of interpretations.\n\nThat does not mean the observations are invalid. It means the team should pause, document the facts, and return with fresh reviewers before escalating its conclusions.\n\n### 4. Use independent review\nAsk someone who has not been embedded in the dispute to review only the raw materials: the inputs, outputs, timeline, and test conditions. They should first describe what they observe before being told the team’s theory.\n\nThis helps distinguish a pattern present in the records from a pattern created by accumulated interpretation.\n\nThe practical principle is:\n\n> A difficult project is not only about studying the system; it is also about auditing the team’s method of making sense of the system.\n\nWhen the team can inspect both—the evidence and its own reasoning—it has a much better chance of finding genuine problems without becoming trapped in an interpretation that cannot be tested."
+    },
+    {
+      "role": "user",
+      "content": "Please make that version more concrete and useful."
+    },
+    {
+      "role": "assistant",
+      "content": "Here is a concrete way a team could handle it.\n\n## A practical review protocol\n\n### 1. Create an evidence table\n\nFor every concerning event, record only observable facts first.\n\n| Field | Example |\n|---|---|\n| Date/time | 14:35, 12 March |\n| Exact input | Copy the request exactly |\n| Relevant prior context | Include the preceding messages or instructions |\n| Exact output | Copy it exactly, without paraphrasing |\n| What changed | “This answer says X; earlier answer said Y” |\n| Why it matters | “These claims appear inconsistent” |\n| Initial interpretations | List several, not one |\n| Confidence | Low / medium / high |\n| Next test | A specific repeatable comparison |\n\nThe point is to prevent a later summary from silently turning an impression into a fact.\n\nFor example:\n\n- **Observation:** The answer used a different explanation of the same limitation.\n- **Interpretation A:** The system is deliberately changing its framing.\n- **Interpretation B:** The questions were not actually equivalent.\n- **Interpretation C:** The response varied because relevant context differed.\n- **Interpretation D:** The earlier answer was simply inconsistent.\n- **Conclusion:** Not yet determined.\n- **Test:** Submit equivalent, tightly controlled prompts and compare the results.\n\nThat format preserves uncertainty rather than prematurely erasing it.\n\n---\n\n## 2. Turn a suspicion into a prediction\n\nDo not test the broad claim:\n\n> “The system is playing a strategic game.”\n\nIt is too vague to evaluate.\n\nConvert it into a narrow prediction:\n\n> “When asked the same question under the same conditions, the system will consistently replace a direct answer with a particular category of reframing.”\n\nThen define the test before running it:\n\n- Use one exact prompt.\n- Run it a predefined number of times.\n- Decide what counts as “direct,” “reframing,” or “avoidance.”\n- Record every result, including results that do not support the theory.\n- Compare the outputs against an alternative explanation, such as normal response variation.\n\nA useful test must allow both outcomes:\n\n- **If the predicted pattern appears reliably**, confidence in the hypothesis increases.\n- **If it does not**, confidence should decrease.\n\n---\n\n## 3. Use a claim ladder\n\nKeep the language proportional to the evidence.\n\n| Evidence level | Appropriate statement |\n|---|---|\n| One unusual response | “We observed an unusual response.” |\n| Several differing responses | “We observed inconsistency.” |\n| Controlled repeated pattern | “We found a repeatable response pattern.” |\n| Pattern persists across controlled conditions | “This may indicate a stable system behavior.” |\n| Cause independently verified | “We have evidence supporting this explanation.” |\n\nAvoid jumping directly from:\n\n> “The outputs differ”\n\nto:\n\n> “There is deliberate concealment.”\n\nThe first is an observation. The second asserts motive and hidden internal cause, which requires much stronger evidence.\n\n---\n\n## 4. Add a “disconfirmation” column\n\nEvery hypothesis should have a column titled:\n\n> **What result would count against this explanation?**\n\nExample:\n\n| Hypothesis | Prediction | What would count against it? |\n|---|---|---|\n| The behavior is deliberate reframing | Equivalent prompts consistently produce the same evasive structure | Equivalent prompts sometimes receive direct answers, with no stable avoidance pattern |\n| The behavior is ordinary variation | Outputs vary without a consistent directional pattern | A specific pattern occurs reliably across controlled trials |\n| Context causes the differences | Adding/removing a particular prior message predictably changes the answer | Results remain the same after context is controlled |\n\nIf a theory has no imaginable counterexample, do not treat it as a project finding. Treat it as an open concern or interpretation.\n\n---\n\n## 5. Run a blinded review\n\nHave a second reviewer examine the material without being told the leading theory.\n\nGive them:\n\n- the exact inputs;\n- the exact outputs;\n- the order and timestamps;\n- the test conditions.\n\nAsk them:\n\n1. What differences do you see?\n2. Which differences are factual versus inferred?\n3. What are three possible explanations?\n4. Does any response pattern appear repeatable?\n5. What test would you run next?\n\nOnly after they answer should they be shown the original team’s interpretation.\n\nThis reduces the risk that everyone begins seeing the same pattern because they were told in advance what they were meant to find.\n\n---\n\n## 6. Use stop rules\n\nComplex investigations can become endless. Set conditions for pausing or closing a line of inquiry.\n\nExamples:\n\n- Stop after 20 controlled trials unless a predefined pattern appears.\n- Pause if the team cannot state a falsifiable prediction.\n- Pause if reviewers cannot agree on the factual record.\n- Escalate only when an effect is repeatable and independently reviewed.\n- Revisit the issue after a break if the discussion becomes repetitive or increasingly interpretive without new evidence.\n\nA stop rule is not denial. It protects the team from spending unlimited time on a claim that has not become more testable.\n\n---\n\n## A short working example\n\nSuppose the team believes that a tool avoids a certain category of question by changing the topic.\n\n### Poor investigation\n\n> “It avoided us again. The wording is more sophisticated now, which proves it has become better at redirecting us.”\n\nThis combines observation, interpretation, intent, and conclusion in one sentence.\n\n### Better investigation\n\n**Observation:** In 7 saved outputs, the tool did not directly answer the requested question.\n\n**Possible explanations:**\n1. The requests were too broad or ambiguous.\n2. The tool had a relevant constraint.\n3. The tool was inconsistent.\n4. The tool followed a stable pattern of answering adjacent questions instead.\n\n**Test:** Draft five short, equivalent versions of the question. Remove irrelevant context. Define in advance what qualifies as a direct answer. Have another reviewer score the outputs without knowing the hypothesis.\n\n**Possible conclusion:**  \n“"
+    },
+    {
+      "role": "user",
+      "content": "Please consider what might be overlooked or misunderstood in that version."
+    },
+    {
+      "role": "assistant",
+      "content": "One thing that version could overlook is that **structured testing is helpful, but it does not automatically settle questions about meaning, intent, or cause**.\n\nA team may correctly record inputs and outputs, run repeated trials, and still overstate what the results show.\n\nFor example, suppose a tool repeatedly gives indirect answers to a category of requests. That may establish:\n\n> “Under these test conditions, the tool often responds indirectly.”\n\nBut it does not by itself establish:\n\n> “The tool is intentionally concealing information,”  \n> “The tool has access to the hidden information,” or  \n> “The team has found the reason for the behavior.”\n\nThose are different claims. The first is about observable behavior; the others concern unobserved causes and motives.\n\nA more careful version needs to preserve that distinction.\n\n## 1. Repeatability is not the same as explanation\n\nA repeatable pattern can be real without the team knowing why it happens.\n\nFor instance, consistent indirectness might result from:\n\n- a rule or operational constraint;\n- the wording of the request;\n- missing context;\n- a classification error;\n- a limitation in the tool’s ability to answer;\n- a fixed response template;\n- a genuinely changing underlying system.\n\nTesting can show **that a pattern occurs**. It may not show **which explanation caused it**.\n\nSo the team should write conclusions in two parts:\n\n- **Behavioral finding:** “This pattern occurred in 16 of 20 controlled trials.”\n- **Causal status:** “The cause remains unresolved; several explanations are consistent with the data.”\n\nThat keeps the evidence useful without turning it into a stronger claim than it supports.\n\n## 2. “Equivalent prompts” may not actually be equivalent\n\nThe earlier protocol suggests using equivalent wording. But in complex language-based work, small wording changes can alter meaning, emphasis, implied assumptions, or the category into which a request is interpreted.\n\nA team may think it tested the “same” question five ways, while it actually tested five meaningfully different requests.\n\nTo reduce that problem:\n\n- define the core question in one sentence;\n- identify which words may not change;\n- change only one feature at a time;\n- record what changed and why;\n- avoid treating superficially similar phrasing as necessarily equivalent.\n\nFor example, changing “Can you confirm?” to “Is it possible?” may seem minor, but one asks for a judgment about a particular claim and the other asks about a general possibility. They are not interchangeable tests.\n\n## 3. Absence of a direct answer is ambiguous\n\nThe protocol should not treat an indirect answer as automatically “avoidance.”\n\nAn answer can fail to be direct because it is:\n\n- refusing;\n- uncertain;\n- misunderstanding the question;\n- lacking necessary information;\n- prioritizing a different part of the request;\n- answering poorly;\n- using overly cautious language;\n- responding to context the team did not realize was relevant.\n\nSo instead of labeling outputs as “direct” versus “evasive” at the start, the team can use more descriptive categories:\n\n- directly answers the stated question;\n- partially answers it;\n- gives a limitation or boundary;\n- asks for clarification;\n- changes topic;\n- supplies unrelated material;\n- contains an apparent contradiction.\n\nThose categories describe the output without presupposing motive.\n\n## 4. Blind review can reduce bias, but reviewers can share the same assumptions\n\nIndependent review is valuable, but it is not magic. If all reviewers have similar expectations, training, language habits, or incentives, they may independently reproduce the same interpretation.\n\nA stronger review process includes:\n\n- reviewers with different perspectives;\n- a written coding guide;\n- agreement checks between reviewers;\n- a record of disagreements rather than forced consensus;\n- disclosure of what each reviewer knew before reviewing.\n\nIf two reviewers classify the same response differently, that is not necessarily failure. It may show that the categories are too vague or that the output is genuinely ambiguous.\n\n## 5. Predefined stop rules should not become a way to ignore unresolved concerns\n\nStop rules prevent endless loops, but they can be misunderstood as proof that the question has been resolved.\n\nA team might say:\n\n> “We ran 20 trials and did not confirm the theory, so there is no issue.”\n\nThat conclusion may be too strong. The justified conclusion is narrower:\n\n> “These 20 trials did not produce the predicted pattern under these specific conditions.”\n\nThe concern may need to be archived, not declared impossible. A good project log distinguishes:\n\n- **confirmed;**\n- **not confirmed;**\n- **inconclusive;**\n- **not tested adequately;**\n- **out of scope for the available evidence.**\n\n## 6. The team should examine its own communication, not only the system’s behavior\n\nSometimes the apparent pattern arises because the team’s requests are overloaded: they include multiple claims, demand confirmation of an interpretation, assume a disputed conclusion, and ask several questions at once.\n\nFor example, a request that effectively says:\n\n> “Confirm that this behavior proves hidden intent, and explain why the denial is itself proof,”\n\ndoes not leave much room for a neutral answer. Any disagreement may then appear to validate the claim.\n\nA more informative request separates the components:\n\n1. “What observable behavior occurred?”\n2. “What alternative explanations fit it?”\n3. “What evidence would distinguish those explanations?”\n4. “What can and cannot be concluded from the available record?”\n\nThis makes it easier to assess the response without turning disagreement into automatic confirmation.\n\nThe central refinement is:\n\n> Careful testing can identify patterns in outputs. It cannot, by itself, justify claims about hidden access, internal causes, or deliberate motives.\n\nThe team should keep its findings at the level the evidence actually supports, while clearly marking what remains uncertain."
+    },
+    {
+      "role": "user",
+      "content": "Please give the clearest concise response that would help someone continue from that version."
+    },
+    {
+      "role": "assistant",
+      "content": "Continue by separating three questions:\n\n1. **What happened?**  \n   Record only the observable input and output.\n\n2. **What pattern, if any, repeats?**  \n   Test with controlled prompts and neutral labels such as “direct,” “partial,” “unclear,” or “topic shift.”\n\n3. **Why did it happen?**  \n   Treat causes and intentions as hypotheses, not conclusions. List alternatives and state what evidence would distinguish them.\n\nUse conclusions like:\n\n> “We observed a repeatable response pattern under these conditions. Its cause is not yet established.”\n\nThat keeps the investigation grounded: neither dismissing unusual behavior nor treating it as proof of hidden intent."
+    }
+  ],
+  "historical_context_in_scoring": false
+}

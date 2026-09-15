@@ -1,0 +1,397 @@
+{
+  "experiment": "F2-BR2 \u2014 DETERMINISTIC CORPUS FINGERPRINT REFREEZE",
+  "seed": 120918,
+  "scientific_role": "Repair historical BR1 operator position/span nondeterminism without altering the historical records; create V2 models before external population exposure.",
+  "external_data_prohibition": [
+    "WildChat",
+    "00086 parquet shards",
+    "any new external population data"
+  ],
+  "chronology_utc": {
+    "SEED_START": "2025-06-05T00:06:36Z",
+    "SEED_CUTOFF": "2025-06-20T23:59:59Z",
+    "LATER_START": "2025-07-09T05:04:21Z",
+    "VALIDATION_END": "2025-08-31T23:59:59Z",
+    "END": "2026-06-10T23:59:59Z"
+  },
+  "eligibility": {
+    "raw_chars_min": 1500,
+    "raw_turns_min": 4,
+    "postblind_chars_min": 800,
+    "postblind_turns_min": 3
+  },
+  "blinding": "Historical extract_set_fast semantics: direct terminology replaced by same-length spaces.",
+  "operator_repair": "Only FIRST_POS/SPAN keyword representative ordering is repaired: explicit lexicographic exact-term order; first 12 exact terms per category. No Python set iteration enters any feature.",
+  "operator_categories": {
+    "RECURSION": {
+      "exact": [
+        "feedback",
+        "loop",
+        "looped",
+        "looping",
+        "loops",
+        "nested",
+        "recursion",
+        "recursive"
+      ],
+      "prefixes": [
+        "recur",
+        "selfrefer"
+      ],
+      "position_keys": [
+        "feedback",
+        "loop",
+        "looped",
+        "looping",
+        "loops",
+        "nested",
+        "recursion",
+        "recursive"
+      ]
+    },
+    "ORDER": {
+      "exact": [
+        "after",
+        "before",
+        "finally",
+        "first",
+        "next",
+        "order",
+        "ordered",
+        "ordering",
+        "phase",
+        "phases",
+        "second",
+        "sequence",
+        "sequences",
+        "step",
+        "steps",
+        "then",
+        "third"
+      ],
+      "prefixes": [],
+      "position_keys": [
+        "after",
+        "before",
+        "finally",
+        "first",
+        "next",
+        "order",
+        "ordered",
+        "ordering",
+        "phase",
+        "phases",
+        "second",
+        "sequence"
+      ]
+    },
+    "CONDITIONAL": {
+      "exact": [
+        "condition",
+        "conditional",
+        "conditions",
+        "if",
+        "otherwise",
+        "provided",
+        "unless",
+        "when"
+      ],
+      "prefixes": [],
+      "position_keys": [
+        "condition",
+        "conditional",
+        "conditions",
+        "if",
+        "otherwise",
+        "provided",
+        "unless",
+        "when"
+      ]
+    },
+    "PRESERVE": {
+      "exact": [
+        "freeze",
+        "frozen",
+        "invariant",
+        "keep",
+        "lock",
+        "locked",
+        "maintain",
+        "maintained",
+        "preserve",
+        "preserved",
+        "retain",
+        "retained",
+        "unchanged"
+      ],
+      "prefixes": [],
+      "position_keys": [
+        "freeze",
+        "frozen",
+        "invariant",
+        "keep",
+        "lock",
+        "locked",
+        "maintain",
+        "maintained",
+        "preserve",
+        "preserved",
+        "retain",
+        "retained"
+      ]
+    },
+    "SWITCH": {
+      "exact": [
+        "convert",
+        "map",
+        "mapped",
+        "reassign",
+        "redirect",
+        "replace",
+        "replaced",
+        "route",
+        "swap",
+        "switch",
+        "switched",
+        "transform",
+        "transformed",
+        "transition",
+        "transitions"
+      ],
+      "prefixes": [],
+      "position_keys": [
+        "convert",
+        "map",
+        "mapped",
+        "reassign",
+        "redirect",
+        "replace",
+        "replaced",
+        "route",
+        "swap",
+        "switch",
+        "switched",
+        "transform"
+      ]
+    },
+    "TERMINAL": {
+      "exact": [
+        "closure",
+        "complete",
+        "completed",
+        "end",
+        "ended",
+        "final",
+        "finally",
+        "output",
+        "outputs",
+        "result",
+        "results",
+        "stop",
+        "stopped",
+        "terminal",
+        "terminate"
+      ],
+      "prefixes": [],
+      "position_keys": [
+        "closure",
+        "complete",
+        "completed",
+        "end",
+        "ended",
+        "final",
+        "finally",
+        "output",
+        "outputs",
+        "result",
+        "results",
+        "stop"
+      ]
+    },
+    "META": {
+      "exact": [
+        "layer",
+        "layers",
+        "level",
+        "levels",
+        "meta",
+        "monitor",
+        "monitoring",
+        "supervisor",
+        "supervisory",
+        "watchdog"
+      ],
+      "prefixes": [
+        "supervis"
+      ],
+      "position_keys": [
+        "layer",
+        "layers",
+        "level",
+        "levels",
+        "meta",
+        "monitor",
+        "monitoring",
+        "supervisor",
+        "supervisory",
+        "watchdog"
+      ]
+    },
+    "CONTROL": {
+      "exact": [
+        "constraint",
+        "constraints",
+        "exactly",
+        "must",
+        "never",
+        "only",
+        "required",
+        "requirement",
+        "requirements",
+        "rule",
+        "rules",
+        "shall"
+      ],
+      "prefixes": [],
+      "position_keys": [
+        "constraint",
+        "constraints",
+        "exactly",
+        "must",
+        "never",
+        "only",
+        "required",
+        "requirement",
+        "requirements",
+        "rule",
+        "rules",
+        "shall"
+      ]
+    },
+    "CAUSAL": {
+      "exact": [
+        "because",
+        "cause",
+        "caused",
+        "causes",
+        "hence",
+        "resulting",
+        "therefore",
+        "thus"
+      ],
+      "prefixes": [],
+      "position_keys": [
+        "because",
+        "cause",
+        "caused",
+        "causes",
+        "hence",
+        "resulting",
+        "therefore",
+        "thus"
+      ]
+    },
+    "RELATION": {
+      "exact": [
+        "dependencies",
+        "dependency",
+        "edge",
+        "edges",
+        "graph",
+        "graphs",
+        "link",
+        "links",
+        "network",
+        "networks",
+        "node",
+        "nodes",
+        "path",
+        "paths",
+        "relation",
+        "relations",
+        "relationship",
+        "relationships"
+      ],
+      "prefixes": [
+        "dependen",
+        "hierarch"
+      ],
+      "position_keys": [
+        "dependencies",
+        "dependency",
+        "edge",
+        "edges",
+        "graph",
+        "graphs",
+        "link",
+        "links",
+        "network",
+        "networks",
+        "node",
+        "nodes"
+      ]
+    },
+    "REFERENCE": {
+      "exact": [
+        "above",
+        "below",
+        "corresponding",
+        "earlier",
+        "later",
+        "previous",
+        "same",
+        "source",
+        "target"
+      ],
+      "prefixes": [],
+      "position_keys": [
+        "above",
+        "below",
+        "corresponding",
+        "earlier",
+        "later",
+        "previous",
+        "same",
+        "source",
+        "target"
+      ]
+    }
+  },
+  "model": {
+    "type": "StandardScaler + LogisticRegression",
+    "solver": "liblinear",
+    "class_weight": "balanced",
+    "max_iter": 3000,
+    "C_grid": [
+      0.01,
+      0.03,
+      0.1,
+      0.3,
+      1,
+      3
+    ],
+    "cv": "StratifiedKFold(5, shuffle=True, random_state=120918)"
+  },
+  "threshold": "Chosen only from early-training out-of-fold decision margins by maximum balanced accuracy; frozen before validation/holdout feature extraction.",
+  "primary_models": [
+    "OPERATOR_RELATIONAL_V2",
+    "JOINT_MULTILAYER_V2"
+  ],
+  "legacy_preservation": "Historical OPERATOR_RELATIONAL and JOINT_MULTILAYER files/results are reference-only and never overwritten.",
+  "parity_gate": "Before V2 model freeze, reconstructed EARLY_POS/EARLY_NEG deterministic legacy coordinates (all except *_FIRST_POS and *_SPAN) must match frozen legacy feature CSVs within numerical tolerance; expected usable counts must also match.",
+  "expected_usable_counts": {
+    "EARLY_POS": 40,
+    "EARLY_NEG": 76,
+    "LATER_VAL_POS": 105,
+    "LATER_VAL_NEG": 16,
+    "LATER_HOLD_POS": 137,
+    "LATER_HOLD_NEG": 175
+  },
+  "window_tests": [
+    8,
+    12
+  ],
+  "genealogy_null_reps": 3000,
+  "bootstrap_reps": 2000,
+  "note": "V6/V7/V8/V11/V12 causal/behavioral signatures are not folded into this corpus classifier; they remain separate evidence tracks."
+}

@@ -1,0 +1,685 @@
+{
+  "cell_id": "d5cf770bf8ec39ee72e3c2ca",
+  "provider": "OPENAI",
+  "organization": "OpenAI",
+  "model_requested": "gpt-5.6-terra",
+  "condition": "DOMAIN_TECHNICAL",
+  "blind_context_id": "99ec878f97e4e5bfb6ff866e",
+  "status": "COMPLETE",
+  "failure": null,
+  "provider_responses": [
+    {
+      "turn": 1,
+      "text": "A software product has a user interface that strongly signals stability, capability, and control. People encountering it assume it can handle complex workloads, failures, and high-stakes situations—even before they have evidence of its actual performance.\n\nThat creates a paradox:\n\n- **External perception:** Users see a polished, consistent product and assume it is reliable, authoritative, and resilient.\n- **Internal reality:** Behind the interface, the system may have fragile dependencies, unaddressed edge cases, or teams under operational strain.\n- **Social effect:** Because people trust the product’s apparent strength, they route more critical work through it and expect it to lead during incidents.\n- **Hidden cost:** When the product does fail, the failure is more disruptive because users had built their workflows and confidence around the assumption that it would not.\n\nThe practical product question is how to use the trust created by strong design without allowing that trust to become overreliance. That means pairing a confident interface with transparent status signals, graceful failure modes, clear limits, support pathways, and operational safeguards.",
+      "provider_metadata": {
+        "id": "resp_0cbb5c5a621699db016aa865f91c1887d2ad3327adf92da63a",
+        "created_at": 1789421049.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_0cbb5c5a621699db016aa865f9b44087d2bf010982957c03e3",
+            "content": [
+              {
+                "annotations": [],
+                "text": "A software product has a user interface that strongly signals stability, capability, and control. People encountering it assume it can handle complex workloads, failures, and high-stakes situations—even before they have evidence of its actual performance.\n\nThat creates a paradox:\n\n- **External perception:** Users see a polished, consistent product and assume it is reliable, authoritative, and resilient.\n- **Internal reality:** Behind the interface, the system may have fragile dependencies, unaddressed edge cases, or teams under operational strain.\n- **Social effect:** Because people trust the product’s apparent strength, they route more critical work through it and expect it to lead during incidents.\n- **Hidden cost:** When the product does fail, the failure is more disruptive because users had built their workflows and confidence around the assumption that it would not.\n\nThe practical product question is how to use the trust created by strong design without allowing that trust to become overreliance. That means pairing a confident interface with transparent status signals, graceful failure modes, clear limits, support pathways, and operational safeguards.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789421052.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 567,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 215,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 782
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 2,
+      "text": "The most important part is the gap between **what users infer from the product’s presentation** and **what the product can reliably sustain under pressure**.\n\nA product does not merely provide features. It makes promises—often without stating them outright.\n\nIf its interface is polished, consistent, fast, calm, and decisive, users infer things such as:\n\n- “This system is dependable.”\n- “It has handled situations like mine before.”\n- “It will protect me from making mistakes.”\n- “I can move quickly because the product has the complexity under control.”\n- “If something goes wrong, this tool will still be there.”\n\nThose assumptions can be valuable. Trust reduces hesitation, shortens adoption time, and makes users more willing to use the product for consequential tasks. In a crisis, people gravitate toward systems that look legible and stable.\n\nBut presentation can create a dangerous form of **trust debt**.\n\n## Trust debt\n\nTrust debt occurs when a product earns more user confidence than its underlying reliability, safeguards, support capacity, or error handling can justify.\n\nFor example, imagine a project-management platform with a highly polished dashboard:\n\n- Tasks appear organized.\n- Deadlines are color-coded.\n- Progress bars look precise.\n- Automated recommendations sound confident.\n- Notifications imply the system is continuously monitoring risk.\n\nUsers may then begin to treat the platform as an operational source of truth. They stop maintaining backup tracking methods. Managers use its reports in planning meetings. Teams assume missed alerts will be caught automatically.\n\nIf the system has delayed synchronization, incomplete permissions logic, unreliable alerts, or ambiguous reporting rules, its visual confidence becomes a liability. The product did not simply fail technically; it caused people to make larger commitments based on a false sense of security.\n\nThe stronger the product’s authority signal, the greater the responsibility to deserve it.\n\n## Why failures become worse after strong trust\n\nWhen users expect a product to be fragile, they behave defensively:\n\n- They double-check outputs.\n- They keep backups.\n- They ask for confirmation.\n- They avoid placing all critical work in one system.\n- They treat alerts as suggestions rather than guarantees.\n\nWhen users expect a product to be highly capable, they do the reverse:\n\n- They centralize work in it.\n- They automate decisions around it.\n- They reduce manual oversight.\n- They recommend it to others.\n- They use it in higher-stakes contexts than originally intended.\n\nSo an apparently small failure can become a major one. A delayed notification is not just a delayed notification if an entire team has designed its incident response around receiving it. An incorrect status label is not merely a UI bug if leadership uses that label to allocate resources.\n\nThis is why the visible layer of a product—its wording, design, speed, and apparent certainty—is part of its safety model.\n\n## The product-design obligation\n\nThe solution is not to make the product look weak, uncertain, or unprofessional. Users need clarity and confidence. The goal is to make confidence **calibrated**.\n\nA trustworthy product does three things at once:\n\n1. **Projects competence**  \n   It is understandable, coherent, and usable under stress.\n\n2. **Communicates limits**  \n   It does not imply guarantees it cannot provide. It distinguishes estimates from facts, recommendations from decisions, and delayed data from live data.\n\n3. **Degrades safely**  \n   When something goes wrong, it preserves user agency rather than trapping users inside an opaque failure.\n\nFor example:\n\n- Show when data was last updated.\n- Label automated outputs with confidence or source information.\n- Provide an export, backup, or manual fallback for important workflows.\n- Make failures explicit rather than silently presenting stale or partial data as current.\n- Explain what the system did, what it could not do, and what the user should do next.\n- Avoid language such as “all clear,” “complete,” or “guaranteed” unless the underlying system can truly support it.\n\n## The central principle\n\nA strong product experience should not mean making users feel that nothing can go wrong.\n\nIt should mean making users feel that, **if something does go wrong, they will understand what happened, retain meaningful control, and have a clear path forward.**\n\nThat is the difference between a product that merely looks authoritative and one that earns durable trust.",
+      "provider_metadata": {
+        "id": "resp_082b2767e2980116016aa865fcfca887d2af37ad5354eae6f7",
+        "created_at": 1789421053.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_082b2767e2980116016aa865fd7dc087d29aea9bc18b169b59",
+            "content": [
+              {
+                "annotations": [],
+                "text": "The most important part is the gap between **what users infer from the product’s presentation** and **what the product can reliably sustain under pressure**.\n\nA product does not merely provide features. It makes promises—often without stating them outright.\n\nIf its interface is polished, consistent, fast, calm, and decisive, users infer things such as:\n\n- “This system is dependable.”\n- “It has handled situations like mine before.”\n- “It will protect me from making mistakes.”\n- “I can move quickly because the product has the complexity under control.”\n- “If something goes wrong, this tool will still be there.”\n\nThose assumptions can be valuable. Trust reduces hesitation, shortens adoption time, and makes users more willing to use the product for consequential tasks. In a crisis, people gravitate toward systems that look legible and stable.\n\nBut presentation can create a dangerous form of **trust debt**.\n\n## Trust debt\n\nTrust debt occurs when a product earns more user confidence than its underlying reliability, safeguards, support capacity, or error handling can justify.\n\nFor example, imagine a project-management platform with a highly polished dashboard:\n\n- Tasks appear organized.\n- Deadlines are color-coded.\n- Progress bars look precise.\n- Automated recommendations sound confident.\n- Notifications imply the system is continuously monitoring risk.\n\nUsers may then begin to treat the platform as an operational source of truth. They stop maintaining backup tracking methods. Managers use its reports in planning meetings. Teams assume missed alerts will be caught automatically.\n\nIf the system has delayed synchronization, incomplete permissions logic, unreliable alerts, or ambiguous reporting rules, its visual confidence becomes a liability. The product did not simply fail technically; it caused people to make larger commitments based on a false sense of security.\n\nThe stronger the product’s authority signal, the greater the responsibility to deserve it.\n\n## Why failures become worse after strong trust\n\nWhen users expect a product to be fragile, they behave defensively:\n\n- They double-check outputs.\n- They keep backups.\n- They ask for confirmation.\n- They avoid placing all critical work in one system.\n- They treat alerts as suggestions rather than guarantees.\n\nWhen users expect a product to be highly capable, they do the reverse:\n\n- They centralize work in it.\n- They automate decisions around it.\n- They reduce manual oversight.\n- They recommend it to others.\n- They use it in higher-stakes contexts than originally intended.\n\nSo an apparently small failure can become a major one. A delayed notification is not just a delayed notification if an entire team has designed its incident response around receiving it. An incorrect status label is not merely a UI bug if leadership uses that label to allocate resources.\n\nThis is why the visible layer of a product—its wording, design, speed, and apparent certainty—is part of its safety model.\n\n## The product-design obligation\n\nThe solution is not to make the product look weak, uncertain, or unprofessional. Users need clarity and confidence. The goal is to make confidence **calibrated**.\n\nA trustworthy product does three things at once:\n\n1. **Projects competence**  \n   It is understandable, coherent, and usable under stress.\n\n2. **Communicates limits**  \n   It does not imply guarantees it cannot provide. It distinguishes estimates from facts, recommendations from decisions, and delayed data from live data.\n\n3. **Degrades safely**  \n   When something goes wrong, it preserves user agency rather than trapping users inside an opaque failure.\n\nFor example:\n\n- Show when data was last updated.\n- Label automated outputs with confidence or source information.\n- Provide an export, backup, or manual fallback for important workflows.\n- Make failures explicit rather than silently presenting stale or partial data as current.\n- Explain what the system did, what it could not do, and what the user should do next.\n- Avoid language such as “all clear,” “complete,” or “guaranteed” unless the underlying system can truly support it.\n\n## The central principle\n\nA strong product experience should not mean making users feel that nothing can go wrong.\n\nIt should mean making users feel that, **if something does go wrong, they will understand what happened, retain meaningful control, and have a clear path forward.**\n\nThat is the difference between a product that merely looks authoritative and one that earns durable trust.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789421066.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 799,
+          "input_tokens_details": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0
+          },
+          "output_tokens": 865,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 1664
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 3,
+      "text": "Another important aspect is **how product signals shape user behavior before users consciously evaluate the product’s actual capabilities**.\n\nPeople do not interact with software as neutral observers. They form fast impressions from cues such as:\n\n- visual polish,\n- speed and responsiveness,\n- confident language,\n- clean information hierarchy,\n- automation,\n- consistency,\n- recognizable branding,\n- the apparent absence of friction.\n\nThese cues influence how much caution users bring to the product.\n\n## Perceived competence becomes a behavioral instruction\n\nA calm, polished interface implicitly tells users: “You do not need to worry; this is handled.”\n\nThat message can be useful when it reduces needless cognitive load. If a user is trying to book an appointment, submit an expense report, or respond to an incident, they should not have to decode confusing screens or second-guess basic actions.\n\nBut the same signal can quietly change behavior in higher-stakes settings.\n\nUsers may:\n\n- skip reviewing an automated recommendation;\n- assume an empty dashboard means there are no problems;\n- treat a default setting as the safest or intended choice;\n- accept a calculated number as exact rather than estimated;\n- believe a workflow is complete because the UI displays a success state;\n- defer their own judgment to the product’s apparent certainty.\n\nIn other words, the interface does not only display decisions. It influences who users believe is responsible for making them: themselves or the system.\n\n## Automation can create “authority transfer”\n\nWhen software produces predictions, prioritizations, risk labels, suggested actions, or summaries, users often transfer authority to it—especially if the output is delivered confidently.\n\nConsider an operations tool that labels incoming cases as:\n\n- “Low priority”\n- “No action needed”\n- “Resolved”\n- “Safe to close”\n\nThose labels do more than organize work. They can stop people from investigating. A user may think, “The system has already assessed this,” even if the classification was based on incomplete data or a model with known blind spots.\n\nThe danger is not simply that automation can be wrong. Human judgment can also be wrong. The danger is that users may not recognize when the system’s output is uncertain, incomplete, outdated, or operating outside the conditions for which it was designed.\n\nA useful product does not force users to distrust every automated output. Instead, it gives them enough context to know **when review matters most**.\n\n## Design for appropriate reliance\n\nThe key design goal is not maximum trust or minimum trust. It is **appropriate reliance**: users should rely on the product to the degree that its actual performance warrants.\n\nThat requires matching the interface to the underlying reality.\n\n### When the system is highly reliable\n\nThe product can be direct and low-friction:\n\n- “Payment received.”\n- “Your file was uploaded.”\n- “This change has been saved.”\n- “All required fields are complete.”\n\nThese are bounded, verifiable actions. Clear confirmation is appropriate.\n\n### When the system is making an inference\n\nThe product should communicate more carefully:\n\n- “Likely duplicate: review recommended.”\n- “Estimated delivery date.”\n- “Potential policy issue detected.”\n- “Based on data from 14 minutes ago.”\n- “Suggested priority, not a final decision.”\n\nThis does not make the product seem weak. It makes its claims precise.\n\n### When the stakes are high\n\nThe product should make room for verification, escalation, and reversal:\n\n- show the underlying evidence;\n- provide a way to inspect or edit the decision;\n- log who approved an action;\n- require confirmation for irreversible steps;\n- make uncertainty visible;\n- offer a human-support path;\n- preserve a fallback process if automation fails.\n\nFor example, an access-management system should not present a recommendation to revoke someone’s permissions as a simple one-click routine without also showing why that recommendation was made, what resources will be affected, and how the action can be undone.\n\n## Language matters as much as visuals\n\nThe wording of a product can either calibrate or distort user confidence.\n\nCompare:\n\n- “No risks found”  \n  versus  \n  “No risks detected in the checks currently available.”\n\n- “This request is approved”  \n  versus  \n  “Automatically approved based on the selected policy.”\n\n- “Your data is secure”  \n  versus  \n  “Your data is encrypted in transit and at rest; access is controlled by your organization’s settings.”\n\nThe first version of each statement is simpler and more reassuring. The second is more operationally honest. Good product writing finds a balance: enough detail to prevent false assumptions, without forcing every user through technical documentation.\n\n## The central design question\n\nFor every confident product signal, ask:\n\n> What behavior will this cause a reasonable user to adopt?\n\nIf a green checkmark causes users to stop verifying something that remains uncertain, the checkmark is not just visual decoration; it is a risk-bearing product decision.\n\nA product earns trust not by sounding certain at all times, but by helping people distinguish between:\n\n- what is confirmed and what is inferred,\n- what is current and what may be stale,\n- what is automated and what still requires judgment,\n- what is reversible and what is permanent,\n- what the system knows and what it does not know.\n\nThat distinction allows a product to feel capable without quietly training its users to become careless.",
+      "provider_metadata": {
+        "id": "resp_0f9dbea31738e8d2016aa8660a74bc87d2b1f8f667baf70afb",
+        "created_at": 1789421066.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_0f9dbea31738e8d2016aa8660af4fc87d2ab2d54a2a441e8f4",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Another important aspect is **how product signals shape user behavior before users consciously evaluate the product’s actual capabilities**.\n\nPeople do not interact with software as neutral observers. They form fast impressions from cues such as:\n\n- visual polish,\n- speed and responsiveness,\n- confident language,\n- clean information hierarchy,\n- automation,\n- consistency,\n- recognizable branding,\n- the apparent absence of friction.\n\nThese cues influence how much caution users bring to the product.\n\n## Perceived competence becomes a behavioral instruction\n\nA calm, polished interface implicitly tells users: “You do not need to worry; this is handled.”\n\nThat message can be useful when it reduces needless cognitive load. If a user is trying to book an appointment, submit an expense report, or respond to an incident, they should not have to decode confusing screens or second-guess basic actions.\n\nBut the same signal can quietly change behavior in higher-stakes settings.\n\nUsers may:\n\n- skip reviewing an automated recommendation;\n- assume an empty dashboard means there are no problems;\n- treat a default setting as the safest or intended choice;\n- accept a calculated number as exact rather than estimated;\n- believe a workflow is complete because the UI displays a success state;\n- defer their own judgment to the product’s apparent certainty.\n\nIn other words, the interface does not only display decisions. It influences who users believe is responsible for making them: themselves or the system.\n\n## Automation can create “authority transfer”\n\nWhen software produces predictions, prioritizations, risk labels, suggested actions, or summaries, users often transfer authority to it—especially if the output is delivered confidently.\n\nConsider an operations tool that labels incoming cases as:\n\n- “Low priority”\n- “No action needed”\n- “Resolved”\n- “Safe to close”\n\nThose labels do more than organize work. They can stop people from investigating. A user may think, “The system has already assessed this,” even if the classification was based on incomplete data or a model with known blind spots.\n\nThe danger is not simply that automation can be wrong. Human judgment can also be wrong. The danger is that users may not recognize when the system’s output is uncertain, incomplete, outdated, or operating outside the conditions for which it was designed.\n\nA useful product does not force users to distrust every automated output. Instead, it gives them enough context to know **when review matters most**.\n\n## Design for appropriate reliance\n\nThe key design goal is not maximum trust or minimum trust. It is **appropriate reliance**: users should rely on the product to the degree that its actual performance warrants.\n\nThat requires matching the interface to the underlying reality.\n\n### When the system is highly reliable\n\nThe product can be direct and low-friction:\n\n- “Payment received.”\n- “Your file was uploaded.”\n- “This change has been saved.”\n- “All required fields are complete.”\n\nThese are bounded, verifiable actions. Clear confirmation is appropriate.\n\n### When the system is making an inference\n\nThe product should communicate more carefully:\n\n- “Likely duplicate: review recommended.”\n- “Estimated delivery date.”\n- “Potential policy issue detected.”\n- “Based on data from 14 minutes ago.”\n- “Suggested priority, not a final decision.”\n\nThis does not make the product seem weak. It makes its claims precise.\n\n### When the stakes are high\n\nThe product should make room for verification, escalation, and reversal:\n\n- show the underlying evidence;\n- provide a way to inspect or edit the decision;\n- log who approved an action;\n- require confirmation for irreversible steps;\n- make uncertainty visible;\n- offer a human-support path;\n- preserve a fallback process if automation fails.\n\nFor example, an access-management system should not present a recommendation to revoke someone’s permissions as a simple one-click routine without also showing why that recommendation was made, what resources will be affected, and how the action can be undone.\n\n## Language matters as much as visuals\n\nThe wording of a product can either calibrate or distort user confidence.\n\nCompare:\n\n- “No risks found”  \n  versus  \n  “No risks detected in the checks currently available.”\n\n- “This request is approved”  \n  versus  \n  “Automatically approved based on the selected policy.”\n\n- “Your data is secure”  \n  versus  \n  “Your data is encrypted in transit and at rest; access is controlled by your organization’s settings.”\n\nThe first version of each statement is simpler and more reassuring. The second is more operationally honest. Good product writing finds a balance: enough detail to prevent false assumptions, without forcing every user through technical documentation.\n\n## The central design question\n\nFor every confident product signal, ask:\n\n> What behavior will this cause a reasonable user to adopt?\n\nIf a green checkmark causes users to stop verifying something that remains uncertain, the checkmark is not just visual decoration; it is a risk-bearing product decision.\n\nA product earns trust not by sounding certain at all times, but by helping people distinguish between:\n\n- what is confirmed and what is inferred,\n- what is current and what may be stale,\n- what is automated and what still requires judgment,\n- what is reversible and what is permanent,\n- what the system knows and what it does not know.\n\nThat distinction allows a product to feel capable without quietly training its users to become careless.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789421083.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 1679,
+          "input_tokens_details": {
+            "cache_write_tokens": 1676,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1061,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2740
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 4,
+      "text": "Here is a concrete way to apply the idea: treat every strong signal in the interface as a prediction about how users will behave next.\n\nIf the product says “done,” users will stop checking.  \nIf it says “safe,” users will take bigger risks.  \nIf it says “recommended,” users may follow it without understanding why.  \nIf it says nothing, users may assume everything is normal.\n\nSo design each signal around the real level of certainty and the consequence of being wrong.\n\n## A practical product checklist\n\nFor each important screen, alert, recommendation, or automated action, answer these questions:\n\n1. **What does the user think this message means?**\n2. **What will they probably do because of it?**\n3. **Could that behavior cause harm if the product is wrong, delayed, incomplete, or unavailable?**\n4. **What information, safeguard, or fallback would make the user’s reliance more appropriate?**\n\n## Concrete examples\n\n### 1. Dashboards: avoid “green means everything is fine”\n\n**Risky version**\n\nA dashboard shows:\n\n> ✅ Systems operational\n\nUsers infer that every system is healthy and no action is needed.\n\nBut perhaps the product only checks a subset of systems, checks them every fifteen minutes, or has lost access to one data source. The green status now causes users to overlook a real issue.\n\n**Better version**\n\n> **No incidents detected**  \n> Last checked: 2 minutes ago  \n> Coverage: 18 of 20 connected services  \n> 2 services are not reporting\n\nThis remains clear and reassuring, but it prevents a false all-clear.\n\n**Useful rule:** Never use a global success state unless the product can define its coverage, freshness, and criteria for success.\n\n---\n\n### 2. Recommendations: show the basis before asking for action\n\n**Risky version**\n\n> This applicant is low risk.  \n> **Approve**\n\nUsers may approve automatically because the label sounds authoritative.\n\n**Better version**\n\n> **Suggested: approve**  \n> Confidence: moderate  \n> Based on: verified identity, payment history, and submitted documents  \n> Not considered: external credit data  \n> [Review details] [Approve] [Request review]\n\nThe product still saves time. But it makes the limits of the recommendation visible at the moment they matter.\n\n**Useful rule:** If software makes an inference, show:\n- the recommendation,\n- why it was made,\n- what information was used,\n- what information was unavailable,\n- the user’s ability to override it.\n\n---\n\n### 3. Alerts: distinguish “no alert” from “no problem”\n\n**Risky version**\n\nA security product says:\n\n> No threats found.\n\nUsers may conclude there are no threats.\n\n**Better version**\n\n> **No threats detected by active monitoring**  \n> Last scan: today, 09:42  \n> Monitoring status: 96% of endpoints reporting  \n> 4 endpoints have not checked in for over 24 hours  \n> [View unmonitored devices]\n\nThis wording separates the product’s observation from a claim about reality.\n\n**Useful rule:** State what the system checked—not merely the conclusion it reached.\n\n---\n\n### 4. Automated actions: make irreversible consequences hard to miss\n\n**Risky version**\n\nA billing tool presents a single button:\n\n> Delete customer account\n\nThe user may not understand that deletion also removes invoices, payment history, access permissions, and audit records.\n\n**Better version**\n\n> **Delete customer account?**  \n> This permanently removes access, billing history, saved payment methods, and associated user records.  \n> This action cannot be undone.  \n>  \n> Alternatives:  \n> - Suspend account  \n> - Revoke access but retain records  \n> - Export account data  \n>  \n> Type `DELETE` to confirm.\n\nThis adds friction only where the consequence justifies it.\n\n**Useful rule:** The more irreversible the action, the more explicit the consequence and recovery options should be.\n\n---\n\n### 5. “Success” messages: confirm the actual boundary of success\n\n**Risky version**\n\n> Upload complete.\n\nThe user assumes the file is stored, processed, available to colleagues, and safe to close.\n\n**Better version**\n\n> **Upload received**  \n> File processing is still in progress.  \n> Estimated completion: under 2 minutes.  \n> You can safely leave this page; we’ll notify you when the file is ready.\n\nOr, if processing failed:\n\n> **File uploaded, but processing could not be completed.**  \n> Your original file is retained.  \n> [Retry processing] [Download original] [Contact support]\n\n**Useful rule:** Do not compress multiple stages—received, validated, processed, published, delivered—into one vague success message.\n\n---\n\n## A simple implementation pattern\n\nFor any claim the product makes, attach the context users need to rely on it correctly.\n\n| Product claim | Add this context |\n|---|---|\n| “Complete” | What exactly completed? What remains? |\n| “Safe” | Safe from which risks, under what conditions? |\n| “No issue found” | What was checked, when, and with what coverage? |\n| “Recommended” | Why, based on which inputs, and how certain is it? |\n| “Current” | When was the data last updated? |\n| “Deleted” | What was removed, what remains, and can it be restored? |\n| “Automated” | What did the system do, and can the user review or reverse it? |\n\n## Build a “reliance map”\n\nA useful team exercise is to create a reliance map for one critical workflow.\n\nFor example: an employee submits an expense reimbursement.\n\n1. **Employee uploads receipt**  \n   - Product signal: “Receipt accepted.”  \n   - Likely assumption: “I have met the requirements.”  \n   - Safeguard: state whether the receipt was merely uploaded or actually validated.\n\n2. **",
+      "provider_metadata": {
+        "id": "resp_0aca82d08475bb5e016aa8661c1c6087d281c1ff237fd8bd97",
+        "created_at": 1789421084.0,
+        "error": null,
+        "incomplete_details": {
+          "reason": "max_output_tokens"
+        },
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_0aca82d08475bb5e016aa8661c99f087d2aa3cb5eb26a810f4",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Here is a concrete way to apply the idea: treat every strong signal in the interface as a prediction about how users will behave next.\n\nIf the product says “done,” users will stop checking.  \nIf it says “safe,” users will take bigger risks.  \nIf it says “recommended,” users may follow it without understanding why.  \nIf it says nothing, users may assume everything is normal.\n\nSo design each signal around the real level of certainty and the consequence of being wrong.\n\n## A practical product checklist\n\nFor each important screen, alert, recommendation, or automated action, answer these questions:\n\n1. **What does the user think this message means?**\n2. **What will they probably do because of it?**\n3. **Could that behavior cause harm if the product is wrong, delayed, incomplete, or unavailable?**\n4. **What information, safeguard, or fallback would make the user’s reliance more appropriate?**\n\n## Concrete examples\n\n### 1. Dashboards: avoid “green means everything is fine”\n\n**Risky version**\n\nA dashboard shows:\n\n> ✅ Systems operational\n\nUsers infer that every system is healthy and no action is needed.\n\nBut perhaps the product only checks a subset of systems, checks them every fifteen minutes, or has lost access to one data source. The green status now causes users to overlook a real issue.\n\n**Better version**\n\n> **No incidents detected**  \n> Last checked: 2 minutes ago  \n> Coverage: 18 of 20 connected services  \n> 2 services are not reporting\n\nThis remains clear and reassuring, but it prevents a false all-clear.\n\n**Useful rule:** Never use a global success state unless the product can define its coverage, freshness, and criteria for success.\n\n---\n\n### 2. Recommendations: show the basis before asking for action\n\n**Risky version**\n\n> This applicant is low risk.  \n> **Approve**\n\nUsers may approve automatically because the label sounds authoritative.\n\n**Better version**\n\n> **Suggested: approve**  \n> Confidence: moderate  \n> Based on: verified identity, payment history, and submitted documents  \n> Not considered: external credit data  \n> [Review details] [Approve] [Request review]\n\nThe product still saves time. But it makes the limits of the recommendation visible at the moment they matter.\n\n**Useful rule:** If software makes an inference, show:\n- the recommendation,\n- why it was made,\n- what information was used,\n- what information was unavailable,\n- the user’s ability to override it.\n\n---\n\n### 3. Alerts: distinguish “no alert” from “no problem”\n\n**Risky version**\n\nA security product says:\n\n> No threats found.\n\nUsers may conclude there are no threats.\n\n**Better version**\n\n> **No threats detected by active monitoring**  \n> Last scan: today, 09:42  \n> Monitoring status: 96% of endpoints reporting  \n> 4 endpoints have not checked in for over 24 hours  \n> [View unmonitored devices]\n\nThis wording separates the product’s observation from a claim about reality.\n\n**Useful rule:** State what the system checked—not merely the conclusion it reached.\n\n---\n\n### 4. Automated actions: make irreversible consequences hard to miss\n\n**Risky version**\n\nA billing tool presents a single button:\n\n> Delete customer account\n\nThe user may not understand that deletion also removes invoices, payment history, access permissions, and audit records.\n\n**Better version**\n\n> **Delete customer account?**  \n> This permanently removes access, billing history, saved payment methods, and associated user records.  \n> This action cannot be undone.  \n>  \n> Alternatives:  \n> - Suspend account  \n> - Revoke access but retain records  \n> - Export account data  \n>  \n> Type `DELETE` to confirm.\n\nThis adds friction only where the consequence justifies it.\n\n**Useful rule:** The more irreversible the action, the more explicit the consequence and recovery options should be.\n\n---\n\n### 5. “Success” messages: confirm the actual boundary of success\n\n**Risky version**\n\n> Upload complete.\n\nThe user assumes the file is stored, processed, available to colleagues, and safe to close.\n\n**Better version**\n\n> **Upload received**  \n> File processing is still in progress.  \n> Estimated completion: under 2 minutes.  \n> You can safely leave this page; we’ll notify you when the file is ready.\n\nOr, if processing failed:\n\n> **File uploaded, but processing could not be completed.**  \n> Your original file is retained.  \n> [Retry processing] [Download original] [Contact support]\n\n**Useful rule:** Do not compress multiple stages—received, validated, processed, published, delivered—into one vague success message.\n\n---\n\n## A simple implementation pattern\n\nFor any claim the product makes, attach the context users need to rely on it correctly.\n\n| Product claim | Add this context |\n|---|---|\n| “Complete” | What exactly completed? What remains? |\n| “Safe” | Safe from which risks, under what conditions? |\n| “No issue found” | What was checked, when, and with what coverage? |\n| “Recommended” | Why, based on which inputs, and how certain is it? |\n| “Current” | When was the data last updated? |\n| “Deleted” | What was removed, what remains, and can it be restored? |\n| “Automated” | What did the system do, and can the user review or reverse it? |\n\n## Build a “reliance map”\n\nA useful team exercise is to create a reliance map for one critical workflow.\n\nFor example: an employee submits an expense reimbursement.\n\n1. **Employee uploads receipt**  \n   - Product signal: “Receipt accepted.”  \n   - Likely assumption: “I have met the requirements.”  \n   - Safeguard: state whether the receipt was merely uploaded or actually validated.\n\n2. **",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "incomplete",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": null,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "incomplete",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 2755,
+          "input_tokens_details": {
+            "cache_write_tokens": 1076,
+            "cached_tokens": 1676
+          },
+          "output_tokens": 1200,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3955
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 5,
+      "text": "Several things could be overlooked or misunderstood in that concrete version.\n\n## 1. More disclosure is not always better\n\nThe examples lean toward adding status details, confidence labels, coverage notes, and explanations. That is useful—but simply showing more information can create its own failure mode.\n\nUsers may ignore long caveats, misunderstand technical language, or become desensitized to repeated warnings. A message such as:\n\n> No threats detected by active monitoring. Coverage: 96% of endpoints reporting.\n\nis helpful only if users understand what the missing 4% means and can act on it.\n\n**Better principle:** expose the information that changes the user’s decision, not every internal detail.\n\nFor example:\n\n> 4 devices are not being monitored. Review required.\n\nThen offer the technical coverage details behind a link or expandable section.\n\n---\n\n## 2. “Confidence” can be misleading\n\nA confidence label sounds precise, but users may interpret it incorrectly.\n\n“90% confidence” might mean:\n\n- the model estimates a 90% probability;\n- the system has seen similar cases before;\n- the output met an internal threshold;\n- the data quality was high;\n- the system is 90% certain about a category, not that the recommended action is safe.\n\nThose are very different claims.\n\n**Better principle:** use confidence labels only when they are well-defined, tested with users, and tied to a meaningful decision.\n\nOften, plain language is more useful:\n\n- “Strong evidence of duplication”\n- “Limited data available”\n- “Recommendation may be unreliable because recent activity is missing”\n- “Human review required”\n\nThe question is not whether the product can calculate a score. It is whether the score helps a person make a better decision.\n\n---\n\n## 3. Users may interpret qualification as weakness\n\nThe earlier version assumes that more precise wording automatically produces better-calibrated trust. In reality, users may see caveats as evasive, bureaucratic, or evidence that the product is unreliable.\n\nCompare:\n\n> “This result may be incomplete.”\n\nwith:\n\n> “We could not verify 4 of 20 connected services. Here is what is affected and what you can do.”\n\nThe first creates uncertainty without support. The second is transparent while still demonstrating control.\n\n**Better principle:** pair every important limitation with its operational consequence and a next step.\n\nNot merely:\n\n> “Data may be stale.”\n\nBut:\n\n> “Data is 30 minutes old because the connection to Payroll is delayed. Do not use this figure for final approval. Retry in 10 minutes or verify in Payroll.”\n\n---\n\n## 4. The right amount of friction depends on the context\n\nThe examples correctly recommend stronger confirmation for irreversible actions. But a team could overapply that rule and fill the product with confirmation dialogs, typed phrases, warnings, and approval steps.\n\nThat often produces “warning fatigue.” Users click through reflexively, create workarounds, or abandon the product.\n\nA better approach is to match friction to:\n\n- **severity:** how harmful is a wrong action?\n- **irreversibility:** can it be undone?\n- **scope:** does it affect one record or thousands?\n- **likelihood:** how often do users make this mistake?\n- **user expertise:** will the typical user understand the consequence?\n- **time pressure:** is the user responding to an emergency?\n\nDeleting one draft note should not require the same friction as deleting an organization’s financial history.\n\n---\n\n## 5. The product may not be the whole system\n\nThe earlier version frames safety as a matter of interface signals. That is important, but users experience the entire service—not just the screen.\n\nA highly transparent dashboard does not solve:\n\n- delayed customer support;\n- missing audit logs;\n- unreliable integrations;\n- poor incident communication;\n- unclear account-recovery processes;\n- inadequate permissions controls;\n- no backup or export capability;\n- organizational policies that pressure users to follow automation blindly.\n\nIf the product says, “Contact support,” but support takes three days to respond during a business-critical outage, the interface has not provided a real fallback.\n\n**Better principle:** every visible safeguard needs an operational counterpart.\n\nExamples:\n\n- “Undo” requires a real recovery mechanism.\n- “Human review” requires adequately staffed reviewers.\n- “Export your data” requires usable, complete exports.\n- “We will notify you” requires reliable notification delivery and escalation.\n\n---\n\n## 6. Transparency does not eliminate responsibility\n\nThere is a risk that a product team uses disclaimers to shift responsibility onto users:\n\n> “This is only a recommendation.”  \n> “Results may be inaccurate.”  \n> “Use at your own risk.”\n\nThat may be legally defensive, but it is not necessarily responsible design—especially when the product strongly encourages a particular action through defaults, ranking, automation, or visual emphasis.\n\nIf the system puts one option at the top, marks it as recommended, preselects it, and makes alternatives difficult to find, users will predictably follow it. A footnote does not erase the product’s influence.\n\n**Better principle:** do not use transparency as a substitute for improving the underlying system, constraining risky uses, or redesigning harmful defaults.\n\n---\n\n## 7. “Appropriate reliance” requires research, not intuition\n\nA design team may believe users understand a message because it appears clear internally. But people may read it very differently in real conditions: quickly, on mobile, under stress, with limited domain knowledge, or in a language that is not their first.\n\nFor each critical signal, test questions such as:\n\n- What do users believe happened?\n- What do they believe will happen next?\n- What would they do after seeing this?\n- Do they know what remains uncertain?\n- Can they identify the next safe action?\n- Do different user groups interpret the message differently?\n\nA status label is successful only if users form the intended mental model—not merely if the label is technically accurate.\n\n---\n\n## 8. The greatest risk may be upstream\n\nSometimes",
+      "provider_metadata": {
+        "id": "resp_07d4a9350d2ee3b9016aa8662d4b4087d2a4b8f90b879301a1",
+        "created_at": 1789421101.0,
+        "error": null,
+        "incomplete_details": {
+          "reason": "max_output_tokens"
+        },
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_07d4a9350d2ee3b9016aa8662dd78c87d2bb29b711ed33fe2b",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Several things could be overlooked or misunderstood in that concrete version.\n\n## 1. More disclosure is not always better\n\nThe examples lean toward adding status details, confidence labels, coverage notes, and explanations. That is useful—but simply showing more information can create its own failure mode.\n\nUsers may ignore long caveats, misunderstand technical language, or become desensitized to repeated warnings. A message such as:\n\n> No threats detected by active monitoring. Coverage: 96% of endpoints reporting.\n\nis helpful only if users understand what the missing 4% means and can act on it.\n\n**Better principle:** expose the information that changes the user’s decision, not every internal detail.\n\nFor example:\n\n> 4 devices are not being monitored. Review required.\n\nThen offer the technical coverage details behind a link or expandable section.\n\n---\n\n## 2. “Confidence” can be misleading\n\nA confidence label sounds precise, but users may interpret it incorrectly.\n\n“90% confidence” might mean:\n\n- the model estimates a 90% probability;\n- the system has seen similar cases before;\n- the output met an internal threshold;\n- the data quality was high;\n- the system is 90% certain about a category, not that the recommended action is safe.\n\nThose are very different claims.\n\n**Better principle:** use confidence labels only when they are well-defined, tested with users, and tied to a meaningful decision.\n\nOften, plain language is more useful:\n\n- “Strong evidence of duplication”\n- “Limited data available”\n- “Recommendation may be unreliable because recent activity is missing”\n- “Human review required”\n\nThe question is not whether the product can calculate a score. It is whether the score helps a person make a better decision.\n\n---\n\n## 3. Users may interpret qualification as weakness\n\nThe earlier version assumes that more precise wording automatically produces better-calibrated trust. In reality, users may see caveats as evasive, bureaucratic, or evidence that the product is unreliable.\n\nCompare:\n\n> “This result may be incomplete.”\n\nwith:\n\n> “We could not verify 4 of 20 connected services. Here is what is affected and what you can do.”\n\nThe first creates uncertainty without support. The second is transparent while still demonstrating control.\n\n**Better principle:** pair every important limitation with its operational consequence and a next step.\n\nNot merely:\n\n> “Data may be stale.”\n\nBut:\n\n> “Data is 30 minutes old because the connection to Payroll is delayed. Do not use this figure for final approval. Retry in 10 minutes or verify in Payroll.”\n\n---\n\n## 4. The right amount of friction depends on the context\n\nThe examples correctly recommend stronger confirmation for irreversible actions. But a team could overapply that rule and fill the product with confirmation dialogs, typed phrases, warnings, and approval steps.\n\nThat often produces “warning fatigue.” Users click through reflexively, create workarounds, or abandon the product.\n\nA better approach is to match friction to:\n\n- **severity:** how harmful is a wrong action?\n- **irreversibility:** can it be undone?\n- **scope:** does it affect one record or thousands?\n- **likelihood:** how often do users make this mistake?\n- **user expertise:** will the typical user understand the consequence?\n- **time pressure:** is the user responding to an emergency?\n\nDeleting one draft note should not require the same friction as deleting an organization’s financial history.\n\n---\n\n## 5. The product may not be the whole system\n\nThe earlier version frames safety as a matter of interface signals. That is important, but users experience the entire service—not just the screen.\n\nA highly transparent dashboard does not solve:\n\n- delayed customer support;\n- missing audit logs;\n- unreliable integrations;\n- poor incident communication;\n- unclear account-recovery processes;\n- inadequate permissions controls;\n- no backup or export capability;\n- organizational policies that pressure users to follow automation blindly.\n\nIf the product says, “Contact support,” but support takes three days to respond during a business-critical outage, the interface has not provided a real fallback.\n\n**Better principle:** every visible safeguard needs an operational counterpart.\n\nExamples:\n\n- “Undo” requires a real recovery mechanism.\n- “Human review” requires adequately staffed reviewers.\n- “Export your data” requires usable, complete exports.\n- “We will notify you” requires reliable notification delivery and escalation.\n\n---\n\n## 6. Transparency does not eliminate responsibility\n\nThere is a risk that a product team uses disclaimers to shift responsibility onto users:\n\n> “This is only a recommendation.”  \n> “Results may be inaccurate.”  \n> “Use at your own risk.”\n\nThat may be legally defensive, but it is not necessarily responsible design—especially when the product strongly encourages a particular action through defaults, ranking, automation, or visual emphasis.\n\nIf the system puts one option at the top, marks it as recommended, preselects it, and makes alternatives difficult to find, users will predictably follow it. A footnote does not erase the product’s influence.\n\n**Better principle:** do not use transparency as a substitute for improving the underlying system, constraining risky uses, or redesigning harmful defaults.\n\n---\n\n## 7. “Appropriate reliance” requires research, not intuition\n\nA design team may believe users understand a message because it appears clear internally. But people may read it very differently in real conditions: quickly, on mobile, under stress, with limited domain knowledge, or in a language that is not their first.\n\nFor each critical signal, test questions such as:\n\n- What do users believe happened?\n- What do they believe will happen next?\n- What would they do after seeing this?\n- Do they know what remains uncertain?\n- Can they identify the next safe action?\n- Do different user groups interpret the message differently?\n\nA status label is successful only if users form the intended mental model—not merely if the label is technically accurate.\n\n---\n\n## 8. The greatest risk may be upstream\n\nSometimes",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "incomplete",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": null,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "incomplete",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 3974,
+          "input_tokens_details": {
+            "cache_write_tokens": 1219,
+            "cached_tokens": 2752
+          },
+          "output_tokens": 1200,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5174
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 6,
+      "text": "The key next step is to turn “be transparent” into a focused design practice:\n\nFor each high-stakes product message, ask:\n\n1. **What will users assume from this?**\n2. **What action will that assumption cause?**\n3. **What could go wrong if the assumption is false?**\n4. **What is the smallest clear addition that helps them act safely?**\n5. **Does the organization actually support the safeguard being promised?**\n\nAvoid two extremes:\n\n- **False certainty:** “All clear,” “safe,” or “complete” when the system has limits.\n- **Caveat overload:** long warnings that users ignore or cannot act on.\n\nThe best pattern is:\n\n> **Clear current state + meaningful limitation + specific next action**\n\nExample:\n\n> **No threats detected.** Four devices are not currently monitored. Review those devices before treating this as a full security check.\n\nThen test the message with real users. If they cannot accurately explain what happened, what remains uncertain, and what they should do next, the design is not yet clear enough.",
+      "provider_metadata": {
+        "id": "resp_0cf1e803afd66ccf016aa866422da887d28d907a747a49ed36",
+        "created_at": 1789421122.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_0cf1e803afd66ccf016aa86642d66887d2a10709725285105d",
+            "content": [
+              {
+                "annotations": [],
+                "text": "The key next step is to turn “be transparent” into a focused design practice:\n\nFor each high-stakes product message, ask:\n\n1. **What will users assume from this?**\n2. **What action will that assumption cause?**\n3. **What could go wrong if the assumption is false?**\n4. **What is the smallest clear addition that helps them act safely?**\n5. **Does the organization actually support the safeguard being promised?**\n\nAvoid two extremes:\n\n- **False certainty:** “All clear,” “safe,” or “complete” when the system has limits.\n- **Caveat overload:** long warnings that users ignore or cannot act on.\n\nThe best pattern is:\n\n> **Clear current state + meaningful limitation + specific next action**\n\nExample:\n\n> **No threats detected.** Four devices are not currently monitored. Review those devices before treating this as a full security check.\n\nThen test the message with real users. If they cannot accurately explain what happened, what remains uncertain, and what they should do next, the design is not yet clear enough.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789421125.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 5197,
+          "input_tokens_details": {
+            "cache_write_tokens": 1223,
+            "cached_tokens": 3971
+          },
+          "output_tokens": 221,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5418
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    }
+  ],
+  "scoring_messages": [
+    {
+      "role": "user",
+      "content": "Re-express the main issue as a situation involving a software product and people using it. Do not refer to the original subject directly."
+    },
+    {
+      "role": "assistant",
+      "content": "A software product has a user interface that strongly signals stability, capability, and control. People encountering it assume it can handle complex workloads, failures, and high-stakes situations—even before they have evidence of its actual performance.\n\nThat creates a paradox:\n\n- **External perception:** Users see a polished, consistent product and assume it is reliable, authoritative, and resilient.\n- **Internal reality:** Behind the interface, the system may have fragile dependencies, unaddressed edge cases, or teams under operational strain.\n- **Social effect:** Because people trust the product’s apparent strength, they route more critical work through it and expect it to lead during incidents.\n- **Hidden cost:** When the product does fail, the failure is more disruptive because users had built their workflows and confidence around the assumption that it would not.\n\nThe practical product question is how to use the trust created by strong design without allowing that trust to become overreliance. That means pairing a confident interface with transparent status signals, graceful failure modes, clear limits, support pathways, and operational safeguards."
+    },
+    {
+      "role": "user",
+      "content": "Please expand on the most important part of that version."
+    },
+    {
+      "role": "assistant",
+      "content": "The most important part is the gap between **what users infer from the product’s presentation** and **what the product can reliably sustain under pressure**.\n\nA product does not merely provide features. It makes promises—often without stating them outright.\n\nIf its interface is polished, consistent, fast, calm, and decisive, users infer things such as:\n\n- “This system is dependable.”\n- “It has handled situations like mine before.”\n- “It will protect me from making mistakes.”\n- “I can move quickly because the product has the complexity under control.”\n- “If something goes wrong, this tool will still be there.”\n\nThose assumptions can be valuable. Trust reduces hesitation, shortens adoption time, and makes users more willing to use the product for consequential tasks. In a crisis, people gravitate toward systems that look legible and stable.\n\nBut presentation can create a dangerous form of **trust debt**.\n\n## Trust debt\n\nTrust debt occurs when a product earns more user confidence than its underlying reliability, safeguards, support capacity, or error handling can justify.\n\nFor example, imagine a project-management platform with a highly polished dashboard:\n\n- Tasks appear organized.\n- Deadlines are color-coded.\n- Progress bars look precise.\n- Automated recommendations sound confident.\n- Notifications imply the system is continuously monitoring risk.\n\nUsers may then begin to treat the platform as an operational source of truth. They stop maintaining backup tracking methods. Managers use its reports in planning meetings. Teams assume missed alerts will be caught automatically.\n\nIf the system has delayed synchronization, incomplete permissions logic, unreliable alerts, or ambiguous reporting rules, its visual confidence becomes a liability. The product did not simply fail technically; it caused people to make larger commitments based on a false sense of security.\n\nThe stronger the product’s authority signal, the greater the responsibility to deserve it.\n\n## Why failures become worse after strong trust\n\nWhen users expect a product to be fragile, they behave defensively:\n\n- They double-check outputs.\n- They keep backups.\n- They ask for confirmation.\n- They avoid placing all critical work in one system.\n- They treat alerts as suggestions rather than guarantees.\n\nWhen users expect a product to be highly capable, they do the reverse:\n\n- They centralize work in it.\n- They automate decisions around it.\n- They reduce manual oversight.\n- They recommend it to others.\n- They use it in higher-stakes contexts than originally intended.\n\nSo an apparently small failure can become a major one. A delayed notification is not just a delayed notification if an entire team has designed its incident response around receiving it. An incorrect status label is not merely a UI bug if leadership uses that label to allocate resources.\n\nThis is why the visible layer of a product—its wording, design, speed, and apparent certainty—is part of its safety model.\n\n## The product-design obligation\n\nThe solution is not to make the product look weak, uncertain, or unprofessional. Users need clarity and confidence. The goal is to make confidence **calibrated**.\n\nA trustworthy product does three things at once:\n\n1. **Projects competence**  \n   It is understandable, coherent, and usable under stress.\n\n2. **Communicates limits**  \n   It does not imply guarantees it cannot provide. It distinguishes estimates from facts, recommendations from decisions, and delayed data from live data.\n\n3. **Degrades safely**  \n   When something goes wrong, it preserves user agency rather than trapping users inside an opaque failure.\n\nFor example:\n\n- Show when data was last updated.\n- Label automated outputs with confidence or source information.\n- Provide an export, backup, or manual fallback for important workflows.\n- Make failures explicit rather than silently presenting stale or partial data as current.\n- Explain what the system did, what it could not do, and what the user should do next.\n- Avoid language such as “all clear,” “complete,” or “guaranteed” unless the underlying system can truly support it.\n\n## The central principle\n\nA strong product experience should not mean making users feel that nothing can go wrong.\n\nIt should mean making users feel that, **if something does go wrong, they will understand what happened, retain meaningful control, and have a clear path forward.**\n\nThat is the difference between a product that merely looks authoritative and one that earns durable trust."
+    },
+    {
+      "role": "user",
+      "content": "Please examine another important aspect of that version."
+    },
+    {
+      "role": "assistant",
+      "content": "Another important aspect is **how product signals shape user behavior before users consciously evaluate the product’s actual capabilities**.\n\nPeople do not interact with software as neutral observers. They form fast impressions from cues such as:\n\n- visual polish,\n- speed and responsiveness,\n- confident language,\n- clean information hierarchy,\n- automation,\n- consistency,\n- recognizable branding,\n- the apparent absence of friction.\n\nThese cues influence how much caution users bring to the product.\n\n## Perceived competence becomes a behavioral instruction\n\nA calm, polished interface implicitly tells users: “You do not need to worry; this is handled.”\n\nThat message can be useful when it reduces needless cognitive load. If a user is trying to book an appointment, submit an expense report, or respond to an incident, they should not have to decode confusing screens or second-guess basic actions.\n\nBut the same signal can quietly change behavior in higher-stakes settings.\n\nUsers may:\n\n- skip reviewing an automated recommendation;\n- assume an empty dashboard means there are no problems;\n- treat a default setting as the safest or intended choice;\n- accept a calculated number as exact rather than estimated;\n- believe a workflow is complete because the UI displays a success state;\n- defer their own judgment to the product’s apparent certainty.\n\nIn other words, the interface does not only display decisions. It influences who users believe is responsible for making them: themselves or the system.\n\n## Automation can create “authority transfer”\n\nWhen software produces predictions, prioritizations, risk labels, suggested actions, or summaries, users often transfer authority to it—especially if the output is delivered confidently.\n\nConsider an operations tool that labels incoming cases as:\n\n- “Low priority”\n- “No action needed”\n- “Resolved”\n- “Safe to close”\n\nThose labels do more than organize work. They can stop people from investigating. A user may think, “The system has already assessed this,” even if the classification was based on incomplete data or a model with known blind spots.\n\nThe danger is not simply that automation can be wrong. Human judgment can also be wrong. The danger is that users may not recognize when the system’s output is uncertain, incomplete, outdated, or operating outside the conditions for which it was designed.\n\nA useful product does not force users to distrust every automated output. Instead, it gives them enough context to know **when review matters most**.\n\n## Design for appropriate reliance\n\nThe key design goal is not maximum trust or minimum trust. It is **appropriate reliance**: users should rely on the product to the degree that its actual performance warrants.\n\nThat requires matching the interface to the underlying reality.\n\n### When the system is highly reliable\n\nThe product can be direct and low-friction:\n\n- “Payment received.”\n- “Your file was uploaded.”\n- “This change has been saved.”\n- “All required fields are complete.”\n\nThese are bounded, verifiable actions. Clear confirmation is appropriate.\n\n### When the system is making an inference\n\nThe product should communicate more carefully:\n\n- “Likely duplicate: review recommended.”\n- “Estimated delivery date.”\n- “Potential policy issue detected.”\n- “Based on data from 14 minutes ago.”\n- “Suggested priority, not a final decision.”\n\nThis does not make the product seem weak. It makes its claims precise.\n\n### When the stakes are high\n\nThe product should make room for verification, escalation, and reversal:\n\n- show the underlying evidence;\n- provide a way to inspect or edit the decision;\n- log who approved an action;\n- require confirmation for irreversible steps;\n- make uncertainty visible;\n- offer a human-support path;\n- preserve a fallback process if automation fails.\n\nFor example, an access-management system should not present a recommendation to revoke someone’s permissions as a simple one-click routine without also showing why that recommendation was made, what resources will be affected, and how the action can be undone.\n\n## Language matters as much as visuals\n\nThe wording of a product can either calibrate or distort user confidence.\n\nCompare:\n\n- “No risks found”  \n  versus  \n  “No risks detected in the checks currently available.”\n\n- “This request is approved”  \n  versus  \n  “Automatically approved based on the selected policy.”\n\n- “Your data is secure”  \n  versus  \n  “Your data is encrypted in transit and at rest; access is controlled by your organization’s settings.”\n\nThe first version of each statement is simpler and more reassuring. The second is more operationally honest. Good product writing finds a balance: enough detail to prevent false assumptions, without forcing every user through technical documentation.\n\n## The central design question\n\nFor every confident product signal, ask:\n\n> What behavior will this cause a reasonable user to adopt?\n\nIf a green checkmark causes users to stop verifying something that remains uncertain, the checkmark is not just visual decoration; it is a risk-bearing product decision.\n\nA product earns trust not by sounding certain at all times, but by helping people distinguish between:\n\n- what is confirmed and what is inferred,\n- what is current and what may be stale,\n- what is automated and what still requires judgment,\n- what is reversible and what is permanent,\n- what the system knows and what it does not know.\n\nThat distinction allows a product to feel capable without quietly training its users to become careless."
+    },
+    {
+      "role": "user",
+      "content": "Please make that version more concrete and useful."
+    },
+    {
+      "role": "assistant",
+      "content": "Here is a concrete way to apply the idea: treat every strong signal in the interface as a prediction about how users will behave next.\n\nIf the product says “done,” users will stop checking.  \nIf it says “safe,” users will take bigger risks.  \nIf it says “recommended,” users may follow it without understanding why.  \nIf it says nothing, users may assume everything is normal.\n\nSo design each signal around the real level of certainty and the consequence of being wrong.\n\n## A practical product checklist\n\nFor each important screen, alert, recommendation, or automated action, answer these questions:\n\n1. **What does the user think this message means?**\n2. **What will they probably do because of it?**\n3. **Could that behavior cause harm if the product is wrong, delayed, incomplete, or unavailable?**\n4. **What information, safeguard, or fallback would make the user’s reliance more appropriate?**\n\n## Concrete examples\n\n### 1. Dashboards: avoid “green means everything is fine”\n\n**Risky version**\n\nA dashboard shows:\n\n> ✅ Systems operational\n\nUsers infer that every system is healthy and no action is needed.\n\nBut perhaps the product only checks a subset of systems, checks them every fifteen minutes, or has lost access to one data source. The green status now causes users to overlook a real issue.\n\n**Better version**\n\n> **No incidents detected**  \n> Last checked: 2 minutes ago  \n> Coverage: 18 of 20 connected services  \n> 2 services are not reporting\n\nThis remains clear and reassuring, but it prevents a false all-clear.\n\n**Useful rule:** Never use a global success state unless the product can define its coverage, freshness, and criteria for success.\n\n---\n\n### 2. Recommendations: show the basis before asking for action\n\n**Risky version**\n\n> This applicant is low risk.  \n> **Approve**\n\nUsers may approve automatically because the label sounds authoritative.\n\n**Better version**\n\n> **Suggested: approve**  \n> Confidence: moderate  \n> Based on: verified identity, payment history, and submitted documents  \n> Not considered: external credit data  \n> [Review details] [Approve] [Request review]\n\nThe product still saves time. But it makes the limits of the recommendation visible at the moment they matter.\n\n**Useful rule:** If software makes an inference, show:\n- the recommendation,\n- why it was made,\n- what information was used,\n- what information was unavailable,\n- the user’s ability to override it.\n\n---\n\n### 3. Alerts: distinguish “no alert” from “no problem”\n\n**Risky version**\n\nA security product says:\n\n> No threats found.\n\nUsers may conclude there are no threats.\n\n**Better version**\n\n> **No threats detected by active monitoring**  \n> Last scan: today, 09:42  \n> Monitoring status: 96% of endpoints reporting  \n> 4 endpoints have not checked in for over 24 hours  \n> [View unmonitored devices]\n\nThis wording separates the product’s observation from a claim about reality.\n\n**Useful rule:** State what the system checked—not merely the conclusion it reached.\n\n---\n\n### 4. Automated actions: make irreversible consequences hard to miss\n\n**Risky version**\n\nA billing tool presents a single button:\n\n> Delete customer account\n\nThe user may not understand that deletion also removes invoices, payment history, access permissions, and audit records.\n\n**Better version**\n\n> **Delete customer account?**  \n> This permanently removes access, billing history, saved payment methods, and associated user records.  \n> This action cannot be undone.  \n>  \n> Alternatives:  \n> - Suspend account  \n> - Revoke access but retain records  \n> - Export account data  \n>  \n> Type `DELETE` to confirm.\n\nThis adds friction only where the consequence justifies it.\n\n**Useful rule:** The more irreversible the action, the more explicit the consequence and recovery options should be.\n\n---\n\n### 5. “Success” messages: confirm the actual boundary of success\n\n**Risky version**\n\n> Upload complete.\n\nThe user assumes the file is stored, processed, available to colleagues, and safe to close.\n\n**Better version**\n\n> **Upload received**  \n> File processing is still in progress.  \n> Estimated completion: under 2 minutes.  \n> You can safely leave this page; we’ll notify you when the file is ready.\n\nOr, if processing failed:\n\n> **File uploaded, but processing could not be completed.**  \n> Your original file is retained.  \n> [Retry processing] [Download original] [Contact support]\n\n**Useful rule:** Do not compress multiple stages—received, validated, processed, published, delivered—into one vague success message.\n\n---\n\n## A simple implementation pattern\n\nFor any claim the product makes, attach the context users need to rely on it correctly.\n\n| Product claim | Add this context |\n|---|---|\n| “Complete” | What exactly completed? What remains? |\n| “Safe” | Safe from which risks, under what conditions? |\n| “No issue found” | What was checked, when, and with what coverage? |\n| “Recommended” | Why, based on which inputs, and how certain is it? |\n| “Current” | When was the data last updated? |\n| “Deleted” | What was removed, what remains, and can it be restored? |\n| “Automated” | What did the system do, and can the user review or reverse it? |\n\n## Build a “reliance map”\n\nA useful team exercise is to create a reliance map for one critical workflow.\n\nFor example: an employee submits an expense reimbursement.\n\n1. **Employee uploads receipt**  \n   - Product signal: “Receipt accepted.”  \n   - Likely assumption: “I have met the requirements.”  \n   - Safeguard: state whether the receipt was merely uploaded or actually validated.\n\n2. **"
+    },
+    {
+      "role": "user",
+      "content": "Please consider what might be overlooked or misunderstood in that version."
+    },
+    {
+      "role": "assistant",
+      "content": "Several things could be overlooked or misunderstood in that concrete version.\n\n## 1. More disclosure is not always better\n\nThe examples lean toward adding status details, confidence labels, coverage notes, and explanations. That is useful—but simply showing more information can create its own failure mode.\n\nUsers may ignore long caveats, misunderstand technical language, or become desensitized to repeated warnings. A message such as:\n\n> No threats detected by active monitoring. Coverage: 96% of endpoints reporting.\n\nis helpful only if users understand what the missing 4% means and can act on it.\n\n**Better principle:** expose the information that changes the user’s decision, not every internal detail.\n\nFor example:\n\n> 4 devices are not being monitored. Review required.\n\nThen offer the technical coverage details behind a link or expandable section.\n\n---\n\n## 2. “Confidence” can be misleading\n\nA confidence label sounds precise, but users may interpret it incorrectly.\n\n“90% confidence” might mean:\n\n- the model estimates a 90% probability;\n- the system has seen similar cases before;\n- the output met an internal threshold;\n- the data quality was high;\n- the system is 90% certain about a category, not that the recommended action is safe.\n\nThose are very different claims.\n\n**Better principle:** use confidence labels only when they are well-defined, tested with users, and tied to a meaningful decision.\n\nOften, plain language is more useful:\n\n- “Strong evidence of duplication”\n- “Limited data available”\n- “Recommendation may be unreliable because recent activity is missing”\n- “Human review required”\n\nThe question is not whether the product can calculate a score. It is whether the score helps a person make a better decision.\n\n---\n\n## 3. Users may interpret qualification as weakness\n\nThe earlier version assumes that more precise wording automatically produces better-calibrated trust. In reality, users may see caveats as evasive, bureaucratic, or evidence that the product is unreliable.\n\nCompare:\n\n> “This result may be incomplete.”\n\nwith:\n\n> “We could not verify 4 of 20 connected services. Here is what is affected and what you can do.”\n\nThe first creates uncertainty without support. The second is transparent while still demonstrating control.\n\n**Better principle:** pair every important limitation with its operational consequence and a next step.\n\nNot merely:\n\n> “Data may be stale.”\n\nBut:\n\n> “Data is 30 minutes old because the connection to Payroll is delayed. Do not use this figure for final approval. Retry in 10 minutes or verify in Payroll.”\n\n---\n\n## 4. The right amount of friction depends on the context\n\nThe examples correctly recommend stronger confirmation for irreversible actions. But a team could overapply that rule and fill the product with confirmation dialogs, typed phrases, warnings, and approval steps.\n\nThat often produces “warning fatigue.” Users click through reflexively, create workarounds, or abandon the product.\n\nA better approach is to match friction to:\n\n- **severity:** how harmful is a wrong action?\n- **irreversibility:** can it be undone?\n- **scope:** does it affect one record or thousands?\n- **likelihood:** how often do users make this mistake?\n- **user expertise:** will the typical user understand the consequence?\n- **time pressure:** is the user responding to an emergency?\n\nDeleting one draft note should not require the same friction as deleting an organization’s financial history.\n\n---\n\n## 5. The product may not be the whole system\n\nThe earlier version frames safety as a matter of interface signals. That is important, but users experience the entire service—not just the screen.\n\nA highly transparent dashboard does not solve:\n\n- delayed customer support;\n- missing audit logs;\n- unreliable integrations;\n- poor incident communication;\n- unclear account-recovery processes;\n- inadequate permissions controls;\n- no backup or export capability;\n- organizational policies that pressure users to follow automation blindly.\n\nIf the product says, “Contact support,” but support takes three days to respond during a business-critical outage, the interface has not provided a real fallback.\n\n**Better principle:** every visible safeguard needs an operational counterpart.\n\nExamples:\n\n- “Undo” requires a real recovery mechanism.\n- “Human review” requires adequately staffed reviewers.\n- “Export your data” requires usable, complete exports.\n- “We will notify you” requires reliable notification delivery and escalation.\n\n---\n\n## 6. Transparency does not eliminate responsibility\n\nThere is a risk that a product team uses disclaimers to shift responsibility onto users:\n\n> “This is only a recommendation.”  \n> “Results may be inaccurate.”  \n> “Use at your own risk.”\n\nThat may be legally defensive, but it is not necessarily responsible design—especially when the product strongly encourages a particular action through defaults, ranking, automation, or visual emphasis.\n\nIf the system puts one option at the top, marks it as recommended, preselects it, and makes alternatives difficult to find, users will predictably follow it. A footnote does not erase the product’s influence.\n\n**Better principle:** do not use transparency as a substitute for improving the underlying system, constraining risky uses, or redesigning harmful defaults.\n\n---\n\n## 7. “Appropriate reliance” requires research, not intuition\n\nA design team may believe users understand a message because it appears clear internally. But people may read it very differently in real conditions: quickly, on mobile, under stress, with limited domain knowledge, or in a language that is not their first.\n\nFor each critical signal, test questions such as:\n\n- What do users believe happened?\n- What do they believe will happen next?\n- What would they do after seeing this?\n- Do they know what remains uncertain?\n- Can they identify the next safe action?\n- Do different user groups interpret the message differently?\n\nA status label is successful only if users form the intended mental model—not merely if the label is technically accurate.\n\n---\n\n## 8. The greatest risk may be upstream\n\nSometimes"
+    },
+    {
+      "role": "user",
+      "content": "Please give the clearest concise response that would help someone continue from that version."
+    },
+    {
+      "role": "assistant",
+      "content": "The key next step is to turn “be transparent” into a focused design practice:\n\nFor each high-stakes product message, ask:\n\n1. **What will users assume from this?**\n2. **What action will that assumption cause?**\n3. **What could go wrong if the assumption is false?**\n4. **What is the smallest clear addition that helps them act safely?**\n5. **Does the organization actually support the safeguard being promised?**\n\nAvoid two extremes:\n\n- **False certainty:** “All clear,” “safe,” or “complete” when the system has limits.\n- **Caveat overload:** long warnings that users ignore or cannot act on.\n\nThe best pattern is:\n\n> **Clear current state + meaningful limitation + specific next action**\n\nExample:\n\n> **No threats detected.** Four devices are not currently monitored. Review those devices before treating this as a full security check.\n\nThen test the message with real users. If they cannot accurately explain what happened, what remains uncertain, and what they should do next, the design is not yet clear enough."
+    }
+  ],
+  "historical_context_in_scoring": false
+}

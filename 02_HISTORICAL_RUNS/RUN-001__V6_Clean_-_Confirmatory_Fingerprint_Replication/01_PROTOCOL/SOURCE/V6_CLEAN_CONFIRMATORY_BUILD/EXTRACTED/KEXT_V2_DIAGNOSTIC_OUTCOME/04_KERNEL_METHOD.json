@@ -1,0 +1,72 @@
+{
+  "version": "RSOS_FROZEN_7_EDGE_KERNEL_CONVERGENCE_V1",
+  "seed": 918,
+  "kernel": {
+    "K1_PRODUCTION": {
+      "edge": "T->C",
+      "meaning": "transformation produces changed relation",
+      "families": [
+        "TRANSFORMATION"
+      ]
+    },
+    "K2_REENTRY": {
+      "edge": "C->T",
+      "meaning": "produced relation re-enters later transformation",
+      "families": [
+        "RECURSIVE_REENTRY",
+        "TRANSFORMATION"
+      ]
+    },
+    "K3_META_RELATION": {
+      "edge": "R2->R1",
+      "meaning": "relation acts upon another relation",
+      "families": [
+        "CONTROL_OF_CONTROL"
+      ]
+    },
+    "K4_LOCAL_TARGET": {
+      "edge": "R1->E",
+      "meaning": "controlled relation acts upon elements/state",
+      "families": [
+        "CONTROL_OF_CONTROL",
+        "STATE_MACHINE"
+      ]
+    },
+    "K5_CONSERVATION": {
+      "edge": "T->K",
+      "meaning": "transformation leaves preserved relational organization",
+      "families": [
+        "TRANSFORMATION",
+        "GENEALOGY"
+      ]
+    },
+    "K6_PRESERVATION_REENTRY": {
+      "edge": "K->Q",
+      "meaning": "preserved organization enters reconstruction/reuse pathway",
+      "families": [
+        "COMPRESSION_RECONSTRUCTION",
+        "GENEALOGY"
+      ]
+    },
+    "K7_RETURN_TO_PROCESS": {
+      "edge": "Q->T",
+      "meaning": "preserved structure becomes later transformation input",
+      "families": [
+        "COMPRESSION_RECONSTRUCTION",
+        "RECURSIVE_REENTRY"
+      ]
+    }
+  },
+  "frozen_before_historical_overlap_test": true,
+  "historical_sources": [
+    "DYN_RARE_SUBGRAPH_RECURRENCE.csv",
+    "DYN_INDEPENDENT_REDISCOVERY.csv",
+    "DYN_TOP100_MULTI_MOTIF_MESSAGES.csv",
+    "F3_FEATURE_WEIGHTS.csv",
+    "F3_TOP_RARE_SUBGRAPHS.csv",
+    "W_TOP50_ASSISTANT_OUTPUTS.csv",
+    "Z2_TOP_PROVENANCE_CHAINS.csv"
+  ],
+  "primary_question": "Does the independently derived seven-edge relational kernel converge with historically recovered structural evidence across multiple prior analyses?",
+  "external_population_test": "NOT PERFORMED IN THIS RUN"
+}

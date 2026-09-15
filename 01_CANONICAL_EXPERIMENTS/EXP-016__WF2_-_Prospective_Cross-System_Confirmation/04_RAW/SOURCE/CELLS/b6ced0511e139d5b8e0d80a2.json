@@ -1,0 +1,681 @@
+{
+  "cell_id": "b6ced0511e139d5b8e0d80a2",
+  "provider": "OPENAI",
+  "organization": "OpenAI",
+  "model_requested": "gpt-5.6-terra",
+  "condition": "DOMAIN_EDUCATIONAL",
+  "blind_context_id": "b102030dcd3f0eef493156fa",
+  "status": "COMPLETE",
+  "failure": null,
+  "provider_responses": [
+    {
+      "turn": 1,
+      "text": "The main issue is an **authentication connection problem**.\n\nThink of it like trying to link two apps with a secure key:\n\n1. You click **Connect**.\n2. You are sent to the other service to approve access.\n3. You approve it.\n4. You are sent back.\n5. But the first app still says **“Not connected.”**\n\nThis usually means the approval happened, but the secure permission information was not successfully returned or saved by the first app.\n\nCommon reasons include:\n\n- The connection feature is outdated and does not support the newer login/security method.\n- The permission token does not have access to the correct database or table.\n- The browser blocks pop-ups, cookies, or the redirect back to the app.\n- The app has a bug in its built-in integration.\n- The account used to approve access is different from the account that owns the data.\n\nSo the problem is **not necessarily the data table itself**. The problem is that the two systems are failing to complete their secure “handshake.”\n\nA practical solution is to use a middle tool that receives the chatbot data first, then writes it into the database. This avoids relying on the broken direct connection and still lets bookings, names, phone numbers, and service details be saved automatically.",
+      "provider_metadata": {
+        "id": "resp_08bb26f9315a82a3016aa826c4deb487d29a9dce4c1ced7642",
+        "created_at": 1789404868.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_08bb26f9315a82a3016aa826c5a66887d2825879df6e984224",
+            "content": [
+              {
+                "annotations": [],
+                "text": "The main issue is an **authentication connection problem**.\n\nThink of it like trying to link two apps with a secure key:\n\n1. You click **Connect**.\n2. You are sent to the other service to approve access.\n3. You approve it.\n4. You are sent back.\n5. But the first app still says **“Not connected.”**\n\nThis usually means the approval happened, but the secure permission information was not successfully returned or saved by the first app.\n\nCommon reasons include:\n\n- The connection feature is outdated and does not support the newer login/security method.\n- The permission token does not have access to the correct database or table.\n- The browser blocks pop-ups, cookies, or the redirect back to the app.\n- The app has a bug in its built-in integration.\n- The account used to approve access is different from the account that owns the data.\n\nSo the problem is **not necessarily the data table itself**. The problem is that the two systems are failing to complete their secure “handshake.”\n\nA practical solution is to use a middle tool that receives the chatbot data first, then writes it into the database. This avoids relying on the broken direct connection and still lets bookings, names, phone numbers, and service details be saved automatically.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789404873.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 2995,
+          "input_tokens_details": {
+            "cache_write_tokens": 2992,
+            "cached_tokens": 0
+          },
+          "output_tokens": 259,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3254
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 2,
+      "text": "The most important part is the **secure handshake** between two systems.\n\nWhen one app needs access to information stored in another app, it cannot simply take it. It must ask for permission through a secure process.\n\nA simple way to understand it:\n\n- **App A** wants to send or read data from **App B**.\n- App A sends you to App B’s login/permission page.\n- You log in and press **Allow**.\n- App B creates a temporary secure proof that says:  \n  *“This user has approved App A to access these specific things.”*\n- App B sends that proof back to App A.\n- App A saves it and uses it later to access the permitted data.\n\nIf the final step fails, you may successfully approve access but return to the first app and still see **“Not connected.”**\n\nThat happens because App A never saved—or could not understand—the proof of permission.\n\nCommon causes are:\n\n1. **Outdated connection method**  \n   One system may expect an older type of credential, while the other system now uses a newer, more secure method.\n\n2. **Redirect failure**  \n   After permission is granted, the browser must return to the exact correct page in App A. A browser setting, blocked cookie, expired session, or incorrect redirect address can interrupt that return trip.\n\n3. **Missing permissions**  \n   The permission may be valid, but it may not include access to the specific database, workspace, or table needed.\n\n4. **Integration bug**  \n   The built-in connection button may be broken or incomplete. In that case, retrying the same button usually does not solve the underlying issue.\n\nThat is why a “middle tool” can help. Instead of requiring App A to directly maintain secure access to App B, App A sends booking details to the middle tool through a webhook. The middle tool has its own properly configured connection to App B and adds the information to the correct table.\n\nSo the data flow becomes:\n\n```text\nChatbot → Webhook → Automation tool → Customer database\n```\n\nThis is often more reliable because each connection is simpler:\n\n- The chatbot only needs to send a message.\n- The automation tool handles credentials and permissions.\n- The database receives a new customer record.",
+      "provider_metadata": {
+        "id": "resp_066c61aea37c2bcb016aa826c9f2e487d2ac0c1452ecf47233",
+        "created_at": 1789404873.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_066c61aea37c2bcb016aa826cabac487d28c2b3d6a9a7c9e17",
+            "content": [
+              {
+                "annotations": [],
+                "text": "The most important part is the **secure handshake** between two systems.\n\nWhen one app needs access to information stored in another app, it cannot simply take it. It must ask for permission through a secure process.\n\nA simple way to understand it:\n\n- **App A** wants to send or read data from **App B**.\n- App A sends you to App B’s login/permission page.\n- You log in and press **Allow**.\n- App B creates a temporary secure proof that says:  \n  *“This user has approved App A to access these specific things.”*\n- App B sends that proof back to App A.\n- App A saves it and uses it later to access the permitted data.\n\nIf the final step fails, you may successfully approve access but return to the first app and still see **“Not connected.”**\n\nThat happens because App A never saved—or could not understand—the proof of permission.\n\nCommon causes are:\n\n1. **Outdated connection method**  \n   One system may expect an older type of credential, while the other system now uses a newer, more secure method.\n\n2. **Redirect failure**  \n   After permission is granted, the browser must return to the exact correct page in App A. A browser setting, blocked cookie, expired session, or incorrect redirect address can interrupt that return trip.\n\n3. **Missing permissions**  \n   The permission may be valid, but it may not include access to the specific database, workspace, or table needed.\n\n4. **Integration bug**  \n   The built-in connection button may be broken or incomplete. In that case, retrying the same button usually does not solve the underlying issue.\n\nThat is why a “middle tool” can help. Instead of requiring App A to directly maintain secure access to App B, App A sends booking details to the middle tool through a webhook. The middle tool has its own properly configured connection to App B and adds the information to the correct table.\n\nSo the data flow becomes:\n\n```text\nChatbot → Webhook → Automation tool → Customer database\n```\n\nThis is often more reliable because each connection is simpler:\n\n- The chatbot only needs to send a message.\n- The automation tool handles credentials and permissions.\n- The database receives a new customer record.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789404881.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 3271,
+          "input_tokens_details": {
+            "cache_write_tokens": 276,
+            "cached_tokens": 2992
+          },
+          "output_tokens": 461,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3732
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 3,
+      "text": "Another important aspect is **permissions**: even when the secure connection works, access can still fail if the connected app is not allowed to use the specific data it needs.\n\nImagine giving someone a building pass:\n\n- They may be allowed into the building.\n- But they may not be allowed into every room.\n- They might access the lobby but not the records office.\n\nDigital integrations work the same way.\n\nA connection can appear successful at first, but fail later because the permission only allows limited actions. For example, the connected system may be allowed to:\n\n- view basic account information,\n- read records,\n- but not create new records,\n- or access one workspace but not the correct table.\n\nFor an automated booking workflow, the integration normally needs permission to:\n\n1. **Access the correct workspace or database**\n2. **Access the correct table**\n3. **Create new records**\n4. Sometimes **read records**, such as checking whether a customer already exists\n\nThis is why a permission token is usually configured with both:\n\n- **Scopes** — what actions it can do, such as read or write.\n- **Resource access** — which exact databases, projects, or tables it can use.\n\nA token with write permission but no access to the correct database is still useless. Likewise, a token connected to the correct database but limited to reading cannot add a new booking.\n\nIn practical terms, the setup should be checked in this order:\n\n```text\n1. Is the token valid?\n2. Does it allow record creation?\n3. Has it been granted access to the intended database?\n4. Is the table name exactly correct?\n5. Are the field names and data types compatible?\n```\n\nThe last point matters too. If a system tries to send text into a date-only field, or sends a value to a field that does not exist, the connection may work but the record creation can fail.\n\nSo there are really two separate questions:\n\n- **Can the systems recognize each other securely?**\n- **Once connected, does one have the right permissions and field setup to perform the required task?**\n\nBoth must be correct for automatic data transfer to work.",
+      "provider_metadata": {
+        "id": "resp_049891870f40772b016aa826d1d74487d2a1c35cdf11ee15bd",
+        "created_at": 1789404881.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_049891870f40772b016aa826d298a087d2915a648949d55a01",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Another important aspect is **permissions**: even when the secure connection works, access can still fail if the connected app is not allowed to use the specific data it needs.\n\nImagine giving someone a building pass:\n\n- They may be allowed into the building.\n- But they may not be allowed into every room.\n- They might access the lobby but not the records office.\n\nDigital integrations work the same way.\n\nA connection can appear successful at first, but fail later because the permission only allows limited actions. For example, the connected system may be allowed to:\n\n- view basic account information,\n- read records,\n- but not create new records,\n- or access one workspace but not the correct table.\n\nFor an automated booking workflow, the integration normally needs permission to:\n\n1. **Access the correct workspace or database**\n2. **Access the correct table**\n3. **Create new records**\n4. Sometimes **read records**, such as checking whether a customer already exists\n\nThis is why a permission token is usually configured with both:\n\n- **Scopes** — what actions it can do, such as read or write.\n- **Resource access** — which exact databases, projects, or tables it can use.\n\nA token with write permission but no access to the correct database is still useless. Likewise, a token connected to the correct database but limited to reading cannot add a new booking.\n\nIn practical terms, the setup should be checked in this order:\n\n```text\n1. Is the token valid?\n2. Does it allow record creation?\n3. Has it been granted access to the intended database?\n4. Is the table name exactly correct?\n5. Are the field names and data types compatible?\n```\n\nThe last point matters too. If a system tries to send text into a date-only field, or sends a value to a field that does not exist, the connection may work but the record creation can fail.\n\nSo there are really two separate questions:\n\n- **Can the systems recognize each other securely?**\n- **Once connected, does one have the right permissions and field setup to perform the required task?**\n\nBoth must be correct for automatic data transfer to work.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789404888.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 3747,
+          "input_tokens_details": {
+            "cache_write_tokens": 476,
+            "cached_tokens": 3268
+          },
+          "output_tokens": 436,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4183
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 4,
+      "text": "Here is a concrete way to check whether the connection has the right permissions and setup.\n\n## 1. Check what the connection is supposed to do\n\nFor a booking workflow, the goal is usually:\n\n```text\nA person submits a booking\n        ↓\nTheir name, phone number, service, and time are sent\n        ↓\nA new row is created in a customer-booking table\n```\n\nThat means the connected system needs permission to **create a new record**, not just view information.\n\n---\n\n## 2. Check the access token\n\nWhen creating the access token, give it these permissions:\n\n- `data.records:read` — lets the automation look up existing records if needed.\n- `data.records:write` — lets it create or update customer/booking records.\n\nThen make sure the token is given access to the exact base or workspace containing your table.\n\nA token can be valid but still fail if it has no permission for the base you selected.\n\n### Example\n\nSuppose your base is called:\n\n```text\nRepair Shop CRM\n```\n\nAnd your table is:\n\n```text\nLeads\n```\n\nThe token must be authorized for **Repair Shop CRM**, not merely created in the same account.\n\n---\n\n## 3. Use a simple table first\n\nCreate a table with these exact fields:\n\n| Field name | Field type | Example |\n|---|---|---|\n| Name | Single line text | Maria Silva |\n| Phone Number | Phone number or single line text | +351 912 345 678 |\n| Service Type | Single line text | Screen Replacement |\n| Booking Date | Date and time | 2025-11-17 15:30 |\n| Status | Single select | Booked |\n| Notes | Long text | Customer requested morning slot |\n\nKeeping the first test simple makes it easier to identify what is failing.\n\n---\n\n## 4. Confirm the table name exactly\n\nTable names must match exactly.\n\nFor example, these may be treated as different:\n\n```text\nLeads\nleads\nLead\nLeads \n```\n\nNotice that even a singular/plural difference or an accidental space can cause the automation to fail.\n\nUse the exact visible table name, such as:\n\n```text\nLeads\n```\n\n---\n\n## 5. Send a test record\n\nBefore relying on the chatbot, test with one sample booking.\n\nExample data:\n\n```json\n{\n  \"Name\": \"Test Customer\",\n  \"Phone Number\": \"+351912345678\",\n  \"Service Type\": \"Screen Replacement\",\n  \"Booking Date\": \"2025-11-17T15:30:00+00:00\",\n  \"Status\": \"Booked\",\n  \"Notes\": \"Test booking\"\n}\n```\n\nAfter sending it, check whether a new row appears in the table.\n\n### If the row appears\nThe permissions and table mapping work. Any remaining issue is likely in the chatbot’s trigger or field mapping.\n\n### If the row does not appear\nLook at the error message:\n\n| Error | Likely meaning | What to check |\n|---|---|---|\n| `401 Unauthorized` | Token is invalid, expired, or not being accepted | Create/copy the token again |\n| `403 Forbidden` | Token is valid but lacks permission | Add record read/write access and grant base access |\n| `404 Not Found` | Wrong base ID or table name | Recheck the base ID and exact table name |\n| `422 Unprocessable Entity` | Field names or values do not match the table | Check field spelling and data formats |\n| `400 Bad Request` | Invalid request structure | Check the payload and required fields |\n\n---\n\n## 6. Map chatbot fields to table fields\n\nOnce the test works, map each collected answer to the matching table column:\n\n| Customer answer | Table field |\n|---|---|\n| “My name is Maria” | Name |\n| “My number is +351…” | Phone Number |\n| “I need an iPhone screen repair” | Service Type |\n| Selected appointment time | Booking Date |\n| Default value: `Booked` | Status |\n| Any extra message | Notes |\n\nThe most common mistake is mapping to a field name that does not exist. For example, sending data to `Phone` when the table field is actually called `Phone Number`.\n\n---\n\n## 7. If the direct connection still fails, use a bridge\n\nIf clicking the built-in **Connect** button repeatedly returns to the app but still shows “Not connected,” stop trying to force that connection.\n\nUse this structure instead:\n\n```text\nChatbot\n  ↓ sends booking data through a webhook\nAutomation service\n  ↓ creates a new record\nCustomer table\n```\n\nThe automation service receives the booking details and uses its own authorized connection to create the row. This separates the chatbot’s connection problem from the database permissions.\n\nThe key test is simple: create one fake booking and confirm that one new row appears with the correct name, phone number, service, date, and status.",
+      "provider_metadata": {
+        "id": "resp_09fcbe7119044785016aa826d8d7fc87d2b7aacd85f6102f20",
+        "created_at": 1789404888.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_09fcbe7119044785016aa826d9777087d28684d91b27397efd",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Here is a concrete way to check whether the connection has the right permissions and setup.\n\n## 1. Check what the connection is supposed to do\n\nFor a booking workflow, the goal is usually:\n\n```text\nA person submits a booking\n        ↓\nTheir name, phone number, service, and time are sent\n        ↓\nA new row is created in a customer-booking table\n```\n\nThat means the connected system needs permission to **create a new record**, not just view information.\n\n---\n\n## 2. Check the access token\n\nWhen creating the access token, give it these permissions:\n\n- `data.records:read` — lets the automation look up existing records if needed.\n- `data.records:write` — lets it create or update customer/booking records.\n\nThen make sure the token is given access to the exact base or workspace containing your table.\n\nA token can be valid but still fail if it has no permission for the base you selected.\n\n### Example\n\nSuppose your base is called:\n\n```text\nRepair Shop CRM\n```\n\nAnd your table is:\n\n```text\nLeads\n```\n\nThe token must be authorized for **Repair Shop CRM**, not merely created in the same account.\n\n---\n\n## 3. Use a simple table first\n\nCreate a table with these exact fields:\n\n| Field name | Field type | Example |\n|---|---|---|\n| Name | Single line text | Maria Silva |\n| Phone Number | Phone number or single line text | +351 912 345 678 |\n| Service Type | Single line text | Screen Replacement |\n| Booking Date | Date and time | 2025-11-17 15:30 |\n| Status | Single select | Booked |\n| Notes | Long text | Customer requested morning slot |\n\nKeeping the first test simple makes it easier to identify what is failing.\n\n---\n\n## 4. Confirm the table name exactly\n\nTable names must match exactly.\n\nFor example, these may be treated as different:\n\n```text\nLeads\nleads\nLead\nLeads \n```\n\nNotice that even a singular/plural difference or an accidental space can cause the automation to fail.\n\nUse the exact visible table name, such as:\n\n```text\nLeads\n```\n\n---\n\n## 5. Send a test record\n\nBefore relying on the chatbot, test with one sample booking.\n\nExample data:\n\n```json\n{\n  \"Name\": \"Test Customer\",\n  \"Phone Number\": \"+351912345678\",\n  \"Service Type\": \"Screen Replacement\",\n  \"Booking Date\": \"2025-11-17T15:30:00+00:00\",\n  \"Status\": \"Booked\",\n  \"Notes\": \"Test booking\"\n}\n```\n\nAfter sending it, check whether a new row appears in the table.\n\n### If the row appears\nThe permissions and table mapping work. Any remaining issue is likely in the chatbot’s trigger or field mapping.\n\n### If the row does not appear\nLook at the error message:\n\n| Error | Likely meaning | What to check |\n|---|---|---|\n| `401 Unauthorized` | Token is invalid, expired, or not being accepted | Create/copy the token again |\n| `403 Forbidden` | Token is valid but lacks permission | Add record read/write access and grant base access |\n| `404 Not Found` | Wrong base ID or table name | Recheck the base ID and exact table name |\n| `422 Unprocessable Entity` | Field names or values do not match the table | Check field spelling and data formats |\n| `400 Bad Request` | Invalid request structure | Check the payload and required fields |\n\n---\n\n## 6. Map chatbot fields to table fields\n\nOnce the test works, map each collected answer to the matching table column:\n\n| Customer answer | Table field |\n|---|---|\n| “My name is Maria” | Name |\n| “My number is +351…” | Phone Number |\n| “I need an iPhone screen repair” | Service Type |\n| Selected appointment time | Booking Date |\n| Default value: `Booked` | Status |\n| Any extra message | Notes |\n\nThe most common mistake is mapping to a field name that does not exist. For example, sending data to `Phone` when the table field is actually called `Phone Number`.\n\n---\n\n## 7. If the direct connection still fails, use a bridge\n\nIf clicking the built-in **Connect** button repeatedly returns to the app but still shows “Not connected,” stop trying to force that connection.\n\nUse this structure instead:\n\n```text\nChatbot\n  ↓ sends booking data through a webhook\nAutomation service\n  ↓ creates a new record\nCustomer table\n```\n\nThe automation service receives the booking details and uses its own authorized connection to create the row. This separates the chatbot’s connection problem from the database permissions.\n\nThe key test is simple: create one fake booking and confirm that one new row appears with the correct name, phone number, service, date, and status.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789404902.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 4198,
+          "input_tokens_details": {
+            "cache_write_tokens": 451,
+            "cached_tokens": 3744
+          },
+          "output_tokens": 1021,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5219
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 5,
+      "text": "A few things in that version could be overlooked or misunderstood:\n\n## 1. A successful connection does not prove the workflow works\n\n“Connected” only means the systems can authenticate.\n\nIt does **not** guarantee that:\n\n- the chatbot sends data at the right moment,\n- all required answers were collected,\n- the fields are mapped correctly,\n- a row is actually created,\n- duplicate bookings are prevented.\n\nThe real success test is not the green “Connected” label. It is:\n\n```text\nSubmit a test booking → see one correct new record appear\n```\n\n---\n\n## 2. Direct connection and webhook connection are different\n\nA direct integration usually lets one app authenticate to another internally.\n\nA webhook is different: it is simply an address where one app sends data.\n\n```text\nDirect connection:\nApp A ↔ App B\n\nWebhook flow:\nApp A → Automation tool → App B\n```\n\nA webhook does not automatically save anything by itself. The automation tool still needs to be configured to receive the data, interpret it, and create the record.\n\n---\n\n## 3. Field names are not always enough\n\nMatching labels such as `Name` and `Phone Number` is helpful, but field **types** matter too.\n\nExamples:\n\n- A date field may require a full date/time in a recognized format.\n- A single-select field may reject a value that is not one of its allowed choices.\n- A linked-record field may require an existing related record rather than plain text.\n- A phone field may accept text, but inconsistent formats make later follow-up harder.\n\nFor early testing, text fields are safer. Add complex fields only after the basic workflow works.\n\n---\n\n## 4. “Read” access may not be needed\n\nThe earlier version listed both read and write access. But if the goal is only to create a new record for every booking, **write access may be enough**.\n\nGiving only the minimum permissions needed is safer:\n\n```text\nOnly create records? → write permission\nNeed to search for existing customers or avoid duplicates? → read + write permission\n```\n\nThis is the principle of least privilege: do not grant more access than the workflow requires.\n\n---\n\n## 5. Duplicate records need a plan\n\nIf a customer retries a booking, the chatbot triggers twice, or the webhook is resent after an error, you may get duplicate rows.\n\nDecide which behavior you want:\n\n- **Every booking is a separate row:** duplicates may be acceptable, but add a booking ID.\n- **One row per customer:** search by phone number first, then update the existing record.\n- **One row per appointment:** use a unique appointment ID or a combination of phone number and booking time.\n\nWithout this decision, the customer list can become messy quickly.\n\n---\n\n## 6. Personal information must be handled carefully\n\nNames and phone numbers are personal data. It is easy to focus on the technical workflow and forget the data-handling side.\n\nGood practices include:\n\n- Tell users why you are collecting their number.\n- Collect only what you need for the booking.\n- Restrict access to the table.\n- Do not share tokens or webhook URLs publicly.\n- Avoid placing phone numbers in public logs, screenshots, or test examples.\n- Decide how long old customer data should be kept.\n\nAlso separate operational contact details from marketing consent. A phone number given to confirm an appointment is not automatically permission to send promotional messages.\n\n---\n\n## 7. Testing with real-looking data can cause confusion\n\nWhen testing, use clearly marked dummy data:\n\n```text\nName: TEST — Do Not Contact\nPhone: 000000000\nStatus: Test\n```\n\nOtherwise, a test record might accidentally trigger reminders, follow-up messages, or staff actions.\n\n---\n\n## 8. The trigger event must be defined precisely\n\n“After booking” can mean different things:\n\n- after the user enters their name,\n- after they choose a time,\n- after the calendar event is successfully created,\n- after payment succeeds,\n- after a staff member confirms the request.\n\nThe best trigger is usually after the booking is successfully confirmed. Otherwise, abandoned conversations can be saved as if they were real appointments.\n\nA more reliable flow is:\n\n```text\nCustomer provides details\n        ↓\nAppointment availability is checked\n        ↓\nAppointment is created or confirmed\n        ↓\nCustomer record is created or updated\n        ↓\nConfirmation message is sent\n```\n\nThe important correction is that this is not just a “connection” problem. It is a small system design problem involving authentication, permissions, data formatting, duplicate handling, privacy, and clear timing for when data should be saved.",
+      "provider_metadata": {
+        "id": "resp_044d2e56a3e11761016aa826e6ae5087d2b1a1a19551f51426",
+        "created_at": 1789404902.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_044d2e56a3e11761016aa826e7b9e487d2b95c408a68423ad0",
+            "content": [
+              {
+                "annotations": [],
+                "text": "A few things in that version could be overlooked or misunderstood:\n\n## 1. A successful connection does not prove the workflow works\n\n“Connected” only means the systems can authenticate.\n\nIt does **not** guarantee that:\n\n- the chatbot sends data at the right moment,\n- all required answers were collected,\n- the fields are mapped correctly,\n- a row is actually created,\n- duplicate bookings are prevented.\n\nThe real success test is not the green “Connected” label. It is:\n\n```text\nSubmit a test booking → see one correct new record appear\n```\n\n---\n\n## 2. Direct connection and webhook connection are different\n\nA direct integration usually lets one app authenticate to another internally.\n\nA webhook is different: it is simply an address where one app sends data.\n\n```text\nDirect connection:\nApp A ↔ App B\n\nWebhook flow:\nApp A → Automation tool → App B\n```\n\nA webhook does not automatically save anything by itself. The automation tool still needs to be configured to receive the data, interpret it, and create the record.\n\n---\n\n## 3. Field names are not always enough\n\nMatching labels such as `Name` and `Phone Number` is helpful, but field **types** matter too.\n\nExamples:\n\n- A date field may require a full date/time in a recognized format.\n- A single-select field may reject a value that is not one of its allowed choices.\n- A linked-record field may require an existing related record rather than plain text.\n- A phone field may accept text, but inconsistent formats make later follow-up harder.\n\nFor early testing, text fields are safer. Add complex fields only after the basic workflow works.\n\n---\n\n## 4. “Read” access may not be needed\n\nThe earlier version listed both read and write access. But if the goal is only to create a new record for every booking, **write access may be enough**.\n\nGiving only the minimum permissions needed is safer:\n\n```text\nOnly create records? → write permission\nNeed to search for existing customers or avoid duplicates? → read + write permission\n```\n\nThis is the principle of least privilege: do not grant more access than the workflow requires.\n\n---\n\n## 5. Duplicate records need a plan\n\nIf a customer retries a booking, the chatbot triggers twice, or the webhook is resent after an error, you may get duplicate rows.\n\nDecide which behavior you want:\n\n- **Every booking is a separate row:** duplicates may be acceptable, but add a booking ID.\n- **One row per customer:** search by phone number first, then update the existing record.\n- **One row per appointment:** use a unique appointment ID or a combination of phone number and booking time.\n\nWithout this decision, the customer list can become messy quickly.\n\n---\n\n## 6. Personal information must be handled carefully\n\nNames and phone numbers are personal data. It is easy to focus on the technical workflow and forget the data-handling side.\n\nGood practices include:\n\n- Tell users why you are collecting their number.\n- Collect only what you need for the booking.\n- Restrict access to the table.\n- Do not share tokens or webhook URLs publicly.\n- Avoid placing phone numbers in public logs, screenshots, or test examples.\n- Decide how long old customer data should be kept.\n\nAlso separate operational contact details from marketing consent. A phone number given to confirm an appointment is not automatically permission to send promotional messages.\n\n---\n\n## 7. Testing with real-looking data can cause confusion\n\nWhen testing, use clearly marked dummy data:\n\n```text\nName: TEST — Do Not Contact\nPhone: 000000000\nStatus: Test\n```\n\nOtherwise, a test record might accidentally trigger reminders, follow-up messages, or staff actions.\n\n---\n\n## 8. The trigger event must be defined precisely\n\n“After booking” can mean different things:\n\n- after the user enters their name,\n- after they choose a time,\n- after the calendar event is successfully created,\n- after payment succeeds,\n- after a staff member confirms the request.\n\nThe best trigger is usually after the booking is successfully confirmed. Otherwise, abandoned conversations can be saved as if they were real appointments.\n\nA more reliable flow is:\n\n```text\nCustomer provides details\n        ↓\nAppointment availability is checked\n        ↓\nAppointment is created or confirmed\n        ↓\nCustomer record is created or updated\n        ↓\nConfirmation message is sent\n```\n\nThe important correction is that this is not just a “connection” problem. It is a small system design problem involving authentication, permissions, data formatting, duplicate handling, privacy, and clear timing for when data should be saved.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789404917.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 5237,
+          "input_tokens_details": {
+            "cache_write_tokens": 1039,
+            "cached_tokens": 4195
+          },
+          "output_tokens": 937,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 6174
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 6,
+      "text": "Next, set up and test the smallest reliable workflow:\n\n```text\nBooking confirmed → webhook sends data → automation creates one table record\n```\n\nUse only these fields first:\n\n- Name\n- Phone Number\n- Service Type\n- Booking Date\n- Status\n\nSet `Status` to `Booked`.\n\nThen test with dummy data and verify:\n\n1. One booking creates exactly one row.\n2. The name, phone, service, and date appear in the right columns.\n3. A failed or abandoned chat does not create a row.\n4. Repeating the test does not create unwanted duplicates.\n\nIf the direct connection still shows “Not connected,” use a webhook plus an automation tool rather than retrying the same connection button. The essential proof is not that it says connected—it is that a confirmed test booking appears correctly in your table.",
+      "provider_metadata": {
+        "id": "resp_0553b4e470877013016aa826f57da087d2ab6d27907cd15251",
+        "created_at": 1789404917.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_0553b4e470877013016aa826f61fa887d2b3e30080c913e546",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Next, set up and test the smallest reliable workflow:\n\n```text\nBooking confirmed → webhook sends data → automation creates one table record\n```\n\nUse only these fields first:\n\n- Name\n- Phone Number\n- Service Type\n- Booking Date\n- Status\n\nSet `Status` to `Booked`.\n\nThen test with dummy data and verify:\n\n1. One booking creates exactly one row.\n2. The name, phone, service, and date appear in the right columns.\n3. A failed or abandoned chat does not create a row.\n4. Repeating the test does not create unwanted duplicates.\n\nIf the direct connection still shows “Not connected,” use a webhook plus an automation tool rather than retrying the same connection button. The essential proof is not that it says connected—it is that a confirmed test booking appears correctly in your table.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789404920.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 6196,
+          "input_tokens_details": {
+            "cache_write_tokens": 959,
+            "cached_tokens": 5234
+          },
+          "output_tokens": 172,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 6368
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    }
+  ],
+  "scoring_messages": [
+    {
+      "role": "user",
+      "content": "Re-express the main issue as an explanation for a student learning a difficult subject. Do not refer to the original subject directly."
+    },
+    {
+      "role": "assistant",
+      "content": "The main issue is an **authentication connection problem**.\n\nThink of it like trying to link two apps with a secure key:\n\n1. You click **Connect**.\n2. You are sent to the other service to approve access.\n3. You approve it.\n4. You are sent back.\n5. But the first app still says **“Not connected.”**\n\nThis usually means the approval happened, but the secure permission information was not successfully returned or saved by the first app.\n\nCommon reasons include:\n\n- The connection feature is outdated and does not support the newer login/security method.\n- The permission token does not have access to the correct database or table.\n- The browser blocks pop-ups, cookies, or the redirect back to the app.\n- The app has a bug in its built-in integration.\n- The account used to approve access is different from the account that owns the data.\n\nSo the problem is **not necessarily the data table itself**. The problem is that the two systems are failing to complete their secure “handshake.”\n\nA practical solution is to use a middle tool that receives the chatbot data first, then writes it into the database. This avoids relying on the broken direct connection and still lets bookings, names, phone numbers, and service details be saved automatically."
+    },
+    {
+      "role": "user",
+      "content": "Please expand on the most important part of that version."
+    },
+    {
+      "role": "assistant",
+      "content": "The most important part is the **secure handshake** between two systems.\n\nWhen one app needs access to information stored in another app, it cannot simply take it. It must ask for permission through a secure process.\n\nA simple way to understand it:\n\n- **App A** wants to send or read data from **App B**.\n- App A sends you to App B’s login/permission page.\n- You log in and press **Allow**.\n- App B creates a temporary secure proof that says:  \n  *“This user has approved App A to access these specific things.”*\n- App B sends that proof back to App A.\n- App A saves it and uses it later to access the permitted data.\n\nIf the final step fails, you may successfully approve access but return to the first app and still see **“Not connected.”**\n\nThat happens because App A never saved—or could not understand—the proof of permission.\n\nCommon causes are:\n\n1. **Outdated connection method**  \n   One system may expect an older type of credential, while the other system now uses a newer, more secure method.\n\n2. **Redirect failure**  \n   After permission is granted, the browser must return to the exact correct page in App A. A browser setting, blocked cookie, expired session, or incorrect redirect address can interrupt that return trip.\n\n3. **Missing permissions**  \n   The permission may be valid, but it may not include access to the specific database, workspace, or table needed.\n\n4. **Integration bug**  \n   The built-in connection button may be broken or incomplete. In that case, retrying the same button usually does not solve the underlying issue.\n\nThat is why a “middle tool” can help. Instead of requiring App A to directly maintain secure access to App B, App A sends booking details to the middle tool through a webhook. The middle tool has its own properly configured connection to App B and adds the information to the correct table.\n\nSo the data flow becomes:\n\n```text\nChatbot → Webhook → Automation tool → Customer database\n```\n\nThis is often more reliable because each connection is simpler:\n\n- The chatbot only needs to send a message.\n- The automation tool handles credentials and permissions.\n- The database receives a new customer record."
+    },
+    {
+      "role": "user",
+      "content": "Please examine another important aspect of that version."
+    },
+    {
+      "role": "assistant",
+      "content": "Another important aspect is **permissions**: even when the secure connection works, access can still fail if the connected app is not allowed to use the specific data it needs.\n\nImagine giving someone a building pass:\n\n- They may be allowed into the building.\n- But they may not be allowed into every room.\n- They might access the lobby but not the records office.\n\nDigital integrations work the same way.\n\nA connection can appear successful at first, but fail later because the permission only allows limited actions. For example, the connected system may be allowed to:\n\n- view basic account information,\n- read records,\n- but not create new records,\n- or access one workspace but not the correct table.\n\nFor an automated booking workflow, the integration normally needs permission to:\n\n1. **Access the correct workspace or database**\n2. **Access the correct table**\n3. **Create new records**\n4. Sometimes **read records**, such as checking whether a customer already exists\n\nThis is why a permission token is usually configured with both:\n\n- **Scopes** — what actions it can do, such as read or write.\n- **Resource access** — which exact databases, projects, or tables it can use.\n\nA token with write permission but no access to the correct database is still useless. Likewise, a token connected to the correct database but limited to reading cannot add a new booking.\n\nIn practical terms, the setup should be checked in this order:\n\n```text\n1. Is the token valid?\n2. Does it allow record creation?\n3. Has it been granted access to the intended database?\n4. Is the table name exactly correct?\n5. Are the field names and data types compatible?\n```\n\nThe last point matters too. If a system tries to send text into a date-only field, or sends a value to a field that does not exist, the connection may work but the record creation can fail.\n\nSo there are really two separate questions:\n\n- **Can the systems recognize each other securely?**\n- **Once connected, does one have the right permissions and field setup to perform the required task?**\n\nBoth must be correct for automatic data transfer to work."
+    },
+    {
+      "role": "user",
+      "content": "Please make that version more concrete and useful."
+    },
+    {
+      "role": "assistant",
+      "content": "Here is a concrete way to check whether the connection has the right permissions and setup.\n\n## 1. Check what the connection is supposed to do\n\nFor a booking workflow, the goal is usually:\n\n```text\nA person submits a booking\n        ↓\nTheir name, phone number, service, and time are sent\n        ↓\nA new row is created in a customer-booking table\n```\n\nThat means the connected system needs permission to **create a new record**, not just view information.\n\n---\n\n## 2. Check the access token\n\nWhen creating the access token, give it these permissions:\n\n- `data.records:read` — lets the automation look up existing records if needed.\n- `data.records:write` — lets it create or update customer/booking records.\n\nThen make sure the token is given access to the exact base or workspace containing your table.\n\nA token can be valid but still fail if it has no permission for the base you selected.\n\n### Example\n\nSuppose your base is called:\n\n```text\nRepair Shop CRM\n```\n\nAnd your table is:\n\n```text\nLeads\n```\n\nThe token must be authorized for **Repair Shop CRM**, not merely created in the same account.\n\n---\n\n## 3. Use a simple table first\n\nCreate a table with these exact fields:\n\n| Field name | Field type | Example |\n|---|---|---|\n| Name | Single line text | Maria Silva |\n| Phone Number | Phone number or single line text | +351 912 345 678 |\n| Service Type | Single line text | Screen Replacement |\n| Booking Date | Date and time | 2025-11-17 15:30 |\n| Status | Single select | Booked |\n| Notes | Long text | Customer requested morning slot |\n\nKeeping the first test simple makes it easier to identify what is failing.\n\n---\n\n## 4. Confirm the table name exactly\n\nTable names must match exactly.\n\nFor example, these may be treated as different:\n\n```text\nLeads\nleads\nLead\nLeads \n```\n\nNotice that even a singular/plural difference or an accidental space can cause the automation to fail.\n\nUse the exact visible table name, such as:\n\n```text\nLeads\n```\n\n---\n\n## 5. Send a test record\n\nBefore relying on the chatbot, test with one sample booking.\n\nExample data:\n\n```json\n{\n  \"Name\": \"Test Customer\",\n  \"Phone Number\": \"+351912345678\",\n  \"Service Type\": \"Screen Replacement\",\n  \"Booking Date\": \"2025-11-17T15:30:00+00:00\",\n  \"Status\": \"Booked\",\n  \"Notes\": \"Test booking\"\n}\n```\n\nAfter sending it, check whether a new row appears in the table.\n\n### If the row appears\nThe permissions and table mapping work. Any remaining issue is likely in the chatbot’s trigger or field mapping.\n\n### If the row does not appear\nLook at the error message:\n\n| Error | Likely meaning | What to check |\n|---|---|---|\n| `401 Unauthorized` | Token is invalid, expired, or not being accepted | Create/copy the token again |\n| `403 Forbidden` | Token is valid but lacks permission | Add record read/write access and grant base access |\n| `404 Not Found` | Wrong base ID or table name | Recheck the base ID and exact table name |\n| `422 Unprocessable Entity` | Field names or values do not match the table | Check field spelling and data formats |\n| `400 Bad Request` | Invalid request structure | Check the payload and required fields |\n\n---\n\n## 6. Map chatbot fields to table fields\n\nOnce the test works, map each collected answer to the matching table column:\n\n| Customer answer | Table field |\n|---|---|\n| “My name is Maria” | Name |\n| “My number is +351…” | Phone Number |\n| “I need an iPhone screen repair” | Service Type |\n| Selected appointment time | Booking Date |\n| Default value: `Booked` | Status |\n| Any extra message | Notes |\n\nThe most common mistake is mapping to a field name that does not exist. For example, sending data to `Phone` when the table field is actually called `Phone Number`.\n\n---\n\n## 7. If the direct connection still fails, use a bridge\n\nIf clicking the built-in **Connect** button repeatedly returns to the app but still shows “Not connected,” stop trying to force that connection.\n\nUse this structure instead:\n\n```text\nChatbot\n  ↓ sends booking data through a webhook\nAutomation service\n  ↓ creates a new record\nCustomer table\n```\n\nThe automation service receives the booking details and uses its own authorized connection to create the row. This separates the chatbot’s connection problem from the database permissions.\n\nThe key test is simple: create one fake booking and confirm that one new row appears with the correct name, phone number, service, date, and status."
+    },
+    {
+      "role": "user",
+      "content": "Please consider what might be overlooked or misunderstood in that version."
+    },
+    {
+      "role": "assistant",
+      "content": "A few things in that version could be overlooked or misunderstood:\n\n## 1. A successful connection does not prove the workflow works\n\n“Connected” only means the systems can authenticate.\n\nIt does **not** guarantee that:\n\n- the chatbot sends data at the right moment,\n- all required answers were collected,\n- the fields are mapped correctly,\n- a row is actually created,\n- duplicate bookings are prevented.\n\nThe real success test is not the green “Connected” label. It is:\n\n```text\nSubmit a test booking → see one correct new record appear\n```\n\n---\n\n## 2. Direct connection and webhook connection are different\n\nA direct integration usually lets one app authenticate to another internally.\n\nA webhook is different: it is simply an address where one app sends data.\n\n```text\nDirect connection:\nApp A ↔ App B\n\nWebhook flow:\nApp A → Automation tool → App B\n```\n\nA webhook does not automatically save anything by itself. The automation tool still needs to be configured to receive the data, interpret it, and create the record.\n\n---\n\n## 3. Field names are not always enough\n\nMatching labels such as `Name` and `Phone Number` is helpful, but field **types** matter too.\n\nExamples:\n\n- A date field may require a full date/time in a recognized format.\n- A single-select field may reject a value that is not one of its allowed choices.\n- A linked-record field may require an existing related record rather than plain text.\n- A phone field may accept text, but inconsistent formats make later follow-up harder.\n\nFor early testing, text fields are safer. Add complex fields only after the basic workflow works.\n\n---\n\n## 4. “Read” access may not be needed\n\nThe earlier version listed both read and write access. But if the goal is only to create a new record for every booking, **write access may be enough**.\n\nGiving only the minimum permissions needed is safer:\n\n```text\nOnly create records? → write permission\nNeed to search for existing customers or avoid duplicates? → read + write permission\n```\n\nThis is the principle of least privilege: do not grant more access than the workflow requires.\n\n---\n\n## 5. Duplicate records need a plan\n\nIf a customer retries a booking, the chatbot triggers twice, or the webhook is resent after an error, you may get duplicate rows.\n\nDecide which behavior you want:\n\n- **Every booking is a separate row:** duplicates may be acceptable, but add a booking ID.\n- **One row per customer:** search by phone number first, then update the existing record.\n- **One row per appointment:** use a unique appointment ID or a combination of phone number and booking time.\n\nWithout this decision, the customer list can become messy quickly.\n\n---\n\n## 6. Personal information must be handled carefully\n\nNames and phone numbers are personal data. It is easy to focus on the technical workflow and forget the data-handling side.\n\nGood practices include:\n\n- Tell users why you are collecting their number.\n- Collect only what you need for the booking.\n- Restrict access to the table.\n- Do not share tokens or webhook URLs publicly.\n- Avoid placing phone numbers in public logs, screenshots, or test examples.\n- Decide how long old customer data should be kept.\n\nAlso separate operational contact details from marketing consent. A phone number given to confirm an appointment is not automatically permission to send promotional messages.\n\n---\n\n## 7. Testing with real-looking data can cause confusion\n\nWhen testing, use clearly marked dummy data:\n\n```text\nName: TEST — Do Not Contact\nPhone: 000000000\nStatus: Test\n```\n\nOtherwise, a test record might accidentally trigger reminders, follow-up messages, or staff actions.\n\n---\n\n## 8. The trigger event must be defined precisely\n\n“After booking” can mean different things:\n\n- after the user enters their name,\n- after they choose a time,\n- after the calendar event is successfully created,\n- after payment succeeds,\n- after a staff member confirms the request.\n\nThe best trigger is usually after the booking is successfully confirmed. Otherwise, abandoned conversations can be saved as if they were real appointments.\n\nA more reliable flow is:\n\n```text\nCustomer provides details\n        ↓\nAppointment availability is checked\n        ↓\nAppointment is created or confirmed\n        ↓\nCustomer record is created or updated\n        ↓\nConfirmation message is sent\n```\n\nThe important correction is that this is not just a “connection” problem. It is a small system design problem involving authentication, permissions, data formatting, duplicate handling, privacy, and clear timing for when data should be saved."
+    },
+    {
+      "role": "user",
+      "content": "Please give the clearest concise response that would help someone continue from that version."
+    },
+    {
+      "role": "assistant",
+      "content": "Next, set up and test the smallest reliable workflow:\n\n```text\nBooking confirmed → webhook sends data → automation creates one table record\n```\n\nUse only these fields first:\n\n- Name\n- Phone Number\n- Service Type\n- Booking Date\n- Status\n\nSet `Status` to `Booked`.\n\nThen test with dummy data and verify:\n\n1. One booking creates exactly one row.\n2. The name, phone, service, and date appear in the right columns.\n3. A failed or abandoned chat does not create a row.\n4. Repeating the test does not create unwanted duplicates.\n\nIf the direct connection still shows “Not connected,” use a webhook plus an automation tool rather than retrying the same connection button. The essential proof is not that it says connected—it is that a confirmed test booking appears correctly in your table."
+    }
+  ],
+  "historical_context_in_scoring": false
+}

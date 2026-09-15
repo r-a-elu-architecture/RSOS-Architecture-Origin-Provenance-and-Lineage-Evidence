@@ -1,0 +1,15 @@
+﻿WF1-B FRESH CONFIRMATION SELECTION CORRECTION
+
+Previous attempted filename train-00010-of-00086.parquet returned HTTP 404.
+No scientific outcome data were inspected.
+
+Corrected rule:
+1. Query actual repository file list.
+2. Exclude all previously used F2 shards.
+3. Rank every remaining filename by:
+   SHA256(PREREGISTRATION_SHA256 + "|" + filename)
+4. Select the first 9.
+5. Freeze selection before scientific scoring.
+
+Preregistration SHA256:
+3ca9ab8b46aa852d951259fbd5f60c9427c4fbb0c9e24b1afc7cea40be61e547

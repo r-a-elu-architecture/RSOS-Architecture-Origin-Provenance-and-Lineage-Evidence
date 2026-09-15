@@ -1,0 +1,49 @@
+{
+  "analysis": "WF1-A S2 outcome-level structured-missingness sensitivity",
+  "runner_sha256": "17c25511463d842b7b312aa3bf31bb31703cb1d2336bcaa6f8d5915bb016a1f2",
+  "collection_freeze_zip_sha256": "a28a5d017abb014d276605e405e70ca6b37624fe115263604074909a9fdfddaf",
+  "s1_zip_sha256": "03e93f81908db7b500374ede252360f41bbc09b57d3339b64a3ec25ecfe8532d",
+  "api_calls": 0,
+  "imputation": false,
+  "scenarios": {
+    "S2A_GROUP_COMPLETE": {
+      "description": "Remove seeds with any seed-condition having 3/3 persistent missing reps. Retained seed-condition groups use only genuinely observed reps.",
+      "excluded_seeds": [
+        1087,
+        1104,
+        1130,
+        1153
+      ]
+    },
+    "S2B_SEED_COMPLETE": {
+      "description": "Remove every seed touched by any persistent missing cell. Every retained seed is fully balanced across all 34 conditions x 3 reps.",
+      "excluded_seeds": [
+        1086,
+        1087,
+        1090,
+        1098,
+        1101,
+        1104,
+        1122,
+        1130,
+        1132,
+        1133,
+        1136,
+        1142,
+        1143,
+        1148,
+        1153
+      ]
+    }
+  },
+  "same_classification_across_sensitivities": true,
+  "strong_primary_gate_passes_both": true,
+  "hard_auc_085_gate_passes_both": true,
+  "interpretation": "If classification and strong/hard-control gates survive both deletion sensitivities, the core WF1-A conclusion is robust to the observed structured 29-cell residue under these no-imputation sensitivity analyses. If they do not survive, missingness materially affects scientific adjudication.",
+  "limitations": [
+    "This does not recover or infer the 29 unobserved API outputs.",
+    "This does not prove missingness mechanism.",
+    "This does not establish global uniqueness.",
+    "This does not establish literal neural or weight-level topology."
+  ]
+}

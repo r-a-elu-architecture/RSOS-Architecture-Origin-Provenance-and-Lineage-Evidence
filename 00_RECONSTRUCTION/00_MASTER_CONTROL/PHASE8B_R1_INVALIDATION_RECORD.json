@@ -1,0 +1,22 @@
+{
+  "record_type": "TECHNICAL_AUDIT_INVALIDATION",
+  "invalid_phase": "PHASE8B_HYDRATION_SOURCE_AUDIT_R1",
+  "scientific_result": false,
+  "source_estate_modified": false,
+  "canonical_sequence_modified": false,
+  "defect": "RUNTIME_PATH_RE contained a trailing alternation pipe before the closing group. In Python regular expressions this created an empty alternative, allowing the regex to match the empty string in every path.",
+  "observed_failure": "Every source reference in all 16 experiments was classified as runtime/library material, producing zero eligible files.",
+  "effect": "Phase 8B R1 hydration classifications, risk scores, and selection gates are invalid and must not be used.",
+  "upstream_effect": "NONE",
+  "phase7_freeze_effect": "NONE",
+  "phase8a_materialization_effect": "NONE",
+  "corrective_action": "Run Phase 8B-R2 using exact Windows path-component matching instead of the defective runtime regex and enforce regression gates.",
+  "preserved_r1_directory": "C:\\RSOS\\RSOS_CANONICAL_EXPERIMENT_CHAIN\\00_MASTER_CONTROL\\SUPERSEDED_PHASE8B_R1_20260915T210443Z",
+  "preserved_files": [
+    "C:\\RSOS\\RSOS_CANONICAL_EXPERIMENT_CHAIN\\00_MASTER_CONTROL\\SUPERSEDED_PHASE8B_R1_20260915T210443Z\\MASTER_HYDRATION_SOURCE_AUDIT.csv",
+    "C:\\RSOS\\RSOS_CANONICAL_EXPERIMENT_CHAIN\\00_MASTER_CONTROL\\SUPERSEDED_PHASE8B_R1_20260915T210443Z\\MASTER_HYDRATION_FILE_CLASSIFICATION.csv",
+    "C:\\RSOS\\RSOS_CANONICAL_EXPERIMENT_CHAIN\\00_MASTER_CONTROL\\SUPERSEDED_PHASE8B_R1_20260915T210443Z\\MASTER_HYDRATION_SELECTION_GATE.csv",
+    "C:\\RSOS\\RSOS_CANONICAL_EXPERIMENT_CHAIN\\00_MASTER_CONTROL\\SUPERSEDED_PHASE8B_R1_20260915T210443Z\\PHASE8B_HYDRATION_SOURCE_AUDIT_SUMMARY.json"
+  ],
+  "recorded_utc": "2026-09-15T21:04:43.780018+00:00"
+}

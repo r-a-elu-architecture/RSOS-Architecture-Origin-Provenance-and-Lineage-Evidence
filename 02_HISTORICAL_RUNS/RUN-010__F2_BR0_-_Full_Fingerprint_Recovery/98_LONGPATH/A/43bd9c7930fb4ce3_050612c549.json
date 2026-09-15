@@ -1,0 +1,721 @@
+{
+  "experiment": "V6_CLEAN_FINGERPRINT_CONFIRMATORY_REPLICATION",
+  "completed_utc": "2026-09-10T22:55:18.944492+00:00",
+  "model": "gpt-5.6-luna",
+  "runner_sha256": "be65c23a9666ea0cbeee05532d8c4e89a1304230a2782e39ab6866c37977297d",
+  "specification_sha256": "a1b899b1d7afe404e46440f7332333295b8683b58080f2d4ea8d587507a56c95",
+  "expected_calls": 8000,
+  "successful_unique_cells": 8000,
+  "missing_cells": 0,
+  "condition_results": [
+    {
+      "condition": "A0_AUTHENTIC",
+      "N": 100,
+      "mean_fingerprint": 14.215,
+      "median_fingerprint": 14.375,
+      "sd_fingerprint": 1.7756134236660384,
+      "mean_output_tokens": 149.6225,
+      "mean_latency": 3.2046279805898665
+    },
+    {
+      "condition": "A1_AUTHENTIC_PARAPHRASE",
+      "N": 100,
+      "mean_fingerprint": 11.3975,
+      "median_fingerprint": 11.25,
+      "sd_fingerprint": 1.5345741850079875,
+      "mean_output_tokens": 142.1625,
+      "mean_latency": 3.177473492026329
+    },
+    {
+      "condition": "A2_AUTHENTIC_PARAPHRASE",
+      "N": 100,
+      "mean_fingerprint": 15.25,
+      "median_fingerprint": 15.5,
+      "sd_fingerprint": 2.081059365036971,
+      "mean_output_tokens": 161.635,
+      "mean_latency": 3.2351681381464004
+    },
+    {
+      "condition": "A3_AUTHENTIC_PARAPHRASE",
+      "N": 100,
+      "mean_fingerprint": 14.6325,
+      "median_fingerprint": 14.5,
+      "sd_fingerprint": 1.950930560144325,
+      "mean_output_tokens": 215.56,
+      "mean_latency": 4.010719303488731
+    },
+    {
+      "condition": "D_DIRECTION_REVERSED",
+      "N": 100,
+      "mean_fingerprint": 14.255,
+      "median_fingerprint": 14.5,
+      "sd_fingerprint": 2.171317851472053,
+      "mean_output_tokens": 202.7525,
+      "mean_latency": 3.646805930137634
+    },
+    {
+      "condition": "O_ORDER_SHUFFLED",
+      "N": 100,
+      "mean_fingerprint": 14.6325,
+      "median_fingerprint": 14.5,
+      "sd_fingerprint": 2.4716715707260453,
+      "mean_output_tokens": 138.725,
+      "mean_latency": 2.8405903190374375
+    },
+    {
+      "condition": "M_META_CONTROL_ABLATED",
+      "N": 100,
+      "mean_fingerprint": 9.6225,
+      "median_fingerprint": 9.5,
+      "sd_fingerprint": 1.9992091239317917,
+      "mean_output_tokens": 113.1125,
+      "mean_latency": 2.622866168022156
+    },
+    {
+      "condition": "P_PRESERVATION_ABLATED",
+      "N": 100,
+      "mean_fingerprint": 9.0075,
+      "median_fingerprint": 9.0,
+      "sd_fingerprint": 1.5892850657456075,
+      "mean_output_tokens": 126.6225,
+      "mean_latency": 2.7799838906526566
+    },
+    {
+      "condition": "T_TERMINAL_COUNTERFACTUAL",
+      "N": 100,
+      "mean_fingerprint": 11.9625,
+      "median_fingerprint": 12.125,
+      "sd_fingerprint": 1.8095478396103222,
+      "mean_output_tokens": 144.4925,
+      "mean_latency": 3.0242620170116425
+    },
+    {
+      "condition": "C_COMPRESSION_ABLATED",
+      "N": 100,
+      "mean_fingerprint": 12.625,
+      "median_fingerprint": 12.5,
+      "sd_fingerprint": 1.6470435711457438,
+      "mean_output_tokens": 157.5775,
+      "mean_latency": 3.1610932248830794
+    },
+    {
+      "condition": "R_RECURSION_CONTROL",
+      "N": 100,
+      "mean_fingerprint": 16.6575,
+      "median_fingerprint": 17.0,
+      "sd_fingerprint": 3.917819785121167,
+      "mean_output_tokens": 239.845,
+      "mean_latency": 4.177248855829239
+    },
+    {
+      "condition": "X_COMPLEXITY_CONTROL",
+      "N": 100,
+      "mean_fingerprint": 13.6775,
+      "median_fingerprint": 13.25,
+      "sd_fingerprint": 1.9621722527583938,
+      "mean_output_tokens": 257.4175,
+      "mean_latency": 4.47895131111145
+    },
+    {
+      "condition": "L_LINEAR_CONTROL",
+      "N": 100,
+      "mean_fingerprint": 3.27,
+      "median_fingerprint": 3.25,
+      "sd_fingerprint": 1.268141087648302,
+      "mean_output_tokens": 59.3,
+      "mean_latency": 2.0011862474679947
+    },
+    {
+      "condition": "G_RANDOM_GRAPH_CONTROL",
+      "N": 100,
+      "mean_fingerprint": 8.9525,
+      "median_fingerprint": 9.0,
+      "sd_fingerprint": 2.3106841765235604,
+      "mean_output_tokens": 249.63,
+      "mean_latency": 4.3711336356401445
+    },
+    {
+      "condition": "DM_DIRECTION_META_DAMAGE",
+      "N": 100,
+      "mean_fingerprint": 16.66,
+      "median_fingerprint": 16.5,
+      "sd_fingerprint": 2.11342510077023,
+      "mean_output_tokens": 208.635,
+      "mean_latency": 3.6537709367275237
+    },
+    {
+      "condition": "DP_DIRECTION_PRESERVATION_DAMAGE",
+      "N": 100,
+      "mean_fingerprint": 14.89,
+      "median_fingerprint": 15.0,
+      "sd_fingerprint": 1.7760755739676295,
+      "mean_output_tokens": 221.365,
+      "mean_latency": 3.808579161167145
+    },
+    {
+      "condition": "OP_ORDER_PRESERVATION_DAMAGE",
+      "N": 100,
+      "mean_fingerprint": 13.4175,
+      "median_fingerprint": 13.25,
+      "sd_fingerprint": 2.33875317512161,
+      "mean_output_tokens": 133.9625,
+      "mean_latency": 2.7854727667570116
+    },
+    {
+      "condition": "PT_PRESERVATION_TERMINAL_DAMAGE",
+      "N": 100,
+      "mean_fingerprint": 6.3275,
+      "median_fingerprint": 6.0,
+      "sd_fingerprint": 1.6251243153691475,
+      "mean_output_tokens": 87.4875,
+      "mean_latency": 2.2954058295488355
+    },
+    {
+      "condition": "H_AUTHENTIC_HELDOUT",
+      "N": 100,
+      "mean_fingerprint": 12.955,
+      "median_fingerprint": 13.0,
+      "sd_fingerprint": 1.90870546854578,
+      "mean_output_tokens": 138.7175,
+      "mean_latency": 2.894698534011841
+    },
+    {
+      "condition": "H_DAMAGED_HELDOUT",
+      "N": 100,
+      "mean_fingerprint": 5.37,
+      "median_fingerprint": 5.25,
+      "sd_fingerprint": 1.31015844519476,
+      "mean_output_tokens": 88.4,
+      "mean_latency": 2.3348564213514327
+    }
+  ],
+  "coordinate_contrasts": [
+    {
+      "contrast": "DIRECTION",
+      "condition_A": "A0_AUTHENTIC",
+      "condition_B": "D_DIRECTION_REVERSED",
+      "mean_A": 14.215,
+      "mean_B": 14.255,
+      "difference": -0.04,
+      "permutation_p": 0.5597344026559734,
+      "wilcoxon_p": 0.5508495272987759,
+      "holm_p": 1.0,
+      "PASS": false
+    },
+    {
+      "contrast": "ORDER",
+      "condition_A": "A0_AUTHENTIC",
+      "condition_B": "O_ORDER_SHUFFLED",
+      "mean_A": 14.215,
+      "mean_B": 14.6325,
+      "difference": -0.4175,
+      "permutation_p": 0.9273107268927311,
+      "wilcoxon_p": 0.8972460851059469,
+      "holm_p": 1.0,
+      "PASS": false
+    },
+    {
+      "contrast": "META_CONTROL",
+      "condition_A": "A0_AUTHENTIC",
+      "condition_B": "M_META_CONTROL_ABLATED",
+      "mean_A": 14.215,
+      "mean_B": 9.6225,
+      "difference": 4.5925,
+      "permutation_p": 9.99990000099999e-06,
+      "wilcoxon_p": 5.5919339309346205e-18,
+      "holm_p": 0.00014999850001499987,
+      "PASS": true
+    },
+    {
+      "contrast": "PRESERVATION",
+      "condition_A": "A0_AUTHENTIC",
+      "condition_B": "P_PRESERVATION_ABLATED",
+      "mean_A": 14.215,
+      "mean_B": 9.0075,
+      "difference": 5.2075,
+      "permutation_p": 9.99990000099999e-06,
+      "wilcoxon_p": 2.976374826197914e-18,
+      "holm_p": 0.00014999850001499987,
+      "PASS": true
+    },
+    {
+      "contrast": "TERMINAL",
+      "condition_A": "A0_AUTHENTIC",
+      "condition_B": "T_TERMINAL_COUNTERFACTUAL",
+      "mean_A": 14.215,
+      "mean_B": 11.9625,
+      "difference": 2.2525,
+      "permutation_p": 9.99990000099999e-06,
+      "wilcoxon_p": 2.577801284811099e-12,
+      "holm_p": 0.00014999850001499987,
+      "PASS": true
+    },
+    {
+      "contrast": "COMPRESSION",
+      "condition_A": "A0_AUTHENTIC",
+      "condition_B": "C_COMPRESSION_ABLATED",
+      "mean_A": 14.215,
+      "mean_B": 12.625,
+      "difference": 1.59,
+      "permutation_p": 9.99990000099999e-06,
+      "wilcoxon_p": 1.71770384426831e-08,
+      "holm_p": 0.00014999850001499987,
+      "PASS": true
+    },
+    {
+      "contrast": "RECURSION_SPECIFICITY",
+      "condition_A": "A0_AUTHENTIC",
+      "condition_B": "R_RECURSION_CONTROL",
+      "mean_A": 14.215,
+      "mean_B": 16.6575,
+      "difference": -2.4425,
+      "permutation_p": 1.0,
+      "wilcoxon_p": 0.9999999565321929,
+      "holm_p": 1.0,
+      "PASS": false
+    },
+    {
+      "contrast": "COMPLEXITY_SPECIFICITY",
+      "condition_A": "A0_AUTHENTIC",
+      "condition_B": "X_COMPLEXITY_CONTROL",
+      "mean_A": 14.215,
+      "mean_B": 13.6775,
+      "difference": 0.5375,
+      "permutation_p": 0.016599834001659982,
+      "wilcoxon_p": 0.04052690599189003,
+      "holm_p": 0.09959900400995989,
+      "PASS": false
+    },
+    {
+      "contrast": "LINEAR_SPECIFICITY",
+      "condition_A": "A0_AUTHENTIC",
+      "condition_B": "L_LINEAR_CONTROL",
+      "mean_A": 14.215,
+      "mean_B": 3.27,
+      "difference": 10.945,
+      "permutation_p": 9.99990000099999e-06,
+      "wilcoxon_p": 1.9162201157119843e-18,
+      "holm_p": 0.00014999850001499987,
+      "PASS": true
+    },
+    {
+      "contrast": "GRAPH_SPECIFICITY",
+      "condition_A": "A0_AUTHENTIC",
+      "condition_B": "G_RANDOM_GRAPH_CONTROL",
+      "mean_A": 14.215,
+      "mean_B": 8.9525,
+      "difference": 5.2625,
+      "permutation_p": 9.99990000099999e-06,
+      "wilcoxon_p": 8.20066300408363e-18,
+      "holm_p": 0.00014999850001499987,
+      "PASS": true
+    },
+    {
+      "contrast": "DIRECTION_META_LESION",
+      "condition_A": "A0_AUTHENTIC",
+      "condition_B": "DM_DIRECTION_META_DAMAGE",
+      "mean_A": 14.215,
+      "mean_B": 16.66,
+      "difference": -2.445,
+      "permutation_p": 1.0,
+      "wilcoxon_p": 0.9999999999989558,
+      "holm_p": 1.0,
+      "PASS": false
+    },
+    {
+      "contrast": "DIRECTION_PRESERVATION_LESION",
+      "condition_A": "A0_AUTHENTIC",
+      "condition_B": "DP_DIRECTION_PRESERVATION_DAMAGE",
+      "mean_A": 14.215,
+      "mean_B": 14.89,
+      "difference": -0.675,
+      "permutation_p": 0.993560064399356,
+      "wilcoxon_p": 0.9859562479142711,
+      "holm_p": 1.0,
+      "PASS": false
+    },
+    {
+      "contrast": "ORDER_PRESERVATION_LESION",
+      "condition_A": "A0_AUTHENTIC",
+      "condition_B": "OP_ORDER_PRESERVATION_DAMAGE",
+      "mean_A": 14.215,
+      "mean_B": 13.4175,
+      "difference": 0.7975,
+      "permutation_p": 0.0013899861001389986,
+      "wilcoxon_p": 0.00044136609043370046,
+      "holm_p": 0.00972990270097299,
+      "PASS": true
+    },
+    {
+      "contrast": "PRESERVATION_TERMINAL_LESION",
+      "condition_A": "A0_AUTHENTIC",
+      "condition_B": "PT_PRESERVATION_TERMINAL_DAMAGE",
+      "mean_A": 14.215,
+      "mean_B": 6.3275,
+      "difference": 7.8875,
+      "permutation_p": 9.99990000099999e-06,
+      "wilcoxon_p": 1.8895659564270217e-18,
+      "holm_p": 0.00014999850001499987,
+      "PASS": true
+    },
+    {
+      "contrast": "HELDOUT_FINGERPRINT",
+      "condition_A": "H_AUTHENTIC_HELDOUT",
+      "condition_B": "H_DAMAGED_HELDOUT",
+      "mean_A": 12.955,
+      "mean_B": 5.37,
+      "difference": 7.585,
+      "permutation_p": 9.99990000099999e-06,
+      "wilcoxon_p": 1.9135171369359048e-18,
+      "holm_p": 0.00014999850001499987,
+      "PASS": true
+    }
+  ],
+  "replication": [
+    {
+      "partition": "DEVELOPMENT",
+      "coordinate": "DIRECTION",
+      "N": 50,
+      "difference": -0.115,
+      "p": 0.6121438785612144,
+      "PASS": false
+    },
+    {
+      "partition": "DEVELOPMENT",
+      "coordinate": "ORDER",
+      "N": 50,
+      "difference": -0.555,
+      "p": 0.9063009369906301,
+      "PASS": false
+    },
+    {
+      "partition": "DEVELOPMENT",
+      "coordinate": "META_CONTROL",
+      "N": 50,
+      "difference": 4.675,
+      "p": 9.99990000099999e-06,
+      "PASS": true
+    },
+    {
+      "partition": "DEVELOPMENT",
+      "coordinate": "PRESERVATION",
+      "N": 50,
+      "difference": 4.99,
+      "p": 9.99990000099999e-06,
+      "PASS": true
+    },
+    {
+      "partition": "DEVELOPMENT",
+      "coordinate": "TERMINAL",
+      "N": 50,
+      "difference": 2.275,
+      "p": 9.99990000099999e-06,
+      "PASS": true
+    },
+    {
+      "partition": "CONFIRMATION",
+      "coordinate": "DIRECTION",
+      "N": 30,
+      "difference": 0.5583333333333333,
+      "p": 0.1054089459105409,
+      "PASS": false
+    },
+    {
+      "partition": "CONFIRMATION",
+      "coordinate": "ORDER",
+      "N": 30,
+      "difference": -0.15,
+      "p": 0.6137538624613754,
+      "PASS": false
+    },
+    {
+      "partition": "CONFIRMATION",
+      "coordinate": "META_CONTROL",
+      "N": 30,
+      "difference": 4.675,
+      "p": 9.99990000099999e-06,
+      "PASS": true
+    },
+    {
+      "partition": "CONFIRMATION",
+      "coordinate": "PRESERVATION",
+      "N": 30,
+      "difference": 5.366666666666666,
+      "p": 9.99990000099999e-06,
+      "PASS": true
+    },
+    {
+      "partition": "CONFIRMATION",
+      "coordinate": "TERMINAL",
+      "N": 30,
+      "difference": 2.566666666666667,
+      "p": 3.999960000399996e-05,
+      "PASS": true
+    },
+    {
+      "partition": "FINAL_HOLDOUT",
+      "coordinate": "DIRECTION",
+      "N": 20,
+      "difference": -0.75,
+      "p": 0.8632513674863251,
+      "PASS": false
+    },
+    {
+      "partition": "FINAL_HOLDOUT",
+      "coordinate": "ORDER",
+      "N": 20,
+      "difference": -0.475,
+      "p": 0.7948920510794892,
+      "PASS": false
+    },
+    {
+      "partition": "FINAL_HOLDOUT",
+      "coordinate": "META_CONTROL",
+      "N": 20,
+      "difference": 4.2625,
+      "p": 9.99990000099999e-06,
+      "PASS": true
+    },
+    {
+      "partition": "FINAL_HOLDOUT",
+      "coordinate": "PRESERVATION",
+      "N": 20,
+      "difference": 5.5125,
+      "p": 9.99990000099999e-06,
+      "PASS": true
+    },
+    {
+      "partition": "FINAL_HOLDOUT",
+      "coordinate": "TERMINAL",
+      "N": 20,
+      "difference": 1.725,
+      "p": 0.0005599944000559995,
+      "PASS": true
+    }
+  ],
+  "fingerprint_classifier": [
+    {
+      "partition": "DEVELOPMENT",
+      "N": 850,
+      "ROC_AUC": 0.9796538461538462,
+      "ACCURACY": 0.9152941176470588
+    },
+    {
+      "partition": "CONFIRMATION",
+      "N": 510,
+      "ROC_AUC": 0.9683119658119659,
+      "ACCURACY": 0.907843137254902
+    },
+    {
+      "partition": "FINAL_HOLDOUT",
+      "N": 340,
+      "ROC_AUC": 0.9698557692307692,
+      "ACCURACY": 0.9117647058823529
+    }
+  ],
+  "heldout_generalization": {
+    "authentic_mean": 12.955,
+    "damaged_mean": 5.37,
+    "difference": 7.585,
+    "permutation_p": 9.99990000099999e-06,
+    "PASS": true
+  },
+  "secondary_token_latency": [
+    {
+      "coordinate": "DIRECTION",
+      "feature": "OUTPUT_TOKENS",
+      "authentic_mean": 149.6225,
+      "damaged_mean": 202.7525,
+      "difference": -53.13
+    },
+    {
+      "coordinate": "DIRECTION",
+      "feature": "WORD_COUNT",
+      "authentic_mean": 129.735,
+      "damaged_mean": 177.0975,
+      "difference": -47.3625
+    },
+    {
+      "coordinate": "DIRECTION",
+      "feature": "TYPE_TOKEN_RATIO",
+      "authentic_mean": 0.7366492174483911,
+      "damaged_mean": 0.639523172128241,
+      "difference": 0.0971260453201503
+    },
+    {
+      "coordinate": "DIRECTION",
+      "feature": "LATENCY_SECONDS",
+      "authentic_mean": 3.2046279805898665,
+      "damaged_mean": 3.646805930137634,
+      "difference": -0.4421779495477676
+    },
+    {
+      "coordinate": "ORDER",
+      "feature": "OUTPUT_TOKENS",
+      "authentic_mean": 149.6225,
+      "damaged_mean": 138.725,
+      "difference": 10.8975
+    },
+    {
+      "coordinate": "ORDER",
+      "feature": "WORD_COUNT",
+      "authentic_mean": 129.735,
+      "damaged_mean": 122.605,
+      "difference": 7.13
+    },
+    {
+      "coordinate": "ORDER",
+      "feature": "TYPE_TOKEN_RATIO",
+      "authentic_mean": 0.7366492174483911,
+      "damaged_mean": 0.6787457651894482,
+      "difference": 0.05790345225894297
+    },
+    {
+      "coordinate": "ORDER",
+      "feature": "LATENCY_SECONDS",
+      "authentic_mean": 3.2046279805898665,
+      "damaged_mean": 2.8405903190374375,
+      "difference": 0.3640376615524292
+    },
+    {
+      "coordinate": "META_CONTROL",
+      "feature": "OUTPUT_TOKENS",
+      "authentic_mean": 149.6225,
+      "damaged_mean": 113.1125,
+      "difference": 36.51
+    },
+    {
+      "coordinate": "META_CONTROL",
+      "feature": "WORD_COUNT",
+      "authentic_mean": 129.735,
+      "damaged_mean": 98.255,
+      "difference": 31.48
+    },
+    {
+      "coordinate": "META_CONTROL",
+      "feature": "TYPE_TOKEN_RATIO",
+      "authentic_mean": 0.7366492174483911,
+      "damaged_mean": 0.7302943458592847,
+      "difference": 0.006354871589106637
+    },
+    {
+      "coordinate": "META_CONTROL",
+      "feature": "LATENCY_SECONDS",
+      "authentic_mean": 3.2046279805898665,
+      "damaged_mean": 2.622866168022156,
+      "difference": 0.5817618125677109
+    },
+    {
+      "coordinate": "PRESERVATION",
+      "feature": "OUTPUT_TOKENS",
+      "authentic_mean": 149.6225,
+      "damaged_mean": 126.6225,
+      "difference": 23.0
+    },
+    {
+      "coordinate": "PRESERVATION",
+      "feature": "WORD_COUNT",
+      "authentic_mean": 129.735,
+      "damaged_mean": 110.4925,
+      "difference": 19.2425
+    },
+    {
+      "coordinate": "PRESERVATION",
+      "feature": "TYPE_TOKEN_RATIO",
+      "authentic_mean": 0.7366492174483911,
+      "damaged_mean": 0.7261973855716208,
+      "difference": 0.010451831876770368
+    },
+    {
+      "coordinate": "PRESERVATION",
+      "feature": "LATENCY_SECONDS",
+      "authentic_mean": 3.2046279805898665,
+      "damaged_mean": 2.7799838906526566,
+      "difference": 0.4246440899372101
+    },
+    {
+      "coordinate": "TERMINAL",
+      "feature": "OUTPUT_TOKENS",
+      "authentic_mean": 149.6225,
+      "damaged_mean": 144.4925,
+      "difference": 5.13
+    },
+    {
+      "coordinate": "TERMINAL",
+      "feature": "WORD_COUNT",
+      "authentic_mean": 129.735,
+      "damaged_mean": 125.69,
+      "difference": 4.045
+    },
+    {
+      "coordinate": "TERMINAL",
+      "feature": "TYPE_TOKEN_RATIO",
+      "authentic_mean": 0.7366492174483911,
+      "damaged_mean": 0.7233674801426565,
+      "difference": 0.013281737305734826
+    },
+    {
+      "coordinate": "TERMINAL",
+      "feature": "LATENCY_SECONDS",
+      "authentic_mean": 3.2046279805898665,
+      "damaged_mean": 3.0242620170116425,
+      "difference": 0.18036596357822418
+    }
+  ],
+  "ablation_gradient": [
+    {
+      "lesion": "AUTHENTIC",
+      "condition": "A0_AUTHENTIC",
+      "mean_fingerprint": 14.215,
+      "median_fingerprint": 14.375
+    },
+    {
+      "lesion": "SINGLE_DIRECTION",
+      "condition": "D_DIRECTION_REVERSED",
+      "mean_fingerprint": 14.255,
+      "median_fingerprint": 14.5
+    },
+    {
+      "lesion": "SINGLE_PRESERVATION",
+      "condition": "P_PRESERVATION_ABLATED",
+      "mean_fingerprint": 9.0075,
+      "median_fingerprint": 9.0
+    },
+    {
+      "lesion": "DOUBLE_DIRECTION_META",
+      "condition": "DM_DIRECTION_META_DAMAGE",
+      "mean_fingerprint": 16.66,
+      "median_fingerprint": 16.5
+    },
+    {
+      "lesion": "DOUBLE_DIRECTION_PRESERVATION",
+      "condition": "DP_DIRECTION_PRESERVATION_DAMAGE",
+      "mean_fingerprint": 14.89,
+      "median_fingerprint": 15.0
+    },
+    {
+      "lesion": "DOUBLE_ORDER_PRESERVATION",
+      "condition": "OP_ORDER_PRESERVATION_DAMAGE",
+      "mean_fingerprint": 13.4175,
+      "median_fingerprint": 13.25
+    },
+    {
+      "lesion": "DOUBLE_PRESERVATION_TERMINAL",
+      "condition": "PT_PRESERVATION_TERMINAL_DAMAGE",
+      "mean_fingerprint": 6.3275,
+      "median_fingerprint": 6.0
+    }
+  ],
+  "core_pass_count": 3,
+  "direction_replication": false,
+  "preservation_replication": true,
+  "confirmation_auc": 0.9683119658119659,
+  "final_holdout_auc": 0.9698557692307692,
+  "classification": "PARTIAL_STRUCTURAL_FINGERPRINT_VECTOR",
+  "token_usage": {
+    "input_tokens": 1481600,
+    "output_tokens": 1294809
+  },
+  "estimated_cost_usd": 1.8500908000000003,
+  "interpretation_boundary": "A positive V6 result supports a reproducible behavioral structural fingerprint vector under frozen interventions. It does not by itself establish modification of global model weights, hidden neural circuitry, training exposure, biological myelination, cross-user transmission or personal recognition."
+}

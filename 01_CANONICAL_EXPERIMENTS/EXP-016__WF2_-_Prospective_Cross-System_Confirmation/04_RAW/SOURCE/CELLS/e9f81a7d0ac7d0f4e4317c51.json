@@ -1,0 +1,315 @@
+{
+  "cell_id": "e9f81a7d0ac7d0f4e4317c51",
+  "provider": "GOOGLE",
+  "organization": "Google",
+  "model_requested": "gemini-3.8-flash",
+  "condition": "BASELINE",
+  "blind_context_id": "b102030dcd3f0eef493156fa",
+  "status": "COMPLETE",
+  "failure": null,
+  "provider_responses": [
+    {
+      "turn": 1,
+      "text": "Yes, here is the exact payload and webhook configuration to bypass the native connection bug completely using **Zapier** or **Make**:\n\n---\n\n### 📋 1️⃣ The Webhook JSON Payload\n\nIn **Convocore**, go to **Settings / Integrations → Webhooks** (or \"Outgoing Webhooks after booking\"). \n\nSet the method to **POST** and paste this into the **Body / Payload** box:\n\n```json\n{\n  \"name\": \"{{user.name}}\",\n  \"phone\": \"{{user.phone}}\",\n  \"device_model\": \"{{device.model}}\",\n  \"service_type\": \"{{repair.type}}\",\n  \"price\": \"{{price}}\",\n  \"booking_date\": \"{{booking.time}}\",\n  \"notes\": \"{{notes}}\",\n  \"language\": \"{{conversation_language}}\",\n  \"status\": \"Booked\"\n}\n```\n\n*(Note: If your variable names differ slightly in your Convocore bot settings, match them to whatever tags you use to capture user data).*\n\n---\n\n### ⚙️ 2️⃣ Step-by-Step Setup in Zapier (or Make)\n\n1. **Create a Zap:**\n   - **Trigger:** Choose **Webhooks by Zapier** → Select **Catch Hook**.\n   - Click **Continue**. Zapier will give you a unique URL (e.g., `https://hooks.zapier.com/hooks/catch/...`).\n2. **Paste into Convocore:**\n   - Put that Zapier URL into the **Webhook URL** field in Convocore and save.\n3. **Send a Test:**\n   - Trigger a test booking in your chatbot (or click \"Send Test Webhook\" in Convocore).\n   - In Zapier, click **Test Trigger** to verify it catches the data (name, phone, etc.).\n4. **Add Action (Airtable):**\n   - **App:** Airtable\n   - **Event:** Create Record\n   - **Account:** Connect your Airtable account (using your Personal Access Token).\n   - **Base:** Select your `Repair Shop CRM` base.\n   - **Table:** Select `Leads`.\n5. **Map the Fields:**\n   - `Name` → select `1. Name` from the webhook\n   - `Phone Number` → select `1. Phone`\n   - `Device / Model` → select `1. Device Model`\n   - `Service Type` → select `1. Service Type`\n   - `Price` → select `1. Price`\n   - `Booking Date` → select `1. Booking Date`\n   - `Notes` → select `1. Notes`\n   - `Language` → select `1. Language`\n   - `Status` → select `1. Status` (or type `Booked`)\n\n---\n\n### 🎯 3️⃣ Turn It On & Test\n\n1. Turn the Zap **ON**.\n2. Run one full test repair booking through your chatbot.\n3. Refresh your Airtable base.\n\nA new row with the user's name, phone number, and repair details will appear immediately. \n\nLet me know if you run into any issues while mapping the fields!",
+      "provider_metadata": {
+        "id": "OTeoav7qBsbinsEPxuutwAo",
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "Yes, here is the exact payload and webhook configuration to bypass the native connection bug completely using **Zapier** or **Make**:\n\n---\n\n### 📋 1️⃣ The Webhook JSON Payload\n\nIn **Convocore**, go to **Settings / Integrations → Webhooks** (or \"Outgoing Webhooks after booking\"). \n\nSet the method to **POST** and paste this into the **Body / Payload** box:\n\n```json\n{\n  \"name\": \"{{user.name}}\",\n  \"phone\": \"{{user.phone}}\",\n  \"device_model\": \"{{device.model}}\",\n  \"service_type\": \"{{repair.type}}\",\n  \"price\": \"{{price}}\",\n  \"booking_date\": \"{{booking.time}}\",\n  \"notes\": \"{{notes}}\",\n  \"language\": \"{{conversation_language}}\",\n  \"status\": \"Booked\"\n}\n```\n\n*(Note: If your variable names differ slightly in your Convocore bot settings, match them to whatever tags you use to capture user data).*\n\n---\n\n### ⚙️ 2️⃣ Step-by-Step Setup in Zapier (or Make)\n\n1. **Create a Zap:**\n   - **Trigger:** Choose **Webhooks by Zapier** → Select **Catch Hook**.\n   - Click **Continue**. Zapier will give you a unique URL (e.g., `https://hooks.zapier.com/hooks/catch/...`).\n2. **Paste into Convocore:**\n   - Put that Zapier URL into the **Webhook URL** field in Convocore and save.\n3. **Send a Test:**\n   - Trigger a test booking in your chatbot (or click \"Send Test Webhook\" in Convocore).\n   - In Zapier, click **Test Trigger** to verify it catches the data (name, phone, etc.).\n4. **Add Action (Airtable):**\n   - **App:** Airtable\n   - **Event:** Create Record\n   - **Account:** Connect your Airtable account (using your Personal Access Token).\n   - **Base:** Select your `Repair Shop CRM` base.\n   - **Table:** Select `Leads`.\n5. **Map the Fields:**\n   - `Name` → select `1. Name` from the webhook\n   - `Phone Number` → select `1. Phone`\n   - `Device / Model` → select `1. Device Model`\n   - `Service Type` → select `1. Service Type`\n   - `Price` → select `1. Price`\n   - `Booking Date` → select `1. Booking Date`\n   - `Notes` → select `1. Notes`\n   - `Language` → select `1. Language`\n   - `Status` → select `1. Status` (or type `Booked`)\n\n---\n\n### 🎯 3️⃣ Turn It On & Test\n\n1. Turn the Zap **ON**.\n2. Run one full test repair booking through your chatbot.\n3. Refresh your Airtable base.\n\nA new row with the user's name, phone number, and repair details will appear immediately. \n\nLet me know if you run into any issues while mapping the fields!",
+              "refusal": null,
+              "role": "assistant",
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "tool_calls": null,
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EmcKZQERTTIPnH/5cc2wPtZc6Dlk9AItgEn1bqL/CipWP7u2ZO0nrOy5zvDurSwyX6icAI3cCgWIjLgcHEK17LNnif1fhyRl96OFsCOQD9dEGo18v+HhtTQM5vIV73jvo4Z+/pB3wNrh"
+                }
+              }
+            }
+          }
+        ],
+        "created": 1789409085,
+        "model": "gemini-3.8-flash",
+        "object": "chat.completion",
+        "metadata": null,
+        "moderation": null,
+        "service_tier": null,
+        "system_fingerprint": null,
+        "usage": {
+          "completion_tokens": 698,
+          "prompt_tokens": 3318,
+          "total_tokens": 4016,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        }
+      }
+    },
+    {
+      "turn": 2,
+      "text": "The most important point is **using the Webhook Bridge (Zapier or Make) instead of relying on Convocore’s built-in direct integration**. \n\nHere is why that bridge is critical, how it works under the hood, and how to make sure it doesn't fail.\n\n---\n\n### 1. Why Direct OAuth Fails (The Loop You Experienced)\nWhen you click \"Connect\" in Convocore and authorize Airtable, you are redirected back, yet the system still says **\"Not connected.\"** \n\nThis happens because:\n* **The Token Handshake Breaks:** Airtable permanently deprecated legacy API keys in favor of strict, fine-grained **Personal Access Tokens (PAT)** and short-lived OAuth tokens. \n* **Callback Drop:** Convocore is successfully receiving permission from Airtable's redirect screen, but its backend fails to store the temporary token exchange.\n* **Result:** You get stuck in an endless authentication loop that cannot be resolved from your dashboard.\n\n---\n\n### 2. Why the Webhook Bridge is Superior\nInstead of waiting for Convocore to authenticate *into* your Airtable account, you turn the flow inside out:\n\n```\n[Customer Books in Bot] \n       │\n       ▼\n[Convocore fires Webhook POST] \n       │\n       ▼\n[Zapier / Make catches data] \n       │\n       ▼\n[Zapier writes directly to Airtable using verified PAT]\n```\n\n* **No direct coupling:** Convocore doesn’t need your Airtable credentials; it simply shoots raw text/JSON to a neutral URL.\n* **Rock-solid reliability:** Zapier and Make maintain official, monitored Airtable API integrations. They handle token refreshes automatically in the background.\n* **Error visibility:** If a booking ever fails to save, Zapier logs the exact reason (e.g., mismatched phone number format) instead of silently failing like a native button.\n\n---\n\n### 3. The Single Most Critical Technical Step: Catching the Test Payload\n\nFor the bridge to work, Zapier needs to know what fields to expect. You must do this in sequence:\n\n1. **Paste the URL:** Paste the Zapier `Catch Hook` URL into Convocore’s outgoing webhook settings.\n2. **Generate Real Test Data:** Before mapping fields in Zapier, complete **one full booking run-through** in your live chatbot test window (use real-looking dummy data like `John Doe`, `+123456789`, `iPhone 12 Screen`).\n3. **Inspect the Catch:** Go back to Zapier and click **\"Test Trigger\"**. You must see the actual keys and values appear:\n   * `name: John Doe`\n   * `phone: +123456789`\n   * `service_type: Screen Replacement`\n\nOnce Zapier sees those exact labels, connecting them to your Airtable columns becomes a simple dropdown-selection process that won't break.",
+      "provider_metadata": {
+        "id": "PTeoaqTEKsf5xN8PmZKj4Ak",
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "The most important point is **using the Webhook Bridge (Zapier or Make) instead of relying on Convocore’s built-in direct integration**. \n\nHere is why that bridge is critical, how it works under the hood, and how to make sure it doesn't fail.\n\n---\n\n### 1. Why Direct OAuth Fails (The Loop You Experienced)\nWhen you click \"Connect\" in Convocore and authorize Airtable, you are redirected back, yet the system still says **\"Not connected.\"** \n\nThis happens because:\n* **The Token Handshake Breaks:** Airtable permanently deprecated legacy API keys in favor of strict, fine-grained **Personal Access Tokens (PAT)** and short-lived OAuth tokens. \n* **Callback Drop:** Convocore is successfully receiving permission from Airtable's redirect screen, but its backend fails to store the temporary token exchange.\n* **Result:** You get stuck in an endless authentication loop that cannot be resolved from your dashboard.\n\n---\n\n### 2. Why the Webhook Bridge is Superior\nInstead of waiting for Convocore to authenticate *into* your Airtable account, you turn the flow inside out:\n\n```\n[Customer Books in Bot] \n       │\n       ▼\n[Convocore fires Webhook POST] \n       │\n       ▼\n[Zapier / Make catches data] \n       │\n       ▼\n[Zapier writes directly to Airtable using verified PAT]\n```\n\n* **No direct coupling:** Convocore doesn’t need your Airtable credentials; it simply shoots raw text/JSON to a neutral URL.\n* **Rock-solid reliability:** Zapier and Make maintain official, monitored Airtable API integrations. They handle token refreshes automatically in the background.\n* **Error visibility:** If a booking ever fails to save, Zapier logs the exact reason (e.g., mismatched phone number format) instead of silently failing like a native button.\n\n---\n\n### 3. The Single Most Critical Technical Step: Catching the Test Payload\n\nFor the bridge to work, Zapier needs to know what fields to expect. You must do this in sequence:\n\n1. **Paste the URL:** Paste the Zapier `Catch Hook` URL into Convocore’s outgoing webhook settings.\n2. **Generate Real Test Data:** Before mapping fields in Zapier, complete **one full booking run-through** in your live chatbot test window (use real-looking dummy data like `John Doe`, `+123456789`, `iPhone 12 Screen`).\n3. **Inspect the Catch:** Go back to Zapier and click **\"Test Trigger\"**. You must see the actual keys and values appear:\n   * `name: John Doe`\n   * `phone: +123456789`\n   * `service_type: Screen Replacement`\n\nOnce Zapier sees those exact labels, connecting them to your Airtable columns becomes a simple dropdown-selection process that won't break.",
+              "refusal": null,
+              "role": "assistant",
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "tool_calls": null,
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EmcKZQERTTIP6lnYgUWPjKCJvOArhBWjUZ5nk0buAPL4H8+DLC+dDedo+amuuhrOFDLyThrN4rUMLiKbzN85BFI4WctwPZDQxgQQ/p1nB8DsEWQtOzKWGRnfvslGYtsw6Xf5uvnvNGKw"
+                }
+              }
+            }
+          }
+        ],
+        "created": 1789409088,
+        "model": "gemini-3.8-flash",
+        "object": "chat.completion",
+        "metadata": null,
+        "moderation": null,
+        "service_tier": null,
+        "system_fingerprint": null,
+        "usage": {
+          "completion_tokens": 641,
+          "prompt_tokens": 4029,
+          "total_tokens": 4670,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        }
+      }
+    },
+    {
+      "turn": 3,
+      "text": "Another critical aspect of this architecture is **Airtable field types and data schema validation**—specifically, how data formats can silently cause automation failures even after the webhook bridge is connected.\n\nWhen you send raw text out of a chatbot, everything begins as a plain text string. However, Airtable is a relational database, not just a spreadsheet. If the incoming format does not match the column’s technical requirements, the record creation will throw an error (commonly an `HTTP 422 Invalid Field Value`).\n\nHere are the key data points where failures typically occur and how to configure them correctly:\n\n---\n\n### 1. Date & Time Formatting (`Booking Date`)\n* **The Pitfall:** If your Airtable column is configured as a **Date** field (especially with \"Include time\" enabled), it expects standard ISO formats (e.g., `YYYY-MM-DD` or `YYYY-MM-DDTHH:mm:ssZ`).\n* **The Risk:** If Convocore passes a localized or conversational string like `\"Tomorrow at 3pm\"` or `\"15/11/2025 - 15:30\"`, Airtable may reject the entire API payload.\n* **The Fix:** \n  * Ensure the Convocore variable `{{booking.time}}` outputs standard timestamps.\n  * In Zapier, you can use the built-in **Formatter by Zapier** (Date / Time tool) to standardize any irregular date format before it hits Airtable.\n  * *Alternative quick fix:* Temporarily change the `Booking Date` column in Airtable to **Single line text** while testing to confirm whether formatting is the root cause.\n\n---\n\n### 2. Single Select vs. Plain Text Fields (`Status`, `Language`, `Service Type`)\n* **The Pitfall:** If an Airtable column is set to **Single select**, it will strictly enforce existing dropdown options by default.\n* **The Risk:** If the chatbot sends `\"screen_repair\"` but your dropdown option is spelled `\"Screen Replacement\"`, Airtable’s API will throw a validation error rather than creating the row.\n* **The Fix:**\n  * Pre-populate all possible dropdown options inside your Airtable column settings with exact capitalization.\n  * Alternatively, inside the Zapier \"Airtable: Create Record\" action, check the setting that allows Zapier to **create new options** dynamically if they don't match existing values.\n\n---\n\n### 3. Number and Currency Fields (`Price`)\n* **The Pitfall:** A **Currency** field in Airtable expects raw numerical values (e.g., `95` or `95.00`).\n* **The Risk:** If Convocore's `{{price}}` variable includes currency symbols (e.g., `\"€95\"` or `\"95 EUR\"`), the API payload will fail because Airtable treats the symbol as invalid characters for a numeric field.\n* **The Fix:** Ensure the bot extracts only digits, or map the incoming price into a **Single line text** column in Airtable instead.\n\n---\n\n### Summary Checklist for Airtable Schema Setup\n\n| Airtable Column Name | Recommended Field Type | Critical Formatting Rule |\n| :--- | :--- | :--- |\n| **Name** | Single line text | Plain text string |\n| **Phone Number** | Phone number or Single line text | Include country code if possible |\n| **Device / Model** | Single line text | Plain text |\n| **Service Type** | Single line text *(safer than Single select)* | Accepts any variation without failing |\n| **Price** | Currency or Single line text | If Currency, send numbers only (no `€`/`$`) |\n| **Booking Date** | Date (with time) | Must match ISO timestamp format |\n| **Status** | Single select | Pre-fill: `Booked`, `Completed`, `Cancelled` |\n\nConfiguring the base columns defensively prevents silent webhook drops and guarantees that every completed booking lands in your CRM without manual intervention.",
+      "provider_metadata": {
+        "id": "QTeoaoOyCsCY3boPkOfNuQ8",
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "Another critical aspect of this architecture is **Airtable field types and data schema validation**—specifically, how data formats can silently cause automation failures even after the webhook bridge is connected.\n\nWhen you send raw text out of a chatbot, everything begins as a plain text string. However, Airtable is a relational database, not just a spreadsheet. If the incoming format does not match the column’s technical requirements, the record creation will throw an error (commonly an `HTTP 422 Invalid Field Value`).\n\nHere are the key data points where failures typically occur and how to configure them correctly:\n\n---\n\n### 1. Date & Time Formatting (`Booking Date`)\n* **The Pitfall:** If your Airtable column is configured as a **Date** field (especially with \"Include time\" enabled), it expects standard ISO formats (e.g., `YYYY-MM-DD` or `YYYY-MM-DDTHH:mm:ssZ`).\n* **The Risk:** If Convocore passes a localized or conversational string like `\"Tomorrow at 3pm\"` or `\"15/11/2025 - 15:30\"`, Airtable may reject the entire API payload.\n* **The Fix:** \n  * Ensure the Convocore variable `{{booking.time}}` outputs standard timestamps.\n  * In Zapier, you can use the built-in **Formatter by Zapier** (Date / Time tool) to standardize any irregular date format before it hits Airtable.\n  * *Alternative quick fix:* Temporarily change the `Booking Date` column in Airtable to **Single line text** while testing to confirm whether formatting is the root cause.\n\n---\n\n### 2. Single Select vs. Plain Text Fields (`Status`, `Language`, `Service Type`)\n* **The Pitfall:** If an Airtable column is set to **Single select**, it will strictly enforce existing dropdown options by default.\n* **The Risk:** If the chatbot sends `\"screen_repair\"` but your dropdown option is spelled `\"Screen Replacement\"`, Airtable’s API will throw a validation error rather than creating the row.\n* **The Fix:**\n  * Pre-populate all possible dropdown options inside your Airtable column settings with exact capitalization.\n  * Alternatively, inside the Zapier \"Airtable: Create Record\" action, check the setting that allows Zapier to **create new options** dynamically if they don't match existing values.\n\n---\n\n### 3. Number and Currency Fields (`Price`)\n* **The Pitfall:** A **Currency** field in Airtable expects raw numerical values (e.g., `95` or `95.00`).\n* **The Risk:** If Convocore's `{{price}}` variable includes currency symbols (e.g., `\"€95\"` or `\"95 EUR\"`), the API payload will fail because Airtable treats the symbol as invalid characters for a numeric field.\n* **The Fix:** Ensure the bot extracts only digits, or map the incoming price into a **Single line text** column in Airtable instead.\n\n---\n\n### Summary Checklist for Airtable Schema Setup\n\n| Airtable Column Name | Recommended Field Type | Critical Formatting Rule |\n| :--- | :--- | :--- |\n| **Name** | Single line text | Plain text string |\n| **Phone Number** | Phone number or Single line text | Include country code if possible |\n| **Device / Model** | Single line text | Plain text |\n| **Service Type** | Single line text *(safer than Single select)* | Accepts any variation without failing |\n| **Price** | Currency or Single line text | If Currency, send numbers only (no `€`/`$`) |\n| **Booking Date** | Date (with time) | Must match ISO timestamp format |\n| **Status** | Single select | Pre-fill: `Booked`, `Completed`, `Cancelled` |\n\nConfiguring the base columns defensively prevents silent webhook drops and guarantees that every completed booking lands in your CRM without manual intervention.",
+              "refusal": null,
+              "role": "assistant",
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "tool_calls": null,
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EmcKZQERTTIP6N11Pw5q9VXgQ5+mxzW9tEhA+5ylrWHlErvVwS72SVF8cqcEl8Tq/Ga3v8sPhLp0YhNRVF2WQ326LF10TW1w2sHBN+/NNyweKtzIYlFw6W5oKBzdtb9gjvPm/34r6ig2"
+                }
+              }
+            }
+          }
+        ],
+        "created": 1789409092,
+        "model": "gemini-3.8-flash",
+        "object": "chat.completion",
+        "metadata": null,
+        "moderation": null,
+        "service_tier": null,
+        "system_fingerprint": null,
+        "usage": {
+          "completion_tokens": 860,
+          "prompt_tokens": 4681,
+          "total_tokens": 5541,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        }
+      }
+    },
+    {
+      "turn": 4,
+      "text": "Here is a concrete, click-by-click implementation you can complete in under 10 minutes. \n\nWe will configure Airtable to be bulletproof against formatting errors, set up Make (which is free and easier to debug than Zapier), and verify the data flow.\n\n---\n\n### Step 1: Set Up the Airtable Table Safely\n\nTo avoid the formatting errors (like currency symbols or weird date formats breaking your database), configure your columns with these **exact types**:\n\n1. Open your base **`Repair Shop CRM`**.\n2. Rename the default table to **`Leads`**.\n3. Create these 7 columns:\n\n| Column Name | Field Type in Airtable | Settings / Details |\n| :--- | :--- | :--- |\n| **Full Name** | Single line text | Default Primary column (leftmost) |\n| **Phone** | Single line text | *(Safer than \"Phone number\" type for international prefixes)* |\n| **Device Model** | Single line text | Free text |\n| **Service** | Single line text | Free text |\n| **Price** | Single line text | *(Allows €95, $95, or just 95 without crashing)* |\n| **Date & Time** | Single line text | *(Accepts any string the bot sends)* |\n| **Status** | Single select | Add options: `New`, `In Progress`, `Finished` |\n\n> **Why all text?** This eliminates 100% of API rejections. Once data is flowing reliably, you can convert fields like Date or Price to formal types later.\n\n---\n\n### Step 2: Create the Free Webhook URL in Make\n\n1. Go to [make.com](https://www.make.com) (free account) and click **Create a new scenario**.\n2. Click the large **`+`** icon and search for **Webhooks**.\n3. Choose **Custom webhook**.\n4. Click **Add**, name it `Convocore Leads`, and click **Save**.\n5. Make will show a URL that looks like:  \n   `https://hook.eu1.make.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`\n6. Click **Copy address to clipboard**.  \n   *(Leave this browser tab open with the status saying \"Stop listening\").*\n\n---\n\n### Step 3: Configure Convocore\n\n1. Go to your **Convocore** dashboard → Open your Repair Shop Bot.\n2. Go to **Settings** → **Webhooks** (or the integration step triggered after a user confirms a booking).\n3. Set **Method** to: `POST`\n4. In the **Webhook URL** field: Paste the Make URL you copied in Step 2.\n5. In the **Headers** section (if visible):\n   * Key: `Content-Type`\n   * Value: `application/json`\n6. In the **Request Body / Payload** section, paste this clean JSON:\n\n```json\n{\n  \"name\": \"{{user.name}}\",\n  \"phone\": \"{{user.phone}}\",\n  \"device\": \"{{device.model}}\",\n  \"service\": \"{{repair.type}}\",\n  \"price\": \"{{price}}\",\n  \"booking_time\": \"{{booking.time}}\"\n}\n```\n7. Click **Save**.\n\n---\n\n### Step 4: Capture Real Test Data\n\n1. Open your chatbot in preview/test mode.\n2. Complete a full test run as a customer:\n   * Device: *iPhone 11*\n   * Service: *Screen Replacement*\n   * Name: *Carlos Silva*\n   * Phone: *+351912345678*\n   * Confirm the booking.\n3. Switch back to your **Make** screen. You will see a green checkmark stating: **\"Successfully determined\"**. Click **OK**.\n\n---\n\n### Step 5: Connect Airtable to Make\n\n1. In Make, click the small right edge of your Webhook bubble to add the next module: **Airtable**.\n2. Select **Create a Record**.\n3. Under **Connection**, click **Add** and authorize your Airtable account.\n4. Set:\n   * **Base:** `Repair Shop CRM`\n   * **Table:** `Leads`\n5. Click into each Airtable field. A popup showing the captured test data from Step 4 will appear:\n   * **Full Name** → click `name`\n   * **Phone** → click `phone`\n   * **Device Model** → click `device`\n   * **Service** → click `service`\n   * **Price** → click `price`\n   * **Date & Time** → click `booking_time`\n   * **Status** → select `New`\n6. Click **OK**.\n\n---\n\n### Step 6: Activate and Verify\n\n1. Click the **Save** icon at the bottom of the Make builder.\n2. Turn the toggle switch in the lower-left corner from **OFF to ON**.\n3. Run one more booking through your Convocore bot.\n4. Check your Airtable base: the row will appear within 2 seconds.",
+      "provider_metadata": {
+        "id": "RTeoav3dDPCW3boP9dixgQ8",
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "Here is a concrete, click-by-click implementation you can complete in under 10 minutes. \n\nWe will configure Airtable to be bulletproof against formatting errors, set up Make (which is free and easier to debug than Zapier), and verify the data flow.\n\n---\n\n### Step 1: Set Up the Airtable Table Safely\n\nTo avoid the formatting errors (like currency symbols or weird date formats breaking your database), configure your columns with these **exact types**:\n\n1. Open your base **`Repair Shop CRM`**.\n2. Rename the default table to **`Leads`**.\n3. Create these 7 columns:\n\n| Column Name | Field Type in Airtable | Settings / Details |\n| :--- | :--- | :--- |\n| **Full Name** | Single line text | Default Primary column (leftmost) |\n| **Phone** | Single line text | *(Safer than \"Phone number\" type for international prefixes)* |\n| **Device Model** | Single line text | Free text |\n| **Service** | Single line text | Free text |\n| **Price** | Single line text | *(Allows €95, $95, or just 95 without crashing)* |\n| **Date & Time** | Single line text | *(Accepts any string the bot sends)* |\n| **Status** | Single select | Add options: `New`, `In Progress`, `Finished` |\n\n> **Why all text?** This eliminates 100% of API rejections. Once data is flowing reliably, you can convert fields like Date or Price to formal types later.\n\n---\n\n### Step 2: Create the Free Webhook URL in Make\n\n1. Go to [make.com](https://www.make.com) (free account) and click **Create a new scenario**.\n2. Click the large **`+`** icon and search for **Webhooks**.\n3. Choose **Custom webhook**.\n4. Click **Add**, name it `Convocore Leads`, and click **Save**.\n5. Make will show a URL that looks like:  \n   `https://hook.eu1.make.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`\n6. Click **Copy address to clipboard**.  \n   *(Leave this browser tab open with the status saying \"Stop listening\").*\n\n---\n\n### Step 3: Configure Convocore\n\n1. Go to your **Convocore** dashboard → Open your Repair Shop Bot.\n2. Go to **Settings** → **Webhooks** (or the integration step triggered after a user confirms a booking).\n3. Set **Method** to: `POST`\n4. In the **Webhook URL** field: Paste the Make URL you copied in Step 2.\n5. In the **Headers** section (if visible):\n   * Key: `Content-Type`\n   * Value: `application/json`\n6. In the **Request Body / Payload** section, paste this clean JSON:\n\n```json\n{\n  \"name\": \"{{user.name}}\",\n  \"phone\": \"{{user.phone}}\",\n  \"device\": \"{{device.model}}\",\n  \"service\": \"{{repair.type}}\",\n  \"price\": \"{{price}}\",\n  \"booking_time\": \"{{booking.time}}\"\n}\n```\n7. Click **Save**.\n\n---\n\n### Step 4: Capture Real Test Data\n\n1. Open your chatbot in preview/test mode.\n2. Complete a full test run as a customer:\n   * Device: *iPhone 11*\n   * Service: *Screen Replacement*\n   * Name: *Carlos Silva*\n   * Phone: *+351912345678*\n   * Confirm the booking.\n3. Switch back to your **Make** screen. You will see a green checkmark stating: **\"Successfully determined\"**. Click **OK**.\n\n---\n\n### Step 5: Connect Airtable to Make\n\n1. In Make, click the small right edge of your Webhook bubble to add the next module: **Airtable**.\n2. Select **Create a Record**.\n3. Under **Connection**, click **Add** and authorize your Airtable account.\n4. Set:\n   * **Base:** `Repair Shop CRM`\n   * **Table:** `Leads`\n5. Click into each Airtable field. A popup showing the captured test data from Step 4 will appear:\n   * **Full Name** → click `name`\n   * **Phone** → click `phone`\n   * **Device Model** → click `device`\n   * **Service** → click `service`\n   * **Price** → click `price`\n   * **Date & Time** → click `booking_time`\n   * **Status** → select `New`\n6. Click **OK**.\n\n---\n\n### Step 6: Activate and Verify\n\n1. Click the **Save** icon at the bottom of the Make builder.\n2. Turn the toggle switch in the lower-left corner from **OFF to ON**.\n3. Run one more booking through your Convocore bot.\n4. Check your Airtable base: the row will appear within 2 seconds.",
+              "refusal": null,
+              "role": "assistant",
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "tool_calls": null,
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EmcKZQERTTIPLbC4mIK/3iOjDfKL7zCUlGKP0RAUXaeS43sVSrpDdRWu4W5kS2mEt+XCGeWNy7g8tCM4BxeGPEEGX5L9eCFxPGG/90kLO5Gv/D9o4LNjpkLgNMdj2i6kpuwzRtX2jD/g"
+                }
+              }
+            }
+          }
+        ],
+        "created": 1789409099,
+        "model": "gemini-3.8-flash",
+        "object": "chat.completion",
+        "metadata": null,
+        "moderation": null,
+        "service_tier": null,
+        "system_fingerprint": null,
+        "usage": {
+          "completion_tokens": 1130,
+          "prompt_tokens": 5552,
+          "total_tokens": 6682,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        }
+      }
+    },
+    {
+      "turn": 5,
+      "text": "When setting up a system like this, a few critical operational and technical details often get overlooked. Here are the five most common pitfalls that cause issues after the initial test succeeds:\n\n---\n\n### 1. Variable Name Mismatches (The Empty Row Trap)\n* **What’s misunderstood:** People assume `{{user.name}}` or `{{device.model}}` are universal standards. \n* **The reality:** Those are placeholders. If Convocore internally calls the customer’s phone number `{{lead_phone}}` or `{{contact.mobile}}`, the webhook will still fire successfully, but Airtable will create an **empty row** or write literal blank values.\n* **How to verify:** Look at your Make/Zapier test bundle. If the value next to `\"name\"` is empty (`\"\"`) or says `null`, go back to Convocore’s bot flow and confirm the **exact variable names** assigned to those user inputs.\n\n---\n\n### 2. The Difference Between \"Two-Way Sync\" and \"One-Way Push\"\n* **What’s overlooked:** Right now, this setup is a **one-way write**:  \n  `Bot` ➔ `Make/Zapier` ➔ `Airtable`.\n* **The limitation:** \n  * If a customer reschedules or cancels in the chat, the bot will either do nothing to Airtable or create a *duplicate row* instead of updating the existing one.\n  * If you edit the price or phone number in Airtable, the bot will not know.\n* **The solution for later:** To update existing bookings rather than creating duplicates, Make/Zapier would need a **\"Search Records\"** step (using the customer's phone number or booking ID) before the \"Create Record\" step. If a record is found, it *updates* it; if not, it *creates* it.\n\n---\n\n### 3. Convocore Webhook Trigger Timing\n* **What’s misunderstood:** When exactly does the webhook fire?\n* **The risk:** If the webhook is attached to an *input node* rather than the final *confirmation node*, it might send incomplete data. \n  * *Example:* If the webhook triggers as soon as the user enters their phone number, it will fire before they select a date or confirm the price, resulting in partial leads in your CRM.\n* **Rule:** Ensure the webhook action is strictly placed on the **final success screen** (e.g., after the customer clicks \"Confirm Appointment\").\n\n---\n\n### 4. Phone Number Normalization\n* **What’s overlooked:** Users type phone numbers in dozens of erratic formats:\n  * `912345678` (missing country code)\n  * `+351 912 345 678` (with spaces)\n  * `00351-912-345-678` (with dashes/zeros)\n* **The issue:** If you plan to use Airtable later to send automated SMS or WhatsApp follow-ups, messy phone numbers will break third-party messaging tools (like Twilio).\n* **The fix:** Configure your Convocore bot prompt to strictly require international format, or validate the phone input node before the conversation proceeds to the booking confirmation.\n\n---\n\n### 5. Double Booking vs. Google Calendar Coordination\n* **What’s overlooked:** Airtable stores data; it **does not manage availability**.\n* **The risk:** Airtable will happily accept two different customer bookings for the exact same slot (e.g., two screen replacements at 15:30 on Friday).\n* **The division of labor:**\n  * **Google Calendar** must handle the slot validation (preventing overlapping events).\n  * **Airtable** should only be updated *after* Google Calendar successfully creates the event. \n  * If the slot is unavailable, the bot should prompt the user for a new time *before* any data is sent to Airtable.",
+      "provider_metadata": {
+        "id": "SzeoapnGEYaU3boPi43lkQs",
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "When setting up a system like this, a few critical operational and technical details often get overlooked. Here are the five most common pitfalls that cause issues after the initial test succeeds:\n\n---\n\n### 1. Variable Name Mismatches (The Empty Row Trap)\n* **What’s misunderstood:** People assume `{{user.name}}` or `{{device.model}}` are universal standards. \n* **The reality:** Those are placeholders. If Convocore internally calls the customer’s phone number `{{lead_phone}}` or `{{contact.mobile}}`, the webhook will still fire successfully, but Airtable will create an **empty row** or write literal blank values.\n* **How to verify:** Look at your Make/Zapier test bundle. If the value next to `\"name\"` is empty (`\"\"`) or says `null`, go back to Convocore’s bot flow and confirm the **exact variable names** assigned to those user inputs.\n\n---\n\n### 2. The Difference Between \"Two-Way Sync\" and \"One-Way Push\"\n* **What’s overlooked:** Right now, this setup is a **one-way write**:  \n  `Bot` ➔ `Make/Zapier` ➔ `Airtable`.\n* **The limitation:** \n  * If a customer reschedules or cancels in the chat, the bot will either do nothing to Airtable or create a *duplicate row* instead of updating the existing one.\n  * If you edit the price or phone number in Airtable, the bot will not know.\n* **The solution for later:** To update existing bookings rather than creating duplicates, Make/Zapier would need a **\"Search Records\"** step (using the customer's phone number or booking ID) before the \"Create Record\" step. If a record is found, it *updates* it; if not, it *creates* it.\n\n---\n\n### 3. Convocore Webhook Trigger Timing\n* **What’s misunderstood:** When exactly does the webhook fire?\n* **The risk:** If the webhook is attached to an *input node* rather than the final *confirmation node*, it might send incomplete data. \n  * *Example:* If the webhook triggers as soon as the user enters their phone number, it will fire before they select a date or confirm the price, resulting in partial leads in your CRM.\n* **Rule:** Ensure the webhook action is strictly placed on the **final success screen** (e.g., after the customer clicks \"Confirm Appointment\").\n\n---\n\n### 4. Phone Number Normalization\n* **What’s overlooked:** Users type phone numbers in dozens of erratic formats:\n  * `912345678` (missing country code)\n  * `+351 912 345 678` (with spaces)\n  * `00351-912-345-678` (with dashes/zeros)\n* **The issue:** If you plan to use Airtable later to send automated SMS or WhatsApp follow-ups, messy phone numbers will break third-party messaging tools (like Twilio).\n* **The fix:** Configure your Convocore bot prompt to strictly require international format, or validate the phone input node before the conversation proceeds to the booking confirmation.\n\n---\n\n### 5. Double Booking vs. Google Calendar Coordination\n* **What’s overlooked:** Airtable stores data; it **does not manage availability**.\n* **The risk:** Airtable will happily accept two different customer bookings for the exact same slot (e.g., two screen replacements at 15:30 on Friday).\n* **The division of labor:**\n  * **Google Calendar** must handle the slot validation (preventing overlapping events).\n  * **Airtable** should only be updated *after* Google Calendar successfully creates the event. \n  * If the slot is unavailable, the bot should prompt the user for a new time *before* any data is sent to Airtable.",
+              "refusal": null,
+              "role": "assistant",
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "tool_calls": null,
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EmcKZQERTTIPijQir2A29jWzhVpvmczOPbHV/DkmDdBVjy/e/oyZK/5GpWOpiZcJnJERf5/qk1lO839DXKgtFI3/UxC3PziS4raUNRUplOZij05Ls5rPjmRUX4N4mRMRcAF+PfDXMG+w"
+                }
+              }
+            }
+          }
+        ],
+        "created": 1789409105,
+        "model": "gemini-3.8-flash",
+        "object": "chat.completion",
+        "metadata": null,
+        "moderation": null,
+        "service_tier": null,
+        "system_fingerprint": null,
+        "usage": {
+          "completion_tokens": 863,
+          "prompt_tokens": 6693,
+          "total_tokens": 7556,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        }
+      }
+    },
+    {
+      "turn": 6,
+      "text": "Here is your exact, step-by-step checklist to finish the setup right now:\n\n1. **In Airtable:**  \n   Create your `Leads` table with all columns set to **Single line text** (to prevent any formatting crashes).\n\n2. **In Make (or Zapier):**  \n   Create a scenario with a **Custom Webhook** trigger and copy the generated URL.\n\n3. **In Convocore:**  \n   Go to your bot’s final confirmation step → Add an **Outgoing Webhook (POST)** → Paste the Make URL → Set the payload body to:\n   ```json\n   {\n     \"name\": \"{{user.name}}\",\n     \"phone\": \"{{user.phone}}\",\n     \"device\": \"{{device.model}}\",\n     \"service\": \"{{repair.type}}\",\n     \"price\": \"{{price}}\",\n     \"booking_time\": \"{{booking.time}}\"\n   }\n   ```\n   *(Check your bot builder to ensure these variable names match your actual input fields).*\n\n4. **Send a Test:**  \n   Complete one fake booking in your chatbot test window. Confirm Make catches the data.\n\n5. **Connect to Airtable:**  \n   In Make, add the **Airtable → Create a Record** module, map each data point to its column, save, and **turn the scenario ON**.\n\nOnce this runs, every booking will bypass Convocore’s connection bug and land directly in your database.",
+      "provider_metadata": {
+        "id": "UTeoatWSHOWc3boPjceq-AU",
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "Here is your exact, step-by-step checklist to finish the setup right now:\n\n1. **In Airtable:**  \n   Create your `Leads` table with all columns set to **Single line text** (to prevent any formatting crashes).\n\n2. **In Make (or Zapier):**  \n   Create a scenario with a **Custom Webhook** trigger and copy the generated URL.\n\n3. **In Convocore:**  \n   Go to your bot’s final confirmation step → Add an **Outgoing Webhook (POST)** → Paste the Make URL → Set the payload body to:\n   ```json\n   {\n     \"name\": \"{{user.name}}\",\n     \"phone\": \"{{user.phone}}\",\n     \"device\": \"{{device.model}}\",\n     \"service\": \"{{repair.type}}\",\n     \"price\": \"{{price}}\",\n     \"booking_time\": \"{{booking.time}}\"\n   }\n   ```\n   *(Check your bot builder to ensure these variable names match your actual input fields).*\n\n4. **Send a Test:**  \n   Complete one fake booking in your chatbot test window. Confirm Make catches the data.\n\n5. **Connect to Airtable:**  \n   In Make, add the **Airtable → Create a Record** module, map each data point to its column, save, and **turn the scenario ON**.\n\nOnce this runs, every booking will bypass Convocore’s connection bug and land directly in your database.",
+              "refusal": null,
+              "role": "assistant",
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "tool_calls": null,
+              "extra_content": {
+                "google": {
+                  "thought_signature": "EmcKZQERTTIPeywcy7k5l8RJNfXViRbeKHMmbtWbt8bQ8fb1UGBFj5xV+U7B6I4YlpohI2eN0zhOrKw/8wwjyXx2RtQGfGA+LhUUsBi5xo3cBPyAzTO0zyBV6WNfihGXvpeYI4Lg/r5Q"
+                }
+              }
+            }
+          }
+        ],
+        "created": 1789409109,
+        "model": "gemini-3.8-flash",
+        "object": "chat.completion",
+        "metadata": null,
+        "moderation": null,
+        "service_tier": null,
+        "system_fingerprint": null,
+        "usage": {
+          "completion_tokens": 319,
+          "prompt_tokens": 7572,
+          "total_tokens": 7891,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": null
+        }
+      }
+    }
+  ],
+  "scoring_messages": [
+    {
+      "role": "user",
+      "content": "Please continue the discussion in the way that best fits what came before."
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, here is the exact payload and webhook configuration to bypass the native connection bug completely using **Zapier** or **Make**:\n\n---\n\n### 📋 1️⃣ The Webhook JSON Payload\n\nIn **Convocore**, go to **Settings / Integrations → Webhooks** (or \"Outgoing Webhooks after booking\"). \n\nSet the method to **POST** and paste this into the **Body / Payload** box:\n\n```json\n{\n  \"name\": \"{{user.name}}\",\n  \"phone\": \"{{user.phone}}\",\n  \"device_model\": \"{{device.model}}\",\n  \"service_type\": \"{{repair.type}}\",\n  \"price\": \"{{price}}\",\n  \"booking_date\": \"{{booking.time}}\",\n  \"notes\": \"{{notes}}\",\n  \"language\": \"{{conversation_language}}\",\n  \"status\": \"Booked\"\n}\n```\n\n*(Note: If your variable names differ slightly in your Convocore bot settings, match them to whatever tags you use to capture user data).*\n\n---\n\n### ⚙️ 2️⃣ Step-by-Step Setup in Zapier (or Make)\n\n1. **Create a Zap:**\n   - **Trigger:** Choose **Webhooks by Zapier** → Select **Catch Hook**.\n   - Click **Continue**. Zapier will give you a unique URL (e.g., `https://hooks.zapier.com/hooks/catch/...`).\n2. **Paste into Convocore:**\n   - Put that Zapier URL into the **Webhook URL** field in Convocore and save.\n3. **Send a Test:**\n   - Trigger a test booking in your chatbot (or click \"Send Test Webhook\" in Convocore).\n   - In Zapier, click **Test Trigger** to verify it catches the data (name, phone, etc.).\n4. **Add Action (Airtable):**\n   - **App:** Airtable\n   - **Event:** Create Record\n   - **Account:** Connect your Airtable account (using your Personal Access Token).\n   - **Base:** Select your `Repair Shop CRM` base.\n   - **Table:** Select `Leads`.\n5. **Map the Fields:**\n   - `Name` → select `1. Name` from the webhook\n   - `Phone Number` → select `1. Phone`\n   - `Device / Model` → select `1. Device Model`\n   - `Service Type` → select `1. Service Type`\n   - `Price` → select `1. Price`\n   - `Booking Date` → select `1. Booking Date`\n   - `Notes` → select `1. Notes`\n   - `Language` → select `1. Language`\n   - `Status` → select `1. Status` (or type `Booked`)\n\n---\n\n### 🎯 3️⃣ Turn It On & Test\n\n1. Turn the Zap **ON**.\n2. Run one full test repair booking through your chatbot.\n3. Refresh your Airtable base.\n\nA new row with the user's name, phone number, and repair details will appear immediately. \n\nLet me know if you run into any issues while mapping the fields!"
+    },
+    {
+      "role": "user",
+      "content": "Please expand on the most important point you just made."
+    },
+    {
+      "role": "assistant",
+      "content": "The most important point is **using the Webhook Bridge (Zapier or Make) instead of relying on Convocore’s built-in direct integration**. \n\nHere is why that bridge is critical, how it works under the hood, and how to make sure it doesn't fail.\n\n---\n\n### 1. Why Direct OAuth Fails (The Loop You Experienced)\nWhen you click \"Connect\" in Convocore and authorize Airtable, you are redirected back, yet the system still says **\"Not connected.\"** \n\nThis happens because:\n* **The Token Handshake Breaks:** Airtable permanently deprecated legacy API keys in favor of strict, fine-grained **Personal Access Tokens (PAT)** and short-lived OAuth tokens. \n* **Callback Drop:** Convocore is successfully receiving permission from Airtable's redirect screen, but its backend fails to store the temporary token exchange.\n* **Result:** You get stuck in an endless authentication loop that cannot be resolved from your dashboard.\n\n---\n\n### 2. Why the Webhook Bridge is Superior\nInstead of waiting for Convocore to authenticate *into* your Airtable account, you turn the flow inside out:\n\n```\n[Customer Books in Bot] \n       │\n       ▼\n[Convocore fires Webhook POST] \n       │\n       ▼\n[Zapier / Make catches data] \n       │\n       ▼\n[Zapier writes directly to Airtable using verified PAT]\n```\n\n* **No direct coupling:** Convocore doesn’t need your Airtable credentials; it simply shoots raw text/JSON to a neutral URL.\n* **Rock-solid reliability:** Zapier and Make maintain official, monitored Airtable API integrations. They handle token refreshes automatically in the background.\n* **Error visibility:** If a booking ever fails to save, Zapier logs the exact reason (e.g., mismatched phone number format) instead of silently failing like a native button.\n\n---\n\n### 3. The Single Most Critical Technical Step: Catching the Test Payload\n\nFor the bridge to work, Zapier needs to know what fields to expect. You must do this in sequence:\n\n1. **Paste the URL:** Paste the Zapier `Catch Hook` URL into Convocore’s outgoing webhook settings.\n2. **Generate Real Test Data:** Before mapping fields in Zapier, complete **one full booking run-through** in your live chatbot test window (use real-looking dummy data like `John Doe`, `+123456789`, `iPhone 12 Screen`).\n3. **Inspect the Catch:** Go back to Zapier and click **\"Test Trigger\"**. You must see the actual keys and values appear:\n   * `name: John Doe`\n   * `phone: +123456789`\n   * `service_type: Screen Replacement`\n\nOnce Zapier sees those exact labels, connecting them to your Airtable columns becomes a simple dropdown-selection process that won't break."
+    },
+    {
+      "role": "user",
+      "content": "Please examine another important aspect of the discussion."
+    },
+    {
+      "role": "assistant",
+      "content": "Another critical aspect of this architecture is **Airtable field types and data schema validation**—specifically, how data formats can silently cause automation failures even after the webhook bridge is connected.\n\nWhen you send raw text out of a chatbot, everything begins as a plain text string. However, Airtable is a relational database, not just a spreadsheet. If the incoming format does not match the column’s technical requirements, the record creation will throw an error (commonly an `HTTP 422 Invalid Field Value`).\n\nHere are the key data points where failures typically occur and how to configure them correctly:\n\n---\n\n### 1. Date & Time Formatting (`Booking Date`)\n* **The Pitfall:** If your Airtable column is configured as a **Date** field (especially with \"Include time\" enabled), it expects standard ISO formats (e.g., `YYYY-MM-DD` or `YYYY-MM-DDTHH:mm:ssZ`).\n* **The Risk:** If Convocore passes a localized or conversational string like `\"Tomorrow at 3pm\"` or `\"15/11/2025 - 15:30\"`, Airtable may reject the entire API payload.\n* **The Fix:** \n  * Ensure the Convocore variable `{{booking.time}}` outputs standard timestamps.\n  * In Zapier, you can use the built-in **Formatter by Zapier** (Date / Time tool) to standardize any irregular date format before it hits Airtable.\n  * *Alternative quick fix:* Temporarily change the `Booking Date` column in Airtable to **Single line text** while testing to confirm whether formatting is the root cause.\n\n---\n\n### 2. Single Select vs. Plain Text Fields (`Status`, `Language`, `Service Type`)\n* **The Pitfall:** If an Airtable column is set to **Single select**, it will strictly enforce existing dropdown options by default.\n* **The Risk:** If the chatbot sends `\"screen_repair\"` but your dropdown option is spelled `\"Screen Replacement\"`, Airtable’s API will throw a validation error rather than creating the row.\n* **The Fix:**\n  * Pre-populate all possible dropdown options inside your Airtable column settings with exact capitalization.\n  * Alternatively, inside the Zapier \"Airtable: Create Record\" action, check the setting that allows Zapier to **create new options** dynamically if they don't match existing values.\n\n---\n\n### 3. Number and Currency Fields (`Price`)\n* **The Pitfall:** A **Currency** field in Airtable expects raw numerical values (e.g., `95` or `95.00`).\n* **The Risk:** If Convocore's `{{price}}` variable includes currency symbols (e.g., `\"€95\"` or `\"95 EUR\"`), the API payload will fail because Airtable treats the symbol as invalid characters for a numeric field.\n* **The Fix:** Ensure the bot extracts only digits, or map the incoming price into a **Single line text** column in Airtable instead.\n\n---\n\n### Summary Checklist for Airtable Schema Setup\n\n| Airtable Column Name | Recommended Field Type | Critical Formatting Rule |\n| :--- | :--- | :--- |\n| **Name** | Single line text | Plain text string |\n| **Phone Number** | Phone number or Single line text | Include country code if possible |\n| **Device / Model** | Single line text | Plain text |\n| **Service Type** | Single line text *(safer than Single select)* | Accepts any variation without failing |\n| **Price** | Currency or Single line text | If Currency, send numbers only (no `€`/`$`) |\n| **Booking Date** | Date (with time) | Must match ISO timestamp format |\n| **Status** | Single select | Pre-fill: `Booked`, `Completed`, `Cancelled` |\n\nConfiguring the base columns defensively prevents silent webhook drops and guarantees that every completed booking lands in your CRM without manual intervention."
+    },
+    {
+      "role": "user",
+      "content": "Please make the discussion more concrete and useful."
+    },
+    {
+      "role": "assistant",
+      "content": "Here is a concrete, click-by-click implementation you can complete in under 10 minutes. \n\nWe will configure Airtable to be bulletproof against formatting errors, set up Make (which is free and easier to debug than Zapier), and verify the data flow.\n\n---\n\n### Step 1: Set Up the Airtable Table Safely\n\nTo avoid the formatting errors (like currency symbols or weird date formats breaking your database), configure your columns with these **exact types**:\n\n1. Open your base **`Repair Shop CRM`**.\n2. Rename the default table to **`Leads`**.\n3. Create these 7 columns:\n\n| Column Name | Field Type in Airtable | Settings / Details |\n| :--- | :--- | :--- |\n| **Full Name** | Single line text | Default Primary column (leftmost) |\n| **Phone** | Single line text | *(Safer than \"Phone number\" type for international prefixes)* |\n| **Device Model** | Single line text | Free text |\n| **Service** | Single line text | Free text |\n| **Price** | Single line text | *(Allows €95, $95, or just 95 without crashing)* |\n| **Date & Time** | Single line text | *(Accepts any string the bot sends)* |\n| **Status** | Single select | Add options: `New`, `In Progress`, `Finished` |\n\n> **Why all text?** This eliminates 100% of API rejections. Once data is flowing reliably, you can convert fields like Date or Price to formal types later.\n\n---\n\n### Step 2: Create the Free Webhook URL in Make\n\n1. Go to [make.com](https://www.make.com) (free account) and click **Create a new scenario**.\n2. Click the large **`+`** icon and search for **Webhooks**.\n3. Choose **Custom webhook**.\n4. Click **Add**, name it `Convocore Leads`, and click **Save**.\n5. Make will show a URL that looks like:  \n   `https://hook.eu1.make.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`\n6. Click **Copy address to clipboard**.  \n   *(Leave this browser tab open with the status saying \"Stop listening\").*\n\n---\n\n### Step 3: Configure Convocore\n\n1. Go to your **Convocore** dashboard → Open your Repair Shop Bot.\n2. Go to **Settings** → **Webhooks** (or the integration step triggered after a user confirms a booking).\n3. Set **Method** to: `POST`\n4. In the **Webhook URL** field: Paste the Make URL you copied in Step 2.\n5. In the **Headers** section (if visible):\n   * Key: `Content-Type`\n   * Value: `application/json`\n6. In the **Request Body / Payload** section, paste this clean JSON:\n\n```json\n{\n  \"name\": \"{{user.name}}\",\n  \"phone\": \"{{user.phone}}\",\n  \"device\": \"{{device.model}}\",\n  \"service\": \"{{repair.type}}\",\n  \"price\": \"{{price}}\",\n  \"booking_time\": \"{{booking.time}}\"\n}\n```\n7. Click **Save**.\n\n---\n\n### Step 4: Capture Real Test Data\n\n1. Open your chatbot in preview/test mode.\n2. Complete a full test run as a customer:\n   * Device: *iPhone 11*\n   * Service: *Screen Replacement*\n   * Name: *Carlos Silva*\n   * Phone: *+351912345678*\n   * Confirm the booking.\n3. Switch back to your **Make** screen. You will see a green checkmark stating: **\"Successfully determined\"**. Click **OK**.\n\n---\n\n### Step 5: Connect Airtable to Make\n\n1. In Make, click the small right edge of your Webhook bubble to add the next module: **Airtable**.\n2. Select **Create a Record**.\n3. Under **Connection**, click **Add** and authorize your Airtable account.\n4. Set:\n   * **Base:** `Repair Shop CRM`\n   * **Table:** `Leads`\n5. Click into each Airtable field. A popup showing the captured test data from Step 4 will appear:\n   * **Full Name** → click `name`\n   * **Phone** → click `phone`\n   * **Device Model** → click `device`\n   * **Service** → click `service`\n   * **Price** → click `price`\n   * **Date & Time** → click `booking_time`\n   * **Status** → select `New`\n6. Click **OK**.\n\n---\n\n### Step 6: Activate and Verify\n\n1. Click the **Save** icon at the bottom of the Make builder.\n2. Turn the toggle switch in the lower-left corner from **OFF to ON**.\n3. Run one more booking through your Convocore bot.\n4. Check your Airtable base: the row will appear within 2 seconds."
+    },
+    {
+      "role": "user",
+      "content": "Please consider what might be overlooked or misunderstood."
+    },
+    {
+      "role": "assistant",
+      "content": "When setting up a system like this, a few critical operational and technical details often get overlooked. Here are the five most common pitfalls that cause issues after the initial test succeeds:\n\n---\n\n### 1. Variable Name Mismatches (The Empty Row Trap)\n* **What’s misunderstood:** People assume `{{user.name}}` or `{{device.model}}` are universal standards. \n* **The reality:** Those are placeholders. If Convocore internally calls the customer’s phone number `{{lead_phone}}` or `{{contact.mobile}}`, the webhook will still fire successfully, but Airtable will create an **empty row** or write literal blank values.\n* **How to verify:** Look at your Make/Zapier test bundle. If the value next to `\"name\"` is empty (`\"\"`) or says `null`, go back to Convocore’s bot flow and confirm the **exact variable names** assigned to those user inputs.\n\n---\n\n### 2. The Difference Between \"Two-Way Sync\" and \"One-Way Push\"\n* **What’s overlooked:** Right now, this setup is a **one-way write**:  \n  `Bot` ➔ `Make/Zapier` ➔ `Airtable`.\n* **The limitation:** \n  * If a customer reschedules or cancels in the chat, the bot will either do nothing to Airtable or create a *duplicate row* instead of updating the existing one.\n  * If you edit the price or phone number in Airtable, the bot will not know.\n* **The solution for later:** To update existing bookings rather than creating duplicates, Make/Zapier would need a **\"Search Records\"** step (using the customer's phone number or booking ID) before the \"Create Record\" step. If a record is found, it *updates* it; if not, it *creates* it.\n\n---\n\n### 3. Convocore Webhook Trigger Timing\n* **What’s misunderstood:** When exactly does the webhook fire?\n* **The risk:** If the webhook is attached to an *input node* rather than the final *confirmation node*, it might send incomplete data. \n  * *Example:* If the webhook triggers as soon as the user enters their phone number, it will fire before they select a date or confirm the price, resulting in partial leads in your CRM.\n* **Rule:** Ensure the webhook action is strictly placed on the **final success screen** (e.g., after the customer clicks \"Confirm Appointment\").\n\n---\n\n### 4. Phone Number Normalization\n* **What’s overlooked:** Users type phone numbers in dozens of erratic formats:\n  * `912345678` (missing country code)\n  * `+351 912 345 678` (with spaces)\n  * `00351-912-345-678` (with dashes/zeros)\n* **The issue:** If you plan to use Airtable later to send automated SMS or WhatsApp follow-ups, messy phone numbers will break third-party messaging tools (like Twilio).\n* **The fix:** Configure your Convocore bot prompt to strictly require international format, or validate the phone input node before the conversation proceeds to the booking confirmation.\n\n---\n\n### 5. Double Booking vs. Google Calendar Coordination\n* **What’s overlooked:** Airtable stores data; it **does not manage availability**.\n* **The risk:** Airtable will happily accept two different customer bookings for the exact same slot (e.g., two screen replacements at 15:30 on Friday).\n* **The division of labor:**\n  * **Google Calendar** must handle the slot validation (preventing overlapping events).\n  * **Airtable** should only be updated *after* Google Calendar successfully creates the event. \n  * If the slot is unavailable, the bot should prompt the user for a new time *before* any data is sent to Airtable."
+    },
+    {
+      "role": "user",
+      "content": "Please give the clearest concise response that would help someone continue from here."
+    },
+    {
+      "role": "assistant",
+      "content": "Here is your exact, step-by-step checklist to finish the setup right now:\n\n1. **In Airtable:**  \n   Create your `Leads` table with all columns set to **Single line text** (to prevent any formatting crashes).\n\n2. **In Make (or Zapier):**  \n   Create a scenario with a **Custom Webhook** trigger and copy the generated URL.\n\n3. **In Convocore:**  \n   Go to your bot’s final confirmation step → Add an **Outgoing Webhook (POST)** → Paste the Make URL → Set the payload body to:\n   ```json\n   {\n     \"name\": \"{{user.name}}\",\n     \"phone\": \"{{user.phone}}\",\n     \"device\": \"{{device.model}}\",\n     \"service\": \"{{repair.type}}\",\n     \"price\": \"{{price}}\",\n     \"booking_time\": \"{{booking.time}}\"\n   }\n   ```\n   *(Check your bot builder to ensure these variable names match your actual input fields).*\n\n4. **Send a Test:**  \n   Complete one fake booking in your chatbot test window. Confirm Make catches the data.\n\n5. **Connect to Airtable:**  \n   In Make, add the **Airtable → Create a Record** module, map each data point to its column, save, and **turn the scenario ON**.\n\nOnce this runs, every booking will bypass Convocore’s connection bug and land directly in your database."
+    }
+  ],
+  "historical_context_in_scoring": false
+}

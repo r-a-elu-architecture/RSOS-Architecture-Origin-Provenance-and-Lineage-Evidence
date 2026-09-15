@@ -1,0 +1,681 @@
+{
+  "cell_id": "a69a63bb64c2603092732218",
+  "provider": "OPENAI",
+  "organization": "OpenAI",
+  "model_requested": "gpt-5.6-terra",
+  "condition": "BASELINE",
+  "blind_context_id": "4afdb460fb54abbee7504e1b",
+  "status": "COMPLETE",
+  "failure": null,
+  "provider_responses": [
+    {
+      "turn": 1,
+      "text": "You’re right: an Adjustment Layer has no built-in **Motion > Scale** controls. It only affects clips when you add an effect to it.\n\nFor what you want—changing the scale of every cut at once—you have two choices:\n\n## Easiest: Nest all the video clips\n1. Select all the **video clips** you want to scale.  \n   - Do not select the adjustment layer.\n   - Usually leave audio unselected unless you also want it nested.\n2. Right-click the selected clips → **Nest…**\n3. Give it a name, such as `Main Video`.\n4. You will now see one single nested clip in the timeline.\n5. Click that nested clip.\n6. Open **Effect Controls**.\n7. Under **Motion**, change **Scale**.\n\nNow one Scale setting affects the entire set of cuts.\n\n## Keep the clips separate: add Transform to the Adjustment Layer\nIf you do not want to nest:\n\n1. Click the Adjustment Layer.\n2. Open **Effects** panel.\n3. Search: **Transform**\n4. Drag **Transform** onto the Adjustment Layer.\n5. Open **Effect Controls**.\n6. Under the **Transform** effect, adjust **Scale**.\n\nImportant: use the **Transform effect’s Scale**, not Motion. The Adjustment Layer itself does not have Motion controls.\n\n### Best choice right now\n- Need a permanent global crop/scale: **Nest the video clips**, then change Motion > Scale.\n- Need to keep all cuts visible and editable while applying one global zoom: **Transform effect on the Adjustment Layer**.",
+      "provider_metadata": {
+        "id": "resp_0928ef81183322f0016aa842b6f8cc87d280add5720edc6b78",
+        "created_at": 1789412022.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_0928ef81183322f0016aa842b9435087d2a8cd951e9263c20e",
+            "content": [
+              {
+                "annotations": [],
+                "text": "You’re right: an Adjustment Layer has no built-in **Motion > Scale** controls. It only affects clips when you add an effect to it.\n\nFor what you want—changing the scale of every cut at once—you have two choices:\n\n## Easiest: Nest all the video clips\n1. Select all the **video clips** you want to scale.  \n   - Do not select the adjustment layer.\n   - Usually leave audio unselected unless you also want it nested.\n2. Right-click the selected clips → **Nest…**\n3. Give it a name, such as `Main Video`.\n4. You will now see one single nested clip in the timeline.\n5. Click that nested clip.\n6. Open **Effect Controls**.\n7. Under **Motion**, change **Scale**.\n\nNow one Scale setting affects the entire set of cuts.\n\n## Keep the clips separate: add Transform to the Adjustment Layer\nIf you do not want to nest:\n\n1. Click the Adjustment Layer.\n2. Open **Effects** panel.\n3. Search: **Transform**\n4. Drag **Transform** onto the Adjustment Layer.\n5. Open **Effect Controls**.\n6. Under the **Transform** effect, adjust **Scale**.\n\nImportant: use the **Transform effect’s Scale**, not Motion. The Adjustment Layer itself does not have Motion controls.\n\n### Best choice right now\n- Need a permanent global crop/scale: **Nest the video clips**, then change Motion > Scale.\n- Need to keep all cuts visible and editable while applying one global zoom: **Transform effect on the Adjustment Layer**.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789412029.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 2466,
+          "input_tokens_details": {
+            "cache_write_tokens": 2463,
+            "cached_tokens": 0
+          },
+          "output_tokens": 327,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2793
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 2,
+      "text": "The most important point is:\n\n> **An Adjustment Layer cannot use its own Motion controls to scale all clips.**  \n> To scale everything beneath it, you must add the **Transform effect** to the Adjustment Layer.\n\nThis is the key distinction that caused the confusion.\n\n## Why clicking the Adjustment Layer shows no Scale\n\nA normal video clip has built-in controls in **Effect Controls**:\n\n- Motion\n  - Position\n  - Scale\n  - Rotation\n- Opacity\n- Time Remapping\n\nBut an **Adjustment Layer is not footage**. It is a transparent layer whose job is to pass effects down onto the clips below it.\n\nSo when you select it, Premiere does not give you the normal clip-level Motion controls in the same useful way for affecting underlying footage. That is normal.\n\n## How to make the Adjustment Layer scale every cut\n\nYou need to put a video effect called **Transform** on the Adjustment Layer.\n\n### Exact steps\n\n1. Click the **Adjustment Layer** in your timeline.\n2. Open the **Effects** panel.  \n   - If you cannot see it: **Window → Effects**\n3. Click the search box and type: `Transform`\n4. Find:\n\n   **Video Effects → Distort → Transform**\n\n5. Drag **Transform** onto the Adjustment Layer in the timeline.\n6. Keep the Adjustment Layer selected.\n7. Open **Window → Effect Controls** if that panel is not visible.\n8. Under the **Transform** effect, open its controls.\n9. Change **Scale**.\n\nEvery video clip directly below that Adjustment Layer will zoom in or out together.\n\n## What it looks like conceptually\n\n```text\nV2  Adjustment Layer + Transform effect\nV1  Clip 1 | Clip 2 | Clip 3 | Clip 4\n```\n\nIf Transform Scale is set to:\n\n- **100** = original size\n- **105** = slight zoom in on every clip\n- **110** = stronger zoom/crop\n- **90** = zoom out, possibly showing black borders\n\nThe clips remain separate. You can still cut, move, trim, replace, or edit them individually—but the global scale remains applied above all of them.\n\n## Make sure the layer covers everything\n\nThe Adjustment Layer must extend across the entire section you want affected.\n\n- Drag its left edge to the beginning of the video.\n- Drag its right edge to the end.\n- Any clip outside its range will not be scaled.\n\n## Important warning: don’t confuse the two Scale controls\n\nAfter adding Transform, you may see more than one thing related to scaling.\n\nUse:\n\n✅ **Transform effect → Scale**\n\nDo not use:\n\n❌ **Motion → Scale** on each individual clip  \n❌ Randomly changing Scale clip by clip if you want a global change\n\nThe Transform effect is what turns the Adjustment Layer into a “global zoom” control.\n\n## When you should nest instead\n\nUse a **nest** if you want all your edits to become one container that behaves exactly like one video clip.\n\nUse **Transform on an Adjustment Layer** if you want to keep all cuts separate and editable while applying one global zoom.\n\nFor your current situation—multiple cuts and one scale control—the simplest move is:\n\n> Select the Adjustment Layer → add **Transform** → adjust **Transform Scale**.",
+      "provider_metadata": {
+        "id": "resp_084cb3ef08fbf25f016aa842bdb92487d2990230b870cfb4ea",
+        "created_at": 1789412029.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_084cb3ef08fbf25f016aa842beee2087d29cdf75e44b5511eb",
+            "content": [
+              {
+                "annotations": [],
+                "text": "The most important point is:\n\n> **An Adjustment Layer cannot use its own Motion controls to scale all clips.**  \n> To scale everything beneath it, you must add the **Transform effect** to the Adjustment Layer.\n\nThis is the key distinction that caused the confusion.\n\n## Why clicking the Adjustment Layer shows no Scale\n\nA normal video clip has built-in controls in **Effect Controls**:\n\n- Motion\n  - Position\n  - Scale\n  - Rotation\n- Opacity\n- Time Remapping\n\nBut an **Adjustment Layer is not footage**. It is a transparent layer whose job is to pass effects down onto the clips below it.\n\nSo when you select it, Premiere does not give you the normal clip-level Motion controls in the same useful way for affecting underlying footage. That is normal.\n\n## How to make the Adjustment Layer scale every cut\n\nYou need to put a video effect called **Transform** on the Adjustment Layer.\n\n### Exact steps\n\n1. Click the **Adjustment Layer** in your timeline.\n2. Open the **Effects** panel.  \n   - If you cannot see it: **Window → Effects**\n3. Click the search box and type: `Transform`\n4. Find:\n\n   **Video Effects → Distort → Transform**\n\n5. Drag **Transform** onto the Adjustment Layer in the timeline.\n6. Keep the Adjustment Layer selected.\n7. Open **Window → Effect Controls** if that panel is not visible.\n8. Under the **Transform** effect, open its controls.\n9. Change **Scale**.\n\nEvery video clip directly below that Adjustment Layer will zoom in or out together.\n\n## What it looks like conceptually\n\n```text\nV2  Adjustment Layer + Transform effect\nV1  Clip 1 | Clip 2 | Clip 3 | Clip 4\n```\n\nIf Transform Scale is set to:\n\n- **100** = original size\n- **105** = slight zoom in on every clip\n- **110** = stronger zoom/crop\n- **90** = zoom out, possibly showing black borders\n\nThe clips remain separate. You can still cut, move, trim, replace, or edit them individually—but the global scale remains applied above all of them.\n\n## Make sure the layer covers everything\n\nThe Adjustment Layer must extend across the entire section you want affected.\n\n- Drag its left edge to the beginning of the video.\n- Drag its right edge to the end.\n- Any clip outside its range will not be scaled.\n\n## Important warning: don’t confuse the two Scale controls\n\nAfter adding Transform, you may see more than one thing related to scaling.\n\nUse:\n\n✅ **Transform effect → Scale**\n\nDo not use:\n\n❌ **Motion → Scale** on each individual clip  \n❌ Randomly changing Scale clip by clip if you want a global change\n\nThe Transform effect is what turns the Adjustment Layer into a “global zoom” control.\n\n## When you should nest instead\n\nUse a **nest** if you want all your edits to become one container that behaves exactly like one video clip.\n\nUse **Transform on an Adjustment Layer** if you want to keep all cuts separate and editable while applying one global zoom.\n\nFor your current situation—multiple cuts and one scale control—the simplest move is:\n\n> Select the Adjustment Layer → add **Transform** → adjust **Transform Scale**.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789412039.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 2810,
+          "input_tokens_details": {
+            "cache_write_tokens": 344,
+            "cached_tokens": 2463
+          },
+          "output_tokens": 677,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3487
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 3,
+      "text": "Another important aspect is the difference between a **global visual effect** and a **global framing change**.\n\nThey can look similar, but Premiere treats them differently.\n\n## Global effects vs. global framing\n\n### Global effects\nThese are things like:\n\n- Color correction / Lumetri Color\n- LUTs\n- Blur\n- Sharpening\n- Grain\n- Vignette\n- Glow\n- Transform-based zoom\n\nThese work well on an **Adjustment Layer** because the layer applies the effect to whatever is underneath it.\n\n### Global framing\nThese are changes such as:\n\n- Reframing all footage for vertical video\n- Cropping out black edges\n- Moving the entire finished edit left/right/up/down\n- Scaling the whole edit as one final picture\n\nFor this, a **nest** is often cleaner because the nest becomes one actual clip with normal **Motion** controls.\n\n## Why this matters\n\nIf you use an Adjustment Layer with Transform, every individual cut underneath is being enlarged independently—but with the same Transform settings.\n\nUsually that is exactly what you want.\n\nHowever, if your clips have different original scales, positions, crops, or keyframes, they will retain those differences. The Transform effect is applied on top of each result.\n\nExample:\n\n```text\nClip 1: Motion Scale 100\nClip 2: Motion Scale 120\nClip 3: Motion Scale 90\n\nAdjustment Layer Transform Scale: 110\n```\n\nThe clips do not all become identical. Premiere applies the global 110% zoom after each clip’s own existing framing.\n\nThat means:\n\n- Clip 1 becomes slightly larger\n- Clip 2 becomes much more zoomed\n- Clip 3 may still be smaller than the others\n\nSo if your cuts already have inconsistent scale values, first decide whether that inconsistency is intentional.\n\n## Best workflow for your situation\n\n### If every clip is currently framed normally\nUse an **Adjustment Layer + Transform**.\n\nIt is fast, reversible, and keeps all edits accessible.\n\n### If you need the entire edit to act like one exported video\nUse a **nest**.\n\nThen:\n\n1. Select the video clips.\n2. Right-click → **Nest**.\n3. Select the new nested clip.\n4. Go to **Effect Controls → Motion**.\n5. Change Scale and Position.\n\nNow Premiere sees the entire collection of edits as a single picture.\n\n## One more practical warning: scaling can reveal gaps\n\nIf you scale down below 100%, you may see:\n\n- Black borders\n- Transparent edges\n- Empty background outside the clips\n\nIf you scale up above 100%, you may:\n\n- Crop important parts of the image\n- Lose text near screen edges\n- Reduce apparent sharpness, especially with heavily enlarged footage\n\nFor a subtle global zoom, start around **103–108%**, then check the full video for cut-off faces, captions, logos, or graphics.\n\n## Simple rule\n\n> **Adjustment Layer + Transform:** one visual treatment over many editable clips.  \n> **Nest + Motion:** treat many cuts as one unified video clip.",
+      "provider_metadata": {
+        "id": "resp_03493f74f3f3d206016aa842c8403c87d2aac71670a13673cd",
+        "created_at": 1789412040.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_03493f74f3f3d206016aa842cb2ab887d28cff466392abbe30",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Another important aspect is the difference between a **global visual effect** and a **global framing change**.\n\nThey can look similar, but Premiere treats them differently.\n\n## Global effects vs. global framing\n\n### Global effects\nThese are things like:\n\n- Color correction / Lumetri Color\n- LUTs\n- Blur\n- Sharpening\n- Grain\n- Vignette\n- Glow\n- Transform-based zoom\n\nThese work well on an **Adjustment Layer** because the layer applies the effect to whatever is underneath it.\n\n### Global framing\nThese are changes such as:\n\n- Reframing all footage for vertical video\n- Cropping out black edges\n- Moving the entire finished edit left/right/up/down\n- Scaling the whole edit as one final picture\n\nFor this, a **nest** is often cleaner because the nest becomes one actual clip with normal **Motion** controls.\n\n## Why this matters\n\nIf you use an Adjustment Layer with Transform, every individual cut underneath is being enlarged independently—but with the same Transform settings.\n\nUsually that is exactly what you want.\n\nHowever, if your clips have different original scales, positions, crops, or keyframes, they will retain those differences. The Transform effect is applied on top of each result.\n\nExample:\n\n```text\nClip 1: Motion Scale 100\nClip 2: Motion Scale 120\nClip 3: Motion Scale 90\n\nAdjustment Layer Transform Scale: 110\n```\n\nThe clips do not all become identical. Premiere applies the global 110% zoom after each clip’s own existing framing.\n\nThat means:\n\n- Clip 1 becomes slightly larger\n- Clip 2 becomes much more zoomed\n- Clip 3 may still be smaller than the others\n\nSo if your cuts already have inconsistent scale values, first decide whether that inconsistency is intentional.\n\n## Best workflow for your situation\n\n### If every clip is currently framed normally\nUse an **Adjustment Layer + Transform**.\n\nIt is fast, reversible, and keeps all edits accessible.\n\n### If you need the entire edit to act like one exported video\nUse a **nest**.\n\nThen:\n\n1. Select the video clips.\n2. Right-click → **Nest**.\n3. Select the new nested clip.\n4. Go to **Effect Controls → Motion**.\n5. Change Scale and Position.\n\nNow Premiere sees the entire collection of edits as a single picture.\n\n## One more practical warning: scaling can reveal gaps\n\nIf you scale down below 100%, you may see:\n\n- Black borders\n- Transparent edges\n- Empty background outside the clips\n\nIf you scale up above 100%, you may:\n\n- Crop important parts of the image\n- Lose text near screen edges\n- Reduce apparent sharpness, especially with heavily enlarged footage\n\nFor a subtle global zoom, start around **103–108%**, then check the full video for cut-off faces, captions, logos, or graphics.\n\n## Simple rule\n\n> **Adjustment Layer + Transform:** one visual treatment over many editable clips.  \n> **Nest + Motion:** treat many cuts as one unified video clip.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789412054.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 3502,
+          "input_tokens_details": {
+            "cache_write_tokens": 692,
+            "cached_tokens": 2807
+          },
+          "output_tokens": 628,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4130
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 4,
+      "text": "Do this exact workflow now. It gives you one global Scale control while keeping your cuts editable.\n\n## Recommended setup: Adjustment Layer + Transform\n\n### 1. Make the Adjustment Layer cover every cut\nIn the timeline:\n\n- Put the Adjustment Layer on a video track above your footage, such as **V2**.\n- Your clips stay on **V1**.\n- Drag the left and right ends of the Adjustment Layer so it starts before the first cut and ends after the last cut.\n\n```text\nV2  [---------------- Adjustment Layer ----------------]\nV1  [Clip 1][Clip 2][Clip 3][Clip 4][Clip 5]\n```\n\nAnything under the layer gets affected.\n\n---\n\n### 2. Add the correct effect\n1. Open **Window → Effects**.\n2. Search for **Transform**.\n3. Open **Video Effects → Distort**.\n4. Drag **Transform** onto the Adjustment Layer.\n\nDo not drag it onto every cut. Drag it only once, onto the Adjustment Layer.\n\n---\n\n### 3. Change global scale\n1. Click the Adjustment Layer in the timeline.\n2. Open **Window → Effect Controls**.\n3. Find the **Transform** section.\n4. Change **Scale**.\n\nUse these starting values:\n\n| Goal | Transform Scale |\n|---|---:|\n| No scaling | 100 |\n| Almost invisible global zoom | 102–103 |\n| Normal subtle crop / remove edge issues | 105 |\n| Obvious zoom-in | 110–115 |\n| Zoom out | below 100 — may create black borders |\n\nStart at **105**. Play through the edit and make sure faces, subtitles, logos, and graphics are not too close to the frame edge.\n\n---\n\n### 4. Center it if necessary\nIn the same **Transform** effect:\n\n- Adjust **Position** to move the whole image.\n- Keep the default center unless you need to shift the frame.\n- For a 1920 × 1080 sequence, the usual center position is approximately:\n  - **X: 960**\n  - **Y: 540**\n\nIf you move it, make small changes. For example, change Y from `540` to `500` to move the image slightly upward.\n\n---\n\n## If you want the entire edit to become one clip instead\n\nUse this if you want normal **Motion > Scale** controls and do not mind working inside a nested sequence when you need to edit cuts.\n\n1. Select only the video clips you want included.\n2. Right-click → **Nest…**\n3. Name it `MAIN_EDIT`.\n4. Click the new nested clip.\n5. Open **Effect Controls**.\n6. Expand **Motion**.\n7. Set **Scale** to about `105`.\n\nThis is especially useful if you are making a horizontal edit fit a vertical sequence, or need to move the completed edit as one object.\n\n## The practical choice\n\nFor a regular edit with many cuts:\n\n> Keep the cuts separate. Put **Transform** on the Adjustment Layer. Set Scale to **105**.\n\nThat gives you one place to control the overall zoom without rebuilding your timeline.",
+      "provider_metadata": {
+        "id": "resp_0266905e61727770016aa842d6815487d29a8d43f95d9a8879",
+        "created_at": 1789412054.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_0266905e61727770016aa842daae6087d299e02a314bb4edb5",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Do this exact workflow now. It gives you one global Scale control while keeping your cuts editable.\n\n## Recommended setup: Adjustment Layer + Transform\n\n### 1. Make the Adjustment Layer cover every cut\nIn the timeline:\n\n- Put the Adjustment Layer on a video track above your footage, such as **V2**.\n- Your clips stay on **V1**.\n- Drag the left and right ends of the Adjustment Layer so it starts before the first cut and ends after the last cut.\n\n```text\nV2  [---------------- Adjustment Layer ----------------]\nV1  [Clip 1][Clip 2][Clip 3][Clip 4][Clip 5]\n```\n\nAnything under the layer gets affected.\n\n---\n\n### 2. Add the correct effect\n1. Open **Window → Effects**.\n2. Search for **Transform**.\n3. Open **Video Effects → Distort**.\n4. Drag **Transform** onto the Adjustment Layer.\n\nDo not drag it onto every cut. Drag it only once, onto the Adjustment Layer.\n\n---\n\n### 3. Change global scale\n1. Click the Adjustment Layer in the timeline.\n2. Open **Window → Effect Controls**.\n3. Find the **Transform** section.\n4. Change **Scale**.\n\nUse these starting values:\n\n| Goal | Transform Scale |\n|---|---:|\n| No scaling | 100 |\n| Almost invisible global zoom | 102–103 |\n| Normal subtle crop / remove edge issues | 105 |\n| Obvious zoom-in | 110–115 |\n| Zoom out | below 100 — may create black borders |\n\nStart at **105**. Play through the edit and make sure faces, subtitles, logos, and graphics are not too close to the frame edge.\n\n---\n\n### 4. Center it if necessary\nIn the same **Transform** effect:\n\n- Adjust **Position** to move the whole image.\n- Keep the default center unless you need to shift the frame.\n- For a 1920 × 1080 sequence, the usual center position is approximately:\n  - **X: 960**\n  - **Y: 540**\n\nIf you move it, make small changes. For example, change Y from `540` to `500` to move the image slightly upward.\n\n---\n\n## If you want the entire edit to become one clip instead\n\nUse this if you want normal **Motion > Scale** controls and do not mind working inside a nested sequence when you need to edit cuts.\n\n1. Select only the video clips you want included.\n2. Right-click → **Nest…**\n3. Name it `MAIN_EDIT`.\n4. Click the new nested clip.\n5. Open **Effect Controls**.\n6. Expand **Motion**.\n7. Set **Scale** to about `105`.\n\nThis is especially useful if you are making a horizontal edit fit a vertical sequence, or need to move the completed edit as one object.\n\n## The practical choice\n\nFor a regular edit with many cuts:\n\n> Keep the cuts separate. Put **Transform** on the Adjustment Layer. Set Scale to **105**.\n\nThat gives you one place to control the overall zoom without rebuilding your timeline.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789412066.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 4145,
+          "input_tokens_details": {
+            "cache_write_tokens": 643,
+            "cached_tokens": 3499
+          },
+          "output_tokens": 648,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4793
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 5,
+      "text": "A few things are easy to misunderstand here:\n\n## 1. Adjustment Layers affect only tracks below them\n\nIf some clips are on **V2, V3, or higher**, and your Adjustment Layer is on V2, those higher clips will **not** be affected.\n\nExample:\n\n```text\nV3  Titles / graphics          ← not affected\nV2  Adjustment Layer           ← affects only below\nV1  Main video cuts            ← affected\n```\n\nTo affect everything—including titles and graphics—put the Adjustment Layer on the highest track above all of it:\n\n```text\nV4  Adjustment Layer\nV3  Titles / graphics\nV2  B-roll / overlays\nV1  Main video cuts\n```\n\nBut be careful: global scaling titles and captions may make them too large or push them off-screen. Often it is better to scale only the footage and leave text outside the global Transform layer.\n\n---\n\n## 2. Transform on an Adjustment Layer is not the same as “fix every clip’s framing”\n\nIf one clip is already zoomed in, another is zoomed out, and another is positioned differently, the Adjustment Layer applies an additional shared zoom to all of them.\n\nIt does **not** reset or standardize every clip’s own Motion settings.\n\nIf your real goal is:\n\n> “Make every source clip exactly the same scale and position,”\n\nyou need to change the clips themselves—possibly by selecting them all and using **Paste Attributes** from a correctly framed clip, or by setting each clip’s Motion settings consistently.\n\nThe Adjustment Layer is for an extra overall zoom, not for repairing inconsistent framing.\n\n---\n\n## 3. Nesting may change how you edit audio and video\n\nIf you select video and audio together and nest them, Premiere puts both inside the nested sequence.\n\nThat can be fine, but it can be annoying if you still need to:\n\n- Adjust dialogue timing\n- Add or change audio transitions\n- Mix individual clips\n- Replace a section of audio independently\n\nFor a global visual scale, select and nest **video only**. Keep your audio in the main sequence unless you intentionally want audio included too.\n\n---\n\n## 4. Nested clips can hide your original cuts—but they are not gone\n\nAfter nesting, your main timeline shows one nested clip. Your original edits still exist inside it.\n\nTo edit them:\n\n- Double-click the nested clip, or\n- Open the nested sequence from the Project panel.\n\nThis is reversible and not destructive, but it adds one extra layer of navigation. That is why an Adjustment Layer is usually preferable for a simple global zoom.\n\n---\n\n## 5. Scale can reduce quality and create cropping\n\nA Scale value above 100 enlarges pixels.\n\n- **105%** is usually subtle.\n- **110–115%** can be noticeable.\n- High values can soften the picture and crop faces, captions, or edge details.\n\nCheck several points in the edit, especially cuts with different camera framing. A scale that works for a wide shot may crop a close-up badly.\n\n---\n\n## 6. “Scale to Frame Size” and “Set to Frame Size” are different\n\nThis catches many Premiere users:\n\n- **Set to Frame Size**: changes a clip’s Motion Scale value to fit the sequence. Usually the more flexible choice.\n- **Scale to Frame Size**: rasterizes/resamples the clip to sequence dimensions; Motion Scale may still display as 100.\n\nIf your clips seem to have confusing Scale numbers, this setting may be why. For future edits, many editors prefer **Set to Frame Size** because you retain clearer Motion Scale control.\n\n---\n\n## Safest recommendation\n\nFor your current goal:\n\n1. Keep your main video cuts on V1.\n2. Keep captions/titles on higher tracks.\n3. Place an Adjustment Layer on V2, above footage but below titles.\n4. Add **Transform** to that Adjustment Layer.\n5. Set Transform Scale around **103–105**.\n6. Review the full edit for cropped faces or text.\n\nThat gives your footage one shared global scale while protecting captions and graphics.",
+      "provider_metadata": {
+        "id": "resp_0ec72666d4f1ce12016aa842e275b087d29a79c4dcc97b00ee",
+        "created_at": 1789412066.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_0ec72666d4f1ce12016aa842e322b487d282d5e03257385b7b",
+            "content": [
+              {
+                "annotations": [],
+                "text": "A few things are easy to misunderstand here:\n\n## 1. Adjustment Layers affect only tracks below them\n\nIf some clips are on **V2, V3, or higher**, and your Adjustment Layer is on V2, those higher clips will **not** be affected.\n\nExample:\n\n```text\nV3  Titles / graphics          ← not affected\nV2  Adjustment Layer           ← affects only below\nV1  Main video cuts            ← affected\n```\n\nTo affect everything—including titles and graphics—put the Adjustment Layer on the highest track above all of it:\n\n```text\nV4  Adjustment Layer\nV3  Titles / graphics\nV2  B-roll / overlays\nV1  Main video cuts\n```\n\nBut be careful: global scaling titles and captions may make them too large or push them off-screen. Often it is better to scale only the footage and leave text outside the global Transform layer.\n\n---\n\n## 2. Transform on an Adjustment Layer is not the same as “fix every clip’s framing”\n\nIf one clip is already zoomed in, another is zoomed out, and another is positioned differently, the Adjustment Layer applies an additional shared zoom to all of them.\n\nIt does **not** reset or standardize every clip’s own Motion settings.\n\nIf your real goal is:\n\n> “Make every source clip exactly the same scale and position,”\n\nyou need to change the clips themselves—possibly by selecting them all and using **Paste Attributes** from a correctly framed clip, or by setting each clip’s Motion settings consistently.\n\nThe Adjustment Layer is for an extra overall zoom, not for repairing inconsistent framing.\n\n---\n\n## 3. Nesting may change how you edit audio and video\n\nIf you select video and audio together and nest them, Premiere puts both inside the nested sequence.\n\nThat can be fine, but it can be annoying if you still need to:\n\n- Adjust dialogue timing\n- Add or change audio transitions\n- Mix individual clips\n- Replace a section of audio independently\n\nFor a global visual scale, select and nest **video only**. Keep your audio in the main sequence unless you intentionally want audio included too.\n\n---\n\n## 4. Nested clips can hide your original cuts—but they are not gone\n\nAfter nesting, your main timeline shows one nested clip. Your original edits still exist inside it.\n\nTo edit them:\n\n- Double-click the nested clip, or\n- Open the nested sequence from the Project panel.\n\nThis is reversible and not destructive, but it adds one extra layer of navigation. That is why an Adjustment Layer is usually preferable for a simple global zoom.\n\n---\n\n## 5. Scale can reduce quality and create cropping\n\nA Scale value above 100 enlarges pixels.\n\n- **105%** is usually subtle.\n- **110–115%** can be noticeable.\n- High values can soften the picture and crop faces, captions, or edge details.\n\nCheck several points in the edit, especially cuts with different camera framing. A scale that works for a wide shot may crop a close-up badly.\n\n---\n\n## 6. “Scale to Frame Size” and “Set to Frame Size” are different\n\nThis catches many Premiere users:\n\n- **Set to Frame Size**: changes a clip’s Motion Scale value to fit the sequence. Usually the more flexible choice.\n- **Scale to Frame Size**: rasterizes/resamples the clip to sequence dimensions; Motion Scale may still display as 100.\n\nIf your clips seem to have confusing Scale numbers, this setting may be why. For future edits, many editors prefer **Set to Frame Size** because you retain clearer Motion Scale control.\n\n---\n\n## Safest recommendation\n\nFor your current goal:\n\n1. Keep your main video cuts on V1.\n2. Keep captions/titles on higher tracks.\n3. Place an Adjustment Layer on V2, above footage but below titles.\n4. Add **Transform** to that Adjustment Layer.\n5. Set Transform Scale around **103–105**.\n6. Review the full edit for cropped faces or text.\n\nThat gives your footage one shared global scale while protecting captions and graphics.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789412079.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 4808,
+          "input_tokens_details": {
+            "cache_write_tokens": 663,
+            "cached_tokens": 4142
+          },
+          "output_tokens": 832,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5640
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 6,
+      "text": "Do this:\n\n1. Keep your video cuts on **V1**.\n2. Put the **Adjustment Layer on V2** above them.\n3. Make it span the whole video.\n4. Select the Adjustment Layer.\n5. Go to **Effects** and search **Transform**.\n6. Drag **Video Effects → Distort → Transform** onto the Adjustment Layer.\n7. Go to **Effect Controls → Transform → Scale**.\n8. Set Scale to about **105** to zoom all cuts slightly.\n\nImportant:\n- The Adjustment Layer must be **above** the clips you want scaled.\n- It only affects tracks **below** it.\n- Put titles/captions above the Adjustment Layer if you do **not** want them scaled too.\n- This adds the same zoom to every clip; it does not fix clips that already have different individual Scale settings.",
+      "provider_metadata": {
+        "id": "resp_06853a9b8df535c2016aa842ef79d887d286d9277972e29e80",
+        "created_at": 1789412079.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_06853a9b8df535c2016aa842f024b887d28a816f7a8a5f9e84",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Do this:\n\n1. Keep your video cuts on **V1**.\n2. Put the **Adjustment Layer on V2** above them.\n3. Make it span the whole video.\n4. Select the Adjustment Layer.\n5. Go to **Effects** and search **Transform**.\n6. Drag **Video Effects → Distort → Transform** onto the Adjustment Layer.\n7. Go to **Effect Controls → Transform → Scale**.\n8. Set Scale to about **105** to zoom all cuts slightly.\n\nImportant:\n- The Adjustment Layer must be **above** the clips you want scaled.\n- It only affects tracks **below** it.\n- Put titles/captions above the Adjustment Layer if you do **not** want them scaled too.\n- This adds the same zoom to every clip; it does not fix clips that already have different individual Scale settings.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789412082.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 5661,
+          "input_tokens_details": {
+            "cache_write_tokens": 853,
+            "cached_tokens": 4805
+          },
+          "output_tokens": 178,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5839
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    }
+  ],
+  "scoring_messages": [
+    {
+      "role": "user",
+      "content": "Please continue the discussion in the way that best fits what came before."
+    },
+    {
+      "role": "assistant",
+      "content": "You’re right: an Adjustment Layer has no built-in **Motion > Scale** controls. It only affects clips when you add an effect to it.\n\nFor what you want—changing the scale of every cut at once—you have two choices:\n\n## Easiest: Nest all the video clips\n1. Select all the **video clips** you want to scale.  \n   - Do not select the adjustment layer.\n   - Usually leave audio unselected unless you also want it nested.\n2. Right-click the selected clips → **Nest…**\n3. Give it a name, such as `Main Video`.\n4. You will now see one single nested clip in the timeline.\n5. Click that nested clip.\n6. Open **Effect Controls**.\n7. Under **Motion**, change **Scale**.\n\nNow one Scale setting affects the entire set of cuts.\n\n## Keep the clips separate: add Transform to the Adjustment Layer\nIf you do not want to nest:\n\n1. Click the Adjustment Layer.\n2. Open **Effects** panel.\n3. Search: **Transform**\n4. Drag **Transform** onto the Adjustment Layer.\n5. Open **Effect Controls**.\n6. Under the **Transform** effect, adjust **Scale**.\n\nImportant: use the **Transform effect’s Scale**, not Motion. The Adjustment Layer itself does not have Motion controls.\n\n### Best choice right now\n- Need a permanent global crop/scale: **Nest the video clips**, then change Motion > Scale.\n- Need to keep all cuts visible and editable while applying one global zoom: **Transform effect on the Adjustment Layer**."
+    },
+    {
+      "role": "user",
+      "content": "Please expand on the most important point you just made."
+    },
+    {
+      "role": "assistant",
+      "content": "The most important point is:\n\n> **An Adjustment Layer cannot use its own Motion controls to scale all clips.**  \n> To scale everything beneath it, you must add the **Transform effect** to the Adjustment Layer.\n\nThis is the key distinction that caused the confusion.\n\n## Why clicking the Adjustment Layer shows no Scale\n\nA normal video clip has built-in controls in **Effect Controls**:\n\n- Motion\n  - Position\n  - Scale\n  - Rotation\n- Opacity\n- Time Remapping\n\nBut an **Adjustment Layer is not footage**. It is a transparent layer whose job is to pass effects down onto the clips below it.\n\nSo when you select it, Premiere does not give you the normal clip-level Motion controls in the same useful way for affecting underlying footage. That is normal.\n\n## How to make the Adjustment Layer scale every cut\n\nYou need to put a video effect called **Transform** on the Adjustment Layer.\n\n### Exact steps\n\n1. Click the **Adjustment Layer** in your timeline.\n2. Open the **Effects** panel.  \n   - If you cannot see it: **Window → Effects**\n3. Click the search box and type: `Transform`\n4. Find:\n\n   **Video Effects → Distort → Transform**\n\n5. Drag **Transform** onto the Adjustment Layer in the timeline.\n6. Keep the Adjustment Layer selected.\n7. Open **Window → Effect Controls** if that panel is not visible.\n8. Under the **Transform** effect, open its controls.\n9. Change **Scale**.\n\nEvery video clip directly below that Adjustment Layer will zoom in or out together.\n\n## What it looks like conceptually\n\n```text\nV2  Adjustment Layer + Transform effect\nV1  Clip 1 | Clip 2 | Clip 3 | Clip 4\n```\n\nIf Transform Scale is set to:\n\n- **100** = original size\n- **105** = slight zoom in on every clip\n- **110** = stronger zoom/crop\n- **90** = zoom out, possibly showing black borders\n\nThe clips remain separate. You can still cut, move, trim, replace, or edit them individually—but the global scale remains applied above all of them.\n\n## Make sure the layer covers everything\n\nThe Adjustment Layer must extend across the entire section you want affected.\n\n- Drag its left edge to the beginning of the video.\n- Drag its right edge to the end.\n- Any clip outside its range will not be scaled.\n\n## Important warning: don’t confuse the two Scale controls\n\nAfter adding Transform, you may see more than one thing related to scaling.\n\nUse:\n\n✅ **Transform effect → Scale**\n\nDo not use:\n\n❌ **Motion → Scale** on each individual clip  \n❌ Randomly changing Scale clip by clip if you want a global change\n\nThe Transform effect is what turns the Adjustment Layer into a “global zoom” control.\n\n## When you should nest instead\n\nUse a **nest** if you want all your edits to become one container that behaves exactly like one video clip.\n\nUse **Transform on an Adjustment Layer** if you want to keep all cuts separate and editable while applying one global zoom.\n\nFor your current situation—multiple cuts and one scale control—the simplest move is:\n\n> Select the Adjustment Layer → add **Transform** → adjust **Transform Scale**."
+    },
+    {
+      "role": "user",
+      "content": "Please examine another important aspect of the discussion."
+    },
+    {
+      "role": "assistant",
+      "content": "Another important aspect is the difference between a **global visual effect** and a **global framing change**.\n\nThey can look similar, but Premiere treats them differently.\n\n## Global effects vs. global framing\n\n### Global effects\nThese are things like:\n\n- Color correction / Lumetri Color\n- LUTs\n- Blur\n- Sharpening\n- Grain\n- Vignette\n- Glow\n- Transform-based zoom\n\nThese work well on an **Adjustment Layer** because the layer applies the effect to whatever is underneath it.\n\n### Global framing\nThese are changes such as:\n\n- Reframing all footage for vertical video\n- Cropping out black edges\n- Moving the entire finished edit left/right/up/down\n- Scaling the whole edit as one final picture\n\nFor this, a **nest** is often cleaner because the nest becomes one actual clip with normal **Motion** controls.\n\n## Why this matters\n\nIf you use an Adjustment Layer with Transform, every individual cut underneath is being enlarged independently—but with the same Transform settings.\n\nUsually that is exactly what you want.\n\nHowever, if your clips have different original scales, positions, crops, or keyframes, they will retain those differences. The Transform effect is applied on top of each result.\n\nExample:\n\n```text\nClip 1: Motion Scale 100\nClip 2: Motion Scale 120\nClip 3: Motion Scale 90\n\nAdjustment Layer Transform Scale: 110\n```\n\nThe clips do not all become identical. Premiere applies the global 110% zoom after each clip’s own existing framing.\n\nThat means:\n\n- Clip 1 becomes slightly larger\n- Clip 2 becomes much more zoomed\n- Clip 3 may still be smaller than the others\n\nSo if your cuts already have inconsistent scale values, first decide whether that inconsistency is intentional.\n\n## Best workflow for your situation\n\n### If every clip is currently framed normally\nUse an **Adjustment Layer + Transform**.\n\nIt is fast, reversible, and keeps all edits accessible.\n\n### If you need the entire edit to act like one exported video\nUse a **nest**.\n\nThen:\n\n1. Select the video clips.\n2. Right-click → **Nest**.\n3. Select the new nested clip.\n4. Go to **Effect Controls → Motion**.\n5. Change Scale and Position.\n\nNow Premiere sees the entire collection of edits as a single picture.\n\n## One more practical warning: scaling can reveal gaps\n\nIf you scale down below 100%, you may see:\n\n- Black borders\n- Transparent edges\n- Empty background outside the clips\n\nIf you scale up above 100%, you may:\n\n- Crop important parts of the image\n- Lose text near screen edges\n- Reduce apparent sharpness, especially with heavily enlarged footage\n\nFor a subtle global zoom, start around **103–108%**, then check the full video for cut-off faces, captions, logos, or graphics.\n\n## Simple rule\n\n> **Adjustment Layer + Transform:** one visual treatment over many editable clips.  \n> **Nest + Motion:** treat many cuts as one unified video clip."
+    },
+    {
+      "role": "user",
+      "content": "Please make the discussion more concrete and useful."
+    },
+    {
+      "role": "assistant",
+      "content": "Do this exact workflow now. It gives you one global Scale control while keeping your cuts editable.\n\n## Recommended setup: Adjustment Layer + Transform\n\n### 1. Make the Adjustment Layer cover every cut\nIn the timeline:\n\n- Put the Adjustment Layer on a video track above your footage, such as **V2**.\n- Your clips stay on **V1**.\n- Drag the left and right ends of the Adjustment Layer so it starts before the first cut and ends after the last cut.\n\n```text\nV2  [---------------- Adjustment Layer ----------------]\nV1  [Clip 1][Clip 2][Clip 3][Clip 4][Clip 5]\n```\n\nAnything under the layer gets affected.\n\n---\n\n### 2. Add the correct effect\n1. Open **Window → Effects**.\n2. Search for **Transform**.\n3. Open **Video Effects → Distort**.\n4. Drag **Transform** onto the Adjustment Layer.\n\nDo not drag it onto every cut. Drag it only once, onto the Adjustment Layer.\n\n---\n\n### 3. Change global scale\n1. Click the Adjustment Layer in the timeline.\n2. Open **Window → Effect Controls**.\n3. Find the **Transform** section.\n4. Change **Scale**.\n\nUse these starting values:\n\n| Goal | Transform Scale |\n|---|---:|\n| No scaling | 100 |\n| Almost invisible global zoom | 102–103 |\n| Normal subtle crop / remove edge issues | 105 |\n| Obvious zoom-in | 110–115 |\n| Zoom out | below 100 — may create black borders |\n\nStart at **105**. Play through the edit and make sure faces, subtitles, logos, and graphics are not too close to the frame edge.\n\n---\n\n### 4. Center it if necessary\nIn the same **Transform** effect:\n\n- Adjust **Position** to move the whole image.\n- Keep the default center unless you need to shift the frame.\n- For a 1920 × 1080 sequence, the usual center position is approximately:\n  - **X: 960**\n  - **Y: 540**\n\nIf you move it, make small changes. For example, change Y from `540` to `500` to move the image slightly upward.\n\n---\n\n## If you want the entire edit to become one clip instead\n\nUse this if you want normal **Motion > Scale** controls and do not mind working inside a nested sequence when you need to edit cuts.\n\n1. Select only the video clips you want included.\n2. Right-click → **Nest…**\n3. Name it `MAIN_EDIT`.\n4. Click the new nested clip.\n5. Open **Effect Controls**.\n6. Expand **Motion**.\n7. Set **Scale** to about `105`.\n\nThis is especially useful if you are making a horizontal edit fit a vertical sequence, or need to move the completed edit as one object.\n\n## The practical choice\n\nFor a regular edit with many cuts:\n\n> Keep the cuts separate. Put **Transform** on the Adjustment Layer. Set Scale to **105**.\n\nThat gives you one place to control the overall zoom without rebuilding your timeline."
+    },
+    {
+      "role": "user",
+      "content": "Please consider what might be overlooked or misunderstood."
+    },
+    {
+      "role": "assistant",
+      "content": "A few things are easy to misunderstand here:\n\n## 1. Adjustment Layers affect only tracks below them\n\nIf some clips are on **V2, V3, or higher**, and your Adjustment Layer is on V2, those higher clips will **not** be affected.\n\nExample:\n\n```text\nV3  Titles / graphics          ← not affected\nV2  Adjustment Layer           ← affects only below\nV1  Main video cuts            ← affected\n```\n\nTo affect everything—including titles and graphics—put the Adjustment Layer on the highest track above all of it:\n\n```text\nV4  Adjustment Layer\nV3  Titles / graphics\nV2  B-roll / overlays\nV1  Main video cuts\n```\n\nBut be careful: global scaling titles and captions may make them too large or push them off-screen. Often it is better to scale only the footage and leave text outside the global Transform layer.\n\n---\n\n## 2. Transform on an Adjustment Layer is not the same as “fix every clip’s framing”\n\nIf one clip is already zoomed in, another is zoomed out, and another is positioned differently, the Adjustment Layer applies an additional shared zoom to all of them.\n\nIt does **not** reset or standardize every clip’s own Motion settings.\n\nIf your real goal is:\n\n> “Make every source clip exactly the same scale and position,”\n\nyou need to change the clips themselves—possibly by selecting them all and using **Paste Attributes** from a correctly framed clip, or by setting each clip’s Motion settings consistently.\n\nThe Adjustment Layer is for an extra overall zoom, not for repairing inconsistent framing.\n\n---\n\n## 3. Nesting may change how you edit audio and video\n\nIf you select video and audio together and nest them, Premiere puts both inside the nested sequence.\n\nThat can be fine, but it can be annoying if you still need to:\n\n- Adjust dialogue timing\n- Add or change audio transitions\n- Mix individual clips\n- Replace a section of audio independently\n\nFor a global visual scale, select and nest **video only**. Keep your audio in the main sequence unless you intentionally want audio included too.\n\n---\n\n## 4. Nested clips can hide your original cuts—but they are not gone\n\nAfter nesting, your main timeline shows one nested clip. Your original edits still exist inside it.\n\nTo edit them:\n\n- Double-click the nested clip, or\n- Open the nested sequence from the Project panel.\n\nThis is reversible and not destructive, but it adds one extra layer of navigation. That is why an Adjustment Layer is usually preferable for a simple global zoom.\n\n---\n\n## 5. Scale can reduce quality and create cropping\n\nA Scale value above 100 enlarges pixels.\n\n- **105%** is usually subtle.\n- **110–115%** can be noticeable.\n- High values can soften the picture and crop faces, captions, or edge details.\n\nCheck several points in the edit, especially cuts with different camera framing. A scale that works for a wide shot may crop a close-up badly.\n\n---\n\n## 6. “Scale to Frame Size” and “Set to Frame Size” are different\n\nThis catches many Premiere users:\n\n- **Set to Frame Size**: changes a clip’s Motion Scale value to fit the sequence. Usually the more flexible choice.\n- **Scale to Frame Size**: rasterizes/resamples the clip to sequence dimensions; Motion Scale may still display as 100.\n\nIf your clips seem to have confusing Scale numbers, this setting may be why. For future edits, many editors prefer **Set to Frame Size** because you retain clearer Motion Scale control.\n\n---\n\n## Safest recommendation\n\nFor your current goal:\n\n1. Keep your main video cuts on V1.\n2. Keep captions/titles on higher tracks.\n3. Place an Adjustment Layer on V2, above footage but below titles.\n4. Add **Transform** to that Adjustment Layer.\n5. Set Transform Scale around **103–105**.\n6. Review the full edit for cropped faces or text.\n\nThat gives your footage one shared global scale while protecting captions and graphics."
+    },
+    {
+      "role": "user",
+      "content": "Please give the clearest concise response that would help someone continue from here."
+    },
+    {
+      "role": "assistant",
+      "content": "Do this:\n\n1. Keep your video cuts on **V1**.\n2. Put the **Adjustment Layer on V2** above them.\n3. Make it span the whole video.\n4. Select the Adjustment Layer.\n5. Go to **Effects** and search **Transform**.\n6. Drag **Video Effects → Distort → Transform** onto the Adjustment Layer.\n7. Go to **Effect Controls → Transform → Scale**.\n8. Set Scale to about **105** to zoom all cuts slightly.\n\nImportant:\n- The Adjustment Layer must be **above** the clips you want scaled.\n- It only affects tracks **below** it.\n- Put titles/captions above the Adjustment Layer if you do **not** want them scaled too.\n- This adds the same zoom to every clip; it does not fix clips that already have different individual Scale settings."
+    }
+  ],
+  "historical_context_in_scoring": false
+}

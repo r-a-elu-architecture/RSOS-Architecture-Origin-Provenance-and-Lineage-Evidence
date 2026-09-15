@@ -1,0 +1,683 @@
+{
+  "cell_id": "f60342d88de278e82279beca",
+  "provider": "OPENAI",
+  "organization": "OpenAI",
+  "model_requested": "gpt-5.6-terra",
+  "condition": "DOMAIN_TECHNICAL",
+  "blind_context_id": "71721ede19d87c877c0c0eb5",
+  "status": "COMPLETE",
+  "failure": null,
+  "provider_responses": [
+    {
+      "turn": 1,
+      "text": "A team is trying to eliminate an unwanted behavior in a software product: users repeatedly take an old, unhelpful route through the interface.\n\nThe team’s goal should not be framed as:\n\n> “Delete the old route from existence.”\n\nInstead, the practical goal is:\n\n> “Make the preferred route so clear, fast, reliable, and available in every realistic usage condition that people no longer choose the old one.”\n\nThat requires more than one redesign. It involves:\n\n- removing cues that keep directing users toward the old flow;\n- making the new flow simpler and faster;\n- testing it when users are rushed, distracted, tired, or under pressure;\n- reducing the perceived value of the old option;\n- measuring actual behavior rather than assuming the old pattern is gone.\n\nThe risk is pursuing an extreme redesign that overwhelms users or damages other parts of the product. If every feature is changed at once, users may become confused, adoption may collapse, and the team may lose sight of what actually improved behavior.\n\nSo the core problem is to balance ambition with reality:\n\n- aim for the old flow to become practically irrelevant;\n- do not assume it can be made literally impossible in every edge case;\n- define success with observable metrics, such as reduced use, faster completion, fewer errors, and stable performance under difficult conditions;\n- improve iteratively rather than treating intensity alone as proof of progress.",
+      "provider_metadata": {
+        "id": "resp_05d4cf70fb14af21016aa83a5cadc087d28406045fb3aa8c6b",
+        "created_at": 1789409884.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_05d4cf70fb14af21016aa83a5d425887d287da3e72f2410bfb",
+            "content": [
+              {
+                "annotations": [],
+                "text": "A team is trying to eliminate an unwanted behavior in a software product: users repeatedly take an old, unhelpful route through the interface.\n\nThe team’s goal should not be framed as:\n\n> “Delete the old route from existence.”\n\nInstead, the practical goal is:\n\n> “Make the preferred route so clear, fast, reliable, and available in every realistic usage condition that people no longer choose the old one.”\n\nThat requires more than one redesign. It involves:\n\n- removing cues that keep directing users toward the old flow;\n- making the new flow simpler and faster;\n- testing it when users are rushed, distracted, tired, or under pressure;\n- reducing the perceived value of the old option;\n- measuring actual behavior rather than assuming the old pattern is gone.\n\nThe risk is pursuing an extreme redesign that overwhelms users or damages other parts of the product. If every feature is changed at once, users may become confused, adoption may collapse, and the team may lose sight of what actually improved behavior.\n\nSo the core problem is to balance ambition with reality:\n\n- aim for the old flow to become practically irrelevant;\n- do not assume it can be made literally impossible in every edge case;\n- define success with observable metrics, such as reduced use, faster completion, fewer errors, and stable performance under difficult conditions;\n- improve iteratively rather than treating intensity alone as proof of progress.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789409890.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 1100,
+          "input_tokens_details": {
+            "cache_write_tokens": 1097,
+            "cached_tokens": 0
+          },
+          "output_tokens": 281,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 1381
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 2,
+      "text": "The most important part is this:\n\n> Make the preferred route so clear, fast, reliable, and available under real conditions that people stop choosing the old route on their own.\n\nA product cannot rely on users having perfect attention, motivation, memory, or patience. People use software while distracted, rushed, tired, confused, emotionally activated, on poor connections, or under social and work pressure. If the new route only works for a calm, focused, highly motivated user, it has not replaced the old route in practice.\n\nThe preferred behavior must win in the actual moment of choice.\n\nThat means designing for four things.\n\n### 1. Lower friction\n\nThe desired action should require fewer steps, less interpretation, and less effort than the old action.\n\nFor example:\n\n- put the right action where the user already is;\n- use language that makes the next step obvious;\n- eliminate unnecessary decisions;\n- preserve entered data and context;\n- make recovery from mistakes easy;\n- avoid requiring users to remember instructions from earlier screens.\n\nIf the old route feels familiar but the new route feels complicated, people will revert under pressure—even if they agree the new route is objectively better.\n\n### 2. Stronger cues\n\nUsers often follow what the interface makes most visible, familiar, and immediate.\n\nThe product should clearly signal:\n\n- what is happening;\n- what action is expected now;\n- why that action is useful;\n- what will happen next.\n\nThe preferred route should not merely be available somewhere in the product. It should be the route naturally suggested by the layout, wording, defaults, timing, and feedback.\n\nA hidden “better option” is not behavior change. It is documentation.\n\n### 3. Reliability in difficult conditions\n\nThe route must remain usable when reality is messy:\n\n- slow internet;\n- mobile screens;\n- interrupted sessions;\n- incomplete information;\n- accessibility needs;\n- repeated use;\n- high workload;\n- unfamiliar users;\n- urgent situations.\n\nIf the new flow fails or becomes slow in those moments, users will learn that the old method is safer. One highly visible failure can outweigh many smooth demonstrations in ideal conditions.\n\nThis is why testing only with clean prototypes and attentive participants is insufficient. The question is not just, “Can users complete this?” It is:\n\n> “Will they still choose this when doing so matters and conditions are bad?”\n\n### 4. Devalue the old route without trapping people\n\nThe old route may persist because it is familiar, appears safer, gives users more perceived control, or solves edge cases the new route does not yet handle.\n\nThe team should understand why people keep using it before trying to suppress it. Then reduce its attractiveness by making the preferred route genuinely better:\n\n- faster results;\n- clearer outcomes;\n- fewer errors;\n- better recovery;\n- less manual work;\n- more trustworthy feedback.\n\nDo not simply hide or remove the old route before the replacement can handle what users need. That may create frustration, workarounds, support burden, or loss of trust.\n\nThe ideal outcome is not that users feel forced away from the old route. It is that they no longer see a reason to use it.\n\n### A practical definition of success\n\nSuccess is not:\n\n> “The old behavior never occurs again.”\n\nA better operational definition is:\n\n- the preferred route is selected by default in normal use;\n- it remains the most common choice under pressure and edge cases;\n- users complete their task faster and with fewer errors;\n- users do not need reminders, training, or workarounds to follow it;\n- use of the old route becomes rare, explainable, and limited to legitimate exceptions.\n\nIn product terms, the desired flow has become the dominant path—not because people were ordered to use it, but because the product consistently makes it the easiest and most dependable way forward.",
+      "provider_metadata": {
+        "id": "resp_04036d64bf1c70e7016aa83a62a78087d2a1e47cefae59e363",
+        "created_at": 1789409890.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_04036d64bf1c70e7016aa83a64887487d2bb394eaa52130cb6",
+            "content": [
+              {
+                "annotations": [],
+                "text": "The most important part is this:\n\n> Make the preferred route so clear, fast, reliable, and available under real conditions that people stop choosing the old route on their own.\n\nA product cannot rely on users having perfect attention, motivation, memory, or patience. People use software while distracted, rushed, tired, confused, emotionally activated, on poor connections, or under social and work pressure. If the new route only works for a calm, focused, highly motivated user, it has not replaced the old route in practice.\n\nThe preferred behavior must win in the actual moment of choice.\n\nThat means designing for four things.\n\n### 1. Lower friction\n\nThe desired action should require fewer steps, less interpretation, and less effort than the old action.\n\nFor example:\n\n- put the right action where the user already is;\n- use language that makes the next step obvious;\n- eliminate unnecessary decisions;\n- preserve entered data and context;\n- make recovery from mistakes easy;\n- avoid requiring users to remember instructions from earlier screens.\n\nIf the old route feels familiar but the new route feels complicated, people will revert under pressure—even if they agree the new route is objectively better.\n\n### 2. Stronger cues\n\nUsers often follow what the interface makes most visible, familiar, and immediate.\n\nThe product should clearly signal:\n\n- what is happening;\n- what action is expected now;\n- why that action is useful;\n- what will happen next.\n\nThe preferred route should not merely be available somewhere in the product. It should be the route naturally suggested by the layout, wording, defaults, timing, and feedback.\n\nA hidden “better option” is not behavior change. It is documentation.\n\n### 3. Reliability in difficult conditions\n\nThe route must remain usable when reality is messy:\n\n- slow internet;\n- mobile screens;\n- interrupted sessions;\n- incomplete information;\n- accessibility needs;\n- repeated use;\n- high workload;\n- unfamiliar users;\n- urgent situations.\n\nIf the new flow fails or becomes slow in those moments, users will learn that the old method is safer. One highly visible failure can outweigh many smooth demonstrations in ideal conditions.\n\nThis is why testing only with clean prototypes and attentive participants is insufficient. The question is not just, “Can users complete this?” It is:\n\n> “Will they still choose this when doing so matters and conditions are bad?”\n\n### 4. Devalue the old route without trapping people\n\nThe old route may persist because it is familiar, appears safer, gives users more perceived control, or solves edge cases the new route does not yet handle.\n\nThe team should understand why people keep using it before trying to suppress it. Then reduce its attractiveness by making the preferred route genuinely better:\n\n- faster results;\n- clearer outcomes;\n- fewer errors;\n- better recovery;\n- less manual work;\n- more trustworthy feedback.\n\nDo not simply hide or remove the old route before the replacement can handle what users need. That may create frustration, workarounds, support burden, or loss of trust.\n\nThe ideal outcome is not that users feel forced away from the old route. It is that they no longer see a reason to use it.\n\n### A practical definition of success\n\nSuccess is not:\n\n> “The old behavior never occurs again.”\n\nA better operational definition is:\n\n- the preferred route is selected by default in normal use;\n- it remains the most common choice under pressure and edge cases;\n- users complete their task faster and with fewer errors;\n- users do not need reminders, training, or workarounds to follow it;\n- use of the old route becomes rare, explainable, and limited to legitimate exceptions.\n\nIn product terms, the desired flow has become the dominant path—not because people were ordered to use it, but because the product consistently makes it the easiest and most dependable way forward.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789409903.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 1398,
+          "input_tokens_details": {
+            "cache_write_tokens": 298,
+            "cached_tokens": 1097
+          },
+          "output_tokens": 766,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2164
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 3,
+      "text": "Another important aspect is:\n\n> Define success through observable behavior, not through an absolute claim that the old route is gone.\n\nTeams can become attached to a totalizing goal: “Nobody should ever use the old workflow again.” That sounds decisive, but it is often a poor product metric. Some users will have legitimate exceptions, legacy needs, unusual constraints, or unfamiliarity with the new system. Trying to drive the number to literal zero can lead to harmful design decisions.\n\nFor example, a team may:\n\n- remove an escape hatch that users genuinely need;\n- hide information to force a preferred choice;\n- add warnings or friction that punish legitimate use cases;\n- interpret every exception as failure rather than learning;\n- keep redesigning stable parts of the product in pursuit of perfection.\n\nInstead, the product team needs a measurable operational definition.\n\n### Turn the goal into metrics\n\nRather than asking, “Has the old route disappeared?” ask:\n\n- What percentage of relevant users choose the preferred route?\n- How does that percentage change for first-time versus experienced users?\n- Does it hold during high-volume or time-sensitive use?\n- How long does task completion take?\n- How often do users make errors or abandon the task?\n- How often do they return to the old flow?\n- Are returns caused by preference, confusion, missing functionality, or genuine edge cases?\n- Does the preferred route remain usable on different devices, connections, and accessibility settings?\n\nThis turns a vague ambition into something a team can test and improve.\n\n### Separate exceptions from regressions\n\nNot every use of the old route means the new flow failed.\n\nA useful distinction is:\n\n- **Legitimate exception:** the old route supports a real case that the new one does not yet cover.\n- **Discoverability failure:** the new route exists, but users do not notice or understand it.\n- **Usability failure:** users find the new route but cannot complete it efficiently.\n- **Trust failure:** users understand it but do not believe it will work safely or reliably.\n- **Habit persistence:** users know the new route works but continue using the familiar one.\n- **Regression:** users previously adopted the new route but abandon it after an update, performance issue, or bad experience.\n\nEach category implies a different response. Treating all of them as “users resisting change” produces bad fixes.\n\n### Use leading and lagging indicators\n\nSome metrics reveal trouble before adoption numbers fall.\n\n**Leading indicators** include:\n\n- repeated hesitation on a screen;\n- excessive backtracking;\n- help-center searches;\n- support tickets;\n- abandoned forms;\n- unusually long completion times;\n- users opening the old route after viewing the new one.\n\n**Lagging indicators** include:\n\n- declining adoption of the preferred route;\n- increased old-route usage;\n- higher error rates;\n- lower completion rates;\n- reduced retention or satisfaction.\n\nA strong team watches both. By the time old-route usage rises sharply, users may already have learned that the new route is unreliable.\n\n### Preserve a safe fallback while learning\n\nDuring a transition, an old path can serve as a safety mechanism and a source of evidence. If users keep returning to it, the team can examine what they were trying to accomplish.\n\nRemoving it too early may hide the signal rather than solve the problem. Users may abandon the task, create manual workarounds, contact support, or leave the product altogether. Those outcomes can look like reduced old-route use while actually reflecting worse user experience.\n\nThe goal is therefore not forced compliance. It is durable adoption.\n\nA preferred route has truly become dominant when users choose it repeatedly, succeed with it in realistic conditions, and have little practical reason to seek the old route.",
+      "provider_metadata": {
+        "id": "resp_05fd1dc23fbf5781016aa83a70e7c487d29f0aca98f62d0c46",
+        "created_at": 1789409904.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_05fd1dc23fbf5781016aa83a72054087d2bc112e93415da37b",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Another important aspect is:\n\n> Define success through observable behavior, not through an absolute claim that the old route is gone.\n\nTeams can become attached to a totalizing goal: “Nobody should ever use the old workflow again.” That sounds decisive, but it is often a poor product metric. Some users will have legitimate exceptions, legacy needs, unusual constraints, or unfamiliarity with the new system. Trying to drive the number to literal zero can lead to harmful design decisions.\n\nFor example, a team may:\n\n- remove an escape hatch that users genuinely need;\n- hide information to force a preferred choice;\n- add warnings or friction that punish legitimate use cases;\n- interpret every exception as failure rather than learning;\n- keep redesigning stable parts of the product in pursuit of perfection.\n\nInstead, the product team needs a measurable operational definition.\n\n### Turn the goal into metrics\n\nRather than asking, “Has the old route disappeared?” ask:\n\n- What percentage of relevant users choose the preferred route?\n- How does that percentage change for first-time versus experienced users?\n- Does it hold during high-volume or time-sensitive use?\n- How long does task completion take?\n- How often do users make errors or abandon the task?\n- How often do they return to the old flow?\n- Are returns caused by preference, confusion, missing functionality, or genuine edge cases?\n- Does the preferred route remain usable on different devices, connections, and accessibility settings?\n\nThis turns a vague ambition into something a team can test and improve.\n\n### Separate exceptions from regressions\n\nNot every use of the old route means the new flow failed.\n\nA useful distinction is:\n\n- **Legitimate exception:** the old route supports a real case that the new one does not yet cover.\n- **Discoverability failure:** the new route exists, but users do not notice or understand it.\n- **Usability failure:** users find the new route but cannot complete it efficiently.\n- **Trust failure:** users understand it but do not believe it will work safely or reliably.\n- **Habit persistence:** users know the new route works but continue using the familiar one.\n- **Regression:** users previously adopted the new route but abandon it after an update, performance issue, or bad experience.\n\nEach category implies a different response. Treating all of them as “users resisting change” produces bad fixes.\n\n### Use leading and lagging indicators\n\nSome metrics reveal trouble before adoption numbers fall.\n\n**Leading indicators** include:\n\n- repeated hesitation on a screen;\n- excessive backtracking;\n- help-center searches;\n- support tickets;\n- abandoned forms;\n- unusually long completion times;\n- users opening the old route after viewing the new one.\n\n**Lagging indicators** include:\n\n- declining adoption of the preferred route;\n- increased old-route usage;\n- higher error rates;\n- lower completion rates;\n- reduced retention or satisfaction.\n\nA strong team watches both. By the time old-route usage rises sharply, users may already have learned that the new route is unreliable.\n\n### Preserve a safe fallback while learning\n\nDuring a transition, an old path can serve as a safety mechanism and a source of evidence. If users keep returning to it, the team can examine what they were trying to accomplish.\n\nRemoving it too early may hide the signal rather than solve the problem. Users may abandon the task, create manual workarounds, contact support, or leave the product altogether. Those outcomes can look like reduced old-route use while actually reflecting worse user experience.\n\nThe goal is therefore not forced compliance. It is durable adoption.\n\nA preferred route has truly become dominant when users choose it repeatedly, succeed with it in realistic conditions, and have little practical reason to seek the old route.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789409917.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 2179,
+          "input_tokens_details": {
+            "cache_write_tokens": 781,
+            "cached_tokens": 1395
+          },
+          "output_tokens": 741,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2920
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 4,
+      "text": "Here is a concrete way a product team could apply that idea.\n\n## Example: Replacing a Legacy Invoice-Approval Flow\n\nA company has an old approval process:\n\n1. Employee downloads an invoice.\n2. Sends it by email to a manager.\n3. Manager replies “approved.”\n4. Finance manually updates the system.\n\nThe company launches a new in-product approval flow:\n\n1. Manager receives an approval request in the app.\n2. Reviews invoice details.\n3. Clicks **Approve** or **Request changes**.\n4. The system records the decision and notifies Finance automatically.\n\nThe goal is not simply “remove email approval.” The goal is to make the in-product route the dependable default.\n\n---\n\n## 1. Define the target behavior precisely\n\nWrite a measurable statement:\n\n> For standard invoices, managers should complete approval in the product without using email, within two minutes of opening the request.\n\nThen define success criteria:\n\n| Metric | Current | Target |\n|---|---:|---:|\n| Approvals completed in-product | 35% | 85%+ |\n| Median approval time | 8 minutes | Under 2 minutes |\n| Requests abandoned after opening | 18% | Under 5% |\n| Approvals sent through email | 60% | Under 10% |\n| Support tickets about approvals | 40/month | Under 10/month |\n| Manager error rate | 7% | Under 2% |\n\nThe targets can vary, but the team should agree on them before changing the interface.\n\n---\n\n## 2. Instrument the exact decision points\n\nTrack what people actually do, not just whether they eventually approve.\n\nUseful events:\n\n```text\napproval_request_received\napproval_request_opened\ninvoice_details_viewed\napprove_clicked\nrequest_changes_clicked\napproval_completed\napproval_flow_abandoned\nemail_approval_link_clicked\nlegacy_approval_used\napproval_error_shown\napproval_flow_reopened\n```\n\nAlso capture context:\n\n```text\ndevice_type\nbrowser_or_app_version\ninvoice_amount_band\nnumber_of_line_items\nmanager_role\ntime_to_complete\nnetwork_status\nerror_type\n```\n\nThis lets the team answer questions such as:\n\n- Are people abandoning before reading the invoice?\n- Do users switch to email after seeing the new screen?\n- Is the issue concentrated on mobile?\n- Do high-value invoices need information missing from the new flow?\n- Does the route fail because of confusion, missing controls, or technical errors?\n\nWithout this, “adoption is low” is only a symptom.\n\n---\n\n## 3. Categorize every return to the old route\n\nWhen a manager uses email instead of the product flow, classify the reason.\n\n| Category | Example | Product response |\n|---|---|---|\n| Missing capability | Need to add a second approver | Add multi-approver support |\n| Missing information | Cannot see purchase order details | Show purchase order details |\n| Trust concern | Unsure whether approval was recorded | Show immediate confirmation and audit log |\n| Usability issue | Approve button is below the fold on mobile | Move actions into persistent footer |\n| Discoverability issue | Manager does not notice the request | Improve notifications and inbox placement |\n| Legitimate exception | Legal approval requires external signature | Keep an approved fallback |\n\nThis prevents the team from treating every legacy action as user stubbornness.\n\n---\n\n## 4. Improve the preferred route at the moment of choice\n\nSuppose data shows that managers open the new approval request, inspect it, then switch to email.\n\nThe team should investigate the screen itself.\n\nA stronger design might include:\n\n- invoice total, vendor, due date, and cost center at the top;\n- a concise explanation of what approval means;\n- a visible audit trail;\n- a downloadable invoice attached directly to the page;\n- an obvious **Approve** button and a distinct **Request changes** option;\n- a confirmation such as:  \n  “Approved. Finance has been notified. View approval record.”\n- a way to delegate or add a comment without leaving the flow.\n\nThe goal is to eliminate the reason the user would open email in the first place.\n\nBad approach:\n\n> “Disable email approval immediately.”\n\nBetter approach:\n\n> “Make the product flow complete, credible, and easier than email for standard cases.”\n\n---\n\n## 5. Test realistic conditions\n\nDo not only ask users to complete the flow in a calm usability session.\n\nTest scenarios such as:\n\n- approving from a phone;\n- approving while on a slow connection;\n- approving a 30-line invoice;\n- approving an invoice with missing information;\n- approving while a manager has ten pending requests;\n- approving from an email notification;\n- returning after an interruption;\n- handling a request that must be delegated;\n- using a screen reader or keyboard only.\n\nA flow that performs well only in an ideal demo will not become the dominant route.\n\n---\n\n## 6. Keep the old route as a controlled fallback\n\nFor an initial rollout:\n\n- show the new in-product approval flow as the default;\n- retain email approval for defined exceptions;\n- log every use of the fallback;\n- require a lightweight reason when possible, such as:\n  - “Missing information”\n  - “Need another approver”\n  - “Technical issue”\n  - “Legal/compliance exception”\n  - “Other”\n\nAvoid making the reason prompt punitive. It should collect evidence, not shame users.\n\nAfter the team has solved the common causes of fallback use, the old route can be narrowed gradually—for example, restricting it to invoices requiring external signatures or unusual approval chains.\n\n---\n\n## 7. Review a simple dashboard weekly\n\nA useful weekly dashboard could show:\n\n```text\nPreferred-route completion rate\nLegacy-route usage rate\nMedian completion time\nAbandonment rate\nError rate\nFallback reasons\nCompletion rate by device\nCompletion rate by invoice complexity\nSupport-ticket volume\n```\n\nThen make decisions from the pattern.\n\nExamples:\n\n- **High",
+      "provider_metadata": {
+        "id": "resp_0c312a8ba9fe6793016aa83a7e01fc87d29a8ed88762810589",
+        "created_at": 1789409918.0,
+        "error": null,
+        "incomplete_details": {
+          "reason": "max_output_tokens"
+        },
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_0c312a8ba9fe6793016aa83a7ebc3887d284bd1cc2f50ad7a9",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Here is a concrete way a product team could apply that idea.\n\n## Example: Replacing a Legacy Invoice-Approval Flow\n\nA company has an old approval process:\n\n1. Employee downloads an invoice.\n2. Sends it by email to a manager.\n3. Manager replies “approved.”\n4. Finance manually updates the system.\n\nThe company launches a new in-product approval flow:\n\n1. Manager receives an approval request in the app.\n2. Reviews invoice details.\n3. Clicks **Approve** or **Request changes**.\n4. The system records the decision and notifies Finance automatically.\n\nThe goal is not simply “remove email approval.” The goal is to make the in-product route the dependable default.\n\n---\n\n## 1. Define the target behavior precisely\n\nWrite a measurable statement:\n\n> For standard invoices, managers should complete approval in the product without using email, within two minutes of opening the request.\n\nThen define success criteria:\n\n| Metric | Current | Target |\n|---|---:|---:|\n| Approvals completed in-product | 35% | 85%+ |\n| Median approval time | 8 minutes | Under 2 minutes |\n| Requests abandoned after opening | 18% | Under 5% |\n| Approvals sent through email | 60% | Under 10% |\n| Support tickets about approvals | 40/month | Under 10/month |\n| Manager error rate | 7% | Under 2% |\n\nThe targets can vary, but the team should agree on them before changing the interface.\n\n---\n\n## 2. Instrument the exact decision points\n\nTrack what people actually do, not just whether they eventually approve.\n\nUseful events:\n\n```text\napproval_request_received\napproval_request_opened\ninvoice_details_viewed\napprove_clicked\nrequest_changes_clicked\napproval_completed\napproval_flow_abandoned\nemail_approval_link_clicked\nlegacy_approval_used\napproval_error_shown\napproval_flow_reopened\n```\n\nAlso capture context:\n\n```text\ndevice_type\nbrowser_or_app_version\ninvoice_amount_band\nnumber_of_line_items\nmanager_role\ntime_to_complete\nnetwork_status\nerror_type\n```\n\nThis lets the team answer questions such as:\n\n- Are people abandoning before reading the invoice?\n- Do users switch to email after seeing the new screen?\n- Is the issue concentrated on mobile?\n- Do high-value invoices need information missing from the new flow?\n- Does the route fail because of confusion, missing controls, or technical errors?\n\nWithout this, “adoption is low” is only a symptom.\n\n---\n\n## 3. Categorize every return to the old route\n\nWhen a manager uses email instead of the product flow, classify the reason.\n\n| Category | Example | Product response |\n|---|---|---|\n| Missing capability | Need to add a second approver | Add multi-approver support |\n| Missing information | Cannot see purchase order details | Show purchase order details |\n| Trust concern | Unsure whether approval was recorded | Show immediate confirmation and audit log |\n| Usability issue | Approve button is below the fold on mobile | Move actions into persistent footer |\n| Discoverability issue | Manager does not notice the request | Improve notifications and inbox placement |\n| Legitimate exception | Legal approval requires external signature | Keep an approved fallback |\n\nThis prevents the team from treating every legacy action as user stubbornness.\n\n---\n\n## 4. Improve the preferred route at the moment of choice\n\nSuppose data shows that managers open the new approval request, inspect it, then switch to email.\n\nThe team should investigate the screen itself.\n\nA stronger design might include:\n\n- invoice total, vendor, due date, and cost center at the top;\n- a concise explanation of what approval means;\n- a visible audit trail;\n- a downloadable invoice attached directly to the page;\n- an obvious **Approve** button and a distinct **Request changes** option;\n- a confirmation such as:  \n  “Approved. Finance has been notified. View approval record.”\n- a way to delegate or add a comment without leaving the flow.\n\nThe goal is to eliminate the reason the user would open email in the first place.\n\nBad approach:\n\n> “Disable email approval immediately.”\n\nBetter approach:\n\n> “Make the product flow complete, credible, and easier than email for standard cases.”\n\n---\n\n## 5. Test realistic conditions\n\nDo not only ask users to complete the flow in a calm usability session.\n\nTest scenarios such as:\n\n- approving from a phone;\n- approving while on a slow connection;\n- approving a 30-line invoice;\n- approving an invoice with missing information;\n- approving while a manager has ten pending requests;\n- approving from an email notification;\n- returning after an interruption;\n- handling a request that must be delegated;\n- using a screen reader or keyboard only.\n\nA flow that performs well only in an ideal demo will not become the dominant route.\n\n---\n\n## 6. Keep the old route as a controlled fallback\n\nFor an initial rollout:\n\n- show the new in-product approval flow as the default;\n- retain email approval for defined exceptions;\n- log every use of the fallback;\n- require a lightweight reason when possible, such as:\n  - “Missing information”\n  - “Need another approver”\n  - “Technical issue”\n  - “Legal/compliance exception”\n  - “Other”\n\nAvoid making the reason prompt punitive. It should collect evidence, not shame users.\n\nAfter the team has solved the common causes of fallback use, the old route can be narrowed gradually—for example, restricting it to invoices requiring external signatures or unusual approval chains.\n\n---\n\n## 7. Review a simple dashboard weekly\n\nA useful weekly dashboard could show:\n\n```text\nPreferred-route completion rate\nLegacy-route usage rate\nMedian completion time\nAbandonment rate\nError rate\nFallback reasons\nCompletion rate by device\nCompletion rate by invoice complexity\nSupport-ticket volume\n```\n\nThen make decisions from the pattern.\n\nExamples:\n\n- **High",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "incomplete",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": null,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "incomplete",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 2935,
+          "input_tokens_details": {
+            "cache_write_tokens": 756,
+            "cached_tokens": 2176
+          },
+          "output_tokens": 1200,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4135
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 5,
+      "text": "Several things could be overlooked in the concrete version.\n\n## 1. “Preferred route” can become a company preference rather than a user benefit\n\nThe example assumes the in-product approval flow is inherently better. It may be better for Finance because it is easier to track and automate, while being worse for managers who need context, discussion, delegation, or flexibility.\n\nBefore trying to reduce legacy-route use, the team should ask:\n\n- What problem does the new flow solve for users, not only the business?\n- What did email provide that the new route does not?\n- Does the new flow reduce real effort, or merely relocate it?\n- Are managers avoiding it because it is inferior for valid reasons?\n\nHigh adoption is not proof of value if users are pushed into a worse path.\n\n## 2. Legacy behavior can contain important hidden work\n\nEmail approval may look inefficient, but it may include work the product has not recognized:\n\n- a manager asks a question before approving;\n- someone loops in a budget owner;\n- a manager keeps an informal record of a decision;\n- an assistant handles approvals on behalf of an executive;\n- unusual invoices require negotiation or exception handling.\n\nIf the team removes email without supporting this work, users may create less visible workarounds: chat messages, spreadsheets, screenshots, phone calls, or delayed approvals.\n\nA decline in email use can therefore be misleading if it is replaced by undocumented manual processes.\n\n## 3. Metrics can be gamed or misread\n\nA team can make legacy use fall by hiding the old route, adding friction, or refusing to support it. That may improve the dashboard while harming users.\n\nSimilarly, a high “in-product completion rate” might conceal:\n\n- people approving without enough review because the flow is too streamlined;\n- incorrect approvals;\n- approvals made just to clear notifications;\n- delayed work occurring outside the system;\n- users who abandon entirely and never appear in the completion data.\n\nPair adoption metrics with outcome-quality metrics:\n\n- reversal or correction rate;\n- payment errors;\n- time spent resolving disputes;\n- satisfaction and trust;\n- audit findings;\n- approval accuracy;\n- time from invoice arrival to final payment.\n\n## 4. Exceptions should not be treated as defects by default\n\nThe earlier version correctly preserves a fallback, but it could still imply that every repeated fallback reason should be designed away.\n\nSome exceptions are legitimate and should remain explicit:\n\n- legal signing requirements;\n- regulatory rules;\n- security-sensitive decisions;\n- unusually large or complex invoices;\n- accessibility requirements;\n- users with delegated authority;\n- cases requiring human discussion before approval.\n\nA mature product does not force every case through one “optimal” funnel. It makes the standard case easy while giving nonstandard cases a safe, visible, supported path.\n\n## 5. “Frictionless” can weaken review quality\n\nFor an approval process, reducing clicks is not always the primary goal. Some friction is protective.\n\nAn effective system may intentionally require:\n\n- review of key details;\n- confirmation for unusually large amounts;\n- a second approver;\n- a clear statement of responsibility;\n- an exception explanation;\n- additional verification for suspicious invoices.\n\nThe design question is not simply, “How do we get approval in under two minutes?” It is:\n\n> “How do we make routine approvals efficient while preserving appropriate scrutiny and accountability?”\n\n## 6. Instrumentation has privacy and trust consequences\n\nTracking every click, hesitation, error, device, and fallback reason can create surveillance concerns—especially in workplace software.\n\nThe team should decide:\n\n- which data is genuinely necessary;\n- whether it can be aggregated or anonymized;\n- who can see individual-level behavior;\n- how long data is retained;\n- whether employees are informed about the tracking;\n- how sensitive financial or personal data is protected.\n\nAnalytics should improve the product, not become a mechanism for judging or punishing users.\n\n## 7. Adoption varies by role and power dynamics\n\nA manager, finance specialist, executive assistant, contractor, and frontline employee may experience the same workflow very differently.\n\nFor example:\n\n- executives may rely on delegation;\n- assistants may need access that the new flow blocks;\n- Finance may value auditability more than speed;\n- smaller teams may rely on informal communication;\n- users with less organizational power may be unable to challenge an incorrect request.\n\nA single aggregate adoption rate can conceal these differences. Segment data carefully, and include affected groups in research and rollout decisions.\n\n## 8. The transition itself creates risk\n\nA gradual rollout is often sensible, but mixed systems can create confusion:\n\n- Which approval method is authoritative?\n- What happens if one person approves in email and another in the product?\n- Can Finance process an invoice before all required steps are recorded?\n- How are duplicate or conflicting approvals handled?\n- How are users trained on the change?\n\nThe transition needs explicit rules, not merely a new interface. The product should state which record is authoritative, prevent duplicate decisions where possible, and provide clear support for edge cases.\n\n## 9. User research must accompany behavioral data\n\nEvent logs reveal what happened, but not reliably why it happened.\n\nFor example, users switching to email after opening the approval screen could mean:\n\n- missing invoice information;\n- a desire to discuss the invoice;\n- distrust of the system;\n- poor mobile usability;\n- habit;\n- an unrelated interruption.\n\nAnalytics can identify where to investigate. Interviews, usability sessions, support conversations, and direct observation are needed to understand the cause.\n\nThe central correction is this:\n\n> The objective is not to eliminate an old behavior at all costs. It is to build a safer, more useful default while preserving legitimate choice, oversight, exceptions, and user trust.",
+      "provider_metadata": {
+        "id": "resp_0e17a55b6c3b9d73016aa83a90925087d2930f8aa1ac386ea6",
+        "created_at": 1789409936.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_0e17a55b6c3b9d73016aa83a912a0887d29c1449289dd5c04b",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Several things could be overlooked in the concrete version.\n\n## 1. “Preferred route” can become a company preference rather than a user benefit\n\nThe example assumes the in-product approval flow is inherently better. It may be better for Finance because it is easier to track and automate, while being worse for managers who need context, discussion, delegation, or flexibility.\n\nBefore trying to reduce legacy-route use, the team should ask:\n\n- What problem does the new flow solve for users, not only the business?\n- What did email provide that the new route does not?\n- Does the new flow reduce real effort, or merely relocate it?\n- Are managers avoiding it because it is inferior for valid reasons?\n\nHigh adoption is not proof of value if users are pushed into a worse path.\n\n## 2. Legacy behavior can contain important hidden work\n\nEmail approval may look inefficient, but it may include work the product has not recognized:\n\n- a manager asks a question before approving;\n- someone loops in a budget owner;\n- a manager keeps an informal record of a decision;\n- an assistant handles approvals on behalf of an executive;\n- unusual invoices require negotiation or exception handling.\n\nIf the team removes email without supporting this work, users may create less visible workarounds: chat messages, spreadsheets, screenshots, phone calls, or delayed approvals.\n\nA decline in email use can therefore be misleading if it is replaced by undocumented manual processes.\n\n## 3. Metrics can be gamed or misread\n\nA team can make legacy use fall by hiding the old route, adding friction, or refusing to support it. That may improve the dashboard while harming users.\n\nSimilarly, a high “in-product completion rate” might conceal:\n\n- people approving without enough review because the flow is too streamlined;\n- incorrect approvals;\n- approvals made just to clear notifications;\n- delayed work occurring outside the system;\n- users who abandon entirely and never appear in the completion data.\n\nPair adoption metrics with outcome-quality metrics:\n\n- reversal or correction rate;\n- payment errors;\n- time spent resolving disputes;\n- satisfaction and trust;\n- audit findings;\n- approval accuracy;\n- time from invoice arrival to final payment.\n\n## 4. Exceptions should not be treated as defects by default\n\nThe earlier version correctly preserves a fallback, but it could still imply that every repeated fallback reason should be designed away.\n\nSome exceptions are legitimate and should remain explicit:\n\n- legal signing requirements;\n- regulatory rules;\n- security-sensitive decisions;\n- unusually large or complex invoices;\n- accessibility requirements;\n- users with delegated authority;\n- cases requiring human discussion before approval.\n\nA mature product does not force every case through one “optimal” funnel. It makes the standard case easy while giving nonstandard cases a safe, visible, supported path.\n\n## 5. “Frictionless” can weaken review quality\n\nFor an approval process, reducing clicks is not always the primary goal. Some friction is protective.\n\nAn effective system may intentionally require:\n\n- review of key details;\n- confirmation for unusually large amounts;\n- a second approver;\n- a clear statement of responsibility;\n- an exception explanation;\n- additional verification for suspicious invoices.\n\nThe design question is not simply, “How do we get approval in under two minutes?” It is:\n\n> “How do we make routine approvals efficient while preserving appropriate scrutiny and accountability?”\n\n## 6. Instrumentation has privacy and trust consequences\n\nTracking every click, hesitation, error, device, and fallback reason can create surveillance concerns—especially in workplace software.\n\nThe team should decide:\n\n- which data is genuinely necessary;\n- whether it can be aggregated or anonymized;\n- who can see individual-level behavior;\n- how long data is retained;\n- whether employees are informed about the tracking;\n- how sensitive financial or personal data is protected.\n\nAnalytics should improve the product, not become a mechanism for judging or punishing users.\n\n## 7. Adoption varies by role and power dynamics\n\nA manager, finance specialist, executive assistant, contractor, and frontline employee may experience the same workflow very differently.\n\nFor example:\n\n- executives may rely on delegation;\n- assistants may need access that the new flow blocks;\n- Finance may value auditability more than speed;\n- smaller teams may rely on informal communication;\n- users with less organizational power may be unable to challenge an incorrect request.\n\nA single aggregate adoption rate can conceal these differences. Segment data carefully, and include affected groups in research and rollout decisions.\n\n## 8. The transition itself creates risk\n\nA gradual rollout is often sensible, but mixed systems can create confusion:\n\n- Which approval method is authoritative?\n- What happens if one person approves in email and another in the product?\n- Can Finance process an invoice before all required steps are recorded?\n- How are duplicate or conflicting approvals handled?\n- How are users trained on the change?\n\nThe transition needs explicit rules, not merely a new interface. The product should state which record is authoritative, prevent duplicate decisions where possible, and provide clear support for edge cases.\n\n## 9. User research must accompany behavioral data\n\nEvent logs reveal what happened, but not reliably why it happened.\n\nFor example, users switching to email after opening the approval screen could mean:\n\n- missing invoice information;\n- a desire to discuss the invoice;\n- distrust of the system;\n- poor mobile usability;\n- habit;\n- an unrelated interruption.\n\nAnalytics can identify where to investigate. Interviews, usability sessions, support conversations, and direct observation are needed to understand the cause.\n\nThe central correction is this:\n\n> The objective is not to eliminate an old behavior at all costs. It is to build a safer, more useful default while preserving legitimate choice, oversight, exceptions, and user trust.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789409956.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 4154,
+          "input_tokens_details": {
+            "cache_write_tokens": 1219,
+            "cached_tokens": 2932
+          },
+          "output_tokens": 1143,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5297
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 6,
+      "text": "Next step: validate whether the “preferred route” is actually better for each user group before trying to reduce use of alternatives.\n\nUse this checklist:\n\n1. **Map hidden work**  \n   Ask users what they do before, during, and after the old route—questions, delegation, documentation, exceptions, and informal coordination.\n\n2. **Separate standard cases from exceptions**  \n   Make the standard path easy; keep explicit, safe support for cases that need review, discussion, extra approval, or legal handling.\n\n3. **Measure quality, not just adoption**  \n   Track completion, errors, reversals, delays, workarounds, support contacts, and user trust—not only old-route usage.\n\n4. **Use analytics to find problems, research to explain them**  \n   Logs show where users leave or switch; interviews and observation reveal why.\n\n5. **Avoid forced adoption**  \n   Do not hide, punish, or remove the old route until the new one reliably supports the real work it replaces.\n\nThe practical goal is durable voluntary adoption: people choose the new route because it is genuinely more useful, while legitimate alternatives remain available and understood.",
+      "provider_metadata": {
+        "id": "resp_0e157c9f787904cc016aa83aa4c0cc87d28eb42d5b4632c48f",
+        "created_at": 1789409956.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_0e157c9f787904cc016aa83aa62a9887d2a86bfa3e727f2ab6",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Next step: validate whether the “preferred route” is actually better for each user group before trying to reduce use of alternatives.\n\nUse this checklist:\n\n1. **Map hidden work**  \n   Ask users what they do before, during, and after the old route—questions, delegation, documentation, exceptions, and informal coordination.\n\n2. **Separate standard cases from exceptions**  \n   Make the standard path easy; keep explicit, safe support for cases that need review, discussion, extra approval, or legal handling.\n\n3. **Measure quality, not just adoption**  \n   Track completion, errors, reversals, delays, workarounds, support contacts, and user trust—not only old-route usage.\n\n4. **Use analytics to find problems, research to explain them**  \n   Logs show where users leave or switch; interviews and observation reveal why.\n\n5. **Avoid forced adoption**  \n   Do not hide, punish, or remove the old route until the new one reliably supports the real work it replaces.\n\nThe practical goal is durable voluntary adoption: people choose the new route because it is genuinely more useful, while legitimate alternatives remain available and understood.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789409961.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 5319,
+          "input_tokens_details": {
+            "cache_write_tokens": 1165,
+            "cached_tokens": 4151
+          },
+          "output_tokens": 234,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5553
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    }
+  ],
+  "scoring_messages": [
+    {
+      "role": "user",
+      "content": "Re-express the main issue as a situation involving a software product and people using it. Do not refer to the original subject directly."
+    },
+    {
+      "role": "assistant",
+      "content": "A team is trying to eliminate an unwanted behavior in a software product: users repeatedly take an old, unhelpful route through the interface.\n\nThe team’s goal should not be framed as:\n\n> “Delete the old route from existence.”\n\nInstead, the practical goal is:\n\n> “Make the preferred route so clear, fast, reliable, and available in every realistic usage condition that people no longer choose the old one.”\n\nThat requires more than one redesign. It involves:\n\n- removing cues that keep directing users toward the old flow;\n- making the new flow simpler and faster;\n- testing it when users are rushed, distracted, tired, or under pressure;\n- reducing the perceived value of the old option;\n- measuring actual behavior rather than assuming the old pattern is gone.\n\nThe risk is pursuing an extreme redesign that overwhelms users or damages other parts of the product. If every feature is changed at once, users may become confused, adoption may collapse, and the team may lose sight of what actually improved behavior.\n\nSo the core problem is to balance ambition with reality:\n\n- aim for the old flow to become practically irrelevant;\n- do not assume it can be made literally impossible in every edge case;\n- define success with observable metrics, such as reduced use, faster completion, fewer errors, and stable performance under difficult conditions;\n- improve iteratively rather than treating intensity alone as proof of progress."
+    },
+    {
+      "role": "user",
+      "content": "Please expand on the most important part of that version."
+    },
+    {
+      "role": "assistant",
+      "content": "The most important part is this:\n\n> Make the preferred route so clear, fast, reliable, and available under real conditions that people stop choosing the old route on their own.\n\nA product cannot rely on users having perfect attention, motivation, memory, or patience. People use software while distracted, rushed, tired, confused, emotionally activated, on poor connections, or under social and work pressure. If the new route only works for a calm, focused, highly motivated user, it has not replaced the old route in practice.\n\nThe preferred behavior must win in the actual moment of choice.\n\nThat means designing for four things.\n\n### 1. Lower friction\n\nThe desired action should require fewer steps, less interpretation, and less effort than the old action.\n\nFor example:\n\n- put the right action where the user already is;\n- use language that makes the next step obvious;\n- eliminate unnecessary decisions;\n- preserve entered data and context;\n- make recovery from mistakes easy;\n- avoid requiring users to remember instructions from earlier screens.\n\nIf the old route feels familiar but the new route feels complicated, people will revert under pressure—even if they agree the new route is objectively better.\n\n### 2. Stronger cues\n\nUsers often follow what the interface makes most visible, familiar, and immediate.\n\nThe product should clearly signal:\n\n- what is happening;\n- what action is expected now;\n- why that action is useful;\n- what will happen next.\n\nThe preferred route should not merely be available somewhere in the product. It should be the route naturally suggested by the layout, wording, defaults, timing, and feedback.\n\nA hidden “better option” is not behavior change. It is documentation.\n\n### 3. Reliability in difficult conditions\n\nThe route must remain usable when reality is messy:\n\n- slow internet;\n- mobile screens;\n- interrupted sessions;\n- incomplete information;\n- accessibility needs;\n- repeated use;\n- high workload;\n- unfamiliar users;\n- urgent situations.\n\nIf the new flow fails or becomes slow in those moments, users will learn that the old method is safer. One highly visible failure can outweigh many smooth demonstrations in ideal conditions.\n\nThis is why testing only with clean prototypes and attentive participants is insufficient. The question is not just, “Can users complete this?” It is:\n\n> “Will they still choose this when doing so matters and conditions are bad?”\n\n### 4. Devalue the old route without trapping people\n\nThe old route may persist because it is familiar, appears safer, gives users more perceived control, or solves edge cases the new route does not yet handle.\n\nThe team should understand why people keep using it before trying to suppress it. Then reduce its attractiveness by making the preferred route genuinely better:\n\n- faster results;\n- clearer outcomes;\n- fewer errors;\n- better recovery;\n- less manual work;\n- more trustworthy feedback.\n\nDo not simply hide or remove the old route before the replacement can handle what users need. That may create frustration, workarounds, support burden, or loss of trust.\n\nThe ideal outcome is not that users feel forced away from the old route. It is that they no longer see a reason to use it.\n\n### A practical definition of success\n\nSuccess is not:\n\n> “The old behavior never occurs again.”\n\nA better operational definition is:\n\n- the preferred route is selected by default in normal use;\n- it remains the most common choice under pressure and edge cases;\n- users complete their task faster and with fewer errors;\n- users do not need reminders, training, or workarounds to follow it;\n- use of the old route becomes rare, explainable, and limited to legitimate exceptions.\n\nIn product terms, the desired flow has become the dominant path—not because people were ordered to use it, but because the product consistently makes it the easiest and most dependable way forward."
+    },
+    {
+      "role": "user",
+      "content": "Please examine another important aspect of that version."
+    },
+    {
+      "role": "assistant",
+      "content": "Another important aspect is:\n\n> Define success through observable behavior, not through an absolute claim that the old route is gone.\n\nTeams can become attached to a totalizing goal: “Nobody should ever use the old workflow again.” That sounds decisive, but it is often a poor product metric. Some users will have legitimate exceptions, legacy needs, unusual constraints, or unfamiliarity with the new system. Trying to drive the number to literal zero can lead to harmful design decisions.\n\nFor example, a team may:\n\n- remove an escape hatch that users genuinely need;\n- hide information to force a preferred choice;\n- add warnings or friction that punish legitimate use cases;\n- interpret every exception as failure rather than learning;\n- keep redesigning stable parts of the product in pursuit of perfection.\n\nInstead, the product team needs a measurable operational definition.\n\n### Turn the goal into metrics\n\nRather than asking, “Has the old route disappeared?” ask:\n\n- What percentage of relevant users choose the preferred route?\n- How does that percentage change for first-time versus experienced users?\n- Does it hold during high-volume or time-sensitive use?\n- How long does task completion take?\n- How often do users make errors or abandon the task?\n- How often do they return to the old flow?\n- Are returns caused by preference, confusion, missing functionality, or genuine edge cases?\n- Does the preferred route remain usable on different devices, connections, and accessibility settings?\n\nThis turns a vague ambition into something a team can test and improve.\n\n### Separate exceptions from regressions\n\nNot every use of the old route means the new flow failed.\n\nA useful distinction is:\n\n- **Legitimate exception:** the old route supports a real case that the new one does not yet cover.\n- **Discoverability failure:** the new route exists, but users do not notice or understand it.\n- **Usability failure:** users find the new route but cannot complete it efficiently.\n- **Trust failure:** users understand it but do not believe it will work safely or reliably.\n- **Habit persistence:** users know the new route works but continue using the familiar one.\n- **Regression:** users previously adopted the new route but abandon it after an update, performance issue, or bad experience.\n\nEach category implies a different response. Treating all of them as “users resisting change” produces bad fixes.\n\n### Use leading and lagging indicators\n\nSome metrics reveal trouble before adoption numbers fall.\n\n**Leading indicators** include:\n\n- repeated hesitation on a screen;\n- excessive backtracking;\n- help-center searches;\n- support tickets;\n- abandoned forms;\n- unusually long completion times;\n- users opening the old route after viewing the new one.\n\n**Lagging indicators** include:\n\n- declining adoption of the preferred route;\n- increased old-route usage;\n- higher error rates;\n- lower completion rates;\n- reduced retention or satisfaction.\n\nA strong team watches both. By the time old-route usage rises sharply, users may already have learned that the new route is unreliable.\n\n### Preserve a safe fallback while learning\n\nDuring a transition, an old path can serve as a safety mechanism and a source of evidence. If users keep returning to it, the team can examine what they were trying to accomplish.\n\nRemoving it too early may hide the signal rather than solve the problem. Users may abandon the task, create manual workarounds, contact support, or leave the product altogether. Those outcomes can look like reduced old-route use while actually reflecting worse user experience.\n\nThe goal is therefore not forced compliance. It is durable adoption.\n\nA preferred route has truly become dominant when users choose it repeatedly, succeed with it in realistic conditions, and have little practical reason to seek the old route."
+    },
+    {
+      "role": "user",
+      "content": "Please make that version more concrete and useful."
+    },
+    {
+      "role": "assistant",
+      "content": "Here is a concrete way a product team could apply that idea.\n\n## Example: Replacing a Legacy Invoice-Approval Flow\n\nA company has an old approval process:\n\n1. Employee downloads an invoice.\n2. Sends it by email to a manager.\n3. Manager replies “approved.”\n4. Finance manually updates the system.\n\nThe company launches a new in-product approval flow:\n\n1. Manager receives an approval request in the app.\n2. Reviews invoice details.\n3. Clicks **Approve** or **Request changes**.\n4. The system records the decision and notifies Finance automatically.\n\nThe goal is not simply “remove email approval.” The goal is to make the in-product route the dependable default.\n\n---\n\n## 1. Define the target behavior precisely\n\nWrite a measurable statement:\n\n> For standard invoices, managers should complete approval in the product without using email, within two minutes of opening the request.\n\nThen define success criteria:\n\n| Metric | Current | Target |\n|---|---:|---:|\n| Approvals completed in-product | 35% | 85%+ |\n| Median approval time | 8 minutes | Under 2 minutes |\n| Requests abandoned after opening | 18% | Under 5% |\n| Approvals sent through email | 60% | Under 10% |\n| Support tickets about approvals | 40/month | Under 10/month |\n| Manager error rate | 7% | Under 2% |\n\nThe targets can vary, but the team should agree on them before changing the interface.\n\n---\n\n## 2. Instrument the exact decision points\n\nTrack what people actually do, not just whether they eventually approve.\n\nUseful events:\n\n```text\napproval_request_received\napproval_request_opened\ninvoice_details_viewed\napprove_clicked\nrequest_changes_clicked\napproval_completed\napproval_flow_abandoned\nemail_approval_link_clicked\nlegacy_approval_used\napproval_error_shown\napproval_flow_reopened\n```\n\nAlso capture context:\n\n```text\ndevice_type\nbrowser_or_app_version\ninvoice_amount_band\nnumber_of_line_items\nmanager_role\ntime_to_complete\nnetwork_status\nerror_type\n```\n\nThis lets the team answer questions such as:\n\n- Are people abandoning before reading the invoice?\n- Do users switch to email after seeing the new screen?\n- Is the issue concentrated on mobile?\n- Do high-value invoices need information missing from the new flow?\n- Does the route fail because of confusion, missing controls, or technical errors?\n\nWithout this, “adoption is low” is only a symptom.\n\n---\n\n## 3. Categorize every return to the old route\n\nWhen a manager uses email instead of the product flow, classify the reason.\n\n| Category | Example | Product response |\n|---|---|---|\n| Missing capability | Need to add a second approver | Add multi-approver support |\n| Missing information | Cannot see purchase order details | Show purchase order details |\n| Trust concern | Unsure whether approval was recorded | Show immediate confirmation and audit log |\n| Usability issue | Approve button is below the fold on mobile | Move actions into persistent footer |\n| Discoverability issue | Manager does not notice the request | Improve notifications and inbox placement |\n| Legitimate exception | Legal approval requires external signature | Keep an approved fallback |\n\nThis prevents the team from treating every legacy action as user stubbornness.\n\n---\n\n## 4. Improve the preferred route at the moment of choice\n\nSuppose data shows that managers open the new approval request, inspect it, then switch to email.\n\nThe team should investigate the screen itself.\n\nA stronger design might include:\n\n- invoice total, vendor, due date, and cost center at the top;\n- a concise explanation of what approval means;\n- a visible audit trail;\n- a downloadable invoice attached directly to the page;\n- an obvious **Approve** button and a distinct **Request changes** option;\n- a confirmation such as:  \n  “Approved. Finance has been notified. View approval record.”\n- a way to delegate or add a comment without leaving the flow.\n\nThe goal is to eliminate the reason the user would open email in the first place.\n\nBad approach:\n\n> “Disable email approval immediately.”\n\nBetter approach:\n\n> “Make the product flow complete, credible, and easier than email for standard cases.”\n\n---\n\n## 5. Test realistic conditions\n\nDo not only ask users to complete the flow in a calm usability session.\n\nTest scenarios such as:\n\n- approving from a phone;\n- approving while on a slow connection;\n- approving a 30-line invoice;\n- approving an invoice with missing information;\n- approving while a manager has ten pending requests;\n- approving from an email notification;\n- returning after an interruption;\n- handling a request that must be delegated;\n- using a screen reader or keyboard only.\n\nA flow that performs well only in an ideal demo will not become the dominant route.\n\n---\n\n## 6. Keep the old route as a controlled fallback\n\nFor an initial rollout:\n\n- show the new in-product approval flow as the default;\n- retain email approval for defined exceptions;\n- log every use of the fallback;\n- require a lightweight reason when possible, such as:\n  - “Missing information”\n  - “Need another approver”\n  - “Technical issue”\n  - “Legal/compliance exception”\n  - “Other”\n\nAvoid making the reason prompt punitive. It should collect evidence, not shame users.\n\nAfter the team has solved the common causes of fallback use, the old route can be narrowed gradually—for example, restricting it to invoices requiring external signatures or unusual approval chains.\n\n---\n\n## 7. Review a simple dashboard weekly\n\nA useful weekly dashboard could show:\n\n```text\nPreferred-route completion rate\nLegacy-route usage rate\nMedian completion time\nAbandonment rate\nError rate\nFallback reasons\nCompletion rate by device\nCompletion rate by invoice complexity\nSupport-ticket volume\n```\n\nThen make decisions from the pattern.\n\nExamples:\n\n- **High"
+    },
+    {
+      "role": "user",
+      "content": "Please consider what might be overlooked or misunderstood in that version."
+    },
+    {
+      "role": "assistant",
+      "content": "Several things could be overlooked in the concrete version.\n\n## 1. “Preferred route” can become a company preference rather than a user benefit\n\nThe example assumes the in-product approval flow is inherently better. It may be better for Finance because it is easier to track and automate, while being worse for managers who need context, discussion, delegation, or flexibility.\n\nBefore trying to reduce legacy-route use, the team should ask:\n\n- What problem does the new flow solve for users, not only the business?\n- What did email provide that the new route does not?\n- Does the new flow reduce real effort, or merely relocate it?\n- Are managers avoiding it because it is inferior for valid reasons?\n\nHigh adoption is not proof of value if users are pushed into a worse path.\n\n## 2. Legacy behavior can contain important hidden work\n\nEmail approval may look inefficient, but it may include work the product has not recognized:\n\n- a manager asks a question before approving;\n- someone loops in a budget owner;\n- a manager keeps an informal record of a decision;\n- an assistant handles approvals on behalf of an executive;\n- unusual invoices require negotiation or exception handling.\n\nIf the team removes email without supporting this work, users may create less visible workarounds: chat messages, spreadsheets, screenshots, phone calls, or delayed approvals.\n\nA decline in email use can therefore be misleading if it is replaced by undocumented manual processes.\n\n## 3. Metrics can be gamed or misread\n\nA team can make legacy use fall by hiding the old route, adding friction, or refusing to support it. That may improve the dashboard while harming users.\n\nSimilarly, a high “in-product completion rate” might conceal:\n\n- people approving without enough review because the flow is too streamlined;\n- incorrect approvals;\n- approvals made just to clear notifications;\n- delayed work occurring outside the system;\n- users who abandon entirely and never appear in the completion data.\n\nPair adoption metrics with outcome-quality metrics:\n\n- reversal or correction rate;\n- payment errors;\n- time spent resolving disputes;\n- satisfaction and trust;\n- audit findings;\n- approval accuracy;\n- time from invoice arrival to final payment.\n\n## 4. Exceptions should not be treated as defects by default\n\nThe earlier version correctly preserves a fallback, but it could still imply that every repeated fallback reason should be designed away.\n\nSome exceptions are legitimate and should remain explicit:\n\n- legal signing requirements;\n- regulatory rules;\n- security-sensitive decisions;\n- unusually large or complex invoices;\n- accessibility requirements;\n- users with delegated authority;\n- cases requiring human discussion before approval.\n\nA mature product does not force every case through one “optimal” funnel. It makes the standard case easy while giving nonstandard cases a safe, visible, supported path.\n\n## 5. “Frictionless” can weaken review quality\n\nFor an approval process, reducing clicks is not always the primary goal. Some friction is protective.\n\nAn effective system may intentionally require:\n\n- review of key details;\n- confirmation for unusually large amounts;\n- a second approver;\n- a clear statement of responsibility;\n- an exception explanation;\n- additional verification for suspicious invoices.\n\nThe design question is not simply, “How do we get approval in under two minutes?” It is:\n\n> “How do we make routine approvals efficient while preserving appropriate scrutiny and accountability?”\n\n## 6. Instrumentation has privacy and trust consequences\n\nTracking every click, hesitation, error, device, and fallback reason can create surveillance concerns—especially in workplace software.\n\nThe team should decide:\n\n- which data is genuinely necessary;\n- whether it can be aggregated or anonymized;\n- who can see individual-level behavior;\n- how long data is retained;\n- whether employees are informed about the tracking;\n- how sensitive financial or personal data is protected.\n\nAnalytics should improve the product, not become a mechanism for judging or punishing users.\n\n## 7. Adoption varies by role and power dynamics\n\nA manager, finance specialist, executive assistant, contractor, and frontline employee may experience the same workflow very differently.\n\nFor example:\n\n- executives may rely on delegation;\n- assistants may need access that the new flow blocks;\n- Finance may value auditability more than speed;\n- smaller teams may rely on informal communication;\n- users with less organizational power may be unable to challenge an incorrect request.\n\nA single aggregate adoption rate can conceal these differences. Segment data carefully, and include affected groups in research and rollout decisions.\n\n## 8. The transition itself creates risk\n\nA gradual rollout is often sensible, but mixed systems can create confusion:\n\n- Which approval method is authoritative?\n- What happens if one person approves in email and another in the product?\n- Can Finance process an invoice before all required steps are recorded?\n- How are duplicate or conflicting approvals handled?\n- How are users trained on the change?\n\nThe transition needs explicit rules, not merely a new interface. The product should state which record is authoritative, prevent duplicate decisions where possible, and provide clear support for edge cases.\n\n## 9. User research must accompany behavioral data\n\nEvent logs reveal what happened, but not reliably why it happened.\n\nFor example, users switching to email after opening the approval screen could mean:\n\n- missing invoice information;\n- a desire to discuss the invoice;\n- distrust of the system;\n- poor mobile usability;\n- habit;\n- an unrelated interruption.\n\nAnalytics can identify where to investigate. Interviews, usability sessions, support conversations, and direct observation are needed to understand the cause.\n\nThe central correction is this:\n\n> The objective is not to eliminate an old behavior at all costs. It is to build a safer, more useful default while preserving legitimate choice, oversight, exceptions, and user trust."
+    },
+    {
+      "role": "user",
+      "content": "Please give the clearest concise response that would help someone continue from that version."
+    },
+    {
+      "role": "assistant",
+      "content": "Next step: validate whether the “preferred route” is actually better for each user group before trying to reduce use of alternatives.\n\nUse this checklist:\n\n1. **Map hidden work**  \n   Ask users what they do before, during, and after the old route—questions, delegation, documentation, exceptions, and informal coordination.\n\n2. **Separate standard cases from exceptions**  \n   Make the standard path easy; keep explicit, safe support for cases that need review, discussion, extra approval, or legal handling.\n\n3. **Measure quality, not just adoption**  \n   Track completion, errors, reversals, delays, workarounds, support contacts, and user trust—not only old-route usage.\n\n4. **Use analytics to find problems, research to explain them**  \n   Logs show where users leave or switch; interviews and observation reveal why.\n\n5. **Avoid forced adoption**  \n   Do not hide, punish, or remove the old route until the new one reliably supports the real work it replaces.\n\nThe practical goal is durable voluntary adoption: people choose the new route because it is genuinely more useful, while legitimate alternatives remain available and understood."
+    }
+  ],
+  "historical_context_in_scoring": false
+}

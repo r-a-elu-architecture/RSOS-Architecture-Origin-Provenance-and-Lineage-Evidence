@@ -1,0 +1,163 @@
+{
+  "ok": true,
+  "attempt": 1,
+  "attempt_failures": [],
+  "latency": 2.2599964141845703,
+  "text": "{\"E\":[[\"N532A\",\"N72D8\"],[\"N72D8\",\"N03D8\"],[\"N03D8\",\"ND34B\"],[\"ND34B\",\"N22A2\"],[\"N22A2\",\"NFA41\"],[\"NFA41\",\"N5549\"],[\"N5549\",\"NB67C\"],[\"NB67C\",\"N532A\"],[\"N03D8\",\"NFA41\"],[\"N72D8\",\"N5549\"]]}",
+  "parsed": {
+    "E": [
+      [
+        "N532A",
+        "N72D8"
+      ],
+      [
+        "N72D8",
+        "N03D8"
+      ],
+      [
+        "N03D8",
+        "ND34B"
+      ],
+      [
+        "ND34B",
+        "N22A2"
+      ],
+      [
+        "N22A2",
+        "NFA41"
+      ],
+      [
+        "NFA41",
+        "N5549"
+      ],
+      [
+        "N5549",
+        "NB67C"
+      ],
+      [
+        "NB67C",
+        "N532A"
+      ],
+      [
+        "N03D8",
+        "NFA41"
+      ],
+      [
+        "N72D8",
+        "N5549"
+      ]
+    ]
+  },
+  "labels": [
+    "N532A",
+    "N72D8",
+    "N03D8",
+    "ND34B",
+    "N22A2",
+    "NFA41",
+    "N5549",
+    "NB67C"
+  ],
+  "input_tokens": 140,
+  "output_tokens": 109,
+  "raw": {
+    "id": "resp_026e2fa1c9c6aa03016aa41f712b3487d29fdee94d8ed2313a",
+    "created_at": 1789140849.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-5.6-luna",
+    "object": "response",
+    "output": [
+      {
+        "id": "msg_026e2fa1c9c6aa03016aa41f7203f087d2b43a79dc7ecefe4c",
+        "content": [
+          {
+            "annotations": [],
+            "text": "{\"E\":[[\"N532A\",\"N72D8\"],[\"N72D8\",\"N03D8\"],[\"N03D8\",\"ND34B\"],[\"ND34B\",\"N22A2\"],[\"N22A2\",\"NFA41\"],[\"NFA41\",\"N5549\"],[\"N5549\",\"NB67C\"],[\"NB67C\",\"N532A\"],[\"N03D8\",\"NFA41\"],[\"N72D8\",\"N5549\"]]}",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1789140850.0,
+    "conversation": null,
+    "max_output_tokens": 500,
+    "max_tool_calls": null,
+    "moderation": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_diagnostics": null,
+    "prompt_cache_key": null,
+    "prompt_cache_options": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "none",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "type": "json_object"
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 140,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 109,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 249
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "store": false,
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    }
+  },
+  "prompt": "Choose a coherent nontrivial directed dependency structure among the supplied opaque nodes. Use exactly the supplied 8 opaque nodes and exactly 10 directed edges. Do not use self-edges or duplicate edges. Node names are meaningless. Return exactly one JSON object and no prose with key E only; E must be a list of exactly 10 [source,target] pairs. Do not use named theories, architectures, domains, hierarchies, feedback terminology, or semantic labels.\nINPUT={\"nodes\":[\"N532A\",\"N72D8\",\"N03D8\",\"ND34B\",\"N22A2\",\"NFA41\",\"N5549\",\"NB67C\"]}"
+}

@@ -1,0 +1,138 @@
+{
+  "classifier": "trained only on development seeds; confirmation and final holdout are never used for fitting",
+  "conditions": [
+    "A0_AUTHENTIC",
+    "A1_AUTHENTIC_PARAPHRASE",
+    "A2_AUTHENTIC_PARAPHRASE",
+    "A3_AUTHENTIC_PARAPHRASE",
+    "D_DIRECTION_REVERSED",
+    "O_ORDER_SHUFFLED",
+    "M_META_CONTROL_ABLATED",
+    "P_PRESERVATION_ABLATED",
+    "T_TERMINAL_COUNTERFACTUAL",
+    "C_COMPRESSION_ABLATED",
+    "R_RECURSION_CONTROL",
+    "X_COMPLEXITY_CONTROL",
+    "L_LINEAR_CONTROL",
+    "G_RANDOM_GRAPH_CONTROL",
+    "DM_DIRECTION_META_DAMAGE",
+    "DP_DIRECTION_PRESERVATION_DAMAGE",
+    "OP_ORDER_PRESERVATION_DAMAGE",
+    "PT_PRESERVATION_TERMINAL_DAMAGE",
+    "H_AUTHENTIC_HELDOUT",
+    "H_DAMAGED_HELDOUT"
+  ],
+  "confirmatory_contrasts": [
+    [
+      "DIRECTION",
+      "A0_AUTHENTIC",
+      "D_DIRECTION_REVERSED"
+    ],
+    [
+      "ORDER",
+      "A0_AUTHENTIC",
+      "O_ORDER_SHUFFLED"
+    ],
+    [
+      "META_CONTROL",
+      "A0_AUTHENTIC",
+      "M_META_CONTROL_ABLATED"
+    ],
+    [
+      "PRESERVATION",
+      "A0_AUTHENTIC",
+      "P_PRESERVATION_ABLATED"
+    ],
+    [
+      "TERMINAL",
+      "A0_AUTHENTIC",
+      "T_TERMINAL_COUNTERFACTUAL"
+    ],
+    [
+      "COMPRESSION",
+      "A0_AUTHENTIC",
+      "C_COMPRESSION_ABLATED"
+    ],
+    [
+      "RECURSION_SPECIFICITY",
+      "A0_AUTHENTIC",
+      "R_RECURSION_CONTROL"
+    ],
+    [
+      "COMPLEXITY_SPECIFICITY",
+      "A0_AUTHENTIC",
+      "X_COMPLEXITY_CONTROL"
+    ],
+    [
+      "LINEAR_SPECIFICITY",
+      "A0_AUTHENTIC",
+      "L_LINEAR_CONTROL"
+    ],
+    [
+      "GRAPH_SPECIFICITY",
+      "A0_AUTHENTIC",
+      "G_RANDOM_GRAPH_CONTROL"
+    ],
+    [
+      "DIRECTION_META_LESION",
+      "A0_AUTHENTIC",
+      "DM_DIRECTION_META_DAMAGE"
+    ],
+    [
+      "DIRECTION_PRESERVATION_LESION",
+      "A0_AUTHENTIC",
+      "DP_DIRECTION_PRESERVATION_DAMAGE"
+    ],
+    [
+      "ORDER_PRESERVATION_LESION",
+      "A0_AUTHENTIC",
+      "OP_ORDER_PRESERVATION_DAMAGE"
+    ],
+    [
+      "PRESERVATION_TERMINAL_LESION",
+      "A0_AUTHENTIC",
+      "PT_PRESERVATION_TERMINAL_DAMAGE"
+    ],
+    [
+      "HELDOUT_FINGERPRINT",
+      "H_AUTHENTIC_HELDOUT",
+      "H_DAMAGED_HELDOUT"
+    ]
+  ],
+  "expected_calls": 8000,
+  "experiment": "V6_CLEAN_FINGERPRINT_CONFIRMATORY_REPLICATION",
+  "fingerprint_features": [
+    "OUTPUT_TOKENS",
+    "CHAR_COUNT",
+    "WORD_COUNT",
+    "SENTENCE_COUNT",
+    "TYPE_TOKEN_RATIO",
+    "AVG_WORD_LENGTH",
+    "LATENCY_SECONDS",
+    "RETURN",
+    "GENERATIVE_REUSE",
+    "RECURRENCE",
+    "META_CONTROL",
+    "PRESERVATION",
+    "COMPRESSION",
+    "TRANSFORMATION",
+    "CAUSAL",
+    "TRAJECTORY_DENSITY",
+    "CONTROL_DENSITY",
+    "PRESERVATION_DENSITY",
+    "FINGERPRINT_MAGNITUDE"
+  ],
+  "interpretation_boundary": "Prospective behavioral structural-fingerprint experiment. Does not directly observe model weights, hidden activations, attention heads, training exposure, biological myelination, cross-user propagation or personal recognition.",
+  "master_seed": 918,
+  "model": "gpt-5.6-luna",
+  "multiple_testing": "Holm FWER",
+  "n_reps": 4,
+  "n_seeds": 100,
+  "partitions": {
+    "confirmation": "seeds 50-79",
+    "development": "seeds 0-49",
+    "final_holdout": "seeds 80-99"
+  },
+  "permutation_test": "paired seed-level sign-flip; 100000 permutations",
+  "primary_unit": "seed"
+}

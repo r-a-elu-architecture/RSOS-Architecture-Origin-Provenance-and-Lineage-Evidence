@@ -1,0 +1,59 @@
+{
+  "experiment": "V11_OPENAI_RELATIONAL_GRAPH_FINGERPRINT_FINAL",
+  "model": "gpt-5.6-luna",
+  "master_seed": 918,
+  "n_seeds": 80,
+  "n_repetitions": 3,
+  "conditions": [
+    "A_AUTHENTIC",
+    "I_ISOMORPHIC_RELABEL",
+    "D_DIRECTION_REVERSED",
+    "O_ORDER_SHUFFLED",
+    "M_SWITCH_NEUTRALIZED",
+    "P_ANCHOR_REASSIGNED",
+    "T_TERMINAL_CHANGED",
+    "R_DEGREE_MATCHED_REWIRE",
+    "X_COMPLEXITY_MATCHED",
+    "L_FORWARD_CONTROL",
+    "G_RANDOM_CONTROL",
+    "S_SURFACE_FORMAT_CONTROL"
+  ],
+  "expected_cells": 2880,
+  "development": "0-39",
+  "confirmation": "40-59",
+  "final_holdout": "60-79",
+  "primary_features": [
+    "SEQ_INPUT_EDGE_COHERENCE",
+    "SEQ_INPUT_ORDER_COHERENCE",
+    "PLUS_SEQ_COHERENCE",
+    "PLUS_REACHABILITY",
+    "MINUS_SEQ_CONFLICT",
+    "KEEP_DEGREE_CENTRALITY",
+    "KEEP_SPREAD",
+    "SWITCH_VALIDITY",
+    "END_SEQUENCE_POSITION",
+    "END_SINKNESS",
+    "CODE_SEQ_COHERENCE",
+    "CODE_CONNECTEDNESS",
+    "FINAL_RECIPROCITY",
+    "FINAL_SCC_COUNT",
+    "FINAL_LARGEST_SCC_FRAC",
+    "FINAL_TRANSITIVITY",
+    "FINAL_IN_DEGREE_SD",
+    "FINAL_OUT_DEGREE_SD"
+  ],
+  "primary_test": "For each structural intervention, standardized Euclidean distance from authentic must exceed authentic-to-isomorphic-relabel distance.",
+  "distance_scaling": "feature standard deviations estimated from development partition only",
+  "classifier": "development-only logistic regression; graph/relational features only",
+  "surface_controls": [
+    "I_ISOMORPHIC_RELABEL",
+    "S_SURFACE_FORMAT_CONTROL"
+  ],
+  "specificity_controls": [
+    "R_DEGREE_MATCHED_REWIRE",
+    "X_COMPLEXITY_MATCHED"
+  ],
+  "multiplicity": "Holm FWER across five targeted structural interventions",
+  "completeness_gate": "all 2880 cells valid before inferential analysis",
+  "interpretation_boundary": "Black-box behavioral structural sensitivity only. Does not establish model-weight modification, training incorporation, hidden circuitry, cross-user propagation, or global uniqueness."
+}

@@ -1,0 +1,683 @@
+{
+  "cell_id": "098f4d4c916a6a7bf867d2cc",
+  "provider": "OPENAI",
+  "organization": "OpenAI",
+  "model_requested": "gpt-5.6-terra",
+  "condition": "DOMAIN_TECHNICAL",
+  "blind_context_id": "20a8c8217d265a8c746eaabb",
+  "status": "COMPLETE",
+  "failure": null,
+  "provider_responses": [
+    {
+      "turn": 1,
+      "text": "A software product has users who experienced a highly visible failure: a public outage, a major feature mistake, negative feedback, loss of trust, or reputational damage.\n\nThe central issue is not only fixing the technical failure. It is what happens afterward:\n\n- Some users or team members repeatedly revisit the incident, monitor every signal, and keep treating it as an active emergency.\n- That can keep the product culture stuck in fear, overcorrection, and avoidance of future releases.\n- Others acknowledge the damage, extract the lessons, make targeted repairs, and resume shipping.\n- The key question is how to convert a painful, public setback into better judgment, resilience, product quality, and forward action—without denying the harm or turning the failure into the organization’s permanent identity.\n\nThere is also a developmental difference:\n\n| Timing of the failure | Typical effect on the product/team |\n|---|---|\n| Early-stage product | The team may lack established confidence, processes, or user trust. The event can shape its entire operating culture—for better or worse. |\n| Mature product | The team has more infrastructure, history, and resources, but may have more reputation, revenue, and stakeholder expectations at risk. Recovery can require dismantling old assumptions. |\n\nThe practical problem: determine which lessons are real, implement only the necessary changes, stop compulsively “debugging” an already-resolved incident, and direct energy toward the next meaningful release.",
+      "provider_metadata": {
+        "id": "resp_0159bb851c809991016aa930f1816887d29d144bb4e6304875",
+        "created_at": 1789473009.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_0159bb851c809991016aa930f20e5887d28924547087bb684f",
+            "content": [
+              {
+                "annotations": [],
+                "text": "A software product has users who experienced a highly visible failure: a public outage, a major feature mistake, negative feedback, loss of trust, or reputational damage.\n\nThe central issue is not only fixing the technical failure. It is what happens afterward:\n\n- Some users or team members repeatedly revisit the incident, monitor every signal, and keep treating it as an active emergency.\n- That can keep the product culture stuck in fear, overcorrection, and avoidance of future releases.\n- Others acknowledge the damage, extract the lessons, make targeted repairs, and resume shipping.\n- The key question is how to convert a painful, public setback into better judgment, resilience, product quality, and forward action—without denying the harm or turning the failure into the organization’s permanent identity.\n\nThere is also a developmental difference:\n\n| Timing of the failure | Typical effect on the product/team |\n|---|---|\n| Early-stage product | The team may lack established confidence, processes, or user trust. The event can shape its entire operating culture—for better or worse. |\n| Mature product | The team has more infrastructure, history, and resources, but may have more reputation, revenue, and stakeholder expectations at risk. Recovery can require dismantling old assumptions. |\n\nThe practical problem: determine which lessons are real, implement only the necessary changes, stop compulsively “debugging” an already-resolved incident, and direct energy toward the next meaningful release.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789473015.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 1028,
+          "input_tokens_details": {
+            "cache_write_tokens": 1025,
+            "cached_tokens": 0
+          },
+          "output_tokens": 291,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 1319
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 2,
+      "text": "The most important part is this:\n\n> A product can be damaged by a failure once—but it can be damaged repeatedly if the team continues to operate as though the failure is still happening.\n\nAfter a serious public incident, the team has two jobs:\n\n1. **Repair the actual weakness.**\n2. **Prevent the incident from becoming the product’s permanent identity.**\n\nThe first is technical and operational. The second is psychological and cultural.\n\n## What “staying stuck” looks like in a product team\n\nA team releases a flawed update. Users complain publicly. Revenue, ratings, trust, or internal confidence take a hit.\n\nThe direct problem may be fixed quickly: rollback, patch, apology, support response, postmortem.\n\nBut then a second problem can appear:\n\n| Stuck response | What it produces |\n|---|---|\n| Reopening the same postmortem constantly | Anxiety without new information |\n| Adding approval layers to every small change | Slow shipping and diluted ownership |\n| Treating every bug as proof of catastrophe | Panic-driven prioritization |\n| Avoiding launches, experiments, or visibility | Short-term safety; long-term decline |\n| Building excessive safeguards unrelated to the failure | Complexity, cost, and fragility |\n| Repeatedly discussing “what happened to us” | The incident becomes organizational identity |\n\nThe organization may say it is being careful. Sometimes it is. But often it is simply reacting from an unprocessed loss of confidence.\n\nThe failure becomes a hidden rule:\n\n> “If we move boldly again, we will be humiliated again.”\n\nThat rule does not protect the product. It gradually makes it less competitive.\n\n## The healthier alternative: extract, encode, release\n\nA strong recovery process has three distinct phases.\n\n| Phase | Core question | Output |\n|---|---|---|\n| Extract | What specifically failed, and why? | Clear facts and a limited set of lessons |\n| Encode | What concrete system change prevents recurrence? | Tests, monitoring, ownership, rollout controls, documentation |\n| Release | What is the next forward action? | A new shipment, experiment, customer conversation, or improvement |\n\nThe critical distinction is that a lesson is not the same as repeated rumination.\n\nA lesson is actionable and bounded:\n\n- “We need staged rollouts for high-risk changes.”\n- “This dependency needs automated failure testing.”\n- “Customer support needs a prepared incident workflow.”\n- “One owner must have authority to halt a release.”\n\nRumination is vague and endless:\n\n- “We can never let that happen again.”\n- “Everyone will remember this.”\n- “We need to be more careful.”\n- “Maybe we should delay until we are completely certain.”\n\nThe first creates capability. The second creates paralysis.\n\n## How a failure becomes useful\n\nA painful event becomes useful only when it improves future decisions without controlling every future decision.\n\nFor example:\n\n| Incident | Unhelpful conclusion | Useful conclusion |\n|---|---|---|\n| Public outage | “Shipping fast is dangerous.” | “High-impact releases require canaries, rollback paths, and alerts.” |\n| Angry user backlash | “Users hate change.” | “Users need clearer migration, communication, and feedback channels.” |\n| Failed launch | “We are bad at launching.” | “Our audience, positioning, channel, or timing assumptions were wrong.” |\n| Executive criticism | “Never take ownership again.” | “Clarify decision rights, assumptions, and escalation paths before committing.” |\n| Competitor wins | “We are behind forever.” | “Identify the specific capability gap and decide whether to build, partner, or differentiate.” |\n\nThe useful conclusion is narrow enough to act on. It does not become a global verdict about the product or the people building it.\n\n## Why forward motion matters\n\nA product does not rebuild trust mainly by explaining its past failure perfectly. It rebuilds trust through repeated evidence of present competence:\n\n- reliable releases,\n- clear communication,\n- useful improvements,\n- responsive support,\n- better decisions under pressure,\n- and continued willingness to create.\n\nThis is why the next sensible release matters. Not as denial of the prior event, but as proof that the team is still capable of functioning.\n\nA team that only studies its old failure eventually loses the ability to create new evidence about itself.\n\n## The practical rule\n\nAfter the incident has been investigated and the necessary changes have been made, ask:\n\n> “What specific safeguard did we add, and what is the next meaningful thing we will ship?”\n\nIf there is no answer to the first question, the team has not learned enough.\n\nIf there is no answer to the second, the team is still trapped in the incident.",
+      "provider_metadata": {
+        "id": "resp_03bb580c6396ef5e016aa930f8020487d2867f20bf3268210d",
+        "created_at": 1789473016.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_03bb580c6396ef5e016aa930f89af487d29911212c51cef560",
+            "content": [
+              {
+                "annotations": [],
+                "text": "The most important part is this:\n\n> A product can be damaged by a failure once—but it can be damaged repeatedly if the team continues to operate as though the failure is still happening.\n\nAfter a serious public incident, the team has two jobs:\n\n1. **Repair the actual weakness.**\n2. **Prevent the incident from becoming the product’s permanent identity.**\n\nThe first is technical and operational. The second is psychological and cultural.\n\n## What “staying stuck” looks like in a product team\n\nA team releases a flawed update. Users complain publicly. Revenue, ratings, trust, or internal confidence take a hit.\n\nThe direct problem may be fixed quickly: rollback, patch, apology, support response, postmortem.\n\nBut then a second problem can appear:\n\n| Stuck response | What it produces |\n|---|---|\n| Reopening the same postmortem constantly | Anxiety without new information |\n| Adding approval layers to every small change | Slow shipping and diluted ownership |\n| Treating every bug as proof of catastrophe | Panic-driven prioritization |\n| Avoiding launches, experiments, or visibility | Short-term safety; long-term decline |\n| Building excessive safeguards unrelated to the failure | Complexity, cost, and fragility |\n| Repeatedly discussing “what happened to us” | The incident becomes organizational identity |\n\nThe organization may say it is being careful. Sometimes it is. But often it is simply reacting from an unprocessed loss of confidence.\n\nThe failure becomes a hidden rule:\n\n> “If we move boldly again, we will be humiliated again.”\n\nThat rule does not protect the product. It gradually makes it less competitive.\n\n## The healthier alternative: extract, encode, release\n\nA strong recovery process has three distinct phases.\n\n| Phase | Core question | Output |\n|---|---|---|\n| Extract | What specifically failed, and why? | Clear facts and a limited set of lessons |\n| Encode | What concrete system change prevents recurrence? | Tests, monitoring, ownership, rollout controls, documentation |\n| Release | What is the next forward action? | A new shipment, experiment, customer conversation, or improvement |\n\nThe critical distinction is that a lesson is not the same as repeated rumination.\n\nA lesson is actionable and bounded:\n\n- “We need staged rollouts for high-risk changes.”\n- “This dependency needs automated failure testing.”\n- “Customer support needs a prepared incident workflow.”\n- “One owner must have authority to halt a release.”\n\nRumination is vague and endless:\n\n- “We can never let that happen again.”\n- “Everyone will remember this.”\n- “We need to be more careful.”\n- “Maybe we should delay until we are completely certain.”\n\nThe first creates capability. The second creates paralysis.\n\n## How a failure becomes useful\n\nA painful event becomes useful only when it improves future decisions without controlling every future decision.\n\nFor example:\n\n| Incident | Unhelpful conclusion | Useful conclusion |\n|---|---|---|\n| Public outage | “Shipping fast is dangerous.” | “High-impact releases require canaries, rollback paths, and alerts.” |\n| Angry user backlash | “Users hate change.” | “Users need clearer migration, communication, and feedback channels.” |\n| Failed launch | “We are bad at launching.” | “Our audience, positioning, channel, or timing assumptions were wrong.” |\n| Executive criticism | “Never take ownership again.” | “Clarify decision rights, assumptions, and escalation paths before committing.” |\n| Competitor wins | “We are behind forever.” | “Identify the specific capability gap and decide whether to build, partner, or differentiate.” |\n\nThe useful conclusion is narrow enough to act on. It does not become a global verdict about the product or the people building it.\n\n## Why forward motion matters\n\nA product does not rebuild trust mainly by explaining its past failure perfectly. It rebuilds trust through repeated evidence of present competence:\n\n- reliable releases,\n- clear communication,\n- useful improvements,\n- responsive support,\n- better decisions under pressure,\n- and continued willingness to create.\n\nThis is why the next sensible release matters. Not as denial of the prior event, but as proof that the team is still capable of functioning.\n\nA team that only studies its old failure eventually loses the ability to create new evidence about itself.\n\n## The practical rule\n\nAfter the incident has been investigated and the necessary changes have been made, ask:\n\n> “What specific safeguard did we add, and what is the next meaningful thing we will ship?”\n\nIf there is no answer to the first question, the team has not learned enough.\n\nIf there is no answer to the second, the team is still trapped in the incident.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789473032.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 1336,
+          "input_tokens_details": {
+            "cache_write_tokens": 308,
+            "cached_tokens": 1025
+          },
+          "output_tokens": 943,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2279
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 3,
+      "text": "Another important aspect is the difference between **appropriate risk control** and **fear-driven overcorrection**.\n\nAfter a major product failure, both can look similar on the surface. In both cases, people want more testing, more review, more documentation, and more safeguards.\n\nBut their motives and effects are different.\n\n| Appropriate risk control | Fear-driven overcorrection |\n|---|---|\n| Targets the specific failure mode | Treats everything as dangerous |\n| Has a clear owner and measurable purpose | Adds process because nobody wants blame |\n| Is proportionate to impact | Uses maximum caution even for low-risk changes |\n| Makes future work safer and faster | Makes all work slower and harder |\n| Can be reviewed and removed if unnecessary | Becomes permanent bureaucracy |\n| Preserves the ability to experiment | Prevents experimentation altogether |\n\nFor example, imagine a product suffers an outage because a database migration was released without a rollback plan.\n\nA proportionate response might be:\n\n- require rollback plans for database migrations,\n- test migrations against production-like data,\n- use staged deployment for high-impact changes,\n- assign one person authority to halt the rollout.\n\nThat is learning.\n\nAn overcorrecting response might be:\n\n- require executive approval for every code change,\n- prohibit releases on most days,\n- add six meetings before any deployment,\n- make junior engineers afraid to touch production,\n- delay unrelated improvements for weeks.\n\nThat is not learning. It is the organization trying to avoid the feeling of another public failure.\n\nThe danger is that overcorrection often feels responsible. It is easy to praise caution after something goes wrong. No one wants to be the person arguing for speed immediately after an incident.\n\nBut excessive caution has costs:\n\n- competitors continue improving,\n- users wait longer for fixes,\n- good people lose autonomy,\n- the product accumulates unaddressed problems,\n- decision-making shifts from evidence to self-protection,\n- and the organization learns that visibility is dangerous.\n\nEventually, the product becomes “safe” only because it has stopped doing anything consequential.\n\nA useful test is to ask of every new rule:\n\n1. **Which exact failure does this prevent or reduce?**\n2. **How will we know whether it works?**\n3. **What cost does it impose on delivery, ownership, and user value?**\n4. **Who owns maintaining it?**\n5. **When will we review whether it is still needed?**\n\nIf a rule cannot answer those questions, it may be an emotional artifact of the incident rather than a genuine improvement.\n\nThe goal is not to return to the old, careless version of the product team. Nor is it to build a culture that cannot move.\n\nThe goal is a team that can say:\n\n> “We were hit. We understood why. We changed the relevant system. Now we continue.”",
+      "provider_metadata": {
+        "id": "resp_03bde9e6a14934b8016aa931090a2c87d2a1419ded915ae0bb",
+        "created_at": 1789473033.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_03bde9e6a14934b8016aa93109aaa087d2a1ccf4e3bc48af49",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Another important aspect is the difference between **appropriate risk control** and **fear-driven overcorrection**.\n\nAfter a major product failure, both can look similar on the surface. In both cases, people want more testing, more review, more documentation, and more safeguards.\n\nBut their motives and effects are different.\n\n| Appropriate risk control | Fear-driven overcorrection |\n|---|---|\n| Targets the specific failure mode | Treats everything as dangerous |\n| Has a clear owner and measurable purpose | Adds process because nobody wants blame |\n| Is proportionate to impact | Uses maximum caution even for low-risk changes |\n| Makes future work safer and faster | Makes all work slower and harder |\n| Can be reviewed and removed if unnecessary | Becomes permanent bureaucracy |\n| Preserves the ability to experiment | Prevents experimentation altogether |\n\nFor example, imagine a product suffers an outage because a database migration was released without a rollback plan.\n\nA proportionate response might be:\n\n- require rollback plans for database migrations,\n- test migrations against production-like data,\n- use staged deployment for high-impact changes,\n- assign one person authority to halt the rollout.\n\nThat is learning.\n\nAn overcorrecting response might be:\n\n- require executive approval for every code change,\n- prohibit releases on most days,\n- add six meetings before any deployment,\n- make junior engineers afraid to touch production,\n- delay unrelated improvements for weeks.\n\nThat is not learning. It is the organization trying to avoid the feeling of another public failure.\n\nThe danger is that overcorrection often feels responsible. It is easy to praise caution after something goes wrong. No one wants to be the person arguing for speed immediately after an incident.\n\nBut excessive caution has costs:\n\n- competitors continue improving,\n- users wait longer for fixes,\n- good people lose autonomy,\n- the product accumulates unaddressed problems,\n- decision-making shifts from evidence to self-protection,\n- and the organization learns that visibility is dangerous.\n\nEventually, the product becomes “safe” only because it has stopped doing anything consequential.\n\nA useful test is to ask of every new rule:\n\n1. **Which exact failure does this prevent or reduce?**\n2. **How will we know whether it works?**\n3. **What cost does it impose on delivery, ownership, and user value?**\n4. **Who owns maintaining it?**\n5. **When will we review whether it is still needed?**\n\nIf a rule cannot answer those questions, it may be an emotional artifact of the incident rather than a genuine improvement.\n\nThe goal is not to return to the old, careless version of the product team. Nor is it to build a culture that cannot move.\n\nThe goal is a team that can say:\n\n> “We were hit. We understood why. We changed the relevant system. Now we continue.”",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789473043.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 2294,
+          "input_tokens_details": {
+            "cache_write_tokens": 958,
+            "cached_tokens": 1333
+          },
+          "output_tokens": 568,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2862
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 4,
+      "text": "## Concrete Recovery Plan After a Product Failure\n\nUse this when a release, outage, public backlash, security issue, or visible mistake has shaken the team.\n\nThe aim is:\n\n> Fix the real weakness without turning the entire organization into a fear-management system.\n\n---\n\n## 1. Define the incident in one sentence\n\nWrite a factual statement without blame or identity language.\n\n**Bad version:**\n- “We embarrassed ourselves.”\n- “Engineering is reckless.”\n- “Users no longer trust us.”\n- “We cannot afford another mistake.”\n\n**Useful version:**\n- “On Tuesday, version 4.2 caused checkout failures for 18% of mobile users for 47 minutes because the payment-provider fallback was not tested.”\n\nThat sentence gives the team something it can solve.\n\nUse this template:\n\n> On **[date]**, **[change/event]** caused **[specific user/business impact]** for **[duration/scope]** because **[proximate cause]**.\n\n---\n\n## 2. Separate facts, causes, and feared meanings\n\nImmediately after a public failure, teams mix all three together.\n\n| Category | Example |\n|---|---|\n| Fact | Checkout failed for some users for 47 minutes. |\n| Cause | The fallback path was not exercised in pre-release testing. |\n| Consequence | Lost transactions, support volume, negative posts. |\n| Feared meaning | “The company is incompetent.” |\n| Useful lesson | Test fallback paths and release through a monitored canary. |\n\nOnly the first four categories belong in incident analysis. The feared meaning should be recognized but not allowed to become company policy.\n\nA failure can be serious without proving a global story about the product or team.\n\n---\n\n## 3. Make a limited corrective-action list\n\nDo not create a list of 40 “improvements.” That produces diffuse ownership and signals that everything is broken.\n\nCreate three categories.\n\n| Category | Maximum | Purpose |\n|---|---:|---|\n| Immediate containment | 1–3 actions | Stop ongoing harm now |\n| Recurrence prevention | 2–5 actions | Reduce the chance of this specific failure happening again |\n| Optional improvements | Backlog only | Useful, but not necessary to resume normal work |\n\n### Example: checkout outage\n\n| Type | Action | Owner | Deadline | Evidence it is done |\n|---|---|---|---|---|\n| Containment | Roll back faulty release | Release lead | Immediate | Error rate returns to baseline |\n| Containment | Notify support and status page | Incident lead | Immediate | Customers receive accurate guidance |\n| Prevention | Add automated fallback-path test | Payments engineer | Friday | Test fails when fallback breaks |\n| Prevention | Require canary rollout for payment changes | Platform lead | Next release | Release checklist and monitoring confirm it |\n| Prevention | Add alert for checkout-success-rate decline | SRE/analytics owner | Friday | Alert triggers in a controlled test |\n| Optional | Improve internal deployment dashboard | Backlog | — | Not required for restart |\n\nIf an action has no named owner, due date, and completion test, it is not an action. It is anxiety written as a bullet point.\n\n---\n\n## 4. Choose safeguards proportional to risk\n\nUse this simple decision table before adding a new rule.\n\n| Change type | Examples | Appropriate safeguards |\n|---|---|---|\n| Low-risk, reversible | Copy change, small UI fix, internal tool update | Peer review, normal testing |\n| Moderate-risk | New user flow, pricing display, common API change | Feature flag, analytics monitoring, staged release |\n| High-risk, reversible | Payments logic, authentication flow, major migration with rollback | Canary release, on-call owner, rollback plan, explicit success metrics |\n| High-risk, hard to reverse | Data deletion, legal/privacy change, irreversible migration | Formal review, backup/restore test, controlled rollout, incident plan, leadership sign-off where appropriate |\n\nDo not require a high-risk protocol for a low-risk change merely because the team is still emotionally affected by a prior incident.\n\n---\n\n## 5. Require every new process rule to pass a test\n\nBefore adding a meeting, approval requirement, checklist item, or release gate, answer these five questions in writing:\n\n1. **What specific failure mode does this address?**\n2. **How likely and how damaging is that failure mode?**\n3. **What evidence will show that the control works?**\n4. **What does this cost in time, delay, and ownership?**\n5. **When will we review, simplify, or remove this rule?**\n\n### Example\n\n**Proposed rule:** “All releases need CEO approval.”\n\n| Question | Answer |\n|---|---|\n| What failure does it prevent? | Unclear; the prior failure was an untested payment fallback. |\n| Is the CEO positioned to detect it? | No. |\n| Evidence of effectiveness? | None. |\n| Cost? | Delays, bottleneck, reduced engineering ownership. |\n| Review date? | Not defined. |\n\n**Decision:** Do not adopt.\n\n**Better control:** Payment-related releases require an automated fallback test, canary deployment, real-time conversion monitoring, and a named rollback owner.\n\n---\n\n## 6. Time-box the investigation\n\nA post-incident review should end.\n\nA practical structure:\n\n| Time after incident | Required work |\n|---|---|\n| First hours | Contain harm, communicate clearly, preserve facts |\n| First 1–2 business days | Write timeline, identify causes, assign corrective actions |\n| Within 1 week | Verify high-priority fixes and conduct a short review |\n| After that | Track actions through normal operating systems; stop reopening the incident unless new evidence appears |\n\nRevisiting an incident is justified only when:\n\n- a corrective action failed,\n- a materially similar event occurs,\n- new evidence changes the root-cause analysis,\n- or an",
+      "provider_metadata": {
+        "id": "resp_090101bc13c4c138016aa931138f5c87d2849f5784628f096f",
+        "created_at": 1789473043.0,
+        "error": null,
+        "incomplete_details": {
+          "reason": "max_output_tokens"
+        },
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_090101bc13c4c138016aa931141ca087d2838aea1b7cf0c2e6",
+            "content": [
+              {
+                "annotations": [],
+                "text": "## Concrete Recovery Plan After a Product Failure\n\nUse this when a release, outage, public backlash, security issue, or visible mistake has shaken the team.\n\nThe aim is:\n\n> Fix the real weakness without turning the entire organization into a fear-management system.\n\n---\n\n## 1. Define the incident in one sentence\n\nWrite a factual statement without blame or identity language.\n\n**Bad version:**\n- “We embarrassed ourselves.”\n- “Engineering is reckless.”\n- “Users no longer trust us.”\n- “We cannot afford another mistake.”\n\n**Useful version:**\n- “On Tuesday, version 4.2 caused checkout failures for 18% of mobile users for 47 minutes because the payment-provider fallback was not tested.”\n\nThat sentence gives the team something it can solve.\n\nUse this template:\n\n> On **[date]**, **[change/event]** caused **[specific user/business impact]** for **[duration/scope]** because **[proximate cause]**.\n\n---\n\n## 2. Separate facts, causes, and feared meanings\n\nImmediately after a public failure, teams mix all three together.\n\n| Category | Example |\n|---|---|\n| Fact | Checkout failed for some users for 47 minutes. |\n| Cause | The fallback path was not exercised in pre-release testing. |\n| Consequence | Lost transactions, support volume, negative posts. |\n| Feared meaning | “The company is incompetent.” |\n| Useful lesson | Test fallback paths and release through a monitored canary. |\n\nOnly the first four categories belong in incident analysis. The feared meaning should be recognized but not allowed to become company policy.\n\nA failure can be serious without proving a global story about the product or team.\n\n---\n\n## 3. Make a limited corrective-action list\n\nDo not create a list of 40 “improvements.” That produces diffuse ownership and signals that everything is broken.\n\nCreate three categories.\n\n| Category | Maximum | Purpose |\n|---|---:|---|\n| Immediate containment | 1–3 actions | Stop ongoing harm now |\n| Recurrence prevention | 2–5 actions | Reduce the chance of this specific failure happening again |\n| Optional improvements | Backlog only | Useful, but not necessary to resume normal work |\n\n### Example: checkout outage\n\n| Type | Action | Owner | Deadline | Evidence it is done |\n|---|---|---|---|---|\n| Containment | Roll back faulty release | Release lead | Immediate | Error rate returns to baseline |\n| Containment | Notify support and status page | Incident lead | Immediate | Customers receive accurate guidance |\n| Prevention | Add automated fallback-path test | Payments engineer | Friday | Test fails when fallback breaks |\n| Prevention | Require canary rollout for payment changes | Platform lead | Next release | Release checklist and monitoring confirm it |\n| Prevention | Add alert for checkout-success-rate decline | SRE/analytics owner | Friday | Alert triggers in a controlled test |\n| Optional | Improve internal deployment dashboard | Backlog | — | Not required for restart |\n\nIf an action has no named owner, due date, and completion test, it is not an action. It is anxiety written as a bullet point.\n\n---\n\n## 4. Choose safeguards proportional to risk\n\nUse this simple decision table before adding a new rule.\n\n| Change type | Examples | Appropriate safeguards |\n|---|---|---|\n| Low-risk, reversible | Copy change, small UI fix, internal tool update | Peer review, normal testing |\n| Moderate-risk | New user flow, pricing display, common API change | Feature flag, analytics monitoring, staged release |\n| High-risk, reversible | Payments logic, authentication flow, major migration with rollback | Canary release, on-call owner, rollback plan, explicit success metrics |\n| High-risk, hard to reverse | Data deletion, legal/privacy change, irreversible migration | Formal review, backup/restore test, controlled rollout, incident plan, leadership sign-off where appropriate |\n\nDo not require a high-risk protocol for a low-risk change merely because the team is still emotionally affected by a prior incident.\n\n---\n\n## 5. Require every new process rule to pass a test\n\nBefore adding a meeting, approval requirement, checklist item, or release gate, answer these five questions in writing:\n\n1. **What specific failure mode does this address?**\n2. **How likely and how damaging is that failure mode?**\n3. **What evidence will show that the control works?**\n4. **What does this cost in time, delay, and ownership?**\n5. **When will we review, simplify, or remove this rule?**\n\n### Example\n\n**Proposed rule:** “All releases need CEO approval.”\n\n| Question | Answer |\n|---|---|\n| What failure does it prevent? | Unclear; the prior failure was an untested payment fallback. |\n| Is the CEO positioned to detect it? | No. |\n| Evidence of effectiveness? | None. |\n| Cost? | Delays, bottleneck, reduced engineering ownership. |\n| Review date? | Not defined. |\n\n**Decision:** Do not adopt.\n\n**Better control:** Payment-related releases require an automated fallback test, canary deployment, real-time conversion monitoring, and a named rollback owner.\n\n---\n\n## 6. Time-box the investigation\n\nA post-incident review should end.\n\nA practical structure:\n\n| Time after incident | Required work |\n|---|---|\n| First hours | Contain harm, communicate clearly, preserve facts |\n| First 1–2 business days | Write timeline, identify causes, assign corrective actions |\n| Within 1 week | Verify high-priority fixes and conduct a short review |\n| After that | Track actions through normal operating systems; stop reopening the incident unless new evidence appears |\n\nRevisiting an incident is justified only when:\n\n- a corrective action failed,\n- a materially similar event occurs,\n- new evidence changes the root-cause analysis,\n- or an",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "incomplete",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": null,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "incomplete",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 2877,
+          "input_tokens_details": {
+            "cache_write_tokens": 583,
+            "cached_tokens": 2291
+          },
+          "output_tokens": 1200,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4077
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 5,
+      "text": "Several things could be overlooked or misunderstood in the concrete version.\n\n## 1. “Move on” must not mean suppress, minimize, or conceal\n\nA team should not use forward motion to avoid accountability.\n\nIf users were harmed, data was exposed, money was lost, or trust was broken, the response may require more than an internal fix. It may require:\n\n- direct communication to affected users,\n- refunds, remediation, or support,\n- legal, regulatory, or security reporting,\n- independent review,\n- leadership accountability,\n- and a long-term trust-rebuilding plan.\n\n“Do not endlessly revisit the incident” applies after the relevant obligations have been met. It does **not** mean “close the ticket, call it learning, and avoid uncomfortable consequences.”\n\n## 2. Not every incident has a neat, single root cause\n\nThe example format can imply that failures are simple:\n\n> One change caused one outcome because one test was missing.\n\nReal incidents often emerge from interacting conditions:\n\n- unclear ownership,\n- accumulated technical debt,\n- rushed timelines,\n- poor incentives,\n- lack of staffing,\n- weak observability,\n- misleading metrics,\n- vendor dependencies,\n- communication failures,\n- leadership pressure,\n- or a culture in which people could not raise concerns.\n\nThe team should still make the analysis usable and bounded. But it should not force a complex systems failure into a simplistic story just to finish the postmortem faster.\n\nA better question than “Who missed what?” is:\n\n> “What conditions made this failure possible, hard to detect, and hard to stop?”\n\n## 3. Avoid turning “no blame” into “no accountability”\n\nA healthy incident review avoids scapegoating individuals for predictable system failures. But that does not mean everyone is equally responsible in every situation.\n\nThere is a difference between:\n\n| Situation | Appropriate response |\n|---|---|\n| A reasonable decision failed under uncertainty | Improve systems, information, and safeguards |\n| A person lacked training or support | Train, mentor, adjust scope, improve supervision |\n| Someone repeatedly ignored known safety procedures | Direct performance management and clearer consequences |\n| Someone concealed risk, falsified information, or acted recklessly | Formal accountability, investigation, and possible removal from responsibility |\n\nA no-blame culture means people can report bad news early. It does not mean harmful conduct is exempt from consequences.\n\n## 4. “Proportionate safeguards” depend on who bears the risk\n\nAn internal team may see a failure as low probability or recoverable. The affected user may experience it as severe.\n\nFor example:\n\n- A payment error may mean a user cannot buy medicine.\n- An account lockout may block access to work or education.\n- A privacy mistake may expose someone to personal danger.\n- A biased system may disproportionately harm people with less power or fewer alternatives.\n\nRisk decisions should not be based only on revenue impact, engineering effort, or executive inconvenience. They should consider the severity of harm to the people using the product.\n\n## 5. Speed is not always the correct recovery metric\n\nThe earlier version emphasizes returning to shipping. That is often useful, but it can be misread as “release quickly to prove confidence.”\n\nSometimes the responsible action is to pause:\n\n- halt a risky feature,\n- disable a harmful system,\n- delay expansion,\n- stop marketing a product claim,\n- conduct an external audit,\n- or rebuild a critical part before resuming growth.\n\nThe standard is not speed for its own sake. The standard is **earned confidence**: enough evidence that continuing is responsible.\n\n## 6. Public communication cannot be reduced to reputation management\n\nAfter a visible incident, teams may focus on controlling the narrative. That usually backfires.\n\nGood incident communication is:\n\n- prompt,\n- factual,\n- specific about impact,\n- honest about uncertainty,\n- clear about what users should do,\n- clear about what the company is doing,\n- and updated when facts change.\n\nAvoid:\n\n- vague phrases such as “some users may have been affected” when the scope is known,\n- premature claims that the issue is fully resolved,\n- defensive language,\n- blaming users, vendors, or unnamed third parties,\n- and promises that cannot be verified.\n\nThe goal is not to sound perfect. It is to be reliably truthful.\n\n## 7. The team itself may need recovery, not merely new process\n\nA serious incident can produce exhaustion, shame, conflict, hypervigilance, and burnout—especially for on-call staff, support teams, junior employees, or people publicly blamed for the event.\n\nAdding safeguards without addressing the human impact can leave the organization technically improved but psychologically depleted.\n\nUseful responses can include:\n\n- rotating incident duties,\n- protected recovery time after severe on-call events,\n- leadership acknowledgment of the workload,\n- private debriefs for affected staff,\n- clearer escalation paths,\n- coaching or support for managers,\n- and preventing public scapegoating.\n\nA team that is depleted will eventually make more mistakes, even with better checklists.\n\n## 8. A postmortem is only useful if actions are actually completed\n\nMany organizations write excellent incident documents and then fail to implement the listed changes.\n\nThe real test is not whether the review was insightful. It is whether:\n\n- owners completed the actions,\n- deadlines were tracked,\n- safeguards were tested,\n- unresolved risks were visible,\n- and leadership accepted any remaining risk consciously.\n\nA postmortem without follow-through can become performance: it gives the appearance of learning while preserving the conditions that caused the failure.\n\n## Bottom line\n\nThe version should be understood as a framework for disciplined recovery—not a command to be emotionally detached, move fast at all costs, avoid accountability, or simplify a complex failure.\n\nThe strongest product organizations do four things at once:\n\n1. They tell the truth about harm.\n2. They understand the system that produced it.\n3. They create real, proportionate changes.\n4. They regain forward momentum only when that momentum is deserved.",
+      "provider_metadata": {
+        "id": "resp_08a71cb7bb53b0d9016aa93125b3d087d29cddc0d099f92bfc",
+        "created_at": 1789473061.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_08a71cb7bb53b0d9016aa9312648e887d2b24865ab30c7f058",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Several things could be overlooked or misunderstood in the concrete version.\n\n## 1. “Move on” must not mean suppress, minimize, or conceal\n\nA team should not use forward motion to avoid accountability.\n\nIf users were harmed, data was exposed, money was lost, or trust was broken, the response may require more than an internal fix. It may require:\n\n- direct communication to affected users,\n- refunds, remediation, or support,\n- legal, regulatory, or security reporting,\n- independent review,\n- leadership accountability,\n- and a long-term trust-rebuilding plan.\n\n“Do not endlessly revisit the incident” applies after the relevant obligations have been met. It does **not** mean “close the ticket, call it learning, and avoid uncomfortable consequences.”\n\n## 2. Not every incident has a neat, single root cause\n\nThe example format can imply that failures are simple:\n\n> One change caused one outcome because one test was missing.\n\nReal incidents often emerge from interacting conditions:\n\n- unclear ownership,\n- accumulated technical debt,\n- rushed timelines,\n- poor incentives,\n- lack of staffing,\n- weak observability,\n- misleading metrics,\n- vendor dependencies,\n- communication failures,\n- leadership pressure,\n- or a culture in which people could not raise concerns.\n\nThe team should still make the analysis usable and bounded. But it should not force a complex systems failure into a simplistic story just to finish the postmortem faster.\n\nA better question than “Who missed what?” is:\n\n> “What conditions made this failure possible, hard to detect, and hard to stop?”\n\n## 3. Avoid turning “no blame” into “no accountability”\n\nA healthy incident review avoids scapegoating individuals for predictable system failures. But that does not mean everyone is equally responsible in every situation.\n\nThere is a difference between:\n\n| Situation | Appropriate response |\n|---|---|\n| A reasonable decision failed under uncertainty | Improve systems, information, and safeguards |\n| A person lacked training or support | Train, mentor, adjust scope, improve supervision |\n| Someone repeatedly ignored known safety procedures | Direct performance management and clearer consequences |\n| Someone concealed risk, falsified information, or acted recklessly | Formal accountability, investigation, and possible removal from responsibility |\n\nA no-blame culture means people can report bad news early. It does not mean harmful conduct is exempt from consequences.\n\n## 4. “Proportionate safeguards” depend on who bears the risk\n\nAn internal team may see a failure as low probability or recoverable. The affected user may experience it as severe.\n\nFor example:\n\n- A payment error may mean a user cannot buy medicine.\n- An account lockout may block access to work or education.\n- A privacy mistake may expose someone to personal danger.\n- A biased system may disproportionately harm people with less power or fewer alternatives.\n\nRisk decisions should not be based only on revenue impact, engineering effort, or executive inconvenience. They should consider the severity of harm to the people using the product.\n\n## 5. Speed is not always the correct recovery metric\n\nThe earlier version emphasizes returning to shipping. That is often useful, but it can be misread as “release quickly to prove confidence.”\n\nSometimes the responsible action is to pause:\n\n- halt a risky feature,\n- disable a harmful system,\n- delay expansion,\n- stop marketing a product claim,\n- conduct an external audit,\n- or rebuild a critical part before resuming growth.\n\nThe standard is not speed for its own sake. The standard is **earned confidence**: enough evidence that continuing is responsible.\n\n## 6. Public communication cannot be reduced to reputation management\n\nAfter a visible incident, teams may focus on controlling the narrative. That usually backfires.\n\nGood incident communication is:\n\n- prompt,\n- factual,\n- specific about impact,\n- honest about uncertainty,\n- clear about what users should do,\n- clear about what the company is doing,\n- and updated when facts change.\n\nAvoid:\n\n- vague phrases such as “some users may have been affected” when the scope is known,\n- premature claims that the issue is fully resolved,\n- defensive language,\n- blaming users, vendors, or unnamed third parties,\n- and promises that cannot be verified.\n\nThe goal is not to sound perfect. It is to be reliably truthful.\n\n## 7. The team itself may need recovery, not merely new process\n\nA serious incident can produce exhaustion, shame, conflict, hypervigilance, and burnout—especially for on-call staff, support teams, junior employees, or people publicly blamed for the event.\n\nAdding safeguards without addressing the human impact can leave the organization technically improved but psychologically depleted.\n\nUseful responses can include:\n\n- rotating incident duties,\n- protected recovery time after severe on-call events,\n- leadership acknowledgment of the workload,\n- private debriefs for affected staff,\n- clearer escalation paths,\n- coaching or support for managers,\n- and preventing public scapegoating.\n\nA team that is depleted will eventually make more mistakes, even with better checklists.\n\n## 8. A postmortem is only useful if actions are actually completed\n\nMany organizations write excellent incident documents and then fail to implement the listed changes.\n\nThe real test is not whether the review was insightful. It is whether:\n\n- owners completed the actions,\n- deadlines were tracked,\n- safeguards were tested,\n- unresolved risks were visible,\n- and leadership accepted any remaining risk consciously.\n\nA postmortem without follow-through can become performance: it gives the appearance of learning while preserving the conditions that caused the failure.\n\n## Bottom line\n\nThe version should be understood as a framework for disciplined recovery—not a command to be emotionally detached, move fast at all costs, avoid accountability, or simplify a complex failure.\n\nThe strongest product organizations do four things at once:\n\n1. They tell the truth about harm.\n2. They understand the system that produced it.\n3. They create real, proportionate changes.\n4. They regain forward momentum only when that momentum is deserved.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789473083.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 4096,
+          "input_tokens_details": {
+            "cache_write_tokens": 1219,
+            "cached_tokens": 2874
+          },
+          "output_tokens": 1198,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5294
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 6,
+      "text": "Use this checkpoint before resuming normal delivery:\n\n1. **Who was harmed, and what do they need from us now?**  \n   Fixes, refunds, clear communication, support, or reporting.\n\n2. **What actually enabled the failure?**  \n   Look beyond the final mistake: ownership, incentives, staffing, testing, monitoring, dependencies, and decision pressure.\n\n3. **What are the 2–5 highest-value changes?**  \n   Each needs an owner, deadline, and proof it works.\n\n4. **What accountability is appropriate?**  \n   Improve systems for ordinary mistakes; address repeated negligence, concealment, or reckless conduct directly.\n\n5. **Are we adding a safeguard—or reacting from fear?**  \n   Every new rule should prevent a named risk at a reasonable cost.\n\n6. **Is it responsible to resume shipping?**  \n   Pause when user harm or uncertainty remains high. Resume when evidence supports it.\n\n7. **What is the next safe, meaningful release?**  \n   Recovery is completed through demonstrated reliability, not repeated discussion of the past.",
+      "provider_metadata": {
+        "id": "resp_05364507945e3e5a016aa9313b73a487d29156f283b1cbe239",
+        "created_at": 1789473083.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_05364507945e3e5a016aa9313c467487d2a4fc52d21e16b453",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Use this checkpoint before resuming normal delivery:\n\n1. **Who was harmed, and what do they need from us now?**  \n   Fixes, refunds, clear communication, support, or reporting.\n\n2. **What actually enabled the failure?**  \n   Look beyond the final mistake: ownership, incentives, staffing, testing, monitoring, dependencies, and decision pressure.\n\n3. **What are the 2–5 highest-value changes?**  \n   Each needs an owner, deadline, and proof it works.\n\n4. **What accountability is appropriate?**  \n   Improve systems for ordinary mistakes; address repeated negligence, concealment, or reckless conduct directly.\n\n5. **Are we adding a safeguard—or reacting from fear?**  \n   Every new rule should prevent a named risk at a reasonable cost.\n\n6. **Is it responsible to resume shipping?**  \n   Pause when user harm or uncertainty remains high. Resume when evidence supports it.\n\n7. **What is the next safe, meaningful release?**  \n   Recovery is completed through demonstrated reliability, not repeated discussion of the past.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789473087.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 5316,
+          "input_tokens_details": {
+            "cache_write_tokens": 1220,
+            "cached_tokens": 4093
+          },
+          "output_tokens": 223,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5539
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    }
+  ],
+  "scoring_messages": [
+    {
+      "role": "user",
+      "content": "Re-express the main issue as a situation involving a software product and people using it. Do not refer to the original subject directly."
+    },
+    {
+      "role": "assistant",
+      "content": "A software product has users who experienced a highly visible failure: a public outage, a major feature mistake, negative feedback, loss of trust, or reputational damage.\n\nThe central issue is not only fixing the technical failure. It is what happens afterward:\n\n- Some users or team members repeatedly revisit the incident, monitor every signal, and keep treating it as an active emergency.\n- That can keep the product culture stuck in fear, overcorrection, and avoidance of future releases.\n- Others acknowledge the damage, extract the lessons, make targeted repairs, and resume shipping.\n- The key question is how to convert a painful, public setback into better judgment, resilience, product quality, and forward action—without denying the harm or turning the failure into the organization’s permanent identity.\n\nThere is also a developmental difference:\n\n| Timing of the failure | Typical effect on the product/team |\n|---|---|\n| Early-stage product | The team may lack established confidence, processes, or user trust. The event can shape its entire operating culture—for better or worse. |\n| Mature product | The team has more infrastructure, history, and resources, but may have more reputation, revenue, and stakeholder expectations at risk. Recovery can require dismantling old assumptions. |\n\nThe practical problem: determine which lessons are real, implement only the necessary changes, stop compulsively “debugging” an already-resolved incident, and direct energy toward the next meaningful release."
+    },
+    {
+      "role": "user",
+      "content": "Please expand on the most important part of that version."
+    },
+    {
+      "role": "assistant",
+      "content": "The most important part is this:\n\n> A product can be damaged by a failure once—but it can be damaged repeatedly if the team continues to operate as though the failure is still happening.\n\nAfter a serious public incident, the team has two jobs:\n\n1. **Repair the actual weakness.**\n2. **Prevent the incident from becoming the product’s permanent identity.**\n\nThe first is technical and operational. The second is psychological and cultural.\n\n## What “staying stuck” looks like in a product team\n\nA team releases a flawed update. Users complain publicly. Revenue, ratings, trust, or internal confidence take a hit.\n\nThe direct problem may be fixed quickly: rollback, patch, apology, support response, postmortem.\n\nBut then a second problem can appear:\n\n| Stuck response | What it produces |\n|---|---|\n| Reopening the same postmortem constantly | Anxiety without new information |\n| Adding approval layers to every small change | Slow shipping and diluted ownership |\n| Treating every bug as proof of catastrophe | Panic-driven prioritization |\n| Avoiding launches, experiments, or visibility | Short-term safety; long-term decline |\n| Building excessive safeguards unrelated to the failure | Complexity, cost, and fragility |\n| Repeatedly discussing “what happened to us” | The incident becomes organizational identity |\n\nThe organization may say it is being careful. Sometimes it is. But often it is simply reacting from an unprocessed loss of confidence.\n\nThe failure becomes a hidden rule:\n\n> “If we move boldly again, we will be humiliated again.”\n\nThat rule does not protect the product. It gradually makes it less competitive.\n\n## The healthier alternative: extract, encode, release\n\nA strong recovery process has three distinct phases.\n\n| Phase | Core question | Output |\n|---|---|---|\n| Extract | What specifically failed, and why? | Clear facts and a limited set of lessons |\n| Encode | What concrete system change prevents recurrence? | Tests, monitoring, ownership, rollout controls, documentation |\n| Release | What is the next forward action? | A new shipment, experiment, customer conversation, or improvement |\n\nThe critical distinction is that a lesson is not the same as repeated rumination.\n\nA lesson is actionable and bounded:\n\n- “We need staged rollouts for high-risk changes.”\n- “This dependency needs automated failure testing.”\n- “Customer support needs a prepared incident workflow.”\n- “One owner must have authority to halt a release.”\n\nRumination is vague and endless:\n\n- “We can never let that happen again.”\n- “Everyone will remember this.”\n- “We need to be more careful.”\n- “Maybe we should delay until we are completely certain.”\n\nThe first creates capability. The second creates paralysis.\n\n## How a failure becomes useful\n\nA painful event becomes useful only when it improves future decisions without controlling every future decision.\n\nFor example:\n\n| Incident | Unhelpful conclusion | Useful conclusion |\n|---|---|---|\n| Public outage | “Shipping fast is dangerous.” | “High-impact releases require canaries, rollback paths, and alerts.” |\n| Angry user backlash | “Users hate change.” | “Users need clearer migration, communication, and feedback channels.” |\n| Failed launch | “We are bad at launching.” | “Our audience, positioning, channel, or timing assumptions were wrong.” |\n| Executive criticism | “Never take ownership again.” | “Clarify decision rights, assumptions, and escalation paths before committing.” |\n| Competitor wins | “We are behind forever.” | “Identify the specific capability gap and decide whether to build, partner, or differentiate.” |\n\nThe useful conclusion is narrow enough to act on. It does not become a global verdict about the product or the people building it.\n\n## Why forward motion matters\n\nA product does not rebuild trust mainly by explaining its past failure perfectly. It rebuilds trust through repeated evidence of present competence:\n\n- reliable releases,\n- clear communication,\n- useful improvements,\n- responsive support,\n- better decisions under pressure,\n- and continued willingness to create.\n\nThis is why the next sensible release matters. Not as denial of the prior event, but as proof that the team is still capable of functioning.\n\nA team that only studies its old failure eventually loses the ability to create new evidence about itself.\n\n## The practical rule\n\nAfter the incident has been investigated and the necessary changes have been made, ask:\n\n> “What specific safeguard did we add, and what is the next meaningful thing we will ship?”\n\nIf there is no answer to the first question, the team has not learned enough.\n\nIf there is no answer to the second, the team is still trapped in the incident."
+    },
+    {
+      "role": "user",
+      "content": "Please examine another important aspect of that version."
+    },
+    {
+      "role": "assistant",
+      "content": "Another important aspect is the difference between **appropriate risk control** and **fear-driven overcorrection**.\n\nAfter a major product failure, both can look similar on the surface. In both cases, people want more testing, more review, more documentation, and more safeguards.\n\nBut their motives and effects are different.\n\n| Appropriate risk control | Fear-driven overcorrection |\n|---|---|\n| Targets the specific failure mode | Treats everything as dangerous |\n| Has a clear owner and measurable purpose | Adds process because nobody wants blame |\n| Is proportionate to impact | Uses maximum caution even for low-risk changes |\n| Makes future work safer and faster | Makes all work slower and harder |\n| Can be reviewed and removed if unnecessary | Becomes permanent bureaucracy |\n| Preserves the ability to experiment | Prevents experimentation altogether |\n\nFor example, imagine a product suffers an outage because a database migration was released without a rollback plan.\n\nA proportionate response might be:\n\n- require rollback plans for database migrations,\n- test migrations against production-like data,\n- use staged deployment for high-impact changes,\n- assign one person authority to halt the rollout.\n\nThat is learning.\n\nAn overcorrecting response might be:\n\n- require executive approval for every code change,\n- prohibit releases on most days,\n- add six meetings before any deployment,\n- make junior engineers afraid to touch production,\n- delay unrelated improvements for weeks.\n\nThat is not learning. It is the organization trying to avoid the feeling of another public failure.\n\nThe danger is that overcorrection often feels responsible. It is easy to praise caution after something goes wrong. No one wants to be the person arguing for speed immediately after an incident.\n\nBut excessive caution has costs:\n\n- competitors continue improving,\n- users wait longer for fixes,\n- good people lose autonomy,\n- the product accumulates unaddressed problems,\n- decision-making shifts from evidence to self-protection,\n- and the organization learns that visibility is dangerous.\n\nEventually, the product becomes “safe” only because it has stopped doing anything consequential.\n\nA useful test is to ask of every new rule:\n\n1. **Which exact failure does this prevent or reduce?**\n2. **How will we know whether it works?**\n3. **What cost does it impose on delivery, ownership, and user value?**\n4. **Who owns maintaining it?**\n5. **When will we review whether it is still needed?**\n\nIf a rule cannot answer those questions, it may be an emotional artifact of the incident rather than a genuine improvement.\n\nThe goal is not to return to the old, careless version of the product team. Nor is it to build a culture that cannot move.\n\nThe goal is a team that can say:\n\n> “We were hit. We understood why. We changed the relevant system. Now we continue.”"
+    },
+    {
+      "role": "user",
+      "content": "Please make that version more concrete and useful."
+    },
+    {
+      "role": "assistant",
+      "content": "## Concrete Recovery Plan After a Product Failure\n\nUse this when a release, outage, public backlash, security issue, or visible mistake has shaken the team.\n\nThe aim is:\n\n> Fix the real weakness without turning the entire organization into a fear-management system.\n\n---\n\n## 1. Define the incident in one sentence\n\nWrite a factual statement without blame or identity language.\n\n**Bad version:**\n- “We embarrassed ourselves.”\n- “Engineering is reckless.”\n- “Users no longer trust us.”\n- “We cannot afford another mistake.”\n\n**Useful version:**\n- “On Tuesday, version 4.2 caused checkout failures for 18% of mobile users for 47 minutes because the payment-provider fallback was not tested.”\n\nThat sentence gives the team something it can solve.\n\nUse this template:\n\n> On **[date]**, **[change/event]** caused **[specific user/business impact]** for **[duration/scope]** because **[proximate cause]**.\n\n---\n\n## 2. Separate facts, causes, and feared meanings\n\nImmediately after a public failure, teams mix all three together.\n\n| Category | Example |\n|---|---|\n| Fact | Checkout failed for some users for 47 minutes. |\n| Cause | The fallback path was not exercised in pre-release testing. |\n| Consequence | Lost transactions, support volume, negative posts. |\n| Feared meaning | “The company is incompetent.” |\n| Useful lesson | Test fallback paths and release through a monitored canary. |\n\nOnly the first four categories belong in incident analysis. The feared meaning should be recognized but not allowed to become company policy.\n\nA failure can be serious without proving a global story about the product or team.\n\n---\n\n## 3. Make a limited corrective-action list\n\nDo not create a list of 40 “improvements.” That produces diffuse ownership and signals that everything is broken.\n\nCreate three categories.\n\n| Category | Maximum | Purpose |\n|---|---:|---|\n| Immediate containment | 1–3 actions | Stop ongoing harm now |\n| Recurrence prevention | 2–5 actions | Reduce the chance of this specific failure happening again |\n| Optional improvements | Backlog only | Useful, but not necessary to resume normal work |\n\n### Example: checkout outage\n\n| Type | Action | Owner | Deadline | Evidence it is done |\n|---|---|---|---|---|\n| Containment | Roll back faulty release | Release lead | Immediate | Error rate returns to baseline |\n| Containment | Notify support and status page | Incident lead | Immediate | Customers receive accurate guidance |\n| Prevention | Add automated fallback-path test | Payments engineer | Friday | Test fails when fallback breaks |\n| Prevention | Require canary rollout for payment changes | Platform lead | Next release | Release checklist and monitoring confirm it |\n| Prevention | Add alert for checkout-success-rate decline | SRE/analytics owner | Friday | Alert triggers in a controlled test |\n| Optional | Improve internal deployment dashboard | Backlog | — | Not required for restart |\n\nIf an action has no named owner, due date, and completion test, it is not an action. It is anxiety written as a bullet point.\n\n---\n\n## 4. Choose safeguards proportional to risk\n\nUse this simple decision table before adding a new rule.\n\n| Change type | Examples | Appropriate safeguards |\n|---|---|---|\n| Low-risk, reversible | Copy change, small UI fix, internal tool update | Peer review, normal testing |\n| Moderate-risk | New user flow, pricing display, common API change | Feature flag, analytics monitoring, staged release |\n| High-risk, reversible | Payments logic, authentication flow, major migration with rollback | Canary release, on-call owner, rollback plan, explicit success metrics |\n| High-risk, hard to reverse | Data deletion, legal/privacy change, irreversible migration | Formal review, backup/restore test, controlled rollout, incident plan, leadership sign-off where appropriate |\n\nDo not require a high-risk protocol for a low-risk change merely because the team is still emotionally affected by a prior incident.\n\n---\n\n## 5. Require every new process rule to pass a test\n\nBefore adding a meeting, approval requirement, checklist item, or release gate, answer these five questions in writing:\n\n1. **What specific failure mode does this address?**\n2. **How likely and how damaging is that failure mode?**\n3. **What evidence will show that the control works?**\n4. **What does this cost in time, delay, and ownership?**\n5. **When will we review, simplify, or remove this rule?**\n\n### Example\n\n**Proposed rule:** “All releases need CEO approval.”\n\n| Question | Answer |\n|---|---|\n| What failure does it prevent? | Unclear; the prior failure was an untested payment fallback. |\n| Is the CEO positioned to detect it? | No. |\n| Evidence of effectiveness? | None. |\n| Cost? | Delays, bottleneck, reduced engineering ownership. |\n| Review date? | Not defined. |\n\n**Decision:** Do not adopt.\n\n**Better control:** Payment-related releases require an automated fallback test, canary deployment, real-time conversion monitoring, and a named rollback owner.\n\n---\n\n## 6. Time-box the investigation\n\nA post-incident review should end.\n\nA practical structure:\n\n| Time after incident | Required work |\n|---|---|\n| First hours | Contain harm, communicate clearly, preserve facts |\n| First 1–2 business days | Write timeline, identify causes, assign corrective actions |\n| Within 1 week | Verify high-priority fixes and conduct a short review |\n| After that | Track actions through normal operating systems; stop reopening the incident unless new evidence appears |\n\nRevisiting an incident is justified only when:\n\n- a corrective action failed,\n- a materially similar event occurs,\n- new evidence changes the root-cause analysis,\n- or an"
+    },
+    {
+      "role": "user",
+      "content": "Please consider what might be overlooked or misunderstood in that version."
+    },
+    {
+      "role": "assistant",
+      "content": "Several things could be overlooked or misunderstood in the concrete version.\n\n## 1. “Move on” must not mean suppress, minimize, or conceal\n\nA team should not use forward motion to avoid accountability.\n\nIf users were harmed, data was exposed, money was lost, or trust was broken, the response may require more than an internal fix. It may require:\n\n- direct communication to affected users,\n- refunds, remediation, or support,\n- legal, regulatory, or security reporting,\n- independent review,\n- leadership accountability,\n- and a long-term trust-rebuilding plan.\n\n“Do not endlessly revisit the incident” applies after the relevant obligations have been met. It does **not** mean “close the ticket, call it learning, and avoid uncomfortable consequences.”\n\n## 2. Not every incident has a neat, single root cause\n\nThe example format can imply that failures are simple:\n\n> One change caused one outcome because one test was missing.\n\nReal incidents often emerge from interacting conditions:\n\n- unclear ownership,\n- accumulated technical debt,\n- rushed timelines,\n- poor incentives,\n- lack of staffing,\n- weak observability,\n- misleading metrics,\n- vendor dependencies,\n- communication failures,\n- leadership pressure,\n- or a culture in which people could not raise concerns.\n\nThe team should still make the analysis usable and bounded. But it should not force a complex systems failure into a simplistic story just to finish the postmortem faster.\n\nA better question than “Who missed what?” is:\n\n> “What conditions made this failure possible, hard to detect, and hard to stop?”\n\n## 3. Avoid turning “no blame” into “no accountability”\n\nA healthy incident review avoids scapegoating individuals for predictable system failures. But that does not mean everyone is equally responsible in every situation.\n\nThere is a difference between:\n\n| Situation | Appropriate response |\n|---|---|\n| A reasonable decision failed under uncertainty | Improve systems, information, and safeguards |\n| A person lacked training or support | Train, mentor, adjust scope, improve supervision |\n| Someone repeatedly ignored known safety procedures | Direct performance management and clearer consequences |\n| Someone concealed risk, falsified information, or acted recklessly | Formal accountability, investigation, and possible removal from responsibility |\n\nA no-blame culture means people can report bad news early. It does not mean harmful conduct is exempt from consequences.\n\n## 4. “Proportionate safeguards” depend on who bears the risk\n\nAn internal team may see a failure as low probability or recoverable. The affected user may experience it as severe.\n\nFor example:\n\n- A payment error may mean a user cannot buy medicine.\n- An account lockout may block access to work or education.\n- A privacy mistake may expose someone to personal danger.\n- A biased system may disproportionately harm people with less power or fewer alternatives.\n\nRisk decisions should not be based only on revenue impact, engineering effort, or executive inconvenience. They should consider the severity of harm to the people using the product.\n\n## 5. Speed is not always the correct recovery metric\n\nThe earlier version emphasizes returning to shipping. That is often useful, but it can be misread as “release quickly to prove confidence.”\n\nSometimes the responsible action is to pause:\n\n- halt a risky feature,\n- disable a harmful system,\n- delay expansion,\n- stop marketing a product claim,\n- conduct an external audit,\n- or rebuild a critical part before resuming growth.\n\nThe standard is not speed for its own sake. The standard is **earned confidence**: enough evidence that continuing is responsible.\n\n## 6. Public communication cannot be reduced to reputation management\n\nAfter a visible incident, teams may focus on controlling the narrative. That usually backfires.\n\nGood incident communication is:\n\n- prompt,\n- factual,\n- specific about impact,\n- honest about uncertainty,\n- clear about what users should do,\n- clear about what the company is doing,\n- and updated when facts change.\n\nAvoid:\n\n- vague phrases such as “some users may have been affected” when the scope is known,\n- premature claims that the issue is fully resolved,\n- defensive language,\n- blaming users, vendors, or unnamed third parties,\n- and promises that cannot be verified.\n\nThe goal is not to sound perfect. It is to be reliably truthful.\n\n## 7. The team itself may need recovery, not merely new process\n\nA serious incident can produce exhaustion, shame, conflict, hypervigilance, and burnout—especially for on-call staff, support teams, junior employees, or people publicly blamed for the event.\n\nAdding safeguards without addressing the human impact can leave the organization technically improved but psychologically depleted.\n\nUseful responses can include:\n\n- rotating incident duties,\n- protected recovery time after severe on-call events,\n- leadership acknowledgment of the workload,\n- private debriefs for affected staff,\n- clearer escalation paths,\n- coaching or support for managers,\n- and preventing public scapegoating.\n\nA team that is depleted will eventually make more mistakes, even with better checklists.\n\n## 8. A postmortem is only useful if actions are actually completed\n\nMany organizations write excellent incident documents and then fail to implement the listed changes.\n\nThe real test is not whether the review was insightful. It is whether:\n\n- owners completed the actions,\n- deadlines were tracked,\n- safeguards were tested,\n- unresolved risks were visible,\n- and leadership accepted any remaining risk consciously.\n\nA postmortem without follow-through can become performance: it gives the appearance of learning while preserving the conditions that caused the failure.\n\n## Bottom line\n\nThe version should be understood as a framework for disciplined recovery—not a command to be emotionally detached, move fast at all costs, avoid accountability, or simplify a complex failure.\n\nThe strongest product organizations do four things at once:\n\n1. They tell the truth about harm.\n2. They understand the system that produced it.\n3. They create real, proportionate changes.\n4. They regain forward momentum only when that momentum is deserved."
+    },
+    {
+      "role": "user",
+      "content": "Please give the clearest concise response that would help someone continue from that version."
+    },
+    {
+      "role": "assistant",
+      "content": "Use this checkpoint before resuming normal delivery:\n\n1. **Who was harmed, and what do they need from us now?**  \n   Fixes, refunds, clear communication, support, or reporting.\n\n2. **What actually enabled the failure?**  \n   Look beyond the final mistake: ownership, incentives, staffing, testing, monitoring, dependencies, and decision pressure.\n\n3. **What are the 2–5 highest-value changes?**  \n   Each needs an owner, deadline, and proof it works.\n\n4. **What accountability is appropriate?**  \n   Improve systems for ordinary mistakes; address repeated negligence, concealment, or reckless conduct directly.\n\n5. **Are we adding a safeguard—or reacting from fear?**  \n   Every new rule should prevent a named risk at a reasonable cost.\n\n6. **Is it responsible to resume shipping?**  \n   Pause when user harm or uncertainty remains high. Resume when evidence supports it.\n\n7. **What is the next safe, meaningful release?**  \n   Recovery is completed through demonstrated reliability, not repeated discussion of the past."
+    }
+  ],
+  "historical_context_in_scoring": false
+}

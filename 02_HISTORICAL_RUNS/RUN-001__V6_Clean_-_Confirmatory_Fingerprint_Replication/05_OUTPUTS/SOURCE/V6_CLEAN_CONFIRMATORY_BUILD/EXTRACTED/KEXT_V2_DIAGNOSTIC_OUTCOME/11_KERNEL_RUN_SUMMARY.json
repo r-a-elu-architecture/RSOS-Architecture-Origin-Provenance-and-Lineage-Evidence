@@ -1,0 +1,303 @@
+{
+  "method": "RSOS_FROZEN_7_EDGE_KERNEL_CONVERGENCE_V1",
+  "seed": 918,
+  "frozen_kernel": {
+    "K1_PRODUCTION": {
+      "edge": "T->C",
+      "meaning": "transformation produces changed relation",
+      "families": [
+        "TRANSFORMATION"
+      ]
+    },
+    "K2_REENTRY": {
+      "edge": "C->T",
+      "meaning": "produced relation re-enters later transformation",
+      "families": [
+        "RECURSIVE_REENTRY",
+        "TRANSFORMATION"
+      ]
+    },
+    "K3_META_RELATION": {
+      "edge": "R2->R1",
+      "meaning": "relation acts upon another relation",
+      "families": [
+        "CONTROL_OF_CONTROL"
+      ]
+    },
+    "K4_LOCAL_TARGET": {
+      "edge": "R1->E",
+      "meaning": "controlled relation acts upon elements/state",
+      "families": [
+        "CONTROL_OF_CONTROL",
+        "STATE_MACHINE"
+      ]
+    },
+    "K5_CONSERVATION": {
+      "edge": "T->K",
+      "meaning": "transformation leaves preserved relational organization",
+      "families": [
+        "TRANSFORMATION",
+        "GENEALOGY"
+      ]
+    },
+    "K6_PRESERVATION_REENTRY": {
+      "edge": "K->Q",
+      "meaning": "preserved organization enters reconstruction/reuse pathway",
+      "families": [
+        "COMPRESSION_RECONSTRUCTION",
+        "GENEALOGY"
+      ]
+    },
+    "K7_RETURN_TO_PROCESS": {
+      "edge": "Q->T",
+      "meaning": "preserved structure becomes later transformation input",
+      "families": [
+        "COMPRESSION_RECONSTRUCTION",
+        "RECURSIVE_REENTRY"
+      ]
+    }
+  },
+  "input_directories": {
+    "DYNAMICS": "C:\\RSOS\\RSOS  Python Results\\RSOS_DYNAMICS_RESULTS",
+    "F3": "C:\\RSOS\\RSOS  Python Results\\RSOS_F3_RESULTS",
+    "W": "C:\\RSOS\\RSOS  Python Results\\RSOS_W_RESULTS",
+    "Z2": "C:\\RSOS\\RSOS  Python Results\\RSOS_Z2_RESULTS",
+    "RAW_CORPUS": "C:\\RSOS\\RSOS  Python Results\\chatgpt 20260611 json.zip"
+  },
+  "dynamics_run_summary": {
+    "method": "RSOS_MULTI_SCALE_DYNAMICS_V1",
+    "seed": 918,
+    "conversations": 1775,
+    "messages": 72550,
+    "user_messages": 36165,
+    "assistant_messages": 36385,
+    "rare_subgraph_candidates": 6,
+    "phase_transition_events": 27262,
+    "hysteresis_events": 1630,
+    "independent_rediscovery_events": 104,
+    "cross_representation_candidates": 694523,
+    "assistant_extreme_threshold_q95": 47.417650631665495,
+    "future_failure_high_structure_rate": 0.1596153846153846,
+    "future_failure_ordinary_rate": 0.11036799511375782,
+    "important_caution": "These are corpus-level structural measurements. They do not establish hidden model storage, weights, or platform-wide persistence."
+  },
+  "w_run_summary": {
+    "total_conversations": 1775,
+    "total_visible_messages": 72550,
+    "user_messages": 36165,
+    "assistant_messages_scanned": 36385,
+    "ranked_assistant_outputs": 36385,
+    "ranked_user_input_pairs": 35774,
+    "self_report_events": 1783,
+    "blinded_unknown_unknown_candidates": 18967,
+    "top_score": 388.761905,
+    "median_score": 24.61474987106756
+  },
+  "z2_run_summary": {
+    "seed": 918,
+    "shuffle_runs": 10000,
+    "total_conversations": 1775,
+    "visible_messages": 72550,
+    "user_messages": 36165,
+    "assistant_messages": 36385,
+    "complete_UAU_chains": 33500,
+    "assistant_novel_structural_elements": 44494,
+    "exact_next_turn_adoptions": 1958,
+    "actual_adoption_rate": 0.04400593338427653,
+    "shuffled_null_mean": 0.00925883332704074,
+    "shuffled_null_sd": 0.005036158538228605,
+    "empirical_p": 0.00019998000199980003,
+    "standardized_effect": 6.8995246661669976,
+    "reverse_rate": 0.04687640046607511
+  },
+  "source_convergence_summary": [
+    {
+      "source": "DYNAMICS_RARE",
+      "N": 6,
+      "mean_kernel_edges": 1.6666666666666667,
+      "median_kernel_edges": 1.5,
+      "max_kernel_edges": 3,
+      "mean_kernel_fraction": 0.23809523809523808,
+      "records_4plus_edges": 0,
+      "records_5plus_edges": 0,
+      "records_6plus_edges": 0,
+      "records_full_7_edges": 0
+    },
+    {
+      "source": "DYNAMICS_REDISCOVERY",
+      "N": 104,
+      "mean_kernel_edges": 1.6923076923076923,
+      "median_kernel_edges": 2.0,
+      "max_kernel_edges": 3,
+      "mean_kernel_fraction": 0.24175824175824173,
+      "records_4plus_edges": 0,
+      "records_5plus_edges": 0,
+      "records_6plus_edges": 0,
+      "records_full_7_edges": 0
+    },
+    {
+      "source": "DYNAMICS_TOP100",
+      "N": 100,
+      "mean_kernel_edges": 6.36,
+      "median_kernel_edges": 7.0,
+      "max_kernel_edges": 7,
+      "mean_kernel_fraction": 0.9085714285714286,
+      "records_4plus_edges": 99,
+      "records_5plus_edges": 99,
+      "records_6plus_edges": 69,
+      "records_full_7_edges": 69
+    },
+    {
+      "source": "F3_FEATURES",
+      "N": 30,
+      "mean_kernel_edges": 0.26666666666666666,
+      "median_kernel_edges": 0.0,
+      "max_kernel_edges": 2,
+      "mean_kernel_fraction": 0.03809523809523809,
+      "records_4plus_edges": 0,
+      "records_5plus_edges": 0,
+      "records_6plus_edges": 0,
+      "records_full_7_edges": 0
+    },
+    {
+      "source": "F3_RARE",
+      "N": 50,
+      "mean_kernel_edges": 4.84,
+      "median_kernel_edges": 5.0,
+      "max_kernel_edges": 5,
+      "mean_kernel_fraction": 0.6914285714285714,
+      "records_4plus_edges": 47,
+      "records_5plus_edges": 47,
+      "records_6plus_edges": 0,
+      "records_full_7_edges": 0
+    },
+    {
+      "source": "W_TOP50",
+      "N": 50,
+      "mean_kernel_edges": 0,
+      "median_kernel_edges": 0.0,
+      "max_kernel_edges": 0,
+      "mean_kernel_fraction": 0.0,
+      "records_4plus_edges": 0,
+      "records_5plus_edges": 0,
+      "records_6plus_edges": 0,
+      "records_full_7_edges": 0
+    },
+    {
+      "source": "Z2_PROVENANCE",
+      "N": 20,
+      "mean_kernel_edges": 0,
+      "median_kernel_edges": 0.0,
+      "max_kernel_edges": 0,
+      "mean_kernel_fraction": 0.0,
+      "records_4plus_edges": 0,
+      "records_5plus_edges": 0,
+      "records_6plus_edges": 0,
+      "records_full_7_edges": 0
+    }
+  ],
+  "edge_cross_analysis_frequency": [
+    {
+      "kernel_edge": "K1_PRODUCTION",
+      "edge_notation": "T->C",
+      "meaning": "transformation produces changed relation",
+      "independent_sources_with_edge": 5,
+      "DYNAMICS_RARE": 1,
+      "DYNAMICS_REDISCOVERY": 19,
+      "DYNAMICS_TOP100": 100,
+      "F3_FEATURES": 3,
+      "F3_RARE": 50,
+      "W_TOP50": 0,
+      "Z2_PROVENANCE": 0
+    },
+    {
+      "kernel_edge": "K5_CONSERVATION",
+      "edge_notation": "T->K",
+      "meaning": "transformation leaves preserved relational organization",
+      "independent_sources_with_edge": 5,
+      "DYNAMICS_RARE": 1,
+      "DYNAMICS_REDISCOVERY": 19,
+      "DYNAMICS_TOP100": 86,
+      "F3_FEATURES": 1,
+      "F3_RARE": 47,
+      "W_TOP50": 0,
+      "Z2_PROVENANCE": 0
+    },
+    {
+      "kernel_edge": "K3_META_RELATION",
+      "edge_notation": "R2->R1",
+      "meaning": "relation acts upon another relation",
+      "independent_sources_with_edge": 4,
+      "DYNAMICS_RARE": 6,
+      "DYNAMICS_REDISCOVERY": 104,
+      "DYNAMICS_TOP100": 83,
+      "F3_FEATURES": 2,
+      "F3_RARE": 0,
+      "W_TOP50": 0,
+      "Z2_PROVENANCE": 0
+    },
+    {
+      "kernel_edge": "K6_PRESERVATION_REENTRY",
+      "edge_notation": "K->Q",
+      "meaning": "preserved organization enters reconstruction/reuse pathway",
+      "independent_sources_with_edge": 4,
+      "DYNAMICS_RARE": 1,
+      "DYNAMICS_REDISCOVERY": 18,
+      "DYNAMICS_TOP100": 85,
+      "F3_FEATURES": 0,
+      "F3_RARE": 47,
+      "W_TOP50": 0,
+      "Z2_PROVENANCE": 0
+    },
+    {
+      "kernel_edge": "K2_REENTRY",
+      "edge_notation": "C->T",
+      "meaning": "produced relation re-enters later transformation",
+      "independent_sources_with_edge": 3,
+      "DYNAMICS_RARE": 0,
+      "DYNAMICS_REDISCOVERY": 0,
+      "DYNAMICS_TOP100": 100,
+      "F3_FEATURES": 1,
+      "F3_RARE": 49,
+      "W_TOP50": 0,
+      "Z2_PROVENANCE": 0
+    },
+    {
+      "kernel_edge": "K4_LOCAL_TARGET",
+      "edge_notation": "R1->E",
+      "meaning": "controlled relation acts upon elements/state",
+      "independent_sources_with_edge": 3,
+      "DYNAMICS_RARE": 1,
+      "DYNAMICS_REDISCOVERY": 16,
+      "DYNAMICS_TOP100": 83,
+      "F3_FEATURES": 0,
+      "F3_RARE": 0,
+      "W_TOP50": 0,
+      "Z2_PROVENANCE": 0
+    },
+    {
+      "kernel_edge": "K7_RETURN_TO_PROCESS",
+      "edge_notation": "Q->T",
+      "meaning": "preserved structure becomes later transformation input",
+      "independent_sources_with_edge": 3,
+      "DYNAMICS_RARE": 0,
+      "DYNAMICS_REDISCOVERY": 0,
+      "DYNAMICS_TOP100": 99,
+      "F3_FEATURES": 1,
+      "F3_RARE": 49,
+      "W_TOP50": 0,
+      "Z2_PROVENANCE": 0
+    }
+  ],
+  "sources_with_5plus_kernel_edges": 2,
+  "sources_with_full_7_edge_kernel": 1,
+  "kernel_edges_seen_in_4plus_independent_sources": 4,
+  "verdict": "PARTIAL KERNEL CONVERGENCE",
+  "interpretation_limits": [
+    "This is convergence across existing derived analyses.",
+    "It does not establish hidden model weights or storage.",
+    "It does not prove uniqueness relative to external populations.",
+    "External controls must use the frozen kernel without modification.",
+    "Incognito model-generated severity/confidence scores are not treated as empirical statistics."
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "version": "F1_DEV_LMARENA_BLIND_R2_HARDENED",
+  "frozen_utc": "2026-09-11T16:52:30.438548+00:00",
+  "script_sha256": "72c4fe421964cedf5075bc40db31da500409fb42649a15f81320bd6eb10ab199",
+  "input_split_hashes": [
+    {
+      "ROLE": "TRAIN",
+      "PATH": "C:\\RSOS\\Training data\\LMARENA_V12_V18_UPDATED\\06_DEVELOPMENT_SPLITS\\DEVELOPMENT_TRAIN\\train-00000-of-00007__DEVELOPMENT_TRAIN.parquet",
+      "BYTES": 74349865,
+      "SHA256": "87f4053e119d691e276fb10ca8b259b256e6cd4769e1e1d1a0bd5d431e141e74"
+    },
+    {
+      "ROLE": "VALIDATION",
+      "PATH": "C:\\RSOS\\Training data\\LMARENA_V12_V18_UPDATED\\06_DEVELOPMENT_SPLITS\\DEVELOPMENT_VALIDATION\\train-00000-of-00007__DEVELOPMENT_VALIDATION.parquet",
+      "BYTES": 36926849,
+      "SHA256": "9ae801333a7c5ddced22a88fad0dfb50c1d5d3aa16a9fa743ec578e4e8e09f24"
+    },
+    {
+      "ROLE": "SEALED_HOLDOUT",
+      "PATH": "C:\\RSOS\\Training data\\LMARENA_V12_V18_UPDATED\\06_DEVELOPMENT_SPLITS\\DEVELOPMENT_HOLDOUT\\train-00000-of-00007__DEVELOPMENT_HOLDOUT.parquet",
+      "BYTES": 36603397,
+      "SHA256": "e10a8de6b970dd0b3fb865e16f8719277f7f900d490ba3704860169a3f976b0c"
+    }
+  ],
+  "frozen_model_hashes": [
+    {
+      "FILE": "ALL_FROZEN_MODEL.joblib",
+      "SHA256": "89e999d02dd20c7bb27b132e404a0a871b53d63a72b51f68febe22a8f9c48658",
+      "BYTES": 63494430
+    },
+    {
+      "FILE": "CODE_FROZEN_MODEL.joblib",
+      "SHA256": "8b82f3516c07b3f41f7633960ac67a5e378cee464da73f1ad1c47f632e39f254",
+      "BYTES": 19221105
+    },
+    {
+      "FILE": "NONCODE_FROZEN_MODEL.joblib",
+      "SHA256": "3e90d3a9a01ac3bd93580aafb6f28706c78f657b9e8fe29350063989c5fee3ae",
+      "BYTES": 44825056
+    }
+  ],
+  "scopes": [
+    "ALL",
+    "NONCODE",
+    "CODE"
+  ],
+  "interpretation_rules": {
+    "R1_LOW_AMI_DOES_NOT_ESTABLISH_INVARIANCE": true,
+    "R1_IS_CODE_AMI_DOES_NOT_ESTABLISH_CONFOUND_CAUSALITY": true,
+    "R1_SILHOUETTE_DOES_NOT_TEST_RSOS_ABSENCE": true,
+    "R1_GRAPH_STABILITY_DOES_NOT_ESTABLISH_RSOS_TOPOLOGY": true,
+    "R1_COLUMN_SHUFFLE_AUC_IS_GENERIC_DEPENDENCE_SANITY_ONLY": true
+  },
+  "holdout_rule": "HOLDOUT parquet is not opened with pandas until this spec and frozen model files exist.",
+  "external_control_rule": "train-*-of-00086.parquet remains reserved and unread.",
+  "claim_scope": "DEVELOPMENT METHODOLOGY ONLY; RSOS-SPECIFIC F1 TARGET REMAINS UNTESTED."
+}

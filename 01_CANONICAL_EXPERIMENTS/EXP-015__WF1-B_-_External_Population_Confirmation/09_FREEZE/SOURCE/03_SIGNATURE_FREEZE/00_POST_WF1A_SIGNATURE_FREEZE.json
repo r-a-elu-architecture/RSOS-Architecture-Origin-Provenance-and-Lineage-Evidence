@@ -1,0 +1,46 @@
+﻿{
+    "experiment":  "WF1-B_EXTERNAL_POPULATION_PARQUET",
+    "frozen_utc":  "2026-09-13T21:17:26.1778805Z",
+    "purpose":  "Freeze the post-WF1-A evidential signature before inspection or analysis of the external parquet population.",
+    "primary_reference":  "WF1-A S2B_SEED_COMPLETE",
+    "primary_reference_reason":  "S2-B removes every seed touched by persistent missingness and therefore contains a completely balanced zero-missing retained main dataset.",
+    "primary_reference_design":  {
+                                     "seeds":  65,
+                                     "conditions":  34,
+                                     "reps":  3,
+                                     "main_cells":  6630,
+                                     "missing_main_cells":  0
+                                 },
+    "validated_core":  {
+                           "classification":  "STRONG_REPLICATED_RELATIONAL_TOPOLOGY_FINGERPRINT",
+                           "primary_strong_gate":  true,
+                           "hard_control_auc_confirmation":  1,
+                           "hard_control_auc_final_holdout":  1,
+                           "pure_delete_replication":  "9/9",
+                           "pure_reverse_replication":  "7/8",
+                           "specificity_confirmation":  true,
+                           "specificity_final_holdout":  true,
+                           "surface_invariance_confirmation":  true,
+                           "surface_invariance_final_holdout":  true,
+                           "model_native_proxy_triangulated":  true
+                       },
+    "preserved_negative_or_mixed_findings":  [
+                                                 "E8_REVERSE did not robustly replicate.",
+                                                 "PRESERVATION was mixed / not robustly replicated."
+                                             ],
+    "interpretation_boundary":  [
+                                    "Black-box behavioral structural evidence only.",
+                                    "Does not establish literal internal neural topology.",
+                                    "Does not establish global-weight modification.",
+                                    "Does not establish global uniqueness.",
+                                    "External population rarity must be measured independently."
+                                ],
+    "external_population_rule":  [
+                                     "No parquet corpus may be used to choose or modify the WF1-A source signature.",
+                                     "Only features computable passively from both RSOS reference material and external conversations may enter the population benchmark.",
+                                     "Any passive projection from WF1-A/F1/F2 into parquet-computable coordinates must be frozen before scoring the external population.",
+                                     "No threshold may be selected after observing external-population scores.",
+                                     "No external match may be silently removed.",
+                                     "Negative and near-match external examples must be preserved."
+                                 ]
+}

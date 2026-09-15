@@ -1,0 +1,105 @@
+WF1-A V12-R R1
+SENSITIVITY S1 — PERSISTENT MISSINGNESS
+
+COLLECTION
+==========
+Expected main: 8160
+Valid main: 8131
+Persistent missing: 29
+Missing rate: 0.35539216%
+
+Native:
+720 / 720 valid
+
+Persistent cells:
+29 / 29 failed all 3 collection passes.
+29 / 29 accumulated 24 failed API attempts.
+
+TOP CONDITIONS BY PERSISTENT MISSINGNESS
+========================================
+               CONDITION  MISSING_CELLS  VALID_CELLS  MISSING_RATE  ENRICHMENT_P_RAW  ENRICHMENT_P_HOLM
+               E7_DELETE              7          233      0.029167          0.000016           0.000532
+              E9_REVERSE              6          234      0.025000          0.000164           0.005398
+        G_RANDOM_CONTROL              6          234      0.025000          0.000164           0.005398
+D_ALL_DIRECTION_REVERSED              2          238      0.008333          0.209399           1.000000
+   M0_SWITCH_NEUTRALIZED              2          238      0.008333          0.209399           1.000000
+     M_SWITCH_REASSIGNED              2          238      0.008333          0.209399           1.000000
+              E2_REVERSE              1          239      0.004167          0.579894           1.000000
+               E4_DELETE              1          239      0.004167          0.579894           1.000000
+              E5_REVERSE              1          239      0.004167          0.579894           1.000000
+              E7_REVERSE              1          239      0.004167          0.579894           1.000000
+             A_AUTHENTIC              0          240      0.000000          1.000000           1.000000
+               E0_DELETE              0          240      0.000000          1.000000           1.000000
+              E0_REVERSE              0          240      0.000000          1.000000           1.000000
+               E1_DELETE              0          240      0.000000          1.000000           1.000000
+              E1_REVERSE              0          240      0.000000          1.000000           1.000000
+
+SEED x CONDITION GROUPS WITH >=2 OF 3 REPS MISSING
+===================================================
+ SEED                CONDITION  MISSING_REPS  VALID_REPS
+ 1087               E9_REVERSE             3           0
+ 1104                E7_DELETE             3           0
+ 1130                E7_DELETE             3           0
+ 1130         G_RANDOM_CONTROL             3           0
+ 1153               E9_REVERSE             3           0
+ 1086 D_ALL_DIRECTION_REVERSED             2           1
+ 1090      M_SWITCH_REASSIGNED             2           1
+ 1133         G_RANDOM_CONTROL             2           1
+
+GLOBAL CONCENTRATION TESTS
+==========================
+Condition chi-square statistic:
+131.62068966
+
+Condition-distribution Monte Carlo p:
+9.9999e-06
+
+Seed chi-square statistic:
+199.96551724
+
+Seed-distribution Monte Carlo p:
+9.9999e-06
+
+Rep chi-square statistic:
+0.48275862
+
+Rep-distribution Monte Carlo p:
+0.84546155
+
+Observed max missing in one condition:
+7
+
+Max-condition-count Monte Carlo p:
+0.0005899941
+
+Observed max missing in one seed:
+6
+
+Max-seed-count Monte Carlo p:
+7.99992e-05
+
+Observed seed×condition 3/3 missing clusters:
+5
+
+3/3 cluster Monte Carlo p:
+9.9999e-06
+
+Observed seed×condition >=2/3 missing clusters:
+8
+
+>=2/3 cluster Monte Carlo p:
+9.9999e-06
+
+INTERPRETATION BOUNDARY
+=======================
+This is a missingness-mechanism sensitivity audit.
+
+It DOES NOT test whether the RSOS topology hypothesis is true.
+
+It DOES test whether the final 29-cell residue is compatible with a
+simple uniform missing-cell model.
+
+No missing value is imputed.
+No API call is made.
+No runner, prompt, schema, seed, condition or validator is modified.
+No additional R1 collection is permitted.

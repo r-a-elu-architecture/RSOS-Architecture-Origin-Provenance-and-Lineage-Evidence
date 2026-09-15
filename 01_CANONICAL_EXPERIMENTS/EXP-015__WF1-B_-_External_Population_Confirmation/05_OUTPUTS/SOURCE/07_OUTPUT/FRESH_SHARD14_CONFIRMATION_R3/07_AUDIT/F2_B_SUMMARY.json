@@ -1,0 +1,52 @@
+{
+  "experiment": "F2-B corrected fresh external rarity",
+  "raw_rows_seen": 37208,
+  "usable_unique": 13777,
+  "primary_n": 6618,
+  "selection": {
+    "train-00014-of-00086.parquet": 168003355
+  },
+  "headline_90pct_tolerance": [
+    {
+      "POPULATION": "PRIMARY_ENGLISH_NO_SYSTEM_HIT",
+      "MEASURE": "COMPOSITE_MEDIAN_Z",
+      "REFERENCE": "LINEAGE_90PCT_TOLERANCE",
+      "THRESHOLD": -2.58681595384683,
+      "N_EXTERNAL": 6618,
+      "MATCHES": 7,
+      "FRACTION": 0.0010577213659715926,
+      "CI_LOW": 0.00042536124299948346,
+      "CI_HIGH": 0.00217808828680693,
+      "ONE_IN": 945.4285714285714,
+      "LINEAGE_ACTUAL_COVERAGE": 0.8978102189781022
+    },
+    {
+      "POPULATION": "PRIMARY_ENGLISH_NO_SYSTEM_HIT",
+      "MEASURE": "COMPOSITE_MIN_Z",
+      "REFERENCE": "LINEAGE_90PCT_TOLERANCE",
+      "THRESHOLD": -4.924213701431121,
+      "N_EXTERNAL": 6618,
+      "MATCHES": 211,
+      "FRACTION": 0.03188274403142943,
+      "CI_LOW": 0.02778174618632338,
+      "CI_HIGH": 0.036402700202812305,
+      "ONE_IN": 31.364928909952607,
+      "LINEAGE_ACTUAL_COVERAGE": 0.8978102189781022
+    },
+    {
+      "POPULATION": "PRIMARY_ENGLISH_NO_SYSTEM_HIT",
+      "MEASURE": "STRICT_5_COMPONENT_CONJUNCTION",
+      "REFERENCE": "INDIVIDUAL_90PCT_TOLERANCE",
+      "THRESHOLD": NaN,
+      "N_EXTERNAL": 6618,
+      "MATCHES": 1,
+      "FRACTION": 0.0001511030522816561,
+      "CI_LOW": 3.825590745916142e-06,
+      "CI_HIGH": 0.0008416015950701551,
+      "ONE_IN": 6618.0,
+      "LINEAGE_ACTUAL_COVERAGE": 0.8029197080291971
+    }
+  ],
+  "cem_gate": "FAILED_CALIBRATION",
+  "claim_boundary": "Population rarity in frozen WF1-B fresh WildChat shard 14. Absolute global uniqueness and literal neural-weight modification are not established by this experiment alone."
+}

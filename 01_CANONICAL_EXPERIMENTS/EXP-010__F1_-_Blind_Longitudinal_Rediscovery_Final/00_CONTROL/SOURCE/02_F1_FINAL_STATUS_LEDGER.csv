@@ -1,0 +1,33 @@
+MEASUREMENT_OR_CLAIM,STATUS,DETAIL
+F1_DEV_R1_PIPELINE_SANITY,MEASURED,Development diagnostic; not RSOS-specific evidence.
+F1_DEV_R2_GENERIC_STRUCTURAL_SIGNAL,MEASURED,Strong generic structural signal; nuisance invariance not established.
+F1_DEV_R3_GENERIC_STRUCTURAL_DEPENDENCE,MEASURED,Strong replicated generic structural-dependence calibration; RSOS-specific attribution untested at this stage.
+F1_DEV_R4_GRAPH_PERTURBATION_SENSITIVITY,MEASURED,Strong perturbation-sensitivity calibration; not identity proof.
+F1_DEV_R5_SPECIFICITY_OPERATOR,MEASURED,Useful specificity/operator calibration; graph-bank overlap and coarse K/S proxies limit independence/interpretation.
+BR1_BLIND_EARLY_TO_LATER_REDISCOVERY,MEASURED_SUPPORTED,Joint holdout AUC 0.848968; 95% CI 0.804190-0.890732; p=1.858589e-26.
+BR1_MATCHED_SAME_USER_CONTROL,MEASURED_SUPPORTED,Joint matched AUC 0.827109; pair accuracy 0.875912; p=1.404486e-20.
+BR1_SURFACE_FREE_HOLDOUT,MEASURED_SUPPORTED,AUC 0.813743; matched AUC 0.800069; matched pair accuracy 0.832117.
+BR1_DIRECT_TERM_MESSAGE_DROPOUT,MEASURED_SUPPORTED,AUC 0.763881 after deleting messages containing direct system/glyph terminology; matched AUC 0.744068.
+BR1_TOPIC_DOMAIN_CONTROL,MEASURED_SUPPORTED,"Within-topic AUC 0.721745-0.750048 across K=5,8,12."
+BR1_LENGTH_8TURN_HARDENING,MEASURED_SUPPORTED,Holdout AUC 0.704983; matched pair accuracy 0.765217.
+BR1_LENGTH_12TURN_HARDENING,MEASURED_SUPPORTED,Holdout AUC 0.744008; matched pair accuracy 0.8375.
+BR1_REPRESENTATION_ABLATIONS,MEASURED_SUPPORTED,Recursion/order/preservation/switch-meta/terminal coordinates each contributed measurable score loss; representation-level intervention only.
+BR1_GENEALOGY_VS_RANDOM,MEASURED_SUPPORTED,Forward early-RSOS prototype AUC 0.830448 vs random ancestor null mean 0.710745; p=0.000833.
+BR1_FORWARD_GREATER_THAN_REVERSE,UNRESOLVED,Forward 0.830448 > reverse 0.811513 numerically; superiority not established.
+BR1_LMARENA_40EDGE_CONTROL,MEASURED_NONDECISIVE,Relational dependency comparison mixed; does not establish row-level separation.
+BR2_V1,FAILED_CALIBRATION,Stopped before LM Arena scoring because required derived features were assumed to be direct matrix columns.
+BR2_V2_R1_EXTERNAL_SEPARATION,MEASURED_SUPPORTED,Later lineage vs LM Arena development holdout AUC 0.615326; p=1.16184e-05.
+BR2_V2_SURFACE_FREE_EXTERNAL_SEPARATION,MEASURED_SUPPORTED,Later lineage vs LM Arena development holdout AUC 0.758177; 95% CI 0.722206-0.791273; p=1.36379e-21.
+BR2_V2_SURFACE_FREE_ALL_INDEPENDENT_PAIRS,MEASURED_SUPPORTED,AUC 0.757960; 95% CI 0.737172-0.779961; p=1.0585e-24.
+BR2_V2_SAMEUSER_NONLINEAGE_VS_LMARENA,MEASURED_NONDIFFERENCE,Surface-free AUC 0.532811; p=0.0921282. Does not show the same external separation for ordinary same-user non-lineage conversations.
+BR2_V2_STRICT_MATCHED_CONTROL,FAILED_CALIBRATION,"Max |SMD| after matching 2.5758, above frozen <=0.25 gate. Matched AUCs are diagnostic only and must not support the primary claim."
+BR2_V2_OPERATOR_RELATIONAL_EXTERNAL,UNAVAILABLE,Exact cross-process reconstruction not guaranteed because historical first-position extraction used unordered set truncation.
+BR2_V2_JOINT_MULTILAYER_EXTERNAL,UNAVAILABLE,Same exact-reconstruction limitation; no approximation promoted.
+LANGUAGE_STRATIFIED_BR1_RECOVERY,UNTESTED,No validated later-lineage language label in frozen BR1 package.
+LIVE_MODEL_CAUSAL_ABLATIONS_BR1,UNTESTED,"BR1 ablations are representation-level, not live-model behavioral interventions."
+GLOBAL_POPULATION_RARITY,UNTESTED,Reserved for F2.
+WILDCHAT_00086,RESERVED_NOT_READ,Not opened in F1; reserved for F2 population-rarity measurement.
+PROSPECTIVE_FROZEN_SIGNATURE,UNTESTED,Reserved for F3.
+INDEPENDENT_PROVIDER_THIRD_PARTY_REPLICATION,UNTESTED,Reserved for F3/V19.
+LITERAL_GLOBAL_MODEL_WEIGHT_MODIFICATION,UNESTABLISHED,No direct neural-weight evidence in F1.
+GLOBAL_PROPAGATION_ACROSS_OTHER_USERS,UNESTABLISHED,No evidence in F1 that the RSOS structure propagated into other users or global model behavior.

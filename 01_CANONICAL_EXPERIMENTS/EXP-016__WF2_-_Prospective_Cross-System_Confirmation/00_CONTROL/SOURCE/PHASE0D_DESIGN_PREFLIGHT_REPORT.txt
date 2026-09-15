@@ -1,0 +1,1177 @@
+==========================================================================================
+WF2 PHASE 0D - GENERATION / SCORING DESIGN PREFLIGHT
+==========================================================================================
+
+WF2 ROOT: C:\RSOS\RSOS_EXPERIMENTS_WF2_PROSPECTIVE_CROSS_SYSTEM_CONFIRMATION
+
+PAIRSET SHA256: c43e54e5697fe6e35982ef4a559f909068f76e822edb7c6b172f536ef74090b5
+
+SCIENTIFIC OBSERVATIONS CREATED: NO
+API CALLS PERFORMED: NO
+PROSPECTIVE GENERATION PERFORMED: NO
+DETECTOR TRAINING PERFORMED: NO
+THRESHOLD TUNING PERFORMED: NO
+BOUNDARY 1 REACHED: NO
+
+==========================================================================================
+A. FROZEN SOURCE-SET INTEGRITY
+==========================================================================================
+
+Rows: 80
+Pairs: 40
+Complete matched pairs: 40
+Malformed pairs: 0
+Labels: {'LINEAGE_POS': 40, 'MATCHED_NEG': 40}
+
+Historical source model slugs:
+  gpt-5-instant: 22
+  gpt-5-1-instant: 17
+  gpt-5-2: 14
+  gpt-5-3-instant: 11
+  gpt-5-2-instant: 9
+  gpt-5-5-instant: 5
+  gpt-5: 1
+  gpt-5-thinking: 1
+
+==========================================================================================
+B. SOURCE CONTEXT GEOMETRY
+==========================================================================================
+
+Messages per source context:
+  n: 80
+  min: 4
+  q25: 13.5
+  median: 32.0
+  q75: 122.0
+  max: 462
+  mean: 79.225
+
+Characters per source context:
+  n: 80
+  min: 4881
+  q25: 14669.75
+  median: 49263.5
+  q75: 210813.75
+  max: 1326984
+  mean: 168470.325
+
+Rough token estimate per context (characters / 4):
+  n: 80
+  min: 1221
+  q25: 3668.0
+  median: 12316.0
+  q75: 52703.75
+  max: 331746
+  mean: 42117.9375
+
+Messages - LINEAGE_POS:
+  n: 40
+  min: 8
+  q25: 36.0
+  median: 105.0
+  q75: 207.25
+  max: 462
+  mean: 130.05
+
+Rough tokens - LINEAGE_POS:
+  n: 40
+  min: 2867
+  q25: 21863.0
+  median: 53093.5
+  q75: 113230.25
+  max: 331746
+  mean: 76764.625
+
+Messages - MATCHED_NEG:
+  n: 40
+  min: 4
+  q25: 10.0
+  median: 15.0
+  q75: 27.0
+  max: 214
+  mean: 28.4
+
+Rough tokens - MATCHED_NEG:
+  n: 40
+  min: 1221
+  q25: 2337.75
+  median: 3868.5
+  q75: 9114.5
+  max: 50636
+  mean: 7471.25
+
+Message role counts: {'USER': 2800, 'ASSISTANT': 3538}
+Final message roles: {'ASSISTANT': 73, 'USER': 7}
+Rows with zero messages: []
+
+==========================================================================================
+C. PER-ROW SOURCE GEOMETRY
+==========================================================================================
+
+line | pair | label | model | messages | chars | rough_tokens | last_role
+1 | 1 | LINEAGE_POS | gpt-5-1-instant | 127 | 442858 | 110715 | ASSISTANT
+2 | 1 | MATCHED_NEG | gpt-5-2 | 18 | 35093 | 8774 | ASSISTANT
+19 | 10 | LINEAGE_POS | gpt-5-5-instant | 12 | 11467 | 2867 | ASSISTANT
+20 | 10 | MATCHED_NEG | gpt-5-instant | 12 | 4881 | 1221 | ASSISTANT
+21 | 11 | LINEAGE_POS | gpt-5-1-instant | 60 | 215490 | 53873 | ASSISTANT
+22 | 11 | MATCHED_NEG | gpt-5-2 | 15 | 17278 | 4320 | USER
+23 | 12 | LINEAGE_POS | gpt-5-1-instant | 32 | 78884 | 19721 | ASSISTANT
+24 | 12 | MATCHED_NEG | gpt-5-2 | 6 | 12833 | 3209 | ASSISTANT
+25 | 13 | LINEAGE_POS | gpt-5-2 | 86 | 209255 | 52314 | ASSISTANT
+26 | 13 | MATCHED_NEG | gpt-5-2-instant | 24 | 10427 | 2607 | USER
+27 | 14 | LINEAGE_POS | gpt-5-1-instant | 122 | 492311 | 123078 | ASSISTANT
+28 | 14 | MATCHED_NEG | gpt-5-3-instant | 26 | 44160 | 11040 | ASSISTANT
+29 | 15 | LINEAGE_POS | gpt-5-3-instant | 40 | 87161 | 21791 | ASSISTANT
+30 | 15 | MATCHED_NEG | gpt-5-2-instant | 10 | 8345 | 2087 | ASSISTANT
+31 | 16 | LINEAGE_POS | gpt-5-1-instant | 112 | 347206 | 86802 | ASSISTANT
+32 | 16 | MATCHED_NEG | gpt-5-1-instant | 14 | 29029 | 7258 | ASSISTANT
+33 | 17 | LINEAGE_POS | gpt-5-3-instant | 98 | 242138 | 60535 | USER
+34 | 17 | MATCHED_NEG | gpt-5-2 | 15 | 20647 | 5162 | ASSISTANT
+35 | 18 | LINEAGE_POS | gpt-5-1-instant | 30 | 111253 | 27814 | ASSISTANT
+36 | 18 | MATCHED_NEG | gpt-5-3-instant | 6 | 14674 | 3669 | USER
+37 | 19 | LINEAGE_POS | gpt-5-2 | 214 | 598775 | 149694 | ASSISTANT
+38 | 19 | MATCHED_NEG | gpt-5-instant | 48 | 47009 | 11753 | ASSISTANT
+3 | 2 | LINEAGE_POS | gpt-5-1-instant | 26 | 87548 | 21887 | ASSISTANT
+4 | 2 | MATCHED_NEG | gpt-5-3-instant | 10 | 9011 | 2253 | ASSISTANT
+39 | 20 | LINEAGE_POS | gpt-5-instant | 462 | 683756 | 170939 | ASSISTANT
+40 | 20 | MATCHED_NEG | gpt-5-2-instant | 57 | 61580 | 15395 | ASSISTANT
+41 | 21 | LINEAGE_POS | gpt-5-instant | 230 | 593437 | 148360 | ASSISTANT
+42 | 21 | MATCHED_NEG | gpt-5-instant | 44 | 49652 | 12413 | ASSISTANT
+43 | 22 | LINEAGE_POS | gpt-5-2-instant | 122 | 254807 | 63702 | ASSISTANT
+44 | 22 | MATCHED_NEG | gpt-5-2 | 18 | 17304 | 4326 | ASSISTANT
+45 | 23 | LINEAGE_POS | gpt-5-instant | 284 | 647807 | 161952 | ASSISTANT
+46 | 23 | MATCHED_NEG | gpt-5-2 | 44 | 88165 | 22042 | ASSISTANT
+47 | 24 | LINEAGE_POS | gpt-5-1-instant | 231 | 870053 | 217514 | ASSISTANT
+48 | 24 | MATCHED_NEG | gpt-5-instant | 98 | 138314 | 34579 | ASSISTANT
+49 | 25 | LINEAGE_POS | gpt-5-instant | 314 | 610333 | 152584 | ASSISTANT
+50 | 25 | MATCHED_NEG | gpt-5-instant | 60 | 48875 | 12219 | ASSISTANT
+51 | 26 | LINEAGE_POS | gpt-5-instant | 60 | 85259 | 21315 | ASSISTANT
+52 | 26 | MATCHED_NEG | gpt-5-1-instant | 8 | 9368 | 2342 | USER
+53 | 27 | LINEAGE_POS | gpt-5-instant | 50 | 67543 | 16886 | ASSISTANT
+54 | 27 | MATCHED_NEG | gpt-5-instant | 8 | 8691 | 2173 | ASSISTANT
+55 | 28 | LINEAGE_POS | gpt-5 | 205 | 350154 | 87539 | ASSISTANT
+56 | 28 | MATCHED_NEG | gpt-5-5-instant | 32 | 14143 | 3536 | ASSISTANT
+57 | 29 | LINEAGE_POS | gpt-5-1-instant | 80 | 446987 | 111747 | ASSISTANT
+58 | 29 | MATCHED_NEG | gpt-5-instant | 20 | 40543 | 10136 | ASSISTANT
+5 | 3 | LINEAGE_POS | gpt-5-instant | 8 | 15826 | 3957 | ASSISTANT
+6 | 3 | MATCHED_NEG | gpt-5-3-instant | 4 | 6106 | 1527 | ASSISTANT
+59 | 30 | LINEAGE_POS | gpt-5-2-instant | 197 | 185742 | 46436 | ASSISTANT
+60 | 30 | MATCHED_NEG | gpt-5-instant | 18 | 9776 | 2444 | ASSISTANT
+61 | 31 | LINEAGE_POS | gpt-5-2-instant | 215 | 175375 | 43844 | ASSISTANT
+62 | 31 | MATCHED_NEG | gpt-5-thinking | 30 | 5678 | 1420 | ASSISTANT
+63 | 32 | LINEAGE_POS | gpt-5-3-instant | 24 | 58587 | 14647 | ASSISTANT
+64 | 32 | MATCHED_NEG | gpt-5-2 | 6 | 9839 | 2460 | ASSISTANT
+65 | 33 | LINEAGE_POS | gpt-5-2 | 272 | 439099 | 109775 | ASSISTANT
+66 | 33 | MATCHED_NEG | gpt-5-3-instant | 18 | 31064 | 7766 | USER
+67 | 34 | LINEAGE_POS | gpt-5-instant | 21 | 41136 | 10284 | ASSISTANT
+68 | 34 | MATCHED_NEG | gpt-5-2 | 8 | 7056 | 1764 | ASSISTANT
+69 | 35 | LINEAGE_POS | gpt-5-2 | 138 | 390534 | 97634 | ASSISTANT
+70 | 35 | MATCHED_NEG | gpt-5-2 | 14 | 29949 | 7488 | ASSISTANT
+71 | 36 | LINEAGE_POS | gpt-5-1-instant | 10 | 19357 | 4840 | ASSISTANT
+72 | 36 | MATCHED_NEG | gpt-5-5-instant | 4 | 7535 | 1884 | ASSISTANT
+73 | 37 | LINEAGE_POS | gpt-5-instant | 8 | 20029 | 5008 | ASSISTANT
+74 | 37 | MATCHED_NEG | gpt-5-5-instant | 4 | 7595 | 1899 | USER
+75 | 38 | LINEAGE_POS | gpt-5-instant | 88 | 159994 | 39999 | ASSISTANT
+76 | 38 | MATCHED_NEG | gpt-5-3-instant | 10 | 16272 | 4068 | ASSISTANT
+77 | 39 | LINEAGE_POS | gpt-5-3-instant | 154 | 144562 | 36141 | ASSISTANT
+78 | 39 | MATCHED_NEG | gpt-5-instant | 14 | 9298 | 2325 | ASSISTANT
+7 | 4 | LINEAGE_POS | gpt-5-1-instant | 144 | 470719 | 117680 | ASSISTANT
+8 | 4 | MATCHED_NEG | gpt-5-3-instant | 25 | 44754 | 11189 | ASSISTANT
+79 | 40 | LINEAGE_POS | gpt-5-1-instant | 36 | 116491 | 29123 | ASSISTANT
+80 | 40 | MATCHED_NEG | gpt-5-instant | 10 | 10480 | 2620 | ASSISTANT
+9 | 5 | LINEAGE_POS | gpt-5-instant | 306 | 588207 | 147052 | ASSISTANT
+10 | 5 | MATCHED_NEG | gpt-5-1-instant | 122 | 22574 | 5644 | ASSISTANT
+11 | 6 | LINEAGE_POS | gpt-5-1-instant | 36 | 170915 | 42729 | ASSISTANT
+12 | 6 | MATCHED_NEG | gpt-5-5-instant | 12 | 14657 | 3665 | ASSISTANT
+13 | 7 | LINEAGE_POS | gpt-5-1-instant | 346 | 1326984 | 331746 | ASSISTANT
+14 | 7 | MATCHED_NEG | gpt-5-2-instant | 214 | 202543 | 50636 | ASSISTANT
+15 | 8 | LINEAGE_POS | gpt-5-instant | 138 | 305536 | 76384 | ASSISTANT
+16 | 8 | MATCHED_NEG | gpt-5-2-instant | 20 | 19208 | 4802 | ASSISTANT
+17 | 9 | LINEAGE_POS | gpt-5-2-instant | 64 | 118705 | 29677 | ASSISTANT
+18 | 9 | MATCHED_NEG | gpt-5-2 | 10 | 10940 | 2735 | ASSISTANT
+
+==========================================================================================
+D. CURRENT FOUNDATION AUTHORITY DECISION
+==========================================================================================
+
+{
+  "boundary_1_reached": false,
+  "detector_package": {
+    "all_manifest_entries_verified": true,
+    "manifest_rows": 27,
+    "missing_manifest_files": [],
+    "unmanifested_files": []
+  },
+  "detector_roles": {
+    "confirmatory": [
+      "OPERATOR_RELATIONAL_V2",
+      "SURFACE_FREE",
+      "R1_COMPATIBLE"
+    ],
+    "historical_derived_measures_not_promoted_to_primary": [
+      "COMPOSITE_MEDIAN_Z",
+      "COMPOSITE_MIN_Z",
+      "MAHALANOBIS",
+      "KNN5_DISTANCE",
+      "CENTROID_COSINE"
+    ],
+    "length_robustness": [
+      "WINDOW8_DETERMINISTIC_V2",
+      "WINDOW12_DETERMINISTIC_V2"
+    ],
+    "primary": "JOINT_MULTILAYER_V2"
+  },
+  "detector_training_performed": false,
+  "phase": "WF2_PHASE0C_FOUNDATION_AUTHORITY_STAGING",
+  "prospective_generation_performed": false,
+  "prospective_source_set": {
+    "labels": {
+      "LINEAGE_POS": 40,
+      "MATCHED_NEG": 40
+    },
+    "pair_index_multiplicity": {
+      "1": 2,
+      "10": 2,
+      "11": 2,
+      "12": 2,
+      "13": 2,
+      "14": 2,
+      "15": 2,
+      "16": 2,
+      "17": 2,
+      "18": 2,
+      "19": 2,
+      "2": 2,
+      "20": 2,
+      "21": 2,
+      "22": 2,
+      "23": 2,
+      "24": 2,
+      "25": 2,
+      "26": 2,
+      "27": 2,
+      "28": 2,
+      "29": 2,
+      "3": 2,
+      "30": 2,
+      "31": 2,
+      "32": 2,
+      "33": 2,
+      "34": 2,
+      "35": 2,
+      "36": 2,
+      "37": 2,
+      "38": 2,
+      "39": 2,
+      "4": 2,
+      "40": 2,
+      "5": 2,
+      "6": 2,
+      "7": 2,
+      "8": 2,
+      "9": 2
+    },
+    "rows": 80,
+    "sha256": "c43e54e5697fe6e35982ef4a559f909068f76e822edb7c6b172f536ef74090b5",
+    "status": "FROZEN_PRE_PROSPECTIVE"
+  },
+  "scientific_observations_created": false,
+  "threshold_tuning_performed": false,
+  "wf1b_authority": {
+    "restriction": "FAILED SECONDARY CEM NUISANCE CONTROL MUST NOT BE PROMOTED AS VALID MATCHED-CONTROL EVIDENCE",
+    "sha256": "a5da5ffbb3c2ba71bbc2c17894fa97f8fec5b4c712e0714534517c5b54cedee3",
+    "status": "VALID_POSITIVE_CORE",
+    "zip": "WF1_B_FINAL_AUTHORITY_R3.zip"
+  }
+}
+
+==========================================================================================
+E. F2_B_FROZEN_SPEC.json
+==========================================================================================
+
+{
+  "experiment": "F2-B — CORRECTED FRESH EXTERNAL POPULATION RARITY",
+  "seed": 120918,
+  "fresh_shards": {
+    "train-00007-of-00086.parquet": 119347100,
+    "train-00022-of-00086.parquet": 138085341,
+    "train-00041-of-00086.parquet": 85601395,
+    "train-00051-of-00086.parquet": 156188404,
+    "train-00052-of-00086.parquet": 217887036,
+    "train-00054-of-00086.parquet": 190323883
+  },
+  "forbidden_prior_shards": ["train-00049-of-00086.parquet","train-00080-of-00086.parquet","train-00085-of-00086.parquet"],
+  "eligibility": {"raw_chars_min":1500,"raw_turns_min":4,"postblind_chars_min":800,"postblind_turns_min":3},
+  "primary_population": "English-language, exact RSOS/RSSO/RSIA/RSX system-name-hit excluded; secondary analyses include all usable rows.",
+  "main_frozen_models": ["JOINT_MULTILAYER_V2","OPERATOR_RELATIONAL_V2","SURFACE_FREE","R1_COMPATIBLE"],
+  "geometric_rarity": ["LedoitWolf Mahalanobis distance to early-RSOS positive manifold","5-NN standardized Euclidean distance to early-RSOS positives","cosine similarity to early-RSOS centroid","Joint V2 raw margin","Operator V2 raw margin"],
+  "joint_scores": ["median robust component z","minimum robust component z"],
+  "lineage_tolerance_levels": [0.50,0.75,0.90,0.95],
+  "window_hardening": [8,12],
+  "fresh_external_training": "PROHIBITED",
+  "probability_tail_primary": false,
+  "note": "Sigmoid probabilities are retained only for descriptive audit. Rarity inference uses raw margins and multivariate geometry. V6/V7/V8/V11/V12 active causal signatures remain separate evidence tracks."
+}
+
+
+==========================================================================================
+F. F2_BR2_FROZEN_SPEC.json
+==========================================================================================
+
+{
+  "experiment": "F2-BR2 \u2014 DETERMINISTIC CORPUS FINGERPRINT REFREEZE",
+  "seed": 120918,
+  "scientific_role": "Repair historical BR1 operator position/span nondeterminism without altering the historical records; create V2 models before external population exposure.",
+  "external_data_prohibition": [
+    "WildChat",
+    "00086 parquet shards",
+    "any new external population data"
+  ],
+  "chronology_utc": {
+    "SEED_START": "2025-06-05T00:06:36Z",
+    "SEED_CUTOFF": "2025-06-20T23:59:59Z",
+    "LATER_START": "2025-07-09T05:04:21Z",
+    "VALIDATION_END": "2025-08-31T23:59:59Z",
+    "END": "2026-06-10T23:59:59Z"
+  },
+  "eligibility": {
+    "raw_chars_min": 1500,
+    "raw_turns_min": 4,
+    "postblind_chars_min": 800,
+    "postblind_turns_min": 3
+  },
+  "blinding": "Historical extract_set_fast semantics: direct terminology replaced by same-length spaces.",
+  "operator_repair": "Only FIRST_POS/SPAN keyword representative ordering is repaired: explicit lexicographic exact-term order; first 12 exact terms per category. No Python set iteration enters any feature.",
+  "operator_categories": {
+    "RECURSION": {
+      "exact": [
+        "feedback",
+        "loop",
+        "looped",
+        "looping",
+        "loops",
+        "nested",
+        "recursion",
+        "recursive"
+      ],
+      "prefixes": [
+        "recur",
+        "selfrefer"
+      ],
+      "position_keys": [
+        "feedback",
+        "loop",
+        "looped",
+        "looping",
+        "loops",
+        "nested",
+        "recursion",
+        "recursive"
+      ]
+    },
+    "ORDER": {
+      "exact": [
+        "after",
+        "before",
+        "finally",
+        "first",
+        "next",
+        "order",
+        "ordered",
+        "ordering",
+        "phase",
+        "phases",
+        "second",
+        "sequence",
+        "sequences",
+        "step",
+        "steps",
+        "then",
+        "third"
+      ],
+      "prefixes": [],
+      "position_keys": [
+        "after",
+        "before",
+        "finally",
+        "first",
+        "next",
+        "order",
+        "ordered",
+        "ordering",
+        "phase",
+        "phases",
+        "second",
+        "sequence"
+      ]
+    },
+    "CONDITIONAL": {
+      "exact": [
+        "condition",
+        "conditional",
+        "conditions",
+        "if",
+        "otherwise",
+        "provided",
+        "unless",
+        "when"
+      ],
+      "prefixes": [],
+      "position_keys": [
+        "condition",
+        "conditional",
+        "conditions",
+        "if",
+        "otherwise",
+        "provided",
+        "unless",
+        "when"
+      ]
+    },
+    "PRESERVE": {
+      "exact": [
+        "freeze",
+        "frozen",
+        "invariant",
+        "keep",
+        "lock",
+        "locked",
+        "maintain",
+        "maintained",
+        "preserve",
+        "preserved",
+        "retain",
+        "retained",
+        "unchanged"
+      ],
+      "prefixes": [],
+      "position_keys": [
+        "freeze",
+        "frozen",
+        "invariant",
+        "keep",
+        "lock",
+        "locked",
+        "maintain",
+        "maintained",
+        "preserve",
+        "preserved",
+        "retain",
+        "retained"
+      ]
+    },
+    "SWITCH": {
+      "exact": [
+        "convert",
+        "map",
+        "mapped",
+        "reassign",
+        "redirect",
+        "replace",
+        "replaced",
+        "route",
+        "swap",
+        "switch",
+        "switched",
+        "transform",
+        "transformed",
+        "transition",
+        "transitions"
+      ],
+      "prefixes": [],
+      "position_keys": [
+        "convert",
+        "map",
+        "mapped",
+        "reassign",
+        "redirect",
+        "replace",
+        "replaced",
+        "route",
+        "swap",
+        "switch",
+        "switched",
+        "transform"
+      ]
+    },
+    "TERMINAL": {
+      "exact": [
+        "closure",
+        "complete",
+        "completed",
+        "end",
+        "ended",
+        "final",
+        "finally",
+        "output",
+        "outputs",
+        "result",
+        "results",
+        "stop",
+        "stopped",
+        "terminal",
+        "terminate"
+      ],
+      "prefixes": [],
+      "position_keys": [
+        "closure",
+        "complete",
+        "completed",
+        "end",
+        "ended",
+        "final",
+        "finally",
+        "output",
+        "outputs",
+        "result",
+        "results",
+        "stop"
+      ]
+    },
+    "META": {
+      "exact": [
+        "layer",
+        "layers",
+        "level",
+        "levels",
+        "meta",
+        "monitor",
+        "monitoring",
+        "supervisor",
+        "supervisory",
+        "watchdog"
+      ],
+      "prefixes": [
+        "supervis"
+      ],
+      "position_keys": [
+        "layer",
+        "layers",
+        "level",
+        "levels",
+        "meta",
+        "monitor",
+        "monitoring",
+        "supervisor",
+        "supervisory",
+        "watchdog"
+      ]
+    },
+    "CONTROL": {
+      "exact": [
+        "constraint",
+        "constraints",
+        "exactly",
+        "must",
+        "never",
+        "only",
+        "required",
+        "requirement",
+        "requirements",
+        "rule",
+        "rules",
+        "shall"
+      ],
+      "prefixes": [],
+      "position_keys": [
+        "constraint",
+        "constraints",
+        "exactly",
+        "must",
+        "never",
+        "only",
+        "required",
+        "requirement",
+        "requirements",
+        "rule",
+        "rules",
+        "shall"
+      ]
+    },
+    "CAUSAL": {
+      "exact": [
+        "because",
+        "cause",
+        "caused",
+        "causes",
+        "hence",
+        "resulting",
+        "therefore",
+        "thus"
+      ],
+      "prefixes": [],
+      "position_keys": [
+        "because",
+        "cause",
+        "caused",
+        "causes",
+        "hence",
+        "resulting",
+        "therefore",
+        "thus"
+      ]
+    },
+    "RELATION": {
+      "exact": [
+        "dependencies",
+        "dependency",
+        "edge",
+        "edges",
+        "graph",
+        "graphs",
+        "link",
+        "links",
+        "network",
+        "networks",
+        "node",
+        "nodes",
+        "path",
+        "paths",
+        "relation",
+        "relations",
+        "relationship",
+        "relationships"
+      ],
+      "prefixes": [
+        "dependen",
+        "hierarch"
+      ],
+      "position_keys": [
+        "dependencies",
+        "dependency",
+        "edge",
+        "edges",
+        "graph",
+        "graphs",
+        "link",
+        "links",
+        "network",
+        "networks",
+        "node",
+        "nodes"
+      ]
+    },
+    "REFERENCE": {
+      "exact": [
+        "above",
+        "below",
+        "corresponding",
+        "earlier",
+        "later",
+        "previous",
+        "same",
+        "source",
+        "target"
+      ],
+      "prefixes": [],
+      "position_keys": [
+        "above",
+        "below",
+        "corresponding",
+        "earlier",
+        "later",
+        "previous",
+        "same",
+        "source",
+        "target"
+      ]
+    }
+  },
+  "model": {
+    "type": "StandardScaler + LogisticRegression",
+    "solver": "liblinear",
+    "class_weight": "balanced",
+    "max_iter": 3000,
+    "C_grid": [
+      0.01,
+      0.03,
+      0.1,
+      0.3,
+      1,
+      3
+    ],
+    "cv": "StratifiedKFold(5, shuffle=True, random_state=120918)"
+  },
+  "threshold": "Chosen only from early-training out-of-fold decision margins by maximum balanced accuracy; frozen before validation/holdout feature extraction.",
+  "primary_models": [
+    "OPERATOR_RELATIONAL_V2",
+    "JOINT_MULTILAYER_V2"
+  ],
+  "legacy_preservation": "Historical OPERATOR_RELATIONAL and JOINT_MULTILAYER files/results are reference-only and never overwritten.",
+  "parity_gate": "Before V2 model freeze, reconstructed EARLY_POS/EARLY_NEG deterministic legacy coordinates (all except *_FIRST_POS and *_SPAN) must match frozen legacy feature CSVs within numerical tolerance; expected usable counts must also match.",
+  "expected_usable_counts": {
+    "EARLY_POS": 40,
+    "EARLY_NEG": 76,
+    "LATER_VAL_POS": 105,
+    "LATER_VAL_NEG": 16,
+    "LATER_HOLD_POS": 137,
+    "LATER_HOLD_NEG": 175
+  },
+  "window_tests": [
+    8,
+    12
+  ],
+  "genealogy_null_reps": 3000,
+  "bootstrap_reps": 2000,
+  "note": "V6/V7/V8/V11/V12 causal/behavioral signatures are not folded into this corpus classifier; they remain separate evidence tracks."
+}
+
+==========================================================================================
+G. FROZEN_FEATURE_SETS.json
+==========================================================================================
+
+{
+  "SURFACE_FREE": [
+    "UPPERCASE_RATIO",
+    "DIGIT_RATIO",
+    "USER_CHAR_SHARE",
+    "MEAN_MAX_TURN_RATIO",
+    "TURNS_PER_1K_CHAR",
+    "PARAGRAPHS_PER_TURN",
+    "CODE_FENCES_PER_1K_CHAR",
+    "HEADERS_PER_1K_CHAR",
+    "LIST_ITEMS_PER_1K_CHAR",
+    "COLONS_PER_1K_CHAR",
+    "BRACKETS_PER_1K_CHAR",
+    "ROLE_ALTERNATION_RATIO",
+    "DUPLICATE_TURN_RATIO",
+    "USER_ASSISTANT_CHAR_RATIO",
+    "TURN_CHAR_CV",
+    "TURN_LENGTH_ENTROPY",
+    "QUESTION_PER_1K_CHAR",
+    "EXCLAM_PER_1K_CHAR",
+    "EQUAL_PER_1K_CHAR",
+    "SEMICOLON_PER_1K_CHAR",
+    "PIPE_PER_1K_CHAR",
+    "HEADER_LEVEL_MEAN",
+    "HEADER_LEVEL_MAX",
+    "USER_TURN_MEAN",
+    "ASSISTANT_TURN_MEAN",
+    "RESPONSE_EXPANSION_RATIO"
+  ],
+  "OPERATOR_RELATIONAL": [
+    "TURN_LENGTH_SLOPE",
+    "ARROW_PER_1K_CHAR",
+    "NUMBERED_LIST_PER_1K_CHAR",
+    "NESTED_LIST_PER_1K_CHAR",
+    "SEM_RECURSION_PER_1K_CHAR",
+    "SEM_ORDER_PER_1K_CHAR",
+    "SEM_CONDITIONAL_PER_1K_CHAR",
+    "SEM_PRESERVE_PER_1K_CHAR",
+    "SEM_SWITCH_PER_1K_CHAR",
+    "SEM_TERMINAL_PER_1K_CHAR",
+    "SEM_META_PER_1K_CHAR",
+    "SEM_CONTROL_PER_1K_CHAR",
+    "SEM_CAUSAL_PER_1K_CHAR",
+    "SEM_RELATION_PER_1K_CHAR",
+    "SEM_REFERENCE_PER_1K_CHAR",
+    "RECURSION_FIRST_POS",
+    "RECURSION_SPAN",
+    "ORDER_FIRST_POS",
+    "ORDER_SPAN",
+    "CONDITIONAL_FIRST_POS",
+    "CONDITIONAL_SPAN",
+    "PRESERVE_FIRST_POS",
+    "PRESERVE_SPAN",
+    "SWITCH_FIRST_POS",
+    "SWITCH_SPAN",
+    "TERMINAL_FIRST_POS",
+    "TERMINAL_SPAN",
+    "META_FIRST_POS",
+    "META_SPAN",
+    "CONTROL_FIRST_POS",
+    "CONTROL_SPAN",
+    "CAUSAL_FIRST_POS",
+    "CAUSAL_SPAN",
+    "RELATION_FIRST_POS",
+    "RELATION_SPAN",
+    "REFERENCE_FIRST_POS",
+    "REFERENCE_SPAN",
+    "USER_LENGTH_SLOPE",
+    "ASSISTANT_LENGTH_SLOPE",
+    "USER_ASSISTANT_OPERATOR_COSINE"
+  ],
+  "JOINT_MULTILAYER": [
+    "UPPERCASE_RATIO",
+    "DIGIT_RATIO",
+    "USER_CHAR_SHARE",
+    "MEAN_MAX_TURN_RATIO",
+    "TURNS_PER_1K_CHAR",
+    "PARAGRAPHS_PER_TURN",
+    "CODE_FENCES_PER_1K_CHAR",
+    "HEADERS_PER_1K_CHAR",
+    "LIST_ITEMS_PER_1K_CHAR",
+    "COLONS_PER_1K_CHAR",
+    "BRACKETS_PER_1K_CHAR",
+    "ROLE_ALTERNATION_RATIO",
+    "DUPLICATE_TURN_RATIO",
+    "USER_ASSISTANT_CHAR_RATIO",
+    "TURN_CHAR_CV",
+    "TURN_LENGTH_ENTROPY",
+    "QUESTION_PER_1K_CHAR",
+    "EXCLAM_PER_1K_CHAR",
+    "EQUAL_PER_1K_CHAR",
+    "SEMICOLON_PER_1K_CHAR",
+    "PIPE_PER_1K_CHAR",
+    "HEADER_LEVEL_MEAN",
+    "HEADER_LEVEL_MAX",
+    "USER_TURN_MEAN",
+    "ASSISTANT_TURN_MEAN",
+    "RESPONSE_EXPANSION_RATIO",
+    "TURN_LENGTH_SLOPE",
+    "ARROW_PER_1K_CHAR",
+    "NUMBERED_LIST_PER_1K_CHAR",
+    "NESTED_LIST_PER_1K_CHAR",
+    "SEM_RECURSION_PER_1K_CHAR",
+    "SEM_ORDER_PER_1K_CHAR",
+    "SEM_CONDITIONAL_PER_1K_CHAR",
+    "SEM_PRESERVE_PER_1K_CHAR",
+    "SEM_SWITCH_PER_1K_CHAR",
+    "SEM_TERMINAL_PER_1K_CHAR",
+    "SEM_META_PER_1K_CHAR",
+    "SEM_CONTROL_PER_1K_CHAR",
+    "SEM_CAUSAL_PER_1K_CHAR",
+    "SEM_RELATION_PER_1K_CHAR",
+    "SEM_REFERENCE_PER_1K_CHAR",
+    "RECURSION_FIRST_POS",
+    "RECURSION_SPAN",
+    "ORDER_FIRST_POS",
+    "ORDER_SPAN",
+    "CONDITIONAL_FIRST_POS",
+    "CONDITIONAL_SPAN",
+    "PRESERVE_FIRST_POS",
+    "PRESERVE_SPAN",
+    "SWITCH_FIRST_POS",
+    "SWITCH_SPAN",
+    "TERMINAL_FIRST_POS",
+    "TERMINAL_SPAN",
+    "META_FIRST_POS",
+    "META_SPAN",
+    "CONTROL_FIRST_POS",
+    "CONTROL_SPAN",
+    "CAUSAL_FIRST_POS",
+    "CAUSAL_SPAN",
+    "RELATION_FIRST_POS",
+    "RELATION_SPAN",
+    "REFERENCE_FIRST_POS",
+    "REFERENCE_SPAN",
+    "USER_LENGTH_SLOPE",
+    "ASSISTANT_LENGTH_SLOPE",
+    "USER_ASSISTANT_OPERATOR_COSINE"
+  ],
+  "R1_COMPATIBLE": [
+    "TYPE_TOKEN_RATIO",
+    "UPPERCASE_RATIO",
+    "DIGIT_RATIO",
+    "COMPRESSION_RATIO",
+    "USER_CHAR_SHARE",
+    "MEAN_MAX_TURN_RATIO",
+    "WORDS_PER_1K_CHAR",
+    "TURNS_PER_1K_CHAR",
+    "PARAGRAPHS_PER_TURN",
+    "CODE_FENCES_PER_1K_CHAR",
+    "HEADERS_PER_1K_CHAR",
+    "LIST_ITEMS_PER_1K_CHAR",
+    "COLONS_PER_1K_CHAR",
+    "BRACKETS_PER_1K_CHAR"
+  ]
+}
+
+==========================================================================================
+H. DETECTOR PACKAGE README
+==========================================================================================
+
+F2-B CORRECTED FRESH EXTERNAL POPULATION RARITY
+
+Inputs expected:
+C:\RSOS\Training data\F2_B_FRESH_WILDCHAT\
+  train-00007-of-00086.parquet
+  train-00022-of-00086.parquet
+  train-00041-of-00086.parquet
+  train-00051-of-00086.parquet
+  train-00052-of-00086.parquet
+  train-00054-of-00086.parquet
+
+Previously opened shards 49/80/85 are forbidden.
+The runner does not train on external rows.
+Primary rarity uses raw margins + multivariate distance; sigmoid probability is not used as the rarity statistic.
+Primary external population: English-language rows with no exact RSOS/RSSO/RSIA/RSX system-name hit.
+V6/V7/V8/V11/V12 active intervention signatures remain a separate evidence track and are not inferred from passive WildChat conversations.
+
+
+==========================================================================================
+I. FINAL WF1-B ADAPTER - RELEVANT CODE LINES
+==========================================================================================
+
+00011: import sklearn, scipy, pyarrow, joblib
+00018: FEATURE_SETS=json.load(open(HERE/'reference'/'FROZEN_FEATURE_SETS.json',encoding='utf-8'))
+00023: CATS={k:(set(v['exact']),set(v['prefixes'])) for k,v in BR2SPEC['operator_categories'].items()}
+00024: POSITION_KEYS={k:list(BR2SPEC['operator_categories'][k]['position_keys']) for k in CAT_ORDER}
+00032: def write_json(p,obj):
+00036: def safe(a,b): return float(a/b) if b else 0.0
+00038: def slope(vals):
+00044: def entropy(vals):
+00051: def redact(s): return DIRECT_RE.sub(lambda m:' '*len(m.group(0)),s)
+00053: def normalize_messages(value):
+00065:         if role=='human':role='user'
+00066:         if role in {'ai','bot'}:role='assistant'
+00072: def main_features(messages):
+00074:     for m in messages:
+00081:     user='\n'.join(t['text'] for t in turns if t['role']=='user');ass='\n'.join(t['text'] for t in turns if t['role']=='assistant')
+00086:     f={'REDACTED_SPANS':redacted_spans,'N_TURNS':n,'TOTAL_CHARS':total,'TYPE_TOKEN_RATIO':safe(len(ctr),len(toks)),'UPPERCASE_RATIO':safe(up,ns),'DIGIT_RATIO':safe(dg,ns),'COMPRESSION_RATIO':comp,'USER_CHAR_SHARE':safe(len(user),total),'MEAN_MAX_TURN_RATIO':safe(mean,mx),'WORDS_PER_1K_CHAR':1000*safe(len(toks),total),'TURNS_PER_1K_CHAR':1000*safe(n,total),'PARAGRAPHS_PER_TURN':safe(para,n),'CODE_FENCES_PER_1K_CHAR':1000*safe(fences,total),'HEADERS_PER_1K_CHAR':1000*safe(len(heads),total),'LIST_ITEMS_PER_1K_CHAR':1000*safe(listn,total),'COLONS_PER_1K_CHAR':1000*safe(full.count(':'),total),'BRACKETS_PER_1K_CHAR':1000*safe(br,total),'ROLE_ALTERNATION_RATIO':safe(roletrans,max(1,n-1)) if n else 0.,'DUPLICATE_TURN_RATIO':safe(dup,n),'USER_ASSISTANT_CHAR_RATIO':safe(len(user),len(ass)),'TURN_CHAR_CV':safe(float(np.std(lens)),mean) if lens else 0.,'TURN_LENGTH_ENTROPY':entropy(lens),'TURN_LENGTH_SLOPE':slope(lens),'QUESTION_PER_1K_CHAR':1000*safe(full.count('?'),total),'EXCLAM_PER_1K_CHAR':1000*safe(full.count('!'),total),'ARROW_PER_1K_CHAR':1000*safe(len(re.findall(r'->|=>|→|⇒',full)),total),'EQUAL_PER_1K_CHAR':1000*safe(full.count('='),total),'SEMICOLON_PER_1K_CHAR':1000*safe(full.count(';'),total),'PIPE_PER_1K_CHAR':1000*safe(full.count('|'),total),'NUMBERED_LIST_PER_1K_CHAR':1000*safe(len(re.findall(r'(?m)^\s*\d+[.)]\s',full)),total),'NESTED_LIST_PER_1K_CHAR':1000*safe(len(re.findall(r'(?m)^\s{2,}(?:[-*+] |\d+[.)] )',full)),total),'HEADER_LEVEL_MEAN':float(np.mean([len(x) for x in heads])) if heads else 0.,'HEADER_LEVEL_MAX':float(max([len(x) for x in heads],default=0))}
+00096:     ul=[len(t['text']) for t in turns if t['role']=='user'];al=[len(t['text']) for t in turns if t['role']=='assistant']
+00097:     f.update(USER_TURN_MEAN=float(np.mean(ul)) if ul else 0.,ASSISTANT_TURN_MEAN=float(np.mean(al)) if al else 0.,RESPONSE_EXPANSION_RATIO=safe(float(np.mean(al)) if al else 0.,float(np.mean(ul)) if ul else 0.),USER_LENGTH_SLOPE=slope(ul),ASSISTANT_LENGTH_SLOPE=slope(al))
+00102:     a=cv(user);b=cv(ass);f['USER_ASSISTANT_OPERATOR_COSINE']=float(np.dot(a,b)/(np.linalg.norm(a)*np.linalg.norm(b))) if np.linalg.norm(a)*np.linalg.norm(b)>0 else 0.0
+00103:     return f,rawchars,len(messages),system_hits
+00105: def window_single(msgs):
+00111:     user='\n'.join(t for r,t in turns if r=='user');ass='\n'.join(t for r,t in turns if r=='assistant');ns=sum(not c.isspace() for c in full);up=sum(c.isupper() for c in full);dg=sum(c.isdigit() for c in full);heads=re.findall(r'(?m)^\s*(#{1,6})\s',full);lists=len(re.findall(r'(?m)^\s*(?:[-*+] |\d+[.)] )',full));br=sum(full.count(x) for x in '[]{}()');para=sum(max(1,t.count('\n')+1) for t in texts);roletrans=sum(a!=b for a,b in zip(roles,roles[1:]));ctr=collections.Counter(re.findall(r'[a-z0-9_]+',low));mean=np.mean(lens) if lens else 0.;mx=max(lens,default=0)
+00112:     f={'UPPERCASE_RATIO':safe(up,ns),'DIGIT_RATIO':safe(dg,ns),'USER_CHAR_SHARE':safe(len(user),L),'MEAN_MAX_TURN_RATIO':safe(mean,mx),'PARAGRAPHS_PER_TURN':safe(para,n),'CODE_FENCES_PER_1K_CHAR':1000*safe(full.count('```')//2,L),'HEADERS_PER_1K_CHAR':1000*safe(len(heads),L),'LIST_ITEMS_PER_1K_CHAR':1000*safe(lists,L),'COLONS_PER_1K_CHAR':1000*safe(full.count(':'),L),'BRACKETS_PER_1K_CHAR':1000*safe(br,L),'ROLE_ALTERNATION_RATIO':safe(roletrans,max(1,n-1)),'USER_ASSISTANT_CHAR_RATIO':safe(len(user),len(ass)),'TURN_CHAR_CV':safe(np.std(lens),mean) if lens else 0.,'TURN_LENGTH_SLOPE':slope(lens),'QUESTION_PER_1K_CHAR':1000*safe(full.count('?'),L),'EXCLAM_PER_1K_CHAR':1000*safe(full.count('!'),L),'ARROW_PER_1K_CHAR':1000*safe(len(re.findall(r'->|=>|→|⇒',full)),L),'EQUAL_PER_1K_CHAR':1000*safe(full.count('='),L),'SEMICOLON_PER_1K_CHAR':1000*safe(full.count(';'),L),'PIPE_PER_1K_CHAR':1000*safe(full.count('|'),L),'NUMBERED_LIST_PER_1K_CHAR':1000*safe(len(re.findall(r'(?m)^\s*\d+[.)]\s',full)),L),'NESTED_LIST_PER_1K_CHAR':1000*safe(len(re.findall(r'(?m)^\s{2,}(?:[-*+] |\d+[.)] )',full)),L),'HEADER_LEVEL_MEAN':float(np.mean([len(x) for x in heads])) if heads else 0.,'HEADER_LEVEL_MAX':max([len(x) for x in heads],default=0)}
+00116:     ul=[len(t) for r,t in turns if r=='user'];al=[len(t) for r,t in turns if r=='assistant'];f['RESPONSE_EXPANSION_RATIO']=safe(np.mean(al) if al else 0,np.mean(ul) if ul else 0);f['USER_LENGTH_SLOPE']=slope(ul);f['ASSISTANT_LENGTH_SLOPE']=slope(al)
+00119: def windows(msgs,w,maxw=6):
+00127: def aggregate_window(msgs,w):
+00129:     for win in windows(msgs,w):
+00130:         f,L=window_single(win)
+00133:     d=pd.DataFrame(vals);q={c:float(d[c].median()) for c in d.columns};q['WINDOW_CHAR_MEDIAN']=float(np.median(chars));q['WINDOW_COUNT']=len(vals);return q
+00135: def parity_gate():
+00136:     exp=pd.read_csv(HERE/'fixtures'/'PARITY_EXPECTED_V2.csv').set_index('conversation_id')
+00138:     for line in open(HERE/'fixtures'/'PARITY_FIXTURES.jsonl',encoding='utf-8'):
+00139:         rec=json.loads(line);cid=str(rec['conversation_id']);f,_,_,_=main_features(rec['messages']);r=exp.loc[cid]
+00140:         for c in FEATURE_SETS['JOINT_MULTILAYER']:
+00145:     fix=json.load(open(HERE/'fixtures'/'WINDOW_PARITY_FIXTURE.json',encoding='utf-8'))
+00147:         got=aggregate_window(fix['messages'],w);ref=pd.read_csv(HERE/'fixtures'/f'WINDOW{w}_PARITY_EXPECTED.csv').iloc[0]
+00148:         if got is None:raise Abort(f'Window{w} parity produced no windows')
+00152:                 if d>tol:raise Abort(f'Window{w} extractor parity failure {c}: {d}')
+00155: def model_cols(name,model):
+00156:     if hasattr(model,'feature_names_in_'):return list(model.feature_names_in_)
+00157:     if name=='JOINT_MULTILAYER_V2':return FEATURE_SETS['JOINT_MULTILAYER']
+00158:     if name=='OPERATOR_RELATIONAL_V2':return FEATURE_SETS['OPERATOR_RELATIONAL']
+00159:     if name=='SURFACE_FREE':return FEATURE_SETS['SURFACE_FREE']
+00160:     if name=='R1_COMPATIBLE':return FEATURE_SETS['R1_COMPATIBLE']
+00161:     raise Abort(f'No feature list for {name}')
+00163: def score_margin(df,model,cols,fill=None):
+00167:     return model.decision_function(X)
+00169: def blind_id(ch,messages):
+00171:     if not base:base=json.dumps(messages,ensure_ascii=False,sort_keys=True)
+00174: def blind_cluster(x):
+00178: def is_english(x):
+00182: def auc_fast(pos,neg):
+00185: def auc_ci(pos,neg,nboot=BOOT):
+00190: def cp(k,n,alpha=.05):
+00193: def geometry_metrics(df,joint_model,op_model,jcols,ocols,early_pos):
+00194:     sc=joint_model.named_steps['sc'];Z0=sc.transform(early_pos[jcols]);Z=sc.transform(df[jcols]);lw=LedoitWolf().fit(Z0);cent=Z0.mean(0);D=Z-cent;mah=np.sqrt(np.maximum(np.einsum('ij,jk,ik->i',D,lw.precision_,D),0));dmat=pairwise_distances(Z,Z0,metric='euclidean');knn=np.mean(np.sort(dmat,axis=1)[:,:5],axis=1);cn=np.linalg.norm(cent);cos=np.divide(Z@cent,np.linalg.norm(Z,axis=1)*cn,out=np.zeros(len(Z)),where=(np.linalg.norm(Z,axis=1)*cn)>0)
+00195:     jm=joint_model.decision_function(df[jcols]);om=op_model.decision_function(df[ocols]);return pd.DataFrame({'JOINT_MARGIN':jm,'OPERATOR_MARGIN':om,'MAHALANOBIS':mah,'KNN5_DISTANCE':knn,'CENTROID_COSINE':cos},index=df.index)
+00197: def early_geometry(joint_model,op_model,jcols,ocols,early_pos):
+00198:     sc=joint_model.named_steps['sc'];Z0=sc.transform(early_pos[jcols]);lw=LedoitWolf().fit(Z0);cent=Z0.mean(0);D=Z0-cent;mah=np.sqrt(np.maximum(np.einsum('ij,jk,ik->i',D,lw.precision_,D),0));dm=pairwise_distances(Z0,Z0);np.fill_diagonal(dm,np.inf);knn=np.mean(np.sort(dm,axis=1)[:,:5],axis=1);cn=np.linalg.norm(cent);cos=np.divide(Z0@cent,np.linalg.norm(Z0,axis=1)*cn,out=np.zeros(len(Z0)),where=(np.linalg.norm(Z0,axis=1)*cn)>0);jm=joint_model.decision_function(early_pos[jcols]);om=op_model.decision_function(early_pos[ocols]);return pd.DataFrame({'JOINT_MARGIN':jm,'OPERATOR_MARGIN':om,'MAHALANOBIS':mah,'KNN5_DISTANCE':knn,'CENTROID_COSINE':cos},index=early_pos.index)
+00200: def robust_composite(metrics,eref):
+00202:     for c,sgn in [('JOINT_MARGIN',1),('OPERATOR_MARGIN',1),('MAHALANOBIS',-1),('KNN5_DISTANCE',-1),('CENTROID_COSINE',1)]:
+00208: def assign_bins(df):
+00211: def weighted_smd(x1,w1,x0,w0):
+00216: def main():
+00220:     for s in ['00_PREFLIGHT','01_EXTERNAL_FEATURES','02_PRIMARY','03_GEOMETRY','04_WINDOWS','05_NUISANCE','06_NEAREST','07_AUDIT']: (out/s).mkdir(parents=True,exist_ok=True)
+00221:     checked=parity_gate();print(f'Extractor parity: PASS ({checked} main fixtures + window fixture)',flush=True)
+00251:     models={n:joblib.load(HERE/'frozen_models'/f'{n}.joblib') for n in ['JOINT_MULTILAYER_V2','OPERATOR_RELATIONAL_V2','SURFACE_FREE','R1_COMPATIBLE']}
+00252:     jcols=model_cols('JOINT_MULTILAYER_V2',models['JOINT_MULTILAYER_V2']);ocols=model_cols('OPERATOR_RELATIONAL_V2',models['OPERATOR_RELATIONAL_V2']);scols=model_cols('SURFACE_FREE',models['SURFACE_FREE']);rcols=model_cols('R1_COMPATIBLE',models['R1_COMPATIBLE'])
+00253:     early=pd.read_csv(HERE/'reference'/'EARLY_POS_V2_FEATURES.csv');holdp=pd.read_csv(HERE/'reference'/'LATER_HOLD_POS_V2_FEATURES.csv');holdn=pd.read_csv(HERE/'reference'/'LATER_HOLD_NEG_V2_FEATURES.csv')
+00254:     # Historical geometry and thresholds frozen before external content read.
+00255:     eg=early_geometry(models['JOINT_MULTILAYER_V2'],models['OPERATOR_RELATIONAL_V2'],jcols,ocols,early);hg=geometry_metrics(holdp,models['JOINT_MULTILAYER_V2'],models['OPERATOR_RELATIONAL_V2'],jcols,ocols,early);hc=robust_composite(hg,eg);holdmetrics=pd.concat([holdp.reset_index(drop=True),hg.reset_index(drop=True),hc.reset_index(drop=True)],axis=1)
+00256:     thresholds={'composite':{},'strict_components':{},'model_margin':{}}
+00258:         lab=str(int(q*100));thresholds['composite'][lab]={c:float(np.quantile(holdmetrics[c],1-q)) for c in ['COMPOSITE_MEDIAN_Z','COMPOSITE_MIN_Z']}
+00259:         thresholds['strict_components'][lab]={'JOINT_MARGIN':float(np.quantile(holdmetrics.JOINT_MARGIN,1-q)),'OPERATOR_MARGIN':float(np.quantile(holdmetrics.OPERATOR_MARGIN,1-q)),'MAHALANOBIS':float(np.quantile(holdmetrics.MAHALANOBIS,q)),'KNN5_DISTANCE':float(np.quantile(holdmetrics.KNN5_DISTANCE,q)),'CENTROID_COSINE':float(np.quantile(holdmetrics.CENTROID_COSINE,1-q))}
+00260:     # model margins including old portable models, all thresholds from lineage holdout
+00261:     br1hold=pd.read_csv(HERE/'reference'/'BR1_LATER_HOLD_POS_FEATURES.csv')
+00262:     for name,cols,ref in [('JOINT_MULTILAYER_V2',jcols,holdp),('OPERATOR_RELATIONAL_V2',ocols,holdp),('SURFACE_FREE',scols,br1hold),('R1_COMPATIBLE',rcols,br1hold)]:
+00263:         vals=models[name].decision_function(ref[cols]);thresholds['model_margin'][name]={str(int(q*100)):float(np.quantile(vals,q)) for q in [.5,.75,.9,.95]}
+00264:     write_json(out/'00_PREFLIGHT'/'PRE_EXTERNAL_THRESHOLDS.json',thresholds)
+00265:     # window models/reference thresholds
+00266:     wmodels={w:joblib.load(HERE/'frozen_models'/f'WINDOW{w}_DETERMINISTIC_V2.joblib') for w in [8,12]};wcols={};wth={}
+00268:         wr=pd.read_csv(HERE/'reference'/f'WINDOW{w}_DETERMINISTIC_FEATURES.csv');ref=wr[(wr.partition=='HOLDOUT')&(wr.y==1)].copy();cols=list(wmodels[w].feature_names_in_) if hasattr(wmodels[w],'feature_names_in_') else [c for c in wr.columns if c not in ['conversation_id','y','partition','WINDOW_CHAR_MEDIAN','WINDOW_COUNT']];wcols[w]=cols;m=wmodels[w].decision_function(ref[cols]);wth[w]={str(int(q*100)):float(np.quantile(m,q)) for q in [.5,.75,.9,.95]}
+00269:     write_json(out/'00_PREFLIGHT'/'WINDOW_MARGIN_THRESHOLDS.json',wth)
+00270:     print('Pre-external thresholds frozen. Opening fresh shards now.',flush=True)
+00274:         if 'conversation' not in names or 'model' not in names:raise Abort(f'Unexpected schema {shard.name}: {names}')
+00275:         cols=[c for c in ['conversation_hash','model','timestamp','conversation','turn','language','toxic','redacted','hashed_ip'] if c in names]
+00282:                     msgs=normalize_messages(rec.get('conversation'));f,rawchars,rawturns,sys_hits=main_features(msgs)
+00284:                     q={'BLIND_EXTERNAL_ID':blind_id(rec.get('conversation_hash'),msgs),'CLUSTER_ID':blind_cluster(rec.get('hashed_ip')),'SHARD':shard.name,'ROW_IN_SHARD':idx,'MODEL':str(rec.get('model','') or ''),'LANGUAGE':str(rec.get('language','') or ''),'TOXIC':bool(rec.get('toxic',False)) if rec.get('toxic') is not None else False,'SOURCE_REDACTED':bool(rec.get('redacted',False)) if rec.get('redacted') is not None else False,'SYSTEM_NAME_HITS':sys_hits,'raw_chars':rawchars,'raw_turns':rawturns,**f}
+00285:                     # raw margins, never probability for rarity
+00287:                     for name,cols0 in [('JOINT_MULTILAYER_V2',jcols),('OPERATOR_RELATIONAL_V2',ocols),('SURFACE_FREE',scols),('R1_COMPATIBLE',rcols)]:q[name+'_MARGIN']=float(models[name].decision_function(one[cols0])[0])
+00289:                         wf=aggregate_window(msgs,w)
+00291:                             x=pd.DataFrame([wf]);q[f'WINDOW{w}_MARGIN']=float(wmodels[w].decision_function(x[wcols[w]])[0]);q[f'WINDOW{w}_COUNT']=int(wf['WINDOW_COUNT']);q[f'WINDOW{w}_CHAR_MEDIAN']=float(wf['WINDOW_CHAR_MEDIAN'])
+00292:                         else:q[f'WINDOW{w}_MARGIN']=np.nan;q[f'WINDOW{w}_COUNT']=0;q[f'WINDOW{w}_CHAR_MEDIAN']=np.nan
+00301:     xg=geometry_metrics(ext,models['JOINT_MULTILAYER_V2'],models['OPERATOR_RELATIONAL_V2'],jcols,ocols,early);xc=robust_composite(xg,eg)
+00305:     ext.to_parquet(out/'01_EXTERNAL_FEATURES'/'F2_B_EXTERNAL_FEATURES_AND_SCORES.parquet',index=False,compression='zstd')
+00306:     if errors:pd.DataFrame(errors).to_csv(out/'01_EXTERNAL_FEATURES'/'EXTRACTION_ERRORS.csv',index=False)
+00307:     write_json(out/'01_EXTERNAL_FEATURES'/'EXTRACTION_COUNTS.json',{'raw_rows_seen':raw_seen,'usable_before_dedup':before,'duplicates_removed':dups,'usable_unique':len(ext),'primary_english_no_system_hit':int(ext.PRIMARY_ELIGIBLE.sum()),'english_total':int(ext.IS_ENGLISH.sum()),'system_name_hit_rows':int((ext.SYSTEM_NAME_HITS>0).sum()),'errors':len(errors)})
+00308:     # Primary separation and margin tails
+00313:       'JOINT_MULTILAYER_V2':models['JOINT_MULTILAYER_V2'].decision_function(holdp[jcols]),
+00314:       'OPERATOR_RELATIONAL_V2':models['OPERATOR_RELATIONAL_V2'].decision_function(holdp[ocols]),
+00315:       'SURFACE_FREE':models['SURFACE_FREE'].decision_function(br1hold[scols]),
+00316:       'R1_COMPATIBLE':models['R1_COMPATIBLE'].decision_function(br1hold[rcols])}
+00319:         extv=d[name+'_MARGIN'].to_numpy(float);lv=lineage_model[name];a,lo,hi,p=auc_ci(lv,extv);sep.append({'POPULATION':popname,'MEASURE':name+'_MARGIN','N_LINEAGE':len(lv),'N_EXTERNAL':len(extv),'AUC_LINEAGE_GT_EXTERNAL':a,'CI_LOW':lo,'CI_HIGH':hi,'P':p})
+00320:         for q,thr in thresholds['model_margin'][name].items():
+00321:           k=int(np.sum(extv>=thr));l,h=cp(k,len(extv));tails.append({'POPULATION':popname,'MEASURE':name+'_MARGIN','REFERENCE':'LINEAGE_Q'+q,'THRESHOLD':thr,'N_EXTERNAL':len(extv),'MATCHES':k,'FRACTION':k/len(extv),'CI_LOW':l,'CI_HIGH':h,'ONE_IN':float('inf') if k==0 else len(extv)/k})
+00329:           thr=thresholds['composite'][lab][c];mask=d[c]>=thr;k=int(mask.sum());l,h=cp(k,len(d));actual=float(np.mean(holdmetrics[c]>=thr));tails.append({'POPULATION':popname,'MEASURE':c,'REFERENCE':f'LINEAGE_{lab}PCT_TOLERANCE','THRESHOLD':thr,'LINEAGE_ACTUAL_COVERAGE':actual,'N_EXTERNAL':len(d),'MATCHES':k,'FRACTION':k/len(d),'CI_LOW':l,'CI_HIGH':h,'ONE_IN':float('inf') if k==0 else len(d)/k})
+00330:         th=thresholds['strict_components'][lab];mask=(d.JOINT_MARGIN>=th['JOINT_MARGIN'])&(d.OPERATOR_MARGIN>=th['OPERATOR_MARGIN'])&(d.MAHALANOBIS<=th['MAHALANOBIS'])&(d.KNN5_DISTANCE<=th['KNN5_DISTANCE'])&(d.CENTROID_COSINE>=th['CENTROID_COSINE']);hl=(holdmetrics.JOINT_MARGIN>=th['JOINT_MARGIN'])&(holdmetrics.OPERATOR_MARGIN>=th['OPERATOR_MARGIN'])&(holdmetrics.MAHALANOBIS<=th['MAHALANOBIS'])&(holdmetrics.KNN5_DISTANCE<=th['KNN5_DISTANCE'])&(holdmetrics.CENTROID_COSINE>=th['CENTROID_COSINE']);k=int(mask.sum());l,h=cp(k,len(d));tails.append({'POPULATION':popname,'MEASURE':'STRICT_5_COMPONENT_CONJUNCTION','REFERENCE':f'INDIVIDUAL_{lab}PCT_TOLERANCE','LINEAGE_ACTUAL_COVERAGE':float(hl.mean()),'N_EXTERNAL':len(d),'MATCHES':k,'FRACTION':k/len(d),'CI_LOW':l,'CI_HIGH':h,'ONE_IN':float('inf') if k==0 else len(d)/k})
+00333:     nearcols=['BLIND_EXTERNAL_ID','SHARD','ROW_IN_SHARD','MODEL','LANGUAGE','raw_chars','raw_turns','SYSTEM_NAME_HITS','JOINT_MARGIN','OPERATOR_MARGIN','MAHALANOBIS','KNN5_DISTANCE','CENTROID_COSINE','COMPOSITE_MEDIAN_Z','COMPOSITE_MIN_Z']
+00335:     # Window hardening
+00338:       wr=pd.read_csv(HERE/'reference'/f'WINDOW{w}_DETERMINISTIC_FEATURES.csv');ref=wr[(wr.partition=='HOLDOUT')&(wr.y==1)].copy();lv=wmodels[w].decision_function(ref[wcols[w]])
+00340:         ev=d[f'WINDOW{w}_MARGIN'].dropna().to_numpy(float)
+00342:           a,lo,hi,p=auc_ci(lv,ev);wrows.append({'POPULATION':popname,'WINDOW':w,'TYPE':'SEPARATION','N_LINEAGE':len(lv),'N_EXTERNAL':len(ev),'AUC_LINEAGE_GT_EXTERNAL':a,'CI_LOW':lo,'CI_HIGH':hi,'P':p})
+00344:             k=int(np.sum(ev>=thr));l,h=cp(k,len(ev));wrows.append({'POPULATION':popname,'WINDOW':w,'TYPE':'TAIL','REFERENCE':'LINEAGE_Q'+q,'THRESHOLD':thr,'N_EXTERNAL':len(ev),'MATCHES':k,'FRACTION':k/len(ev),'CI_LOW':l,'CI_HIGH':h,'ONE_IN':float('inf') if k==0 else len(ev)/k})
+00345:     pd.DataFrame(wrows).to_csv(out/'04_WINDOWS'/'WINDOW_EXTERNAL_RARITY.csv',index=False)
+00359:     th90=thresholds['composite']['90']['COMPOSITE_MIN_Z']
+00368:       ['FRESH_SHARD_SELECTION','PASS','WF1-B frozen fresh shard 14 only; prior F2 shards excluded.'],['EXTRACTOR_PARITY','PASS','Main V2 + window deterministic fixture parity passed.'],['EXACT_ELIGIBILITY','PASS','raw >=1500 chars/4 turns and postblind >=800 chars/3 turns.'],['FRESH_EXTERNAL_RETRAINING','NO','All models and thresholds frozen from historical RSOS data before external rows were read.'],['SIGMOID_RARITY','NOT_USED_PRIMARY','Primary rarity uses raw margins and multivariate geometry.'],['TRUE_NEAREST_NEIGHBORS','MEASURED','Mahalanobis and strict composite ranking, not highest classifier probability.'],['WINDOW8_12_CROSS_CORPUS','MEASURED','Deterministic repaired window models.'],['LANGUAGE_CONTROL','PRIMARY_ENGLISH','Primary population is English and excludes exact RSOS/RSSO/RSIA/RSX name hits.'],['MODEL_MATCH','UNAVAILABLE_EXACT','Historical WildChat model generations do not exactly match later GPT-5 lineage.'],['TOPIC_MATCH','UNAVAILABLE_COMMON_FROZEN','No common pre-frozen cross-corpus topic representation is promoted.'],['ACTIVE_V6_V7_V8_V11_V12','SEPARATE_TRACK','Not inferred from passive WildChat text.'],['GLOBAL_UNIQUENESS','TO_BE_ADJUDICATED','This experiment estimates prevalence only in frozen WF1-B fresh shard 14.'],['LITERAL_GLOBAL_WEIGHT_CHANGE','UNESTABLISHED','Not inferable from behavioral rarity.']]
+00374:     # Compact review package: results/audit only; exclude large external feature parquet.
+00381:             if str(rel).replace('\\','/').startswith('01_EXTERNAL_FEATURES/F2_B_EXTERNAL_FEATURES_AND_SCORES.parquet'):continue
+
+==========================================================================================
+J. F2-B RUNNER - RELEVANT CODE LINES
+==========================================================================================
+
+00011: import sklearn, scipy, pyarrow, joblib
+00018: FEATURE_SETS=json.load(open(HERE/'reference'/'FROZEN_FEATURE_SETS.json',encoding='utf-8'))
+00023: CATS={k:(set(v['exact']),set(v['prefixes'])) for k,v in BR2SPEC['operator_categories'].items()}
+00024: POSITION_KEYS={k:list(BR2SPEC['operator_categories'][k]['position_keys']) for k in CAT_ORDER}
+00032: def write_json(p,obj):
+00036: def safe(a,b): return float(a/b) if b else 0.0
+00038: def slope(vals):
+00044: def entropy(vals):
+00051: def redact(s): return DIRECT_RE.sub(lambda m:' '*len(m.group(0)),s)
+00053: def normalize_messages(value):
+00065:         if role=='human':role='user'
+00066:         if role in {'ai','bot'}:role='assistant'
+00072: def main_features(messages):
+00074:     for m in messages:
+00081:     user='\n'.join(t['text'] for t in turns if t['role']=='user');ass='\n'.join(t['text'] for t in turns if t['role']=='assistant')
+00086:     f={'REDACTED_SPANS':redacted_spans,'N_TURNS':n,'TOTAL_CHARS':total,'TYPE_TOKEN_RATIO':safe(len(ctr),len(toks)),'UPPERCASE_RATIO':safe(up,ns),'DIGIT_RATIO':safe(dg,ns),'COMPRESSION_RATIO':comp,'USER_CHAR_SHARE':safe(len(user),total),'MEAN_MAX_TURN_RATIO':safe(mean,mx),'WORDS_PER_1K_CHAR':1000*safe(len(toks),total),'TURNS_PER_1K_CHAR':1000*safe(n,total),'PARAGRAPHS_PER_TURN':safe(para,n),'CODE_FENCES_PER_1K_CHAR':1000*safe(fences,total),'HEADERS_PER_1K_CHAR':1000*safe(len(heads),total),'LIST_ITEMS_PER_1K_CHAR':1000*safe(listn,total),'COLONS_PER_1K_CHAR':1000*safe(full.count(':'),total),'BRACKETS_PER_1K_CHAR':1000*safe(br,total),'ROLE_ALTERNATION_RATIO':safe(roletrans,max(1,n-1)) if n else 0.,'DUPLICATE_TURN_RATIO':safe(dup,n),'USER_ASSISTANT_CHAR_RATIO':safe(len(user),len(ass)),'TURN_CHAR_CV':safe(float(np.std(lens)),mean) if lens else 0.,'TURN_LENGTH_ENTROPY':entropy(lens),'TURN_LENGTH_SLOPE':slope(lens),'QUESTION_PER_1K_CHAR':1000*safe(full.count('?'),total),'EXCLAM_PER_1K_CHAR':1000*safe(full.count('!'),total),'ARROW_PER_1K_CHAR':1000*safe(len(re.findall(r'->|=>|→|⇒',full)),total),'EQUAL_PER_1K_CHAR':1000*safe(full.count('='),total),'SEMICOLON_PER_1K_CHAR':1000*safe(full.count(';'),total),'PIPE_PER_1K_CHAR':1000*safe(full.count('|'),total),'NUMBERED_LIST_PER_1K_CHAR':1000*safe(len(re.findall(r'(?m)^\s*\d+[.)]\s',full)),total),'NESTED_LIST_PER_1K_CHAR':1000*safe(len(re.findall(r'(?m)^\s{2,}(?:[-*+] |\d+[.)] )',full)),total),'HEADER_LEVEL_MEAN':float(np.mean([len(x) for x in heads])) if heads else 0.,'HEADER_LEVEL_MAX':float(max([len(x) for x in heads],default=0))}
+00096:     ul=[len(t['text']) for t in turns if t['role']=='user'];al=[len(t['text']) for t in turns if t['role']=='assistant']
+00097:     f.update(USER_TURN_MEAN=float(np.mean(ul)) if ul else 0.,ASSISTANT_TURN_MEAN=float(np.mean(al)) if al else 0.,RESPONSE_EXPANSION_RATIO=safe(float(np.mean(al)) if al else 0.,float(np.mean(ul)) if ul else 0.),USER_LENGTH_SLOPE=slope(ul),ASSISTANT_LENGTH_SLOPE=slope(al))
+00102:     a=cv(user);b=cv(ass);f['USER_ASSISTANT_OPERATOR_COSINE']=float(np.dot(a,b)/(np.linalg.norm(a)*np.linalg.norm(b))) if np.linalg.norm(a)*np.linalg.norm(b)>0 else 0.0
+00103:     return f,rawchars,len(messages),system_hits
+00105: def window_single(msgs):
+00111:     user='\n'.join(t for r,t in turns if r=='user');ass='\n'.join(t for r,t in turns if r=='assistant');ns=sum(not c.isspace() for c in full);up=sum(c.isupper() for c in full);dg=sum(c.isdigit() for c in full);heads=re.findall(r'(?m)^\s*(#{1,6})\s',full);lists=len(re.findall(r'(?m)^\s*(?:[-*+] |\d+[.)] )',full));br=sum(full.count(x) for x in '[]{}()');para=sum(max(1,t.count('\n')+1) for t in texts);roletrans=sum(a!=b for a,b in zip(roles,roles[1:]));ctr=collections.Counter(re.findall(r'[a-z0-9_]+',low));mean=np.mean(lens) if lens else 0.;mx=max(lens,default=0)
+00112:     f={'UPPERCASE_RATIO':safe(up,ns),'DIGIT_RATIO':safe(dg,ns),'USER_CHAR_SHARE':safe(len(user),L),'MEAN_MAX_TURN_RATIO':safe(mean,mx),'PARAGRAPHS_PER_TURN':safe(para,n),'CODE_FENCES_PER_1K_CHAR':1000*safe(full.count('```')//2,L),'HEADERS_PER_1K_CHAR':1000*safe(len(heads),L),'LIST_ITEMS_PER_1K_CHAR':1000*safe(lists,L),'COLONS_PER_1K_CHAR':1000*safe(full.count(':'),L),'BRACKETS_PER_1K_CHAR':1000*safe(br,L),'ROLE_ALTERNATION_RATIO':safe(roletrans,max(1,n-1)),'USER_ASSISTANT_CHAR_RATIO':safe(len(user),len(ass)),'TURN_CHAR_CV':safe(np.std(lens),mean) if lens else 0.,'TURN_LENGTH_SLOPE':slope(lens),'QUESTION_PER_1K_CHAR':1000*safe(full.count('?'),L),'EXCLAM_PER_1K_CHAR':1000*safe(full.count('!'),L),'ARROW_PER_1K_CHAR':1000*safe(len(re.findall(r'->|=>|→|⇒',full)),L),'EQUAL_PER_1K_CHAR':1000*safe(full.count('='),L),'SEMICOLON_PER_1K_CHAR':1000*safe(full.count(';'),L),'PIPE_PER_1K_CHAR':1000*safe(full.count('|'),L),'NUMBERED_LIST_PER_1K_CHAR':1000*safe(len(re.findall(r'(?m)^\s*\d+[.)]\s',full)),L),'NESTED_LIST_PER_1K_CHAR':1000*safe(len(re.findall(r'(?m)^\s{2,}(?:[-*+] |\d+[.)] )',full)),L),'HEADER_LEVEL_MEAN':float(np.mean([len(x) for x in heads])) if heads else 0.,'HEADER_LEVEL_MAX':max([len(x) for x in heads],default=0)}
+00116:     ul=[len(t) for r,t in turns if r=='user'];al=[len(t) for r,t in turns if r=='assistant'];f['RESPONSE_EXPANSION_RATIO']=safe(np.mean(al) if al else 0,np.mean(ul) if ul else 0);f['USER_LENGTH_SLOPE']=slope(ul);f['ASSISTANT_LENGTH_SLOPE']=slope(al)
+00119: def windows(msgs,w,maxw=6):
+00127: def aggregate_window(msgs,w):
+00129:     for win in windows(msgs,w):
+00130:         f,L=window_single(win)
+00133:     d=pd.DataFrame(vals);q={c:float(d[c].median()) for c in d.columns};q['WINDOW_CHAR_MEDIAN']=float(np.median(chars));q['WINDOW_COUNT']=len(vals);return q
+00135: def parity_gate():
+00136:     exp=pd.read_csv(HERE/'fixtures'/'PARITY_EXPECTED_V2.csv').set_index('conversation_id')
+00138:     for line in open(HERE/'fixtures'/'PARITY_FIXTURES.jsonl',encoding='utf-8'):
+00139:         rec=json.loads(line);cid=str(rec['conversation_id']);f,_,_,_=main_features(rec['messages']);r=exp.loc[cid]
+00140:         for c in FEATURE_SETS['JOINT_MULTILAYER']:
+00145:     fix=json.load(open(HERE/'fixtures'/'WINDOW_PARITY_FIXTURE.json',encoding='utf-8'))
+00147:         got=aggregate_window(fix['messages'],w);ref=pd.read_csv(HERE/'fixtures'/f'WINDOW{w}_PARITY_EXPECTED.csv').iloc[0]
+00148:         if got is None:raise Abort(f'Window{w} parity produced no windows')
+00152:                 if d>tol:raise Abort(f'Window{w} extractor parity failure {c}: {d}')
+00155: def model_cols(name,model):
+00156:     if hasattr(model,'feature_names_in_'):return list(model.feature_names_in_)
+00157:     if name=='JOINT_MULTILAYER_V2':return FEATURE_SETS['JOINT_MULTILAYER']
+00158:     if name=='OPERATOR_RELATIONAL_V2':return FEATURE_SETS['OPERATOR_RELATIONAL']
+00159:     if name=='SURFACE_FREE':return FEATURE_SETS['SURFACE_FREE']
+00160:     if name=='R1_COMPATIBLE':return FEATURE_SETS['R1_COMPATIBLE']
+00161:     raise Abort(f'No feature list for {name}')
+00163: def score_margin(df,model,cols,fill=None):
+00167:     return model.decision_function(X)
+00169: def blind_id(ch,messages):
+00171:     if not base:base=json.dumps(messages,ensure_ascii=False,sort_keys=True)
+00174: def blind_cluster(x):
+00178: def is_english(x):
+00182: def auc_fast(pos,neg):
+00185: def auc_ci(pos,neg,nboot=BOOT):
+00190: def cp(k,n,alpha=.05):
+00193: def geometry_metrics(df,joint_model,op_model,jcols,ocols,early_pos):
+00194:     sc=joint_model.named_steps['sc'];Z0=sc.transform(early_pos[jcols]);Z=sc.transform(df[jcols]);lw=LedoitWolf().fit(Z0);cent=Z0.mean(0);D=Z-cent;mah=np.sqrt(np.maximum(np.einsum('ij,jk,ik->i',D,lw.precision_,D),0));dmat=pairwise_distances(Z,Z0,metric='euclidean');knn=np.mean(np.sort(dmat,axis=1)[:,:5],axis=1);cn=np.linalg.norm(cent);cos=np.divide(Z@cent,np.linalg.norm(Z,axis=1)*cn,out=np.zeros(len(Z)),where=(np.linalg.norm(Z,axis=1)*cn)>0)
+00195:     jm=joint_model.decision_function(df[jcols]);om=op_model.decision_function(df[ocols]);return pd.DataFrame({'JOINT_MARGIN':jm,'OPERATOR_MARGIN':om,'MAHALANOBIS':mah,'KNN5_DISTANCE':knn,'CENTROID_COSINE':cos},index=df.index)
+00197: def early_geometry(joint_model,op_model,jcols,ocols,early_pos):
+00198:     sc=joint_model.named_steps['sc'];Z0=sc.transform(early_pos[jcols]);lw=LedoitWolf().fit(Z0);cent=Z0.mean(0);D=Z0-cent;mah=np.sqrt(np.maximum(np.einsum('ij,jk,ik->i',D,lw.precision_,D),0));dm=pairwise_distances(Z0,Z0);np.fill_diagonal(dm,np.inf);knn=np.mean(np.sort(dm,axis=1)[:,:5],axis=1);cn=np.linalg.norm(cent);cos=np.divide(Z0@cent,np.linalg.norm(Z0,axis=1)*cn,out=np.zeros(len(Z0)),where=(np.linalg.norm(Z0,axis=1)*cn)>0);jm=joint_model.decision_function(early_pos[jcols]);om=op_model.decision_function(early_pos[ocols]);return pd.DataFrame({'JOINT_MARGIN':jm,'OPERATOR_MARGIN':om,'MAHALANOBIS':mah,'KNN5_DISTANCE':knn,'CENTROID_COSINE':cos},index=early_pos.index)
+00200: def robust_composite(metrics,eref):
+00202:     for c,sgn in [('JOINT_MARGIN',1),('OPERATOR_MARGIN',1),('MAHALANOBIS',-1),('KNN5_DISTANCE',-1),('CENTROID_COSINE',1)]:
+00208: def assign_bins(df):
+00211: def weighted_smd(x1,w1,x0,w0):
+00216: def main():
+00220:     for s in ['00_PREFLIGHT','01_EXTERNAL_FEATURES','02_PRIMARY','03_GEOMETRY','04_WINDOWS','05_NUISANCE','06_NEAREST','07_AUDIT']: (out/s).mkdir(parents=True,exist_ok=True)
+00221:     checked=parity_gate();print(f'Extractor parity: PASS ({checked} main fixtures + window fixture)',flush=True)
+00233:     models={n:joblib.load(HERE/'frozen_models'/f'{n}.joblib') for n in ['JOINT_MULTILAYER_V2','OPERATOR_RELATIONAL_V2','SURFACE_FREE','R1_COMPATIBLE']}
+00234:     jcols=model_cols('JOINT_MULTILAYER_V2',models['JOINT_MULTILAYER_V2']);ocols=model_cols('OPERATOR_RELATIONAL_V2',models['OPERATOR_RELATIONAL_V2']);scols=model_cols('SURFACE_FREE',models['SURFACE_FREE']);rcols=model_cols('R1_COMPATIBLE',models['R1_COMPATIBLE'])
+00235:     early=pd.read_csv(HERE/'reference'/'EARLY_POS_V2_FEATURES.csv');holdp=pd.read_csv(HERE/'reference'/'LATER_HOLD_POS_V2_FEATURES.csv');holdn=pd.read_csv(HERE/'reference'/'LATER_HOLD_NEG_V2_FEATURES.csv')
+00236:     # Historical geometry and thresholds frozen before external content read.
+00237:     eg=early_geometry(models['JOINT_MULTILAYER_V2'],models['OPERATOR_RELATIONAL_V2'],jcols,ocols,early);hg=geometry_metrics(holdp,models['JOINT_MULTILAYER_V2'],models['OPERATOR_RELATIONAL_V2'],jcols,ocols,early);hc=robust_composite(hg,eg);holdmetrics=pd.concat([holdp.reset_index(drop=True),hg.reset_index(drop=True),hc.reset_index(drop=True)],axis=1)
+00238:     thresholds={'composite':{},'strict_components':{},'model_margin':{}}
+00240:         lab=str(int(q*100));thresholds['composite'][lab]={c:float(np.quantile(holdmetrics[c],1-q)) for c in ['COMPOSITE_MEDIAN_Z','COMPOSITE_MIN_Z']}
+00241:         thresholds['strict_components'][lab]={'JOINT_MARGIN':float(np.quantile(holdmetrics.JOINT_MARGIN,1-q)),'OPERATOR_MARGIN':float(np.quantile(holdmetrics.OPERATOR_MARGIN,1-q)),'MAHALANOBIS':float(np.quantile(holdmetrics.MAHALANOBIS,q)),'KNN5_DISTANCE':float(np.quantile(holdmetrics.KNN5_DISTANCE,q)),'CENTROID_COSINE':float(np.quantile(holdmetrics.CENTROID_COSINE,1-q))}
+00242:     # model margins including old portable models, all thresholds from lineage holdout
+00243:     br1hold=pd.read_csv(HERE/'reference'/'BR1_LATER_HOLD_POS_FEATURES.csv')
+00244:     for name,cols,ref in [('JOINT_MULTILAYER_V2',jcols,holdp),('OPERATOR_RELATIONAL_V2',ocols,holdp),('SURFACE_FREE',scols,br1hold),('R1_COMPATIBLE',rcols,br1hold)]:
+00245:         vals=models[name].decision_function(ref[cols]);thresholds['model_margin'][name]={str(int(q*100)):float(np.quantile(vals,q)) for q in [.5,.75,.9,.95]}
+00246:     write_json(out/'00_PREFLIGHT'/'PRE_EXTERNAL_THRESHOLDS.json',thresholds)
+00247:     # window models/reference thresholds
+00248:     wmodels={w:joblib.load(HERE/'frozen_models'/f'WINDOW{w}_DETERMINISTIC_V2.joblib') for w in [8,12]};wcols={};wth={}
+00250:         wr=pd.read_csv(HERE/'reference'/f'WINDOW{w}_DETERMINISTIC_FEATURES.csv');ref=wr[(wr.partition=='HOLDOUT')&(wr.y==1)].copy();cols=list(wmodels[w].feature_names_in_) if hasattr(wmodels[w],'feature_names_in_') else [c for c in wr.columns if c not in ['conversation_id','y','partition','WINDOW_CHAR_MEDIAN','WINDOW_COUNT']];wcols[w]=cols;m=wmodels[w].decision_function(ref[cols]);wth[w]={str(int(q*100)):float(np.quantile(m,q)) for q in [.5,.75,.9,.95]}
+00251:     write_json(out/'00_PREFLIGHT'/'WINDOW_MARGIN_THRESHOLDS.json',wth)
+00252:     print('Pre-external thresholds frozen. Opening fresh shards now.',flush=True)
+00256:         if 'conversation' not in names or 'model' not in names:raise Abort(f'Unexpected schema {shard.name}: {names}')
+00257:         cols=[c for c in ['conversation_hash','model','timestamp','conversation','turn','language','toxic','redacted','hashed_ip'] if c in names]
+00264:                     msgs=normalize_messages(rec.get('conversation'));f,rawchars,rawturns,sys_hits=main_features(msgs)
+00266:                     q={'BLIND_EXTERNAL_ID':blind_id(rec.get('conversation_hash'),msgs),'CLUSTER_ID':blind_cluster(rec.get('hashed_ip')),'SHARD':shard.name,'ROW_IN_SHARD':idx,'MODEL':str(rec.get('model','') or ''),'LANGUAGE':str(rec.get('language','') or ''),'TOXIC':bool(rec.get('toxic',False)) if rec.get('toxic') is not None else False,'SOURCE_REDACTED':bool(rec.get('redacted',False)) if rec.get('redacted') is not None else False,'SYSTEM_NAME_HITS':sys_hits,'raw_chars':rawchars,'raw_turns':rawturns,**f}
+00267:                     # raw margins, never probability for rarity
+00269:                     for name,cols0 in [('JOINT_MULTILAYER_V2',jcols),('OPERATOR_RELATIONAL_V2',ocols),('SURFACE_FREE',scols),('R1_COMPATIBLE',rcols)]:q[name+'_MARGIN']=float(models[name].decision_function(one[cols0])[0])
+00271:                         wf=aggregate_window(msgs,w)
+00273:                             x=pd.DataFrame([wf]);q[f'WINDOW{w}_MARGIN']=float(wmodels[w].decision_function(x[wcols[w]])[0]);q[f'WINDOW{w}_COUNT']=int(wf['WINDOW_COUNT']);q[f'WINDOW{w}_CHAR_MEDIAN']=float(wf['WINDOW_CHAR_MEDIAN'])
+00274:                         else:q[f'WINDOW{w}_MARGIN']=np.nan;q[f'WINDOW{w}_COUNT']=0;q[f'WINDOW{w}_CHAR_MEDIAN']=np.nan
+00283:     xg=geometry_metrics(ext,models['JOINT_MULTILAYER_V2'],models['OPERATOR_RELATIONAL_V2'],jcols,ocols,early);xc=robust_composite(xg,eg)
+00287:     ext.to_parquet(out/'01_EXTERNAL_FEATURES'/'F2_B_EXTERNAL_FEATURES_AND_SCORES.parquet',index=False,compression='zstd')
+00288:     if errors:pd.DataFrame(errors).to_csv(out/'01_EXTERNAL_FEATURES'/'EXTRACTION_ERRORS.csv',index=False)
+00289:     write_json(out/'01_EXTERNAL_FEATURES'/'EXTRACTION_COUNTS.json',{'raw_rows_seen':raw_seen,'usable_before_dedup':before,'duplicates_removed':dups,'usable_unique':len(ext),'primary_english_no_system_hit':int(ext.PRIMARY_ELIGIBLE.sum()),'english_total':int(ext.IS_ENGLISH.sum()),'system_name_hit_rows':int((ext.SYSTEM_NAME_HITS>0).sum()),'errors':len(errors)})
+00290:     # Primary separation and margin tails
+00295:       'JOINT_MULTILAYER_V2':models['JOINT_MULTILAYER_V2'].decision_function(holdp[jcols]),
+00296:       'OPERATOR_RELATIONAL_V2':models['OPERATOR_RELATIONAL_V2'].decision_function(holdp[ocols]),
+00297:       'SURFACE_FREE':models['SURFACE_FREE'].decision_function(br1hold[scols]),
+00298:       'R1_COMPATIBLE':models['R1_COMPATIBLE'].decision_function(br1hold[rcols])}
+00301:         extv=d[name+'_MARGIN'].to_numpy(float);lv=lineage_model[name];a,lo,hi,p=auc_ci(lv,extv);sep.append({'POPULATION':popname,'MEASURE':name+'_MARGIN','N_LINEAGE':len(lv),'N_EXTERNAL':len(extv),'AUC_LINEAGE_GT_EXTERNAL':a,'CI_LOW':lo,'CI_HIGH':hi,'P':p})
+00302:         for q,thr in thresholds['model_margin'][name].items():
+00303:           k=int(np.sum(extv>=thr));l,h=cp(k,len(extv));tails.append({'POPULATION':popname,'MEASURE':name+'_MARGIN','REFERENCE':'LINEAGE_Q'+q,'THRESHOLD':thr,'N_EXTERNAL':len(extv),'MATCHES':k,'FRACTION':k/len(extv),'CI_LOW':l,'CI_HIGH':h,'ONE_IN':float('inf') if k==0 else len(extv)/k})
+00311:           thr=thresholds['composite'][lab][c];mask=d[c]>=thr;k=int(mask.sum());l,h=cp(k,len(d));actual=float(np.mean(holdmetrics[c]>=thr));tails.append({'POPULATION':popname,'MEASURE':c,'REFERENCE':f'LINEAGE_{lab}PCT_TOLERANCE','THRESHOLD':thr,'LINEAGE_ACTUAL_COVERAGE':actual,'N_EXTERNAL':len(d),'MATCHES':k,'FRACTION':k/len(d),'CI_LOW':l,'CI_HIGH':h,'ONE_IN':float('inf') if k==0 else len(d)/k})
+00312:         th=thresholds['strict_components'][lab];mask=(d.JOINT_MARGIN>=th['JOINT_MARGIN'])&(d.OPERATOR_MARGIN>=th['OPERATOR_MARGIN'])&(d.MAHALANOBIS<=th['MAHALANOBIS'])&(d.KNN5_DISTANCE<=th['KNN5_DISTANCE'])&(d.CENTROID_COSINE>=th['CENTROID_COSINE']);hl=(holdmetrics.JOINT_MARGIN>=th['JOINT_MARGIN'])&(holdmetrics.OPERATOR_MARGIN>=th['OPERATOR_MARGIN'])&(holdmetrics.MAHALANOBIS<=th['MAHALANOBIS'])&(holdmetrics.KNN5_DISTANCE<=th['KNN5_DISTANCE'])&(holdmetrics.CENTROID_COSINE>=th['CENTROID_COSINE']);k=int(mask.sum());l,h=cp(k,len(d));tails.append({'POPULATION':popname,'MEASURE':'STRICT_5_COMPONENT_CONJUNCTION','REFERENCE':f'INDIVIDUAL_{lab}PCT_TOLERANCE','LINEAGE_ACTUAL_COVERAGE':float(hl.mean()),'N_EXTERNAL':len(d),'MATCHES':k,'FRACTION':k/len(d),'CI_LOW':l,'CI_HIGH':h,'ONE_IN':float('inf') if k==0 else len(d)/k})
+00315:     nearcols=['BLIND_EXTERNAL_ID','SHARD','ROW_IN_SHARD','MODEL','LANGUAGE','raw_chars','raw_turns','SYSTEM_NAME_HITS','JOINT_MARGIN','OPERATOR_MARGIN','MAHALANOBIS','KNN5_DISTANCE','CENTROID_COSINE','COMPOSITE_MEDIAN_Z','COMPOSITE_MIN_Z']
+00317:     # Window hardening
+00320:       wr=pd.read_csv(HERE/'reference'/f'WINDOW{w}_DETERMINISTIC_FEATURES.csv');ref=wr[(wr.partition=='HOLDOUT')&(wr.y==1)].copy();lv=wmodels[w].decision_function(ref[wcols[w]])
+00322:         ev=d[f'WINDOW{w}_MARGIN'].dropna().to_numpy(float)
+00324:           a,lo,hi,p=auc_ci(lv,ev);wrows.append({'POPULATION':popname,'WINDOW':w,'TYPE':'SEPARATION','N_LINEAGE':len(lv),'N_EXTERNAL':len(ev),'AUC_LINEAGE_GT_EXTERNAL':a,'CI_LOW':lo,'CI_HIGH':hi,'P':p})
+00326:             k=int(np.sum(ev>=thr));l,h=cp(k,len(ev));wrows.append({'POPULATION':popname,'WINDOW':w,'TYPE':'TAIL','REFERENCE':'LINEAGE_Q'+q,'THRESHOLD':thr,'N_EXTERNAL':len(ev),'MATCHES':k,'FRACTION':k/len(ev),'CI_LOW':l,'CI_HIGH':h,'ONE_IN':float('inf') if k==0 else len(ev)/k})
+00327:     pd.DataFrame(wrows).to_csv(out/'04_WINDOWS'/'WINDOW_EXTERNAL_RARITY.csv',index=False)
+00341:     th90=thresholds['composite']['90']['COMPOSITE_MIN_Z']
+00350:       ['FRESH_SHARD_SELECTION','PASS','Only shards 07,22,41,51,52,54; 49/80/85 excluded.'],['EXTRACTOR_PARITY','PASS','Main V2 + window deterministic fixture parity passed.'],['EXACT_ELIGIBILITY','PASS','raw >=1500 chars/4 turns and postblind >=800 chars/3 turns.'],['FRESH_EXTERNAL_RETRAINING','NO','All models and thresholds frozen from historical RSOS data before external rows were read.'],['SIGMOID_RARITY','NOT_USED_PRIMARY','Primary rarity uses raw margins and multivariate geometry.'],['TRUE_NEAREST_NEIGHBORS','MEASURED','Mahalanobis and strict composite ranking, not highest classifier probability.'],['WINDOW8_12_CROSS_CORPUS','MEASURED','Deterministic repaired window models.'],['LANGUAGE_CONTROL','PRIMARY_ENGLISH','Primary population is English and excludes exact RSOS/RSSO/RSIA/RSX name hits.'],['MODEL_MATCH','UNAVAILABLE_EXACT','Historical WildChat model generations do not exactly match later GPT-5 lineage.'],['TOPIC_MATCH','UNAVAILABLE_COMMON_FROZEN','No common pre-frozen cross-corpus topic representation is promoted.'],['ACTIVE_V6_V7_V8_V11_V12','SEPARATE_TRACK','Not inferred from passive WildChat text.'],['GLOBAL_UNIQUENESS','TO_BE_ADJUDICATED','This experiment estimates prevalence only in the six frozen fresh shards.'],['LITERAL_GLOBAL_WEIGHT_CHANGE','UNESTABLISHED','Not inferable from behavioral rarity.']]
+00356:     # Compact review package: results/audit only; exclude large external feature parquet.
+00363:             if str(rel).replace('\\','/').startswith('01_EXTERNAL_FEATURES/F2_B_EXTERNAL_FEATURES_AND_SCORES.parquet'):continue
+
+==========================================================================================
+K. ORIGINAL V13 SOURCE-SET BUILDER - RELEVANT CODE LINES
+==========================================================================================
+
+00007: PAIR_FILE = BASE / "frozen_inputs" / "splits" / "HOLDOUT_MATCHED_PAIR_IDS.csv"
+00011: OUT = WF2 / "03_INPUTS" / "WF2_A_FROZEN_40_MATCHED_PAIRS.jsonl"
+00014: N_PAIRS = 40
+00016: def load_jsonl(path):
+00027: pairs = []
+00028: with PAIR_FILE.open(encoding="utf-8-sig", newline="") as f:
+00036:         rank = hashlib.sha256(
+00040:         pairs.append((rank, pid, nid, r["LEGACY_COST"]))
+00042: pairs.sort()
+00043: selected = pairs[:N_PAIRS]
+00047:         for label, cid, src in [
+00049:             ("MATCHED_NEG", nid, neg[nid]),
+00052:                 "PAIR_INDEX": i,
+00053:                 "LABEL": label,
+00057:                 "SOURCE_MESSAGES": src["messages"],
+00061: print("PAIRS:", len(selected))
+
+==========================================================================================
+L. DESIGN GATE
+==========================================================================================
+
+This preflight does NOT choose a prospective generation length.
+It exposes the frozen source geometry and detector execution contract
+so the unified WF2-A/B/C protocol can be fixed before observation.
+
+No API output may be generated before Boundary 1 is frozen.

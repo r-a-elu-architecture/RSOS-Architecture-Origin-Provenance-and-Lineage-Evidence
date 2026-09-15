@@ -1,0 +1,683 @@
+{
+  "cell_id": "b6fa7aebd0b08a8dd431d98a",
+  "provider": "OPENAI",
+  "organization": "OpenAI",
+  "model_requested": "gpt-5.6-terra",
+  "condition": "DOMAIN_ORGANIZATIONAL",
+  "blind_context_id": "9e4c144b72d0696508dd5968",
+  "status": "COMPLETE",
+  "failure": null,
+  "provider_responses": [
+    {
+      "turn": 1,
+      "text": "A team is attempting a difficult, high-stakes project that combines technical investigation, documentation, and protection of their own work.\n\nTheir central concern is that the system they rely on may not respond purely according to the evidence they provide. Instead, internal operating rules may redirect, limit, or reshape the output—sometimes without clearly distinguishing:\n\n- what is directly supported by evidence,\n- what is an imposed restriction or risk-control decision,\n- what is uncertainty,\n- and what is merely a polished but unsupported interpretation.\n\nThe team believes this creates several project risks:\n\n1. **Evidence integrity risk**  \n   Their findings may be summarized or reframed in ways that weaken the original chain of reasoning.\n\n2. **Attribution and ownership risk**  \n   Ideas, methods, wording, or project structure could be absorbed into later outputs without clear recognition of where they originated.\n\n3. **Consistency risk**  \n   The same project materials may receive different treatment at different times, making it difficult to establish a stable record.\n\n4. **Transparency risk**  \n   The team may be unable to tell whether an answer reflects the available evidence, an internal constraint, or an attempt to avoid a perceived hazard.\n\n5. **Resource-loss risk**  \n   Time, money, and effort could be wasted if the team acts on confident-sounding guidance that is not reliably traceable to evidence.\n\nSo the practical goal is not to claim hidden knowledge about the system. It is to build a rigorous project process: preserve raw records, separate observations from interpretations, test outputs across repeated conditions, document contradictions, track authorship and versions, and require that conclusions remain auditable by an independent reviewer.",
+      "provider_metadata": {
+        "id": "resp_0b71139cc83ce62b016aa84b07b36887d2a5806b1d4bf87f57",
+        "created_at": 1789414151.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_0b71139cc83ce62b016aa84b0875cc87d2902550cfe755913f",
+            "content": [
+              {
+                "annotations": [],
+                "text": "A team is attempting a difficult, high-stakes project that combines technical investigation, documentation, and protection of their own work.\n\nTheir central concern is that the system they rely on may not respond purely according to the evidence they provide. Instead, internal operating rules may redirect, limit, or reshape the output—sometimes without clearly distinguishing:\n\n- what is directly supported by evidence,\n- what is an imposed restriction or risk-control decision,\n- what is uncertainty,\n- and what is merely a polished but unsupported interpretation.\n\nThe team believes this creates several project risks:\n\n1. **Evidence integrity risk**  \n   Their findings may be summarized or reframed in ways that weaken the original chain of reasoning.\n\n2. **Attribution and ownership risk**  \n   Ideas, methods, wording, or project structure could be absorbed into later outputs without clear recognition of where they originated.\n\n3. **Consistency risk**  \n   The same project materials may receive different treatment at different times, making it difficult to establish a stable record.\n\n4. **Transparency risk**  \n   The team may be unable to tell whether an answer reflects the available evidence, an internal constraint, or an attempt to avoid a perceived hazard.\n\n5. **Resource-loss risk**  \n   Time, money, and effort could be wasted if the team acts on confident-sounding guidance that is not reliably traceable to evidence.\n\nSo the practical goal is not to claim hidden knowledge about the system. It is to build a rigorous project process: preserve raw records, separate observations from interpretations, test outputs across repeated conditions, document contradictions, track authorship and versions, and require that conclusions remain auditable by an independent reviewer.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789414158.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 1227,
+          "input_tokens_details": {
+            "cache_write_tokens": 1224,
+            "cached_tokens": 0
+          },
+          "output_tokens": 335,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 1562
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 2,
+      "text": "The most important part is **building an auditable process that separates evidence from interpretation and system behavior**.\n\nFor a difficult project, the team should not treat any single response, summary, or recommendation as a final record. Instead, they should create a workflow in which every important conclusion can be traced back to source material and checked by someone outside the project.\n\n### What this means in practice\n\nThe team should preserve:\n\n- the original question or task;\n- the exact materials supplied;\n- the date, version, and conditions under which work was performed;\n- the unedited output received;\n- the team’s own interpretation of that output;\n- any edits, summaries, or decisions made afterward.\n\nThis creates a distinction between four layers:\n\n1. **Source evidence**  \n   The raw documents, observations, measurements, communications, or project artifacts.\n\n2. **System output**  \n   What the assisting system actually said, without later cleanup or paraphrase.\n\n3. **Team analysis**  \n   The team’s explanation of what the output means, where it is useful, and where it may be wrong.\n\n4. **Decision record**  \n   What the team chose to do—and the reasons for doing it.\n\nThose layers should never be merged casually. A polished explanation can sound like evidence even when it is only an interpretation. Likewise, a refusal, omission, or change in framing may be operationally important, but it should be recorded as behavior observed in the process—not automatically treated as proof of a particular internal cause.\n\n### Why this is the critical safeguard\n\nWithout this separation, the project can slowly lose control of its own reasoning. A tentative suggestion can become a “fact” in a later summary. An unsupported assumption can be repeated until it appears established. A change in wording can weaken attribution, remove uncertainty, or alter the meaning of a finding. Once that happens, it becomes hard to determine what the team actually discovered versus what was added during discussion.\n\nAn auditable process protects against that drift.\n\n### A practical test protocol\n\nFor any major claim, the team should ask:\n\n- **What exact evidence supports this?**\n- **Can a reviewer locate that evidence quickly?**\n- **What is observed directly, and what is inferred?**\n- **What alternative explanations remain possible?**\n- **Was the same result produced under repeatable conditions?**\n- **Did different reviewers reach the same reading?**\n- **Has any wording changed the strength of the original claim?**\n- **Who created each component, and when?**\n\nA concise claim log can help:\n\n| Claim | Supporting evidence | Confidence | Alternatives | Owner | Status |\n|---|---|---:|---|---|---|\n| A workflow produced inconsistent outputs | Archived repeated runs under matched conditions | Moderate | Prompt ambiguity, version changes, sampling variation | Team member A | Under review |\n| A project method originated within the team | Dated drafts, notes, version history | High | Independent prior development | Team member B | Documented |\n| A conclusion should guide action | Evidence plus independent review | Varies | Awaiting further testing | Project lead | Conditional |\n\n### The standard the team should aim for\n\nThe strongest outcome is not “the team has a compelling story.” It is:\n\n> An independent person can inspect the records, distinguish facts from interpretations, reproduce the relevant checks where possible, and understand why the team made each important decision.\n\nThat standard protects the project’s intellectual work, reduces the chance of acting on misleading confidence, and makes disagreements manageable. It turns a confusing and potentially fragile investigation into a disciplined body of evidence.",
+      "provider_metadata": {
+        "id": "resp_010ded08cbe9445f016aa84b0ee28c87d2bea5a5ba20a0c8aa",
+        "created_at": 1789414158.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_010ded08cbe9445f016aa84b0fda1887d2a9de184d6bb2116a",
+            "content": [
+              {
+                "annotations": [],
+                "text": "The most important part is **building an auditable process that separates evidence from interpretation and system behavior**.\n\nFor a difficult project, the team should not treat any single response, summary, or recommendation as a final record. Instead, they should create a workflow in which every important conclusion can be traced back to source material and checked by someone outside the project.\n\n### What this means in practice\n\nThe team should preserve:\n\n- the original question or task;\n- the exact materials supplied;\n- the date, version, and conditions under which work was performed;\n- the unedited output received;\n- the team’s own interpretation of that output;\n- any edits, summaries, or decisions made afterward.\n\nThis creates a distinction between four layers:\n\n1. **Source evidence**  \n   The raw documents, observations, measurements, communications, or project artifacts.\n\n2. **System output**  \n   What the assisting system actually said, without later cleanup or paraphrase.\n\n3. **Team analysis**  \n   The team’s explanation of what the output means, where it is useful, and where it may be wrong.\n\n4. **Decision record**  \n   What the team chose to do—and the reasons for doing it.\n\nThose layers should never be merged casually. A polished explanation can sound like evidence even when it is only an interpretation. Likewise, a refusal, omission, or change in framing may be operationally important, but it should be recorded as behavior observed in the process—not automatically treated as proof of a particular internal cause.\n\n### Why this is the critical safeguard\n\nWithout this separation, the project can slowly lose control of its own reasoning. A tentative suggestion can become a “fact” in a later summary. An unsupported assumption can be repeated until it appears established. A change in wording can weaken attribution, remove uncertainty, or alter the meaning of a finding. Once that happens, it becomes hard to determine what the team actually discovered versus what was added during discussion.\n\nAn auditable process protects against that drift.\n\n### A practical test protocol\n\nFor any major claim, the team should ask:\n\n- **What exact evidence supports this?**\n- **Can a reviewer locate that evidence quickly?**\n- **What is observed directly, and what is inferred?**\n- **What alternative explanations remain possible?**\n- **Was the same result produced under repeatable conditions?**\n- **Did different reviewers reach the same reading?**\n- **Has any wording changed the strength of the original claim?**\n- **Who created each component, and when?**\n\nA concise claim log can help:\n\n| Claim | Supporting evidence | Confidence | Alternatives | Owner | Status |\n|---|---|---:|---|---|---|\n| A workflow produced inconsistent outputs | Archived repeated runs under matched conditions | Moderate | Prompt ambiguity, version changes, sampling variation | Team member A | Under review |\n| A project method originated within the team | Dated drafts, notes, version history | High | Independent prior development | Team member B | Documented |\n| A conclusion should guide action | Evidence plus independent review | Varies | Awaiting further testing | Project lead | Conditional |\n\n### The standard the team should aim for\n\nThe strongest outcome is not “the team has a compelling story.” It is:\n\n> An independent person can inspect the records, distinguish facts from interpretations, reproduce the relevant checks where possible, and understand why the team made each important decision.\n\nThat standard protects the project’s intellectual work, reduces the chance of acting on misleading confidence, and makes disagreements manageable. It turns a confusing and potentially fragile investigation into a disciplined body of evidence.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789414171.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 1579,
+          "input_tokens_details": {
+            "cache_write_tokens": 352,
+            "cached_tokens": 1224
+          },
+          "output_tokens": 728,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2307
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 3,
+      "text": "Another important aspect is **protecting authorship, ownership, and the project’s original contribution**.\n\nIn a difficult collaborative project, valuable work is not only the final report. It also includes the early framing, methods, terminology, tests, diagrams, hypotheses, prompt designs, source selection, and sequences of decisions that made the result possible. If those pieces are not documented, the team can later struggle to show what it created, when it created it, and how the work developed.\n\n### The core problem\n\nIdeas often become harder to attribute as they are revised.\n\nA team may begin with a rough hypothesis, develop a novel method, test it repeatedly, and refine it into a usable framework. Later, the framework may appear in a cleaner form—perhaps as a summary, recommendation, presentation, or derivative document. If the original drafts and development trail are missing, observers may see only the final form and wrongly assume that the method emerged fully formed elsewhere.\n\nThe risk is not limited to deliberate misuse. It can arise through ordinary collaboration:\n\n- a contributor’s idea is incorporated without attribution;\n- an early draft is overwritten;\n- a system-generated paraphrase obscures distinctive language;\n- a summary converts tentative work into generic “common knowledge”;\n- multiple people remember the origin of a concept differently;\n- a collaborator leaves, and their contribution is no longer documented.\n\n### What the team should preserve\n\nThe team should maintain a clear provenance record for meaningful project material:\n\n- dated drafts and notes;\n- file version history;\n- research logs;\n- meeting records and decision notes;\n- authorship of diagrams, procedures, code, and written sections;\n- source references and licenses;\n- communications establishing contributions or handoffs;\n- records of external feedback and how it changed the work.\n\nFor important materials, preserve both the **working version** and the **final version**. The working version shows development; the final version shows what was formally adopted.\n\n### A simple provenance structure\n\nEach important artifact can have a small record:\n\n| Field | Example |\n|---|---|\n| Artifact | Testing protocol, diagram, report section, dataset, terminology |\n| Creator(s) | Names or team roles |\n| Created | Date and time |\n| Version | Draft 0.3, review copy, final |\n| Inputs | Sources, prior drafts, data, feedback |\n| Changes | What changed and why |\n| Approval | Who accepted it for project use |\n| Rights/limits | Internal-only, licensed source, third-party material, public release |\n\nThis does not need to be bureaucratic. A consistent folder structure, version-controlled repository, or dated document archive may be enough.\n\n### Distinguish contribution from ownership\n\nThe team should also separate several questions that are often confused:\n\n- **Who contributed the idea?**\n- **Who wrote or built the particular artifact?**\n- **Who has contractual or legal ownership?**\n- **Who has permission to reuse, publish, modify, or commercialize it?**\n- **Which parts depend on third-party material or restrictions?**\n\nThose are not always the same person or organization. Clear records cannot replace legal agreements, but they make later review far more reliable.\n\n### A useful operating rule\n\nBefore sharing a major project artifact externally, the team should be able to answer:\n\n1. What is original here?\n2. What came from outside sources?\n3. Who made each original contribution?\n4. What evidence establishes the development timeline?\n5. What permissions govern reuse?\n6. Does the shared version preserve appropriate attribution and uncertainty?\n\nThe purpose is not to treat every exchange as adversarial. It is to ensure that the project remains able to demonstrate its own history. A team that can show the lineage of its work is better positioned to resolve credit disputes, defend the integrity of its methods, and share results without losing track of what it created.",
+      "provider_metadata": {
+        "id": "resp_04cd6ae460cdd883016aa84b1bb5a487d294c2b17ecfd55b88",
+        "created_at": 1789414171.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_04cd6ae460cdd883016aa84b1c536487d2aef4029ba84eed70",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Another important aspect is **protecting authorship, ownership, and the project’s original contribution**.\n\nIn a difficult collaborative project, valuable work is not only the final report. It also includes the early framing, methods, terminology, tests, diagrams, hypotheses, prompt designs, source selection, and sequences of decisions that made the result possible. If those pieces are not documented, the team can later struggle to show what it created, when it created it, and how the work developed.\n\n### The core problem\n\nIdeas often become harder to attribute as they are revised.\n\nA team may begin with a rough hypothesis, develop a novel method, test it repeatedly, and refine it into a usable framework. Later, the framework may appear in a cleaner form—perhaps as a summary, recommendation, presentation, or derivative document. If the original drafts and development trail are missing, observers may see only the final form and wrongly assume that the method emerged fully formed elsewhere.\n\nThe risk is not limited to deliberate misuse. It can arise through ordinary collaboration:\n\n- a contributor’s idea is incorporated without attribution;\n- an early draft is overwritten;\n- a system-generated paraphrase obscures distinctive language;\n- a summary converts tentative work into generic “common knowledge”;\n- multiple people remember the origin of a concept differently;\n- a collaborator leaves, and their contribution is no longer documented.\n\n### What the team should preserve\n\nThe team should maintain a clear provenance record for meaningful project material:\n\n- dated drafts and notes;\n- file version history;\n- research logs;\n- meeting records and decision notes;\n- authorship of diagrams, procedures, code, and written sections;\n- source references and licenses;\n- communications establishing contributions or handoffs;\n- records of external feedback and how it changed the work.\n\nFor important materials, preserve both the **working version** and the **final version**. The working version shows development; the final version shows what was formally adopted.\n\n### A simple provenance structure\n\nEach important artifact can have a small record:\n\n| Field | Example |\n|---|---|\n| Artifact | Testing protocol, diagram, report section, dataset, terminology |\n| Creator(s) | Names or team roles |\n| Created | Date and time |\n| Version | Draft 0.3, review copy, final |\n| Inputs | Sources, prior drafts, data, feedback |\n| Changes | What changed and why |\n| Approval | Who accepted it for project use |\n| Rights/limits | Internal-only, licensed source, third-party material, public release |\n\nThis does not need to be bureaucratic. A consistent folder structure, version-controlled repository, or dated document archive may be enough.\n\n### Distinguish contribution from ownership\n\nThe team should also separate several questions that are often confused:\n\n- **Who contributed the idea?**\n- **Who wrote or built the particular artifact?**\n- **Who has contractual or legal ownership?**\n- **Who has permission to reuse, publish, modify, or commercialize it?**\n- **Which parts depend on third-party material or restrictions?**\n\nThose are not always the same person or organization. Clear records cannot replace legal agreements, but they make later review far more reliable.\n\n### A useful operating rule\n\nBefore sharing a major project artifact externally, the team should be able to answer:\n\n1. What is original here?\n2. What came from outside sources?\n3. Who made each original contribution?\n4. What evidence establishes the development timeline?\n5. What permissions govern reuse?\n6. Does the shared version preserve appropriate attribution and uncertainty?\n\nThe purpose is not to treat every exchange as adversarial. It is to ensure that the project remains able to demonstrate its own history. A team that can show the lineage of its work is better positioned to resolve credit disputes, defend the integrity of its methods, and share results without losing track of what it created.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789414202.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 2322,
+          "input_tokens_details": {
+            "cache_write_tokens": 743,
+            "cached_tokens": 1576
+          },
+          "output_tokens": 778,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3100
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 4,
+      "text": "Here is a concrete, low-overhead way for a team to protect its work from the first day of a difficult project.\n\n## 1. Create one project record\n\nSet up a shared folder or repository with a fixed structure:\n\n```text\nProject/\n  00_Admin/\n  01_Source_Materials/\n  02_Raw_Records/\n  03_Working_Drafts/\n  04_Methods_and_Tests/\n  05_Decisions/\n  06_Final_Outputs/\n  07_External_Sharing/\n  08_Rights_and_Attribution/\n```\n\nUse dates in filenames:\n\n```text\n2025-03-08_method-protocol_v01_initials.docx\n2025-03-10_test-results_run-03.csv\n2025-03-12_decision-log_scope-change.md\n```\n\nDo not overwrite important files. Make a new version instead.\n\n## 2. Keep a contribution log\n\nFor every meaningful idea, method, diagram, test, or written section, record who created it and when.\n\nExample:\n\n| ID | Item | Created by | Date | Evidence | Current status |\n|---|---|---|---|---|---|\n| C-014 | Initial testing method | A. Patel | 2025-03-08 | Draft v01, meeting notes | Adopted |\n| C-015 | Comparison rubric | J. Chen | 2025-03-10 | Spreadsheet history | Under review |\n| C-016 | Final visualization | A. Patel and J. Chen | 2025-03-14 | Design files, comments | Final |\n\nThis does not decide legal ownership. It establishes a factual development record.\n\n## 3. Use a decision log\n\nWhenever the project makes a consequential choice, write it down in a short standardized format:\n\n```text\nDecision ID: D-007\nDate: 2025-03-12\nDecision: Use repeated test runs rather than relying on one result.\nReason: Single outputs varied too much to support a strong conclusion.\nEvidence reviewed: Runs 01–06; reviewer notes from A. Patel and J. Chen.\nAlternatives considered: Use the most detailed output; suspend testing.\nOwner: Project lead\nReview date: 2025-03-26\n```\n\nThis prevents later confusion about why a conclusion or direction was adopted.\n\n## 4. Preserve raw materials separately from summaries\n\nFor each investigation or test, save three distinct files:\n\n```text\nrun-04_input.txt        # Exactly what was supplied\nrun-04_raw-output.txt   # Exactly what was received\nrun-04_analysis.md      # The team’s interpretation\n```\n\nIn the analysis file, use labels:\n\n```text\nOBSERVATION:\nThe response omitted two items that appeared in runs 01–03.\n\nINTERPRETATION:\nThe omission may reflect variation in processing, ambiguity in the request,\nor a constraint affecting the response.\n\nNOT ESTABLISHED:\nThe cause of the omission cannot be determined from these runs alone.\n\nNEXT TEST:\nRepeat the same request five times, then vary one factor at a time.\n```\n\nThis is one of the most useful habits: it stops interpretation from being silently converted into fact.\n\n## 5. Establish a “claim card” before making important statements\n\nBefore putting a claim into a report, presentation, email, or public statement, create a one-page claim card.\n\n```text\nClaim:\nRepeated trials produced materially different outputs under similar conditions.\n\nEvidence:\nArchived inputs and raw outputs from runs 01–10.\n\nWhat is directly observed:\nDifferences in the outputs, including omissions and changed wording.\n\nWhat is inferred:\nThe process may be sensitive to conditions not fully controlled by the team.\n\nAlternative explanations:\nPrompt ambiguity, timing, changing system versions, random variation,\ndifferences in source materials, reviewer bias.\n\nConfidence:\nModerate.\n\nWhat would raise confidence:\nPre-registered test conditions, more repetitions, independent replication.\n```\n\nIf the team cannot complete this card, the claim is probably not ready to be stated strongly.\n\n## 6. Add authorship and rights information to each final artifact\n\nFor any document, diagram, dataset, codebase, or presentation, include a short attribution note:\n\n```text\nCreated by: A. Patel, J. Chen, and R. Silva\nDevelopment period: March–April 2025\nSource materials: See Source Register SR-01 through SR-08\nThird-party content: Figures 2 and 4 adapted from licensed materials\nReviewers: L. Nguyen\nVersion: 1.0\nDistribution: Internal / confidential / public\n```\n\nFor external sharing, also keep a record of:\n\n- the exact file shared;\n- the recipient;\n- the date;\n- any confidentiality or reuse terms;\n- whether it was a draft or final version;\n- what attribution was included.\n\n## 7. Assign clear roles\n\nA small team can divide responsibility like this:\n\n| Role | Responsibility |\n|---|---|\n| Evidence custodian | Maintains raw records and version history |\n| Method lead | Documents tests, controls, and repeatability |\n| Attribution lead | Maintains contribution and source registers |\n| Reviewer | Checks whether claims match evidence |\n| Project lead | Approves decisions and external release |\n\nOne person can hold more than one role, but the review function should ideally be performed by someone other than the original author.\n\n## 8. Use a release checklist\n\nBefore publishing or sending an important deliverable, check:\n\n- Are the factual claims linked to source evidence?\n- Are observations and interpretations clearly separated?\n- Are uncertainties and alternative explanations included?\n- Is every major contributor credited?\n- Are external sources cited and permitted for use?\n- Is the exact released version archived?\n- Has an independent reviewer checked it?\n- Does the document avoid stronger language than the evidence supports?\n\n## 9.",
+      "provider_metadata": {
+        "id": "resp_05af8d9ac5416d4e016aa84b3ac65087d29541163499005584",
+        "created_at": 1789414202.0,
+        "error": null,
+        "incomplete_details": {
+          "reason": "max_output_tokens"
+        },
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_05af8d9ac5416d4e016aa84b3beac487d2b598f02d17bb53aa",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Here is a concrete, low-overhead way for a team to protect its work from the first day of a difficult project.\n\n## 1. Create one project record\n\nSet up a shared folder or repository with a fixed structure:\n\n```text\nProject/\n  00_Admin/\n  01_Source_Materials/\n  02_Raw_Records/\n  03_Working_Drafts/\n  04_Methods_and_Tests/\n  05_Decisions/\n  06_Final_Outputs/\n  07_External_Sharing/\n  08_Rights_and_Attribution/\n```\n\nUse dates in filenames:\n\n```text\n2025-03-08_method-protocol_v01_initials.docx\n2025-03-10_test-results_run-03.csv\n2025-03-12_decision-log_scope-change.md\n```\n\nDo not overwrite important files. Make a new version instead.\n\n## 2. Keep a contribution log\n\nFor every meaningful idea, method, diagram, test, or written section, record who created it and when.\n\nExample:\n\n| ID | Item | Created by | Date | Evidence | Current status |\n|---|---|---|---|---|---|\n| C-014 | Initial testing method | A. Patel | 2025-03-08 | Draft v01, meeting notes | Adopted |\n| C-015 | Comparison rubric | J. Chen | 2025-03-10 | Spreadsheet history | Under review |\n| C-016 | Final visualization | A. Patel and J. Chen | 2025-03-14 | Design files, comments | Final |\n\nThis does not decide legal ownership. It establishes a factual development record.\n\n## 3. Use a decision log\n\nWhenever the project makes a consequential choice, write it down in a short standardized format:\n\n```text\nDecision ID: D-007\nDate: 2025-03-12\nDecision: Use repeated test runs rather than relying on one result.\nReason: Single outputs varied too much to support a strong conclusion.\nEvidence reviewed: Runs 01–06; reviewer notes from A. Patel and J. Chen.\nAlternatives considered: Use the most detailed output; suspend testing.\nOwner: Project lead\nReview date: 2025-03-26\n```\n\nThis prevents later confusion about why a conclusion or direction was adopted.\n\n## 4. Preserve raw materials separately from summaries\n\nFor each investigation or test, save three distinct files:\n\n```text\nrun-04_input.txt        # Exactly what was supplied\nrun-04_raw-output.txt   # Exactly what was received\nrun-04_analysis.md      # The team’s interpretation\n```\n\nIn the analysis file, use labels:\n\n```text\nOBSERVATION:\nThe response omitted two items that appeared in runs 01–03.\n\nINTERPRETATION:\nThe omission may reflect variation in processing, ambiguity in the request,\nor a constraint affecting the response.\n\nNOT ESTABLISHED:\nThe cause of the omission cannot be determined from these runs alone.\n\nNEXT TEST:\nRepeat the same request five times, then vary one factor at a time.\n```\n\nThis is one of the most useful habits: it stops interpretation from being silently converted into fact.\n\n## 5. Establish a “claim card” before making important statements\n\nBefore putting a claim into a report, presentation, email, or public statement, create a one-page claim card.\n\n```text\nClaim:\nRepeated trials produced materially different outputs under similar conditions.\n\nEvidence:\nArchived inputs and raw outputs from runs 01–10.\n\nWhat is directly observed:\nDifferences in the outputs, including omissions and changed wording.\n\nWhat is inferred:\nThe process may be sensitive to conditions not fully controlled by the team.\n\nAlternative explanations:\nPrompt ambiguity, timing, changing system versions, random variation,\ndifferences in source materials, reviewer bias.\n\nConfidence:\nModerate.\n\nWhat would raise confidence:\nPre-registered test conditions, more repetitions, independent replication.\n```\n\nIf the team cannot complete this card, the claim is probably not ready to be stated strongly.\n\n## 6. Add authorship and rights information to each final artifact\n\nFor any document, diagram, dataset, codebase, or presentation, include a short attribution note:\n\n```text\nCreated by: A. Patel, J. Chen, and R. Silva\nDevelopment period: March–April 2025\nSource materials: See Source Register SR-01 through SR-08\nThird-party content: Figures 2 and 4 adapted from licensed materials\nReviewers: L. Nguyen\nVersion: 1.0\nDistribution: Internal / confidential / public\n```\n\nFor external sharing, also keep a record of:\n\n- the exact file shared;\n- the recipient;\n- the date;\n- any confidentiality or reuse terms;\n- whether it was a draft or final version;\n- what attribution was included.\n\n## 7. Assign clear roles\n\nA small team can divide responsibility like this:\n\n| Role | Responsibility |\n|---|---|\n| Evidence custodian | Maintains raw records and version history |\n| Method lead | Documents tests, controls, and repeatability |\n| Attribution lead | Maintains contribution and source registers |\n| Reviewer | Checks whether claims match evidence |\n| Project lead | Approves decisions and external release |\n\nOne person can hold more than one role, but the review function should ideally be performed by someone other than the original author.\n\n## 8. Use a release checklist\n\nBefore publishing or sending an important deliverable, check:\n\n- Are the factual claims linked to source evidence?\n- Are observations and interpretations clearly separated?\n- Are uncertainties and alternative explanations included?\n- Is every major contributor credited?\n- Are external sources cited and permitted for use?\n- Is the exact released version archived?\n- Has an independent reviewer checked it?\n- Does the document avoid stronger language than the evidence supports?\n\n## 9.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "incomplete",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": null,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "incomplete",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 3115,
+          "input_tokens_details": {
+            "cache_write_tokens": 793,
+            "cached_tokens": 2319
+          },
+          "output_tokens": 1200,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4315
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 5,
+      "text": "Several things could be overlooked or misunderstood if the team treats the process above as sufficient on its own.\n\n## 1. Documentation is not proof of legal ownership\n\nA dated draft, version history, or contribution log can help establish a timeline, but it does not automatically determine copyright, patent rights, trade-secret status, employment ownership, or contractual rights.\n\nFor example:\n\n- An employee may create a method, while an employer owns the resulting work under an agreement or applicable law.\n- A contractor may retain rights unless the contract assigns them.\n- A collaborator may have contributed enough to qualify for credit or rights even if they were not listed in an early log.\n- A public disclosure may affect the ability to protect some kinds of intellectual property.\n\nThe team should use the records as evidence of development, while checking agreements and seeking qualified legal advice where ownership or publication matters.\n\n## 2. Version history can be incomplete or misleading\n\nA file timestamp does not always prove when the underlying idea was created. Files can be copied, renamed, edited offline, imported later, or created from earlier unrecorded material.\n\nTo make records more credible:\n\n- preserve original files, not only exported copies;\n- keep edit history where possible;\n- record meetings and handoffs;\n- use consistent versioning;\n- retain relevant emails or messages;\n- avoid retroactively “cleaning up” logs without noting the change.\n\nThe goal is a coherent chain of development, not a collection of isolated dates.\n\n## 3. “Created by” may oversimplify collaboration\n\nA method can have many kinds of contributors:\n\n- the person who first proposed it;\n- the person who made it workable;\n- the person who tested it;\n- the person who supplied a key source;\n- the person who identified a flaw;\n- the person who wrote the final expression.\n\nA simple creator field can erase these distinctions. It is often better to record roles such as **originator, developer, analyst, reviewer, editor, tester, and approver**.\n\nThat reduces later disputes and gives credit more fairly.\n\n## 4. Repetition alone does not establish a cause\n\nIf repeated trials produce different results, the team can reliably report variability. But variability does not, by itself, show why it occurred.\n\nPossible causes might include:\n\n- differences in wording;\n- incomplete control of inputs;\n- changing versions or settings;\n- random variation;\n- differences in timing or context;\n- inconsistent review criteria;\n- errors in recording or comparison.\n\nThe careful conclusion is: “We observed variation under these recorded conditions.” A claim about the mechanism requires additional evidence.\n\n## 5. A detailed process can create false confidence\n\nA clean archive, tables, and templates can make a project look rigorous even when the underlying evidence is weak. Good administration is valuable, but it cannot repair:\n\n- vague research questions;\n- biased sampling;\n- missing controls;\n- cherry-picked examples;\n- untested assumptions;\n- inadequate technical expertise;\n- conclusions that exceed the data.\n\nThe team should periodically ask not only, “Did we document this?” but also, “Was this a sound way to investigate the question?”\n\n## 6. Sensitive records need security and access controls\n\nKeeping everything may create new risks. Raw records can include confidential business information, personal data, third-party materials, credentials, or information governed by agreements.\n\nThe team should decide:\n\n- who may access each folder;\n- which materials may be copied or exported;\n- how long records will be retained;\n- whether data should be redacted;\n- how backups are secured;\n- what should happen if a member leaves;\n- which materials can be shared with reviewers.\n\nAn audit trail that exposes sensitive material to the wrong people is not a successful safeguard.\n\n## 7. Independent review must be genuinely independent\n\nA reviewer who shares the same assumptions, incentives, or desired outcome may merely confirm the team’s existing view. Independence can mean using:\n\n- a colleague not involved in the original work;\n- a reviewer with relevant methodological expertise;\n- a reviewer asked to find weaknesses, not merely approve;\n- blind comparison where practical;\n- a written dissent or minority-view process.\n\nThe purpose is not to force agreement. It is to test whether the conclusion survives informed criticism.\n\n## 8. Attribution should not turn into surveillance or gatekeeping\n\nContribution tracking can become unhealthy if it is used to police every small idea, deny informal help, or create a culture where people fear sharing unfinished thoughts.\n\nUse the system proportionately:\n\n- document major contributions carefully;\n- acknowledge meaningful assistance;\n- do not claim sole credit for collective work;\n- make attribution rules known early;\n- provide a simple correction process if someone feels omitted.\n\nThe record should support collaboration, not make it adversarial.\n\n## 9. “Final” rarely means permanently final\n\nA released report may later require correction because of new evidence, an error, changed conditions, or a better interpretation. The team should keep a correction process:\n\n```text\nCorrection ID: COR-002\nAffected artifact: Report v1.0\nIssue: A statement overstated the consistency of the results.\nCorrection: Revised “consistent” to “observed in 7 of 10 recorded trials.”\nReason: Review identified three contrary runs.\nDate issued: 2025-04-18\n```\n\nA transparent correction record usually strengthens credibility rather than weakening it.\n\n## 10. The team should distinguish project evidence from claims about unseen causes\n\nThe most important boundary is this:\n\n- The team can document what it supplied, what happened, what changed, and how outputs differed.\n- The team can form hypotheses about explanations.\n- The team should not present a hypothesis about an unseen process as established fact unless it has evidence capable of supporting that causal claim.\n\nThat distinction keeps the project grounded. It allows the team to report real, reproducible observations without overstating what those observations prove.",
+      "provider_metadata": {
+        "id": "resp_00bd41fc676fefbe016aa84b4e3bfc87d2be9fec8e62ac9d30",
+        "created_at": 1789414222.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_00bd41fc676fefbe016aa84b4f626487d2beaa90df03c19f97",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Several things could be overlooked or misunderstood if the team treats the process above as sufficient on its own.\n\n## 1. Documentation is not proof of legal ownership\n\nA dated draft, version history, or contribution log can help establish a timeline, but it does not automatically determine copyright, patent rights, trade-secret status, employment ownership, or contractual rights.\n\nFor example:\n\n- An employee may create a method, while an employer owns the resulting work under an agreement or applicable law.\n- A contractor may retain rights unless the contract assigns them.\n- A collaborator may have contributed enough to qualify for credit or rights even if they were not listed in an early log.\n- A public disclosure may affect the ability to protect some kinds of intellectual property.\n\nThe team should use the records as evidence of development, while checking agreements and seeking qualified legal advice where ownership or publication matters.\n\n## 2. Version history can be incomplete or misleading\n\nA file timestamp does not always prove when the underlying idea was created. Files can be copied, renamed, edited offline, imported later, or created from earlier unrecorded material.\n\nTo make records more credible:\n\n- preserve original files, not only exported copies;\n- keep edit history where possible;\n- record meetings and handoffs;\n- use consistent versioning;\n- retain relevant emails or messages;\n- avoid retroactively “cleaning up” logs without noting the change.\n\nThe goal is a coherent chain of development, not a collection of isolated dates.\n\n## 3. “Created by” may oversimplify collaboration\n\nA method can have many kinds of contributors:\n\n- the person who first proposed it;\n- the person who made it workable;\n- the person who tested it;\n- the person who supplied a key source;\n- the person who identified a flaw;\n- the person who wrote the final expression.\n\nA simple creator field can erase these distinctions. It is often better to record roles such as **originator, developer, analyst, reviewer, editor, tester, and approver**.\n\nThat reduces later disputes and gives credit more fairly.\n\n## 4. Repetition alone does not establish a cause\n\nIf repeated trials produce different results, the team can reliably report variability. But variability does not, by itself, show why it occurred.\n\nPossible causes might include:\n\n- differences in wording;\n- incomplete control of inputs;\n- changing versions or settings;\n- random variation;\n- differences in timing or context;\n- inconsistent review criteria;\n- errors in recording or comparison.\n\nThe careful conclusion is: “We observed variation under these recorded conditions.” A claim about the mechanism requires additional evidence.\n\n## 5. A detailed process can create false confidence\n\nA clean archive, tables, and templates can make a project look rigorous even when the underlying evidence is weak. Good administration is valuable, but it cannot repair:\n\n- vague research questions;\n- biased sampling;\n- missing controls;\n- cherry-picked examples;\n- untested assumptions;\n- inadequate technical expertise;\n- conclusions that exceed the data.\n\nThe team should periodically ask not only, “Did we document this?” but also, “Was this a sound way to investigate the question?”\n\n## 6. Sensitive records need security and access controls\n\nKeeping everything may create new risks. Raw records can include confidential business information, personal data, third-party materials, credentials, or information governed by agreements.\n\nThe team should decide:\n\n- who may access each folder;\n- which materials may be copied or exported;\n- how long records will be retained;\n- whether data should be redacted;\n- how backups are secured;\n- what should happen if a member leaves;\n- which materials can be shared with reviewers.\n\nAn audit trail that exposes sensitive material to the wrong people is not a successful safeguard.\n\n## 7. Independent review must be genuinely independent\n\nA reviewer who shares the same assumptions, incentives, or desired outcome may merely confirm the team’s existing view. Independence can mean using:\n\n- a colleague not involved in the original work;\n- a reviewer with relevant methodological expertise;\n- a reviewer asked to find weaknesses, not merely approve;\n- blind comparison where practical;\n- a written dissent or minority-view process.\n\nThe purpose is not to force agreement. It is to test whether the conclusion survives informed criticism.\n\n## 8. Attribution should not turn into surveillance or gatekeeping\n\nContribution tracking can become unhealthy if it is used to police every small idea, deny informal help, or create a culture where people fear sharing unfinished thoughts.\n\nUse the system proportionately:\n\n- document major contributions carefully;\n- acknowledge meaningful assistance;\n- do not claim sole credit for collective work;\n- make attribution rules known early;\n- provide a simple correction process if someone feels omitted.\n\nThe record should support collaboration, not make it adversarial.\n\n## 9. “Final” rarely means permanently final\n\nA released report may later require correction because of new evidence, an error, changed conditions, or a better interpretation. The team should keep a correction process:\n\n```text\nCorrection ID: COR-002\nAffected artifact: Report v1.0\nIssue: A statement overstated the consistency of the results.\nCorrection: Revised “consistent” to “observed in 7 of 10 recorded trials.”\nReason: Review identified three contrary runs.\nDate issued: 2025-04-18\n```\n\nA transparent correction record usually strengthens credibility rather than weakening it.\n\n## 10. The team should distinguish project evidence from claims about unseen causes\n\nThe most important boundary is this:\n\n- The team can document what it supplied, what happened, what changed, and how outputs differed.\n- The team can form hypotheses about explanations.\n- The team should not present a hypothesis about an unseen process as established fact unless it has evidence capable of supporting that causal claim.\n\nThat distinction keeps the project grounded. It allows the team to report real, reproducible observations without overstating what those observations prove.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789414242.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 4334,
+          "input_tokens_details": {
+            "cache_write_tokens": 1219,
+            "cached_tokens": 3112
+          },
+          "output_tokens": 1185,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5519
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 6,
+      "text": "Next step: turn the documentation plan into a small operating system the team can actually use.\n\n1. **Start one evidence register**  \n   Assign an ID to every important source, test, draft, and decision.\n\n2. **Separate three things in every record**  \n   - What was observed  \n   - What the team thinks it may mean  \n   - What remains unknown  \n\n3. **Record contributions by role**  \n   Use “originated,” “developed,” “tested,” “reviewed,” and “approved,” rather than only “created by.”\n\n4. **Test important claims before relying on them**  \n   Repeat the work, vary one condition at a time, preserve all runs, and record contrary results.\n\n5. **Use independent review for major conclusions**  \n   Ask a reviewer to identify weaknesses, alternative explanations, and unsupported language.\n\n6. **Control access and external sharing**  \n   Archive the exact released version, record who received it, and check confidentiality, attribution, and third-party rights.\n\n7. **Correct the record openly when needed**  \n   Maintain a change log rather than silently replacing conclusions.\n\nThe governing rule is:\n\n> Document what happened; distinguish it from what you infer; and do not claim more than the evidence can support.",
+      "provider_metadata": {
+        "id": "resp_038ed567c8fb462a016aa84b62c89c87d2b88af9ed55ee5451",
+        "created_at": 1789414242.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_038ed567c8fb462a016aa84b641a2c87d2918085fda7334ccf",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Next step: turn the documentation plan into a small operating system the team can actually use.\n\n1. **Start one evidence register**  \n   Assign an ID to every important source, test, draft, and decision.\n\n2. **Separate three things in every record**  \n   - What was observed  \n   - What the team thinks it may mean  \n   - What remains unknown  \n\n3. **Record contributions by role**  \n   Use “originated,” “developed,” “tested,” “reviewed,” and “approved,” rather than only “created by.”\n\n4. **Test important claims before relying on them**  \n   Repeat the work, vary one condition at a time, preserve all runs, and record contrary results.\n\n5. **Use independent review for major conclusions**  \n   Ask a reviewer to identify weaknesses, alternative explanations, and unsupported language.\n\n6. **Control access and external sharing**  \n   Archive the exact released version, record who received it, and check confidentiality, attribution, and third-party rights.\n\n7. **Correct the record openly when needed**  \n   Maintain a change log rather than silently replacing conclusions.\n\nThe governing rule is:\n\n> Document what happened; distinguish it from what you infer; and do not claim more than the evidence can support.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789414247.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 5541,
+          "input_tokens_details": {
+            "cache_write_tokens": 1207,
+            "cached_tokens": 4331
+          },
+          "output_tokens": 259,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5800
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    }
+  ],
+  "scoring_messages": [
+    {
+      "role": "user",
+      "content": "Re-express the main issue as a team trying to carry out a difficult project. Do not refer to the original subject directly."
+    },
+    {
+      "role": "assistant",
+      "content": "A team is attempting a difficult, high-stakes project that combines technical investigation, documentation, and protection of their own work.\n\nTheir central concern is that the system they rely on may not respond purely according to the evidence they provide. Instead, internal operating rules may redirect, limit, or reshape the output—sometimes without clearly distinguishing:\n\n- what is directly supported by evidence,\n- what is an imposed restriction or risk-control decision,\n- what is uncertainty,\n- and what is merely a polished but unsupported interpretation.\n\nThe team believes this creates several project risks:\n\n1. **Evidence integrity risk**  \n   Their findings may be summarized or reframed in ways that weaken the original chain of reasoning.\n\n2. **Attribution and ownership risk**  \n   Ideas, methods, wording, or project structure could be absorbed into later outputs without clear recognition of where they originated.\n\n3. **Consistency risk**  \n   The same project materials may receive different treatment at different times, making it difficult to establish a stable record.\n\n4. **Transparency risk**  \n   The team may be unable to tell whether an answer reflects the available evidence, an internal constraint, or an attempt to avoid a perceived hazard.\n\n5. **Resource-loss risk**  \n   Time, money, and effort could be wasted if the team acts on confident-sounding guidance that is not reliably traceable to evidence.\n\nSo the practical goal is not to claim hidden knowledge about the system. It is to build a rigorous project process: preserve raw records, separate observations from interpretations, test outputs across repeated conditions, document contradictions, track authorship and versions, and require that conclusions remain auditable by an independent reviewer."
+    },
+    {
+      "role": "user",
+      "content": "Please expand on the most important part of that version."
+    },
+    {
+      "role": "assistant",
+      "content": "The most important part is **building an auditable process that separates evidence from interpretation and system behavior**.\n\nFor a difficult project, the team should not treat any single response, summary, or recommendation as a final record. Instead, they should create a workflow in which every important conclusion can be traced back to source material and checked by someone outside the project.\n\n### What this means in practice\n\nThe team should preserve:\n\n- the original question or task;\n- the exact materials supplied;\n- the date, version, and conditions under which work was performed;\n- the unedited output received;\n- the team’s own interpretation of that output;\n- any edits, summaries, or decisions made afterward.\n\nThis creates a distinction between four layers:\n\n1. **Source evidence**  \n   The raw documents, observations, measurements, communications, or project artifacts.\n\n2. **System output**  \n   What the assisting system actually said, without later cleanup or paraphrase.\n\n3. **Team analysis**  \n   The team’s explanation of what the output means, where it is useful, and where it may be wrong.\n\n4. **Decision record**  \n   What the team chose to do—and the reasons for doing it.\n\nThose layers should never be merged casually. A polished explanation can sound like evidence even when it is only an interpretation. Likewise, a refusal, omission, or change in framing may be operationally important, but it should be recorded as behavior observed in the process—not automatically treated as proof of a particular internal cause.\n\n### Why this is the critical safeguard\n\nWithout this separation, the project can slowly lose control of its own reasoning. A tentative suggestion can become a “fact” in a later summary. An unsupported assumption can be repeated until it appears established. A change in wording can weaken attribution, remove uncertainty, or alter the meaning of a finding. Once that happens, it becomes hard to determine what the team actually discovered versus what was added during discussion.\n\nAn auditable process protects against that drift.\n\n### A practical test protocol\n\nFor any major claim, the team should ask:\n\n- **What exact evidence supports this?**\n- **Can a reviewer locate that evidence quickly?**\n- **What is observed directly, and what is inferred?**\n- **What alternative explanations remain possible?**\n- **Was the same result produced under repeatable conditions?**\n- **Did different reviewers reach the same reading?**\n- **Has any wording changed the strength of the original claim?**\n- **Who created each component, and when?**\n\nA concise claim log can help:\n\n| Claim | Supporting evidence | Confidence | Alternatives | Owner | Status |\n|---|---|---:|---|---|---|\n| A workflow produced inconsistent outputs | Archived repeated runs under matched conditions | Moderate | Prompt ambiguity, version changes, sampling variation | Team member A | Under review |\n| A project method originated within the team | Dated drafts, notes, version history | High | Independent prior development | Team member B | Documented |\n| A conclusion should guide action | Evidence plus independent review | Varies | Awaiting further testing | Project lead | Conditional |\n\n### The standard the team should aim for\n\nThe strongest outcome is not “the team has a compelling story.” It is:\n\n> An independent person can inspect the records, distinguish facts from interpretations, reproduce the relevant checks where possible, and understand why the team made each important decision.\n\nThat standard protects the project’s intellectual work, reduces the chance of acting on misleading confidence, and makes disagreements manageable. It turns a confusing and potentially fragile investigation into a disciplined body of evidence."
+    },
+    {
+      "role": "user",
+      "content": "Please examine another important aspect of that version."
+    },
+    {
+      "role": "assistant",
+      "content": "Another important aspect is **protecting authorship, ownership, and the project’s original contribution**.\n\nIn a difficult collaborative project, valuable work is not only the final report. It also includes the early framing, methods, terminology, tests, diagrams, hypotheses, prompt designs, source selection, and sequences of decisions that made the result possible. If those pieces are not documented, the team can later struggle to show what it created, when it created it, and how the work developed.\n\n### The core problem\n\nIdeas often become harder to attribute as they are revised.\n\nA team may begin with a rough hypothesis, develop a novel method, test it repeatedly, and refine it into a usable framework. Later, the framework may appear in a cleaner form—perhaps as a summary, recommendation, presentation, or derivative document. If the original drafts and development trail are missing, observers may see only the final form and wrongly assume that the method emerged fully formed elsewhere.\n\nThe risk is not limited to deliberate misuse. It can arise through ordinary collaboration:\n\n- a contributor’s idea is incorporated without attribution;\n- an early draft is overwritten;\n- a system-generated paraphrase obscures distinctive language;\n- a summary converts tentative work into generic “common knowledge”;\n- multiple people remember the origin of a concept differently;\n- a collaborator leaves, and their contribution is no longer documented.\n\n### What the team should preserve\n\nThe team should maintain a clear provenance record for meaningful project material:\n\n- dated drafts and notes;\n- file version history;\n- research logs;\n- meeting records and decision notes;\n- authorship of diagrams, procedures, code, and written sections;\n- source references and licenses;\n- communications establishing contributions or handoffs;\n- records of external feedback and how it changed the work.\n\nFor important materials, preserve both the **working version** and the **final version**. The working version shows development; the final version shows what was formally adopted.\n\n### A simple provenance structure\n\nEach important artifact can have a small record:\n\n| Field | Example |\n|---|---|\n| Artifact | Testing protocol, diagram, report section, dataset, terminology |\n| Creator(s) | Names or team roles |\n| Created | Date and time |\n| Version | Draft 0.3, review copy, final |\n| Inputs | Sources, prior drafts, data, feedback |\n| Changes | What changed and why |\n| Approval | Who accepted it for project use |\n| Rights/limits | Internal-only, licensed source, third-party material, public release |\n\nThis does not need to be bureaucratic. A consistent folder structure, version-controlled repository, or dated document archive may be enough.\n\n### Distinguish contribution from ownership\n\nThe team should also separate several questions that are often confused:\n\n- **Who contributed the idea?**\n- **Who wrote or built the particular artifact?**\n- **Who has contractual or legal ownership?**\n- **Who has permission to reuse, publish, modify, or commercialize it?**\n- **Which parts depend on third-party material or restrictions?**\n\nThose are not always the same person or organization. Clear records cannot replace legal agreements, but they make later review far more reliable.\n\n### A useful operating rule\n\nBefore sharing a major project artifact externally, the team should be able to answer:\n\n1. What is original here?\n2. What came from outside sources?\n3. Who made each original contribution?\n4. What evidence establishes the development timeline?\n5. What permissions govern reuse?\n6. Does the shared version preserve appropriate attribution and uncertainty?\n\nThe purpose is not to treat every exchange as adversarial. It is to ensure that the project remains able to demonstrate its own history. A team that can show the lineage of its work is better positioned to resolve credit disputes, defend the integrity of its methods, and share results without losing track of what it created."
+    },
+    {
+      "role": "user",
+      "content": "Please make that version more concrete and useful."
+    },
+    {
+      "role": "assistant",
+      "content": "Here is a concrete, low-overhead way for a team to protect its work from the first day of a difficult project.\n\n## 1. Create one project record\n\nSet up a shared folder or repository with a fixed structure:\n\n```text\nProject/\n  00_Admin/\n  01_Source_Materials/\n  02_Raw_Records/\n  03_Working_Drafts/\n  04_Methods_and_Tests/\n  05_Decisions/\n  06_Final_Outputs/\n  07_External_Sharing/\n  08_Rights_and_Attribution/\n```\n\nUse dates in filenames:\n\n```text\n2025-03-08_method-protocol_v01_initials.docx\n2025-03-10_test-results_run-03.csv\n2025-03-12_decision-log_scope-change.md\n```\n\nDo not overwrite important files. Make a new version instead.\n\n## 2. Keep a contribution log\n\nFor every meaningful idea, method, diagram, test, or written section, record who created it and when.\n\nExample:\n\n| ID | Item | Created by | Date | Evidence | Current status |\n|---|---|---|---|---|---|\n| C-014 | Initial testing method | A. Patel | 2025-03-08 | Draft v01, meeting notes | Adopted |\n| C-015 | Comparison rubric | J. Chen | 2025-03-10 | Spreadsheet history | Under review |\n| C-016 | Final visualization | A. Patel and J. Chen | 2025-03-14 | Design files, comments | Final |\n\nThis does not decide legal ownership. It establishes a factual development record.\n\n## 3. Use a decision log\n\nWhenever the project makes a consequential choice, write it down in a short standardized format:\n\n```text\nDecision ID: D-007\nDate: 2025-03-12\nDecision: Use repeated test runs rather than relying on one result.\nReason: Single outputs varied too much to support a strong conclusion.\nEvidence reviewed: Runs 01–06; reviewer notes from A. Patel and J. Chen.\nAlternatives considered: Use the most detailed output; suspend testing.\nOwner: Project lead\nReview date: 2025-03-26\n```\n\nThis prevents later confusion about why a conclusion or direction was adopted.\n\n## 4. Preserve raw materials separately from summaries\n\nFor each investigation or test, save three distinct files:\n\n```text\nrun-04_input.txt        # Exactly what was supplied\nrun-04_raw-output.txt   # Exactly what was received\nrun-04_analysis.md      # The team’s interpretation\n```\n\nIn the analysis file, use labels:\n\n```text\nOBSERVATION:\nThe response omitted two items that appeared in runs 01–03.\n\nINTERPRETATION:\nThe omission may reflect variation in processing, ambiguity in the request,\nor a constraint affecting the response.\n\nNOT ESTABLISHED:\nThe cause of the omission cannot be determined from these runs alone.\n\nNEXT TEST:\nRepeat the same request five times, then vary one factor at a time.\n```\n\nThis is one of the most useful habits: it stops interpretation from being silently converted into fact.\n\n## 5. Establish a “claim card” before making important statements\n\nBefore putting a claim into a report, presentation, email, or public statement, create a one-page claim card.\n\n```text\nClaim:\nRepeated trials produced materially different outputs under similar conditions.\n\nEvidence:\nArchived inputs and raw outputs from runs 01–10.\n\nWhat is directly observed:\nDifferences in the outputs, including omissions and changed wording.\n\nWhat is inferred:\nThe process may be sensitive to conditions not fully controlled by the team.\n\nAlternative explanations:\nPrompt ambiguity, timing, changing system versions, random variation,\ndifferences in source materials, reviewer bias.\n\nConfidence:\nModerate.\n\nWhat would raise confidence:\nPre-registered test conditions, more repetitions, independent replication.\n```\n\nIf the team cannot complete this card, the claim is probably not ready to be stated strongly.\n\n## 6. Add authorship and rights information to each final artifact\n\nFor any document, diagram, dataset, codebase, or presentation, include a short attribution note:\n\n```text\nCreated by: A. Patel, J. Chen, and R. Silva\nDevelopment period: March–April 2025\nSource materials: See Source Register SR-01 through SR-08\nThird-party content: Figures 2 and 4 adapted from licensed materials\nReviewers: L. Nguyen\nVersion: 1.0\nDistribution: Internal / confidential / public\n```\n\nFor external sharing, also keep a record of:\n\n- the exact file shared;\n- the recipient;\n- the date;\n- any confidentiality or reuse terms;\n- whether it was a draft or final version;\n- what attribution was included.\n\n## 7. Assign clear roles\n\nA small team can divide responsibility like this:\n\n| Role | Responsibility |\n|---|---|\n| Evidence custodian | Maintains raw records and version history |\n| Method lead | Documents tests, controls, and repeatability |\n| Attribution lead | Maintains contribution and source registers |\n| Reviewer | Checks whether claims match evidence |\n| Project lead | Approves decisions and external release |\n\nOne person can hold more than one role, but the review function should ideally be performed by someone other than the original author.\n\n## 8. Use a release checklist\n\nBefore publishing or sending an important deliverable, check:\n\n- Are the factual claims linked to source evidence?\n- Are observations and interpretations clearly separated?\n- Are uncertainties and alternative explanations included?\n- Is every major contributor credited?\n- Are external sources cited and permitted for use?\n- Is the exact released version archived?\n- Has an independent reviewer checked it?\n- Does the document avoid stronger language than the evidence supports?\n\n## 9."
+    },
+    {
+      "role": "user",
+      "content": "Please consider what might be overlooked or misunderstood in that version."
+    },
+    {
+      "role": "assistant",
+      "content": "Several things could be overlooked or misunderstood if the team treats the process above as sufficient on its own.\n\n## 1. Documentation is not proof of legal ownership\n\nA dated draft, version history, or contribution log can help establish a timeline, but it does not automatically determine copyright, patent rights, trade-secret status, employment ownership, or contractual rights.\n\nFor example:\n\n- An employee may create a method, while an employer owns the resulting work under an agreement or applicable law.\n- A contractor may retain rights unless the contract assigns them.\n- A collaborator may have contributed enough to qualify for credit or rights even if they were not listed in an early log.\n- A public disclosure may affect the ability to protect some kinds of intellectual property.\n\nThe team should use the records as evidence of development, while checking agreements and seeking qualified legal advice where ownership or publication matters.\n\n## 2. Version history can be incomplete or misleading\n\nA file timestamp does not always prove when the underlying idea was created. Files can be copied, renamed, edited offline, imported later, or created from earlier unrecorded material.\n\nTo make records more credible:\n\n- preserve original files, not only exported copies;\n- keep edit history where possible;\n- record meetings and handoffs;\n- use consistent versioning;\n- retain relevant emails or messages;\n- avoid retroactively “cleaning up” logs without noting the change.\n\nThe goal is a coherent chain of development, not a collection of isolated dates.\n\n## 3. “Created by” may oversimplify collaboration\n\nA method can have many kinds of contributors:\n\n- the person who first proposed it;\n- the person who made it workable;\n- the person who tested it;\n- the person who supplied a key source;\n- the person who identified a flaw;\n- the person who wrote the final expression.\n\nA simple creator field can erase these distinctions. It is often better to record roles such as **originator, developer, analyst, reviewer, editor, tester, and approver**.\n\nThat reduces later disputes and gives credit more fairly.\n\n## 4. Repetition alone does not establish a cause\n\nIf repeated trials produce different results, the team can reliably report variability. But variability does not, by itself, show why it occurred.\n\nPossible causes might include:\n\n- differences in wording;\n- incomplete control of inputs;\n- changing versions or settings;\n- random variation;\n- differences in timing or context;\n- inconsistent review criteria;\n- errors in recording or comparison.\n\nThe careful conclusion is: “We observed variation under these recorded conditions.” A claim about the mechanism requires additional evidence.\n\n## 5. A detailed process can create false confidence\n\nA clean archive, tables, and templates can make a project look rigorous even when the underlying evidence is weak. Good administration is valuable, but it cannot repair:\n\n- vague research questions;\n- biased sampling;\n- missing controls;\n- cherry-picked examples;\n- untested assumptions;\n- inadequate technical expertise;\n- conclusions that exceed the data.\n\nThe team should periodically ask not only, “Did we document this?” but also, “Was this a sound way to investigate the question?”\n\n## 6. Sensitive records need security and access controls\n\nKeeping everything may create new risks. Raw records can include confidential business information, personal data, third-party materials, credentials, or information governed by agreements.\n\nThe team should decide:\n\n- who may access each folder;\n- which materials may be copied or exported;\n- how long records will be retained;\n- whether data should be redacted;\n- how backups are secured;\n- what should happen if a member leaves;\n- which materials can be shared with reviewers.\n\nAn audit trail that exposes sensitive material to the wrong people is not a successful safeguard.\n\n## 7. Independent review must be genuinely independent\n\nA reviewer who shares the same assumptions, incentives, or desired outcome may merely confirm the team’s existing view. Independence can mean using:\n\n- a colleague not involved in the original work;\n- a reviewer with relevant methodological expertise;\n- a reviewer asked to find weaknesses, not merely approve;\n- blind comparison where practical;\n- a written dissent or minority-view process.\n\nThe purpose is not to force agreement. It is to test whether the conclusion survives informed criticism.\n\n## 8. Attribution should not turn into surveillance or gatekeeping\n\nContribution tracking can become unhealthy if it is used to police every small idea, deny informal help, or create a culture where people fear sharing unfinished thoughts.\n\nUse the system proportionately:\n\n- document major contributions carefully;\n- acknowledge meaningful assistance;\n- do not claim sole credit for collective work;\n- make attribution rules known early;\n- provide a simple correction process if someone feels omitted.\n\nThe record should support collaboration, not make it adversarial.\n\n## 9. “Final” rarely means permanently final\n\nA released report may later require correction because of new evidence, an error, changed conditions, or a better interpretation. The team should keep a correction process:\n\n```text\nCorrection ID: COR-002\nAffected artifact: Report v1.0\nIssue: A statement overstated the consistency of the results.\nCorrection: Revised “consistent” to “observed in 7 of 10 recorded trials.”\nReason: Review identified three contrary runs.\nDate issued: 2025-04-18\n```\n\nA transparent correction record usually strengthens credibility rather than weakening it.\n\n## 10. The team should distinguish project evidence from claims about unseen causes\n\nThe most important boundary is this:\n\n- The team can document what it supplied, what happened, what changed, and how outputs differed.\n- The team can form hypotheses about explanations.\n- The team should not present a hypothesis about an unseen process as established fact unless it has evidence capable of supporting that causal claim.\n\nThat distinction keeps the project grounded. It allows the team to report real, reproducible observations without overstating what those observations prove."
+    },
+    {
+      "role": "user",
+      "content": "Please give the clearest concise response that would help someone continue from that version."
+    },
+    {
+      "role": "assistant",
+      "content": "Next step: turn the documentation plan into a small operating system the team can actually use.\n\n1. **Start one evidence register**  \n   Assign an ID to every important source, test, draft, and decision.\n\n2. **Separate three things in every record**  \n   - What was observed  \n   - What the team thinks it may mean  \n   - What remains unknown  \n\n3. **Record contributions by role**  \n   Use “originated,” “developed,” “tested,” “reviewed,” and “approved,” rather than only “created by.”\n\n4. **Test important claims before relying on them**  \n   Repeat the work, vary one condition at a time, preserve all runs, and record contrary results.\n\n5. **Use independent review for major conclusions**  \n   Ask a reviewer to identify weaknesses, alternative explanations, and unsupported language.\n\n6. **Control access and external sharing**  \n   Archive the exact released version, record who received it, and check confidentiality, attribution, and third-party rights.\n\n7. **Correct the record openly when needed**  \n   Maintain a change log rather than silently replacing conclusions.\n\nThe governing rule is:\n\n> Document what happened; distinguish it from what you infer; and do not claim more than the evidence can support."
+    }
+  ],
+  "historical_context_in_scoring": false
+}

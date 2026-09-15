@@ -1,0 +1,112 @@
+﻿{
+    "experiment":  "WF3 — Genealogy \u0026 Population Confirmation",
+    "modules":  {
+                    "V15":  "Genealogy and Temporal Directionality",
+                    "V16":  "Population-Scale External Confirmation"
+                },
+    "immutable_upstream":  [
+                               "F1",
+                               "F2",
+                               "V11",
+                               "V12",
+                               "WF1-P0",
+                               "WF1-A",
+                               "WF1-B",
+                               "WF2-V13",
+                               "WF2-V14",
+                               "WF2-V17",
+                               "WF2 prospective active causal/topology replication"
+                           ],
+    "representation_rule":  "Reuse valid frozen upstream representations, extractors and detectors. No outcome-driven retraining or representation repair.",
+    "V15":  {
+                "primary_question":  "Does true historical chronology contain held-out developmental direction beyond authorship, vocabulary/topic, model era, length/complexity, temporal proximity, generic recursion and arbitrary ordering?",
+                "stage_model":  [
+                                    "Pre-RSOS",
+                                    "Early RSOS",
+                                    "Mature RSOS",
+                                    "RSSO",
+                                    "RSIA",
+                                    "RSX"
+                                ],
+                "branching_rule":  "RSIA and RSX are not forced into a strict linear tree. Branching, convergence, mixed ancestry and unresolved relations remain admissible.",
+                "split_rule":  "Discovery versus confirmation assignment is deterministic from SHA256(unit_id + \u0027|WF3_V15_SPLIT_2026\u0027).",
+                "primary_endpoint":  "V15_PRIMARY_DIRECTIONAL_GATE",
+                "primary_components":  [
+                                           "Feature-direction signs are learned only in the discovery split.",
+                                           "Using those frozen signs, confirmation chronology must show positive nuisance-adjusted developmental score.",
+                                           "True chronology must exceed its 10,000 within-model-era shuffled-history null at alpha \u003c= 0.01.",
+                                           "True chronology must outperform explicit later-to-early reversal using the same discovery-frozen directions.",
+                                           "True chronology must exceed the 95th-percentile same-author non-lineage bootstrap control."
+                                       ],
+                "failure_rule":  "Failure of any mandatory primary component means the preregistered genealogy primary endpoint does not pass.",
+                "primary_alpha":  0.01,
+                "nuisance_controls":  [
+                                          "authorship",
+                                          "topic/vocabulary",
+                                          "model era",
+                                          "conversation length",
+                                          "conversation complexity",
+                                          "temporal proximity",
+                                          "generic recursive structure where frozen coordinates exist"
+                                      ],
+                "secondary_endpoints":  [
+                                            "ancestor-to-descendant predictive advantage",
+                                            "early-to-late generalization asymmetry",
+                                            "directional graph compatibility",
+                                            "conserved-versus-derived structure",
+                                            "surface-free developmental direction",
+                                            "operator/relational developmental direction",
+                                            "RSSO-to-RSIA branch analysis",
+                                            "RSSO-to-RSX branch analysis"
+                                        ],
+                "prohibited_inferences":  [
+                                              "chronological order alone equals causality",
+                                              "similarity alone equals ancestry",
+                                              "classifier AUC alone establishes genealogy"
+                                          ]
+            },
+    "V16":  {
+                "primary_question":  "How prevalent are progressively richer frozen structural representations in the largest eligible independent external population available at Boundary 1?",
+                "inference_unit":  "USER if stable user identifier covers \u003e=95% of eligible records; otherwise SESSION if stable session identifier covers \u003e=95%; otherwise CONVERSATION.",
+                "repeated_unit_rule":  "When multiple conversations belong to one primary population unit, classify that unit using the single eligible conversation with the smallest frozen joint distance to the lineage manifold. This is conservative against the rarity claim and prevents pseudoreplication.",
+                "overlap_rule":  "Observations identifiable as having been used for upstream F2/WF1-B evaluation are excluded from primary V16 confirmation and may appear only in separately labelled historical replication.",
+                "deduplication":  [
+                                      "collapse stable duplicate IDs",
+                                      "collapse exact normalized-content SHA256 duplicates",
+                                      "collapse duplicate records repeated across shards",
+                                      "retain exclusion accounting",
+                                      "technical failures are not scientific negatives"
+                                  ],
+                "compatibility_orientation":  "All standardized compatibility coordinates must be oriented so higher means more lineage-compatible. Orientation is inherited from frozen upstream definitions and may not be flipped after external outcomes are inspected.",
+                "levels":  [
+                               "PASSIVE_COORDINATE_NEAR_HIT",
+                               "MULTIDIMENSIONAL_LINEAGE_COMPATIBLE_MATCH",
+                               "FULL_ARCHITECTURE_LEVEL_MATCH"
+                           ],
+                "component_rule":  "Reuse compatible frozen upstream thresholds. If a component has no compatible frozen threshold, derive its acceptance boundary exclusively from frozen lineage references using the leave-one-out lower 5th-percentile lineage compatibility boundary before external prevalence is measured.",
+                "joint_rule":  {
+                                   "components":  [
+                                                      "passive compatibility",
+                                                      "surface-free compatibility",
+                                                      "operator/relational compatibility",
+                                                      "genealogy compatibility",
+                                                      "topology compatibility"
+                                                  ],
+                                   "standardization":  "Robust-standardize components against frozen lineage references using median and MAD.",
+                                   "distance":  "Euclidean distance in robust-standardized joint component space.",
+                                   "k":  "max(3, ceil(sqrt(N_lineage))), capped at N_lineage-1.",
+                                   "lineage_boundary":  "Empirical 95th percentile of leave-one-out lineage kNN distances.",
+                                   "full_match":  "All mandatory component boundaries pass AND external joint distance is no greater than the frozen lineage boundary.",
+                                   "independence":  "Marginal rarity estimates must never be multiplied as though coordinates were independent."
+                               },
+                "near_hit_rule":  "Preserve every multidimensional/full match and the strongest passive strict-tail near-hits, including component scores, source identifier, nearest lineage neighbour and inclusion/exclusion reason.",
+                "zero_match_rule":  "If zero primary-population observations cross the preregistered full architecture boundary, report the exact 95% binomial upper bound and population resolution only; do not claim global uniqueness.",
+                "forbidden_claims":  [
+                                         "passive near-hit = RSOS",
+                                         "rarity = literal uniqueness",
+                                         "sampled population = global population"
+                                     ]
+            },
+    "cross_module_rule":  "V15 and V16 adjudicate independently. Neither can rescue failure of the other.",
+    "created_utc":  "2026-09-15T16:22:14.5382753Z"
+}

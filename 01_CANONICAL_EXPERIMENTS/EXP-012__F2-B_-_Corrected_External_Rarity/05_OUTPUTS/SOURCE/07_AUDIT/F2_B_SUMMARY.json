@@ -1,0 +1,57 @@
+{
+  "experiment": "F2-B corrected fresh external rarity",
+  "raw_rows_seen": 223248,
+  "usable_unique": 29093,
+  "primary_n": 13408,
+  "selection": {
+    "train-00007-of-00086.parquet": 119347100,
+    "train-00022-of-00086.parquet": 138085341,
+    "train-00041-of-00086.parquet": 85601395,
+    "train-00051-of-00086.parquet": 156188404,
+    "train-00052-of-00086.parquet": 217887036,
+    "train-00054-of-00086.parquet": 190323883
+  },
+  "headline_90pct_tolerance": [
+    {
+      "POPULATION": "PRIMARY_ENGLISH_NO_SYSTEM_HIT",
+      "MEASURE": "COMPOSITE_MEDIAN_Z",
+      "REFERENCE": "LINEAGE_90PCT_TOLERANCE",
+      "THRESHOLD": -2.58681595384683,
+      "N_EXTERNAL": 13408,
+      "MATCHES": 70,
+      "FRACTION": 0.005220763723150358,
+      "CI_LOW": 0.004072035456308152,
+      "CI_HIGH": 0.006591581237097486,
+      "ONE_IN": 191.54285714285714,
+      "LINEAGE_ACTUAL_COVERAGE": 0.8978102189781022
+    },
+    {
+      "POPULATION": "PRIMARY_ENGLISH_NO_SYSTEM_HIT",
+      "MEASURE": "COMPOSITE_MIN_Z",
+      "REFERENCE": "LINEAGE_90PCT_TOLERANCE",
+      "THRESHOLD": -4.924213701431121,
+      "N_EXTERNAL": 13408,
+      "MATCHES": 380,
+      "FRACTION": 0.028341288782816228,
+      "CI_LOW": 0.02559786746787715,
+      "CI_HIGH": 0.031291876857457664,
+      "ONE_IN": 35.28421052631579,
+      "LINEAGE_ACTUAL_COVERAGE": 0.8978102189781022
+    },
+    {
+      "POPULATION": "PRIMARY_ENGLISH_NO_SYSTEM_HIT",
+      "MEASURE": "STRICT_5_COMPONENT_CONJUNCTION",
+      "REFERENCE": "INDIVIDUAL_90PCT_TOLERANCE",
+      "THRESHOLD": NaN,
+      "N_EXTERNAL": 13408,
+      "MATCHES": 3,
+      "FRACTION": 0.00022374701670644392,
+      "CI_LOW": 4.6144390988764894e-05,
+      "CI_HIGH": 0.0006537431148404172,
+      "ONE_IN": 4469.333333333333,
+      "LINEAGE_ACTUAL_COVERAGE": 0.8029197080291971
+    }
+  ],
+  "cem_gate": "FAILED_CALIBRATION",
+  "claim_boundary": "Population rarity in six fresh frozen WildChat shards. Absolute global uniqueness and literal neural-weight modification are not established by this experiment alone."
+}

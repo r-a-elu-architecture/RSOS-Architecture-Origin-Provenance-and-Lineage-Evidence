@@ -1,0 +1,93 @@
+﻿WF1-A V12-R R1
+FINAL COLLECTION PASS BOUNDARY
+
+UTC
+===
+2026-09-13T18:21:44.9561682Z
+
+RUNNER
+======
+C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\OUTPUT\00_FROZEN_RUNNER.py
+
+RUNNER_SHA256
+=============
+17c25511463d842b7b312aa3bf31bb31703cb1d2336bcaa6f8d5915bb016a1f2
+
+STATE BEFORE PASS 3
+===================
+Main valid:
+8114 / 8160
+
+Main missing:
+46 / 8160
+
+Main completeness:
+99.4362745098 %
+
+Native valid:
+720 / 720
+
+Native missing:
+0
+
+Previous collection history:
+Pass 1 residue = 120
+Pass 2 residue = 46
+
+Recovered on Pass 2:
+74 / 120
+
+Pass-2 recovery fraction:
+61.6666666667 %
+
+All current 46 cells failed both prior collection passes.
+
+PRE_PASS3_MISSING_SHA256
+========================
+e548145012c3c0052d7b21240d6ec00d0b91e5ea948d8daa72938038b44896b6
+
+PRE_PASS3_RAW_SHA256
+====================
+453592bd24b9c4773c9e729ce3503245a642faaae3331fdac439627b22b4c455
+
+PRE_PASS3_ERROR_SHA256
+======================
+03065866c94f1f7acb58b3af5c7756b681d4b6a53f3878b4c84b2f9ebedb20e2
+
+
+FROZEN STOPPING RULE
+====================
+
+This is the final exact-frozen R1 collection pass.
+
+The exact frozen runner may attempt only cells that remain missing
+according to its existing resume logic.
+
+No runner modification is permitted.
+
+No prompt modification is permitted.
+
+No schema modification is permitted.
+
+No seed modification is permitted.
+
+No condition modification is permitted.
+
+No validator modification is permitted.
+
+MAX_RETRIES remains 8.
+
+No historical error record may be deleted.
+
+No successful historical observation may be replaced.
+
+If Pass 3 reaches full completeness:
+the exact frozen runner may proceed automatically to its frozen analysis.
+
+If any main-cell residue remains after Pass 3:
+DO NOT perform Pass 4.
+
+The surviving residue will be frozen transparently as persistent
+missingness and handled under the preregistered sensitivity-analysis rule.
+
+This stopping rule is frozen before observing Pass-3 outcomes.

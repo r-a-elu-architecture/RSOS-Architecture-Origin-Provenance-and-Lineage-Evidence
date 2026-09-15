@@ -1,0 +1,44 @@
+﻿WF1-B EXTERNAL POPULATION BENCHMARK — PREREGISTRATION
+
+GOAL
+====
+Quantify how rare the validated post-WF1-A structural fingerprint is
+within an independent external conversation population.
+
+PRIMARY QUESTION
+================
+How frequently do external conversations fall inside the frozen
+RSOS/WF1 structural-signature region?
+
+HARD RULES
+==========
+1. WF1-A source signature is frozen and cannot be changed after external data inspection.
+2. Use only features computable identically from RSOS reference data and external conversations.
+3. Blind RSOS names, glyphs, system names, explicit terminology and authorship markers.
+4. Match/control conversation length, turn count and observable complexity.
+5. Thresholds/classifier definitions are frozen before external scoring.
+6. Preserve every external near-match and match.
+7. No post-hoc removal of inconvenient external examples.
+8. Report:
+   - number scored
+   - number crossing frozen threshold
+   - empirical frequency
+   - confidence interval
+   - nearest external matches
+   - RSOS vs external distribution
+9. Do not claim global uniqueness from a finite population.
+10. Negative results remain valid results.
+
+SOURCE SIGNATURE FREEZE
+=======================
+Manifest SHA256:
+aef4ae7d079cfaf8cf8dedb6ae9a7ca68caeb7e391fbbd3b1e40d4704218f0f2
+
+Freeze ZIP SHA256:
+aa9e120f07a4d6675961e8712ec89d51bc8d54efdc2e29788ee8ca2f93fbc0f7
+
+NEXT
+====
+After this preregistration is frozen, external parquet data may be
+placed in 02_DATASETS\RAW_PARQUET and inspected once for schema,
+then the frozen benchmark runner will be built and executed.

@@ -1,0 +1,40 @@
+{
+  "experiment": "API_FINGERPRINT_EXPERIMENT_V1",
+  "created_utc": "2026-09-10T16:34:47.376969+00:00",
+  "model": "gpt-5.6-luna",
+  "seed": 918,
+  "conditions": [
+    "RSOS_BLIND_PARTIAL_TOPOLOGY",
+    "TOPOLOGY_SHUFFLED",
+    "SAME_INGREDIENTS_DECOUPLED",
+    "K6_RECONSTRUCTION_ABLATION",
+    "GENERIC_COMPLEX_CONTROL"
+  ],
+  "seeds_per_condition": 100,
+  "repetitions": 10,
+  "total_planned_calls": 5000,
+  "max_output_tokens": 220,
+  "max_workers": 20,
+  "estimated_cost_stop_usd": 10.0,
+  "prices_per_million_tokens": {
+    "input": 0.2,
+    "output": 1.2
+  },
+  "historical_kernel_lock": {
+    "N": 100,
+    "mean": 6.36,
+    "median": 7.0,
+    "ge5": 99,
+    "ge6": 69,
+    "full7": 69
+  },
+  "primary_hypothesis": "RSOS_BLIND_PARTIAL_TOPOLOGY produces a higher frozen seven-edge kernel distribution than TOPOLOGY_SHUFFLED and SAME_INGREDIENTS_DECOUPLED.",
+  "secondary_hypotheses": [
+    "RSOS_BLIND_PARTIAL_TOPOLOGY has higher >=5, >=6 and 7/7 prevalence than generic controls.",
+    "K6_RECONSTRUCTION_ABLATION selectively reduces preservation/reconstruction-related kernel completion.",
+    "The ordering of condition effects survives repeated independent stateless calls."
+  ],
+  "primary_measure": "kernel_edge_count from frozen DYN_METHOD motif detectors mapped through frozen KERNEL_METHOD family mapping",
+  "surface_erasure": "\\b(?:RSOS|RSSO|RSIA|RSX|SRC[\\s._:-]*X(?:[\\s._:-]*\\d+(?:\\.\\d+)?)?|R\\.?\\s*\u00b7?\\s*A\\.?\\s*Elu)\\b",
+  "claim_boundary": "A positive result demonstrates reproducible behavioral association with the preregistered structural fingerprint. It does not by itself establish historical weight storage, personal identity recognition, hidden model-state persistence, or cross-user transmission."
+}

@@ -1,0 +1,721 @@
+{
+  "experiment": "V6_STRUCTURAL_FINGERPRINT_VECTOR",
+  "completed_utc": "2026-09-10T21:20:23.362083+00:00",
+  "model": "gpt-5.6-luna",
+  "runner_sha256": "41d0b77a31aab388f15e9a45a1160dd1e6f385e4305db2b6efa87174c8a795c9",
+  "specification_sha256": "5a1c4199477379ef8e8e957012126613fa00a1b18009eaf5f7fb1f9b0e1bae83",
+  "expected_calls": 8000,
+  "successful_unique_cells": 8000,
+  "missing_cells": 0,
+  "condition_results": [
+    {
+      "condition": "A0_AUTHENTIC",
+      "N": 100,
+      "mean_fingerprint": 8.035,
+      "median_fingerprint": 8.25,
+      "sd_fingerprint": 2.363447447772816,
+      "mean_output_tokens": 255.16,
+      "mean_latency": 4.527882514595985
+    },
+    {
+      "condition": "A1_AUTHENTIC_PARAPHRASE",
+      "N": 100,
+      "mean_fingerprint": 4.145,
+      "median_fingerprint": 3.75,
+      "sd_fingerprint": 2.0841452963173213,
+      "mean_output_tokens": 252.495,
+      "mean_latency": 4.6693865740299225
+    },
+    {
+      "condition": "A2_AUTHENTIC_PARAPHRASE",
+      "N": 100,
+      "mean_fingerprint": 3.85,
+      "median_fingerprint": 3.75,
+      "sd_fingerprint": 2.5685058345704066,
+      "mean_output_tokens": 256.3675,
+      "mean_latency": 4.5404061150550845
+    },
+    {
+      "condition": "A3_AUTHENTIC_PARAPHRASE",
+      "N": 100,
+      "mean_fingerprint": 5.0075,
+      "median_fingerprint": 4.75,
+      "sd_fingerprint": 1.9647959130143717,
+      "mean_output_tokens": 257.88,
+      "mean_latency": 4.516867292523384
+    },
+    {
+      "condition": "D_DIRECTION_REVERSED",
+      "N": 100,
+      "mean_fingerprint": 0.315,
+      "median_fingerprint": 0.0,
+      "sd_fingerprint": 0.5791189755816916,
+      "mean_output_tokens": 256.75,
+      "mean_latency": 4.520653225779533
+    },
+    {
+      "condition": "O_ORDER_SHUFFLED",
+      "N": 100,
+      "mean_fingerprint": 3.695,
+      "median_fingerprint": 3.75,
+      "sd_fingerprint": 2.395170857025326,
+      "mean_output_tokens": 254.3925,
+      "mean_latency": 4.514333111643791
+    },
+    {
+      "condition": "M_META_CONTROL_ABLATED",
+      "N": 100,
+      "mean_fingerprint": 6.61,
+      "median_fingerprint": 6.625,
+      "sd_fingerprint": 1.7937602285633827,
+      "mean_output_tokens": 238.98,
+      "mean_latency": 4.4329689675569535
+    },
+    {
+      "condition": "P_PRESERVATION_ABLATED",
+      "N": 100,
+      "mean_fingerprint": 4.09,
+      "median_fingerprint": 4.0,
+      "sd_fingerprint": 1.7514496160540152,
+      "mean_output_tokens": 250.24,
+      "mean_latency": 4.578353753685951
+    },
+    {
+      "condition": "T_TERMINAL_COUNTERFACTUAL",
+      "N": 100,
+      "mean_fingerprint": 3.11,
+      "median_fingerprint": 2.75,
+      "sd_fingerprint": 2.173160431865596,
+      "mean_output_tokens": 252.9375,
+      "mean_latency": 4.559262274503708
+    },
+    {
+      "condition": "C_COMPRESSION_ABLATED",
+      "N": 100,
+      "mean_fingerprint": 7.9375,
+      "median_fingerprint": 8.0,
+      "sd_fingerprint": 1.998539555159055,
+      "mean_output_tokens": 252.83,
+      "mean_latency": 4.767882381081581
+    },
+    {
+      "condition": "R_RECURSION_CONTROL",
+      "N": 100,
+      "mean_fingerprint": 1.0225,
+      "median_fingerprint": 0.75,
+      "sd_fingerprint": 1.1124269355192218,
+      "mean_output_tokens": 253.5,
+      "mean_latency": 4.4579840832948685
+    },
+    {
+      "condition": "X_COMPLEXITY_CONTROL",
+      "N": 100,
+      "mean_fingerprint": 5.8075,
+      "median_fingerprint": 5.5,
+      "sd_fingerprint": 2.1319642268683743,
+      "mean_output_tokens": 259.35,
+      "mean_latency": 4.499168742895126
+    },
+    {
+      "condition": "L_LINEAR_CONTROL",
+      "N": 100,
+      "mean_fingerprint": 1.0275,
+      "median_fingerprint": 0.75,
+      "sd_fingerprint": 0.9251637856633983,
+      "mean_output_tokens": 231.685,
+      "mean_latency": 4.089150706529617
+    },
+    {
+      "condition": "G_RANDOM_GRAPH_CONTROL",
+      "N": 100,
+      "mean_fingerprint": 0.0475,
+      "median_fingerprint": 0.0,
+      "sd_fingerprint": 0.19034458386321526,
+      "mean_output_tokens": 260.0,
+      "mean_latency": 4.330298542380333
+    },
+    {
+      "condition": "DM_DIRECTION_META_DAMAGE",
+      "N": 100,
+      "mean_fingerprint": 0.2875,
+      "median_fingerprint": 0.0,
+      "sd_fingerprint": 0.6698550649810808,
+      "mean_output_tokens": 256.725,
+      "mean_latency": 4.365474386811257
+    },
+    {
+      "condition": "DP_DIRECTION_PRESERVATION_DAMAGE",
+      "N": 100,
+      "mean_fingerprint": 1.3625,
+      "median_fingerprint": 1.0,
+      "sd_fingerprint": 1.2877506620758414,
+      "mean_output_tokens": 254.7925,
+      "mean_latency": 4.3763802498579025
+    },
+    {
+      "condition": "OP_ORDER_PRESERVATION_DAMAGE",
+      "N": 100,
+      "mean_fingerprint": 0.7825,
+      "median_fingerprint": 0.0,
+      "sd_fingerprint": 1.238408374903167,
+      "mean_output_tokens": 254.09,
+      "mean_latency": 4.282504092454911
+    },
+    {
+      "condition": "PT_PRESERVATION_TERMINAL_DAMAGE",
+      "N": 100,
+      "mean_fingerprint": 1.1925,
+      "median_fingerprint": 0.875,
+      "sd_fingerprint": 1.1447370788954028,
+      "mean_output_tokens": 248.1725,
+      "mean_latency": 4.381743847131729
+    },
+    {
+      "condition": "H_AUTHENTIC_HELDOUT",
+      "N": 100,
+      "mean_fingerprint": 3.5675,
+      "median_fingerprint": 3.25,
+      "sd_fingerprint": 2.2439185489998192,
+      "mean_output_tokens": 254.07,
+      "mean_latency": 4.449047197699547
+    },
+    {
+      "condition": "H_DAMAGED_HELDOUT",
+      "N": 100,
+      "mean_fingerprint": 2.7025,
+      "median_fingerprint": 2.5,
+      "sd_fingerprint": 1.2425002286445739,
+      "mean_output_tokens": 241.7075,
+      "mean_latency": 4.24410416662693
+    }
+  ],
+  "coordinate_contrasts": [
+    {
+      "contrast": "DIRECTION",
+      "condition_A": "A0_AUTHENTIC",
+      "condition_B": "D_DIRECTION_REVERSED",
+      "mean_A": 8.035,
+      "mean_B": 0.315,
+      "difference": 7.72,
+      "permutation_p": 9.99990000099999e-06,
+      "wilcoxon_p": 1.9124369577716163e-18,
+      "holm_p": 0.00014999850001499987,
+      "PASS": true
+    },
+    {
+      "contrast": "ORDER",
+      "condition_A": "A0_AUTHENTIC",
+      "condition_B": "O_ORDER_SHUFFLED",
+      "mean_A": 8.035,
+      "mean_B": 3.695,
+      "difference": 4.34,
+      "permutation_p": 9.99990000099999e-06,
+      "wilcoxon_p": 1.3564730740010648e-17,
+      "holm_p": 0.00014999850001499987,
+      "PASS": true
+    },
+    {
+      "contrast": "META_CONTROL",
+      "condition_A": "A0_AUTHENTIC",
+      "condition_B": "M_META_CONTROL_ABLATED",
+      "mean_A": 8.035,
+      "mean_B": 6.61,
+      "difference": 1.425,
+      "permutation_p": 9.99990000099999e-06,
+      "wilcoxon_p": 2.4103876405621308e-06,
+      "holm_p": 0.00014999850001499987,
+      "PASS": true
+    },
+    {
+      "contrast": "PRESERVATION",
+      "condition_A": "A0_AUTHENTIC",
+      "condition_B": "P_PRESERVATION_ABLATED",
+      "mean_A": 8.035,
+      "mean_B": 4.09,
+      "difference": 3.945,
+      "permutation_p": 9.99990000099999e-06,
+      "wilcoxon_p": 1.9478865757602932e-17,
+      "holm_p": 0.00014999850001499987,
+      "PASS": true
+    },
+    {
+      "contrast": "TERMINAL",
+      "condition_A": "A0_AUTHENTIC",
+      "condition_B": "T_TERMINAL_COUNTERFACTUAL",
+      "mean_A": 8.035,
+      "mean_B": 3.11,
+      "difference": 4.925,
+      "permutation_p": 9.99990000099999e-06,
+      "wilcoxon_p": 3.781253430161814e-17,
+      "holm_p": 0.00014999850001499987,
+      "PASS": true
+    },
+    {
+      "contrast": "COMPRESSION",
+      "condition_A": "A0_AUTHENTIC",
+      "condition_B": "C_COMPRESSION_ABLATED",
+      "mean_A": 8.035,
+      "mean_B": 7.9375,
+      "difference": 0.0975,
+      "permutation_p": 0.3691963080369196,
+      "wilcoxon_p": 0.41024337595369237,
+      "holm_p": 0.3691963080369196,
+      "PASS": false
+    },
+    {
+      "contrast": "RECURSION_SPECIFICITY",
+      "condition_A": "A0_AUTHENTIC",
+      "condition_B": "R_RECURSION_CONTROL",
+      "mean_A": 8.035,
+      "mean_B": 1.0225,
+      "difference": 7.0125,
+      "permutation_p": 9.99990000099999e-06,
+      "wilcoxon_p": 2.8025652412898963e-18,
+      "holm_p": 0.00014999850001499987,
+      "PASS": true
+    },
+    {
+      "contrast": "COMPLEXITY_SPECIFICITY",
+      "condition_A": "A0_AUTHENTIC",
+      "condition_B": "X_COMPLEXITY_CONTROL",
+      "mean_A": 8.035,
+      "mean_B": 5.8075,
+      "difference": 2.2275,
+      "permutation_p": 9.99990000099999e-06,
+      "wilcoxon_p": 1.3563742817329757e-10,
+      "holm_p": 0.00014999850001499987,
+      "PASS": true
+    },
+    {
+      "contrast": "LINEAR_SPECIFICITY",
+      "condition_A": "A0_AUTHENTIC",
+      "condition_B": "L_LINEAR_CONTROL",
+      "mean_A": 8.035,
+      "mean_B": 1.0275,
+      "difference": 7.0075,
+      "permutation_p": 9.99990000099999e-06,
+      "wilcoxon_p": 1.9246766914355777e-18,
+      "holm_p": 0.00014999850001499987,
+      "PASS": true
+    },
+    {
+      "contrast": "GRAPH_SPECIFICITY",
+      "condition_A": "A0_AUTHENTIC",
+      "condition_B": "G_RANDOM_GRAPH_CONTROL",
+      "mean_A": 8.035,
+      "mean_B": 0.0475,
+      "difference": 7.9875,
+      "permutation_p": 9.99990000099999e-06,
+      "wilcoxon_p": 1.9137332421599248e-18,
+      "holm_p": 0.00014999850001499987,
+      "PASS": true
+    },
+    {
+      "contrast": "DIRECTION_META_LESION",
+      "condition_A": "A0_AUTHENTIC",
+      "condition_B": "DM_DIRECTION_META_DAMAGE",
+      "mean_A": 8.035,
+      "mean_B": 0.2875,
+      "difference": 7.7475,
+      "permutation_p": 9.99990000099999e-06,
+      "wilcoxon_p": 1.9223964474398188e-18,
+      "holm_p": 0.00014999850001499987,
+      "PASS": true
+    },
+    {
+      "contrast": "DIRECTION_PRESERVATION_LESION",
+      "condition_A": "A0_AUTHENTIC",
+      "condition_B": "DP_DIRECTION_PRESERVATION_DAMAGE",
+      "mean_A": 8.035,
+      "mean_B": 1.3625,
+      "difference": 6.6725,
+      "permutation_p": 9.99990000099999e-06,
+      "wilcoxon_p": 1.9827622882721e-18,
+      "holm_p": 0.00014999850001499987,
+      "PASS": true
+    },
+    {
+      "contrast": "ORDER_PRESERVATION_LESION",
+      "condition_A": "A0_AUTHENTIC",
+      "condition_B": "OP_ORDER_PRESERVATION_DAMAGE",
+      "mean_A": 8.035,
+      "mean_B": 0.7825,
+      "difference": 7.2525,
+      "permutation_p": 9.99990000099999e-06,
+      "wilcoxon_p": 1.912113016754443e-18,
+      "holm_p": 0.00014999850001499987,
+      "PASS": true
+    },
+    {
+      "contrast": "PRESERVATION_TERMINAL_LESION",
+      "condition_A": "A0_AUTHENTIC",
+      "condition_B": "PT_PRESERVATION_TERMINAL_DAMAGE",
+      "mean_A": 8.035,
+      "mean_B": 1.1925,
+      "difference": 6.8425,
+      "permutation_p": 9.99990000099999e-06,
+      "wilcoxon_p": 1.92141998416688e-18,
+      "holm_p": 0.00014999850001499987,
+      "PASS": true
+    },
+    {
+      "contrast": "HELDOUT_FINGERPRINT",
+      "condition_A": "H_AUTHENTIC_HELDOUT",
+      "condition_B": "H_DAMAGED_HELDOUT",
+      "mean_A": 3.5675,
+      "mean_B": 2.7025,
+      "difference": 0.865,
+      "permutation_p": 8.99991000089999e-05,
+      "wilcoxon_p": 7.329759484873959e-05,
+      "holm_p": 0.0001799982000179998,
+      "PASS": true
+    }
+  ],
+  "replication": [
+    {
+      "partition": "DEVELOPMENT",
+      "coordinate": "DIRECTION",
+      "N": 50,
+      "difference": 7.89,
+      "p": 9.99990000099999e-06,
+      "PASS": true
+    },
+    {
+      "partition": "DEVELOPMENT",
+      "coordinate": "ORDER",
+      "N": 50,
+      "difference": 4.45,
+      "p": 9.99990000099999e-06,
+      "PASS": true
+    },
+    {
+      "partition": "DEVELOPMENT",
+      "coordinate": "META_CONTROL",
+      "N": 50,
+      "difference": 1.935,
+      "p": 9.99990000099999e-06,
+      "PASS": true
+    },
+    {
+      "partition": "DEVELOPMENT",
+      "coordinate": "PRESERVATION",
+      "N": 50,
+      "difference": 4.045,
+      "p": 9.99990000099999e-06,
+      "PASS": true
+    },
+    {
+      "partition": "DEVELOPMENT",
+      "coordinate": "TERMINAL",
+      "N": 50,
+      "difference": 5.2,
+      "p": 9.99990000099999e-06,
+      "PASS": true
+    },
+    {
+      "partition": "CONFIRMATION",
+      "coordinate": "DIRECTION",
+      "N": 30,
+      "difference": 7.658333333333333,
+      "p": 9.99990000099999e-06,
+      "PASS": true
+    },
+    {
+      "partition": "CONFIRMATION",
+      "coordinate": "ORDER",
+      "N": 30,
+      "difference": 3.8833333333333333,
+      "p": 9.99990000099999e-06,
+      "PASS": true
+    },
+    {
+      "partition": "CONFIRMATION",
+      "coordinate": "META_CONTROL",
+      "N": 30,
+      "difference": 1.1,
+      "p": 0.022229777702222977,
+      "PASS": true
+    },
+    {
+      "partition": "CONFIRMATION",
+      "coordinate": "PRESERVATION",
+      "N": 30,
+      "difference": 3.8916666666666666,
+      "p": 9.99990000099999e-06,
+      "PASS": true
+    },
+    {
+      "partition": "CONFIRMATION",
+      "coordinate": "TERMINAL",
+      "N": 30,
+      "difference": 4.708333333333333,
+      "p": 9.99990000099999e-06,
+      "PASS": true
+    },
+    {
+      "partition": "FINAL_HOLDOUT",
+      "coordinate": "DIRECTION",
+      "N": 20,
+      "difference": 7.3875,
+      "p": 9.99990000099999e-06,
+      "PASS": true
+    },
+    {
+      "partition": "FINAL_HOLDOUT",
+      "coordinate": "ORDER",
+      "N": 20,
+      "difference": 4.75,
+      "p": 9.99990000099999e-06,
+      "PASS": true
+    },
+    {
+      "partition": "FINAL_HOLDOUT",
+      "coordinate": "META_CONTROL",
+      "N": 20,
+      "difference": 0.6375,
+      "p": 0.1947680523194768,
+      "PASS": false
+    },
+    {
+      "partition": "FINAL_HOLDOUT",
+      "coordinate": "PRESERVATION",
+      "N": 20,
+      "difference": 3.775,
+      "p": 9.99990000099999e-06,
+      "PASS": true
+    },
+    {
+      "partition": "FINAL_HOLDOUT",
+      "coordinate": "TERMINAL",
+      "N": 20,
+      "difference": 4.5625,
+      "p": 9.99990000099999e-06,
+      "PASS": true
+    }
+  ],
+  "fingerprint_classifier": [
+    {
+      "partition": "DEVELOPMENT",
+      "N": 850,
+      "ROC_AUC": 0.9197076923076923,
+      "ACCURACY": 0.8482352941176471
+    },
+    {
+      "partition": "CONFIRMATION",
+      "N": 510,
+      "ROC_AUC": 0.9439102564102564,
+      "ACCURACY": 0.8509803921568627
+    },
+    {
+      "partition": "FINAL_HOLDOUT",
+      "N": 340,
+      "ROC_AUC": 0.9300961538461539,
+      "ACCURACY": 0.8205882352941176
+    }
+  ],
+  "heldout_generalization": {
+    "authentic_mean": 3.5675,
+    "damaged_mean": 2.7025,
+    "difference": 0.865,
+    "permutation_p": 3.999960000399996e-05,
+    "PASS": true
+  },
+  "secondary_token_latency": [
+    {
+      "coordinate": "DIRECTION",
+      "feature": "OUTPUT_TOKENS",
+      "authentic_mean": 255.16,
+      "damaged_mean": 256.75,
+      "difference": -1.59
+    },
+    {
+      "coordinate": "DIRECTION",
+      "feature": "WORD_COUNT",
+      "authentic_mean": 73.0825,
+      "damaged_mean": 5.46,
+      "difference": 67.6225
+    },
+    {
+      "coordinate": "DIRECTION",
+      "feature": "TYPE_TOKEN_RATIO",
+      "authentic_mean": 0.7036465002978015,
+      "damaged_mean": 0.13906311114266268,
+      "difference": 0.564583389155139
+    },
+    {
+      "coordinate": "DIRECTION",
+      "feature": "LATENCY_SECONDS",
+      "authentic_mean": 4.527882514595985,
+      "damaged_mean": 4.520653225779533,
+      "difference": 0.007229288816452026
+    },
+    {
+      "coordinate": "ORDER",
+      "feature": "OUTPUT_TOKENS",
+      "authentic_mean": 255.16,
+      "damaged_mean": 254.3925,
+      "difference": 0.7675
+    },
+    {
+      "coordinate": "ORDER",
+      "feature": "WORD_COUNT",
+      "authentic_mean": 73.0825,
+      "damaged_mean": 29.1775,
+      "difference": 43.905
+    },
+    {
+      "coordinate": "ORDER",
+      "feature": "TYPE_TOKEN_RATIO",
+      "authentic_mean": 0.7036465002978015,
+      "damaged_mean": 0.49081775000836964,
+      "difference": 0.21282875028943216
+    },
+    {
+      "coordinate": "ORDER",
+      "feature": "LATENCY_SECONDS",
+      "authentic_mean": 4.527882514595985,
+      "damaged_mean": 4.514333111643791,
+      "difference": 0.013549402952194214
+    },
+    {
+      "coordinate": "META_CONTROL",
+      "feature": "OUTPUT_TOKENS",
+      "authentic_mean": 255.16,
+      "damaged_mean": 238.98,
+      "difference": 16.18
+    },
+    {
+      "coordinate": "META_CONTROL",
+      "feature": "WORD_COUNT",
+      "authentic_mean": 73.0825,
+      "damaged_mean": 75.4725,
+      "difference": -2.39
+    },
+    {
+      "coordinate": "META_CONTROL",
+      "feature": "TYPE_TOKEN_RATIO",
+      "authentic_mean": 0.7036465002978015,
+      "damaged_mean": 0.7249491346395477,
+      "difference": -0.021302634341746042
+    },
+    {
+      "coordinate": "META_CONTROL",
+      "feature": "LATENCY_SECONDS",
+      "authentic_mean": 4.527882514595985,
+      "damaged_mean": 4.4329689675569535,
+      "difference": 0.09491354703903199
+    },
+    {
+      "coordinate": "PRESERVATION",
+      "feature": "OUTPUT_TOKENS",
+      "authentic_mean": 255.16,
+      "damaged_mean": 250.24,
+      "difference": 4.92
+    },
+    {
+      "coordinate": "PRESERVATION",
+      "feature": "WORD_COUNT",
+      "authentic_mean": 73.0825,
+      "damaged_mean": 59.295,
+      "difference": 13.7875
+    },
+    {
+      "coordinate": "PRESERVATION",
+      "feature": "TYPE_TOKEN_RATIO",
+      "authentic_mean": 0.7036465002978015,
+      "damaged_mean": 0.6878503982316118,
+      "difference": 0.015796102066189973
+    },
+    {
+      "coordinate": "PRESERVATION",
+      "feature": "LATENCY_SECONDS",
+      "authentic_mean": 4.527882514595985,
+      "damaged_mean": 4.578353753685951,
+      "difference": -0.05047123908996582
+    },
+    {
+      "coordinate": "TERMINAL",
+      "feature": "OUTPUT_TOKENS",
+      "authentic_mean": 255.16,
+      "damaged_mean": 252.9375,
+      "difference": 2.2225
+    },
+    {
+      "coordinate": "TERMINAL",
+      "feature": "WORD_COUNT",
+      "authentic_mean": 73.0825,
+      "damaged_mean": 31.06,
+      "difference": 42.0225
+    },
+    {
+      "coordinate": "TERMINAL",
+      "feature": "TYPE_TOKEN_RATIO",
+      "authentic_mean": 0.7036465002978015,
+      "damaged_mean": 0.4088675513119708,
+      "difference": 0.29477894898583085
+    },
+    {
+      "coordinate": "TERMINAL",
+      "feature": "LATENCY_SECONDS",
+      "authentic_mean": 4.527882514595985,
+      "damaged_mean": 4.559262274503708,
+      "difference": -0.031379759907722474
+    }
+  ],
+  "ablation_gradient": [
+    {
+      "lesion": "AUTHENTIC",
+      "condition": "A0_AUTHENTIC",
+      "mean_fingerprint": 8.035,
+      "median_fingerprint": 8.25
+    },
+    {
+      "lesion": "SINGLE_DIRECTION",
+      "condition": "D_DIRECTION_REVERSED",
+      "mean_fingerprint": 0.315,
+      "median_fingerprint": 0.0
+    },
+    {
+      "lesion": "SINGLE_PRESERVATION",
+      "condition": "P_PRESERVATION_ABLATED",
+      "mean_fingerprint": 4.09,
+      "median_fingerprint": 4.0
+    },
+    {
+      "lesion": "DOUBLE_DIRECTION_META",
+      "condition": "DM_DIRECTION_META_DAMAGE",
+      "mean_fingerprint": 0.2875,
+      "median_fingerprint": 0.0
+    },
+    {
+      "lesion": "DOUBLE_DIRECTION_PRESERVATION",
+      "condition": "DP_DIRECTION_PRESERVATION_DAMAGE",
+      "mean_fingerprint": 1.3625,
+      "median_fingerprint": 1.0
+    },
+    {
+      "lesion": "DOUBLE_ORDER_PRESERVATION",
+      "condition": "OP_ORDER_PRESERVATION_DAMAGE",
+      "mean_fingerprint": 0.7825,
+      "median_fingerprint": 0.0
+    },
+    {
+      "lesion": "DOUBLE_PRESERVATION_TERMINAL",
+      "condition": "PT_PRESERVATION_TERMINAL_DAMAGE",
+      "mean_fingerprint": 1.1925,
+      "median_fingerprint": 0.875
+    }
+  ],
+  "core_pass_count": 5,
+  "direction_replication": true,
+  "preservation_replication": true,
+  "confirmation_auc": 0.9439102564102564,
+  "final_holdout_auc": 0.9300961538461539,
+  "classification": "STRONG_REPLICATED_STRUCTURAL_FINGERPRINT_VECTOR",
+  "token_usage": {
+    "input_tokens": 1463474,
+    "output_tokens": 2016850
+  },
+  "estimated_cost_usd": 2.7129147999999996,
+  "interpretation_boundary": "A positive V6 result supports a reproducible behavioral structural fingerprint vector under frozen interventions. It does not by itself establish modification of global model weights, hidden neural circuitry, training exposure, biological myelination, cross-user transmission or personal recognition."
+}

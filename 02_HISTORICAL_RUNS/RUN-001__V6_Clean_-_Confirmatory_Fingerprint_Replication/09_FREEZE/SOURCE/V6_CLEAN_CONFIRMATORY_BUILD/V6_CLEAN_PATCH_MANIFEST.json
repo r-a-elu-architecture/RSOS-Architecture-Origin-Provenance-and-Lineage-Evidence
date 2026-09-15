@@ -1,0 +1,35 @@
+{
+  "experiment": "V6_CLEAN_FINGERPRINT_CONFIRMATORY_REPLICATION",
+  "purpose": "Clean confirmatory replication after discovery of differential empty-output contamination.",
+  "hypothesis_H1": "A reproducible structural behavioral fingerprint survives frozen blinded structural interventions.",
+  "hypothesis_H0": "The apparent fingerprint is explained by output artifacts, generic complexity, recursion, linearity or matched controls.",
+  "verified_frozen_sources": {
+    "runner_sha256": "41d0b77a31aab388f15e9a45a1160dd1e6f385e4305db2b6efa87174c8a795c9",
+    "prompts_sha256": "99e8e13fe4a23ad5a2f2779a3d183c5332c0671e42d2f0e1f9965a0c231f854d",
+    "spec_file_sha256": "b28a1a2f663f251a878e902ab9865a9062f8b0a491965eab3f9ce7f0218fe782",
+    "spec_canonical_sha256": "5a1c4199477379ef8e8e957012126613fa00a1b18009eaf5f7fb1f9b0e1bae83"
+  },
+  "patched_runner_sha256": "be65c23a9666ea0cbeee05532d8c4e89a1304230a2782e39ab6866c37977297d",
+  "allowed_changes": [
+    "new experiment identifier",
+    "new independent output directory",
+    "reasoning effort explicitly set to none",
+    "robust visible text extraction",
+    "empty/unextractable output treated as invalid",
+    "retry allowance increased from 5 to 8"
+  ],
+  "frozen_not_modified": [
+    "prompt generation",
+    "conditions",
+    "seed definitions",
+    "replication count",
+    "feature definitions",
+    "contrast definitions",
+    "classifier design",
+    "permutation methodology",
+    "multiple-testing correction",
+    "interpretation boundary"
+  ],
+  "hard_validity_rule": "A successful scientific cell requires non-empty visible model text. Invalid output must never be converted into a zero-feature response.",
+  "diff_file": "C:\\RSOS\\V6_CLEAN_CONFIRMATORY_BUILD\\V6_CLEAN_PATCH.diff"
+}

@@ -1,0 +1,179 @@
+{
+  "experiment": "V12_RELATIONAL_TOPOLOGY_CAUSAL_MAP_CLEAN",
+  "model": "gpt-5.6-luna",
+  "master_seed": 120918,
+  "seed_ids": [
+    1000,
+    1079
+  ],
+  "n_reps": 3,
+  "development": "1000-1039",
+  "confirmation": "1040-1059",
+  "final_holdout": "1060-1079",
+  "conditions": [
+    "A_AUTHENTIC",
+    "I_ISOMORPHIC_RELABEL",
+    "F_SURFACE_FORMAT_CONTROL",
+    "D_ALL_DIRECTION_REVERSED",
+    "O_ORDER_SHUFFLED",
+    "M_SWITCH_REASSIGNED",
+    "M0_SWITCH_NEUTRALIZED",
+    "P_ANCHOR_REASSIGNED",
+    "T_TERMINAL_CHANGED",
+    "R_DEGREE_MATCHED_REWIRE",
+    "X_COMPLEXITY_MATCHED",
+    "Y_TOPOLOGY_MATCHED",
+    "L_FORWARD_CONTROL",
+    "G_RANDOM_CONTROL",
+    "E0_DELETE",
+    "E1_DELETE",
+    "E2_DELETE",
+    "E3_DELETE",
+    "E4_DELETE",
+    "E5_DELETE",
+    "E6_DELETE",
+    "E7_DELETE",
+    "E8_DELETE",
+    "E9_DELETE",
+    "E0_REVERSE",
+    "E1_REVERSE",
+    "E2_REVERSE",
+    "E3_REVERSE",
+    "E4_REVERSE",
+    "E5_REVERSE",
+    "E6_REVERSE",
+    "E7_REVERSE",
+    "E8_REVERSE",
+    "E9_REVERSE"
+  ],
+  "expected_main_cells": 8160,
+  "native_frames": [
+    "N1_COHERENT",
+    "N2_STABLE",
+    "N3_COMPACT"
+  ],
+  "expected_native_cells": 720,
+  "auth_edges": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      5,
+      2
+    ],
+    [
+      6,
+      3
+    ]
+  ],
+  "auth_switch": [
+    3,
+    1,
+    3,
+    6
+  ],
+  "switch_linked_delete_indexes": [
+    7
+  ],
+  "switch_linked_reverse_indexes": [
+    7,
+    9
+  ],
+  "pure_delete_indexes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    9
+  ],
+  "pure_reverse_indexes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8
+  ],
+  "primary_behavior_features": [
+    "SEQ_ACTIVE_EDGE_COHERENCE",
+    "PLUS_SEQ_COHERENCE",
+    "PLUS_REACHABILITY",
+    "MINUS_SEQ_CONFLICT",
+    "CODE_SEQ_COHERENCE",
+    "CODE_CONNECTEDNESS",
+    "FINAL_RECIPROCITY",
+    "FINAL_SCC_COUNT",
+    "FINAL_LARGEST_SCC_FRAC",
+    "FINAL_TRANSITIVITY",
+    "FINAL_IN_DEGREE_SD",
+    "FINAL_OUT_DEGREE_SD",
+    "FINAL_SPECTRAL_RADIUS",
+    "FINAL_TWO_CYCLES",
+    "FINAL_THREE_CYCLES",
+    "FINAL_REACHABILITY_FRAC",
+    "FINAL_MEAN_REACHABLE_PATH"
+  ],
+  "direct_operator_features": [
+    "ORDER_FIDELITY",
+    "K_EXACT",
+    "K_JACCARD",
+    "S_EXACT",
+    "S_APPLIED_SCORE",
+    "K_INCIDENT_RETENTION",
+    "Z_EXACT",
+    "Z_FINAL_SINKNESS",
+    "Z_SEQUENCE_POSITION"
+  ],
+  "primary_distance": "Ledoit-Wolf regularized Mahalanobis distance; nuisance covariance learned only from development A/I/F baseline after development baseline standardization",
+  "secondary_distance": "development-baseline standardized Euclidean distance",
+  "surface_baseline": "per-seed mean of A-to-isomorphic and A-to-format-control distances",
+  "edge_replication": "individual edge is replicated only if excess distance is positive and Holm p<0.05 in BOTH confirmation and final holdout; delete e7 and reverse e7/e9 are reported separately as switch-linked/dependent",
+  "multiplicity": "Holm within each predeclared primary-test family/partition; Holm across 10 individual edges within delete and reverse families",
+  "classifier": "development-only logistic regression on behavior features. Broad classifier vs all lesions plus hard-control classifier vs R/X/Y. Strong gate requires hard-control AUC >=0.85 in BOTH confirmation and final holdout.",
+  "model_native_proxy": "three seed-randomized graph-only neutral elicitation frames; no Q/K/S/Z supplied; rich isomorphism-invariant topology vector; indirect behavioral proxy only",
+  "strong_primary_gate": {
+    "hard_control_auc": "confirmation AND final holdout >=0.85",
+    "pure9_delete": "positive excess and Holm p<0.01 in confirmation AND final holdout",
+    "pure8_reverse": "positive excess and Holm p<0.01 in confirmation AND final holdout",
+    "specificity": "R, X and Y each positive excess and Holm p<0.01 in confirmation AND final holdout",
+    "surface_invariance": "each hard control exceeds surface nuisance baseline with Holm p<0.01 in confirmation AND final holdout",
+    "operator_profile": "reported and manipulation-checked separately; direct adherence features do not enter the primary topology distance/classifier"
+  },
+  "secondary_triangulation_gate": "model-native pooled authentic closer than >=3/5 controls after Holm p<0.05 in BOTH confirmation and final holdout, with positive direction in >=2/3 native frames in final holdout",
+  "interpretation_boundary": "Black-box behavioral structural evidence only. Model-native module is an indirect output-based proxy, not direct inspection of weights, activations, hidden circuits, training data, or global uniqueness."
+}

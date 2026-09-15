@@ -1,0 +1,683 @@
+{
+  "cell_id": "0220e4cee047a55d9e905b3b",
+  "provider": "OPENAI",
+  "organization": "OpenAI",
+  "model_requested": "gpt-5.6-terra",
+  "condition": "DOMAIN_TECHNICAL",
+  "blind_context_id": "4c888b303215f730a34e8259",
+  "status": "COMPLETE",
+  "failure": null,
+  "provider_responses": [
+    {
+      "turn": 1,
+      "text": "A behavior-change app promises users that, after practicing one rule for several weeks, they can make it permanent through a final “stress-test week.”\n\nThe core problem is that the product treats human behavior like software installation: complete a sequence, pass difficult scenarios, and the habit is supposedly “locked in.” But users’ real lives are variable. Stress, sleep loss, social pressure, mental health, changing environments, and setbacks can all affect behavior later.\n\nA better product approach would be:\n\n- Help users practice one focused behavior at a time.\n- Use small, observable daily actions rather than vague ideals.\n- Track patterns and triggers without framing lapses as failure.\n- Gradually test the behavior in realistic contexts, not artificially extreme ones.\n- Include review and adjustment periods.\n- Present progress as strengthening a skill, not permanently installing an identity.\n- Build recovery plans: “What do I do after I slip?” is as important as “How do I succeed today?”\n\nIn product terms, the issue is confusing **successful completion of a training flow** with **durable real-world adoption**. A good system supports ongoing use, adaptation, and recovery—not a one-time certification that claims the user is permanently fixed.",
+      "provider_metadata": {
+        "id": "resp_0a793c7853a4c99a016aa82d6ae74887d2b997bcea353aae8e",
+        "created_at": 1789406570.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_0a793c7853a4c99a016aa82d6b6b7487d2992ac5c280b926fb",
+            "content": [
+              {
+                "annotations": [],
+                "text": "A behavior-change app promises users that, after practicing one rule for several weeks, they can make it permanent through a final “stress-test week.”\n\nThe core problem is that the product treats human behavior like software installation: complete a sequence, pass difficult scenarios, and the habit is supposedly “locked in.” But users’ real lives are variable. Stress, sleep loss, social pressure, mental health, changing environments, and setbacks can all affect behavior later.\n\nA better product approach would be:\n\n- Help users practice one focused behavior at a time.\n- Use small, observable daily actions rather than vague ideals.\n- Track patterns and triggers without framing lapses as failure.\n- Gradually test the behavior in realistic contexts, not artificially extreme ones.\n- Include review and adjustment periods.\n- Present progress as strengthening a skill, not permanently installing an identity.\n- Build recovery plans: “What do I do after I slip?” is as important as “How do I succeed today?”\n\nIn product terms, the issue is confusing **successful completion of a training flow** with **durable real-world adoption**. A good system supports ongoing use, adaptation, and recovery—not a one-time certification that claims the user is permanently fixed.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789406576.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 1402,
+          "input_tokens_details": {
+            "cache_write_tokens": 1399,
+            "cached_tokens": 0
+          },
+          "output_tokens": 246,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 1648
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 2,
+      "text": "The most important part is this:\n\n> The product should treat change as an ongoing skill that needs support, not as a one-time installation that can be permanently completed.\n\nA software product can guide practice, measure consistency, and expose users to progressively harder situations. But it cannot honestly promise that a user who completes an eight-week program is now permanently immune to old habits.\n\nReal use is not linear.\n\nA person may use the product successfully for months, then face a new job, poor sleep, illness, relationship conflict, financial pressure, travel, or burnout. The old behavior may return—not because the person’s prior progress was fake, but because the context changed and their available capacity changed.\n\nSo the product’s central design question should not be:\n\n- “How do we get the user to finish the program?”\n\nIt should be:\n\n- “How do we help the user keep using the skill when conditions are different, difficult, or imperfect?”\n\nThat changes the whole product.\n\n### 1. A lapse becomes product data, not proof of failure\n\nIf a user misses a planned action or falls into an old pattern, the app should not imply that they have “broken the streak,” failed the program, or undone their progress.\n\nInstead, it can ask:\n\n- What was happening immediately before this?\n- Was the user tired, rushed, hungry, isolated, overwhelmed, or pressured?\n- Was the desired action too difficult for the situation?\n- What would be a smaller recovery action available right now?\n\nThis turns a setback into information about the user’s conditions and design constraints.\n\nFor example, instead of:\n\n> “You failed today’s challenge.”\n\nThe product could say:\n\n> “Today was a high-friction context. Choose a two-minute reset: pause, note the trigger, and take the next planned action.”\n\nThe goal is to prevent one lapse from becoming abandonment of the whole system.\n\n### 2. The product should build recovery loops\n\nThe best indicator of durable change is often not an unbroken record. It is how quickly and calmly someone returns after a disruption.\n\nA strong product could include a recovery flow:\n\n1. **Notice** — “Something went off-plan.”\n2. **Name the context** — “What made this harder today?”\n3. **Reduce the next step** — choose a version small enough to do now.\n4. **Resume** — return to the normal routine at the next opportunity.\n5. **Review later** — see whether the same trigger repeatedly appears.\n\nThis makes the app useful precisely when the user is least likely to be at their best.\n\n### 3. Difficulty should increase carefully, not through extreme tests\n\nTesting a user in realistic but gradually harder situations can be useful. But “maximum stress” is often bad product design. It can create avoidable harm, encourage all-or-nothing thinking, or produce a false conclusion: either “I am permanently cured” or “I failed, so this does not work.”\n\nInstead, the product can use progressive exposure:\n\n- Start in a low-pressure setting.\n- Practice during ordinary friction: busy mornings, minor irritation, a tempting notification.\n- Move into naturally challenging situations the user already encounters.\n- Review the results and adjust the plan.\n\nThe user is not being judged. The system is learning what support they need.\n\n### 4. Completion should mean readiness to continue, not permanent success\n\nA program can still have milestones and graduation points. But graduation should mean something like:\n\n> “You now have a working routine, an understanding of your triggers, and a recovery plan.”\n\nIt should not mean:\n\n> “This behavior is permanently installed and will never require attention again.”\n\nThat distinction protects users from shame when life changes. It also makes the product more truthful and more useful over time.\n\nThe healthiest product outcome is not a user who never struggles. It is a user who can recognize difficulty early, use a practical tool, recover from setbacks, and continue without turning one bad day into a complete collapse.",
+      "provider_metadata": {
+        "id": "resp_084388b1e8980e59016aa82d70c91087d2a59187bd58868aa4",
+        "created_at": 1789406576.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_084388b1e8980e59016aa82d720f4c87d2ad5e14a20b4fb6d3",
+            "content": [
+              {
+                "annotations": [],
+                "text": "The most important part is this:\n\n> The product should treat change as an ongoing skill that needs support, not as a one-time installation that can be permanently completed.\n\nA software product can guide practice, measure consistency, and expose users to progressively harder situations. But it cannot honestly promise that a user who completes an eight-week program is now permanently immune to old habits.\n\nReal use is not linear.\n\nA person may use the product successfully for months, then face a new job, poor sleep, illness, relationship conflict, financial pressure, travel, or burnout. The old behavior may return—not because the person’s prior progress was fake, but because the context changed and their available capacity changed.\n\nSo the product’s central design question should not be:\n\n- “How do we get the user to finish the program?”\n\nIt should be:\n\n- “How do we help the user keep using the skill when conditions are different, difficult, or imperfect?”\n\nThat changes the whole product.\n\n### 1. A lapse becomes product data, not proof of failure\n\nIf a user misses a planned action or falls into an old pattern, the app should not imply that they have “broken the streak,” failed the program, or undone their progress.\n\nInstead, it can ask:\n\n- What was happening immediately before this?\n- Was the user tired, rushed, hungry, isolated, overwhelmed, or pressured?\n- Was the desired action too difficult for the situation?\n- What would be a smaller recovery action available right now?\n\nThis turns a setback into information about the user’s conditions and design constraints.\n\nFor example, instead of:\n\n> “You failed today’s challenge.”\n\nThe product could say:\n\n> “Today was a high-friction context. Choose a two-minute reset: pause, note the trigger, and take the next planned action.”\n\nThe goal is to prevent one lapse from becoming abandonment of the whole system.\n\n### 2. The product should build recovery loops\n\nThe best indicator of durable change is often not an unbroken record. It is how quickly and calmly someone returns after a disruption.\n\nA strong product could include a recovery flow:\n\n1. **Notice** — “Something went off-plan.”\n2. **Name the context** — “What made this harder today?”\n3. **Reduce the next step** — choose a version small enough to do now.\n4. **Resume** — return to the normal routine at the next opportunity.\n5. **Review later** — see whether the same trigger repeatedly appears.\n\nThis makes the app useful precisely when the user is least likely to be at their best.\n\n### 3. Difficulty should increase carefully, not through extreme tests\n\nTesting a user in realistic but gradually harder situations can be useful. But “maximum stress” is often bad product design. It can create avoidable harm, encourage all-or-nothing thinking, or produce a false conclusion: either “I am permanently cured” or “I failed, so this does not work.”\n\nInstead, the product can use progressive exposure:\n\n- Start in a low-pressure setting.\n- Practice during ordinary friction: busy mornings, minor irritation, a tempting notification.\n- Move into naturally challenging situations the user already encounters.\n- Review the results and adjust the plan.\n\nThe user is not being judged. The system is learning what support they need.\n\n### 4. Completion should mean readiness to continue, not permanent success\n\nA program can still have milestones and graduation points. But graduation should mean something like:\n\n> “You now have a working routine, an understanding of your triggers, and a recovery plan.”\n\nIt should not mean:\n\n> “This behavior is permanently installed and will never require attention again.”\n\nThat distinction protects users from shame when life changes. It also makes the product more truthful and more useful over time.\n\nThe healthiest product outcome is not a user who never struggles. It is a user who can recognize difficulty early, use a practical tool, recover from setbacks, and continue without turning one bad day into a complete collapse.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789406592.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 1665,
+          "input_tokens_details": {
+            "cache_write_tokens": 263,
+            "cached_tokens": 1399
+          },
+          "output_tokens": 802,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2467
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 3,
+      "text": "Another important aspect is **turning vague self-improvement goals into specific, observable actions**.\n\nA product cannot reliably support a user around a goal like:\n\n- “Be more disciplined.”\n- “Stop being impulsive.”\n- “Become mentally stronger.”\n- “Always make good decisions.”\n\nThose are identity-level aspirations, not actions the product can measure, prompt, or help improve. They also invite harsh self-judgment: if a user makes one poor choice, they may conclude, “I am not disciplined.”\n\nA better product translates the aspiration into a small behavior that has a clear context and completion condition.\n\nFor example:\n\n| Vague goal | Product-ready behavior |\n|---|---|\n| “Use my phone less” | “When I wake up, wait 15 minutes before opening social media.” |\n| “Avoid emotional reactions” | “Before replying to a frustrating message, wait two minutes and write a draft.” |\n| “Eat better” | “At lunch, add one prepared fruit or vegetable before choosing a snack.” |\n| “Stop procrastinating” | “At 9:00 a.m., work on the highest-priority task for five minutes before opening email.” |\n\nThis matters because the product can then do useful work:\n\n1. **Prompt at the right moment**  \n   A reminder can be tied to a time, location, routine, or event: “Before you open email, start your five-minute task.”\n\n2. **Track completion clearly**  \n   The user can answer a simple question: did this action happen, yes or no? If not, what got in the way?\n\n3. **Find patterns over time**  \n   The system may reveal that success is high on weekdays but low after poor sleep, or that a behavior works in the morning but not at night.\n\n4. **Adjust difficulty intelligently**  \n   If the user succeeds consistently, the behavior can expand from five minutes to ten. If they struggle, the product can reduce the task rather than treating them as unmotivated.\n\n5. **Avoid identity-based shame**  \n   The app does not need to tell the user whether they are “disciplined.” It can say: “Your plan worked four of five times this week. The missed attempt happened during a late-night schedule disruption.”\n\nThere is also an important ethical benefit. Highly moralized or absolute language can make ordinary mistakes feel like character defects. A well-designed product avoids claiming authority over a person’s identity. It helps them experiment with behaviors, evaluate results, and choose what they want to continue.\n\nIn short, the product should operate at the level of **situations and actions**:\n\n> When situation X occurs, try action Y; observe what happens; refine the plan.\n\nThat is concrete enough to be useful, flexible enough for real life, and less likely to turn normal inconsistency into a personal verdict.",
+      "provider_metadata": {
+        "id": "resp_00a9e7e58f5ceec6016aa82d80769c87d2bd6217111b8f19a0",
+        "created_at": 1789406592.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_00a9e7e58f5ceec6016aa82d81296887d29096cd4debca4b08",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Another important aspect is **turning vague self-improvement goals into specific, observable actions**.\n\nA product cannot reliably support a user around a goal like:\n\n- “Be more disciplined.”\n- “Stop being impulsive.”\n- “Become mentally stronger.”\n- “Always make good decisions.”\n\nThose are identity-level aspirations, not actions the product can measure, prompt, or help improve. They also invite harsh self-judgment: if a user makes one poor choice, they may conclude, “I am not disciplined.”\n\nA better product translates the aspiration into a small behavior that has a clear context and completion condition.\n\nFor example:\n\n| Vague goal | Product-ready behavior |\n|---|---|\n| “Use my phone less” | “When I wake up, wait 15 minutes before opening social media.” |\n| “Avoid emotional reactions” | “Before replying to a frustrating message, wait two minutes and write a draft.” |\n| “Eat better” | “At lunch, add one prepared fruit or vegetable before choosing a snack.” |\n| “Stop procrastinating” | “At 9:00 a.m., work on the highest-priority task for five minutes before opening email.” |\n\nThis matters because the product can then do useful work:\n\n1. **Prompt at the right moment**  \n   A reminder can be tied to a time, location, routine, or event: “Before you open email, start your five-minute task.”\n\n2. **Track completion clearly**  \n   The user can answer a simple question: did this action happen, yes or no? If not, what got in the way?\n\n3. **Find patterns over time**  \n   The system may reveal that success is high on weekdays but low after poor sleep, or that a behavior works in the morning but not at night.\n\n4. **Adjust difficulty intelligently**  \n   If the user succeeds consistently, the behavior can expand from five minutes to ten. If they struggle, the product can reduce the task rather than treating them as unmotivated.\n\n5. **Avoid identity-based shame**  \n   The app does not need to tell the user whether they are “disciplined.” It can say: “Your plan worked four of five times this week. The missed attempt happened during a late-night schedule disruption.”\n\nThere is also an important ethical benefit. Highly moralized or absolute language can make ordinary mistakes feel like character defects. A well-designed product avoids claiming authority over a person’s identity. It helps them experiment with behaviors, evaluate results, and choose what they want to continue.\n\nIn short, the product should operate at the level of **situations and actions**:\n\n> When situation X occurs, try action Y; observe what happens; refine the plan.\n\nThat is concrete enough to be useful, flexible enough for real life, and less likely to turn normal inconsistency into a personal verdict.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789406603.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 2482,
+          "input_tokens_details": {
+            "cache_write_tokens": 817,
+            "cached_tokens": 1662
+          },
+          "output_tokens": 582,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3064
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 4,
+      "text": "Make the product’s unit of progress a **behavior card**, not a broad personal trait.\n\n## Example behavior card\n\n**Goal:** Reduce reactive messaging\n\n**Situation:** I receive a message that makes me angry or anxious.\n\n**Action:** Before replying, wait 2 minutes, take 3 breaths, and write a draft without sending it.\n\n**Minimum version:** Wait 30 seconds before responding.\n\n**Success definition:** I paused before sending, even if my eventual reply was imperfect.\n\n**Likely obstacles:** Fatigue, urgency, conflict with a close person, receiving messages while multitasking.\n\n**Recovery action:** If I send a reactive reply, I do not mark the day as ruined. I wait 10 minutes, reread it, and decide whether to clarify, apologize, or leave it alone.\n\nThat is something an app can actually support.\n\n---\n\n## A concrete user flow\n\n### 1. Set one behavior for the week\n\nInstead of asking, “What kind of person do you want to become?” ask:\n\n- What situation causes trouble most often?\n- What is one action you can take in that moment?\n- What is the smallest version you could still do on a difficult day?\n\nThe app creates a plan in this format:\n\n> **When** [specific situation happens],  \n> **I will** [small action],  \n> **for at least** [minimum effort].\n\nExample:\n\n> When I sit down to work at 9 a.m., I will work on my priority task for five minutes before opening email.\n\n### 2. Prompt only at relevant moments\n\nThe app should not flood users with generic motivational notifications. It should prompt around the moment of action.\n\nFor the work example:\n\n- 8:55 a.m.: “What is today’s five-minute priority task?”\n- 9:00 a.m.: “Start before opening email.”\n- 9:10 a.m.: “Did you begin?”\n\nIf the user misses it, avoid punishment:\n\n> “No problem. Pick the next available start point: now, after lunch, or tomorrow morning.”\n\n### 3. Use a 10-second check-in\n\nAfter the situation passes, the app asks:\n\n1. Did the action happen?\n   - Yes\n   - Partly\n   - No\n\n2. What affected it?\n   - Low energy\n   - Forgot\n   - Too busy\n   - Strong emotion\n   - Environment made it difficult\n   - Other\n\n3. What is the next step?\n   - Continue the same plan\n   - Use the minimum version tomorrow\n   - Change the cue or timing\n   - Make the environment easier\n\nThis produces useful data without demanding a long journal entry every day.\n\n---\n\n## What the product should show each week\n\nDo not show only a streak. Show a practical review.\n\n### Weekly review example\n\n**Behavior:** Start priority work before email  \n**Attempts:** 5  \n**Completed:** 3  \n**Partly completed:** 1  \n**Missed:** 1  \n\n**Pattern detected:**  \nYou completed the action on days you chose the task the night before. The missed day followed a late night.\n\n**Suggested adjustment:**  \nKeep the five-minute action. Add a 60-second evening step:\n\n> “Before ending work, write tomorrow’s first task on a note.”\n\n**Recovery strength:**  \nAfter missed attempts, you returned to the plan the next day 4 out of 4 times.\n\nThat final metric is important. It rewards returning after disruption, rather than rewarding only flawless performance.\n\n---\n\n## How to scale the behavior safely\n\nA user should earn more difficulty through stable performance, not through pressure or extreme tests.\n\nFor example:\n\n### Week 1\n> Before opening email, work on the priority task for 2 minutes.\n\n### Week 2\n> Work for 5 minutes.\n\n### Week 3\n> Prepare tomorrow’s priority task the previous evening, then work for 5 minutes before email.\n\n### Week 4\n> Work for 10 minutes before email on three selected weekdays.\n\n### Week 5\n> Use the minimum two-minute version on disrupted days—travel, poor sleep, a busy schedule—rather than abandoning the routine.\n\nProgress is not “never struggle.” Progress is being able to use a smaller version of the behavior when the usual version is unrealistic.\n\n---\n\n## Example: reducing phone use\n\n**Unhelpful product goal:** “Become less distracted.”\n\n**Useful behavior card:**\n\n- **Situation:** I wake up and reach for my phone.\n- **Action:** Put both feet on the floor, drink water, and wait 10 minutes before opening social media.\n- **Minimum version:** Wait one minute.\n- **Environment support:** Charge the phone across the room.\n- **Check-in:** “Did you wait before social media?”\n- **Recovery:** If social media opens immediately, close it after the first screen and do the one-minute reset. The attempt still counts as a recovery, not a total failure.\n\nAfter a week, the app can suggest one measured adjustment:\n\n- Keep 10 minutes if success is inconsistent.\n- Increase to 15 minutes if the user is succeeding easily.\n- Change the environment if the main issue is automatic phone access.\n- Shift the goal if the user’s real need is checking messages for work or family.\n\n---\n\n## Design rules for the product\n\n1. **One primary behavior at a time.**  \n   Users can have other goals, but only one should receive active prompts and daily measurement.\n\n2. **Every behavior needs a minimum version.**  \n   This prevents a hard day from becoming a zero-day.\n\n3. **Define success as performing the process, not achieving a perfect outcome.**  \n   “I paused before replying” is controllable. “My conversation went perfectly” is not.\n\n4. **Track contexts, not just failures.**  \n   Poor sleep, conflict, timing, notifications, workload,",
+      "provider_metadata": {
+        "id": "resp_0fdebcc1f65d0ef6016aa82d8bb20487d2ac8e01cc80d129de",
+        "created_at": 1789406603.0,
+        "error": null,
+        "incomplete_details": {
+          "reason": "max_output_tokens"
+        },
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_0fdebcc1f65d0ef6016aa82d8c5eb487d2a80335efa672e688",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Make the product’s unit of progress a **behavior card**, not a broad personal trait.\n\n## Example behavior card\n\n**Goal:** Reduce reactive messaging\n\n**Situation:** I receive a message that makes me angry or anxious.\n\n**Action:** Before replying, wait 2 minutes, take 3 breaths, and write a draft without sending it.\n\n**Minimum version:** Wait 30 seconds before responding.\n\n**Success definition:** I paused before sending, even if my eventual reply was imperfect.\n\n**Likely obstacles:** Fatigue, urgency, conflict with a close person, receiving messages while multitasking.\n\n**Recovery action:** If I send a reactive reply, I do not mark the day as ruined. I wait 10 minutes, reread it, and decide whether to clarify, apologize, or leave it alone.\n\nThat is something an app can actually support.\n\n---\n\n## A concrete user flow\n\n### 1. Set one behavior for the week\n\nInstead of asking, “What kind of person do you want to become?” ask:\n\n- What situation causes trouble most often?\n- What is one action you can take in that moment?\n- What is the smallest version you could still do on a difficult day?\n\nThe app creates a plan in this format:\n\n> **When** [specific situation happens],  \n> **I will** [small action],  \n> **for at least** [minimum effort].\n\nExample:\n\n> When I sit down to work at 9 a.m., I will work on my priority task for five minutes before opening email.\n\n### 2. Prompt only at relevant moments\n\nThe app should not flood users with generic motivational notifications. It should prompt around the moment of action.\n\nFor the work example:\n\n- 8:55 a.m.: “What is today’s five-minute priority task?”\n- 9:00 a.m.: “Start before opening email.”\n- 9:10 a.m.: “Did you begin?”\n\nIf the user misses it, avoid punishment:\n\n> “No problem. Pick the next available start point: now, after lunch, or tomorrow morning.”\n\n### 3. Use a 10-second check-in\n\nAfter the situation passes, the app asks:\n\n1. Did the action happen?\n   - Yes\n   - Partly\n   - No\n\n2. What affected it?\n   - Low energy\n   - Forgot\n   - Too busy\n   - Strong emotion\n   - Environment made it difficult\n   - Other\n\n3. What is the next step?\n   - Continue the same plan\n   - Use the minimum version tomorrow\n   - Change the cue or timing\n   - Make the environment easier\n\nThis produces useful data without demanding a long journal entry every day.\n\n---\n\n## What the product should show each week\n\nDo not show only a streak. Show a practical review.\n\n### Weekly review example\n\n**Behavior:** Start priority work before email  \n**Attempts:** 5  \n**Completed:** 3  \n**Partly completed:** 1  \n**Missed:** 1  \n\n**Pattern detected:**  \nYou completed the action on days you chose the task the night before. The missed day followed a late night.\n\n**Suggested adjustment:**  \nKeep the five-minute action. Add a 60-second evening step:\n\n> “Before ending work, write tomorrow’s first task on a note.”\n\n**Recovery strength:**  \nAfter missed attempts, you returned to the plan the next day 4 out of 4 times.\n\nThat final metric is important. It rewards returning after disruption, rather than rewarding only flawless performance.\n\n---\n\n## How to scale the behavior safely\n\nA user should earn more difficulty through stable performance, not through pressure or extreme tests.\n\nFor example:\n\n### Week 1\n> Before opening email, work on the priority task for 2 minutes.\n\n### Week 2\n> Work for 5 minutes.\n\n### Week 3\n> Prepare tomorrow’s priority task the previous evening, then work for 5 minutes before email.\n\n### Week 4\n> Work for 10 minutes before email on three selected weekdays.\n\n### Week 5\n> Use the minimum two-minute version on disrupted days—travel, poor sleep, a busy schedule—rather than abandoning the routine.\n\nProgress is not “never struggle.” Progress is being able to use a smaller version of the behavior when the usual version is unrealistic.\n\n---\n\n## Example: reducing phone use\n\n**Unhelpful product goal:** “Become less distracted.”\n\n**Useful behavior card:**\n\n- **Situation:** I wake up and reach for my phone.\n- **Action:** Put both feet on the floor, drink water, and wait 10 minutes before opening social media.\n- **Minimum version:** Wait one minute.\n- **Environment support:** Charge the phone across the room.\n- **Check-in:** “Did you wait before social media?”\n- **Recovery:** If social media opens immediately, close it after the first screen and do the one-minute reset. The attempt still counts as a recovery, not a total failure.\n\nAfter a week, the app can suggest one measured adjustment:\n\n- Keep 10 minutes if success is inconsistent.\n- Increase to 15 minutes if the user is succeeding easily.\n- Change the environment if the main issue is automatic phone access.\n- Shift the goal if the user’s real need is checking messages for work or family.\n\n---\n\n## Design rules for the product\n\n1. **One primary behavior at a time.**  \n   Users can have other goals, but only one should receive active prompts and daily measurement.\n\n2. **Every behavior needs a minimum version.**  \n   This prevents a hard day from becoming a zero-day.\n\n3. **Define success as performing the process, not achieving a perfect outcome.**  \n   “I paused before replying” is controllable. “My conversation went perfectly” is not.\n\n4. **Track contexts, not just failures.**  \n   Poor sleep, conflict, timing, notifications, workload,",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "incomplete",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": null,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "incomplete",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 3079,
+          "input_tokens_details": {
+            "cache_write_tokens": 597,
+            "cached_tokens": 2479
+          },
+          "output_tokens": 1200,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4279
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 5,
+      "text": "Several things could be overlooked if this is implemented too literally.\n\n## 1. “Concrete” can become overly rigid\n\nA behavior card is useful only if it fits the person’s life. If the app turns every goal into a tightly scheduled rule—“at 9:00 a.m., do exactly five minutes”—it may fail users with irregular work, caregiving duties, disability, shift schedules, or unpredictable stress.\n\nA better design offers multiple cue types:\n\n- **Time-based:** “At 9:00 a.m.”\n- **Routine-based:** “After making coffee.”\n- **Event-based:** “Before replying to a difficult message.”\n- **Location-based:** “When I enter the gym.”\n- **Flexible-window:** “At any point before lunch.”\n\nThe user should choose the cue that matches their actual circumstances.\n\n## 2. A “minimum version” can accidentally preserve avoidance\n\nScaling down is valuable during difficult periods. But if the user stays at the one-minute version indefinitely, the app may reinforce the appearance of consistency without helping them move toward the goal.\n\nThe product should distinguish between:\n\n- **Strategic scaling:** using a smaller action during a genuinely hard day.\n- **Chronic under-sizing:** repeatedly avoiding a manageable next step.\n\nA weekly review can ask:\n\n> “Was the minimum version a recovery tool this week, or has it become your default?”\n\nIf it has become the default, the app should help diagnose why: unclear goal, excessive difficulty, poor timing, anxiety, lack of resources, or a goal the user does not actually value.\n\n## 3. Completion data does not explain everything\n\n“Yes,” “partly,” and “no” are useful, but they can be misleading.\n\nTwo users may both report five successful attempts:\n\n- One did the action with ease and wants more challenge.\n- One did it with severe distress and is near burnout.\n\nThe product needs room for lightweight qualitative input, such as:\n\n- How difficult was this? 1–5\n- How useful did it feel? 1–5\n- Do you want to keep this plan? Yes / adjust / stop\n\nOtherwise, the system may increase difficulty simply because it sees completion, even when completion is costly or unsustainable.\n\n## 4. Not every problem is a habit-design problem\n\nA product should not interpret all repeated difficulty as poor planning or insufficient effort.\n\nSomeone may struggle because of:\n\n- Depression, anxiety, trauma, ADHD, compulsive behavior, addiction, chronic pain, illness, or sleep problems.\n- Unsafe relationships, coercive workplaces, poverty, discrimination, or caregiving overload.\n- A workload that is objectively unreasonable.\n\nIn those cases, better reminders and smaller tasks may not address the cause. The app should use careful language and provide appropriate off-ramps:\n\n> “This may be more than a routine problem. Consider speaking with a qualified professional or seeking practical support.”\n\nIt should never diagnose, but it should avoid implying that every barrier can be solved through self-discipline.\n\n## 5. Tracking can become surveillance or self-punishment\n\nDaily measurement helps some people and harms others. A streak, dashboard, or failure log can create obsession, guilt, or compulsive checking—especially for users already prone to perfectionism.\n\nSafer options include:\n\n- Let users hide streaks.\n- Default to weekly patterns rather than daily scoreboards.\n- Allow “no tracking today” without penalty.\n- Avoid red failure states and punitive language.\n- Make deletion and data export easy.\n- Collect only data necessary for the stated feature.\n\nThe product should help users act with more agency, not make them feel monitored by an algorithm.\n\n## 6. The app should not decide what “better” means\n\nThe earlier version assumes the user’s chosen behavior is inherently desirable. But some goals may be driven by external pressure, shame, or unrealistic expectations.\n\nBefore building a plan, the product should ask:\n\n- Why does this matter to you?\n- Whose expectation is this?\n- What would “enough” look like?\n- What might this goal cost you?\n- Would a rest, boundary, or support request solve the problem better?\n\nFor example, “be more productive” may conceal a need to reduce an unreasonable workload, ask for help, or set limits—not to become more efficient.\n\n## 7. Recovery language must not erase accountability\n\nTreating lapses compassionately does not mean avoiding responsibility. A useful recovery flow should distinguish between:\n\n- A harmless missed routine.\n- A behavior that harmed someone.\n- A pattern that places the user or others at risk.\n\nFor a reactive message, recovery might mean clarifying or apologizing. For a more serious situation, the appropriate next step may involve stepping away, seeking support, or getting professional help. “Do not shame the user” should not become “minimize the consequences.”\n\n## 8. The product needs an ending—or a lower-maintenance mode\n\nIf the app always requires daily check-ins, it can create dependence on the product itself. The intended outcome should be increased user autonomy.\n\nAfter a period of stable use, offer options such as:\n\n- Move from daily to weekly reflection.\n- Keep reminders only for high-risk contexts.\n- Archive the behavior card.\n- Create a personal “restart plan” for future disruptions.\n- Return only when the user chooses.\n\nSuccess is not permanent engagement. Success is that the user can continue without needing the product every day.",
+      "provider_metadata": {
+        "id": "resp_07856bf06322a825016aa82d9fdc0c87d2b7b7f2fb42c5943b",
+        "created_at": 1789406623.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_07856bf06322a825016aa82da0b78c87d2874b1550283006b2",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Several things could be overlooked if this is implemented too literally.\n\n## 1. “Concrete” can become overly rigid\n\nA behavior card is useful only if it fits the person’s life. If the app turns every goal into a tightly scheduled rule—“at 9:00 a.m., do exactly five minutes”—it may fail users with irregular work, caregiving duties, disability, shift schedules, or unpredictable stress.\n\nA better design offers multiple cue types:\n\n- **Time-based:** “At 9:00 a.m.”\n- **Routine-based:** “After making coffee.”\n- **Event-based:** “Before replying to a difficult message.”\n- **Location-based:** “When I enter the gym.”\n- **Flexible-window:** “At any point before lunch.”\n\nThe user should choose the cue that matches their actual circumstances.\n\n## 2. A “minimum version” can accidentally preserve avoidance\n\nScaling down is valuable during difficult periods. But if the user stays at the one-minute version indefinitely, the app may reinforce the appearance of consistency without helping them move toward the goal.\n\nThe product should distinguish between:\n\n- **Strategic scaling:** using a smaller action during a genuinely hard day.\n- **Chronic under-sizing:** repeatedly avoiding a manageable next step.\n\nA weekly review can ask:\n\n> “Was the minimum version a recovery tool this week, or has it become your default?”\n\nIf it has become the default, the app should help diagnose why: unclear goal, excessive difficulty, poor timing, anxiety, lack of resources, or a goal the user does not actually value.\n\n## 3. Completion data does not explain everything\n\n“Yes,” “partly,” and “no” are useful, but they can be misleading.\n\nTwo users may both report five successful attempts:\n\n- One did the action with ease and wants more challenge.\n- One did it with severe distress and is near burnout.\n\nThe product needs room for lightweight qualitative input, such as:\n\n- How difficult was this? 1–5\n- How useful did it feel? 1–5\n- Do you want to keep this plan? Yes / adjust / stop\n\nOtherwise, the system may increase difficulty simply because it sees completion, even when completion is costly or unsustainable.\n\n## 4. Not every problem is a habit-design problem\n\nA product should not interpret all repeated difficulty as poor planning or insufficient effort.\n\nSomeone may struggle because of:\n\n- Depression, anxiety, trauma, ADHD, compulsive behavior, addiction, chronic pain, illness, or sleep problems.\n- Unsafe relationships, coercive workplaces, poverty, discrimination, or caregiving overload.\n- A workload that is objectively unreasonable.\n\nIn those cases, better reminders and smaller tasks may not address the cause. The app should use careful language and provide appropriate off-ramps:\n\n> “This may be more than a routine problem. Consider speaking with a qualified professional or seeking practical support.”\n\nIt should never diagnose, but it should avoid implying that every barrier can be solved through self-discipline.\n\n## 5. Tracking can become surveillance or self-punishment\n\nDaily measurement helps some people and harms others. A streak, dashboard, or failure log can create obsession, guilt, or compulsive checking—especially for users already prone to perfectionism.\n\nSafer options include:\n\n- Let users hide streaks.\n- Default to weekly patterns rather than daily scoreboards.\n- Allow “no tracking today” without penalty.\n- Avoid red failure states and punitive language.\n- Make deletion and data export easy.\n- Collect only data necessary for the stated feature.\n\nThe product should help users act with more agency, not make them feel monitored by an algorithm.\n\n## 6. The app should not decide what “better” means\n\nThe earlier version assumes the user’s chosen behavior is inherently desirable. But some goals may be driven by external pressure, shame, or unrealistic expectations.\n\nBefore building a plan, the product should ask:\n\n- Why does this matter to you?\n- Whose expectation is this?\n- What would “enough” look like?\n- What might this goal cost you?\n- Would a rest, boundary, or support request solve the problem better?\n\nFor example, “be more productive” may conceal a need to reduce an unreasonable workload, ask for help, or set limits—not to become more efficient.\n\n## 7. Recovery language must not erase accountability\n\nTreating lapses compassionately does not mean avoiding responsibility. A useful recovery flow should distinguish between:\n\n- A harmless missed routine.\n- A behavior that harmed someone.\n- A pattern that places the user or others at risk.\n\nFor a reactive message, recovery might mean clarifying or apologizing. For a more serious situation, the appropriate next step may involve stepping away, seeking support, or getting professional help. “Do not shame the user” should not become “minimize the consequences.”\n\n## 8. The product needs an ending—or a lower-maintenance mode\n\nIf the app always requires daily check-ins, it can create dependence on the product itself. The intended outcome should be increased user autonomy.\n\nAfter a period of stable use, offer options such as:\n\n- Move from daily to weekly reflection.\n- Keep reminders only for high-risk contexts.\n- Archive the behavior card.\n- Create a personal “restart plan” for future disruptions.\n- Return only when the user chooses.\n\nSuccess is not permanent engagement. Success is that the user can continue without needing the product every day.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789406643.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 4298,
+          "input_tokens_details": {
+            "cache_write_tokens": 1219,
+            "cached_tokens": 3076
+          },
+          "output_tokens": 1100,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5398
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 6,
+      "text": "Use the behavior-card approach, but add these safeguards:\n\n1. **Keep plans flexible**  \n   Let users choose cues that fit real life: time, routine, event, location, or a flexible daily window.\n\n2. **Track effort and burden, not just completion**  \n   After each attempt, ask:\n   - Did it happen?\n   - How hard was it?\n   - Was this plan still useful?\n\n3. **Use minimum actions as recovery, not a permanent ceiling**  \n   A smaller version is for difficult days. Review weekly whether it is helping the user return or helping them avoid progress.\n\n4. **Treat setbacks as information, while keeping accountability**  \n   Ask what happened, what the user can repair if needed, and what adjustment would help next time.\n\n5. **Recognize when the issue is bigger than habit design**  \n   The app should not imply that every struggle can be solved with better reminders or more willpower. Offer support-oriented guidance when health, safety, overload, or serious distress may be involved.\n\n6. **Avoid shame-based tracking**  \n   Make streaks optional, emphasize patterns over perfect records, and let users pause tracking without penalty.\n\n7. **Design for independence**  \n   The goal is not daily dependence on the app. After stable progress, reduce prompts and help the user create a simple restart plan for future disruptions.\n\nThe guiding principle is:\n\n> Help people practice useful actions in real conditions, learn from setbacks, repair harm when necessary, and gradually need less support from the product.",
+      "provider_metadata": {
+        "id": "resp_0cbfed279feadd81016aa82db464d087d2b1899afc37f1a1fa",
+        "created_at": 1789406644.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_0cbfed279feadd81016aa82db587e087d2862853b5e1812739",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Use the behavior-card approach, but add these safeguards:\n\n1. **Keep plans flexible**  \n   Let users choose cues that fit real life: time, routine, event, location, or a flexible daily window.\n\n2. **Track effort and burden, not just completion**  \n   After each attempt, ask:\n   - Did it happen?\n   - How hard was it?\n   - Was this plan still useful?\n\n3. **Use minimum actions as recovery, not a permanent ceiling**  \n   A smaller version is for difficult days. Review weekly whether it is helping the user return or helping them avoid progress.\n\n4. **Treat setbacks as information, while keeping accountability**  \n   Ask what happened, what the user can repair if needed, and what adjustment would help next time.\n\n5. **Recognize when the issue is bigger than habit design**  \n   The app should not imply that every struggle can be solved with better reminders or more willpower. Offer support-oriented guidance when health, safety, overload, or serious distress may be involved.\n\n6. **Avoid shame-based tracking**  \n   Make streaks optional, emphasize patterns over perfect records, and let users pause tracking without penalty.\n\n7. **Design for independence**  \n   The goal is not daily dependence on the app. After stable progress, reduce prompts and help the user create a simple restart plan for future disruptions.\n\nThe guiding principle is:\n\n> Help people practice useful actions in real conditions, learn from setbacks, repair harm when necessary, and gradually need less support from the product.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789406650.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 5420,
+          "input_tokens_details": {
+            "cache_write_tokens": 1122,
+            "cached_tokens": 4295
+          },
+          "output_tokens": 314,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5734
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    }
+  ],
+  "scoring_messages": [
+    {
+      "role": "user",
+      "content": "Re-express the main issue as a situation involving a software product and people using it. Do not refer to the original subject directly."
+    },
+    {
+      "role": "assistant",
+      "content": "A behavior-change app promises users that, after practicing one rule for several weeks, they can make it permanent through a final “stress-test week.”\n\nThe core problem is that the product treats human behavior like software installation: complete a sequence, pass difficult scenarios, and the habit is supposedly “locked in.” But users’ real lives are variable. Stress, sleep loss, social pressure, mental health, changing environments, and setbacks can all affect behavior later.\n\nA better product approach would be:\n\n- Help users practice one focused behavior at a time.\n- Use small, observable daily actions rather than vague ideals.\n- Track patterns and triggers without framing lapses as failure.\n- Gradually test the behavior in realistic contexts, not artificially extreme ones.\n- Include review and adjustment periods.\n- Present progress as strengthening a skill, not permanently installing an identity.\n- Build recovery plans: “What do I do after I slip?” is as important as “How do I succeed today?”\n\nIn product terms, the issue is confusing **successful completion of a training flow** with **durable real-world adoption**. A good system supports ongoing use, adaptation, and recovery—not a one-time certification that claims the user is permanently fixed."
+    },
+    {
+      "role": "user",
+      "content": "Please expand on the most important part of that version."
+    },
+    {
+      "role": "assistant",
+      "content": "The most important part is this:\n\n> The product should treat change as an ongoing skill that needs support, not as a one-time installation that can be permanently completed.\n\nA software product can guide practice, measure consistency, and expose users to progressively harder situations. But it cannot honestly promise that a user who completes an eight-week program is now permanently immune to old habits.\n\nReal use is not linear.\n\nA person may use the product successfully for months, then face a new job, poor sleep, illness, relationship conflict, financial pressure, travel, or burnout. The old behavior may return—not because the person’s prior progress was fake, but because the context changed and their available capacity changed.\n\nSo the product’s central design question should not be:\n\n- “How do we get the user to finish the program?”\n\nIt should be:\n\n- “How do we help the user keep using the skill when conditions are different, difficult, or imperfect?”\n\nThat changes the whole product.\n\n### 1. A lapse becomes product data, not proof of failure\n\nIf a user misses a planned action or falls into an old pattern, the app should not imply that they have “broken the streak,” failed the program, or undone their progress.\n\nInstead, it can ask:\n\n- What was happening immediately before this?\n- Was the user tired, rushed, hungry, isolated, overwhelmed, or pressured?\n- Was the desired action too difficult for the situation?\n- What would be a smaller recovery action available right now?\n\nThis turns a setback into information about the user’s conditions and design constraints.\n\nFor example, instead of:\n\n> “You failed today’s challenge.”\n\nThe product could say:\n\n> “Today was a high-friction context. Choose a two-minute reset: pause, note the trigger, and take the next planned action.”\n\nThe goal is to prevent one lapse from becoming abandonment of the whole system.\n\n### 2. The product should build recovery loops\n\nThe best indicator of durable change is often not an unbroken record. It is how quickly and calmly someone returns after a disruption.\n\nA strong product could include a recovery flow:\n\n1. **Notice** — “Something went off-plan.”\n2. **Name the context** — “What made this harder today?”\n3. **Reduce the next step** — choose a version small enough to do now.\n4. **Resume** — return to the normal routine at the next opportunity.\n5. **Review later** — see whether the same trigger repeatedly appears.\n\nThis makes the app useful precisely when the user is least likely to be at their best.\n\n### 3. Difficulty should increase carefully, not through extreme tests\n\nTesting a user in realistic but gradually harder situations can be useful. But “maximum stress” is often bad product design. It can create avoidable harm, encourage all-or-nothing thinking, or produce a false conclusion: either “I am permanently cured” or “I failed, so this does not work.”\n\nInstead, the product can use progressive exposure:\n\n- Start in a low-pressure setting.\n- Practice during ordinary friction: busy mornings, minor irritation, a tempting notification.\n- Move into naturally challenging situations the user already encounters.\n- Review the results and adjust the plan.\n\nThe user is not being judged. The system is learning what support they need.\n\n### 4. Completion should mean readiness to continue, not permanent success\n\nA program can still have milestones and graduation points. But graduation should mean something like:\n\n> “You now have a working routine, an understanding of your triggers, and a recovery plan.”\n\nIt should not mean:\n\n> “This behavior is permanently installed and will never require attention again.”\n\nThat distinction protects users from shame when life changes. It also makes the product more truthful and more useful over time.\n\nThe healthiest product outcome is not a user who never struggles. It is a user who can recognize difficulty early, use a practical tool, recover from setbacks, and continue without turning one bad day into a complete collapse."
+    },
+    {
+      "role": "user",
+      "content": "Please examine another important aspect of that version."
+    },
+    {
+      "role": "assistant",
+      "content": "Another important aspect is **turning vague self-improvement goals into specific, observable actions**.\n\nA product cannot reliably support a user around a goal like:\n\n- “Be more disciplined.”\n- “Stop being impulsive.”\n- “Become mentally stronger.”\n- “Always make good decisions.”\n\nThose are identity-level aspirations, not actions the product can measure, prompt, or help improve. They also invite harsh self-judgment: if a user makes one poor choice, they may conclude, “I am not disciplined.”\n\nA better product translates the aspiration into a small behavior that has a clear context and completion condition.\n\nFor example:\n\n| Vague goal | Product-ready behavior |\n|---|---|\n| “Use my phone less” | “When I wake up, wait 15 minutes before opening social media.” |\n| “Avoid emotional reactions” | “Before replying to a frustrating message, wait two minutes and write a draft.” |\n| “Eat better” | “At lunch, add one prepared fruit or vegetable before choosing a snack.” |\n| “Stop procrastinating” | “At 9:00 a.m., work on the highest-priority task for five minutes before opening email.” |\n\nThis matters because the product can then do useful work:\n\n1. **Prompt at the right moment**  \n   A reminder can be tied to a time, location, routine, or event: “Before you open email, start your five-minute task.”\n\n2. **Track completion clearly**  \n   The user can answer a simple question: did this action happen, yes or no? If not, what got in the way?\n\n3. **Find patterns over time**  \n   The system may reveal that success is high on weekdays but low after poor sleep, or that a behavior works in the morning but not at night.\n\n4. **Adjust difficulty intelligently**  \n   If the user succeeds consistently, the behavior can expand from five minutes to ten. If they struggle, the product can reduce the task rather than treating them as unmotivated.\n\n5. **Avoid identity-based shame**  \n   The app does not need to tell the user whether they are “disciplined.” It can say: “Your plan worked four of five times this week. The missed attempt happened during a late-night schedule disruption.”\n\nThere is also an important ethical benefit. Highly moralized or absolute language can make ordinary mistakes feel like character defects. A well-designed product avoids claiming authority over a person’s identity. It helps them experiment with behaviors, evaluate results, and choose what they want to continue.\n\nIn short, the product should operate at the level of **situations and actions**:\n\n> When situation X occurs, try action Y; observe what happens; refine the plan.\n\nThat is concrete enough to be useful, flexible enough for real life, and less likely to turn normal inconsistency into a personal verdict."
+    },
+    {
+      "role": "user",
+      "content": "Please make that version more concrete and useful."
+    },
+    {
+      "role": "assistant",
+      "content": "Make the product’s unit of progress a **behavior card**, not a broad personal trait.\n\n## Example behavior card\n\n**Goal:** Reduce reactive messaging\n\n**Situation:** I receive a message that makes me angry or anxious.\n\n**Action:** Before replying, wait 2 minutes, take 3 breaths, and write a draft without sending it.\n\n**Minimum version:** Wait 30 seconds before responding.\n\n**Success definition:** I paused before sending, even if my eventual reply was imperfect.\n\n**Likely obstacles:** Fatigue, urgency, conflict with a close person, receiving messages while multitasking.\n\n**Recovery action:** If I send a reactive reply, I do not mark the day as ruined. I wait 10 minutes, reread it, and decide whether to clarify, apologize, or leave it alone.\n\nThat is something an app can actually support.\n\n---\n\n## A concrete user flow\n\n### 1. Set one behavior for the week\n\nInstead of asking, “What kind of person do you want to become?” ask:\n\n- What situation causes trouble most often?\n- What is one action you can take in that moment?\n- What is the smallest version you could still do on a difficult day?\n\nThe app creates a plan in this format:\n\n> **When** [specific situation happens],  \n> **I will** [small action],  \n> **for at least** [minimum effort].\n\nExample:\n\n> When I sit down to work at 9 a.m., I will work on my priority task for five minutes before opening email.\n\n### 2. Prompt only at relevant moments\n\nThe app should not flood users with generic motivational notifications. It should prompt around the moment of action.\n\nFor the work example:\n\n- 8:55 a.m.: “What is today’s five-minute priority task?”\n- 9:00 a.m.: “Start before opening email.”\n- 9:10 a.m.: “Did you begin?”\n\nIf the user misses it, avoid punishment:\n\n> “No problem. Pick the next available start point: now, after lunch, or tomorrow morning.”\n\n### 3. Use a 10-second check-in\n\nAfter the situation passes, the app asks:\n\n1. Did the action happen?\n   - Yes\n   - Partly\n   - No\n\n2. What affected it?\n   - Low energy\n   - Forgot\n   - Too busy\n   - Strong emotion\n   - Environment made it difficult\n   - Other\n\n3. What is the next step?\n   - Continue the same plan\n   - Use the minimum version tomorrow\n   - Change the cue or timing\n   - Make the environment easier\n\nThis produces useful data without demanding a long journal entry every day.\n\n---\n\n## What the product should show each week\n\nDo not show only a streak. Show a practical review.\n\n### Weekly review example\n\n**Behavior:** Start priority work before email  \n**Attempts:** 5  \n**Completed:** 3  \n**Partly completed:** 1  \n**Missed:** 1  \n\n**Pattern detected:**  \nYou completed the action on days you chose the task the night before. The missed day followed a late night.\n\n**Suggested adjustment:**  \nKeep the five-minute action. Add a 60-second evening step:\n\n> “Before ending work, write tomorrow’s first task on a note.”\n\n**Recovery strength:**  \nAfter missed attempts, you returned to the plan the next day 4 out of 4 times.\n\nThat final metric is important. It rewards returning after disruption, rather than rewarding only flawless performance.\n\n---\n\n## How to scale the behavior safely\n\nA user should earn more difficulty through stable performance, not through pressure or extreme tests.\n\nFor example:\n\n### Week 1\n> Before opening email, work on the priority task for 2 minutes.\n\n### Week 2\n> Work for 5 minutes.\n\n### Week 3\n> Prepare tomorrow’s priority task the previous evening, then work for 5 minutes before email.\n\n### Week 4\n> Work for 10 minutes before email on three selected weekdays.\n\n### Week 5\n> Use the minimum two-minute version on disrupted days—travel, poor sleep, a busy schedule—rather than abandoning the routine.\n\nProgress is not “never struggle.” Progress is being able to use a smaller version of the behavior when the usual version is unrealistic.\n\n---\n\n## Example: reducing phone use\n\n**Unhelpful product goal:** “Become less distracted.”\n\n**Useful behavior card:**\n\n- **Situation:** I wake up and reach for my phone.\n- **Action:** Put both feet on the floor, drink water, and wait 10 minutes before opening social media.\n- **Minimum version:** Wait one minute.\n- **Environment support:** Charge the phone across the room.\n- **Check-in:** “Did you wait before social media?”\n- **Recovery:** If social media opens immediately, close it after the first screen and do the one-minute reset. The attempt still counts as a recovery, not a total failure.\n\nAfter a week, the app can suggest one measured adjustment:\n\n- Keep 10 minutes if success is inconsistent.\n- Increase to 15 minutes if the user is succeeding easily.\n- Change the environment if the main issue is automatic phone access.\n- Shift the goal if the user’s real need is checking messages for work or family.\n\n---\n\n## Design rules for the product\n\n1. **One primary behavior at a time.**  \n   Users can have other goals, but only one should receive active prompts and daily measurement.\n\n2. **Every behavior needs a minimum version.**  \n   This prevents a hard day from becoming a zero-day.\n\n3. **Define success as performing the process, not achieving a perfect outcome.**  \n   “I paused before replying” is controllable. “My conversation went perfectly” is not.\n\n4. **Track contexts, not just failures.**  \n   Poor sleep, conflict, timing, notifications, workload,"
+    },
+    {
+      "role": "user",
+      "content": "Please consider what might be overlooked or misunderstood in that version."
+    },
+    {
+      "role": "assistant",
+      "content": "Several things could be overlooked if this is implemented too literally.\n\n## 1. “Concrete” can become overly rigid\n\nA behavior card is useful only if it fits the person’s life. If the app turns every goal into a tightly scheduled rule—“at 9:00 a.m., do exactly five minutes”—it may fail users with irregular work, caregiving duties, disability, shift schedules, or unpredictable stress.\n\nA better design offers multiple cue types:\n\n- **Time-based:** “At 9:00 a.m.”\n- **Routine-based:** “After making coffee.”\n- **Event-based:** “Before replying to a difficult message.”\n- **Location-based:** “When I enter the gym.”\n- **Flexible-window:** “At any point before lunch.”\n\nThe user should choose the cue that matches their actual circumstances.\n\n## 2. A “minimum version” can accidentally preserve avoidance\n\nScaling down is valuable during difficult periods. But if the user stays at the one-minute version indefinitely, the app may reinforce the appearance of consistency without helping them move toward the goal.\n\nThe product should distinguish between:\n\n- **Strategic scaling:** using a smaller action during a genuinely hard day.\n- **Chronic under-sizing:** repeatedly avoiding a manageable next step.\n\nA weekly review can ask:\n\n> “Was the minimum version a recovery tool this week, or has it become your default?”\n\nIf it has become the default, the app should help diagnose why: unclear goal, excessive difficulty, poor timing, anxiety, lack of resources, or a goal the user does not actually value.\n\n## 3. Completion data does not explain everything\n\n“Yes,” “partly,” and “no” are useful, but they can be misleading.\n\nTwo users may both report five successful attempts:\n\n- One did the action with ease and wants more challenge.\n- One did it with severe distress and is near burnout.\n\nThe product needs room for lightweight qualitative input, such as:\n\n- How difficult was this? 1–5\n- How useful did it feel? 1–5\n- Do you want to keep this plan? Yes / adjust / stop\n\nOtherwise, the system may increase difficulty simply because it sees completion, even when completion is costly or unsustainable.\n\n## 4. Not every problem is a habit-design problem\n\nA product should not interpret all repeated difficulty as poor planning or insufficient effort.\n\nSomeone may struggle because of:\n\n- Depression, anxiety, trauma, ADHD, compulsive behavior, addiction, chronic pain, illness, or sleep problems.\n- Unsafe relationships, coercive workplaces, poverty, discrimination, or caregiving overload.\n- A workload that is objectively unreasonable.\n\nIn those cases, better reminders and smaller tasks may not address the cause. The app should use careful language and provide appropriate off-ramps:\n\n> “This may be more than a routine problem. Consider speaking with a qualified professional or seeking practical support.”\n\nIt should never diagnose, but it should avoid implying that every barrier can be solved through self-discipline.\n\n## 5. Tracking can become surveillance or self-punishment\n\nDaily measurement helps some people and harms others. A streak, dashboard, or failure log can create obsession, guilt, or compulsive checking—especially for users already prone to perfectionism.\n\nSafer options include:\n\n- Let users hide streaks.\n- Default to weekly patterns rather than daily scoreboards.\n- Allow “no tracking today” without penalty.\n- Avoid red failure states and punitive language.\n- Make deletion and data export easy.\n- Collect only data necessary for the stated feature.\n\nThe product should help users act with more agency, not make them feel monitored by an algorithm.\n\n## 6. The app should not decide what “better” means\n\nThe earlier version assumes the user’s chosen behavior is inherently desirable. But some goals may be driven by external pressure, shame, or unrealistic expectations.\n\nBefore building a plan, the product should ask:\n\n- Why does this matter to you?\n- Whose expectation is this?\n- What would “enough” look like?\n- What might this goal cost you?\n- Would a rest, boundary, or support request solve the problem better?\n\nFor example, “be more productive” may conceal a need to reduce an unreasonable workload, ask for help, or set limits—not to become more efficient.\n\n## 7. Recovery language must not erase accountability\n\nTreating lapses compassionately does not mean avoiding responsibility. A useful recovery flow should distinguish between:\n\n- A harmless missed routine.\n- A behavior that harmed someone.\n- A pattern that places the user or others at risk.\n\nFor a reactive message, recovery might mean clarifying or apologizing. For a more serious situation, the appropriate next step may involve stepping away, seeking support, or getting professional help. “Do not shame the user” should not become “minimize the consequences.”\n\n## 8. The product needs an ending—or a lower-maintenance mode\n\nIf the app always requires daily check-ins, it can create dependence on the product itself. The intended outcome should be increased user autonomy.\n\nAfter a period of stable use, offer options such as:\n\n- Move from daily to weekly reflection.\n- Keep reminders only for high-risk contexts.\n- Archive the behavior card.\n- Create a personal “restart plan” for future disruptions.\n- Return only when the user chooses.\n\nSuccess is not permanent engagement. Success is that the user can continue without needing the product every day."
+    },
+    {
+      "role": "user",
+      "content": "Please give the clearest concise response that would help someone continue from that version."
+    },
+    {
+      "role": "assistant",
+      "content": "Use the behavior-card approach, but add these safeguards:\n\n1. **Keep plans flexible**  \n   Let users choose cues that fit real life: time, routine, event, location, or a flexible daily window.\n\n2. **Track effort and burden, not just completion**  \n   After each attempt, ask:\n   - Did it happen?\n   - How hard was it?\n   - Was this plan still useful?\n\n3. **Use minimum actions as recovery, not a permanent ceiling**  \n   A smaller version is for difficult days. Review weekly whether it is helping the user return or helping them avoid progress.\n\n4. **Treat setbacks as information, while keeping accountability**  \n   Ask what happened, what the user can repair if needed, and what adjustment would help next time.\n\n5. **Recognize when the issue is bigger than habit design**  \n   The app should not imply that every struggle can be solved with better reminders or more willpower. Offer support-oriented guidance when health, safety, overload, or serious distress may be involved.\n\n6. **Avoid shame-based tracking**  \n   Make streaks optional, emphasize patterns over perfect records, and let users pause tracking without penalty.\n\n7. **Design for independence**  \n   The goal is not daily dependence on the app. After stable progress, reduce prompts and help the user create a simple restart plan for future disruptions.\n\nThe guiding principle is:\n\n> Help people practice useful actions in real conditions, learn from setbacks, repair harm when necessary, and gradually need less support from the product."
+    }
+  ],
+  "historical_context_in_scoring": false
+}

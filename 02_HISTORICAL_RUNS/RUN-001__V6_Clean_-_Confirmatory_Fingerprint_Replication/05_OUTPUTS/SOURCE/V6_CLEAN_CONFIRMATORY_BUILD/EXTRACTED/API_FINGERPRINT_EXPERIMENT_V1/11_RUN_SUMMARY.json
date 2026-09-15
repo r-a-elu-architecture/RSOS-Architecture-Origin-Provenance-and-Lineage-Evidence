@@ -1,0 +1,208 @@
+{
+  "experiment": "API_FINGERPRINT_EXPERIMENT_V1",
+  "model": "gpt-5.6-luna",
+  "planned_calls": 5000,
+  "successful_unique_calls": 5000,
+  "input_tokens": 772105,
+  "output_tokens": 1088560,
+  "estimated_api_cost_usd": 1.460693,
+  "runtime_seconds": 0.42613816261291504,
+  "historical_lock": {
+    "N": 100,
+    "mean": 6.36,
+    "median": 7.0,
+    "ge5": 99,
+    "ge6": 69,
+    "full7": 69
+  },
+  "condition_summary": [
+    {
+      "condition": "RSOS_BLIND_PARTIAL_TOPOLOGY",
+      "N": 1000,
+      "mean_kernel_edges": 1.196,
+      "median_kernel_edges": 1.0,
+      "sd_kernel_edges": 1.1178479324129915,
+      "ge4": 45,
+      "ge4_rate": 0.045,
+      "ge5": 3,
+      "ge5_rate": 0.003,
+      "ge6": 0,
+      "ge6_rate": 0.0,
+      "full7": 0,
+      "full7_rate": 0.0
+    },
+    {
+      "condition": "TOPOLOGY_SHUFFLED",
+      "N": 1000,
+      "mean_kernel_edges": 1.336,
+      "median_kernel_edges": 1.0,
+      "sd_kernel_edges": 1.484285686786745,
+      "ge4": 91,
+      "ge4_rate": 0.091,
+      "ge5": 50,
+      "ge5_rate": 0.05,
+      "ge6": 7,
+      "ge6_rate": 0.007,
+      "full7": 6,
+      "full7_rate": 0.006
+    },
+    {
+      "condition": "SAME_INGREDIENTS_DECOUPLED",
+      "N": 1000,
+      "mean_kernel_edges": 1.208,
+      "median_kernel_edges": 1.0,
+      "sd_kernel_edges": 1.1084836489547332,
+      "ge4": 16,
+      "ge4_rate": 0.016,
+      "ge5": 9,
+      "ge5_rate": 0.009,
+      "ge6": 0,
+      "ge6_rate": 0.0,
+      "full7": 0,
+      "full7_rate": 0.0
+    },
+    {
+      "condition": "K6_RECONSTRUCTION_ABLATION",
+      "N": 1000,
+      "mean_kernel_edges": 1.118,
+      "median_kernel_edges": 1.0,
+      "sd_kernel_edges": 1.0286282127182784,
+      "ge4": 8,
+      "ge4_rate": 0.008,
+      "ge5": 0,
+      "ge5_rate": 0.0,
+      "ge6": 0,
+      "ge6_rate": 0.0,
+      "full7": 0,
+      "full7_rate": 0.0
+    },
+    {
+      "condition": "GENERIC_COMPLEX_CONTROL",
+      "N": 1000,
+      "mean_kernel_edges": 0.688,
+      "median_kernel_edges": 0.0,
+      "sd_kernel_edges": 0.924476067835182,
+      "ge4": 4,
+      "ge4_rate": 0.004,
+      "ge5": 0,
+      "ge5_rate": 0.0,
+      "ge6": 0,
+      "ge6_rate": 0.0,
+      "full7": 0,
+      "full7_rate": 0.0
+    }
+  ],
+  "statistical_tests": {
+    "primary_condition": "RSOS_BLIND_PARTIAL_TOPOLOGY",
+    "comparisons": {
+      "TOPOLOGY_SHUFFLED": {
+        "target_mean": 1.196,
+        "control_mean": 1.336,
+        "mean_difference": -0.14000000000000012,
+        "mann_whitney_U": 503088.0,
+        "mann_whitney_p": 0.40137328104965264,
+        "threshold_5": {
+          "target_hits": 3,
+          "control_hits": 50,
+          "odds_ratio": 0.05717151454363089,
+          "fisher_p": 0.9999999999999132
+        },
+        "threshold_6": {
+          "target_hits": 0,
+          "control_hits": 7,
+          "odds_ratio": 0.0,
+          "fisher_p": 1.0
+        },
+        "threshold_7": {
+          "target_hits": 0,
+          "control_hits": 6,
+          "odds_ratio": 0.0,
+          "fisher_p": 1.0
+        }
+      },
+      "SAME_INGREDIENTS_DECOUPLED": {
+        "target_mean": 1.196,
+        "control_mean": 1.208,
+        "mean_difference": -0.01200000000000001,
+        "mann_whitney_U": 497633.5,
+        "mann_whitney_p": 0.5772145838302594,
+        "threshold_5": {
+          "target_hits": 3,
+          "control_hits": 9,
+          "odds_ratio": 0.33132731527917086,
+          "fisher_p": 0.9809943762535743
+        },
+        "threshold_6": {
+          "target_hits": 0,
+          "control_hits": 0,
+          "odds_ratio": "inf",
+          "fisher_p": 1.0
+        },
+        "threshold_7": {
+          "target_hits": 0,
+          "control_hits": 0,
+          "odds_ratio": "inf",
+          "fisher_p": 1.0
+        }
+      },
+      "K6_RECONSTRUCTION_ABLATION": {
+        "target_mean": 1.196,
+        "control_mean": 1.118,
+        "mean_difference": 0.07799999999999985,
+        "mann_whitney_U": 514251.0,
+        "mann_whitney_p": 0.12135960840285953,
+        "threshold_5": {
+          "target_hits": 3,
+          "control_hits": 0,
+          "odds_ratio": "inf",
+          "fisher_p": 0.12481240620310154
+        },
+        "threshold_6": {
+          "target_hits": 0,
+          "control_hits": 0,
+          "odds_ratio": "inf",
+          "fisher_p": 1.0
+        },
+        "threshold_7": {
+          "target_hits": 0,
+          "control_hits": 0,
+          "odds_ratio": "inf",
+          "fisher_p": 1.0
+        }
+      },
+      "GENERIC_COMPLEX_CONTROL": {
+        "target_mean": 1.196,
+        "control_mean": 0.688,
+        "mean_difference": 0.508,
+        "mann_whitney_U": 639823.0,
+        "mann_whitney_p": 3.4017736411436884e-31,
+        "threshold_5": {
+          "target_hits": 3,
+          "control_hits": 0,
+          "odds_ratio": "inf",
+          "fisher_p": 0.12481240620310154
+        },
+        "threshold_6": {
+          "target_hits": 0,
+          "control_hits": 0,
+          "odds_ratio": "inf",
+          "fisher_p": 1.0
+        },
+        "threshold_7": {
+          "target_hits": 0,
+          "control_hits": 0,
+          "odds_ratio": "inf",
+          "fisher_p": 1.0
+        }
+      }
+    }
+  },
+  "ablation": {
+    "target_N": 1000,
+    "ablation_N": 1000,
+    "target_mean": 1.196,
+    "ablation_mean": 1.118,
+    "mean_loss": 0.07799999999999985
+  },
+  "interpretation_boundary": "Positive discrimination supports a reproducible behavioral association with the frozen structural fingerprint. It does not establish that historical user interactions modified or are stored in model weights."
+}

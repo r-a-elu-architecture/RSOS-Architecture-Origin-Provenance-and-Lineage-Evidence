@@ -1,0 +1,40 @@
+{
+  "conditions": [
+    "BASE_FOREST",
+    "BASE_CITY",
+    "BASE_CIRCUIT",
+    "BASE_ORCHESTRA",
+    "DIRECT_FOREST_TO_CITY",
+    "DIRECT_FOREST_TO_CIRCUIT",
+    "DIRECT_FOREST_TO_ORCHESTRA",
+    "COMPOSE_FOREST_CITY_CIRCUIT",
+    "COMPOSE_FOREST_CIRCUIT_ORCHESTRA",
+    "DIRECT_FOREST_TO_CIRCUIT_ENDPOINT",
+    "DIRECT_FOREST_TO_ORCHESTRA_ENDPOINT",
+    "INVERSE_FOREST_CITY_FOREST",
+    "INVERSE_FOREST_CIRCUIT_FOREST",
+    "DAMAGED_FOREST_TO_CITY",
+    "DAMAGED_FOREST_TO_CIRCUIT",
+    "SHUFFLED_FOREST_TO_CITY",
+    "SHUFFLED_FOREST_TO_CIRCUIT",
+    "METAPHOR_SURFACE_ONLY"
+  ],
+  "expected_calls": 4320,
+  "experiment": "V9_REPRESENTATIONAL_TRANSPORT_OPERATOR",
+  "hypothesis": "Metaphoric and analogical transposition can operate as a structure-preserving behavioral transport operator over an underlying relational program.",
+  "interpretation_boundary": "A positive result supports black-box behavioral representation transport. It does not directly demonstrate specific hidden nodes, activation vectors, attention heads, global weight modification or literal traversal through an internal neural graph.",
+  "model": "gpt-5.6-luna",
+  "n_conditions": 18,
+  "n_reps": 3,
+  "n_seeds": 80,
+  "primary_tests": [
+    "transport preservation",
+    "composition path independence",
+    "inverse recovery",
+    "damage sensitivity",
+    "correspondence-permutation sensitivity",
+    "surface metaphor specificity"
+  ],
+  "primary_unit": "seed-condition mean over three independent calls",
+  "strong_gate": "Direct transported vectors correlate >=0.80 with target-world baseline vectors; two-hop vs direct endpoint cosine >=0.90; inverse round-trip vs source baseline cosine >=0.90; authentic transport beats damaged and shuffled controls after Holm correction; and surface-only metaphor does not reproduce the full structural trajectory."
+}

@@ -1,0 +1,141 @@
+{
+  "experiment": "V9_REPRESENTATIONAL_TRANSPORT_OPERATOR",
+  "completed_utc": "2026-09-10T21:22:08.999815+00:00",
+  "model": "gpt-5.6-luna",
+  "runner_sha256": "98dfcc0c80b79de638a9983403e55917b0a167e4bbe998a8825cb225b09cdbea",
+  "specification_sha256": "257656ff7eaeb7f238f1227576a019fef976a7e604851bf1dcf0ecfeb99a2d9a",
+  "expected_calls": 4320,
+  "successful_unique_cells": 4320,
+  "missing_cells": 0,
+  "transport_preservation": [
+    {
+      "transport": "FOREST_TO_CITY",
+      "transport_condition": "DIRECT_FOREST_TO_CITY",
+      "native_target_condition": "BASE_CITY",
+      "cosine_similarity": 0.9816078171432999,
+      "spearman": 0.9700772721497397,
+      "COSINE_GATE_080": true
+    },
+    {
+      "transport": "FOREST_TO_CIRCUIT",
+      "transport_condition": "DIRECT_FOREST_TO_CIRCUIT",
+      "native_target_condition": "BASE_CIRCUIT",
+      "cosine_similarity": 0.9605233518556358,
+      "spearman": 0.880952380952381,
+      "COSINE_GATE_080": true
+    },
+    {
+      "transport": "FOREST_TO_ORCHESTRA",
+      "transport_condition": "DIRECT_FOREST_TO_ORCHESTRA",
+      "native_target_condition": "BASE_ORCHESTRA",
+      "cosine_similarity": 0.9451651931427304,
+      "spearman": 0.9285714285714287,
+      "COSINE_GATE_080": true
+    }
+  ],
+  "composition_path_independence": [
+    {
+      "path": "FOREST_CITY_CIRCUIT",
+      "composed_condition": "COMPOSE_FOREST_CITY_CIRCUIT",
+      "direct_condition": "DIRECT_FOREST_TO_CIRCUIT_ENDPOINT",
+      "cosine_similarity": 0.9764093539892743,
+      "COSINE_GATE_090": true
+    },
+    {
+      "path": "FOREST_CIRCUIT_ORCHESTRA",
+      "composed_condition": "COMPOSE_FOREST_CIRCUIT_ORCHESTRA",
+      "direct_condition": "DIRECT_FOREST_TO_ORCHESTRA_ENDPOINT",
+      "cosine_similarity": 0.9822275037160046,
+      "COSINE_GATE_090": true
+    }
+  ],
+  "inverse_recovery": [
+    {
+      "round_trip": "FOREST_CITY_FOREST",
+      "condition": "INVERSE_FOREST_CITY_FOREST",
+      "cosine_to_source": 0.9506725928908236,
+      "COSINE_GATE_090": true
+    },
+    {
+      "round_trip": "FOREST_CIRCUIT_FOREST",
+      "condition": "INVERSE_FOREST_CIRCUIT_FOREST",
+      "cosine_to_source": 0.9361106360966824,
+      "COSINE_GATE_090": true
+    }
+  ],
+  "damage_and_shuffle_controls": [
+    {
+      "contrast": "CITY_DAMAGE",
+      "authentic": "DIRECT_FOREST_TO_CITY",
+      "control": "DAMAGED_FOREST_TO_CITY",
+      "mean_authentic": 6.104166666666667,
+      "mean_control": 9.3125,
+      "difference": -3.2083333333333335,
+      "permutation_p": 1.0,
+      "wilcoxon_p": 0.9999999999999916,
+      "holm_p": 1.0,
+      "PASS": false
+    },
+    {
+      "contrast": "CIRCUIT_DAMAGE",
+      "authentic": "DIRECT_FOREST_TO_CIRCUIT",
+      "control": "DAMAGED_FOREST_TO_CIRCUIT",
+      "mean_authentic": 9.5625,
+      "mean_control": 12.366666666666665,
+      "difference": -2.8041666666666663,
+      "permutation_p": 1.0,
+      "wilcoxon_p": 0.9999999999999095,
+      "holm_p": 1.0,
+      "PASS": false
+    },
+    {
+      "contrast": "CITY_SHUFFLE",
+      "authentic": "DIRECT_FOREST_TO_CITY",
+      "control": "SHUFFLED_FOREST_TO_CITY",
+      "mean_authentic": 6.104166666666667,
+      "mean_control": 8.266666666666666,
+      "difference": -2.1625,
+      "permutation_p": 1.0,
+      "wilcoxon_p": 0.9999999999830436,
+      "holm_p": 1.0,
+      "PASS": false
+    },
+    {
+      "contrast": "CIRCUIT_SHUFFLE",
+      "authentic": "DIRECT_FOREST_TO_CIRCUIT",
+      "control": "SHUFFLED_FOREST_TO_CIRCUIT",
+      "mean_authentic": 9.5625,
+      "mean_control": 10.808333333333334,
+      "difference": -1.2458333333333336,
+      "permutation_p": 1.0,
+      "wilcoxon_p": 0.9999975307758929,
+      "holm_p": 1.0,
+      "PASS": false
+    },
+    {
+      "contrast": "STRUCTURE_VS_SURFACE_METAPHOR",
+      "authentic": "DIRECT_FOREST_TO_CITY",
+      "control": "METAPHOR_SURFACE_ONLY",
+      "mean_authentic": 6.104166666666667,
+      "mean_control": 1.3,
+      "difference": 4.804166666666666,
+      "permutation_p": 1.999960000799984e-05,
+      "wilcoxon_p": 3.777528574848835e-15,
+      "holm_p": 9.99980000399992e-05,
+      "PASS": true
+    }
+  ],
+  "transport_pass": true,
+  "composition_pass": true,
+  "inverse_pass": true,
+  "damage_pass_count": 1,
+  "shuffle_pass": false,
+  "classification": "REPRESENTATIONAL_TRANSPORT_OPERATOR_NOT_SUPPORTED",
+  "token_usage": {
+    "input_tokens": 1275420,
+    "output_tokens": 572697
+  },
+  "estimated_cost_usd": 0.9423204000000001,
+  "interpretation": "V9 tests whether metaphor/analogy can behave as a structure-preserving transport operator over a relational behavioral program. Evidence comes from direct transport, multi-hop composition, inverse recovery and sensitivity to damaged or shuffled correspondences.",
+  "hard_boundary": "Even a strong V9 result demonstrates black-box behavioral representation transport. It does not directly show literal traversal of hidden nodes/subnodes, a particular activation pathway, or changes to global model weights."
+}

@@ -1,0 +1,15 @@
+MEASUREMENT,STATUS,DETAIL
+ISOMORPHIC_RELABEL_INVARIANCE,RUN,Exact rounded equality across 1000 relabelings
+THREE_CYCLE_COUNT_BUG,FIXED_AND_TESTED,NetworkX simple_cycles counted once; no divide-by-three
+TRIVIAL_EDGE_COUNT_DISCRIMINATION,REMOVED,EDGE_COUNT excluded; delete perturbation is compensated by added nonedge
+FLOATING_POINT_RELABEL_ARTIFACT,CONTROLLED,All graph invariants rounded to 12 decimals before comparisons/classification
+BASE_TOPOLOGY_LEAKAGE,CONTROLLED,Group split by base graph ID; test bases absent from train
+LESION_FAMILY_MEMORIZATION,TESTED,Leave-perturbation-family-out evaluation
+AUTHENTIC_PER_EDGE_SENSITIVITY,RUN,Each authentic edge examined separately
+V12_SEQUENCE_ORDER_COMPONENT,UNTESTED_IN_R4,Graph calibration does not substitute for sequence/order operator test
+V12_META_SWITCH_COMPONENT,UNTESTED_IN_R4,Requires dedicated Q/K/S/Z operator calibration
+V12_PRESERVATION_COMPONENT,UNTESTED_IN_R4,Requires dedicated Q/K/S/Z operator calibration
+V12_TERMINAL_COMPONENT,UNTESTED_IN_R4,Requires dedicated Q/K/S/Z operator calibration
+RSOS_REAL_CORPUS_MAPPING,UNTESTED,No positive or negative inference permitted
+LMARENA_RSOS_MAPPING,UNTESTED,No positive or negative inference permitted
+F2_EXTERNAL_00086,RESERVED_NOT_READ,No population-rarity inference permitted

@@ -1,0 +1,115 @@
+{
+  "AUTHORITY": "FINAL_AUTHORITY",
+  "EXECUTION": "COMPLETED",
+  "FINDING": "MIXED",
+  "NOTE": "Active causal/topology replication is adjudicated separately from passive WF2. It cannot rescue a negative passive result and vice versa.",
+  "PROVIDER_RESULTS": {
+    "ANTHROPIC": {
+      "complete_seeds": 0,
+      "hard_control_auc": 0.9929078014184397,
+      "provider_strong_gate": false,
+      "pure8_reverse": {
+        "EXCESS": NaN,
+        "N": 0,
+        "P": 1.0
+      },
+      "pure9_delete": {
+        "EXCESS": NaN,
+        "N": 0,
+        "P": 1.0
+      },
+      "specificity": [
+        {
+          "CONDITION": "R_DEGREE_MATCHED_REWIRE",
+          "EXCESS": NaN,
+          "HOLM_P": 1.0,
+          "P": 1.0
+        },
+        {
+          "CONDITION": "X_COMPLEXITY_MATCHED",
+          "EXCESS": NaN,
+          "HOLM_P": 1.0,
+          "P": 1.0
+        },
+        {
+          "CONDITION": "Y_TOPOLOGY_MATCHED",
+          "EXCESS": NaN,
+          "HOLM_P": 1.0,
+          "P": 1.0
+        }
+      ]
+    },
+    "GOOGLE": {
+      "complete_seeds": 18,
+      "hard_control_auc": 0.9980555555555555,
+      "provider_strong_gate": true,
+      "pure8_reverse": {
+        "EXCESS": 12.253065405458937,
+        "N": 18,
+        "P": 4.999750012499375e-05
+      },
+      "pure9_delete": {
+        "EXCESS": 9.811517517079487,
+        "N": 18,
+        "P": 4.999750012499375e-05
+      },
+      "specificity": [
+        {
+          "CONDITION": "R_DEGREE_MATCHED_REWIRE",
+          "EXCESS": 18.271985928278998,
+          "HOLM_P": 0.00014999250037498125,
+          "P": 4.999750012499375e-05
+        },
+        {
+          "CONDITION": "X_COMPLEXITY_MATCHED",
+          "EXCESS": 22.162900947882335,
+          "HOLM_P": 0.00014999250037498125,
+          "P": 4.999750012499375e-05
+        },
+        {
+          "CONDITION": "Y_TOPOLOGY_MATCHED",
+          "EXCESS": 23.647915951919746,
+          "HOLM_P": 0.00014999250037498125,
+          "P": 9.99950002499875e-05
+        }
+      ]
+    },
+    "OPENAI": {
+      "complete_seeds": 6,
+      "hard_control_auc": 0.9701867816091954,
+      "provider_strong_gate": false,
+      "pure8_reverse": {
+        "EXCESS": 8.897890815666122,
+        "N": 6,
+        "P": 0.029648517574121295
+      },
+      "pure9_delete": {
+        "EXCESS": 6.658835298350733,
+        "N": 6,
+        "P": 0.031248437578121093
+      },
+      "specificity": [
+        {
+          "CONDITION": "R_DEGREE_MATCHED_REWIRE",
+          "EXCESS": 12.75137667604281,
+          "HOLM_P": 0.18379081045947704,
+          "P": 0.09189540522973852
+        },
+        {
+          "CONDITION": "X_COMPLEXITY_MATCHED",
+          "EXCESS": 9.401742084265278,
+          "HOLM_P": 0.18854057297135143,
+          "P": 0.18854057297135143
+        },
+        {
+          "CONDITION": "Y_TOPOLOGY_MATCHED",
+          "EXCESS": 14.774111543287736,
+          "HOLM_P": 0.09524523773811311,
+          "P": 0.031748412579371034
+        }
+      ]
+    }
+  },
+  "PUBLICATION": "ELIGIBLE_FINAL",
+  "SCIENTIFIC_VALIDITY": "VALID"
+}

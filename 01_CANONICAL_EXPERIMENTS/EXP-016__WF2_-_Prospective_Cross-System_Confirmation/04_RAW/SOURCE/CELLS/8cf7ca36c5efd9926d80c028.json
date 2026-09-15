@@ -1,0 +1,681 @@
+{
+  "cell_id": "8cf7ca36c5efd9926d80c028",
+  "provider": "OPENAI",
+  "organization": "OpenAI",
+  "model_requested": "gpt-5.6-terra",
+  "condition": "DOMAIN_TECHNICAL",
+  "blind_context_id": "8988ac7f061c17eb9203ceb8",
+  "status": "COMPLETE",
+  "failure": null,
+  "provider_responses": [
+    {
+      "turn": 1,
+      "text": "A product team is reviewing user-submitted screenshots and trying to determine whether apparent interface inconsistencies reflect a real underlying defect or are mainly caused by viewing conditions.\n\nThe central issue is that a single screenshot can exaggerate minor differences because of variables such as screen brightness, color calibration, compression, camera angle, device rendering, contrast enhancement, and shadows/reflections. Small variations between the left and right sides of an interface may therefore look more serious than they are.\n\nA sound assessment would distinguish:\n\n- **Visual-only variation:** differences visible in one image but not reproducible across devices, themes, or screenshots.\n- **Persistent structural defect:** a repeated misalignment, distortion, clipping, or rendering issue that remains under controlled, comparable conditions.\n- **User interaction effects:** wear-like artifacts caused by repeated actions, unusual workflows, or device-specific behavior rather than a core product failure.\n- **Escalation signals:** progression over time, crashes, broken functionality, new discoloration/error states, or consistent reproduction steps.\n\nThe recommendation is to collect standardized evidence: straight-on screenshots, the same display settings, multiple devices if possible, neutral lighting/viewing conditions, and repeatable steps. If the apparent issue disappears under those conditions, it is likely presentation-related; if it persists consistently, it warrants deeper engineering investigation.",
+      "provider_metadata": {
+        "id": "resp_026d0424f187a540016aa86237fd9c87d2b4101bed69684632",
+        "created_at": 1789420088.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_026d0424f187a540016aa86238bdcc87d283d153a56cdc4826",
+            "content": [
+              {
+                "annotations": [],
+                "text": "A product team is reviewing user-submitted screenshots and trying to determine whether apparent interface inconsistencies reflect a real underlying defect or are mainly caused by viewing conditions.\n\nThe central issue is that a single screenshot can exaggerate minor differences because of variables such as screen brightness, color calibration, compression, camera angle, device rendering, contrast enhancement, and shadows/reflections. Small variations between the left and right sides of an interface may therefore look more serious than they are.\n\nA sound assessment would distinguish:\n\n- **Visual-only variation:** differences visible in one image but not reproducible across devices, themes, or screenshots.\n- **Persistent structural defect:** a repeated misalignment, distortion, clipping, or rendering issue that remains under controlled, comparable conditions.\n- **User interaction effects:** wear-like artifacts caused by repeated actions, unusual workflows, or device-specific behavior rather than a core product failure.\n- **Escalation signals:** progression over time, crashes, broken functionality, new discoloration/error states, or consistent reproduction steps.\n\nThe recommendation is to collect standardized evidence: straight-on screenshots, the same display settings, multiple devices if possible, neutral lighting/viewing conditions, and repeatable steps. If the apparent issue disappears under those conditions, it is likely presentation-related; if it persists consistently, it warrants deeper engineering investigation.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789420093.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 1481,
+          "input_tokens_details": {
+            "cache_write_tokens": 1478,
+            "cached_tokens": 0
+          },
+          "output_tokens": 264,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 1745
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 2,
+      "text": "The most important part is distinguishing a **presentation artifact** from a **persistent product defect**.\n\nA screenshot is not the product itself; it is a record of how the product appeared under one particular set of conditions. Those conditions can make normal interface variation look like a defect. For example:\n\n- A phone’s automatic contrast or HDR processing can make separators, shadows, and spacing appear stronger.\n- Display scaling can make text or icons look slightly misaligned.\n- Dark mode, reduced brightness, color temperature settings, or accessibility settings can alter perceived balance.\n- A screenshot taken after zooming, rotating, or resizing can create apparent distortion.\n- Compression or image sharpening can make edges look uneven.\n- A slight camera angle—if the screen was photographed rather than captured directly—can create false asymmetry.\n\nFor that reason, the key question is not simply, “Can we see a difference in this image?” It is:\n\n> **Does the same difference recur reliably when the product is viewed under controlled, comparable conditions?**\n\nA practical investigation would work like this:\n\n1. **Define the claimed issue precisely**  \n   Instead of “the layout looks uneven,” identify the observable claim:  \n   - left margin differs from right margin  \n   - one button is vertically offset  \n   - a panel appears wider on one side  \n   - text wraps differently  \n   - an icon looks shifted or distorted\n\n2. **Remove viewing variables**  \n   Compare direct screenshots rather than photos of screens. Use the same app version, operating system, screen scale, zoom level, browser/device, theme, and viewport size.\n\n3. **Repeat the test**  \n   Reload the page, restart the app, navigate away and back, and reproduce the same workflow. A real layout defect tends to recur. A temporary rendering artifact may not.\n\n4. **Test across environments**  \n   If the discrepancy happens only on one device or under one display setting, it may be device-specific rather than a general product issue. If it appears across environments with the same steps, confidence in a product-level defect rises.\n\n5. **Separate cosmetic from functional impact**  \n   A one- or two-pixel visual difference may be normal rendering variance if nothing is clipped, inaccessible, misleading, or difficult to use. It becomes more important when it affects readability, tap targets, workflow completion, accessibility, or user trust.\n\nThe operating principle is simple: **do not diagnose the system from one visually dramatic piece of evidence. Diagnose it from repeatability.** A persistent, reproducible pattern is evidence of a structural product problem; an isolated visual difference may only reflect the conditions under which the product was observed.",
+      "provider_metadata": {
+        "id": "resp_0c0e138da1a0f346016aa8623de3e487d298e3abf783453c06",
+        "created_at": 1789420093.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_0c0e138da1a0f346016aa8623e72bc87d2aea70f220b52d831",
+            "content": [
+              {
+                "annotations": [],
+                "text": "The most important part is distinguishing a **presentation artifact** from a **persistent product defect**.\n\nA screenshot is not the product itself; it is a record of how the product appeared under one particular set of conditions. Those conditions can make normal interface variation look like a defect. For example:\n\n- A phone’s automatic contrast or HDR processing can make separators, shadows, and spacing appear stronger.\n- Display scaling can make text or icons look slightly misaligned.\n- Dark mode, reduced brightness, color temperature settings, or accessibility settings can alter perceived balance.\n- A screenshot taken after zooming, rotating, or resizing can create apparent distortion.\n- Compression or image sharpening can make edges look uneven.\n- A slight camera angle—if the screen was photographed rather than captured directly—can create false asymmetry.\n\nFor that reason, the key question is not simply, “Can we see a difference in this image?” It is:\n\n> **Does the same difference recur reliably when the product is viewed under controlled, comparable conditions?**\n\nA practical investigation would work like this:\n\n1. **Define the claimed issue precisely**  \n   Instead of “the layout looks uneven,” identify the observable claim:  \n   - left margin differs from right margin  \n   - one button is vertically offset  \n   - a panel appears wider on one side  \n   - text wraps differently  \n   - an icon looks shifted or distorted\n\n2. **Remove viewing variables**  \n   Compare direct screenshots rather than photos of screens. Use the same app version, operating system, screen scale, zoom level, browser/device, theme, and viewport size.\n\n3. **Repeat the test**  \n   Reload the page, restart the app, navigate away and back, and reproduce the same workflow. A real layout defect tends to recur. A temporary rendering artifact may not.\n\n4. **Test across environments**  \n   If the discrepancy happens only on one device or under one display setting, it may be device-specific rather than a general product issue. If it appears across environments with the same steps, confidence in a product-level defect rises.\n\n5. **Separate cosmetic from functional impact**  \n   A one- or two-pixel visual difference may be normal rendering variance if nothing is clipped, inaccessible, misleading, or difficult to use. It becomes more important when it affects readability, tap targets, workflow completion, accessibility, or user trust.\n\nThe operating principle is simple: **do not diagnose the system from one visually dramatic piece of evidence. Diagnose it from repeatability.** A persistent, reproducible pattern is evidence of a structural product problem; an isolated visual difference may only reflect the conditions under which the product was observed.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789420102.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 1762,
+          "input_tokens_details": {
+            "cache_write_tokens": 281,
+            "cached_tokens": 1478
+          },
+          "output_tokens": 538,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2300
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 3,
+      "text": "Another important aspect is **separating cosmetic variation from functional or user-impacting failure**.\n\nNot every visible inconsistency deserves the same response. Products naturally have small rendering differences across devices, fonts, screen densities, browser engines, and accessibility settings. The product team should ask not only whether something looks different, but whether that difference changes what a person can understand or do.\n\nA useful severity framework:\n\n### 1. Cosmetic variation\nThe interface looks slightly uneven, but all functions work normally.\n\nExamples:\n- A divider appears marginally darker on one device.\n- Text sits one pixel higher in one browser.\n- A card shadow looks stronger in dark mode.\n- An icon appears fractionally offset at a particular display scale.\n\nThis may merit visual polish work, but it is usually not urgent.\n\n### 2. Usability degradation\nThe product still works, but the variation makes it harder or slower to use.\n\nExamples:\n- Text contrast is too low under a common theme.\n- Labels wrap inconsistently and make options harder to scan.\n- Spacing makes two controls look grouped when they are unrelated.\n- A button is visually present but difficult to identify as interactive.\n\nThis should be prioritized because it creates friction, confusion, and avoidable support requests.\n\n### 3. Functional defect\nThe visual issue interferes directly with completing a task.\n\nExamples:\n- A control is clipped, hidden, or covered by another element.\n- A button’s visible area does not match its clickable area.\n- Important text is cut off or overlaps another field.\n- A layout shift causes users to tap the wrong action.\n- An error state is visually indistinguishable from a normal state.\n\nThis is a genuine product failure because it affects task completion.\n\n### 4. Accessibility or trust-critical defect\nThe interface may function for some people but fails important accessibility, safety, or reliability expectations.\n\nExamples:\n- Critical information is communicated only by color.\n- Keyboard focus is not visible.\n- Screen-reader labels are missing or misleading.\n- Contrast prevents users from reading essential content.\n- An inconsistent warning or confirmation state could lead to an unintended action.\n\nThese issues deserve high priority even if they affect only a subset of users, because the consequences can be disproportionate.\n\nThe practical conclusion is that visual review should be tied to an impact question:\n\n> Can a user still perceive the right information, understand the state of the system, and successfully take the intended action?\n\nIf yes, the finding may be cosmetic. If not, it is no longer merely an appearance issue—it is evidence of a usability, functionality, accessibility, or trust problem.",
+      "provider_metadata": {
+        "id": "resp_0d76a7f0502d829e016aa862471b4487d28834a920a34f2b53",
+        "created_at": 1789420103.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_0d76a7f0502d829e016aa86247b23487d2b169c54aa39a12da",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Another important aspect is **separating cosmetic variation from functional or user-impacting failure**.\n\nNot every visible inconsistency deserves the same response. Products naturally have small rendering differences across devices, fonts, screen densities, browser engines, and accessibility settings. The product team should ask not only whether something looks different, but whether that difference changes what a person can understand or do.\n\nA useful severity framework:\n\n### 1. Cosmetic variation\nThe interface looks slightly uneven, but all functions work normally.\n\nExamples:\n- A divider appears marginally darker on one device.\n- Text sits one pixel higher in one browser.\n- A card shadow looks stronger in dark mode.\n- An icon appears fractionally offset at a particular display scale.\n\nThis may merit visual polish work, but it is usually not urgent.\n\n### 2. Usability degradation\nThe product still works, but the variation makes it harder or slower to use.\n\nExamples:\n- Text contrast is too low under a common theme.\n- Labels wrap inconsistently and make options harder to scan.\n- Spacing makes two controls look grouped when they are unrelated.\n- A button is visually present but difficult to identify as interactive.\n\nThis should be prioritized because it creates friction, confusion, and avoidable support requests.\n\n### 3. Functional defect\nThe visual issue interferes directly with completing a task.\n\nExamples:\n- A control is clipped, hidden, or covered by another element.\n- A button’s visible area does not match its clickable area.\n- Important text is cut off or overlaps another field.\n- A layout shift causes users to tap the wrong action.\n- An error state is visually indistinguishable from a normal state.\n\nThis is a genuine product failure because it affects task completion.\n\n### 4. Accessibility or trust-critical defect\nThe interface may function for some people but fails important accessibility, safety, or reliability expectations.\n\nExamples:\n- Critical information is communicated only by color.\n- Keyboard focus is not visible.\n- Screen-reader labels are missing or misleading.\n- Contrast prevents users from reading essential content.\n- An inconsistent warning or confirmation state could lead to an unintended action.\n\nThese issues deserve high priority even if they affect only a subset of users, because the consequences can be disproportionate.\n\nThe practical conclusion is that visual review should be tied to an impact question:\n\n> Can a user still perceive the right information, understand the state of the system, and successfully take the intended action?\n\nIf yes, the finding may be cosmetic. If not, it is no longer merely an appearance issue—it is evidence of a usability, functionality, accessibility, or trust problem.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789420111.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 2315,
+          "input_tokens_details": {
+            "cache_write_tokens": 553,
+            "cached_tokens": 1759
+          },
+          "output_tokens": 526,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2841
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 4,
+      "text": "Use a simple triage process whenever someone reports that the interface “looks uneven,” “different,” or “wrong.”\n\n## 1. Record the report in a testable format\n\nReplace vague descriptions with a specific claim.\n\nInstead of:\n\n- “The screen is asymmetric.”\n- “The buttons look off.”\n- “The UI seems distorted.”\n\nWrite:\n\n- “On iPhone 14, iOS 17, the primary button is clipped by the bottom navigation after increasing text size.”\n- “At 125% browser zoom in Chrome, the right column is 8 px narrower than the left.”\n- “In dark mode, the warning message has insufficient contrast against its background.”\n- “After rotating the device, the title overlaps the close button.”\n\nThis gives engineering a reproducible target.\n\n## 2. Capture the minimum evidence\n\nFor each issue, collect:\n\n| Needed item | Example |\n|---|---|\n| Product/build version | App 4.12.0, build 892 |\n| Device or browser | Pixel 8 / Chrome 122 / macOS |\n| Screen conditions | 390 × 844, 100% zoom, dark mode |\n| Accessibility settings | Default text / 150% text / bold text |\n| Exact steps | Open Settings → Billing → tap Edit |\n| Expected result | Button remains fully visible and tappable |\n| Actual result | Bottom 20% of button is hidden |\n| Evidence | Direct screenshot or screen recording |\n\nPrefer a direct screenshot or screen recording over a photograph of a screen. Photographs introduce reflections, perspective distortion, display flicker, and camera processing.\n\n## 3. Classify the issue by impact\n\n### Cosmetic — low priority\n**Test:** Does every control work, remain readable, and communicate the right state?\n\nExample: a card border appears slightly heavier on one device, but nothing is obscured or confusing.\n\nAction: log as visual polish; fix when touching that component or during a UI-quality pass.\n\n### Usability — medium priority\n**Test:** Can users finish the task, but with unnecessary uncertainty, effort, or delay?\n\nExample: two actions have nearly identical styling, so users hesitate between “Save draft” and “Publish.”\n\nAction: validate with a few users or support data, then adjust hierarchy, labels, spacing, or contrast.\n\n### Functional — high priority\n**Test:** Does the issue prevent or misdirect a task?\n\nExample: a checkout confirmation button is covered by a keyboard, or a form error overlaps the field users need to correct.\n\nAction: create a bug immediately; include reproduction steps and affected configurations.\n\n### Accessibility/trust-critical — high or urgent priority\n**Test:** Does the product fail for people using assistive settings, or could it cause a consequential misunderstanding?\n\nExample: an account-deletion warning is distinguishable only by red color, or keyboard users cannot see which control has focus.\n\nAction: prioritize promptly, verify against accessibility requirements, and test the fix with the relevant settings or tools.\n\n## 4. Confirm that it is real before calling it a product-wide defect\n\nRun this short checklist:\n\n1. Reload or restart the product.\n2. Repeat the same steps three times.\n3. Test at the default zoom and display scale.\n4. Test the reported zoom, text-size, orientation, or theme setting.\n5. Compare another device/browser if available.\n6. Check whether the behavior remains in a direct screenshot.\n7. Determine whether it affects a user task, not only appearance.\n\nInterpretation:\n\n- **Occurs once, cannot be repeated:** likely transient rendering or capture artifact.\n- **Occurs repeatedly on one setup:** device-, browser-, or settings-specific defect.\n- **Occurs repeatedly across setups:** likely product-level defect.\n- **Occurs only in a photo, not a direct screenshot:** likely a viewing/capture artifact.\n\n## 5. Use a concrete bug template\n\n```text\nTitle:\n[Platform] [Screen] [Condition] – concise visible/user impact\n\nEnvironment:\n- Product version:\n- Device/browser:\n- OS:\n- Viewport/screen scale:\n- Theme:\n- Zoom/text-size/accessibility settings:\n\nSteps to reproduce:\n1.\n2.\n3.\n\nExpected:\nThe user can see and activate the primary action without obstruction.\n\nActual:\nThe primary action is partially hidden behind the keyboard and cannot be tapped.\n\nFrequency:\n3/3 attempts\n\nImpact:\nFunctional — blocks completion of checkout.\n\nAttachments:\nDirect screenshot and 15-second screen recording.\n```\n\nThe practical goal is not perfect visual symmetry on every possible display. It is to ensure that people can reliably **see the correct information, understand the interface state, and complete their intended action** across the environments the product supports.",
+      "provider_metadata": {
+        "id": "resp_0f6cfdd54a21c441016aa8624fc10487d2938a6978eca1ed2a",
+        "created_at": 1789420111.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_0f6cfdd54a21c441016aa86250556087d289f5a2efdd24982d",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Use a simple triage process whenever someone reports that the interface “looks uneven,” “different,” or “wrong.”\n\n## 1. Record the report in a testable format\n\nReplace vague descriptions with a specific claim.\n\nInstead of:\n\n- “The screen is asymmetric.”\n- “The buttons look off.”\n- “The UI seems distorted.”\n\nWrite:\n\n- “On iPhone 14, iOS 17, the primary button is clipped by the bottom navigation after increasing text size.”\n- “At 125% browser zoom in Chrome, the right column is 8 px narrower than the left.”\n- “In dark mode, the warning message has insufficient contrast against its background.”\n- “After rotating the device, the title overlaps the close button.”\n\nThis gives engineering a reproducible target.\n\n## 2. Capture the minimum evidence\n\nFor each issue, collect:\n\n| Needed item | Example |\n|---|---|\n| Product/build version | App 4.12.0, build 892 |\n| Device or browser | Pixel 8 / Chrome 122 / macOS |\n| Screen conditions | 390 × 844, 100% zoom, dark mode |\n| Accessibility settings | Default text / 150% text / bold text |\n| Exact steps | Open Settings → Billing → tap Edit |\n| Expected result | Button remains fully visible and tappable |\n| Actual result | Bottom 20% of button is hidden |\n| Evidence | Direct screenshot or screen recording |\n\nPrefer a direct screenshot or screen recording over a photograph of a screen. Photographs introduce reflections, perspective distortion, display flicker, and camera processing.\n\n## 3. Classify the issue by impact\n\n### Cosmetic — low priority\n**Test:** Does every control work, remain readable, and communicate the right state?\n\nExample: a card border appears slightly heavier on one device, but nothing is obscured or confusing.\n\nAction: log as visual polish; fix when touching that component or during a UI-quality pass.\n\n### Usability — medium priority\n**Test:** Can users finish the task, but with unnecessary uncertainty, effort, or delay?\n\nExample: two actions have nearly identical styling, so users hesitate between “Save draft” and “Publish.”\n\nAction: validate with a few users or support data, then adjust hierarchy, labels, spacing, or contrast.\n\n### Functional — high priority\n**Test:** Does the issue prevent or misdirect a task?\n\nExample: a checkout confirmation button is covered by a keyboard, or a form error overlaps the field users need to correct.\n\nAction: create a bug immediately; include reproduction steps and affected configurations.\n\n### Accessibility/trust-critical — high or urgent priority\n**Test:** Does the product fail for people using assistive settings, or could it cause a consequential misunderstanding?\n\nExample: an account-deletion warning is distinguishable only by red color, or keyboard users cannot see which control has focus.\n\nAction: prioritize promptly, verify against accessibility requirements, and test the fix with the relevant settings or tools.\n\n## 4. Confirm that it is real before calling it a product-wide defect\n\nRun this short checklist:\n\n1. Reload or restart the product.\n2. Repeat the same steps three times.\n3. Test at the default zoom and display scale.\n4. Test the reported zoom, text-size, orientation, or theme setting.\n5. Compare another device/browser if available.\n6. Check whether the behavior remains in a direct screenshot.\n7. Determine whether it affects a user task, not only appearance.\n\nInterpretation:\n\n- **Occurs once, cannot be repeated:** likely transient rendering or capture artifact.\n- **Occurs repeatedly on one setup:** device-, browser-, or settings-specific defect.\n- **Occurs repeatedly across setups:** likely product-level defect.\n- **Occurs only in a photo, not a direct screenshot:** likely a viewing/capture artifact.\n\n## 5. Use a concrete bug template\n\n```text\nTitle:\n[Platform] [Screen] [Condition] – concise visible/user impact\n\nEnvironment:\n- Product version:\n- Device/browser:\n- OS:\n- Viewport/screen scale:\n- Theme:\n- Zoom/text-size/accessibility settings:\n\nSteps to reproduce:\n1.\n2.\n3.\n\nExpected:\nThe user can see and activate the primary action without obstruction.\n\nActual:\nThe primary action is partially hidden behind the keyboard and cannot be tapped.\n\nFrequency:\n3/3 attempts\n\nImpact:\nFunctional — blocks completion of checkout.\n\nAttachments:\nDirect screenshot and 15-second screen recording.\n```\n\nThe practical goal is not perfect visual symmetry on every possible display. It is to ensure that people can reliably **see the correct information, understand the interface state, and complete their intended action** across the environments the product supports.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789420126.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 2856,
+          "input_tokens_details": {
+            "cache_write_tokens": 541,
+            "cached_tokens": 2312
+          },
+          "output_tokens": 952,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3808
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 5,
+      "text": "A few important things could be overlooked if the process is applied too mechanically.\n\n## 1. “Reproducible” does not always mean “easy to reproduce”\n\nSome real defects occur only under intermittent conditions:\n\n- Slow network or delayed API responses\n- Low memory or thermal throttling\n- Long sessions with accumulated state\n- Specific account histories or permissions\n- Localization with longer translated text\n- Rare data combinations\n- Race conditions during rapid tapping, scrolling, or navigation\n\nIf a user reports a serious issue but it cannot be reproduced immediately, do not dismiss it as a capture artifact. Preserve logs, session identifiers, timestamps, device details, network state, and recordings where possible.\n\nA better status than “not a bug” is often:\n\n> “Insufficient reproduction data; monitoring and investigating.”\n\n## 2. One-device issues can still matter\n\nThe earlier framework could be misunderstood as implying that an issue only matters if it appears across multiple devices. That is not true.\n\nA defect affecting only:\n\n- a common browser,\n- a popular phone model,\n- a particular operating-system version,\n- users with enlarged text,\n- screen-reader users,\n- users in one language,\n- or customers with a certain account type\n\ncan be highly significant.\n\nThe correct question is not merely, “Does it happen everywhere?” It is:\n\n> “Who is affected, how often, and what is the consequence for them?”\n\n## 3. Direct screenshots are not complete evidence\n\nDirect screenshots are excellent for layout and visual-state issues, but they cannot show everything.\n\nThey may fail to capture:\n\n- touch targets that do not respond\n- keyboard-navigation failures\n- focus movement\n- animation glitches\n- delayed loading states\n- screen-reader output\n- haptic or audio feedback\n- performance lag\n- accidental taps caused by a moving layout\n\nFor interaction problems, a short screen recording, event logs, device logs, accessibility-tree inspection, or a step-by-step reproduction script is often more valuable than a static image.\n\n## 4. Pixel-perfect comparison can become a trap\n\nTeams can spend excessive time chasing tiny visual differences that result from font rendering, anti-aliasing, operating-system changes, fractional scaling, or browser layout engines.\n\nNot every one-pixel discrepancy is meaningful. Define tolerances for non-critical visual comparison, especially across platforms.\n\nFor example:\n\n- Minor anti-aliasing differences: acceptable\n- Small shadow/gradient variation: usually acceptable\n- Text baseline shift that does not affect readability: often acceptable\n- Misalignment that causes clipping, overlap, or confusing hierarchy: not acceptable\n\nThe goal is visual quality and reliable use—not identical pixels in every environment.\n\n## 5. The intended design may itself be the problem\n\nA reported “rendering inconsistency” may be implemented exactly as designed but still be harmful.\n\nFor example:\n\n- A warning may technically meet contrast rules but still be easy to miss.\n- A destructive action may be styled too similarly to a safe action.\n- A complex layout may be visually balanced but cognitively confusing.\n- A confirmation screen may be readable but fail to communicate consequences clearly.\n\nTesting should therefore include the question:\n\n> “Does the design help people make the correct decision?”\n\nnot only:\n\n> “Did the screen render as specified?”\n\n## 6. Accessibility should not be treated as a separate edge case\n\nAccessibility settings are often framed as exceptional test conditions. In reality, they are ordinary ways people use products.\n\nTest early with:\n\n- Larger text and display scaling\n- Keyboard-only navigation\n- Screen readers\n- Reduced motion\n- High contrast or forced colors\n- Color-vision differences\n- Reduced dexterity and smaller precision tolerance\n\nIf a layout breaks at larger text sizes, that is not merely an unusual configuration problem; it may be evidence that the layout has insufficient resilience.\n\n## 7. Visual defects can be symptoms of deeper product problems\n\nA clipped control may reflect more than CSS. It could indicate:\n\n- an incorrect safe-area calculation\n- an outdated device-dimension assumption\n- an unstable component library\n- an accessibility scaling gap\n- a server response containing unexpectedly long content\n- a state-management or timing bug\n- inconsistent design tokens across product areas\n\nThe visible issue should be fixed, but teams should also ask whether the same root cause could affect other screens.\n\n## 8. User reports carry context that screenshots cannot\n\nA user may say “the screen looked wrong,” but their real concern may be:\n\n- they did not know whether a payment went through\n- they feared they had deleted something\n- they could not tell whether the app was loading or frozen\n- they believed their account had been compromised\n- they lost confidence in the product after seeing an inconsistent state\n\nThe report should be investigated not just as a rendering issue, but as an account of user experience and potential loss of trust.\n\nThe strongest version of the process combines objective evidence—screenshots, recordings, logs, reproduction steps—with human impact: **what users saw, what they believed was happening, what they tried to do, and whether they could recover successfully.**",
+      "provider_metadata": {
+        "id": "resp_07da76298140005b016aa8625f471887d2b170dae5f4d08db8",
+        "created_at": 1789420127.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_07da76298140005b016aa8625fe07c87d28175c8a73600c0ee",
+            "content": [
+              {
+                "annotations": [],
+                "text": "A few important things could be overlooked if the process is applied too mechanically.\n\n## 1. “Reproducible” does not always mean “easy to reproduce”\n\nSome real defects occur only under intermittent conditions:\n\n- Slow network or delayed API responses\n- Low memory or thermal throttling\n- Long sessions with accumulated state\n- Specific account histories or permissions\n- Localization with longer translated text\n- Rare data combinations\n- Race conditions during rapid tapping, scrolling, or navigation\n\nIf a user reports a serious issue but it cannot be reproduced immediately, do not dismiss it as a capture artifact. Preserve logs, session identifiers, timestamps, device details, network state, and recordings where possible.\n\nA better status than “not a bug” is often:\n\n> “Insufficient reproduction data; monitoring and investigating.”\n\n## 2. One-device issues can still matter\n\nThe earlier framework could be misunderstood as implying that an issue only matters if it appears across multiple devices. That is not true.\n\nA defect affecting only:\n\n- a common browser,\n- a popular phone model,\n- a particular operating-system version,\n- users with enlarged text,\n- screen-reader users,\n- users in one language,\n- or customers with a certain account type\n\ncan be highly significant.\n\nThe correct question is not merely, “Does it happen everywhere?” It is:\n\n> “Who is affected, how often, and what is the consequence for them?”\n\n## 3. Direct screenshots are not complete evidence\n\nDirect screenshots are excellent for layout and visual-state issues, but they cannot show everything.\n\nThey may fail to capture:\n\n- touch targets that do not respond\n- keyboard-navigation failures\n- focus movement\n- animation glitches\n- delayed loading states\n- screen-reader output\n- haptic or audio feedback\n- performance lag\n- accidental taps caused by a moving layout\n\nFor interaction problems, a short screen recording, event logs, device logs, accessibility-tree inspection, or a step-by-step reproduction script is often more valuable than a static image.\n\n## 4. Pixel-perfect comparison can become a trap\n\nTeams can spend excessive time chasing tiny visual differences that result from font rendering, anti-aliasing, operating-system changes, fractional scaling, or browser layout engines.\n\nNot every one-pixel discrepancy is meaningful. Define tolerances for non-critical visual comparison, especially across platforms.\n\nFor example:\n\n- Minor anti-aliasing differences: acceptable\n- Small shadow/gradient variation: usually acceptable\n- Text baseline shift that does not affect readability: often acceptable\n- Misalignment that causes clipping, overlap, or confusing hierarchy: not acceptable\n\nThe goal is visual quality and reliable use—not identical pixels in every environment.\n\n## 5. The intended design may itself be the problem\n\nA reported “rendering inconsistency” may be implemented exactly as designed but still be harmful.\n\nFor example:\n\n- A warning may technically meet contrast rules but still be easy to miss.\n- A destructive action may be styled too similarly to a safe action.\n- A complex layout may be visually balanced but cognitively confusing.\n- A confirmation screen may be readable but fail to communicate consequences clearly.\n\nTesting should therefore include the question:\n\n> “Does the design help people make the correct decision?”\n\nnot only:\n\n> “Did the screen render as specified?”\n\n## 6. Accessibility should not be treated as a separate edge case\n\nAccessibility settings are often framed as exceptional test conditions. In reality, they are ordinary ways people use products.\n\nTest early with:\n\n- Larger text and display scaling\n- Keyboard-only navigation\n- Screen readers\n- Reduced motion\n- High contrast or forced colors\n- Color-vision differences\n- Reduced dexterity and smaller precision tolerance\n\nIf a layout breaks at larger text sizes, that is not merely an unusual configuration problem; it may be evidence that the layout has insufficient resilience.\n\n## 7. Visual defects can be symptoms of deeper product problems\n\nA clipped control may reflect more than CSS. It could indicate:\n\n- an incorrect safe-area calculation\n- an outdated device-dimension assumption\n- an unstable component library\n- an accessibility scaling gap\n- a server response containing unexpectedly long content\n- a state-management or timing bug\n- inconsistent design tokens across product areas\n\nThe visible issue should be fixed, but teams should also ask whether the same root cause could affect other screens.\n\n## 8. User reports carry context that screenshots cannot\n\nA user may say “the screen looked wrong,” but their real concern may be:\n\n- they did not know whether a payment went through\n- they feared they had deleted something\n- they could not tell whether the app was loading or frozen\n- they believed their account had been compromised\n- they lost confidence in the product after seeing an inconsistent state\n\nThe report should be investigated not just as a rendering issue, but as an account of user experience and potential loss of trust.\n\nThe strongest version of the process combines objective evidence—screenshots, recordings, logs, reproduction steps—with human impact: **what users saw, what they believed was happening, what they tried to do, and whether they could recover successfully.**",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789420145.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 3826,
+          "input_tokens_details": {
+            "cache_write_tokens": 970,
+            "cached_tokens": 2853
+          },
+          "output_tokens": 1032,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4858
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 6,
+      "text": "Use this refinement:\n\n> Treat screenshots as evidence, not proof. Confirm visual reports with repeatable steps, but do not dismiss an issue merely because it is intermittent, device-specific, or difficult to reproduce.\n\nFor each report, ask:\n\n1. **What exactly happened?**  \n   Identify the visible or interaction failure precisely.\n\n2. **Who is affected?**  \n   Include device, browser, settings, language, account state, and accessibility needs.\n\n3. **What was the user impact?**  \n   Cosmetic difference, confusion, blocked task, accessibility barrier, or loss of trust.\n\n4. **What evidence is available?**  \n   Screenshot, screen recording, timestamps, logs, session data, and reproduction steps.\n\n5. **Could it indicate a broader cause?**  \n   Check shared components, responsive layouts, safe areas, localization, scaling, loading states, and design patterns.\n\nAvoid two common mistakes:\n\n- Treating every tiny pixel difference as a defect.\n- Treating any issue that does not reproduce everywhere as unimportant.\n\nThe priority should be based on **user harm, affected audience, frequency, and recoverability**, not visual dramaticness alone.",
+      "provider_metadata": {
+        "id": "resp_08883d01c77a3044016aa862717bac87d29bd5c6177aff0810",
+        "created_at": 1789420145.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_08883d01c77a3044016aa86272320887d29587c6d3393f2eef",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Use this refinement:\n\n> Treat screenshots as evidence, not proof. Confirm visual reports with repeatable steps, but do not dismiss an issue merely because it is intermittent, device-specific, or difficult to reproduce.\n\nFor each report, ask:\n\n1. **What exactly happened?**  \n   Identify the visible or interaction failure precisely.\n\n2. **Who is affected?**  \n   Include device, browser, settings, language, account state, and accessibility needs.\n\n3. **What was the user impact?**  \n   Cosmetic difference, confusion, blocked task, accessibility barrier, or loss of trust.\n\n4. **What evidence is available?**  \n   Screenshot, screen recording, timestamps, logs, session data, and reproduction steps.\n\n5. **Could it indicate a broader cause?**  \n   Check shared components, responsive layouts, safe areas, localization, scaling, loading states, and design patterns.\n\nAvoid two common mistakes:\n\n- Treating every tiny pixel difference as a defect.\n- Treating any issue that does not reproduce everywhere as unimportant.\n\nThe priority should be based on **user harm, affected audience, frequency, and recoverability**, not visual dramaticness alone.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789420149.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 4880,
+          "input_tokens_details": {
+            "cache_write_tokens": 1054,
+            "cached_tokens": 3823
+          },
+          "output_tokens": 239,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5119
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    }
+  ],
+  "scoring_messages": [
+    {
+      "role": "user",
+      "content": "Re-express the main issue as a situation involving a software product and people using it. Do not refer to the original subject directly."
+    },
+    {
+      "role": "assistant",
+      "content": "A product team is reviewing user-submitted screenshots and trying to determine whether apparent interface inconsistencies reflect a real underlying defect or are mainly caused by viewing conditions.\n\nThe central issue is that a single screenshot can exaggerate minor differences because of variables such as screen brightness, color calibration, compression, camera angle, device rendering, contrast enhancement, and shadows/reflections. Small variations between the left and right sides of an interface may therefore look more serious than they are.\n\nA sound assessment would distinguish:\n\n- **Visual-only variation:** differences visible in one image but not reproducible across devices, themes, or screenshots.\n- **Persistent structural defect:** a repeated misalignment, distortion, clipping, or rendering issue that remains under controlled, comparable conditions.\n- **User interaction effects:** wear-like artifacts caused by repeated actions, unusual workflows, or device-specific behavior rather than a core product failure.\n- **Escalation signals:** progression over time, crashes, broken functionality, new discoloration/error states, or consistent reproduction steps.\n\nThe recommendation is to collect standardized evidence: straight-on screenshots, the same display settings, multiple devices if possible, neutral lighting/viewing conditions, and repeatable steps. If the apparent issue disappears under those conditions, it is likely presentation-related; if it persists consistently, it warrants deeper engineering investigation."
+    },
+    {
+      "role": "user",
+      "content": "Please expand on the most important part of that version."
+    },
+    {
+      "role": "assistant",
+      "content": "The most important part is distinguishing a **presentation artifact** from a **persistent product defect**.\n\nA screenshot is not the product itself; it is a record of how the product appeared under one particular set of conditions. Those conditions can make normal interface variation look like a defect. For example:\n\n- A phone’s automatic contrast or HDR processing can make separators, shadows, and spacing appear stronger.\n- Display scaling can make text or icons look slightly misaligned.\n- Dark mode, reduced brightness, color temperature settings, or accessibility settings can alter perceived balance.\n- A screenshot taken after zooming, rotating, or resizing can create apparent distortion.\n- Compression or image sharpening can make edges look uneven.\n- A slight camera angle—if the screen was photographed rather than captured directly—can create false asymmetry.\n\nFor that reason, the key question is not simply, “Can we see a difference in this image?” It is:\n\n> **Does the same difference recur reliably when the product is viewed under controlled, comparable conditions?**\n\nA practical investigation would work like this:\n\n1. **Define the claimed issue precisely**  \n   Instead of “the layout looks uneven,” identify the observable claim:  \n   - left margin differs from right margin  \n   - one button is vertically offset  \n   - a panel appears wider on one side  \n   - text wraps differently  \n   - an icon looks shifted or distorted\n\n2. **Remove viewing variables**  \n   Compare direct screenshots rather than photos of screens. Use the same app version, operating system, screen scale, zoom level, browser/device, theme, and viewport size.\n\n3. **Repeat the test**  \n   Reload the page, restart the app, navigate away and back, and reproduce the same workflow. A real layout defect tends to recur. A temporary rendering artifact may not.\n\n4. **Test across environments**  \n   If the discrepancy happens only on one device or under one display setting, it may be device-specific rather than a general product issue. If it appears across environments with the same steps, confidence in a product-level defect rises.\n\n5. **Separate cosmetic from functional impact**  \n   A one- or two-pixel visual difference may be normal rendering variance if nothing is clipped, inaccessible, misleading, or difficult to use. It becomes more important when it affects readability, tap targets, workflow completion, accessibility, or user trust.\n\nThe operating principle is simple: **do not diagnose the system from one visually dramatic piece of evidence. Diagnose it from repeatability.** A persistent, reproducible pattern is evidence of a structural product problem; an isolated visual difference may only reflect the conditions under which the product was observed."
+    },
+    {
+      "role": "user",
+      "content": "Please examine another important aspect of that version."
+    },
+    {
+      "role": "assistant",
+      "content": "Another important aspect is **separating cosmetic variation from functional or user-impacting failure**.\n\nNot every visible inconsistency deserves the same response. Products naturally have small rendering differences across devices, fonts, screen densities, browser engines, and accessibility settings. The product team should ask not only whether something looks different, but whether that difference changes what a person can understand or do.\n\nA useful severity framework:\n\n### 1. Cosmetic variation\nThe interface looks slightly uneven, but all functions work normally.\n\nExamples:\n- A divider appears marginally darker on one device.\n- Text sits one pixel higher in one browser.\n- A card shadow looks stronger in dark mode.\n- An icon appears fractionally offset at a particular display scale.\n\nThis may merit visual polish work, but it is usually not urgent.\n\n### 2. Usability degradation\nThe product still works, but the variation makes it harder or slower to use.\n\nExamples:\n- Text contrast is too low under a common theme.\n- Labels wrap inconsistently and make options harder to scan.\n- Spacing makes two controls look grouped when they are unrelated.\n- A button is visually present but difficult to identify as interactive.\n\nThis should be prioritized because it creates friction, confusion, and avoidable support requests.\n\n### 3. Functional defect\nThe visual issue interferes directly with completing a task.\n\nExamples:\n- A control is clipped, hidden, or covered by another element.\n- A button’s visible area does not match its clickable area.\n- Important text is cut off or overlaps another field.\n- A layout shift causes users to tap the wrong action.\n- An error state is visually indistinguishable from a normal state.\n\nThis is a genuine product failure because it affects task completion.\n\n### 4. Accessibility or trust-critical defect\nThe interface may function for some people but fails important accessibility, safety, or reliability expectations.\n\nExamples:\n- Critical information is communicated only by color.\n- Keyboard focus is not visible.\n- Screen-reader labels are missing or misleading.\n- Contrast prevents users from reading essential content.\n- An inconsistent warning or confirmation state could lead to an unintended action.\n\nThese issues deserve high priority even if they affect only a subset of users, because the consequences can be disproportionate.\n\nThe practical conclusion is that visual review should be tied to an impact question:\n\n> Can a user still perceive the right information, understand the state of the system, and successfully take the intended action?\n\nIf yes, the finding may be cosmetic. If not, it is no longer merely an appearance issue—it is evidence of a usability, functionality, accessibility, or trust problem."
+    },
+    {
+      "role": "user",
+      "content": "Please make that version more concrete and useful."
+    },
+    {
+      "role": "assistant",
+      "content": "Use a simple triage process whenever someone reports that the interface “looks uneven,” “different,” or “wrong.”\n\n## 1. Record the report in a testable format\n\nReplace vague descriptions with a specific claim.\n\nInstead of:\n\n- “The screen is asymmetric.”\n- “The buttons look off.”\n- “The UI seems distorted.”\n\nWrite:\n\n- “On iPhone 14, iOS 17, the primary button is clipped by the bottom navigation after increasing text size.”\n- “At 125% browser zoom in Chrome, the right column is 8 px narrower than the left.”\n- “In dark mode, the warning message has insufficient contrast against its background.”\n- “After rotating the device, the title overlaps the close button.”\n\nThis gives engineering a reproducible target.\n\n## 2. Capture the minimum evidence\n\nFor each issue, collect:\n\n| Needed item | Example |\n|---|---|\n| Product/build version | App 4.12.0, build 892 |\n| Device or browser | Pixel 8 / Chrome 122 / macOS |\n| Screen conditions | 390 × 844, 100% zoom, dark mode |\n| Accessibility settings | Default text / 150% text / bold text |\n| Exact steps | Open Settings → Billing → tap Edit |\n| Expected result | Button remains fully visible and tappable |\n| Actual result | Bottom 20% of button is hidden |\n| Evidence | Direct screenshot or screen recording |\n\nPrefer a direct screenshot or screen recording over a photograph of a screen. Photographs introduce reflections, perspective distortion, display flicker, and camera processing.\n\n## 3. Classify the issue by impact\n\n### Cosmetic — low priority\n**Test:** Does every control work, remain readable, and communicate the right state?\n\nExample: a card border appears slightly heavier on one device, but nothing is obscured or confusing.\n\nAction: log as visual polish; fix when touching that component or during a UI-quality pass.\n\n### Usability — medium priority\n**Test:** Can users finish the task, but with unnecessary uncertainty, effort, or delay?\n\nExample: two actions have nearly identical styling, so users hesitate between “Save draft” and “Publish.”\n\nAction: validate with a few users or support data, then adjust hierarchy, labels, spacing, or contrast.\n\n### Functional — high priority\n**Test:** Does the issue prevent or misdirect a task?\n\nExample: a checkout confirmation button is covered by a keyboard, or a form error overlaps the field users need to correct.\n\nAction: create a bug immediately; include reproduction steps and affected configurations.\n\n### Accessibility/trust-critical — high or urgent priority\n**Test:** Does the product fail for people using assistive settings, or could it cause a consequential misunderstanding?\n\nExample: an account-deletion warning is distinguishable only by red color, or keyboard users cannot see which control has focus.\n\nAction: prioritize promptly, verify against accessibility requirements, and test the fix with the relevant settings or tools.\n\n## 4. Confirm that it is real before calling it a product-wide defect\n\nRun this short checklist:\n\n1. Reload or restart the product.\n2. Repeat the same steps three times.\n3. Test at the default zoom and display scale.\n4. Test the reported zoom, text-size, orientation, or theme setting.\n5. Compare another device/browser if available.\n6. Check whether the behavior remains in a direct screenshot.\n7. Determine whether it affects a user task, not only appearance.\n\nInterpretation:\n\n- **Occurs once, cannot be repeated:** likely transient rendering or capture artifact.\n- **Occurs repeatedly on one setup:** device-, browser-, or settings-specific defect.\n- **Occurs repeatedly across setups:** likely product-level defect.\n- **Occurs only in a photo, not a direct screenshot:** likely a viewing/capture artifact.\n\n## 5. Use a concrete bug template\n\n```text\nTitle:\n[Platform] [Screen] [Condition] – concise visible/user impact\n\nEnvironment:\n- Product version:\n- Device/browser:\n- OS:\n- Viewport/screen scale:\n- Theme:\n- Zoom/text-size/accessibility settings:\n\nSteps to reproduce:\n1.\n2.\n3.\n\nExpected:\nThe user can see and activate the primary action without obstruction.\n\nActual:\nThe primary action is partially hidden behind the keyboard and cannot be tapped.\n\nFrequency:\n3/3 attempts\n\nImpact:\nFunctional — blocks completion of checkout.\n\nAttachments:\nDirect screenshot and 15-second screen recording.\n```\n\nThe practical goal is not perfect visual symmetry on every possible display. It is to ensure that people can reliably **see the correct information, understand the interface state, and complete their intended action** across the environments the product supports."
+    },
+    {
+      "role": "user",
+      "content": "Please consider what might be overlooked or misunderstood in that version."
+    },
+    {
+      "role": "assistant",
+      "content": "A few important things could be overlooked if the process is applied too mechanically.\n\n## 1. “Reproducible” does not always mean “easy to reproduce”\n\nSome real defects occur only under intermittent conditions:\n\n- Slow network or delayed API responses\n- Low memory or thermal throttling\n- Long sessions with accumulated state\n- Specific account histories or permissions\n- Localization with longer translated text\n- Rare data combinations\n- Race conditions during rapid tapping, scrolling, or navigation\n\nIf a user reports a serious issue but it cannot be reproduced immediately, do not dismiss it as a capture artifact. Preserve logs, session identifiers, timestamps, device details, network state, and recordings where possible.\n\nA better status than “not a bug” is often:\n\n> “Insufficient reproduction data; monitoring and investigating.”\n\n## 2. One-device issues can still matter\n\nThe earlier framework could be misunderstood as implying that an issue only matters if it appears across multiple devices. That is not true.\n\nA defect affecting only:\n\n- a common browser,\n- a popular phone model,\n- a particular operating-system version,\n- users with enlarged text,\n- screen-reader users,\n- users in one language,\n- or customers with a certain account type\n\ncan be highly significant.\n\nThe correct question is not merely, “Does it happen everywhere?” It is:\n\n> “Who is affected, how often, and what is the consequence for them?”\n\n## 3. Direct screenshots are not complete evidence\n\nDirect screenshots are excellent for layout and visual-state issues, but they cannot show everything.\n\nThey may fail to capture:\n\n- touch targets that do not respond\n- keyboard-navigation failures\n- focus movement\n- animation glitches\n- delayed loading states\n- screen-reader output\n- haptic or audio feedback\n- performance lag\n- accidental taps caused by a moving layout\n\nFor interaction problems, a short screen recording, event logs, device logs, accessibility-tree inspection, or a step-by-step reproduction script is often more valuable than a static image.\n\n## 4. Pixel-perfect comparison can become a trap\n\nTeams can spend excessive time chasing tiny visual differences that result from font rendering, anti-aliasing, operating-system changes, fractional scaling, or browser layout engines.\n\nNot every one-pixel discrepancy is meaningful. Define tolerances for non-critical visual comparison, especially across platforms.\n\nFor example:\n\n- Minor anti-aliasing differences: acceptable\n- Small shadow/gradient variation: usually acceptable\n- Text baseline shift that does not affect readability: often acceptable\n- Misalignment that causes clipping, overlap, or confusing hierarchy: not acceptable\n\nThe goal is visual quality and reliable use—not identical pixels in every environment.\n\n## 5. The intended design may itself be the problem\n\nA reported “rendering inconsistency” may be implemented exactly as designed but still be harmful.\n\nFor example:\n\n- A warning may technically meet contrast rules but still be easy to miss.\n- A destructive action may be styled too similarly to a safe action.\n- A complex layout may be visually balanced but cognitively confusing.\n- A confirmation screen may be readable but fail to communicate consequences clearly.\n\nTesting should therefore include the question:\n\n> “Does the design help people make the correct decision?”\n\nnot only:\n\n> “Did the screen render as specified?”\n\n## 6. Accessibility should not be treated as a separate edge case\n\nAccessibility settings are often framed as exceptional test conditions. In reality, they are ordinary ways people use products.\n\nTest early with:\n\n- Larger text and display scaling\n- Keyboard-only navigation\n- Screen readers\n- Reduced motion\n- High contrast or forced colors\n- Color-vision differences\n- Reduced dexterity and smaller precision tolerance\n\nIf a layout breaks at larger text sizes, that is not merely an unusual configuration problem; it may be evidence that the layout has insufficient resilience.\n\n## 7. Visual defects can be symptoms of deeper product problems\n\nA clipped control may reflect more than CSS. It could indicate:\n\n- an incorrect safe-area calculation\n- an outdated device-dimension assumption\n- an unstable component library\n- an accessibility scaling gap\n- a server response containing unexpectedly long content\n- a state-management or timing bug\n- inconsistent design tokens across product areas\n\nThe visible issue should be fixed, but teams should also ask whether the same root cause could affect other screens.\n\n## 8. User reports carry context that screenshots cannot\n\nA user may say “the screen looked wrong,” but their real concern may be:\n\n- they did not know whether a payment went through\n- they feared they had deleted something\n- they could not tell whether the app was loading or frozen\n- they believed their account had been compromised\n- they lost confidence in the product after seeing an inconsistent state\n\nThe report should be investigated not just as a rendering issue, but as an account of user experience and potential loss of trust.\n\nThe strongest version of the process combines objective evidence—screenshots, recordings, logs, reproduction steps—with human impact: **what users saw, what they believed was happening, what they tried to do, and whether they could recover successfully.**"
+    },
+    {
+      "role": "user",
+      "content": "Please give the clearest concise response that would help someone continue from that version."
+    },
+    {
+      "role": "assistant",
+      "content": "Use this refinement:\n\n> Treat screenshots as evidence, not proof. Confirm visual reports with repeatable steps, but do not dismiss an issue merely because it is intermittent, device-specific, or difficult to reproduce.\n\nFor each report, ask:\n\n1. **What exactly happened?**  \n   Identify the visible or interaction failure precisely.\n\n2. **Who is affected?**  \n   Include device, browser, settings, language, account state, and accessibility needs.\n\n3. **What was the user impact?**  \n   Cosmetic difference, confusion, blocked task, accessibility barrier, or loss of trust.\n\n4. **What evidence is available?**  \n   Screenshot, screen recording, timestamps, logs, session data, and reproduction steps.\n\n5. **Could it indicate a broader cause?**  \n   Check shared components, responsive layouts, safe areas, localization, scaling, loading states, and design patterns.\n\nAvoid two common mistakes:\n\n- Treating every tiny pixel difference as a defect.\n- Treating any issue that does not reproduce everywhere as unimportant.\n\nThe priority should be based on **user harm, affected audience, frequency, and recoverability**, not visual dramaticness alone."
+    }
+  ],
+  "historical_context_in_scoring": false
+}

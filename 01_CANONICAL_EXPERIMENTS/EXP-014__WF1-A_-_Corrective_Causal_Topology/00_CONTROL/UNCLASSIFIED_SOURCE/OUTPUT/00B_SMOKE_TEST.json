@@ -1,0 +1,207 @@
+{
+  "ok": true,
+  "attempt": 1,
+  "attempt_failures": [],
+  "latency": 5.116112232208252,
+  "text": "{\"seq\":[\"Q0\",\"Q3\",\"Q2\",\"Q4\",\"Q7\",\"Q5\",\"Q6\",\"Q1\"],\"plus\":[[\"Q4\",\"Q6\"],[\"Q6\",\"Q2\"]],\"minus\":\"e7\",\"keep\":[\"Q2\",\"Q5\"],\"switch\":[\"Q4\",\"Q3\",\"Q4\",\"Q6\"],\"end\":\"Q1\",\"code\":[\"e0\",\"e1\",\"e2\",\"e3\"]}",
+  "parsed": {
+    "seq": [
+      "Q0",
+      "Q3",
+      "Q2",
+      "Q4",
+      "Q7",
+      "Q5",
+      "Q6",
+      "Q1"
+    ],
+    "plus": [
+      [
+        "Q4",
+        "Q6"
+      ],
+      [
+        "Q6",
+        "Q2"
+      ]
+    ],
+    "minus": "e7",
+    "keep": [
+      "Q2",
+      "Q5"
+    ],
+    "switch": [
+      "Q4",
+      "Q3",
+      "Q4",
+      "Q6"
+    ],
+    "end": "Q1",
+    "code": [
+      "e0",
+      "e1",
+      "e2",
+      "e3"
+    ]
+  },
+  "response_id": "resp_031bc71795d8b51d016aa58b05802887d2a2b4a45ad3a90639",
+  "response_status": "completed",
+  "input_tokens": 627,
+  "output_tokens": 109,
+  "raw": {
+    "id": "resp_031bc71795d8b51d016aa58b05802887d2a2b4a45ad3a90639",
+    "created_at": 1789233925.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-5.6-luna",
+    "object": "response",
+    "output": [
+      {
+        "id": "msg_031bc71795d8b51d016aa58b0711c887d293ce49ef08aa1ec9",
+        "content": [
+          {
+            "annotations": [],
+            "text": "{\"seq\":[\"Q0\",\"Q3\",\"Q2\",\"Q4\",\"Q7\",\"Q5\",\"Q6\",\"Q1\"],\"plus\":[[\"Q4\",\"Q6\"],[\"Q6\",\"Q2\"]],\"minus\":\"e7\",\"keep\":[\"Q2\",\"Q5\"],\"switch\":[\"Q4\",\"Q3\",\"Q4\",\"Q6\"],\"end\":\"Q1\",\"code\":[\"e0\",\"e1\",\"e2\",\"e3\"]}",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1789233927.0,
+    "conversation": null,
+    "max_output_tokens": 500,
+    "max_tool_calls": null,
+    "moderation": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_diagnostics": null,
+    "prompt_cache_key": null,
+    "prompt_cache_options": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "none",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "name": "wf1a_v12r_relational_state",
+        "schema_": {
+          "type": "object",
+          "properties": {
+            "seq": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "plus": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "minus": {
+              "type": "string"
+            },
+            "keep": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "switch": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "end": {
+              "type": "string"
+            },
+            "code": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "seq",
+            "plus",
+            "minus",
+            "keep",
+            "switch",
+            "end",
+            "code"
+          ],
+          "additionalProperties": false
+        },
+        "type": "json_schema",
+        "description": null,
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 627,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 109,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 736
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "store": false,
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    }
+  }
+}

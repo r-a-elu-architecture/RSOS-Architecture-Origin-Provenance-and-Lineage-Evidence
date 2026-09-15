@@ -1,0 +1,14 @@
+MEASUREMENT,STATUS,REASON
+R1_COLUMN_SHUFFLE_GENERIC_DEPENDENCE,RERUN_HARDENED,Residualized features + nuisance-stratified shuffle
+COVARIANCE_MATCHED_NULL,RUN,Gaussian/covariance-matched null added
+CODE_STRATIFIED_ANALYSIS,RUN,ALL + CODE + NONCODE all retained
+PHYSICAL_HOLDOUT_SEAL,RUN,Holdout opened only after frozen models/spec hash
+EXECUTABLE_FREEZE,RUN,Residualizers/QT/PCA/KMeans/classifiers serialized and hashed
+PROVIDER_CLUSTER_ASSOCIATION,RUN,Cramer's V + AMI/NMI
+PROVIDER_CONTINUOUS_PREDICTABILITY,RUN,Direct holdout multiclass prediction
+MODEL_CLUSTER_ASSOCIATION,RUN,Cramer's V + AMI/NMI
+MODEL_CONTINUOUS_PREDICTABILITY,NOT_RUN,High-cardinality optional audit; explicitly recorded
+RSOS_SPECIFIC_BLIND_MAPPING,UNTESTED,Requires separate target-construct stage; R2 does not infer absence
+PLANTED_RSOS_TOPOLOGY_POSITIVES,UNTESTED,Requires sequence/graph extractor rather than aggregate formatting features
+F2_EXTERNAL_00086_RARITY,RESERVED_NOT_READ,External controls remain sealed
+F3_PROSPECTIVE_CONFIRMATION,NOT_ELIGIBLE,Historical LM Arena development data

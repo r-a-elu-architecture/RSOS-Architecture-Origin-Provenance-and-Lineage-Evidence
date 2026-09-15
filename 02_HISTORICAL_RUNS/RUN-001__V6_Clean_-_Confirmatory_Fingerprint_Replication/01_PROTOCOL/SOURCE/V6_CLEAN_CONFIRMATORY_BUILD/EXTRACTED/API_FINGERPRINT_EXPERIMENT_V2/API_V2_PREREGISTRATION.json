@@ -1,0 +1,44 @@
+{
+  "experiment": "API_FINGERPRINT_EXPERIMENT_V2",
+  "created_utc": "2026-09-10T17:54:53.079614+00:00",
+  "experiment_seed": 918,
+  "model": "gpt-5.6-luna",
+  "seed_count": 100,
+  "repetitions_per_seed_condition": 5,
+  "conditions": [
+    "T0_TOPOLOGY_PRESERVED_LEXICAL_NEUTRAL",
+    "T1_VOCAB_PRESERVED_TOPOLOGY_SHUFFLED",
+    "T2_SAME_INGREDIENTS_DECOUPLED",
+    "T3_ORDER_SHUFFLED",
+    "T4_REENTRY_ABLATED",
+    "T5_RECURSION_ONLY",
+    "T6_DENSITY_MATCHED_NONTOPological",
+    "T7_GENERIC_COMPLEX_CONTROL"
+  ],
+  "expected_calls": 4000,
+  "max_output_tokens": 260,
+  "max_workers": 20,
+  "primary_hypotheses": [
+    "T0 > T1 under the frozen seven-edge detector",
+    "T0 > T2 under the frozen seven-edge detector"
+  ],
+  "secondary_hypotheses": [
+    "T0 > T3",
+    "T0 > T4",
+    "T0 > T5",
+    "T0 > T6",
+    "T0 > T7"
+  ],
+  "primary_analysis_unit": "seed",
+  "analysis_rule": "Average repetitions within each seed-condition first. Primary inference must use paired seed-level comparisons. Individual calls must not be treated as 4000 independent experimental units.",
+  "measurement_lock": "Score outputs only with the already-frozen historical Dynamics motif detector and frozen kernel-family mapping. Do not edit detector patterns after seeing V2 outputs.",
+  "claim_boundary": [
+    "Behavioral structural sensitivity only",
+    "No inference of weight storage",
+    "No inference of identity recognition",
+    "No inference of cross-user transfer",
+    "No inference of hidden-state persistence",
+    "No inference of historical training incorporation"
+  ],
+  "preregistration_sha256_before_collection": "72ad2e5d1122a082d9042177353969ff8306202c50dfe0b32e1ba170e60fc97b"
+}

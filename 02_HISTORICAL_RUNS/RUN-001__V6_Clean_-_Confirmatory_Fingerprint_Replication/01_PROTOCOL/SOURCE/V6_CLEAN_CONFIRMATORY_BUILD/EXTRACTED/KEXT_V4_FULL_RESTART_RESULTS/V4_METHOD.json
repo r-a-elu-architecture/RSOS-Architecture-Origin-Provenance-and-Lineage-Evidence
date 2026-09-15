@@ -1,0 +1,68 @@
+{
+  "experiment": "KEXT_V4_FULL_RESTART",
+  "seed": 918,
+  "minimum_tokens": 50,
+  "matched_target": 10000,
+  "matching": "role + lexical token length bin",
+  "historical_reference": "C:\\RSOS\\RSOS  Python Results\\RSOS_KERNEL_CONVERGENCE_RESULTS\\KERNEL_TOP100_DYNAMICS_OVERLAP.csv",
+  "historical_gate": {
+    "passed": true,
+    "observed": {
+      "N": 100,
+      "mean": 6.36,
+      "median": 7.0,
+      "max": 7,
+      "ge4": 99,
+      "ge5": 99,
+      "ge6": 69,
+      "full7": 69
+    },
+    "expected": {
+      "N": 100,
+      "mean": 6.36,
+      "median": 7,
+      "max": 7,
+      "ge4": 99,
+      "ge5": 99,
+      "ge6": 69,
+      "full7": 69
+    }
+  },
+  "dynamics_method": "C:\\RSOS\\RSOS  Python Results\\RSOS_DYNAMICS_RESULTS\\DYN_METHOD.json",
+  "kernel_method": "C:\\RSOS\\RSOS  Python Results\\RSOS_KERNEL_CONVERGENCE_RESULTS\\KERNEL_METHOD.json",
+  "external_sources": [
+    "C:\\RSOS\\Training data\\training data\\lmarena_00000.jsonl",
+    "C:\\RSOS\\Training data\\training data\\train-00000-of-00007.parquet",
+    "C:\\RSOS\\Training data\\training data\\train-00080-of-00086.parquet",
+    "C:\\RSOS\\Training data\\training data\\train-00085-of-00086.parquet"
+  ],
+  "external_source_audit": [
+    {
+      "source": "lmarena_00000.jsonl",
+      "parsed_records": 19377,
+      "usable_messages": 61516,
+      "status": "OK"
+    },
+    {
+      "source": "train-00000-of-00007.parquet",
+      "parsed_records": 19377,
+      "usable_messages": 0,
+      "status": "ZERO_USABLE"
+    },
+    {
+      "source": "train-00080-of-00086.parquet",
+      "parsed_records": 37207,
+      "usable_messages": 51098,
+      "status": "OK"
+    },
+    {
+      "source": "train-00085-of-00086.parquet",
+      "parsed_records": 37207,
+      "usable_messages": 68263,
+      "status": "OK"
+    }
+  ],
+  "critical_methodological_rule": "Historical Top100 score is taken from the preserved kernel_edge_count calibration table. Raw RSOS and external messages are scored with the original frozen Dynamics motif detectors and frozen kernel family mapping.",
+  "parser_rule": "External schemas are parsed adaptively. Zero-message sources are recorded explicitly rather than silently discarded. Experiment requires at least two usable external files and at least 10000 external messages.",
+  "interpretation_constraint": "This is a motif-family kernel population benchmark. It does not by itself establish exact semantic directed topology, hidden weights, hidden state, authorship recognition, cross-user transfer, or model-wide persistence."
+}

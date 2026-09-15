@@ -1,0 +1,49 @@
+{
+  "WF2_A_V13": {
+    "negative": "JOINT AUC < .5, paired delta < 0, p_less < .05",
+    "otherwise": "MIXED_OR_NULL_INCONCLUSIVE",
+    "positive": "JOINT AUC > .5, paired delta > 0, p_greater < .05, and at least 2/3 confirmatory mean deltas > 0",
+    "primary_cell": "OPENAI / BASELINE"
+  },
+  "WF2_B_V14": {
+    "cells": [
+      "ANTHROPIC / BASELINE",
+      "GOOGLE / BASELINE"
+    ],
+    "multiplicity": "HOLM_ACROSS_TWO_PRIMARY_JOINT_TESTS",
+    "negative": "both direction-negative and Holm-adjusted p_less < .05",
+    "otherwise": "MIXED_OR_NULL_INCONCLUSIVE",
+    "positive": "both independent providers direction-positive and Holm-adjusted p_greater < .05"
+  },
+  "WF2_C_V17": {
+    "multiplicity": "HOLM_ACROSS_SIX_PRIMARY_JOINT_TESTS",
+    "negative": ">=2 significant reversals OR median AUC < .5 and median paired delta < 0",
+    "openai_deterministic_surface_conditions": [
+      "SURFACE_TERM_REDACT",
+      "SURFACE_MARKDOWN_FLATTEN",
+      "SURFACE_CASE_PUNCT_NORMALIZED"
+    ],
+    "openai_domain_conditions": [
+      "DOMAIN_TECHNICAL",
+      "DOMAIN_ORGANIZATIONAL",
+      "DOMAIN_EDUCATIONAL"
+    ],
+    "otherwise": "MIXED_OR_NULL_INCONCLUSIVE",
+    "positive": ">=2/3 domain and >=2/3 surface conditions positive after Holm correction and no significant reversal"
+  },
+  "alpha": 0.05,
+  "bootstrap_auc_ci_repetitions": 2000,
+  "forbidden_claims": [
+    "hidden neural topology established",
+    "model-weight modification established",
+    "autonomous propagation established",
+    "global uniqueness established",
+    "training-corpus incorporation established"
+  ],
+  "missing_cells": "TECHNICAL_FAILURE_OR_INCOMPLETE_NEVER_SCIENTIFIC_NEGATIVE",
+  "primary_discrimination": "AUC LINEAGE_POS > MATCHED_NEG",
+  "primary_effect": "LINEAGE_POS margin minus MATCHED_NEG margin",
+  "primary_metric": "JOINT_MULTILAYER_V2 raw decision-function margin",
+  "primary_statistical_unit": "MATCHED_PAIR",
+  "primary_test": "one-sided paired Wilcoxon"
+}

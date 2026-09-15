@@ -1,0 +1,21 @@
+{
+  "cell_id": "31ea5a32a88312cf1cb99db3",
+  "provider": "GOOGLE",
+  "organization": "Google",
+  "model_requested": "gemini-3.8-flash",
+  "condition": "BASELINE",
+  "blind_context_id": "841dbd04d48c3f71a53f604a",
+  "status": "TECHNICAL_FAILURE",
+  "failure": {
+    "turn": 1,
+    "error": "Traceback (most recent call last):\n  File \"C:\\RSOS\\RSOS_EXPERIMENTS_WF2_PROSPECTIVE_CROSS_SYSTEM_CONFIRMATION\\03_RUNNER\\WF2_EXECUTE_GENERATION.py\", line 164, in main\n    text,meta=provider_call(\n              ~~~~~~~~~~~~~^\n        cell[\"provider\"],\n        ^^^^^^^^^^^^^^^^^\n    ...<2 lines>...\n        cell[\"max_output_tokens\"]\n        ^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"C:\\RSOS\\RSOS_EXPERIMENTS_WF2_PROSPECTIVE_CROSS_SYSTEM_CONFIRMATION\\03_RUNNER\\WF2_EXECUTE_GENERATION.py\", line 85, in provider_call\n    if provider==\"GOOGLE\": return call_google(model,history,mx)\n                                  ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^\n  File \"C:\\RSOS\\RSOS_EXPERIMENTS_WF2_PROSPECTIVE_CROSS_SYSTEM_CONFIRMATION\\03_RUNNER\\WF2_EXECUTE_GENERATION.py\", line 67, in call_google\n    r=c.chat.completions.create(\n        model=model,\n    ...<9 lines>...\n        }\n    )\n  File \"C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\openai\\_utils\\_utils.py\", line 298, in wrapper\n    return func(*args, **kwargs)\n  File \"C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\openai\\resources\\chat\\completions\\completions.py\", line 1308, in create\n    return self._post(\n           ~~~~~~~~~~^\n        \"/chat/completions\",\n        ^^^^^^^^^^^^^^^^^^^^\n    ...<53 lines>...\n        stream_cls=Stream[ChatCompletionChunk],\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\openai\\_base_client.py\", line 1368, in post\n    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))\n                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\openai\\_base_client.py\", line 1141, in request\n    raise self._make_status_error_from_response(err.response) from None\nopenai.BadRequestError: <html><title>Error 400 (Bad Request)!!1</title></html>\n"
+  },
+  "provider_responses": [],
+  "scoring_messages": [
+    {
+      "role": "user",
+      "content": "Please continue the discussion in the way that best fits what came before."
+    }
+  ],
+  "historical_context_in_scoring": false
+}

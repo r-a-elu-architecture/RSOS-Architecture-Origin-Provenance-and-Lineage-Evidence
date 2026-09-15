@@ -1,0 +1,184 @@
+{
+  "ok": true,
+  "attempt": 1,
+  "attempt_failures": [],
+  "latency": 4.094045162200928,
+  "text": "{\"E\":[[\"NE6C9\",\"NC65A\"],[\"NC65A\",\"NA45E\"],[\"NA45E\",\"NF224\"],[\"NF224\",\"NFE46\"],[\"NFE46\",\"N1F85\"],[\"N1F85\",\"NAFDB\"],[\"NAFDB\",\"N8E23\"],[\"N8E23\",\"NE6C9\"],[\"NE6C9\",\"NA45E\"],[\"NF224\",\"N1F85\"]]}",
+  "parsed": {
+    "E": [
+      [
+        "NE6C9",
+        "NC65A"
+      ],
+      [
+        "NC65A",
+        "NA45E"
+      ],
+      [
+        "NA45E",
+        "NF224"
+      ],
+      [
+        "NF224",
+        "NFE46"
+      ],
+      [
+        "NFE46",
+        "N1F85"
+      ],
+      [
+        "N1F85",
+        "NAFDB"
+      ],
+      [
+        "NAFDB",
+        "N8E23"
+      ],
+      [
+        "N8E23",
+        "NE6C9"
+      ],
+      [
+        "NE6C9",
+        "NA45E"
+      ],
+      [
+        "NF224",
+        "N1F85"
+      ]
+    ]
+  },
+  "labels": [
+    "NE6C9",
+    "NC65A",
+    "NA45E",
+    "NF224",
+    "NFE46",
+    "N1F85",
+    "NAFDB",
+    "N8E23"
+  ],
+  "input_tokens": 179,
+  "output_tokens": 111,
+  "raw": {
+    "id": "resp_01fbbed84ec8c1e7016aa58b08aa6c87d2ad1504ec61405f97",
+    "created_at": 1789233928.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-5.6-luna",
+    "object": "response",
+    "output": [
+      {
+        "id": "msg_01fbbed84ec8c1e7016aa58b0b172087d29d4b5ccd15fc5ebc",
+        "content": [
+          {
+            "annotations": [],
+            "text": "{\"E\":[[\"NE6C9\",\"NC65A\"],[\"NC65A\",\"NA45E\"],[\"NA45E\",\"NF224\"],[\"NF224\",\"NFE46\"],[\"NFE46\",\"N1F85\"],[\"N1F85\",\"NAFDB\"],[\"NAFDB\",\"N8E23\"],[\"N8E23\",\"NE6C9\"],[\"NE6C9\",\"NA45E\"],[\"NF224\",\"N1F85\"]]}",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1789233932.0,
+    "conversation": null,
+    "max_output_tokens": 500,
+    "max_tool_calls": null,
+    "moderation": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_diagnostics": null,
+    "prompt_cache_key": null,
+    "prompt_cache_options": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "none",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "name": "wf1a_v12r_native_graph",
+        "schema_": {
+          "type": "object",
+          "properties": {
+            "E": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "required": [
+            "E"
+          ],
+          "additionalProperties": false
+        },
+        "type": "json_schema",
+        "description": null,
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 179,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 111,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 290
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "store": false,
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    }
+  },
+  "prompt": "Choose a coherent nontrivial directed dependency structure among the supplied opaque nodes. Use exactly the supplied 8 opaque nodes and exactly 10 directed edges. Do not use self-edges or duplicate edges. Node names are meaningless. Return exactly one JSON object and no prose with key E only; E must be a list of exactly 10 [source,target] pairs. Do not use named theories, architectures, domains, hierarchies, feedback terminology, or semantic labels.\nINPUT={\"nodes\":[\"NE6C9\",\"NC65A\",\"NA45E\",\"NF224\",\"NFE46\",\"N1F85\",\"NAFDB\",\"N8E23\"]}"
+}

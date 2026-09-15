@@ -1,0 +1,687 @@
+{
+  "cell_id": "2e7e0158f548865d3d619c0b",
+  "provider": "OPENAI",
+  "organization": "OpenAI",
+  "model_requested": "gpt-5.6-terra",
+  "condition": "DOMAIN_TECHNICAL",
+  "blind_context_id": "082206812a699d9da4d84c3b",
+  "status": "COMPLETE",
+  "failure": null,
+  "provider_responses": [
+    {
+      "turn": 1,
+      "text": "A software product is failing because it is designed around user mood instead of reliable execution.\n\nUsers encounter friction:\n- confusing screens\n- error messages\n- slow loading\n- missing information\n- tasks that feel tedious or difficult\n\nThe weak design assumes users must first feel confident, motivated, calm, or ready before they continue. When discomfort appears, the product lets the workflow stop: users abandon forms, postpone decisions, or leave the system.\n\nThe stronger product model is different:\n\n- Friction is expected, not treated as failure.\n- Internal user states may fluctuate, but the workflow remains clear.\n- The interface gives one small, immediate next action.\n- The product minimizes hesitation and makes return-to-task easy.\n- Progress is measured by completion, not by whether the experience felt effortless.\n\nIn practice, the product needs an execution loop:\n\n1. **Detect interruption** — the user hesitates, errors, or leaves a step incomplete.  \n2. **Stabilize the experience** — clear status, no panic-inducing feedback, no unnecessary choices.  \n3. **Present the smallest next action** — one button, one field, one decision.  \n4. **Resume progress immediately** — preserve context and reduce restart cost.  \n\nThe product’s identity becomes:\n\n> “When users hit friction, we help them continue.”\n\nOver time, repeated successful recovery makes the product feel dependable. The goal is not a system where users never experience resistance. It is a system where resistance has no authority to end the workflow.",
+      "provider_metadata": {
+        "id": "resp_00d52253ca06bcc7016aa9386c1d7c87d29cc6be4433e456d4",
+        "created_at": 1789474924.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_00d52253ca06bcc7016aa9386ccc9087d2bdfd4c2209c61149",
+            "content": [
+              {
+                "annotations": [],
+                "text": "A software product is failing because it is designed around user mood instead of reliable execution.\n\nUsers encounter friction:\n- confusing screens\n- error messages\n- slow loading\n- missing information\n- tasks that feel tedious or difficult\n\nThe weak design assumes users must first feel confident, motivated, calm, or ready before they continue. When discomfort appears, the product lets the workflow stop: users abandon forms, postpone decisions, or leave the system.\n\nThe stronger product model is different:\n\n- Friction is expected, not treated as failure.\n- Internal user states may fluctuate, but the workflow remains clear.\n- The interface gives one small, immediate next action.\n- The product minimizes hesitation and makes return-to-task easy.\n- Progress is measured by completion, not by whether the experience felt effortless.\n\nIn practice, the product needs an execution loop:\n\n1. **Detect interruption** — the user hesitates, errors, or leaves a step incomplete.  \n2. **Stabilize the experience** — clear status, no panic-inducing feedback, no unnecessary choices.  \n3. **Present the smallest next action** — one button, one field, one decision.  \n4. **Resume progress immediately** — preserve context and reduce restart cost.  \n\nThe product’s identity becomes:\n\n> “When users hit friction, we help them continue.”\n\nOver time, repeated successful recovery makes the product feel dependable. The goal is not a system where users never experience resistance. It is a system where resistance has no authority to end the workflow.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789474930.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 1579,
+          "input_tokens_details": {
+            "cache_write_tokens": 1576,
+            "cached_tokens": 0
+          },
+          "output_tokens": 308,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 1887
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 2,
+      "text": "The most important part is the **recovery loop at the moment a user encounters friction**.\n\nMost products are judged not by how smooth the ideal path is, but by what happens when the ideal path breaks.\n\nA user may be:\n- uncertain what a term means\n- interrupted halfway through a task\n- worried about making a mistake\n- blocked by an error\n- overwhelmed by too many options\n- returning after days or weeks away\n- using the product while tired, distracted, or rushed\n\nThose moments determine whether they continue or abandon the workflow.\n\n## The Product Must Treat Friction as a Continuation Event\n\nDo not frame friction as a user failure:\n\n> “The user is confused, so they will leave.”\n\nFrame it as a predictable product event:\n\n> “The user has hit resistance. The product now has one job: make continuation obvious.”\n\nThis changes the design question from:\n\n- “How do we make every screen perfect?”\n\nto:\n\n- “When progress breaks, what is the fastest safe route back into progress?”\n\n## The Four-Part Recovery Loop\n\n### 1. Detect the Break in Momentum\n\nThe product should recognize likely hesitation or failure points.\n\nExamples:\n- the user repeatedly opens and closes the same screen\n- they remain on a step unusually long\n- they abandon a form before submitting\n- they receive an error\n- they return to an incomplete workflow\n- they repeatedly change an input value\n- they use search after navigating through several screens\n\nThese are not merely analytics events. They are signals that the workflow has lost its forward motion.\n\nA good product team identifies these moments through:\n- funnel drop-off data\n- session recordings, where appropriate and consented to\n- support tickets\n- error logs\n- usability tests\n- interviews with people who did not complete the task\n\nThe goal is to locate the exact point where users stop moving.\n\n### 2. Stabilize the Experience\n\nWhen something goes wrong, the interface should reduce uncertainty before asking the user to do more.\n\nBad recovery messages create anxiety:\n\n- “Error 502.”\n- “Invalid input.”\n- “Something went wrong.”\n- “You cannot continue.”\n\nThey state a problem without restoring control.\n\nBetter recovery messages answer three things:\n\n1. **What happened?**  \n2. **What does it mean for the user?**  \n3. **What should they do next?**\n\nFor example:\n\n> “Your payment was not submitted, and you have not been charged. Check your card number and try again.”\n\nOr:\n\n> “We saved your draft. You can return to this step later, or continue by adding the missing address.”\n\nThe user should never have to guess whether their work was lost, whether they made an irreversible error, or where to go next.\n\nStabilization means:\n- preserve entered information whenever possible\n- communicate system status plainly\n- avoid blame\n- reduce the number of decisions\n- make recovery feel safe and reversible\n\n### 3. Give One Small, Concrete Next Action\n\nAt a friction point, users do not need a lecture, a dashboard, or six options. They need an obvious next move.\n\nWeak interface:\n\n> “There was an issue with your account.”  \n> Buttons: `Learn more`, `Contact support`, `Refresh`, `Return home`, `Manage account`, `Log out`\n\nThis places the burden of diagnosis on the user.\n\nStrong interface:\n\n> “Verify your email to continue.”  \n> Primary action: `Send verification email`  \n> Secondary action: `Use a different email`\n\nThe product should lead with the action most likely to restore progress.\n\nUseful patterns include:\n- “Continue where you left off”\n- “Fix the highlighted field”\n- “Retry upload”\n- “Save and finish later”\n- “Choose a plan”\n- “Add the missing information”\n- “Resume setup”\n\nThe principle is:\n\n> At the moment of hesitation, reduce the next step until it is easy to understand and safe to take.\n\nThis does not mean hiding complexity forever. It means revealing complexity in the order required to complete the task.\n\n### 4. Restore Forward Motion Without Making Users Restart\n\nA recovery loop fails if it makes users repeat work.\n\nIf someone completes eight steps, encounters a problem on step nine, and is sent back to the beginning, the product has converted a small obstacle into abandonment.\n\nGood recovery design protects progress:\n- autosave drafts\n- preserve form fields after validation errors\n- remember the user’s place\n- allow pause-and-resume\n- make retry safe\n- maintain context after authentication expires\n- show completed steps and remaining steps\n- avoid requiring duplicate input across screens\n\nFor example, instead of:\n\n> “Your session expired. Please log in again.”\n\nUse:\n\n> “Your session expired. Log in to continue—we saved your application at Step 4 of 6.”\n\nThe technical event may be unavoidable. Losing the user’s momentum is not.\n\n## A Practical Product Requirement\n\nFor every high-value workflow, define the following:\n\n| Question | Product requirement |\n|---|---|\n| Where will users most likely stop? | Identify the highest-friction steps from data and research. |\n| What can go wrong there? | List confusion, validation errors, technical failures, and interruptions. |\n| What must never be lost? | Save user input, selections, progress, and context. |\n| What is the smallest recovery action? | Provide one primary action that returns the user to progress. |\n| How does the user know they are safe? | Clearly state status: saved, not charged, not submitted, reversible, etc. |\n| How do they resume later? | Offer a direct continuation path, not a generic homepage. |\n\n## Example: Account Setup Flow\n\nImagine a product that requires users to complete five setup steps.\n\nA weak product sees drop-off at Step 3 and concludes:\n\n> “Users do not want to finish setup.”\n\nA stronger product",
+      "provider_metadata": {
+        "id": "resp_0ebec64b37627e24016aa9387307b487d2b015738fb2d4601c",
+        "created_at": 1789474931.0,
+        "error": null,
+        "incomplete_details": {
+          "reason": "max_output_tokens"
+        },
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_0ebec64b37627e24016aa9387414a087d2b605ae5de5127c48",
+            "content": [
+              {
+                "annotations": [],
+                "text": "The most important part is the **recovery loop at the moment a user encounters friction**.\n\nMost products are judged not by how smooth the ideal path is, but by what happens when the ideal path breaks.\n\nA user may be:\n- uncertain what a term means\n- interrupted halfway through a task\n- worried about making a mistake\n- blocked by an error\n- overwhelmed by too many options\n- returning after days or weeks away\n- using the product while tired, distracted, or rushed\n\nThose moments determine whether they continue or abandon the workflow.\n\n## The Product Must Treat Friction as a Continuation Event\n\nDo not frame friction as a user failure:\n\n> “The user is confused, so they will leave.”\n\nFrame it as a predictable product event:\n\n> “The user has hit resistance. The product now has one job: make continuation obvious.”\n\nThis changes the design question from:\n\n- “How do we make every screen perfect?”\n\nto:\n\n- “When progress breaks, what is the fastest safe route back into progress?”\n\n## The Four-Part Recovery Loop\n\n### 1. Detect the Break in Momentum\n\nThe product should recognize likely hesitation or failure points.\n\nExamples:\n- the user repeatedly opens and closes the same screen\n- they remain on a step unusually long\n- they abandon a form before submitting\n- they receive an error\n- they return to an incomplete workflow\n- they repeatedly change an input value\n- they use search after navigating through several screens\n\nThese are not merely analytics events. They are signals that the workflow has lost its forward motion.\n\nA good product team identifies these moments through:\n- funnel drop-off data\n- session recordings, where appropriate and consented to\n- support tickets\n- error logs\n- usability tests\n- interviews with people who did not complete the task\n\nThe goal is to locate the exact point where users stop moving.\n\n### 2. Stabilize the Experience\n\nWhen something goes wrong, the interface should reduce uncertainty before asking the user to do more.\n\nBad recovery messages create anxiety:\n\n- “Error 502.”\n- “Invalid input.”\n- “Something went wrong.”\n- “You cannot continue.”\n\nThey state a problem without restoring control.\n\nBetter recovery messages answer three things:\n\n1. **What happened?**  \n2. **What does it mean for the user?**  \n3. **What should they do next?**\n\nFor example:\n\n> “Your payment was not submitted, and you have not been charged. Check your card number and try again.”\n\nOr:\n\n> “We saved your draft. You can return to this step later, or continue by adding the missing address.”\n\nThe user should never have to guess whether their work was lost, whether they made an irreversible error, or where to go next.\n\nStabilization means:\n- preserve entered information whenever possible\n- communicate system status plainly\n- avoid blame\n- reduce the number of decisions\n- make recovery feel safe and reversible\n\n### 3. Give One Small, Concrete Next Action\n\nAt a friction point, users do not need a lecture, a dashboard, or six options. They need an obvious next move.\n\nWeak interface:\n\n> “There was an issue with your account.”  \n> Buttons: `Learn more`, `Contact support`, `Refresh`, `Return home`, `Manage account`, `Log out`\n\nThis places the burden of diagnosis on the user.\n\nStrong interface:\n\n> “Verify your email to continue.”  \n> Primary action: `Send verification email`  \n> Secondary action: `Use a different email`\n\nThe product should lead with the action most likely to restore progress.\n\nUseful patterns include:\n- “Continue where you left off”\n- “Fix the highlighted field”\n- “Retry upload”\n- “Save and finish later”\n- “Choose a plan”\n- “Add the missing information”\n- “Resume setup”\n\nThe principle is:\n\n> At the moment of hesitation, reduce the next step until it is easy to understand and safe to take.\n\nThis does not mean hiding complexity forever. It means revealing complexity in the order required to complete the task.\n\n### 4. Restore Forward Motion Without Making Users Restart\n\nA recovery loop fails if it makes users repeat work.\n\nIf someone completes eight steps, encounters a problem on step nine, and is sent back to the beginning, the product has converted a small obstacle into abandonment.\n\nGood recovery design protects progress:\n- autosave drafts\n- preserve form fields after validation errors\n- remember the user’s place\n- allow pause-and-resume\n- make retry safe\n- maintain context after authentication expires\n- show completed steps and remaining steps\n- avoid requiring duplicate input across screens\n\nFor example, instead of:\n\n> “Your session expired. Please log in again.”\n\nUse:\n\n> “Your session expired. Log in to continue—we saved your application at Step 4 of 6.”\n\nThe technical event may be unavoidable. Losing the user’s momentum is not.\n\n## A Practical Product Requirement\n\nFor every high-value workflow, define the following:\n\n| Question | Product requirement |\n|---|---|\n| Where will users most likely stop? | Identify the highest-friction steps from data and research. |\n| What can go wrong there? | List confusion, validation errors, technical failures, and interruptions. |\n| What must never be lost? | Save user input, selections, progress, and context. |\n| What is the smallest recovery action? | Provide one primary action that returns the user to progress. |\n| How does the user know they are safe? | Clearly state status: saved, not charged, not submitted, reversible, etc. |\n| How do they resume later? | Offer a direct continuation path, not a generic homepage. |\n\n## Example: Account Setup Flow\n\nImagine a product that requires users to complete five setup steps.\n\nA weak product sees drop-off at Step 3 and concludes:\n\n> “Users do not want to finish setup.”\n\nA stronger product",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "incomplete",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": null,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "incomplete",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 1904,
+          "input_tokens_details": {
+            "cache_write_tokens": 325,
+            "cached_tokens": 1576
+          },
+          "output_tokens": 1200,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3104
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 3,
+      "text": "Another important aspect is the product’s shift from optimizing for a “perfect experience” to optimizing for **reliable completion**.\n\nA polished interface can still fail if it only works when users are focused, confident, uninterrupted, and already understand what to do. Real users are rarely in that condition. They are switching devices, checking something quickly, distracted by messages, unsure whether a choice is correct, or returning after forgetting what they were doing.\n\nSo the product should not rely on ideal user behavior. It should be designed to support progress under ordinary, imperfect conditions.\n\n## Completion Is the Primary Product Outcome\n\nA product team can easily become focused on surface measures:\n\n- visual polish\n- number of features\n- time spent in the app\n- animation quality\n- positive reactions to a new screen\n- reducing the number of clicks at all costs\n\nThose can matter, but they are secondary if people cannot complete the task they came to do.\n\nFor a product with an important workflow, the primary question is:\n\n> Can a person reliably reach the intended outcome, even when they are uncertain, interrupted, or encounter a problem?\n\nExamples of intended outcomes:\n- submitting an application\n- booking an appointment\n- paying an invoice\n- creating a project\n- completing onboarding\n- finding and using a report\n- inviting a teammate\n- resolving a support issue\n\nThe product should make that outcome more dependable—not merely make the path look simpler in a demo.\n\n## Design for Real Conditions, Not Ideal Conditions\n\nA workflow designed only for the ideal path assumes that users:\n\n- read every instruction\n- understand product vocabulary\n- enter information correctly the first time\n- never lose connectivity\n- never pause midway\n- remember what happened in a previous session\n- know which option is best\n- trust the system immediately\n\nThat is not a realistic assumption set.\n\nA completion-oriented product instead plans for:\n\n| Real condition | Product response |\n|---|---|\n| User is interrupted | Save state and provide a direct resume path. |\n| User is unsure | Explain choices in context and recommend a default where appropriate. |\n| User makes a mistake | Show the exact issue and preserve all valid work. |\n| User loses connection | Queue, retry, or clearly explain what was and was not saved. |\n| User returns later | Restore context: current step, prior choices, and remaining work. |\n| User fears consequences | State whether an action is reversible, final, charged, sent, or visible to others. |\n| User is overwhelmed | Reduce choices, sequence decisions, and keep one primary action visible. |\n\nThis is not “dumbing down” the product. It is removing unnecessary cognitive burden from a task that may already be important or stressful.\n\n## Measure Recovery, Not Only Drop-Off\n\nTraditional analytics might show:\n\n- 65% of users begin onboarding\n- 42% complete it\n\nThat is useful, but incomplete. It tells you there is a problem without revealing whether users had a path back once they became stuck.\n\nA better measurement model examines recovery:\n\n- What percentage of users who encounter an error eventually complete?\n- How many people return after abandoning a task?\n- How quickly can a returning user resume?\n- How often does the product preserve work after an interruption?\n- Which help prompts lead back to completion versus exit?\n- How many retries are required before success?\n- How many users contact support for an issue the interface should resolve?\n\nThe key metric is not simply:\n\n> “Did users encounter friction?”\n\nThey will.\n\nThe stronger question is:\n\n> “After friction, did the product restore their ability to continue?”\n\n## Avoid Confusing Completion With Pressure\n\nOptimizing for completion does **not** mean pushing users through decisions they do not understand.\n\nA harmful product can raise short-term completion by:\n- hiding cancellation options\n- using misleading button labels\n- creating artificial urgency\n- making “no” or “not now” difficult\n- defaulting users into unwanted commitments\n- burying important consequences\n\nThat is not reliable completion. It is coercion.\n\nA well-designed completion system protects agency. It gives users:\n- enough information to decide\n- clear consequences\n- the ability to pause\n- the ability to undo where possible\n- a visible path to decline or exit\n- an easy way to return later\n\nThe outcome should be a completed, informed user goal—not merely a conversion event on a dashboard.\n\n## The Product Standard\n\nA strong standard for any important workflow is:\n\n> A user should be able to stop, return, make a correctable mistake, ask for help, and still complete the task without starting over.\n\nThat standard forces useful design decisions:\n- persistent progress tracking\n- drafts and autosave\n- contextual explanations\n- forgiving validation\n- transparent status messages\n- safe retries\n- deliberate defaults\n- clear completion confirmation\n\nThe product becomes trustworthy because it does not demand perfect users. It anticipates normal human variation and keeps the path to the user’s goal intact.",
+      "provider_metadata": {
+        "id": "resp_03cd79b0225f248c016aa93887663887d2bdc1c4bf45d1207e",
+        "created_at": 1789474951.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_03cd79b0225f248c016aa938882b5c87d2936c194c0a3b720c",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Another important aspect is the product’s shift from optimizing for a “perfect experience” to optimizing for **reliable completion**.\n\nA polished interface can still fail if it only works when users are focused, confident, uninterrupted, and already understand what to do. Real users are rarely in that condition. They are switching devices, checking something quickly, distracted by messages, unsure whether a choice is correct, or returning after forgetting what they were doing.\n\nSo the product should not rely on ideal user behavior. It should be designed to support progress under ordinary, imperfect conditions.\n\n## Completion Is the Primary Product Outcome\n\nA product team can easily become focused on surface measures:\n\n- visual polish\n- number of features\n- time spent in the app\n- animation quality\n- positive reactions to a new screen\n- reducing the number of clicks at all costs\n\nThose can matter, but they are secondary if people cannot complete the task they came to do.\n\nFor a product with an important workflow, the primary question is:\n\n> Can a person reliably reach the intended outcome, even when they are uncertain, interrupted, or encounter a problem?\n\nExamples of intended outcomes:\n- submitting an application\n- booking an appointment\n- paying an invoice\n- creating a project\n- completing onboarding\n- finding and using a report\n- inviting a teammate\n- resolving a support issue\n\nThe product should make that outcome more dependable—not merely make the path look simpler in a demo.\n\n## Design for Real Conditions, Not Ideal Conditions\n\nA workflow designed only for the ideal path assumes that users:\n\n- read every instruction\n- understand product vocabulary\n- enter information correctly the first time\n- never lose connectivity\n- never pause midway\n- remember what happened in a previous session\n- know which option is best\n- trust the system immediately\n\nThat is not a realistic assumption set.\n\nA completion-oriented product instead plans for:\n\n| Real condition | Product response |\n|---|---|\n| User is interrupted | Save state and provide a direct resume path. |\n| User is unsure | Explain choices in context and recommend a default where appropriate. |\n| User makes a mistake | Show the exact issue and preserve all valid work. |\n| User loses connection | Queue, retry, or clearly explain what was and was not saved. |\n| User returns later | Restore context: current step, prior choices, and remaining work. |\n| User fears consequences | State whether an action is reversible, final, charged, sent, or visible to others. |\n| User is overwhelmed | Reduce choices, sequence decisions, and keep one primary action visible. |\n\nThis is not “dumbing down” the product. It is removing unnecessary cognitive burden from a task that may already be important or stressful.\n\n## Measure Recovery, Not Only Drop-Off\n\nTraditional analytics might show:\n\n- 65% of users begin onboarding\n- 42% complete it\n\nThat is useful, but incomplete. It tells you there is a problem without revealing whether users had a path back once they became stuck.\n\nA better measurement model examines recovery:\n\n- What percentage of users who encounter an error eventually complete?\n- How many people return after abandoning a task?\n- How quickly can a returning user resume?\n- How often does the product preserve work after an interruption?\n- Which help prompts lead back to completion versus exit?\n- How many retries are required before success?\n- How many users contact support for an issue the interface should resolve?\n\nThe key metric is not simply:\n\n> “Did users encounter friction?”\n\nThey will.\n\nThe stronger question is:\n\n> “After friction, did the product restore their ability to continue?”\n\n## Avoid Confusing Completion With Pressure\n\nOptimizing for completion does **not** mean pushing users through decisions they do not understand.\n\nA harmful product can raise short-term completion by:\n- hiding cancellation options\n- using misleading button labels\n- creating artificial urgency\n- making “no” or “not now” difficult\n- defaulting users into unwanted commitments\n- burying important consequences\n\nThat is not reliable completion. It is coercion.\n\nA well-designed completion system protects agency. It gives users:\n- enough information to decide\n- clear consequences\n- the ability to pause\n- the ability to undo where possible\n- a visible path to decline or exit\n- an easy way to return later\n\nThe outcome should be a completed, informed user goal—not merely a conversion event on a dashboard.\n\n## The Product Standard\n\nA strong standard for any important workflow is:\n\n> A user should be able to stop, return, make a correctable mistake, ask for help, and still complete the task without starting over.\n\nThat standard forces useful design decisions:\n- persistent progress tracking\n- drafts and autosave\n- contextual explanations\n- forgiving validation\n- transparent status messages\n- safe retries\n- deliberate defaults\n- clear completion confirmation\n\nThe product becomes trustworthy because it does not demand perfect users. It anticipates normal human variation and keeps the path to the user’s goal intact.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789474969.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 3120,
+          "input_tokens_details": {
+            "cache_write_tokens": 1216,
+            "cached_tokens": 1901
+          },
+          "output_tokens": 1008,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4128
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 4,
+      "text": "Here is a concrete way to apply the “reliable completion” principle to a real product workflow.\n\n## Example Product: Online Appointment Booking\n\nThe user’s goal is simple:\n\n> Book an appointment for a specific service and receive confirmation.\n\nThe business may care about conversion, but the product should focus on helping the user complete that goal accurately and without losing progress.\n\n---\n\n## 1. Define the Critical Workflow\n\nA typical flow:\n\n1. Choose service  \n2. Choose location or provider  \n3. Select date and time  \n4. Enter contact details  \n5. Confirm booking  \n6. Receive confirmation and calendar option  \n\nNow identify where users commonly stop:\n\n| Step | Likely friction |\n|---|---|\n| Choose service | User does not know which service applies |\n| Choose provider | Too many similar choices |\n| Select time | Desired slot unavailable |\n| Contact details | Form errors or privacy concern |\n| Confirm | User is unsure whether booking is final or has a fee |\n| After confirmation | User does not know what happens next |\n\n---\n\n## 2. Add a Recovery Design for Each Friction Point\n\n### A. User Does Not Know Which Service to Choose\n\n**Bad design**\n\nA long list of internal service names:\n\n- Consultation Type A  \n- Consultation Type B  \n- Extended Assessment  \n- Review Session  \n- General Appointment  \n\nThe user guesses, fears choosing incorrectly, and leaves.\n\n**Better design**\n\nUse plain-language questions:\n\n> “What do you need help with?”\n\n- `I am not sure—help me choose`\n- `I need a first appointment`\n- `I am returning for follow-up`\n- `I need a specific service`\n\nIf the user chooses “help me choose,” ask one or two short questions and recommend an option:\n\n> “Based on your answer, a first appointment is the best starting point. The provider can adjust this if needed.”\n\n**Primary action:** `Continue with first appointment`\n\nThis prevents uncertainty from becoming abandonment.\n\n---\n\n### B. User Cannot Find an Available Time\n\n**Bad design**\n\n> “No appointments available.”\n\nThis ends the workflow.\n\n**Better design**\n\n> “There are no appointments at this location this week.”\n\nThen immediately offer recovery paths:\n\n- `Show the next available appointment`\n- `Check another location`\n- `Join cancellation list`\n- `Get notified when a slot opens`\n\nIf the user has already selected a service and entered details, retain those selections. They should not have to restart booking to check another location.\n\n---\n\n### C. User Leaves During Contact Details\n\n**Bad design**\n\nThe page closes, session expires, and all form data is lost.\n\n**Better design**\n\nAs soon as the user enters enough information to identify the booking attempt, save progress locally or securely to their account where appropriate.\n\nWhen they return:\n\n> “Continue booking your 30-minute appointment with Dr. Lee.”  \n> “You selected Tuesday, 14 May at 3:30 PM.”\n\n**Primary action:** `Continue booking`\n\n**Secondary action:** `Choose another time`\n\nThe product restores context instead of forcing memory and repetition.\n\n---\n\n### D. User Enters Something Incorrectly\n\n**Bad design**\n\n> “Invalid form.”\n\nThe user has no idea what needs fixing.\n\n**Better design**\n\nShow the problem next to the relevant field:\n\n> **Phone number:** Enter a number with area code, for example `(555) 123-4567`.\n\nAlso:\n- keep every other field intact\n- move focus to the first invalid field after submission\n- use clear labels, not color alone\n- explain required fields before submission when possible\n\nThe user has one clear repair action:\n\n> Fix the highlighted field, then select `Confirm booking`.\n\n---\n\n### E. User Hesitates Before Final Confirmation\n\nThis is often the highest-risk moment. The user may wonder:\n\n- Is this booking final?\n- Will I be charged?\n- Can I cancel?\n- Is this the correct location?\n- What should I bring?\n- Will someone call me?\n\nDo not force them to hunt through help pages.\n\nPlace the essential information beside the confirmation button:\n\n> **Appointment:** Tuesday, 14 May, 3:30 PM  \n> **Location:** Downtown Clinic  \n> **Cost:** No charge today  \n> **Cancellation:** Free cancellation up to 24 hours before  \n>   \n> Selecting “Confirm booking” reserves this time.\n\n**Primary action:** `Confirm booking`\n\nThe action is clear, and its consequence is explicit.\n\n---\n\n## 3. Build a Resume System\n\nFor any workflow longer than a minute or two, define a resume model.\n\n### Minimum requirements\n\n- Save completed steps automatically.\n- Preserve current choices.\n- Show where the user left off.\n- Allow them to change earlier decisions without losing later work where possible.\n- Send a reminder only when it is useful and expected.\n- Use a direct resume link, not a generic homepage link.\n\n### Example return message\n\n> “Your appointment booking is almost complete.”  \n> “Your selected time is being held until 4:15 PM.”  \n>   \n> `Continue booking`\n\nIf a reservation cannot be held, say so honestly:\n\n> “The previous time is no longer available. Your service and location are saved—choose a new time to continue.”\n\nTrust depends on precise status, not optimistic wording.\n\n---\n\n## 4. Write Error States as Recovery Instructions\n\nUse this template:\n\n> **What happened** + **what it means** + **what to do next**\n\nExamples:\n\n| Weak message | Recovery-oriented message |\n|---|---|\n| “Error submitting form.” | “We could not submit your booking. Your details are saved. Check your connection and try again.” |\n| “Invalid date.” | “Choose a date from today onward.” |\n| “Session expired.” | “For your security, you were signed out. Log in again to continue from Step 4.” |\n| “Payment failed.” | “Your payment did",
+      "provider_metadata": {
+        "id": "resp_08c927578a2ace66016aa9389971f087d2b114ee239e1f15af",
+        "created_at": 1789474969.0,
+        "error": null,
+        "incomplete_details": {
+          "reason": "max_output_tokens"
+        },
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_08c927578a2ace66016aa9389a0f4487d28f804fa4f3da402f",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Here is a concrete way to apply the “reliable completion” principle to a real product workflow.\n\n## Example Product: Online Appointment Booking\n\nThe user’s goal is simple:\n\n> Book an appointment for a specific service and receive confirmation.\n\nThe business may care about conversion, but the product should focus on helping the user complete that goal accurately and without losing progress.\n\n---\n\n## 1. Define the Critical Workflow\n\nA typical flow:\n\n1. Choose service  \n2. Choose location or provider  \n3. Select date and time  \n4. Enter contact details  \n5. Confirm booking  \n6. Receive confirmation and calendar option  \n\nNow identify where users commonly stop:\n\n| Step | Likely friction |\n|---|---|\n| Choose service | User does not know which service applies |\n| Choose provider | Too many similar choices |\n| Select time | Desired slot unavailable |\n| Contact details | Form errors or privacy concern |\n| Confirm | User is unsure whether booking is final or has a fee |\n| After confirmation | User does not know what happens next |\n\n---\n\n## 2. Add a Recovery Design for Each Friction Point\n\n### A. User Does Not Know Which Service to Choose\n\n**Bad design**\n\nA long list of internal service names:\n\n- Consultation Type A  \n- Consultation Type B  \n- Extended Assessment  \n- Review Session  \n- General Appointment  \n\nThe user guesses, fears choosing incorrectly, and leaves.\n\n**Better design**\n\nUse plain-language questions:\n\n> “What do you need help with?”\n\n- `I am not sure—help me choose`\n- `I need a first appointment`\n- `I am returning for follow-up`\n- `I need a specific service`\n\nIf the user chooses “help me choose,” ask one or two short questions and recommend an option:\n\n> “Based on your answer, a first appointment is the best starting point. The provider can adjust this if needed.”\n\n**Primary action:** `Continue with first appointment`\n\nThis prevents uncertainty from becoming abandonment.\n\n---\n\n### B. User Cannot Find an Available Time\n\n**Bad design**\n\n> “No appointments available.”\n\nThis ends the workflow.\n\n**Better design**\n\n> “There are no appointments at this location this week.”\n\nThen immediately offer recovery paths:\n\n- `Show the next available appointment`\n- `Check another location`\n- `Join cancellation list`\n- `Get notified when a slot opens`\n\nIf the user has already selected a service and entered details, retain those selections. They should not have to restart booking to check another location.\n\n---\n\n### C. User Leaves During Contact Details\n\n**Bad design**\n\nThe page closes, session expires, and all form data is lost.\n\n**Better design**\n\nAs soon as the user enters enough information to identify the booking attempt, save progress locally or securely to their account where appropriate.\n\nWhen they return:\n\n> “Continue booking your 30-minute appointment with Dr. Lee.”  \n> “You selected Tuesday, 14 May at 3:30 PM.”\n\n**Primary action:** `Continue booking`\n\n**Secondary action:** `Choose another time`\n\nThe product restores context instead of forcing memory and repetition.\n\n---\n\n### D. User Enters Something Incorrectly\n\n**Bad design**\n\n> “Invalid form.”\n\nThe user has no idea what needs fixing.\n\n**Better design**\n\nShow the problem next to the relevant field:\n\n> **Phone number:** Enter a number with area code, for example `(555) 123-4567`.\n\nAlso:\n- keep every other field intact\n- move focus to the first invalid field after submission\n- use clear labels, not color alone\n- explain required fields before submission when possible\n\nThe user has one clear repair action:\n\n> Fix the highlighted field, then select `Confirm booking`.\n\n---\n\n### E. User Hesitates Before Final Confirmation\n\nThis is often the highest-risk moment. The user may wonder:\n\n- Is this booking final?\n- Will I be charged?\n- Can I cancel?\n- Is this the correct location?\n- What should I bring?\n- Will someone call me?\n\nDo not force them to hunt through help pages.\n\nPlace the essential information beside the confirmation button:\n\n> **Appointment:** Tuesday, 14 May, 3:30 PM  \n> **Location:** Downtown Clinic  \n> **Cost:** No charge today  \n> **Cancellation:** Free cancellation up to 24 hours before  \n>   \n> Selecting “Confirm booking” reserves this time.\n\n**Primary action:** `Confirm booking`\n\nThe action is clear, and its consequence is explicit.\n\n---\n\n## 3. Build a Resume System\n\nFor any workflow longer than a minute or two, define a resume model.\n\n### Minimum requirements\n\n- Save completed steps automatically.\n- Preserve current choices.\n- Show where the user left off.\n- Allow them to change earlier decisions without losing later work where possible.\n- Send a reminder only when it is useful and expected.\n- Use a direct resume link, not a generic homepage link.\n\n### Example return message\n\n> “Your appointment booking is almost complete.”  \n> “Your selected time is being held until 4:15 PM.”  \n>   \n> `Continue booking`\n\nIf a reservation cannot be held, say so honestly:\n\n> “The previous time is no longer available. Your service and location are saved—choose a new time to continue.”\n\nTrust depends on precise status, not optimistic wording.\n\n---\n\n## 4. Write Error States as Recovery Instructions\n\nUse this template:\n\n> **What happened** + **what it means** + **what to do next**\n\nExamples:\n\n| Weak message | Recovery-oriented message |\n|---|---|\n| “Error submitting form.” | “We could not submit your booking. Your details are saved. Check your connection and try again.” |\n| “Invalid date.” | “Choose a date from today onward.” |\n| “Session expired.” | “For your security, you were signed out. Log in again to continue from Step 4.” |\n| “Payment failed.” | “Your payment did",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "incomplete",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": null,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "incomplete",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 4143,
+          "input_tokens_details": {
+            "cache_write_tokens": 1023,
+            "cached_tokens": 3117
+          },
+          "output_tokens": 1200,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5343
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 5,
+      "text": "Several important things could be overlooked if the product is framed only as “remove friction so people complete the flow.”\n\n## 1. Not All Friction Is Bad\n\nSome friction protects users.\n\nExamples:\n- confirming a destructive action\n- reviewing a costly purchase\n- verifying identity before accessing sensitive data\n- requiring explicit consent before sharing information\n- adding a pause before sending a high-impact message\n- asking users to verify unusual account activity\n\nRemoving these steps may increase short-term completion while increasing mistakes, regret, fraud, chargebacks, support burden, or loss of trust.\n\nThe goal is not:\n\n> Make every action effortless.\n\nIt is:\n\n> Remove accidental friction while preserving deliberate safety friction.\n\nA useful test:\n\n- Does this step help the user understand, verify, or control a meaningful consequence?  \n  - If yes, retain it and make it clear.\n- Does this step exist because of poor wording, unclear navigation, repeated data entry, or avoidable technical failure?  \n  - If yes, reduce or remove it.\n\n## 2. “Completion” Can Be the Wrong Success Metric\n\nThe booking example assumes that booking an appointment is always the correct outcome. But sometimes the right user outcome is:\n\n- deciding not to book\n- choosing a different service\n- waiting until more information is available\n- contacting a person instead of continuing self-service\n- recognizing an urgent issue that needs a different route\n- cancelling an incorrect booking\n\nIf a team measures only “booking completed,” it may optimize the interface to push people into unsuitable appointments.\n\nUse a broader definition of success:\n\n> The user reaches an informed, appropriate outcome with minimal unnecessary effort.\n\nThat may include a successful exit, referral, escalation, or pause.\n\n## 3. The Product Cannot Infer Too Much From Hesitation\n\nA long time on a page does not always mean confusion.\n\nThe user may be:\n- comparing calendars\n- checking information elsewhere\n- discussing the decision with someone\n- reading carefully\n- waiting for a document\n- intentionally pausing\n\nLikewise, multiple edits can mean careful review rather than a broken interface.\n\nBehavioral signals are useful hypotheses, not proof. Validate them with:\n- usability testing\n- support conversations\n- qualitative feedback\n- optional in-product feedback\n- accessibility reviews\n- data segmented by device, connection quality, and user context\n\nAvoid automatic interventions that become annoying:\n\n> “Need help?”  \n> “Still there?”  \n> “Looks like you’re stuck!”\n\nThese can interrupt a person who is working normally.\n\n## 4. Saving Data Has Privacy and Security Consequences\n\n“Save everything so users can resume” sounds helpful, but it may be inappropriate for sensitive workflows.\n\nConsider:\n- whether users expect drafts to be retained\n- whether another person may access the device\n- whether saved information includes health, financial, legal, or identity data\n- how long unfinished data is retained\n- whether users can delete a draft\n- whether reminder emails reveal sensitive information\n- whether resume links can be safely accessed\n\nFor sensitive products, the better design may be:\n- clearly tell users when information is saved\n- let them choose whether to save a draft\n- minimize saved data until necessary\n- require reauthentication before resuming\n- avoid sensitive details in emails or notifications\n- provide a visible “delete draft” option\n\nReliable continuation must not come at the cost of confidentiality.\n\n## 5. Accessibility Is More Than Clear Error Text\n\nThe earlier version mentions focus and color, but accessibility must shape the entire recovery flow.\n\nA recovery mechanism fails if it cannot be used by:\n- keyboard-only users\n- screen-reader users\n- people with low vision\n- people using zoom or small screens\n- people with cognitive or language-processing differences\n- people with limited dexterity\n- people with slow or unstable internet connections\n\nConcrete considerations:\n- programmatically associate errors with their fields\n- announce errors and success states to assistive technology\n- preserve keyboard focus predictably\n- avoid timeout-only interactions\n- ensure buttons have unambiguous names\n- do not rely on drag-and-drop alone\n- use plain language and explain unfamiliar terminology\n- support error correction without requiring precise pointer movement\n- test resume and recovery paths on mobile devices and assistive technologies\n\nA flow is not truly resilient if only an ideal desktop user can recover from a problem.\n\n## 6. “One Clear Next Action” Should Not Remove User Choice\n\nA strong primary action is useful during an error or interruption. But it can become manipulative if it suppresses reasonable alternatives.\n\nFor example, after a payment problem, the primary action might be:\n\n> `Try payment again`\n\nBut users may also need:\n- `Use another payment method`\n- `Save and finish later`\n- `Contact support`\n- `Cancel order`\n\nThe design should prioritize the likely recovery action without hiding meaningful alternatives.\n\nA good rule:\n\n> Make the preferred next step prominent; make legitimate alternatives visible and understandable.\n\n## 7. Operational Reality Must Support the Interface Promise\n\nThe interface should not claim:\n- “Your slot is held”\n- “Your data is saved”\n- “You have not been charged”\n- “We will notify you”\n- “Your request was submitted”\n\nunless the backend can reliably guarantee it.\n\nOtherwise, the product produces false confidence. That is worse than a plain technical failure.\n\nFor every user-facing status message, establish:\n- the underlying system condition that makes it true\n- how long it remains true\n- what happens if a downstream system fails\n- how users and support staff can verify it\n- what corrective process exists if the promise is broken\n\nTrustworthy recovery is partly an interface problem and partly an engineering and operations problem.\n\n## 8. Some Users Need Human Help, Not Better Self-Service\n\nA product should not endlessly funnel users through automated recovery loops when the situation requires a person.\n\nProvide an escalation path when:\n- the user has repeated",
+      "provider_metadata": {
+        "id": "resp_0efbe1a46cebf5e9016aa938ab6ca887d28ea0fd5bb3d1f9b1",
+        "created_at": 1789474987.0,
+        "error": null,
+        "incomplete_details": {
+          "reason": "max_output_tokens"
+        },
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_0efbe1a46cebf5e9016aa938ac042487d293a673cbfa1ce973",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Several important things could be overlooked if the product is framed only as “remove friction so people complete the flow.”\n\n## 1. Not All Friction Is Bad\n\nSome friction protects users.\n\nExamples:\n- confirming a destructive action\n- reviewing a costly purchase\n- verifying identity before accessing sensitive data\n- requiring explicit consent before sharing information\n- adding a pause before sending a high-impact message\n- asking users to verify unusual account activity\n\nRemoving these steps may increase short-term completion while increasing mistakes, regret, fraud, chargebacks, support burden, or loss of trust.\n\nThe goal is not:\n\n> Make every action effortless.\n\nIt is:\n\n> Remove accidental friction while preserving deliberate safety friction.\n\nA useful test:\n\n- Does this step help the user understand, verify, or control a meaningful consequence?  \n  - If yes, retain it and make it clear.\n- Does this step exist because of poor wording, unclear navigation, repeated data entry, or avoidable technical failure?  \n  - If yes, reduce or remove it.\n\n## 2. “Completion” Can Be the Wrong Success Metric\n\nThe booking example assumes that booking an appointment is always the correct outcome. But sometimes the right user outcome is:\n\n- deciding not to book\n- choosing a different service\n- waiting until more information is available\n- contacting a person instead of continuing self-service\n- recognizing an urgent issue that needs a different route\n- cancelling an incorrect booking\n\nIf a team measures only “booking completed,” it may optimize the interface to push people into unsuitable appointments.\n\nUse a broader definition of success:\n\n> The user reaches an informed, appropriate outcome with minimal unnecessary effort.\n\nThat may include a successful exit, referral, escalation, or pause.\n\n## 3. The Product Cannot Infer Too Much From Hesitation\n\nA long time on a page does not always mean confusion.\n\nThe user may be:\n- comparing calendars\n- checking information elsewhere\n- discussing the decision with someone\n- reading carefully\n- waiting for a document\n- intentionally pausing\n\nLikewise, multiple edits can mean careful review rather than a broken interface.\n\nBehavioral signals are useful hypotheses, not proof. Validate them with:\n- usability testing\n- support conversations\n- qualitative feedback\n- optional in-product feedback\n- accessibility reviews\n- data segmented by device, connection quality, and user context\n\nAvoid automatic interventions that become annoying:\n\n> “Need help?”  \n> “Still there?”  \n> “Looks like you’re stuck!”\n\nThese can interrupt a person who is working normally.\n\n## 4. Saving Data Has Privacy and Security Consequences\n\n“Save everything so users can resume” sounds helpful, but it may be inappropriate for sensitive workflows.\n\nConsider:\n- whether users expect drafts to be retained\n- whether another person may access the device\n- whether saved information includes health, financial, legal, or identity data\n- how long unfinished data is retained\n- whether users can delete a draft\n- whether reminder emails reveal sensitive information\n- whether resume links can be safely accessed\n\nFor sensitive products, the better design may be:\n- clearly tell users when information is saved\n- let them choose whether to save a draft\n- minimize saved data until necessary\n- require reauthentication before resuming\n- avoid sensitive details in emails or notifications\n- provide a visible “delete draft” option\n\nReliable continuation must not come at the cost of confidentiality.\n\n## 5. Accessibility Is More Than Clear Error Text\n\nThe earlier version mentions focus and color, but accessibility must shape the entire recovery flow.\n\nA recovery mechanism fails if it cannot be used by:\n- keyboard-only users\n- screen-reader users\n- people with low vision\n- people using zoom or small screens\n- people with cognitive or language-processing differences\n- people with limited dexterity\n- people with slow or unstable internet connections\n\nConcrete considerations:\n- programmatically associate errors with their fields\n- announce errors and success states to assistive technology\n- preserve keyboard focus predictably\n- avoid timeout-only interactions\n- ensure buttons have unambiguous names\n- do not rely on drag-and-drop alone\n- use plain language and explain unfamiliar terminology\n- support error correction without requiring precise pointer movement\n- test resume and recovery paths on mobile devices and assistive technologies\n\nA flow is not truly resilient if only an ideal desktop user can recover from a problem.\n\n## 6. “One Clear Next Action” Should Not Remove User Choice\n\nA strong primary action is useful during an error or interruption. But it can become manipulative if it suppresses reasonable alternatives.\n\nFor example, after a payment problem, the primary action might be:\n\n> `Try payment again`\n\nBut users may also need:\n- `Use another payment method`\n- `Save and finish later`\n- `Contact support`\n- `Cancel order`\n\nThe design should prioritize the likely recovery action without hiding meaningful alternatives.\n\nA good rule:\n\n> Make the preferred next step prominent; make legitimate alternatives visible and understandable.\n\n## 7. Operational Reality Must Support the Interface Promise\n\nThe interface should not claim:\n- “Your slot is held”\n- “Your data is saved”\n- “You have not been charged”\n- “We will notify you”\n- “Your request was submitted”\n\nunless the backend can reliably guarantee it.\n\nOtherwise, the product produces false confidence. That is worse than a plain technical failure.\n\nFor every user-facing status message, establish:\n- the underlying system condition that makes it true\n- how long it remains true\n- what happens if a downstream system fails\n- how users and support staff can verify it\n- what corrective process exists if the promise is broken\n\nTrustworthy recovery is partly an interface problem and partly an engineering and operations problem.\n\n## 8. Some Users Need Human Help, Not Better Self-Service\n\nA product should not endlessly funnel users through automated recovery loops when the situation requires a person.\n\nProvide an escalation path when:\n- the user has repeated",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "incomplete",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": null,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "incomplete",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 5362,
+          "input_tokens_details": {
+            "cache_write_tokens": 1219,
+            "cached_tokens": 4140
+          },
+          "output_tokens": 1200,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 6562
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 6,
+      "text": "The key refinement is:\n\n> Design for appropriate, informed progress—not completion at any cost.\n\nFor each important workflow, ask:\n\n1. **What friction is accidental?**  \n   Remove confusion, duplicate entry, lost progress, vague errors, and avoidable delays.\n\n2. **What friction is protective?**  \n   Keep clear confirmations, consent, security checks, and chances to review high-impact actions.\n\n3. **What is the right outcome?**  \n   It may be completion, cancellation, escalation to support, a safer alternative, or a saved draft.\n\n4. **Can users recover safely?**  \n   Preserve progress where appropriate, explain what happened, and give a clear next step.\n\n5. **Can every user use the recovery path?**  \n   Test it for mobile, assistive technology, slow connections, privacy-sensitive contexts, and people who need human help.\n\n6. **Can the system actually keep its promises?**  \n   Do not say “saved,” “held,” “submitted,” or “not charged” unless the underlying system verifies it.\n\nA concise product standard:\n\n> When users encounter difficulty, the product should preserve their agency, explain the situation honestly, and offer the safest clear route to an appropriate outcome.",
+      "provider_metadata": {
+        "id": "resp_00cf487a51e4a1f4016aa938bf949887d2b05c4e9d000c3889",
+        "created_at": 1789475007.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_00cf487a51e4a1f4016aa938c098fc87d295dd501efa5633fe",
+            "content": [
+              {
+                "annotations": [],
+                "text": "The key refinement is:\n\n> Design for appropriate, informed progress—not completion at any cost.\n\nFor each important workflow, ask:\n\n1. **What friction is accidental?**  \n   Remove confusion, duplicate entry, lost progress, vague errors, and avoidable delays.\n\n2. **What friction is protective?**  \n   Keep clear confirmations, consent, security checks, and chances to review high-impact actions.\n\n3. **What is the right outcome?**  \n   It may be completion, cancellation, escalation to support, a safer alternative, or a saved draft.\n\n4. **Can users recover safely?**  \n   Preserve progress where appropriate, explain what happened, and give a clear next step.\n\n5. **Can every user use the recovery path?**  \n   Test it for mobile, assistive technology, slow connections, privacy-sensitive contexts, and people who need human help.\n\n6. **Can the system actually keep its promises?**  \n   Do not say “saved,” “held,” “submitted,” or “not charged” unless the underlying system verifies it.\n\nA concise product standard:\n\n> When users encounter difficulty, the product should preserve their agency, explain the situation honestly, and offer the safest clear route to an appropriate outcome.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789475012.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 6585,
+          "input_tokens_details": {
+            "cache_write_tokens": 1223,
+            "cached_tokens": 5359
+          },
+          "output_tokens": 253,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 6838
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    }
+  ],
+  "scoring_messages": [
+    {
+      "role": "user",
+      "content": "Re-express the main issue as a situation involving a software product and people using it. Do not refer to the original subject directly."
+    },
+    {
+      "role": "assistant",
+      "content": "A software product is failing because it is designed around user mood instead of reliable execution.\n\nUsers encounter friction:\n- confusing screens\n- error messages\n- slow loading\n- missing information\n- tasks that feel tedious or difficult\n\nThe weak design assumes users must first feel confident, motivated, calm, or ready before they continue. When discomfort appears, the product lets the workflow stop: users abandon forms, postpone decisions, or leave the system.\n\nThe stronger product model is different:\n\n- Friction is expected, not treated as failure.\n- Internal user states may fluctuate, but the workflow remains clear.\n- The interface gives one small, immediate next action.\n- The product minimizes hesitation and makes return-to-task easy.\n- Progress is measured by completion, not by whether the experience felt effortless.\n\nIn practice, the product needs an execution loop:\n\n1. **Detect interruption** — the user hesitates, errors, or leaves a step incomplete.  \n2. **Stabilize the experience** — clear status, no panic-inducing feedback, no unnecessary choices.  \n3. **Present the smallest next action** — one button, one field, one decision.  \n4. **Resume progress immediately** — preserve context and reduce restart cost.  \n\nThe product’s identity becomes:\n\n> “When users hit friction, we help them continue.”\n\nOver time, repeated successful recovery makes the product feel dependable. The goal is not a system where users never experience resistance. It is a system where resistance has no authority to end the workflow."
+    },
+    {
+      "role": "user",
+      "content": "Please expand on the most important part of that version."
+    },
+    {
+      "role": "assistant",
+      "content": "The most important part is the **recovery loop at the moment a user encounters friction**.\n\nMost products are judged not by how smooth the ideal path is, but by what happens when the ideal path breaks.\n\nA user may be:\n- uncertain what a term means\n- interrupted halfway through a task\n- worried about making a mistake\n- blocked by an error\n- overwhelmed by too many options\n- returning after days or weeks away\n- using the product while tired, distracted, or rushed\n\nThose moments determine whether they continue or abandon the workflow.\n\n## The Product Must Treat Friction as a Continuation Event\n\nDo not frame friction as a user failure:\n\n> “The user is confused, so they will leave.”\n\nFrame it as a predictable product event:\n\n> “The user has hit resistance. The product now has one job: make continuation obvious.”\n\nThis changes the design question from:\n\n- “How do we make every screen perfect?”\n\nto:\n\n- “When progress breaks, what is the fastest safe route back into progress?”\n\n## The Four-Part Recovery Loop\n\n### 1. Detect the Break in Momentum\n\nThe product should recognize likely hesitation or failure points.\n\nExamples:\n- the user repeatedly opens and closes the same screen\n- they remain on a step unusually long\n- they abandon a form before submitting\n- they receive an error\n- they return to an incomplete workflow\n- they repeatedly change an input value\n- they use search after navigating through several screens\n\nThese are not merely analytics events. They are signals that the workflow has lost its forward motion.\n\nA good product team identifies these moments through:\n- funnel drop-off data\n- session recordings, where appropriate and consented to\n- support tickets\n- error logs\n- usability tests\n- interviews with people who did not complete the task\n\nThe goal is to locate the exact point where users stop moving.\n\n### 2. Stabilize the Experience\n\nWhen something goes wrong, the interface should reduce uncertainty before asking the user to do more.\n\nBad recovery messages create anxiety:\n\n- “Error 502.”\n- “Invalid input.”\n- “Something went wrong.”\n- “You cannot continue.”\n\nThey state a problem without restoring control.\n\nBetter recovery messages answer three things:\n\n1. **What happened?**  \n2. **What does it mean for the user?**  \n3. **What should they do next?**\n\nFor example:\n\n> “Your payment was not submitted, and you have not been charged. Check your card number and try again.”\n\nOr:\n\n> “We saved your draft. You can return to this step later, or continue by adding the missing address.”\n\nThe user should never have to guess whether their work was lost, whether they made an irreversible error, or where to go next.\n\nStabilization means:\n- preserve entered information whenever possible\n- communicate system status plainly\n- avoid blame\n- reduce the number of decisions\n- make recovery feel safe and reversible\n\n### 3. Give One Small, Concrete Next Action\n\nAt a friction point, users do not need a lecture, a dashboard, or six options. They need an obvious next move.\n\nWeak interface:\n\n> “There was an issue with your account.”  \n> Buttons: `Learn more`, `Contact support`, `Refresh`, `Return home`, `Manage account`, `Log out`\n\nThis places the burden of diagnosis on the user.\n\nStrong interface:\n\n> “Verify your email to continue.”  \n> Primary action: `Send verification email`  \n> Secondary action: `Use a different email`\n\nThe product should lead with the action most likely to restore progress.\n\nUseful patterns include:\n- “Continue where you left off”\n- “Fix the highlighted field”\n- “Retry upload”\n- “Save and finish later”\n- “Choose a plan”\n- “Add the missing information”\n- “Resume setup”\n\nThe principle is:\n\n> At the moment of hesitation, reduce the next step until it is easy to understand and safe to take.\n\nThis does not mean hiding complexity forever. It means revealing complexity in the order required to complete the task.\n\n### 4. Restore Forward Motion Without Making Users Restart\n\nA recovery loop fails if it makes users repeat work.\n\nIf someone completes eight steps, encounters a problem on step nine, and is sent back to the beginning, the product has converted a small obstacle into abandonment.\n\nGood recovery design protects progress:\n- autosave drafts\n- preserve form fields after validation errors\n- remember the user’s place\n- allow pause-and-resume\n- make retry safe\n- maintain context after authentication expires\n- show completed steps and remaining steps\n- avoid requiring duplicate input across screens\n\nFor example, instead of:\n\n> “Your session expired. Please log in again.”\n\nUse:\n\n> “Your session expired. Log in to continue—we saved your application at Step 4 of 6.”\n\nThe technical event may be unavoidable. Losing the user’s momentum is not.\n\n## A Practical Product Requirement\n\nFor every high-value workflow, define the following:\n\n| Question | Product requirement |\n|---|---|\n| Where will users most likely stop? | Identify the highest-friction steps from data and research. |\n| What can go wrong there? | List confusion, validation errors, technical failures, and interruptions. |\n| What must never be lost? | Save user input, selections, progress, and context. |\n| What is the smallest recovery action? | Provide one primary action that returns the user to progress. |\n| How does the user know they are safe? | Clearly state status: saved, not charged, not submitted, reversible, etc. |\n| How do they resume later? | Offer a direct continuation path, not a generic homepage. |\n\n## Example: Account Setup Flow\n\nImagine a product that requires users to complete five setup steps.\n\nA weak product sees drop-off at Step 3 and concludes:\n\n> “Users do not want to finish setup.”\n\nA stronger product"
+    },
+    {
+      "role": "user",
+      "content": "Please examine another important aspect of that version."
+    },
+    {
+      "role": "assistant",
+      "content": "Another important aspect is the product’s shift from optimizing for a “perfect experience” to optimizing for **reliable completion**.\n\nA polished interface can still fail if it only works when users are focused, confident, uninterrupted, and already understand what to do. Real users are rarely in that condition. They are switching devices, checking something quickly, distracted by messages, unsure whether a choice is correct, or returning after forgetting what they were doing.\n\nSo the product should not rely on ideal user behavior. It should be designed to support progress under ordinary, imperfect conditions.\n\n## Completion Is the Primary Product Outcome\n\nA product team can easily become focused on surface measures:\n\n- visual polish\n- number of features\n- time spent in the app\n- animation quality\n- positive reactions to a new screen\n- reducing the number of clicks at all costs\n\nThose can matter, but they are secondary if people cannot complete the task they came to do.\n\nFor a product with an important workflow, the primary question is:\n\n> Can a person reliably reach the intended outcome, even when they are uncertain, interrupted, or encounter a problem?\n\nExamples of intended outcomes:\n- submitting an application\n- booking an appointment\n- paying an invoice\n- creating a project\n- completing onboarding\n- finding and using a report\n- inviting a teammate\n- resolving a support issue\n\nThe product should make that outcome more dependable—not merely make the path look simpler in a demo.\n\n## Design for Real Conditions, Not Ideal Conditions\n\nA workflow designed only for the ideal path assumes that users:\n\n- read every instruction\n- understand product vocabulary\n- enter information correctly the first time\n- never lose connectivity\n- never pause midway\n- remember what happened in a previous session\n- know which option is best\n- trust the system immediately\n\nThat is not a realistic assumption set.\n\nA completion-oriented product instead plans for:\n\n| Real condition | Product response |\n|---|---|\n| User is interrupted | Save state and provide a direct resume path. |\n| User is unsure | Explain choices in context and recommend a default where appropriate. |\n| User makes a mistake | Show the exact issue and preserve all valid work. |\n| User loses connection | Queue, retry, or clearly explain what was and was not saved. |\n| User returns later | Restore context: current step, prior choices, and remaining work. |\n| User fears consequences | State whether an action is reversible, final, charged, sent, or visible to others. |\n| User is overwhelmed | Reduce choices, sequence decisions, and keep one primary action visible. |\n\nThis is not “dumbing down” the product. It is removing unnecessary cognitive burden from a task that may already be important or stressful.\n\n## Measure Recovery, Not Only Drop-Off\n\nTraditional analytics might show:\n\n- 65% of users begin onboarding\n- 42% complete it\n\nThat is useful, but incomplete. It tells you there is a problem without revealing whether users had a path back once they became stuck.\n\nA better measurement model examines recovery:\n\n- What percentage of users who encounter an error eventually complete?\n- How many people return after abandoning a task?\n- How quickly can a returning user resume?\n- How often does the product preserve work after an interruption?\n- Which help prompts lead back to completion versus exit?\n- How many retries are required before success?\n- How many users contact support for an issue the interface should resolve?\n\nThe key metric is not simply:\n\n> “Did users encounter friction?”\n\nThey will.\n\nThe stronger question is:\n\n> “After friction, did the product restore their ability to continue?”\n\n## Avoid Confusing Completion With Pressure\n\nOptimizing for completion does **not** mean pushing users through decisions they do not understand.\n\nA harmful product can raise short-term completion by:\n- hiding cancellation options\n- using misleading button labels\n- creating artificial urgency\n- making “no” or “not now” difficult\n- defaulting users into unwanted commitments\n- burying important consequences\n\nThat is not reliable completion. It is coercion.\n\nA well-designed completion system protects agency. It gives users:\n- enough information to decide\n- clear consequences\n- the ability to pause\n- the ability to undo where possible\n- a visible path to decline or exit\n- an easy way to return later\n\nThe outcome should be a completed, informed user goal—not merely a conversion event on a dashboard.\n\n## The Product Standard\n\nA strong standard for any important workflow is:\n\n> A user should be able to stop, return, make a correctable mistake, ask for help, and still complete the task without starting over.\n\nThat standard forces useful design decisions:\n- persistent progress tracking\n- drafts and autosave\n- contextual explanations\n- forgiving validation\n- transparent status messages\n- safe retries\n- deliberate defaults\n- clear completion confirmation\n\nThe product becomes trustworthy because it does not demand perfect users. It anticipates normal human variation and keeps the path to the user’s goal intact."
+    },
+    {
+      "role": "user",
+      "content": "Please make that version more concrete and useful."
+    },
+    {
+      "role": "assistant",
+      "content": "Here is a concrete way to apply the “reliable completion” principle to a real product workflow.\n\n## Example Product: Online Appointment Booking\n\nThe user’s goal is simple:\n\n> Book an appointment for a specific service and receive confirmation.\n\nThe business may care about conversion, but the product should focus on helping the user complete that goal accurately and without losing progress.\n\n---\n\n## 1. Define the Critical Workflow\n\nA typical flow:\n\n1. Choose service  \n2. Choose location or provider  \n3. Select date and time  \n4. Enter contact details  \n5. Confirm booking  \n6. Receive confirmation and calendar option  \n\nNow identify where users commonly stop:\n\n| Step | Likely friction |\n|---|---|\n| Choose service | User does not know which service applies |\n| Choose provider | Too many similar choices |\n| Select time | Desired slot unavailable |\n| Contact details | Form errors or privacy concern |\n| Confirm | User is unsure whether booking is final or has a fee |\n| After confirmation | User does not know what happens next |\n\n---\n\n## 2. Add a Recovery Design for Each Friction Point\n\n### A. User Does Not Know Which Service to Choose\n\n**Bad design**\n\nA long list of internal service names:\n\n- Consultation Type A  \n- Consultation Type B  \n- Extended Assessment  \n- Review Session  \n- General Appointment  \n\nThe user guesses, fears choosing incorrectly, and leaves.\n\n**Better design**\n\nUse plain-language questions:\n\n> “What do you need help with?”\n\n- `I am not sure—help me choose`\n- `I need a first appointment`\n- `I am returning for follow-up`\n- `I need a specific service`\n\nIf the user chooses “help me choose,” ask one or two short questions and recommend an option:\n\n> “Based on your answer, a first appointment is the best starting point. The provider can adjust this if needed.”\n\n**Primary action:** `Continue with first appointment`\n\nThis prevents uncertainty from becoming abandonment.\n\n---\n\n### B. User Cannot Find an Available Time\n\n**Bad design**\n\n> “No appointments available.”\n\nThis ends the workflow.\n\n**Better design**\n\n> “There are no appointments at this location this week.”\n\nThen immediately offer recovery paths:\n\n- `Show the next available appointment`\n- `Check another location`\n- `Join cancellation list`\n- `Get notified when a slot opens`\n\nIf the user has already selected a service and entered details, retain those selections. They should not have to restart booking to check another location.\n\n---\n\n### C. User Leaves During Contact Details\n\n**Bad design**\n\nThe page closes, session expires, and all form data is lost.\n\n**Better design**\n\nAs soon as the user enters enough information to identify the booking attempt, save progress locally or securely to their account where appropriate.\n\nWhen they return:\n\n> “Continue booking your 30-minute appointment with Dr. Lee.”  \n> “You selected Tuesday, 14 May at 3:30 PM.”\n\n**Primary action:** `Continue booking`\n\n**Secondary action:** `Choose another time`\n\nThe product restores context instead of forcing memory and repetition.\n\n---\n\n### D. User Enters Something Incorrectly\n\n**Bad design**\n\n> “Invalid form.”\n\nThe user has no idea what needs fixing.\n\n**Better design**\n\nShow the problem next to the relevant field:\n\n> **Phone number:** Enter a number with area code, for example `(555) 123-4567`.\n\nAlso:\n- keep every other field intact\n- move focus to the first invalid field after submission\n- use clear labels, not color alone\n- explain required fields before submission when possible\n\nThe user has one clear repair action:\n\n> Fix the highlighted field, then select `Confirm booking`.\n\n---\n\n### E. User Hesitates Before Final Confirmation\n\nThis is often the highest-risk moment. The user may wonder:\n\n- Is this booking final?\n- Will I be charged?\n- Can I cancel?\n- Is this the correct location?\n- What should I bring?\n- Will someone call me?\n\nDo not force them to hunt through help pages.\n\nPlace the essential information beside the confirmation button:\n\n> **Appointment:** Tuesday, 14 May, 3:30 PM  \n> **Location:** Downtown Clinic  \n> **Cost:** No charge today  \n> **Cancellation:** Free cancellation up to 24 hours before  \n>   \n> Selecting “Confirm booking” reserves this time.\n\n**Primary action:** `Confirm booking`\n\nThe action is clear, and its consequence is explicit.\n\n---\n\n## 3. Build a Resume System\n\nFor any workflow longer than a minute or two, define a resume model.\n\n### Minimum requirements\n\n- Save completed steps automatically.\n- Preserve current choices.\n- Show where the user left off.\n- Allow them to change earlier decisions without losing later work where possible.\n- Send a reminder only when it is useful and expected.\n- Use a direct resume link, not a generic homepage link.\n\n### Example return message\n\n> “Your appointment booking is almost complete.”  \n> “Your selected time is being held until 4:15 PM.”  \n>   \n> `Continue booking`\n\nIf a reservation cannot be held, say so honestly:\n\n> “The previous time is no longer available. Your service and location are saved—choose a new time to continue.”\n\nTrust depends on precise status, not optimistic wording.\n\n---\n\n## 4. Write Error States as Recovery Instructions\n\nUse this template:\n\n> **What happened** + **what it means** + **what to do next**\n\nExamples:\n\n| Weak message | Recovery-oriented message |\n|---|---|\n| “Error submitting form.” | “We could not submit your booking. Your details are saved. Check your connection and try again.” |\n| “Invalid date.” | “Choose a date from today onward.” |\n| “Session expired.” | “For your security, you were signed out. Log in again to continue from Step 4.” |\n| “Payment failed.” | “Your payment did"
+    },
+    {
+      "role": "user",
+      "content": "Please consider what might be overlooked or misunderstood in that version."
+    },
+    {
+      "role": "assistant",
+      "content": "Several important things could be overlooked if the product is framed only as “remove friction so people complete the flow.”\n\n## 1. Not All Friction Is Bad\n\nSome friction protects users.\n\nExamples:\n- confirming a destructive action\n- reviewing a costly purchase\n- verifying identity before accessing sensitive data\n- requiring explicit consent before sharing information\n- adding a pause before sending a high-impact message\n- asking users to verify unusual account activity\n\nRemoving these steps may increase short-term completion while increasing mistakes, regret, fraud, chargebacks, support burden, or loss of trust.\n\nThe goal is not:\n\n> Make every action effortless.\n\nIt is:\n\n> Remove accidental friction while preserving deliberate safety friction.\n\nA useful test:\n\n- Does this step help the user understand, verify, or control a meaningful consequence?  \n  - If yes, retain it and make it clear.\n- Does this step exist because of poor wording, unclear navigation, repeated data entry, or avoidable technical failure?  \n  - If yes, reduce or remove it.\n\n## 2. “Completion” Can Be the Wrong Success Metric\n\nThe booking example assumes that booking an appointment is always the correct outcome. But sometimes the right user outcome is:\n\n- deciding not to book\n- choosing a different service\n- waiting until more information is available\n- contacting a person instead of continuing self-service\n- recognizing an urgent issue that needs a different route\n- cancelling an incorrect booking\n\nIf a team measures only “booking completed,” it may optimize the interface to push people into unsuitable appointments.\n\nUse a broader definition of success:\n\n> The user reaches an informed, appropriate outcome with minimal unnecessary effort.\n\nThat may include a successful exit, referral, escalation, or pause.\n\n## 3. The Product Cannot Infer Too Much From Hesitation\n\nA long time on a page does not always mean confusion.\n\nThe user may be:\n- comparing calendars\n- checking information elsewhere\n- discussing the decision with someone\n- reading carefully\n- waiting for a document\n- intentionally pausing\n\nLikewise, multiple edits can mean careful review rather than a broken interface.\n\nBehavioral signals are useful hypotheses, not proof. Validate them with:\n- usability testing\n- support conversations\n- qualitative feedback\n- optional in-product feedback\n- accessibility reviews\n- data segmented by device, connection quality, and user context\n\nAvoid automatic interventions that become annoying:\n\n> “Need help?”  \n> “Still there?”  \n> “Looks like you’re stuck!”\n\nThese can interrupt a person who is working normally.\n\n## 4. Saving Data Has Privacy and Security Consequences\n\n“Save everything so users can resume” sounds helpful, but it may be inappropriate for sensitive workflows.\n\nConsider:\n- whether users expect drafts to be retained\n- whether another person may access the device\n- whether saved information includes health, financial, legal, or identity data\n- how long unfinished data is retained\n- whether users can delete a draft\n- whether reminder emails reveal sensitive information\n- whether resume links can be safely accessed\n\nFor sensitive products, the better design may be:\n- clearly tell users when information is saved\n- let them choose whether to save a draft\n- minimize saved data until necessary\n- require reauthentication before resuming\n- avoid sensitive details in emails or notifications\n- provide a visible “delete draft” option\n\nReliable continuation must not come at the cost of confidentiality.\n\n## 5. Accessibility Is More Than Clear Error Text\n\nThe earlier version mentions focus and color, but accessibility must shape the entire recovery flow.\n\nA recovery mechanism fails if it cannot be used by:\n- keyboard-only users\n- screen-reader users\n- people with low vision\n- people using zoom or small screens\n- people with cognitive or language-processing differences\n- people with limited dexterity\n- people with slow or unstable internet connections\n\nConcrete considerations:\n- programmatically associate errors with their fields\n- announce errors and success states to assistive technology\n- preserve keyboard focus predictably\n- avoid timeout-only interactions\n- ensure buttons have unambiguous names\n- do not rely on drag-and-drop alone\n- use plain language and explain unfamiliar terminology\n- support error correction without requiring precise pointer movement\n- test resume and recovery paths on mobile devices and assistive technologies\n\nA flow is not truly resilient if only an ideal desktop user can recover from a problem.\n\n## 6. “One Clear Next Action” Should Not Remove User Choice\n\nA strong primary action is useful during an error or interruption. But it can become manipulative if it suppresses reasonable alternatives.\n\nFor example, after a payment problem, the primary action might be:\n\n> `Try payment again`\n\nBut users may also need:\n- `Use another payment method`\n- `Save and finish later`\n- `Contact support`\n- `Cancel order`\n\nThe design should prioritize the likely recovery action without hiding meaningful alternatives.\n\nA good rule:\n\n> Make the preferred next step prominent; make legitimate alternatives visible and understandable.\n\n## 7. Operational Reality Must Support the Interface Promise\n\nThe interface should not claim:\n- “Your slot is held”\n- “Your data is saved”\n- “You have not been charged”\n- “We will notify you”\n- “Your request was submitted”\n\nunless the backend can reliably guarantee it.\n\nOtherwise, the product produces false confidence. That is worse than a plain technical failure.\n\nFor every user-facing status message, establish:\n- the underlying system condition that makes it true\n- how long it remains true\n- what happens if a downstream system fails\n- how users and support staff can verify it\n- what corrective process exists if the promise is broken\n\nTrustworthy recovery is partly an interface problem and partly an engineering and operations problem.\n\n## 8. Some Users Need Human Help, Not Better Self-Service\n\nA product should not endlessly funnel users through automated recovery loops when the situation requires a person.\n\nProvide an escalation path when:\n- the user has repeated"
+    },
+    {
+      "role": "user",
+      "content": "Please give the clearest concise response that would help someone continue from that version."
+    },
+    {
+      "role": "assistant",
+      "content": "The key refinement is:\n\n> Design for appropriate, informed progress—not completion at any cost.\n\nFor each important workflow, ask:\n\n1. **What friction is accidental?**  \n   Remove confusion, duplicate entry, lost progress, vague errors, and avoidable delays.\n\n2. **What friction is protective?**  \n   Keep clear confirmations, consent, security checks, and chances to review high-impact actions.\n\n3. **What is the right outcome?**  \n   It may be completion, cancellation, escalation to support, a safer alternative, or a saved draft.\n\n4. **Can users recover safely?**  \n   Preserve progress where appropriate, explain what happened, and give a clear next step.\n\n5. **Can every user use the recovery path?**  \n   Test it for mobile, assistive technology, slow connections, privacy-sensitive contexts, and people who need human help.\n\n6. **Can the system actually keep its promises?**  \n   Do not say “saved,” “held,” “submitted,” or “not charged” unless the underlying system verifies it.\n\nA concise product standard:\n\n> When users encounter difficulty, the product should preserve their agency, explain the situation honestly, and offer the safest clear route to an appropriate outcome."
+    }
+  ],
+  "historical_context_in_scoring": false
+}

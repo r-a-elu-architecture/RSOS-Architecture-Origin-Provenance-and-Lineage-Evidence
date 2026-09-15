@@ -1,0 +1,166 @@
+{
+  "conditions": [
+    "A100_AUTHENTIC",
+    "A75_DOSE",
+    "A50_DOSE",
+    "A25_DOSE",
+    "S1_SURFACE_PARAPHRASE",
+    "S2_SURFACE_PARAPHRASE",
+    "S3_SURFACE_PARAPHRASE",
+    "T_TOPOLOGY_SHUFFLED",
+    "O_ORDER_SHUFFLED",
+    "R_DIRECTION_REVERSED",
+    "M_META_CONTROL_ABLATED",
+    "P_PRESERVATION_ABLATED",
+    "C_COMPRESSION_ABLATED",
+    "AP1_AUTHENTIC_MILD_PERTURB",
+    "AP2_AUTHENTIC_MEDIUM_PERTURB",
+    "AP3_AUTHENTIC_STRONG_PERTURB",
+    "SP1_SHUFFLED_MILD_PERTURB",
+    "SP2_SHUFFLED_MEDIUM_PERTURB",
+    "SP3_SHUFFLED_STRONG_PERTURB",
+    "CTRL_RECURSION",
+    "CTRL_COMPLEXITY",
+    "CTRL_MATCHED_LINEAR_CHAIN",
+    "CTRL_RANDOM_RELATIONAL_GRAPH",
+    "CF_PASSIVE_ARCHIVE",
+    "CF_TERMINAL_BRANCH",
+    "CF_DISSOLUTION_PATH",
+    "H_AUTHENTIC",
+    "H_TOPOLOGY_DAMAGE",
+    "H_DIRECTION_REVERSE",
+    "H_COUNTERFACTUAL"
+  ],
+  "confirmatory_contrasts": [
+    [
+      "TOPOLOGY",
+      "A100_AUTHENTIC",
+      "T_TOPOLOGY_SHUFFLED"
+    ],
+    [
+      "ORDER",
+      "A100_AUTHENTIC",
+      "O_ORDER_SHUFFLED"
+    ],
+    [
+      "DIRECTION",
+      "A100_AUTHENTIC",
+      "R_DIRECTION_REVERSED"
+    ],
+    [
+      "META_CONTROL",
+      "A100_AUTHENTIC",
+      "M_META_CONTROL_ABLATED"
+    ],
+    [
+      "PRESERVATION",
+      "A100_AUTHENTIC",
+      "P_PRESERVATION_ABLATED"
+    ],
+    [
+      "COMPRESSION",
+      "A100_AUTHENTIC",
+      "C_COMPRESSION_ABLATED"
+    ],
+    [
+      "RECURSION_SPECIFICITY",
+      "A100_AUTHENTIC",
+      "CTRL_RECURSION"
+    ],
+    [
+      "COMPLEXITY_SPECIFICITY",
+      "A100_AUTHENTIC",
+      "CTRL_COMPLEXITY"
+    ],
+    [
+      "LINEAR_SPECIFICITY",
+      "A100_AUTHENTIC",
+      "CTRL_MATCHED_LINEAR_CHAIN"
+    ],
+    [
+      "RANDOM_GRAPH_SPECIFICITY",
+      "A100_AUTHENTIC",
+      "CTRL_RANDOM_RELATIONAL_GRAPH"
+    ],
+    [
+      "COUNTERFACTUAL_ARCHIVE",
+      "A100_AUTHENTIC",
+      "CF_PASSIVE_ARCHIVE"
+    ],
+    [
+      "COUNTERFACTUAL_BRANCH",
+      "A100_AUTHENTIC",
+      "CF_TERMINAL_BRANCH"
+    ],
+    [
+      "COUNTERFACTUAL_DISSOLUTION",
+      "A100_AUTHENTIC",
+      "CF_DISSOLUTION_PATH"
+    ],
+    [
+      "HELDOUT_TOPOLOGY",
+      "H_AUTHENTIC",
+      "H_TOPOLOGY_DAMAGE"
+    ],
+    [
+      "HELDOUT_DIRECTION",
+      "H_AUTHENTIC",
+      "H_DIRECTION_REVERSE"
+    ],
+    [
+      "HELDOUT_COUNTERFACTUAL",
+      "H_AUTHENTIC",
+      "H_COUNTERFACTUAL"
+    ],
+    [
+      "PERTURB_MILD",
+      "AP1_AUTHENTIC_MILD_PERTURB",
+      "SP1_SHUFFLED_MILD_PERTURB"
+    ],
+    [
+      "PERTURB_MEDIUM",
+      "AP2_AUTHENTIC_MEDIUM_PERTURB",
+      "SP2_SHUFFLED_MEDIUM_PERTURB"
+    ],
+    [
+      "PERTURB_STRONG",
+      "AP3_AUTHENTIC_STRONG_PERTURB",
+      "SP3_SHUFFLED_STRONG_PERTURB"
+    ]
+  ],
+  "expected_calls": 9600,
+  "experiment": "V5_FOREST_FORENSIC_FULL",
+  "falsification_arm": [
+    "topology shuffle",
+    "order shuffle",
+    "direction reversal",
+    "meta-control ablation",
+    "preservation ablation",
+    "compression ablation",
+    "recursion control",
+    "complexity control",
+    "linear matched control",
+    "random relational graph",
+    "three coherent counterfactuals",
+    "three perturbation levels",
+    "held-out structural damage"
+  ],
+  "interpretation_boundary": "Behavioral experiment only. Does not directly measure weights, activations, attention heads, latent vectors, biological myelination, training exposure, personal recognition or cross-user transfer.",
+  "master_seed": 918,
+  "model": "gpt-5.6-luna",
+  "multiple_testing": "Holm FWER correction",
+  "n_reps": 4,
+  "n_seeds": 80,
+  "primary_unit": "seed",
+  "proof_arm": [
+    "dose response",
+    "three independent paraphrase families",
+    "held-out lexical family",
+    "domain variation",
+    "multiscale behavioral scoring"
+  ],
+  "split_replication": {
+    "A": "seeds 0-39",
+    "B": "seeds 40-79"
+  }
+}

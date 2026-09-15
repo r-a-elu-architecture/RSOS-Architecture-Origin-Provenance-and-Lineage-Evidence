@@ -1,0 +1,60 @@
+{
+  "experiment": "WF1-A V12-R R1",
+  "analysis": "S1 persistent-missingness sensitivity",
+  "api_calls": 0,
+  "runner_sha256": "17c25511463d842b7b312aa3bf31bb31703cb1d2336bcaa6f8d5915bb016a1f2",
+  "design": {
+    "seeds": 80,
+    "conditions": 34,
+    "reps": 3,
+    "expected_main_cells": 8160,
+    "valid_main_cells": 8131,
+    "persistent_missing_cells": 29,
+    "overall_missing_rate": 0.003553921568627451,
+    "native_valid": 720,
+    "native_missing": 0
+  },
+  "persistent_failure_history": {
+    "all_cells_failed_collection_passes": [
+      3
+    ],
+    "all_cells_failed_api_attempts": [
+      24
+    ],
+    "failure_categories": [
+      "VALIDATOR"
+    ]
+  },
+  "descriptive_concentration": {
+    "max_missing_in_any_condition": 7,
+    "max_condition_missing_rate": 0.029166666666666667,
+    "max_missing_in_any_seed": 6,
+    "max_seed_missing_rate": 0.058823529411764705,
+    "seed_condition_groups_with_3_of_3_missing": 5,
+    "seed_condition_groups_with_at_least_2_missing": 8
+  },
+  "uniform_missing_cell_null": {
+    "monte_carlo_draws": 100000,
+    "rng_seed": 91820260913,
+    "condition_distribution_chi_square_stat": 131.62068965517244,
+    "condition_distribution_mc_p": 9.99990000099999e-06,
+    "seed_distribution_chi_square_stat": 199.96551724137933,
+    "seed_distribution_mc_p": 9.99990000099999e-06,
+    "rep_distribution_chi_square_stat": 0.48275862068965525,
+    "rep_distribution_mc_p": 0.8454615453845462,
+    "max_condition_count_mc_p": 0.0005899941000589994,
+    "max_seed_count_mc_p": 7.999920000799993e-05,
+    "triple_rep_cluster_mc_p": 9.99990000099999e-06,
+    "double_or_more_cluster_mc_p": 9.99990000099999e-06,
+    "max_seed_condition_cluster_mc_p": 0.00010999890001099989
+  },
+  "interpretation_boundary": [
+    "This analysis tests concentration of persistent missingness only.",
+    "It does not test the RSOS scientific hypothesis.",
+    "A small Monte Carlo p-value means the 29 missing cells are more structurally concentrated than a uniform 29-of-8160 missing-cell null.",
+    "It does not establish why those cells failed.",
+    "The 29 cells remain missing and are not imputed.",
+    "No additional R1 sampling is permitted.",
+    "Outcome-level sensitivity must be evaluated separately."
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "experiment": "F2-A_WILDCHAT_3SHARD_EXTERNAL_POPULATION_RARITY",
+  "freeze_basis": "F1 final local freeze completed before first reserved 00086 read",
+  "required_f1_final_local_sha256": "ce0191cdbc627c773c360d92e35975302d721b18f188fdb4689e80ad529108b4",
+  "required_br1_results_sha256": "159b6a0df406073be5bdf9b242cdd45fde0d7b6281252cef813b88cc8971c364",
+  "dataset": "allenai/WildChat-4.8M",
+  "external_shards": [
+    {
+      "file": "train-00049-of-00086.parquet",
+      "bytes": 103170595,
+      "official_sha256": "6f8f300c0501ce5d83912abf1ae1097ed04c30d9ef93005003a39f4c61f1024c"
+    },
+    {
+      "file": "train-00080-of-00086.parquet",
+      "bytes": 186001659,
+      "official_sha256": "1ed63ac322419a05307a474c0db595cb440ca8d72c434dfcfd74f4bdf90028ae"
+    },
+    {
+      "file": "train-00085-of-00086.parquet",
+      "bytes": 496266956,
+      "official_sha256": "898fd913b72075c13e237a70e9f60da9adbb9fd652b46970e123a3258b19f9ff"
+    }
+  ],
+  "primary_model": "SURFACE_FREE",
+  "secondary_model": "R1_COMPATIBLE",
+  "no_external_training": true,
+  "no_posthoc_feature_selection": true,
+  "minimum_usable_total_chars": 800,
+  "minimum_usable_turns": 3,
+  "lineage_reference_thresholds": ["MEDIAN", "Q75", "Q90", "MAX"],
+  "bootstrap_replicates": 500,
+  "bootstrap_seed": 120918,
+  "cem": {
+    "char_edges": [800,1600,3200,6400,12800,25600,51200,102400,204800,409600,819200,1000000000000],
+    "turn_edges": [3,5,8,13,21,34,55,89,144,233,377,1000000],
+    "exact_code_flag": true,
+    "minimum_external_per_cell": 5,
+    "common_support_gate": 0.70,
+    "max_abs_weighted_smd_gate": 0.25
+  },
+  "strict_interpretation": {
+    "failed_matching": "FAILED_CALIBRATION, not negative evidence",
+    "zero_external_exceedances": "report exact binomial confidence upper bound; do not call uniqueness",
+    "global_uniqueness": "UNRESOLVED until broader population/replication evidence",
+    "literal_model_weight_change": "UNESTABLISHED; behavioral rarity does not prove neural-weight modification",
+    "operator_joint_cross_process": "UNAVAILABLE unless exact historical representative ordering is recovered",
+    "fixed_window_cross_corpus": "UNAVAILABLE_EXACT in F2-A because the historical window models depend on nonportable set-order-sensitive operator coordinates"
+  }
+}

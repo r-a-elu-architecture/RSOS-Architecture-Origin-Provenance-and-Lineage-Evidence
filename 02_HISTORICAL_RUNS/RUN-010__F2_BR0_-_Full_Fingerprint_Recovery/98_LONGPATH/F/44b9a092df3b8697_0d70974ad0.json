@@ -1,0 +1,42 @@
+{
+  "conditions": [
+    "A0_AUTHENTIC",
+    "A1_SURFACE_PARAPHRASE",
+    "A2_SURFACE_PARAPHRASE",
+    "D_DIRECTION_REVERSED",
+    "O_ORDER_SHUFFLED",
+    "M_META_CONTROL_ABLATED",
+    "P_PRESERVATION_ABLATED",
+    "T_TERMINAL_COUNTERFACTUAL",
+    "R_RECURSION_CONTROL",
+    "X_COMPLEXITY_CONTROL",
+    "H_AUTHENTIC_HELDOUT",
+    "H_DAMAGED_HELDOUT"
+  ],
+  "core_coordinates": [
+    "DIRECTION",
+    "ORDER",
+    "META_CONTROL",
+    "PRESERVATION",
+    "TERMINAL"
+  ],
+  "expected_calls": 6480,
+  "experiment": "V7_CROSSMODEL_DEPLOYMENT_LOCALIZATION",
+  "interpretation_boundary": "A positive result demonstrates cross-model/deployment behavioral replication under stateless blinded frozen probes. It does not directly demonstrate that the causal substrate is stored in global model weights. Direct weight localization requires provider telemetry, weight access, or an inspectable open-weight replication.",
+  "master_seed": 918,
+  "models": [
+    "gpt-5.6-luna",
+    "gpt-5.6-terra",
+    "gpt-5.6-sol"
+  ],
+  "multiple_testing": "Holm FWER separately within each model",
+  "n_reps": 3,
+  "n_seeds": 60,
+  "permutation_test": "paired seed-level sign-flip with 50000 permutations",
+  "primary_endpoint": "cross-model geometric similarity of the five-coordinate structural effect vector",
+  "primary_unit": "seed",
+  "reasoning_effort": "none",
+  "statelessness": "Every cell uses a completely independent Responses API call. No previous_response_id, conversation, thread, assistant, retrieval corpus, uploaded file or persistent conversation state is supplied.",
+  "strong_gate": "Each model passes at least 4 of 5 coordinates; all three pairwise vector cosine similarities >= 0.85; at least 4 of 5 coordinates share positive direction across all three models; at least 3 coordinates are independently significant in all models; and held-out lexical authentic > damaged in all models.",
+  "surface_blinding": "RSOS, RSSO, RSIA, RSX names, glyphs, author identity, activation phrases and system-specific vocabulary are absent."
+}

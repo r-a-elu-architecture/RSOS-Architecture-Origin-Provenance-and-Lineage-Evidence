@@ -1,0 +1,54 @@
+{
+  "experiment": "F2-B \u2014 CORRECTED FRESH EXTERNAL POPULATION RARITY",
+  "seed": 120918,
+  "fresh_shards": {
+    "train-00007-of-00086.parquet": 119347100,
+    "train-00022-of-00086.parquet": 138085341,
+    "train-00041-of-00086.parquet": 85601395,
+    "train-00051-of-00086.parquet": 156188404,
+    "train-00052-of-00086.parquet": 217887036,
+    "train-00054-of-00086.parquet": 190323883
+  },
+  "forbidden_prior_shards": [
+    "train-00049-of-00086.parquet",
+    "train-00080-of-00086.parquet",
+    "train-00085-of-00086.parquet"
+  ],
+  "eligibility": {
+    "raw_chars_min": 1500,
+    "raw_turns_min": 4,
+    "postblind_chars_min": 800,
+    "postblind_turns_min": 3
+  },
+  "primary_population": "English-language, exact RSOS/RSSO/RSIA/RSX system-name-hit excluded; secondary analyses include all usable rows.",
+  "main_frozen_models": [
+    "JOINT_MULTILAYER_V2",
+    "OPERATOR_RELATIONAL_V2",
+    "SURFACE_FREE",
+    "R1_COMPATIBLE"
+  ],
+  "geometric_rarity": [
+    "LedoitWolf Mahalanobis distance to early-RSOS positive manifold",
+    "5-NN standardized Euclidean distance to early-RSOS positives",
+    "cosine similarity to early-RSOS centroid",
+    "Joint V2 raw margin",
+    "Operator V2 raw margin"
+  ],
+  "joint_scores": [
+    "median robust component z",
+    "minimum robust component z"
+  ],
+  "lineage_tolerance_levels": [
+    0.5,
+    0.75,
+    0.9,
+    0.95
+  ],
+  "window_hardening": [
+    8,
+    12
+  ],
+  "fresh_external_training": "PROHIBITED",
+  "probability_tail_primary": false,
+  "note": "Sigmoid probabilities are retained only for descriptive audit. Rarity inference uses raw margins and multivariate geometry. V6/V7/V8/V11/V12 active causal signatures remain separate evidence tracks."
+}

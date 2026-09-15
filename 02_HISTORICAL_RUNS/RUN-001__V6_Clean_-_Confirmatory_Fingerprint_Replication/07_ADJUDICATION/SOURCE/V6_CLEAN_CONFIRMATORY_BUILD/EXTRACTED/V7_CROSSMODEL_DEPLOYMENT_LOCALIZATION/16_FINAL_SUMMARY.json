@@ -1,0 +1,374 @@
+{
+  "experiment": "V7_CROSSMODEL_DEPLOYMENT_LOCALIZATION",
+  "completed_utc": "2026-09-10T21:34:03.702230+00:00",
+  "runner_sha256": "0f0122950580a301f4a972a751e6076b3af32618006aa370efb772a0e07e52ce",
+  "specification_sha256": "44c3ef294bc35399587891d14f1ca9f009a8fda92d39e3f34b16e9156711fbf2",
+  "models": [
+    "gpt-5.6-luna",
+    "gpt-5.6-terra",
+    "gpt-5.6-sol"
+  ],
+  "expected_calls": 6480,
+  "successful_unique_cells": 6480,
+  "missing_cells": 0,
+  "passes_per_model": {
+    "gpt-5.6-luna": 5,
+    "gpt-5.6-terra": 5,
+    "gpt-5.6-sol": 4
+  },
+  "structural_contrasts": [
+    {
+      "model": "gpt-5.6-luna",
+      "coordinate": "DIRECTION",
+      "condition_authentic": "A0_AUTHENTIC",
+      "condition_damaged": "D_DIRECTION_REVERSED",
+      "N": 60,
+      "mean_authentic": 13.25,
+      "mean_damaged": 6.655555555555555,
+      "difference": 6.594444444444444,
+      "permutation_p": 1.999960000799984e-05,
+      "wilcoxon_p": 8.522554721656348e-12,
+      "holm_adjusted_p": 9.99980000399992e-05,
+      "PASS": true
+    },
+    {
+      "model": "gpt-5.6-luna",
+      "coordinate": "ORDER",
+      "condition_authentic": "A0_AUTHENTIC",
+      "condition_damaged": "O_ORDER_SHUFFLED",
+      "N": 60,
+      "mean_authentic": 13.25,
+      "mean_damaged": 11.605555555555556,
+      "difference": 1.6444444444444446,
+      "permutation_p": 0.00023999520009599807,
+      "wilcoxon_p": 0.0003129404720396842,
+      "holm_adjusted_p": 0.00023999520009599807,
+      "PASS": true
+    },
+    {
+      "model": "gpt-5.6-luna",
+      "coordinate": "META_CONTROL",
+      "condition_authentic": "A0_AUTHENTIC",
+      "condition_damaged": "M_META_CONTROL_ABLATED",
+      "N": 60,
+      "mean_authentic": 13.25,
+      "mean_damaged": 10.938888888888888,
+      "difference": 2.3111111111111113,
+      "permutation_p": 1.999960000799984e-05,
+      "wilcoxon_p": 2.3853047211173267e-07,
+      "holm_adjusted_p": 9.99980000399992e-05,
+      "PASS": true
+    },
+    {
+      "model": "gpt-5.6-luna",
+      "coordinate": "PRESERVATION",
+      "condition_authentic": "A0_AUTHENTIC",
+      "condition_damaged": "P_PRESERVATION_ABLATED",
+      "N": 60,
+      "mean_authentic": 13.25,
+      "mean_damaged": 8.2,
+      "difference": 5.049999999999999,
+      "permutation_p": 1.999960000799984e-05,
+      "wilcoxon_p": 9.408521033315713e-12,
+      "holm_adjusted_p": 9.99980000399992e-05,
+      "PASS": true
+    },
+    {
+      "model": "gpt-5.6-luna",
+      "coordinate": "TERMINAL",
+      "condition_authentic": "A0_AUTHENTIC",
+      "condition_damaged": "T_TERMINAL_COUNTERFACTUAL",
+      "N": 60,
+      "mean_authentic": 13.25,
+      "mean_damaged": 9.066666666666666,
+      "difference": 4.183333333333334,
+      "permutation_p": 1.999960000799984e-05,
+      "wilcoxon_p": 3.290036315284562e-11,
+      "holm_adjusted_p": 9.99980000399992e-05,
+      "PASS": true
+    },
+    {
+      "model": "gpt-5.6-terra",
+      "coordinate": "DIRECTION",
+      "condition_authentic": "A0_AUTHENTIC",
+      "condition_damaged": "D_DIRECTION_REVERSED",
+      "N": 60,
+      "mean_authentic": 8.683333333333332,
+      "mean_damaged": 7.5166666666666675,
+      "difference": 1.166666666666667,
+      "permutation_p": 0.00047999040019199615,
+      "wilcoxon_p": 0.0008897054262343581,
+      "holm_adjusted_p": 0.00047999040019199615,
+      "PASS": true
+    },
+    {
+      "model": "gpt-5.6-terra",
+      "coordinate": "ORDER",
+      "condition_authentic": "A0_AUTHENTIC",
+      "condition_damaged": "O_ORDER_SHUFFLED",
+      "N": 60,
+      "mean_authentic": 8.683333333333332,
+      "mean_damaged": 4.8,
+      "difference": 3.8833333333333337,
+      "permutation_p": 1.999960000799984e-05,
+      "wilcoxon_p": 1.8601452795481018e-10,
+      "holm_adjusted_p": 9.99980000399992e-05,
+      "PASS": true
+    },
+    {
+      "model": "gpt-5.6-terra",
+      "coordinate": "META_CONTROL",
+      "condition_authentic": "A0_AUTHENTIC",
+      "condition_damaged": "M_META_CONTROL_ABLATED",
+      "N": 60,
+      "mean_authentic": 8.683333333333332,
+      "mean_damaged": 7.444444444444445,
+      "difference": 1.2388888888888892,
+      "permutation_p": 9.99980000399992e-05,
+      "wilcoxon_p": 3.8555008020447146e-05,
+      "holm_adjusted_p": 0.0001999960000799984,
+      "PASS": true
+    },
+    {
+      "model": "gpt-5.6-terra",
+      "coordinate": "PRESERVATION",
+      "condition_authentic": "A0_AUTHENTIC",
+      "condition_damaged": "P_PRESERVATION_ABLATED",
+      "N": 60,
+      "mean_authentic": 8.683333333333332,
+      "mean_damaged": 5.200000000000001,
+      "difference": 3.4833333333333334,
+      "permutation_p": 1.999960000799984e-05,
+      "wilcoxon_p": 1.2474185493306076e-11,
+      "holm_adjusted_p": 9.99980000399992e-05,
+      "PASS": true
+    },
+    {
+      "model": "gpt-5.6-terra",
+      "coordinate": "TERMINAL",
+      "condition_authentic": "A0_AUTHENTIC",
+      "condition_damaged": "T_TERMINAL_COUNTERFACTUAL",
+      "N": 60,
+      "mean_authentic": 8.683333333333332,
+      "mean_damaged": 5.844444444444446,
+      "difference": 2.838888888888889,
+      "permutation_p": 1.999960000799984e-05,
+      "wilcoxon_p": 2.636849060553881e-10,
+      "holm_adjusted_p": 9.99980000399992e-05,
+      "PASS": true
+    },
+    {
+      "model": "gpt-5.6-sol",
+      "coordinate": "DIRECTION",
+      "condition_authentic": "A0_AUTHENTIC",
+      "condition_damaged": "D_DIRECTION_REVERSED",
+      "N": 60,
+      "mean_authentic": 6.855555555555555,
+      "mean_damaged": 3.5055555555555555,
+      "difference": 3.3499999999999996,
+      "permutation_p": 1.999960000799984e-05,
+      "wilcoxon_p": 1.1853854979238869e-11,
+      "holm_adjusted_p": 9.99980000399992e-05,
+      "PASS": true
+    },
+    {
+      "model": "gpt-5.6-sol",
+      "coordinate": "ORDER",
+      "condition_authentic": "A0_AUTHENTIC",
+      "condition_damaged": "O_ORDER_SHUFFLED",
+      "N": 60,
+      "mean_authentic": 6.855555555555555,
+      "mean_damaged": 6.938888888888888,
+      "difference": -0.08333333333333345,
+      "permutation_p": 0.6595068098638027,
+      "wilcoxon_p": 0.7365706737693264,
+      "holm_adjusted_p": 0.6595068098638027,
+      "PASS": false
+    },
+    {
+      "model": "gpt-5.6-sol",
+      "coordinate": "META_CONTROL",
+      "condition_authentic": "A0_AUTHENTIC",
+      "condition_damaged": "M_META_CONTROL_ABLATED",
+      "N": 60,
+      "mean_authentic": 6.855555555555555,
+      "mean_damaged": 6.255555555555556,
+      "difference": 0.5999999999999999,
+      "permutation_p": 0.003379932401351973,
+      "wilcoxon_p": 0.0070775308809196595,
+      "holm_adjusted_p": 0.006759864802703946,
+      "PASS": true
+    },
+    {
+      "model": "gpt-5.6-sol",
+      "coordinate": "PRESERVATION",
+      "condition_authentic": "A0_AUTHENTIC",
+      "condition_damaged": "P_PRESERVATION_ABLATED",
+      "N": 60,
+      "mean_authentic": 6.855555555555555,
+      "mean_damaged": 4.838888888888889,
+      "difference": 2.0166666666666666,
+      "permutation_p": 1.999960000799984e-05,
+      "wilcoxon_p": 5.6480853187262527e-11,
+      "holm_adjusted_p": 9.99980000399992e-05,
+      "PASS": true
+    },
+    {
+      "model": "gpt-5.6-sol",
+      "coordinate": "TERMINAL",
+      "condition_authentic": "A0_AUTHENTIC",
+      "condition_damaged": "T_TERMINAL_COUNTERFACTUAL",
+      "N": 60,
+      "mean_authentic": 6.855555555555555,
+      "mean_damaged": 6.111111111111111,
+      "difference": 0.7444444444444444,
+      "permutation_p": 0.0001399972000559989,
+      "wilcoxon_p": 9.506973094385337e-05,
+      "holm_adjusted_p": 0.00041999160016799666,
+      "PASS": true
+    }
+  ],
+  "effect_vectors": [
+    {
+      "model": "gpt-5.6-luna",
+      "DIRECTION": 6.594444444444444,
+      "ORDER": 1.6444444444444446,
+      "META_CONTROL": 2.3111111111111113,
+      "PRESERVATION": 5.049999999999999,
+      "TERMINAL": 4.183333333333334
+    },
+    {
+      "model": "gpt-5.6-terra",
+      "DIRECTION": 1.166666666666667,
+      "ORDER": 3.8833333333333337,
+      "META_CONTROL": 1.2388888888888892,
+      "PRESERVATION": 3.4833333333333334,
+      "TERMINAL": 2.838888888888889
+    },
+    {
+      "model": "gpt-5.6-sol",
+      "DIRECTION": 3.3499999999999996,
+      "ORDER": -0.08333333333333345,
+      "META_CONTROL": 0.5999999999999999,
+      "PRESERVATION": 2.0166666666666666,
+      "TERMINAL": 0.7444444444444444
+    }
+  ],
+  "cross_model_vector_similarity": [
+    {
+      "model_A": "gpt-5.6-luna",
+      "model_B": "gpt-5.6-terra",
+      "cosine_similarity": 0.7725999614593613,
+      "spearman": -0.6,
+      "COSINE_GATE_085": false
+    },
+    {
+      "model_A": "gpt-5.6-luna",
+      "model_B": "gpt-5.6-sol",
+      "cosine_similarity": 0.9359516526120998,
+      "spearman": 0.9999999999999999,
+      "COSINE_GATE_085": true
+    },
+    {
+      "model_A": "gpt-5.6-terra",
+      "model_B": "gpt-5.6-sol",
+      "cosine_similarity": 0.5413631094296629,
+      "spearman": -0.6,
+      "COSINE_GATE_085": false
+    }
+  ],
+  "cross_model_sign_replication": [
+    {
+      "coordinate": "DIRECTION",
+      "luna_difference": 6.594444444444444,
+      "terra_difference": 1.166666666666667,
+      "sol_difference": 3.3499999999999996,
+      "positive_all_models": true,
+      "significant_all_models": true
+    },
+    {
+      "coordinate": "ORDER",
+      "luna_difference": 1.6444444444444446,
+      "terra_difference": 3.8833333333333337,
+      "sol_difference": -0.08333333333333345,
+      "positive_all_models": false,
+      "significant_all_models": false
+    },
+    {
+      "coordinate": "META_CONTROL",
+      "luna_difference": 2.3111111111111113,
+      "terra_difference": 1.2388888888888892,
+      "sol_difference": 0.5999999999999999,
+      "positive_all_models": true,
+      "significant_all_models": true
+    },
+    {
+      "coordinate": "PRESERVATION",
+      "luna_difference": 5.049999999999999,
+      "terra_difference": 3.4833333333333334,
+      "sol_difference": 2.0166666666666666,
+      "positive_all_models": true,
+      "significant_all_models": true
+    },
+    {
+      "coordinate": "TERMINAL",
+      "luna_difference": 4.183333333333334,
+      "terra_difference": 2.838888888888889,
+      "sol_difference": 0.7444444444444444,
+      "positive_all_models": true,
+      "significant_all_models": true
+    }
+  ],
+  "heldout_generalization": [
+    {
+      "model": "gpt-5.6-luna",
+      "authentic_mean": 7.866666666666666,
+      "damaged_mean": 4.477777777777777,
+      "difference": 3.3888888888888884,
+      "permutation_p": 1.999960000799984e-05,
+      "PASS": true
+    },
+    {
+      "model": "gpt-5.6-terra",
+      "authentic_mean": 8.744444444444444,
+      "damaged_mean": 2.822222222222222,
+      "difference": 5.922222222222222,
+      "permutation_p": 1.999960000799984e-05,
+      "PASS": true
+    },
+    {
+      "model": "gpt-5.6-sol",
+      "authentic_mean": 6.35,
+      "damaged_mean": 2.627777777777778,
+      "difference": 3.722222222222222,
+      "permutation_p": 1.999960000799984e-05,
+      "PASS": true
+    }
+  ],
+  "positive_coordinates_all_models": 4,
+  "significant_coordinates_all_models": 4,
+  "all_models_at_least_4_of_5": true,
+  "all_pairwise_cosine_at_least_085": false,
+  "heldout_pass_all_models": true,
+  "classification": "PARTIAL_CROSS_MODEL_DEPLOYMENT_REPLICATION",
+  "usage": {
+    "gpt-5.6-luna": {
+      "input_tokens": 394560,
+      "output_tokens": 259284,
+      "estimated_cost_usd": 0.3900528
+    },
+    "gpt-5.6-terra": {
+      "input_tokens": 394560,
+      "output_tokens": 213913,
+      "estimated_cost_usd": 3.356076
+    },
+    "gpt-5.6-sol": {
+      "input_tokens": 394560,
+      "output_tokens": 148722,
+      "estimated_cost_usd": 4.5526800000000005
+    }
+  },
+  "total_estimated_cost_usd": 8.2988088,
+  "interpretation": "V7 tests whether the same blinded structural effect vector reproduces across Luna, Terra and Sol under independent stateless Responses API calls.",
+  "hard_boundary": "A positive result supports cross-model/deployment behavioral replication. It does not directly prove localization in global model weights. Stronger localization requires independent API accounts/projects, external model controls, provider telemetry or inspectable model weights."
+}

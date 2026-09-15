@@ -1,0 +1,61 @@
+{
+  "experiment": "WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY_R1",
+  "completed_utc": "2026-09-13T20:40:31.783794+00:00",
+  "model": "gpt-5.6-luna",
+  "classification": "STRONG_REPLICATED_RELATIONAL_TOPOLOGY_FINGERPRINT",
+  "primary_strong_gate": true,
+  "hard_control_auc": {
+    "confirmation": 1.0,
+    "final_holdout": 1.0
+  },
+  "pure9_delete": {
+    "confirmation": {
+      "excess": 11.140982140054948,
+      "holm_p": 0.0006999650017499125
+    },
+    "final_holdout": {
+      "excess": 11.531883431474029,
+      "holm_p": 0.0007499625018749063
+    }
+  },
+  "pure8_reverse": {
+    "confirmation": {
+      "excess": 11.630935635673932,
+      "holm_p": 0.0008999550022498875
+    },
+    "final_holdout": {
+      "excess": 11.785302727619598,
+      "holm_p": 0.0007499625018749063
+    }
+  },
+  "specificity_all_three": {
+    "CONFIRMATION": true,
+    "FINAL_HOLDOUT": true
+  },
+  "surface_invariance_all_three": {
+    "CONFIRMATION": true,
+    "FINAL_HOLDOUT": true
+  },
+  "replicated_pure_edges": {
+    "delete": 9,
+    "delete_out_of": 9,
+    "reverse": 7,
+    "reverse_out_of": 8
+  },
+  "switch_linked_delete_indexes": [
+    7
+  ],
+  "switch_linked_reverse_indexes": [
+    7,
+    9
+  ],
+  "model_native_proxy": {
+    "pooled_control_passes": {
+      "CONFIRMATION": 4,
+      "FINAL_HOLDOUT": 3
+    },
+    "frame_positive_direction_count_final": 3,
+    "triangulated": true
+  },
+  "interpretation_boundary": "Black-box behavioral structural evidence only. Model-native module is an indirect output-based proxy, not direct inspection of weights, activations, hidden circuits, training data, or global uniqueness."
+}

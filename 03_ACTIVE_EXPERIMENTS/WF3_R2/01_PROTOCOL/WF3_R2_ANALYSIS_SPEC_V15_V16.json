@@ -1,0 +1,194 @@
+{
+  "experiment": "WF3-R2 Genealogy / Population Confirmation",
+  "analysis_spec_version": "WF3_R2_ANALYSIS_SPEC_V1",
+  "status": "FROZEN_BEFORE_SCIENTIFIC_EXECUTION",
+  "boundary1_r2_sha256": "7378280ac6bd03afea440c34321906730646c4318ac50feadfc93c1af6c245db",
+  "scientific_observations_generated_by_phase9b": false,
+  "shared_rules": {
+    "canonical_inputs_only": true,
+    "recursive_scan_outside_reference_manifests": false,
+    "source_hash_verification_required": true,
+    "fixed_random_seed": 20260915,
+    "post_result_threshold_tuning": false,
+    "technical_failures_are_scientific_negatives": false,
+    "missing_or_unparseable_files": "Must be written to a diagnostic ledger. They may not silently disappear.",
+    "historical_status_preserved": true,
+    "interpretation_scope": "Tests the frozen reconstructed artifact lineage and external-population evidence. It does not by itself establish hidden model-weight provenance, training-data inclusion, or global uniqueness."
+  },
+  "v15": {
+    "module": "V15_GENEALOGY_TEMPORAL_DIRECTIONALITY",
+    "primary_question": "Does the frozen reconstructed structural lineage show greater parent\u2192child continuity and ordered development than expected under label/order permutation?",
+    "allowed_buckets": [
+      "05_OUTPUTS",
+      "07_ADJUDICATION",
+      "09_FREEZE"
+    ],
+    "allowed_extensions": [
+      ".csv",
+      ".json",
+      ".parquet"
+    ],
+    "max_file_bytes": 209715200,
+    "primary_filename_regex": "(graph|edge|operator|topology|relation|feature|vector|contrast|condition|specificity|metric|result|summary|calibration)",
+    "primary_filename_exclusion_regex": "(sha256|hash_manifest|environment|readme|package_status)",
+    "surface_reduction": "Numeric-column names are not used as signature dimensions. Each numeric variable is summarized by distributional statistics and those statistics are aggregated across variables into fixed quantiles.",
+    "variable_statistics": [
+      "log_count",
+      "zero_fraction",
+      "signed_log_mean",
+      "log_std",
+      "signed_log_q10",
+      "signed_log_q25",
+      "signed_log_q50",
+      "signed_log_q75",
+      "signed_log_q90",
+      "signed_log_min",
+      "signed_log_max"
+    ],
+    "aggregation_quantiles": [
+      0.1,
+      0.25,
+      0.5,
+      0.75,
+      0.9
+    ],
+    "minimum_parsed_files_per_entity": 1,
+    "minimum_parse_success_fraction": 0.8,
+    "distance": "robust-standardized Euclidean",
+    "primary_successor_edges": [
+      [
+        "RUN-004",
+        "RUN-005"
+      ],
+      [
+        "RUN-005",
+        "RUN-006"
+      ],
+      [
+        "RUN-006",
+        "RUN-007"
+      ],
+      [
+        "RUN-007",
+        "RUN-008"
+      ],
+      [
+        "RUN-008",
+        "EXP-010"
+      ],
+      [
+        "RUN-003",
+        "EXP-008"
+      ],
+      [
+        "EXP-009",
+        "EXP-014"
+      ]
+    ],
+    "secondary_relation_edges": [
+      [
+        "EXP-002",
+        "RUN-001"
+      ]
+    ],
+    "f1_order_path": [
+      "RUN-004",
+      "RUN-005",
+      "RUN-006",
+      "RUN-007",
+      "RUN-008",
+      "EXP-010"
+    ],
+    "primary_tests": {
+      "edge_recovery": "For every frozen successor edge, calculate the child's distance rank among all eligible non-parent entities. Primary statistic is mean normalized child rank.",
+      "edge_permutation": "10,000 fixed-seed permutations of child assignments. One-sided p=(1+number(null<=observed))/(1+10000).",
+      "f1_final_approach": "Distances RUN-004..RUN-008 to EXP-010 are tested for monotonic decrease using Spearman correlation between stage index and distance.",
+      "f1_order_exact": "All 120 permutations of RUN-004..RUN-008 are evaluated with EXP-010 fixed as the terminal state. Statistic is sum of adjacent distances. Actual order is compared with the full exact permutation distribution."
+    },
+    "alpha": 0.05,
+    "multiple_testing": "Primary V15 inference is based on the frozen aggregate edge-permutation test and F1 exact-order test. Individual edges are descriptive and are not independently promoted as discoveries.",
+    "required_outputs": [
+      "V15_FILE_SELECTION.csv",
+      "V15_PARSE_DIAGNOSTICS.csv",
+      "V15_ENTITY_SIGNATURES.csv",
+      "V15_DISTANCE_MATRIX.csv",
+      "V15_EDGE_TESTS.csv",
+      "V15_F1_ORDER_TEST.json",
+      "V15_FINAL_SUMMARY.json"
+    ]
+  },
+  "v16": {
+    "module": "V16_POPULATION_SCALE_EXTERNAL_CONFIRMATION",
+    "primary_question": "Do the frozen external-population authority layers show directionally consistent above-chance population separation while preserving corrected rarity and historical-method distinctions?",
+    "primary_authority_entities": [
+      "EXP-011",
+      "EXP-012",
+      "EXP-015",
+      "EXP-016"
+    ],
+    "context_entity": "EXP-010",
+    "historical_nonfinal_entities": [
+      "RUN-009",
+      "RUN-010"
+    ],
+    "historical_rules": {
+      "RUN-009": "F2-A remains INCOMPLETE_RUN. It cannot replace corrected F2-B authority.",
+      "RUN-010": "F2 BR0 remains a RECOVERY_RUN. It cannot replace F2-B or final external-population authority."
+    },
+    "allowed_buckets": [
+      "05_OUTPUTS",
+      "07_ADJUDICATION",
+      "09_FREEZE",
+      "02_INPUTS"
+    ],
+    "metric_extensions": [
+      ".csv",
+      ".json",
+      ".txt"
+    ],
+    "max_metric_file_bytes": 52428800,
+    "metric_filename_regex": "(external|rarity|percentile|quantile|tail|auc|matched|population|primary|summary|provider|cem|score|result)",
+    "primary_auc_include_regex": "(auc|roc_auc)",
+    "primary_auc_context_include_regex": "(primary|external|matched|holdout|joint|surface|operator|provider|result|summary)",
+    "primary_auc_exclusion_regex": "(null|negative_control|diagnostic|debug|calibration_only)",
+    "auc_valid_range": [
+      0.0,
+      1.0
+    ],
+    "authority_level_auc_statistic": "median of eligible AUC values within each primary authority",
+    "above_chance_threshold": 0.5,
+    "primary_population_test": "Exact one-sided sign test across primary authority-level median AUCs against p=0.5. Authority median >0.5 is positive.",
+    "minimum_authorities_with_auc": 3,
+    "rarity_evidence_rules": {
+      "corrected_rarity_authority": "EXP-012",
+      "accepted_patterns": [
+        "one_in",
+        "1 in N textual form",
+        "rarity",
+        "tail frequency",
+        "tail probability",
+        "prevalence"
+      ],
+      "no_external_reproduction_claim": false,
+      "interpretation": "Any detected external matches or finite tail frequency must remain visible. Population rarity is conditional on the tested representation, corpus, filters and matching/control procedure."
+    },
+    "population_artifact_check": "Record canonical external/WildChat parquet artifacts and their sizes/hashes. Presence is an audit fact, not a statistical success criterion.",
+    "primary_gate": "V16 primary gate requires >=3 authority entities with eligible AUC evidence, a one-sided sign-test result, corrected-rarity evidence from EXP-012, and preserved external-population artifacts. Gate components are reported separately; no missing component may be silently imputed.",
+    "alpha": 0.05,
+    "required_outputs": [
+      "V16_FILE_SELECTION.csv",
+      "V16_PARSE_DIAGNOSTICS.csv",
+      "V16_METRIC_LEDGER.csv",
+      "V16_AUTHORITY_AUC_SUMMARY.csv",
+      "V16_RARITY_EVIDENCE.csv",
+      "V16_EXTERNAL_POPULATION_ARTIFACTS.csv",
+      "V16_FINAL_SUMMARY.json"
+    ]
+  },
+  "execution_order": [
+    "V15_GENEALOGY_TEMPORAL_DIRECTIONALITY",
+    "V16_POPULATION_SCALE_EXTERNAL_CONFIRMATION"
+  ],
+  "freeze_rule": "Specification and runner bytes must be frozen before either runner is executed.",
+  "created_utc": "2026-09-15T21:50:31.791566+00:00"
+}

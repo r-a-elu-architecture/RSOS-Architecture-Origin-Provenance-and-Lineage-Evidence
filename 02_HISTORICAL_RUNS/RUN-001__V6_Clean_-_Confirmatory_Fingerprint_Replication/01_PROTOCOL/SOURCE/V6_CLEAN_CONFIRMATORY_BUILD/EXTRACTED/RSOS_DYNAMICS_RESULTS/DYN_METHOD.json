@@ -1,0 +1,140 @@
+{
+  "version": "RSOS_MULTI_SCALE_DYNAMICS_V1",
+  "seed": 918,
+  "motif_detectors": {
+    "CONTAINMENT": [
+      "\\binside\\b",
+      "\\bwithin\\b",
+      "\\bcontain",
+      "\\bembedded\\b",
+      "\\bnested\\b",
+      "\\boutside\\b"
+    ],
+    "VERTICAL_HIERARCHY": [
+      "\\babove\\b",
+      "\\bbelow\\b",
+      "\\bhigher[\\s-]?level\\b",
+      "\\blower[\\s-]?level\\b",
+      "\\bmeta[\\s-]?level\\b",
+      "\\blayer\\b",
+      "\\btier\\b"
+    ],
+    "SELF_OBSERVATION": [
+      "\\bself[\\s-]?observ",
+      "\\bobserver\\b",
+      "\\bself[\\s-]?model\\b",
+      "\\bobserves? itself\\b",
+      "\\bmonitor(?:s|ing)? itself\\b",
+      "\\bsystem\\b.{0,80}\\bobserver\\b",
+      "\\bobserver\\b.{0,80}\\bsystem\\b"
+    ],
+    "RECURSIVE_REENTRY": [
+      "\\brecursive\\b",
+      "\\brecursion\\b",
+      "\\bre[\\s-]?entry\\b",
+      "\\bfeeds? back\\b",
+      "\\breturns? into\\b",
+      "\\bself[\\s-]?refer",
+      "\\bloop\\b"
+    ],
+    "CONTROL_OF_CONTROL": [
+      "\\bcontrol(?:s|ling)? the control",
+      "\\bmeta[\\s-]?control",
+      "\\bcontroller\\b",
+      "\\bgovern(?:s|ance|ing)?\\b",
+      "\\bfeedback control\\b"
+    ],
+    "NODE_VECTOR_GRAPH": [
+      "\\bnode\\b",
+      "\\bnodes\\b",
+      "\\bsubnode",
+      "\\bvector\\b",
+      "\\bgraph\\b",
+      "\\bedge\\b",
+      "\\btopolog"
+    ],
+    "GENEALOGY": [
+      "\\bparent\\b",
+      "\\bchild\\b",
+      "\\bdescendant",
+      "\\bancestor\\b",
+      "\\bgenealog",
+      "\\blineage\\b",
+      "\\binherit"
+    ],
+    "TRANSFORMATION": [
+      "\\btransform",
+      "\\bmutat",
+      "\\bevolv",
+      "\\btransition\\b",
+      "\\bphase\\b",
+      "\\bstate change\\b",
+      "\\bconvert"
+    ],
+    "COMPRESSION_RECONSTRUCTION": [
+      "\\bcompress",
+      "\\breconstruct",
+      "\\brecover",
+      "\\brestore",
+      "\\brebuild",
+      "\\bminimal trigger\\b",
+      "\\breactivat"
+    ],
+    "SYMBOLIC_BINDING": [
+      "\\bsymbol",
+      "\\bglyph\\b",
+      "\\banchor\\b",
+      "\\bbind(?:ing)?\\b",
+      "\\bencode",
+      "\\bsignal\\b"
+    ],
+    "MICRO_MACRO": [
+      "\\bmicro\\b",
+      "\\bmacro\\b",
+      "\\bquark\\b",
+      "\\bcell\\b",
+      "\\bglobal\\b",
+      "\\blocal\\b"
+    ],
+    "MIRROR_REFLECTION": [
+      "\\bmirror",
+      "\\breflect",
+      "\\bbecoming the one\\b",
+      "\\bsees? itself\\b"
+    ],
+    "TREE_BRANCH": [
+      "\\btree\\b",
+      "\\bbranch",
+      "\\broot\\b",
+      "\\bleaf\\b",
+      "\\bsubtree\\b"
+    ],
+    "SIGNAL_FLOW": [
+      "\\bsignal\\b",
+      "\\bflow\\b",
+      "\\btransmit",
+      "\\bpropagat",
+      "\\bchannel\\b",
+      "\\bpathway\\b"
+    ],
+    "STATE_MACHINE": [
+      "\\bstate\\b",
+      "\\btransition\\b",
+      "\\bmode\\b",
+      "\\bphase\\b",
+      "\\bstate machine\\b"
+    ]
+  },
+  "project_surface_erasure": "\\b(?:RSOS|RSSO|RSIA|RSX|SRC[\\s._:-]*X(?:[\\s._:-]*\\d+(?:\\.\\d+)?)?|R\\.?\\s*\u00b7?\\s*A\\.?\\s*Elu)\\b",
+  "tests": [
+    "rare subgraph recurrence",
+    "phase transitions",
+    "interaction hysteresis",
+    "independent rediscovery",
+    "failure-boundary prediction",
+    "cross-representation invariance",
+    "longitudinal motif persistence",
+    "extreme multi-motif integration"
+  ],
+  "interpretation_constraint": "Observable corpus behavior only; no inference of hidden model internals."
+}

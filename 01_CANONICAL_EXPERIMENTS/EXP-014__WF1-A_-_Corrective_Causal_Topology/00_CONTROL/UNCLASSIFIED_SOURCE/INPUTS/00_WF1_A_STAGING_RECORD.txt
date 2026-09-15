@@ -1,0 +1,33 @@
+﻿WF1-A — V12-R CORRECTIVE CAUSAL TOPOLOGY REPLICATION
+
+STAGE:
+ORIGINAL V12 INPUT STAGING COMPLETE
+
+Original V12:
+8156 / 8160 main valid
+720 / 720 native valid
+4 reproducibly unresolved cells
+
+Original runner SHA256:
+B9A293AF98EDBF774C6912691E2A00CD4042DF93BBB50DB31BC8540E119337E7
+
+Freeze record SHA256:
+352B5055AA16CA746568A36678E9FBF535D522F58D3EB6D15CB9C450F3B3ED71
+
+Missing-cell record SHA256:
+D1B7A3A4D188135D111E0945087365599C874E7D48181098432D24AE5DC4D2B9
+
+Input manifest:
+C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\INPUTS\00_WF1_A_INPUT_SHA256.csv
+
+HARD RULE:
+Original V12 remains immutable.
+
+WF1-A / V12-R must not:
+- overwrite original V12,
+- backfill original V12,
+- merge corrected cells into original V12,
+- alter the original V12 evidentiary record.
+
+NEXT:
+Freeze corrected V12-R protocol and runner before any API call.

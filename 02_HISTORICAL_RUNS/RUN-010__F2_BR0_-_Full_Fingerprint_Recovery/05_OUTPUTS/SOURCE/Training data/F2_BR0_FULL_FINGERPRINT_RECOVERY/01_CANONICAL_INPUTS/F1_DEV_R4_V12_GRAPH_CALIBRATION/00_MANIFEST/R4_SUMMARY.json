@@ -1,0 +1,144 @@
+{
+  "version": "F1_DEV_R4_V12_GRAPH_CALIBRATION",
+  "completed_utc": "2026-09-11T17:47:41.191997+00:00",
+  "runner_sha256": "3ca461e8c4ab134c5fb17e33ae98da776bc3c237d33f0e3a1e79bcade072deb7",
+  "authentic_graph_edges": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      5,
+      2
+    ],
+    [
+      6,
+      3
+    ]
+  ],
+  "feature_names": [
+    "RECIPROCITY",
+    "SCC_COUNT",
+    "LARGEST_SCC_FRAC",
+    "TRANSITIVITY",
+    "IN_DEGREE_SD",
+    "OUT_DEGREE_SD",
+    "SPECTRAL_RADIUS",
+    "TWO_CYCLES",
+    "THREE_CYCLES",
+    "REACHABILITY_FRAC",
+    "MEAN_REACHABLE_PATH"
+  ],
+  "unit_tests": [
+    {
+      "TEST": "ISOMORPHIC_RELABEL_INVARIANCE",
+      "N": 1000,
+      "VALUE": 0.0,
+      "FAILURES": 0,
+      "STATUS": "PASS",
+      "NOTE": "Rounded invariant feature vector must be exactly identical under node relabel."
+    },
+    {
+      "TEST": "THREE_CYCLE_COUNT_EXACT",
+      "N": 1,
+      "VALUE": 1,
+      "FAILURES": 0,
+      "STATUS": "PASS",
+      "NOTE": "No divide-by-three correction is applied."
+    },
+    {
+      "TEST": "EDGE_COUNT_EXCLUDED_FROM_CLASSIFIER_FEATURES",
+      "N": 1,
+      "VALUE": 0,
+      "FAILURES": 0,
+      "STATUS": "PASS",
+      "NOTE": "Prevents deletion-like conditions from being classified by trivial raw edge count."
+    }
+  ],
+  "authentic_family_summary": [
+    {
+      "FAMILY": "DEGREE_PRESERVING_REWIRE",
+      "N": 500,
+      "DETECTION_RATE": 1.0,
+      "MEDIAN_L1": 2.3864926190049998,
+      "MEDIAN_L2": 1.437184789266078,
+      "MEDIAN_CHANGED_FEATURES": 6.0
+    },
+    {
+      "FAMILY": "DELETE_ADD_COMPENSATED",
+      "N": 500,
+      "DETECTION_RATE": 1.0,
+      "MEDIAN_L1": 2.466026793449,
+      "MEDIAN_L2": 1.2446265787202506,
+      "MEDIAN_CHANGED_FEATURES": 7.0
+    },
+    {
+      "FAMILY": "REVERSE",
+      "N": 10,
+      "DETECTION_RATE": 1.0,
+      "MEDIAN_L1": 2.5506648344260006,
+      "MEDIAN_L2": 1.3328626006388533,
+      "MEDIAN_CHANGED_FEATURES": 6.5
+    }
+  ],
+  "cross_topology_generalization_auc": 0.9874511316872427,
+  "base_graph_overlap": 0,
+  "leave_family_out": [
+    {
+      "HELD_OUT_FAMILY": "REVERSE",
+      "AUC": 0.9884169884169884,
+      "TRAIN_BASES": 941,
+      "TEST_BASES": 259,
+      "BASE_OVERLAP": 0,
+      "STATUS": "MEASURED"
+    },
+    {
+      "HELD_OUT_FAMILY": "DELETE_ADD_COMPENSATED",
+      "AUC": 1.0,
+      "TRAIN_BASES": 941,
+      "TEST_BASES": 259,
+      "BASE_OVERLAP": 0,
+      "STATUS": "MEASURED"
+    },
+    {
+      "HELD_OUT_FAMILY": "DEGREE_PRESERVING_REWIRE",
+      "AUC": 0.971042471042471,
+      "TRAIN_BASES": 941,
+      "TEST_BASES": 259,
+      "BASE_OVERLAP": 0,
+      "STATUS": "MEASURED"
+    }
+  ],
+  "model_sha256": "8b66796db58164e5a92d7932be257d84319d4c8298be542eb09f3e703ec36fcd",
+  "rsos_specific_status": "UNTESTED",
+  "v12_graph_extractor_calibration_status": "CALIBRATED_DEVELOPMENT_ONLY",
+  "external_00086_read": false
+}

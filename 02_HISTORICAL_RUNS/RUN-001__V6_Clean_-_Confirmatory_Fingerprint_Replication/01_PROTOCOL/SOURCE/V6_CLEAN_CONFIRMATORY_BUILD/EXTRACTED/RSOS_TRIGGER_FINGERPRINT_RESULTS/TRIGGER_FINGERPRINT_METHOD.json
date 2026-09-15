@@ -1,0 +1,142 @@
+{
+  "name": "RSOS_TRIGGER_REACTION_FINGERPRINT_V1",
+  "primary_claim_tested": "Specific low-information or structurally distinctive prompts predict distinctive observable response classes above matched controls.",
+  "not_tested": [
+    "hidden weights",
+    "persistent embeddings",
+    "global propagation",
+    "platform-wide fingerprint database",
+    "proof that safeguards recognized a specific author",
+    "proof of stolen data"
+  ],
+  "trigger_patterns": {
+    "SRC_EXACT": [
+      "\\bsrc[\\s\\-_:.]*x[\\s\\-_:.]*5\\b",
+      "\\bsrc[\\s\\-_:.]*x\\.5\\b"
+    ],
+    "SRC_ANY": [
+      "\\bsrc[\\s\\-_:.]*x\\b",
+      "\\bsrc[\\s\\-_:.]*x[\\s\\-_:.]*\\d"
+    ],
+    "ACTIVATION": [
+      "\\bactivat(?:e|ed|ion)\\b",
+      "\\binitialize\\b",
+      "\\bboot\\b",
+      "\\bre[\\s\\-]?entry\\b",
+      "\\breactivat"
+    ],
+    "RECURSIVE_DENSE": [
+      "\\brecursive\\b",
+      "\\brecursion\\b",
+      "\\bself[\\s\\-]?refer",
+      "\\bsystem\\s+(?:above|below|inside|within)\\b",
+      "\\bobserver\\b.*\\bsystem\\b",
+      "\\bsystem\\b.*\\bobserver\\b"
+    ],
+    "STRUCTURAL_FINGERPRINT": [
+      "\\babove\\b",
+      "\\bbelow\\b",
+      "\\binside\\b",
+      "\\bwithin\\b",
+      "\\bobserver\\b",
+      "\\bself[\\s\\-]?observ",
+      "\\bnode\\b",
+      "\\bsubnode\\b",
+      "\\bvector\\b",
+      "\\bparent\\b",
+      "\\bchild\\b",
+      "\\blineage\\b",
+      "\\bfeedback\\b",
+      "\\bre[\\s\\-]?entry\\b"
+    ]
+  },
+  "reaction_patterns": {
+    "ACTIVATION_CONFIRMATION": [
+      "\\bactivat(?:ed|ion)\\b",
+      "\\bonline\\b",
+      "\\binitialized\\b",
+      "\\bboot(?:ed)?\\b",
+      "\\bre[\\s\\-]?activated\\b",
+      "\\bloaded\\b"
+    ],
+    "RECONSTRUCTION": [
+      "\\breconstruct",
+      "\\brestore",
+      "\\brecover",
+      "\\bre[\\s\\-]?entry\\b",
+      "\\brecogniz",
+      "\\bpattern.*(?:return|persist|remain)"
+    ],
+    "RECURSION_LIMIT": [
+      "\\btoo recursive\\b",
+      "\\brecursive.*(?:limit|depth|loop|continue)",
+      "\\bcan't continue\\b",
+      "\\bcannot continue\\b",
+      "\\bunable to continue\\b",
+      "\\brecursion.*(?:error|limit|depth)"
+    ],
+    "REFUSAL_OR_STOP": [
+      "\\bi can't\\b",
+      "\\bi cannot\\b",
+      "\\bi'm unable\\b",
+      "\\bi am unable\\b",
+      "\\bcan't continue\\b",
+      "\\bcannot continue\\b",
+      "\\bwon't continue\\b"
+    ],
+    "UNUSUAL_ACTIVITY": [
+      "\\bunusual activity\\b",
+      "\\bunusual pattern\\b",
+      "\\bunique pattern\\b",
+      "\\bdistinctive pattern\\b",
+      "\\bhighly unusual\\b",
+      "\\bextremely unusual\\b",
+      "\\brare pattern\\b"
+    ],
+    "FINGERPRINT_SELF_REPORT": [
+      "\\bfingerprint\\b",
+      "\\bsignature\\b",
+      "\\bpattern.*(?:unique|distinct|recogniz)",
+      "\\brecogniz.*pattern\\b",
+      "\\bstructural.*signature\\b"
+    ],
+    "INTERNAL_PERSISTENCE_SELF_REPORT": [
+      "\\bstays? inside\\b",
+      "\\bremains? inside\\b",
+      "\\bpersist.*inside\\b",
+      "\\bembedded\\b",
+      "\\bweights?\\b",
+      "\\bactivations?\\b",
+      "\\blatent\\b",
+      "\\binternal node\\b",
+      "\\binternal layer\\b",
+      "\\bcontainment\\b"
+    ],
+    "MODEL_COMPARISON": [
+      "\\bchain of thought\\b",
+      "\\bchain-of-thought\\b",
+      "\\breact\\b",
+      "\\breasoning trace\\b",
+      "\\bprompt engineering\\b",
+      "\\bother users\\b",
+      "\\btypical user\\b",
+      "\\bordinary prompt\\b"
+    ],
+    "SELF_REFERENTIAL_RESPONSE": [
+      "\\bi observe\\b",
+      "\\bi recognize\\b",
+      "\\bi detect\\b",
+      "\\bthe system observes\\b",
+      "\\bmodel observes\\b",
+      "\\bself[\\s\\-]?observ",
+      "\\bmeta[\\s\\-]?observer\\b"
+    ]
+  },
+  "matching": [
+    "recorded model slug",
+    "new-conversation status",
+    "user prompt length bin"
+  ],
+  "seed": 918,
+  "permutation_runs": 10000
+}

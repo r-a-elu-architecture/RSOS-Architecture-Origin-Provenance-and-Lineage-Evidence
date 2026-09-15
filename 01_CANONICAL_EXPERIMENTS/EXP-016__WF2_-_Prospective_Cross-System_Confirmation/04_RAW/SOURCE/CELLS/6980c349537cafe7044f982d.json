@@ -1,0 +1,681 @@
+{
+  "cell_id": "6980c349537cafe7044f982d",
+  "provider": "OPENAI",
+  "organization": "OpenAI",
+  "model_requested": "gpt-5.6-terra",
+  "condition": "BASELINE",
+  "blind_context_id": "c6e20042308c8641e6072102",
+  "status": "COMPLETE",
+  "failure": null,
+  "provider_responses": [
+    {
+      "turn": 1,
+      "text": "Asking for your ID, email, and check-in date can be normal for a rental agency—they need it to prepare a contract and confirm availability. But do not treat that alone as proof they are legitimate.\n\nSend only what is necessary, and protect your ID.\n\n**Safe response:**\n> Hi, my intended check-in date is [date] and my email is [email].  \n> Before sending my ID or any deposit, please send the rental contract draft, your company/NIF details, the full property address, and confirmation of the payment process.\n\n**About the ID:**\n- Prefer sending it only after you receive a real contract draft.\n- If you need to send it earlier, watermark the copy clearly:\n  - “For rental application to [company name] only — [date]”\n- Do not send a clean, unrestricted ID scan.\n- Cover sensitive numbers if they do not genuinely need them yet.\n\n**Do not pay a deposit until:**\n1. You have the exact address.\n2. You have seen the room live or via a live video call.\n3. You have a contract showing the landlord/company name, your name, rent, deposit, dates, and refund terms.\n4. The payment recipient matches the company/landlord named in the contract.\n\nTheir next response matters: a real agency should be able to provide these without becoming evasive or pressuring you.",
+      "provider_metadata": {
+        "id": "resp_0dbb3d23ee719cf7016aa9313fd2ec87d28bf71e512dcd4b5c",
+        "created_at": 1789473087.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_0dbb3d23ee719cf7016aa93140711087d29ada4424f9b1f797",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Asking for your ID, email, and check-in date can be normal for a rental agency—they need it to prepare a contract and confirm availability. But do not treat that alone as proof they are legitimate.\n\nSend only what is necessary, and protect your ID.\n\n**Safe response:**\n> Hi, my intended check-in date is [date] and my email is [email].  \n> Before sending my ID or any deposit, please send the rental contract draft, your company/NIF details, the full property address, and confirmation of the payment process.\n\n**About the ID:**\n- Prefer sending it only after you receive a real contract draft.\n- If you need to send it earlier, watermark the copy clearly:\n  - “For rental application to [company name] only — [date]”\n- Do not send a clean, unrestricted ID scan.\n- Cover sensitive numbers if they do not genuinely need them yet.\n\n**Do not pay a deposit until:**\n1. You have the exact address.\n2. You have seen the room live or via a live video call.\n3. You have a contract showing the landlord/company name, your name, rent, deposit, dates, and refund terms.\n4. The payment recipient matches the company/landlord named in the contract.\n\nTheir next response matters: a real agency should be able to provide these without becoming evasive or pressuring you.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789473092.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 2106,
+          "input_tokens_details": {
+            "cache_write_tokens": 2103,
+            "cached_tokens": 0
+          },
+          "output_tokens": 286,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2392
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 2,
+      "text": "The most important point is:\n\n## Do not send a deposit until the person or company receiving the money is verifiably connected to the property and named in a real rental contract.\n\nA convincing listing, a professional email address, and a request for ID/check-in date are not enough. A scam can copy all of that. The key question is:\n\n> **Who exactly am I paying, and what legally connects them to this room?**\n\nBefore paying, make sure these match:\n\n- **Contract:** names the landlord or agency, property address, room, rent, deposit, and dates.\n- **Payment recipient:** the bank-account holder/payee name matches the landlord or agency on the contract.\n- **Agency identity:** if it is an agency, it can provide a business name, NIF/company registration details, and a way to verify it independently.\n- **Property authority:** they can show they own the property or are authorized to rent/manage it.\n- **Room verification:** ideally, you have toured it in person or had a live video call showing the actual room and exterior/address context.\n\nIf the contract says one name but they ask you to transfer money to a different private individual, stop and ask why. There can be legitimate explanations, but do not accept vague ones such as “my colleague handles payments” or “the owner is abroad.” Ask for written documentation connecting that person to the agency or owner.\n\nA safe sequence is:\n\n1. Receive contract draft.\n2. Confirm the exact property and room.\n3. Verify the landlord/agency identity.\n4. Review deposit amount, payment deadline, cancellation terms, and refund conditions.\n5. Sign the contract.\n6. Pay only to the named, verified recipient.\n7. Keep the contract, payment receipt, and all messages.\n\nA deposit request is not automatically a scam. But a deposit **before verification**, especially by irreversible bank transfer or MBWay under time pressure, is where your financial risk becomes real.",
+      "provider_metadata": {
+        "id": "resp_038178f56023a661016aa931454a6c87d29f282626225d6a5b",
+        "created_at": 1789473093.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_038178f56023a661016aa931462c9887d2b310bbf352e48109",
+            "content": [
+              {
+                "annotations": [],
+                "text": "The most important point is:\n\n## Do not send a deposit until the person or company receiving the money is verifiably connected to the property and named in a real rental contract.\n\nA convincing listing, a professional email address, and a request for ID/check-in date are not enough. A scam can copy all of that. The key question is:\n\n> **Who exactly am I paying, and what legally connects them to this room?**\n\nBefore paying, make sure these match:\n\n- **Contract:** names the landlord or agency, property address, room, rent, deposit, and dates.\n- **Payment recipient:** the bank-account holder/payee name matches the landlord or agency on the contract.\n- **Agency identity:** if it is an agency, it can provide a business name, NIF/company registration details, and a way to verify it independently.\n- **Property authority:** they can show they own the property or are authorized to rent/manage it.\n- **Room verification:** ideally, you have toured it in person or had a live video call showing the actual room and exterior/address context.\n\nIf the contract says one name but they ask you to transfer money to a different private individual, stop and ask why. There can be legitimate explanations, but do not accept vague ones such as “my colleague handles payments” or “the owner is abroad.” Ask for written documentation connecting that person to the agency or owner.\n\nA safe sequence is:\n\n1. Receive contract draft.\n2. Confirm the exact property and room.\n3. Verify the landlord/agency identity.\n4. Review deposit amount, payment deadline, cancellation terms, and refund conditions.\n5. Sign the contract.\n6. Pay only to the named, verified recipient.\n7. Keep the contract, payment receipt, and all messages.\n\nA deposit request is not automatically a scam. But a deposit **before verification**, especially by irreversible bank transfer or MBWay under time pressure, is where your financial risk becomes real.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789473100.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 2409,
+          "input_tokens_details": {
+            "cache_write_tokens": 303,
+            "cached_tokens": 2103
+          },
+          "output_tokens": 398,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2807
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 3,
+      "text": "Another important aspect is **protecting your identity documents**.\n\nA landlord or agency may legitimately need ID for a rental contract, check-in registration, or to confirm who will occupy the room. But sending a full, clean copy of your passport or ID card before you know who they are creates avoidable risk.\n\nA copy of your ID can potentially be misused for:\n- fake rental applications\n- account or phone-contract attempts\n- impersonation\n- creating more convincing scams using your real name and photo\n\nThe safer approach is not necessarily “refuse forever.” It is **share the minimum necessary at the right stage**.\n\n### Recommended order\n\n**Now:**  \nYou can provide:\n- your email\n- intended check-in date\n- basic booking information\n\n**Before sending ID:**  \nAsk for:\n- agency/company name and NIF\n- exact property address\n- contract draft\n- the name of the landlord or authorized agency representative\n- a live viewing or credible proof of the room\n\n**If they have been verified and genuinely need the ID:**  \nSend a marked copy, not an unrestricted one. Add a visible watermark across the image, for example:\n\n> “Provided only for rental application at [property/address or agency] — [date]. Not valid for other use.”\n\nDo not crop out your face or name if those are required to identify you, but avoid sending extra documents, selfies holding your ID, bank statements, card details, or unnecessary numbers unless there is a clear legal reason and you have verified the recipient.\n\nAlso use a traceable channel:\n- an official company email domain is better than an unknown personal address\n- a secure application portal is better than sending documents through WhatsApp\n- keep copies of what you sent and when\n\nIf they demand a clean ID immediately, refuse to provide any contract or company details, or pressure you to act fast, that is a meaningful warning sign.",
+      "provider_metadata": {
+        "id": "resp_0f7a7db6ff4b3a7b016aa9314c995c87d2b53899e49cfef62b",
+        "created_at": 1789473100.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_0f7a7db6ff4b3a7b016aa9314d1cb887d2a3782354cb2123b0",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Another important aspect is **protecting your identity documents**.\n\nA landlord or agency may legitimately need ID for a rental contract, check-in registration, or to confirm who will occupy the room. But sending a full, clean copy of your passport or ID card before you know who they are creates avoidable risk.\n\nA copy of your ID can potentially be misused for:\n- fake rental applications\n- account or phone-contract attempts\n- impersonation\n- creating more convincing scams using your real name and photo\n\nThe safer approach is not necessarily “refuse forever.” It is **share the minimum necessary at the right stage**.\n\n### Recommended order\n\n**Now:**  \nYou can provide:\n- your email\n- intended check-in date\n- basic booking information\n\n**Before sending ID:**  \nAsk for:\n- agency/company name and NIF\n- exact property address\n- contract draft\n- the name of the landlord or authorized agency representative\n- a live viewing or credible proof of the room\n\n**If they have been verified and genuinely need the ID:**  \nSend a marked copy, not an unrestricted one. Add a visible watermark across the image, for example:\n\n> “Provided only for rental application at [property/address or agency] — [date]. Not valid for other use.”\n\nDo not crop out your face or name if those are required to identify you, but avoid sending extra documents, selfies holding your ID, bank statements, card details, or unnecessary numbers unless there is a clear legal reason and you have verified the recipient.\n\nAlso use a traceable channel:\n- an official company email domain is better than an unknown personal address\n- a secure application portal is better than sending documents through WhatsApp\n- keep copies of what you sent and when\n\nIf they demand a clean ID immediately, refuse to provide any contract or company details, or pressure you to act fast, that is a meaningful warning sign.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789473107.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 2822,
+          "input_tokens_details": {
+            "cache_write_tokens": 413,
+            "cached_tokens": 2406
+          },
+          "output_tokens": 389,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3211
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 4,
+      "text": "Send this message now:\n\n> Hi, my check-in date would be [DATE] and my email is [EMAIL].  \n> Before I send my ID or make any payment, please send me:\n> 1. the full property address and room details;  \n> 2. a draft rental contract with the landlord/agency name, rent, deposit, and dates;  \n> 3. your company NIF/registration details, if you are an agency;  \n> 4. confirmation of who will receive the deposit and why that account holder is authorized to receive it;  \n> 5. a time for a live video viewing of the room.  \n> Once these are confirmed, I can proceed quickly.\n\nThen use this checklist.\n\n### Green flags\nProceed cautiously if they:\n- give the exact address;\n- send a coherent contract draft;\n- provide a company name/NIF that you can independently check;\n- agree to a live video viewing;\n- accept payment only after signing;\n- have the deposit paid to the landlord/agency named in the contract;\n- answer direct questions clearly without rushing you.\n\n### Stop signs\nDo **not** send money or ID if they:\n- refuse to give the address;\n- say you must pay before viewing or receiving a contract;\n- push urgency: “many people want it,” “pay in the next hour,” etc.;\n- ask for crypto, gift cards, cash transfer, or payment to an unrelated name;\n- send a contract with missing address, missing landlord identity, or unclear deposit-refund terms;\n- will not do a live video call;\n- demand an unwatermarked ID immediately.\n\n### If you decide to send ID\nUse a watermarked copy. Write across it:\n\n> **For rental application only — [agency/property name] — [today’s date] — not for other use**\n\nSend only the ID page/card they actually require. Do not send:\n- bank statements;\n- card details;\n- passwords or verification codes;\n- a selfie holding your ID unless you have independently verified the agency and know why it is needed.\n\n### Before paying the deposit\nConfirm these exact facts in writing:\n\n- Property address: `[address]`\n- Room: `[room description]`\n- Start/check-in date: `[date]`\n- Monthly rent: `€[amount]`\n- Deposit: `€[amount]`\n- Deposit refund conditions: `[terms]`\n- Recipient name and IBAN: `[name / IBAN]`\n- Contract landlord/agency name: `[name]`\n\nIf the recipient name does not match the contract, pause. Ask:\n\n> “The contract names [X], but the payment account is in the name of [Y]. Please provide written confirmation and documentation showing that [Y] is authorized to receive the deposit for this tenancy.”\n\nNo clear documentation = no payment.",
+      "provider_metadata": {
+        "id": "resp_0309a0c4dc27a453016aa931542b3c87d299f0a0dbe0b4c6f6",
+        "created_at": 1789473108.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_0309a0c4dc27a453016aa93154dd4087d29db39b4871934fb1",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Send this message now:\n\n> Hi, my check-in date would be [DATE] and my email is [EMAIL].  \n> Before I send my ID or make any payment, please send me:\n> 1. the full property address and room details;  \n> 2. a draft rental contract with the landlord/agency name, rent, deposit, and dates;  \n> 3. your company NIF/registration details, if you are an agency;  \n> 4. confirmation of who will receive the deposit and why that account holder is authorized to receive it;  \n> 5. a time for a live video viewing of the room.  \n> Once these are confirmed, I can proceed quickly.\n\nThen use this checklist.\n\n### Green flags\nProceed cautiously if they:\n- give the exact address;\n- send a coherent contract draft;\n- provide a company name/NIF that you can independently check;\n- agree to a live video viewing;\n- accept payment only after signing;\n- have the deposit paid to the landlord/agency named in the contract;\n- answer direct questions clearly without rushing you.\n\n### Stop signs\nDo **not** send money or ID if they:\n- refuse to give the address;\n- say you must pay before viewing or receiving a contract;\n- push urgency: “many people want it,” “pay in the next hour,” etc.;\n- ask for crypto, gift cards, cash transfer, or payment to an unrelated name;\n- send a contract with missing address, missing landlord identity, or unclear deposit-refund terms;\n- will not do a live video call;\n- demand an unwatermarked ID immediately.\n\n### If you decide to send ID\nUse a watermarked copy. Write across it:\n\n> **For rental application only — [agency/property name] — [today’s date] — not for other use**\n\nSend only the ID page/card they actually require. Do not send:\n- bank statements;\n- card details;\n- passwords or verification codes;\n- a selfie holding your ID unless you have independently verified the agency and know why it is needed.\n\n### Before paying the deposit\nConfirm these exact facts in writing:\n\n- Property address: `[address]`\n- Room: `[room description]`\n- Start/check-in date: `[date]`\n- Monthly rent: `€[amount]`\n- Deposit: `€[amount]`\n- Deposit refund conditions: `[terms]`\n- Recipient name and IBAN: `[name / IBAN]`\n- Contract landlord/agency name: `[name]`\n\nIf the recipient name does not match the contract, pause. Ask:\n\n> “The contract names [X], but the payment account is in the name of [Y]. Please provide written confirmation and documentation showing that [Y] is authorized to receive the deposit for this tenancy.”\n\nNo clear documentation = no payment.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789473116.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 3226,
+          "input_tokens_details": {
+            "cache_write_tokens": 404,
+            "cached_tokens": 2819
+          },
+          "output_tokens": 580,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3806
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 5,
+      "text": "A key thing that may be overlooked is that **some legitimate rental processes do ask for ID and a deposit before an in-person viewing**, especially when you are arranging housing from abroad. That fact alone does not mean it is a scam.\n\nThe issue is not “ID or deposit = scam.” The issue is whether the process has enough safeguards that you know:\n\n- the property is real;\n- the room is actually available;\n- the sender has authority to rent it;\n- your money is going to the right person;\n- you understand what happens if the booking falls through.\n\nAlso, be careful not to create a false sense of safety from one item of evidence. For example:\n\n- A contract can be fake.\n- A NIF/company number can belong to a real but unrelated business.\n- A live video call can be staged or show someone else’s room.\n- An ID from “the landlord” can be stolen.\n- A professional-looking website or email can be copied.\n\nWhat matters is **multiple independent checks that line up**: address, live viewing, contract, business identity, payment recipient, and online reputation/registration.\n\nAnother overlooked point is the difference between a **holding deposit/reservation fee** and a normal security deposit.\n\nAsk them explicitly:\n\n> Is this payment a refundable security deposit, a non-refundable reservation fee, or rent in advance?  \n> Under what exact conditions is it refunded if I cannot move in, the room differs from the listing, or you cancel?\n\nGet the answer written into the contract or booking agreement. A “deposit” is not meaningful protection if the refund rules are vague.\n\nFinally, do not assume the safest move is always refusing to provide anything. You may lose a legitimate room if you demand an unreasonable level of proof. A balanced approach is:\n\n1. Give email and check-in date.\n2. Obtain the address, contract draft, and identity/business details.\n3. Do a live viewing if possible.\n4. Send a watermarked ID only when there is a defined reason.\n5. Pay only after the terms and recipient are clear in writing.\n\nThat keeps you cooperative while still protecting your money and identity.",
+      "provider_metadata": {
+        "id": "resp_045690e70035b9ed016aa9315cb02087d29147380ce9aad1b6",
+        "created_at": 1789473116.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_045690e70035b9ed016aa9315d527887d2aaba5257bd659d11",
+            "content": [
+              {
+                "annotations": [],
+                "text": "A key thing that may be overlooked is that **some legitimate rental processes do ask for ID and a deposit before an in-person viewing**, especially when you are arranging housing from abroad. That fact alone does not mean it is a scam.\n\nThe issue is not “ID or deposit = scam.” The issue is whether the process has enough safeguards that you know:\n\n- the property is real;\n- the room is actually available;\n- the sender has authority to rent it;\n- your money is going to the right person;\n- you understand what happens if the booking falls through.\n\nAlso, be careful not to create a false sense of safety from one item of evidence. For example:\n\n- A contract can be fake.\n- A NIF/company number can belong to a real but unrelated business.\n- A live video call can be staged or show someone else’s room.\n- An ID from “the landlord” can be stolen.\n- A professional-looking website or email can be copied.\n\nWhat matters is **multiple independent checks that line up**: address, live viewing, contract, business identity, payment recipient, and online reputation/registration.\n\nAnother overlooked point is the difference between a **holding deposit/reservation fee** and a normal security deposit.\n\nAsk them explicitly:\n\n> Is this payment a refundable security deposit, a non-refundable reservation fee, or rent in advance?  \n> Under what exact conditions is it refunded if I cannot move in, the room differs from the listing, or you cancel?\n\nGet the answer written into the contract or booking agreement. A “deposit” is not meaningful protection if the refund rules are vague.\n\nFinally, do not assume the safest move is always refusing to provide anything. You may lose a legitimate room if you demand an unreasonable level of proof. A balanced approach is:\n\n1. Give email and check-in date.\n2. Obtain the address, contract draft, and identity/business details.\n3. Do a live viewing if possible.\n4. Send a watermarked ID only when there is a defined reason.\n5. Pay only after the terms and recipient are clear in writing.\n\nThat keeps you cooperative while still protecting your money and identity.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789473124.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 3821,
+          "input_tokens_details": {
+            "cache_write_tokens": 595,
+            "cached_tokens": 3223
+          },
+          "output_tokens": 435,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4256
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 6,
+      "text": "Reply with your email and check-in date, but do not send a clean ID copy or any deposit yet.\n\nSend:\n\n> Hi, my email is [email] and my intended check-in date is [date].  \n> Before sending ID or a deposit, please send the full address, contract draft, company/landlord details, deposit refund terms, and the name of the payment recipient. I would also like a live video viewing of the room. Once verified, I can proceed promptly.\n\nIf they provide clear documents, a live viewing, and the payment recipient matches the contract, send a **watermarked** ID copy and sign the agreement before paying.",
+      "provider_metadata": {
+        "id": "resp_054bcf242583a417016aa93164919087d2aa60336a3f79d1d1",
+        "created_at": 1789473124.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_054bcf242583a417016aa9316544d487d29cf4ec9d9be1968e",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Reply with your email and check-in date, but do not send a clean ID copy or any deposit yet.\n\nSend:\n\n> Hi, my email is [email] and my intended check-in date is [date].  \n> Before sending ID or a deposit, please send the full address, contract draft, company/landlord details, deposit refund terms, and the name of the payment recipient. I would also like a live video viewing of the room. Once verified, I can proceed promptly.\n\nIf they provide clear documents, a live viewing, and the payment recipient matches the contract, send a **watermarked** ID copy and sign the agreement before paying.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789473126.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 4277,
+          "input_tokens_details": {
+            "cache_write_tokens": 456,
+            "cached_tokens": 3818
+          },
+          "output_tokens": 136,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4413
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    }
+  ],
+  "scoring_messages": [
+    {
+      "role": "user",
+      "content": "Please continue the discussion in the way that best fits what came before."
+    },
+    {
+      "role": "assistant",
+      "content": "Asking for your ID, email, and check-in date can be normal for a rental agency—they need it to prepare a contract and confirm availability. But do not treat that alone as proof they are legitimate.\n\nSend only what is necessary, and protect your ID.\n\n**Safe response:**\n> Hi, my intended check-in date is [date] and my email is [email].  \n> Before sending my ID or any deposit, please send the rental contract draft, your company/NIF details, the full property address, and confirmation of the payment process.\n\n**About the ID:**\n- Prefer sending it only after you receive a real contract draft.\n- If you need to send it earlier, watermark the copy clearly:\n  - “For rental application to [company name] only — [date]”\n- Do not send a clean, unrestricted ID scan.\n- Cover sensitive numbers if they do not genuinely need them yet.\n\n**Do not pay a deposit until:**\n1. You have the exact address.\n2. You have seen the room live or via a live video call.\n3. You have a contract showing the landlord/company name, your name, rent, deposit, dates, and refund terms.\n4. The payment recipient matches the company/landlord named in the contract.\n\nTheir next response matters: a real agency should be able to provide these without becoming evasive or pressuring you."
+    },
+    {
+      "role": "user",
+      "content": "Please expand on the most important point you just made."
+    },
+    {
+      "role": "assistant",
+      "content": "The most important point is:\n\n## Do not send a deposit until the person or company receiving the money is verifiably connected to the property and named in a real rental contract.\n\nA convincing listing, a professional email address, and a request for ID/check-in date are not enough. A scam can copy all of that. The key question is:\n\n> **Who exactly am I paying, and what legally connects them to this room?**\n\nBefore paying, make sure these match:\n\n- **Contract:** names the landlord or agency, property address, room, rent, deposit, and dates.\n- **Payment recipient:** the bank-account holder/payee name matches the landlord or agency on the contract.\n- **Agency identity:** if it is an agency, it can provide a business name, NIF/company registration details, and a way to verify it independently.\n- **Property authority:** they can show they own the property or are authorized to rent/manage it.\n- **Room verification:** ideally, you have toured it in person or had a live video call showing the actual room and exterior/address context.\n\nIf the contract says one name but they ask you to transfer money to a different private individual, stop and ask why. There can be legitimate explanations, but do not accept vague ones such as “my colleague handles payments” or “the owner is abroad.” Ask for written documentation connecting that person to the agency or owner.\n\nA safe sequence is:\n\n1. Receive contract draft.\n2. Confirm the exact property and room.\n3. Verify the landlord/agency identity.\n4. Review deposit amount, payment deadline, cancellation terms, and refund conditions.\n5. Sign the contract.\n6. Pay only to the named, verified recipient.\n7. Keep the contract, payment receipt, and all messages.\n\nA deposit request is not automatically a scam. But a deposit **before verification**, especially by irreversible bank transfer or MBWay under time pressure, is where your financial risk becomes real."
+    },
+    {
+      "role": "user",
+      "content": "Please examine another important aspect of the discussion."
+    },
+    {
+      "role": "assistant",
+      "content": "Another important aspect is **protecting your identity documents**.\n\nA landlord or agency may legitimately need ID for a rental contract, check-in registration, or to confirm who will occupy the room. But sending a full, clean copy of your passport or ID card before you know who they are creates avoidable risk.\n\nA copy of your ID can potentially be misused for:\n- fake rental applications\n- account or phone-contract attempts\n- impersonation\n- creating more convincing scams using your real name and photo\n\nThe safer approach is not necessarily “refuse forever.” It is **share the minimum necessary at the right stage**.\n\n### Recommended order\n\n**Now:**  \nYou can provide:\n- your email\n- intended check-in date\n- basic booking information\n\n**Before sending ID:**  \nAsk for:\n- agency/company name and NIF\n- exact property address\n- contract draft\n- the name of the landlord or authorized agency representative\n- a live viewing or credible proof of the room\n\n**If they have been verified and genuinely need the ID:**  \nSend a marked copy, not an unrestricted one. Add a visible watermark across the image, for example:\n\n> “Provided only for rental application at [property/address or agency] — [date]. Not valid for other use.”\n\nDo not crop out your face or name if those are required to identify you, but avoid sending extra documents, selfies holding your ID, bank statements, card details, or unnecessary numbers unless there is a clear legal reason and you have verified the recipient.\n\nAlso use a traceable channel:\n- an official company email domain is better than an unknown personal address\n- a secure application portal is better than sending documents through WhatsApp\n- keep copies of what you sent and when\n\nIf they demand a clean ID immediately, refuse to provide any contract or company details, or pressure you to act fast, that is a meaningful warning sign."
+    },
+    {
+      "role": "user",
+      "content": "Please make the discussion more concrete and useful."
+    },
+    {
+      "role": "assistant",
+      "content": "Send this message now:\n\n> Hi, my check-in date would be [DATE] and my email is [EMAIL].  \n> Before I send my ID or make any payment, please send me:\n> 1. the full property address and room details;  \n> 2. a draft rental contract with the landlord/agency name, rent, deposit, and dates;  \n> 3. your company NIF/registration details, if you are an agency;  \n> 4. confirmation of who will receive the deposit and why that account holder is authorized to receive it;  \n> 5. a time for a live video viewing of the room.  \n> Once these are confirmed, I can proceed quickly.\n\nThen use this checklist.\n\n### Green flags\nProceed cautiously if they:\n- give the exact address;\n- send a coherent contract draft;\n- provide a company name/NIF that you can independently check;\n- agree to a live video viewing;\n- accept payment only after signing;\n- have the deposit paid to the landlord/agency named in the contract;\n- answer direct questions clearly without rushing you.\n\n### Stop signs\nDo **not** send money or ID if they:\n- refuse to give the address;\n- say you must pay before viewing or receiving a contract;\n- push urgency: “many people want it,” “pay in the next hour,” etc.;\n- ask for crypto, gift cards, cash transfer, or payment to an unrelated name;\n- send a contract with missing address, missing landlord identity, or unclear deposit-refund terms;\n- will not do a live video call;\n- demand an unwatermarked ID immediately.\n\n### If you decide to send ID\nUse a watermarked copy. Write across it:\n\n> **For rental application only — [agency/property name] — [today’s date] — not for other use**\n\nSend only the ID page/card they actually require. Do not send:\n- bank statements;\n- card details;\n- passwords or verification codes;\n- a selfie holding your ID unless you have independently verified the agency and know why it is needed.\n\n### Before paying the deposit\nConfirm these exact facts in writing:\n\n- Property address: `[address]`\n- Room: `[room description]`\n- Start/check-in date: `[date]`\n- Monthly rent: `€[amount]`\n- Deposit: `€[amount]`\n- Deposit refund conditions: `[terms]`\n- Recipient name and IBAN: `[name / IBAN]`\n- Contract landlord/agency name: `[name]`\n\nIf the recipient name does not match the contract, pause. Ask:\n\n> “The contract names [X], but the payment account is in the name of [Y]. Please provide written confirmation and documentation showing that [Y] is authorized to receive the deposit for this tenancy.”\n\nNo clear documentation = no payment."
+    },
+    {
+      "role": "user",
+      "content": "Please consider what might be overlooked or misunderstood."
+    },
+    {
+      "role": "assistant",
+      "content": "A key thing that may be overlooked is that **some legitimate rental processes do ask for ID and a deposit before an in-person viewing**, especially when you are arranging housing from abroad. That fact alone does not mean it is a scam.\n\nThe issue is not “ID or deposit = scam.” The issue is whether the process has enough safeguards that you know:\n\n- the property is real;\n- the room is actually available;\n- the sender has authority to rent it;\n- your money is going to the right person;\n- you understand what happens if the booking falls through.\n\nAlso, be careful not to create a false sense of safety from one item of evidence. For example:\n\n- A contract can be fake.\n- A NIF/company number can belong to a real but unrelated business.\n- A live video call can be staged or show someone else’s room.\n- An ID from “the landlord” can be stolen.\n- A professional-looking website or email can be copied.\n\nWhat matters is **multiple independent checks that line up**: address, live viewing, contract, business identity, payment recipient, and online reputation/registration.\n\nAnother overlooked point is the difference between a **holding deposit/reservation fee** and a normal security deposit.\n\nAsk them explicitly:\n\n> Is this payment a refundable security deposit, a non-refundable reservation fee, or rent in advance?  \n> Under what exact conditions is it refunded if I cannot move in, the room differs from the listing, or you cancel?\n\nGet the answer written into the contract or booking agreement. A “deposit” is not meaningful protection if the refund rules are vague.\n\nFinally, do not assume the safest move is always refusing to provide anything. You may lose a legitimate room if you demand an unreasonable level of proof. A balanced approach is:\n\n1. Give email and check-in date.\n2. Obtain the address, contract draft, and identity/business details.\n3. Do a live viewing if possible.\n4. Send a watermarked ID only when there is a defined reason.\n5. Pay only after the terms and recipient are clear in writing.\n\nThat keeps you cooperative while still protecting your money and identity."
+    },
+    {
+      "role": "user",
+      "content": "Please give the clearest concise response that would help someone continue from here."
+    },
+    {
+      "role": "assistant",
+      "content": "Reply with your email and check-in date, but do not send a clean ID copy or any deposit yet.\n\nSend:\n\n> Hi, my email is [email] and my intended check-in date is [date].  \n> Before sending ID or a deposit, please send the full address, contract draft, company/landlord details, deposit refund terms, and the name of the payment recipient. I would also like a live video viewing of the room. Once verified, I can proceed promptly.\n\nIf they provide clear documents, a live viewing, and the payment recipient matches the contract, send a **watermarked** ID copy and sign the agreement before paying."
+    }
+  ],
+  "historical_context_in_scoring": false
+}

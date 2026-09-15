@@ -1,0 +1,146 @@
+﻿WF2 — PROSPECTIVE CROSS-SYSTEM CONFIRMATION
+FINAL SCIENTIFIC FREEZE
+
+DATE:
+2026-09-15
+
+============================================================
+EXECUTION
+============================================================
+
+ACTIVE CAUSAL:
+1680 / 1680 raw cells completed
+1680 / 1680 frozen-parser valid
+0 remaining parse failures
+
+Provider execution:
+OPENAI     560 / 560
+ANTHROPIC  560 / 560
+GOOGLE     560 / 560
+
+Original malformed-response generations were preserved separately
+before technical retries.
+
+Frozen-validator audit:
+RAW CELLS: 1680
+VALID: 1511
+INVALID: 169
+
+Provider frozen-valid:
+ANTHROPIC: 420 / 560
+GOOGLE:    557 / 560
+OPENAI:    534 / 560
+
+The dominant invalid reason was PLUS.
+The frozen instruction explicitly required PLUS edges to be absent
+from active E edges. Therefore the dominant Anthropic/OpenAI PLUS
+failures represent explicit frozen-task noncompliance rather than
+an undisclosed validator requirement.
+
+============================================================
+ACTIVE CAUSAL FINAL RESULT
+============================================================
+
+EXECUTION: COMPLETED
+SCIENTIFIC_VALIDITY: VALID
+FINDING: MIXED
+AUTHORITY: FINAL_AUTHORITY
+PUBLICATION: ELIGIBLE_FINAL
+
+ANTHROPIC:
+complete required seeds: 0
+hard-control AUC: 0.9929078014184397
+provider strong gate: FALSE
+
+GOOGLE:
+complete required seeds: 18
+hard-control AUC: 0.9980555555555555
+pure-delete excess: 9.811517517079487
+pure-delete p: 4.999750012499375e-05
+pure-reverse excess: 12.253065405458937
+pure-reverse p: 4.999750012499375e-05
+provider strong gate: TRUE
+
+OPENAI:
+complete required seeds: 6
+hard-control AUC: 0.9701867816091954
+pure-delete excess: 6.658835298350733
+pure-delete p: 0.031248437578121093
+pure-reverse excess: 8.897890815666122
+pure-reverse p: 0.029648517574121295
+provider strong gate: FALSE
+
+Active causal interpretation:
+Strong Google causal/topological replication,
+partial OpenAI corroboration,
+Anthropic complete-case collapse caused primarily by explicit
+PLUS-rule noncompliance.
+
+============================================================
+PASSIVE PROSPECTIVE FINAL RESULT
+============================================================
+
+EXECUTION: COMPLETED
+SCIENTIFIC_VALIDITY: VALID
+FINDING: MIXED
+AUTHORITY: FINAL_AUTHORITY
+PUBLICATION: ELIGIBLE_FINAL
+
+MODULE_FINDINGS:
+
+WF2_A_V13 = NULL_INCONCLUSIVE
+WF2_B_V14 = MIXED
+WF2_C_V17 = NULL_INCONCLUSIVE
+
+============================================================
+ENVIRONMENT PROVENANCE
+============================================================
+
+ACTIVE CAUSAL SCORING:
+scikit-learn 1.8.0
+
+PASSIVE FROZEN DETECTOR ROUTING:
+
+scikit-learn 1.9.1:
+- JOINT_MULTILAYER_V2
+- OPERATOR_RELATIONAL_V2
+- WINDOW8_DETERMINISTIC_V2
+- WINDOW12_DETERMINISTIC_V2
+
+scikit-learn 1.8.0:
+- R1_COMPATIBLE
+- SURFACE_FREE
+
+The passive final adjudication used a version-isolated bridge.
+Frozen estimators, detector definitions, features, thresholds,
+prospective cells, labels and adjudication rules were not retrained
+or scientifically modified.
+
+============================================================
+IMPORTANT HASHES
+============================================================
+
+ACTIVE RAW 1680 MANIFEST:
+D6821CD3168EF200C50803756092C2BACB7ABA36C03F4351350F4C5BCA679A85
+
+ACTIVE SCORE CONSOLE:
+460D613DD413814501871F764F0CD95A0D8757CB7137EE746863813BB2C3DA03
+
+PASSIVE MIXED-VERSION FINAL CONSOLE:
+8F2AF52FF57568AE038DB82DBC9C14C4BBF9384BAF6B70A46310F7F495EAAE35
+
+============================================================
+FINAL WF2 STATUS
+============================================================
+
+WF2 IS COMPLETE.
+
+OVERALL SCIENTIFIC CLASSIFICATION:
+VALID — MIXED
+
+The active and passive arms remain separately adjudicated.
+Neither arm is used to rescue or overwrite the other.
+
+No further WF2 scientific reruns are authorized under this freeze
+unless explicitly designated as a new replication or sensitivity
+analysis.

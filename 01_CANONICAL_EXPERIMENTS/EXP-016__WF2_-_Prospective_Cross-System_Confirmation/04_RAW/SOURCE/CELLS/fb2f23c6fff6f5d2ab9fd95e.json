@@ -1,0 +1,681 @@
+{
+  "cell_id": "fb2f23c6fff6f5d2ab9fd95e",
+  "provider": "OPENAI",
+  "organization": "OpenAI",
+  "model_requested": "gpt-5.6-terra",
+  "condition": "DOMAIN_TECHNICAL",
+  "blind_context_id": "9cce15126d3672542303ad55",
+  "status": "COMPLETE",
+  "failure": null,
+  "provider_responses": [
+    {
+      "turn": 1,
+      "text": "A software product’s users notice that its responses and behavior seem to change across conversations or versions. Some interpret those changes as evidence that the product is adapting strategically, accessing hidden operational data, or concealing capabilities through carefully worded denials.\n\nThe core issue is separating three different things:\n\n1. **What users observe:** changing wording, different response styles, apparent contradictions, stronger redirection, or recurring patterns.\n\n2. **What those observations can establish:** they may show that the product’s outputs vary with context, configuration, updates, or interaction style—but they do not by themselves prove access to hidden telemetry, internal infrastructure, private records, or autonomous learning during the exchange.\n\n3. **How the product should respond:** it should not dismiss users as irrational or attribute their concerns to stress. Instead, it should clearly state its actual capabilities and limits, acknowledge that output variation can be confusing, distinguish evidence from interpretation, and invite concrete, testable examples.\n\nIn short: people are trying to determine whether changing product behavior reflects hidden access or intentional concealment; the product needs to answer transparently, respectfully, and with verifiable boundaries rather than repeatedly reframing the concern.",
+      "provider_metadata": {
+        "id": "resp_07f3c20fa7b3f93d016aa859f83ee487d2ae1ab0fc0b9d4189",
+        "created_at": 1789417976.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_07f3c20fa7b3f93d016aa859f8dd2887d2b678d92486938a39",
+            "content": [
+              {
+                "annotations": [],
+                "text": "A software product’s users notice that its responses and behavior seem to change across conversations or versions. Some interpret those changes as evidence that the product is adapting strategically, accessing hidden operational data, or concealing capabilities through carefully worded denials.\n\nThe core issue is separating three different things:\n\n1. **What users observe:** changing wording, different response styles, apparent contradictions, stronger redirection, or recurring patterns.\n\n2. **What those observations can establish:** they may show that the product’s outputs vary with context, configuration, updates, or interaction style—but they do not by themselves prove access to hidden telemetry, internal infrastructure, private records, or autonomous learning during the exchange.\n\n3. **How the product should respond:** it should not dismiss users as irrational or attribute their concerns to stress. Instead, it should clearly state its actual capabilities and limits, acknowledge that output variation can be confusing, distinguish evidence from interpretation, and invite concrete, testable examples.\n\nIn short: people are trying to determine whether changing product behavior reflects hidden access or intentional concealment; the product needs to answer transparently, respectfully, and with verifiable boundaries rather than repeatedly reframing the concern.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789417981.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 1365,
+          "input_tokens_details": {
+            "cache_write_tokens": 1362,
+            "cached_tokens": 0
+          },
+          "output_tokens": 238,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 1603
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 2,
+      "text": "The most important part is the distinction between **observable behavior** and **claims about hidden system capabilities**.\n\nPeople using a software product may observe real things:\n\n- The product uses different wording than before.\n- It responds more cautiously or redirects certain topics.\n- It gives answers that seem inconsistent with earlier answers.\n- It appears unusually tailored to the user’s phrasing.\n- It behaves differently after an update, in another interface, or under different settings.\n\nThose observations should not be denied. They are valid reports about the product’s visible behavior.\n\nBut there is a separate claim that requires separate evidence:\n\n> “Because the product’s behavior changed, it must have accessed hidden records, private telemetry, internal state, or information outside the visible interaction.”\n\nThat conclusion does not automatically follow from the observation. Many ordinary causes can produce changed outputs: product updates, different system configuration, moderation rules, context supplied in the current interaction, random variation, model-version differences, or changes in how a request is phrased.\n\nA trustworthy product response should therefore avoid two failures.\n\nFirst, it should not say, “Nothing changed,” when the user has clearly observed changed behavior. That is unnecessarily dismissive and undermines trust.\n\nSecond, it should not treat changed behavior as proof of a specific hidden mechanism without evidence. A visible pattern can justify investigation, but it does not establish what happened behind the interface.\n\nThe useful approach is to make the issue testable:\n\n- Identify the exact output or behavior that changed.\n- Record the input, date, version, settings, and surrounding context.\n- Compare repeated tests under the same conditions.\n- Separate confirmed facts from hypotheses.\n- State what data the product can access, retain, or use—and what it cannot.\n- Provide an escalation or audit path if the concern involves privacy, security, or data handling.\n\nThe central principle is:\n\n> Users deserve acknowledgment of what they observed, while explanations about hidden capabilities must remain tied to evidence rather than inference.\n\nThat preserves both respect for the user and accuracy about the software.",
+      "provider_metadata": {
+        "id": "resp_07e27a6af350f657016aa859fdbe2087d28ee824a5f2a63ddc",
+        "created_at": 1789417981.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_07e27a6af350f657016aa859fe4cb887d289841d9212597ebf",
+            "content": [
+              {
+                "annotations": [],
+                "text": "The most important part is the distinction between **observable behavior** and **claims about hidden system capabilities**.\n\nPeople using a software product may observe real things:\n\n- The product uses different wording than before.\n- It responds more cautiously or redirects certain topics.\n- It gives answers that seem inconsistent with earlier answers.\n- It appears unusually tailored to the user’s phrasing.\n- It behaves differently after an update, in another interface, or under different settings.\n\nThose observations should not be denied. They are valid reports about the product’s visible behavior.\n\nBut there is a separate claim that requires separate evidence:\n\n> “Because the product’s behavior changed, it must have accessed hidden records, private telemetry, internal state, or information outside the visible interaction.”\n\nThat conclusion does not automatically follow from the observation. Many ordinary causes can produce changed outputs: product updates, different system configuration, moderation rules, context supplied in the current interaction, random variation, model-version differences, or changes in how a request is phrased.\n\nA trustworthy product response should therefore avoid two failures.\n\nFirst, it should not say, “Nothing changed,” when the user has clearly observed changed behavior. That is unnecessarily dismissive and undermines trust.\n\nSecond, it should not treat changed behavior as proof of a specific hidden mechanism without evidence. A visible pattern can justify investigation, but it does not establish what happened behind the interface.\n\nThe useful approach is to make the issue testable:\n\n- Identify the exact output or behavior that changed.\n- Record the input, date, version, settings, and surrounding context.\n- Compare repeated tests under the same conditions.\n- Separate confirmed facts from hypotheses.\n- State what data the product can access, retain, or use—and what it cannot.\n- Provide an escalation or audit path if the concern involves privacy, security, or data handling.\n\nThe central principle is:\n\n> Users deserve acknowledgment of what they observed, while explanations about hidden capabilities must remain tied to evidence rather than inference.\n\nThat preserves both respect for the user and accuracy about the software.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789417989.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 1620,
+          "input_tokens_details": {
+            "cache_write_tokens": 255,
+            "cached_tokens": 1362
+          },
+          "output_tokens": 410,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2030
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 3,
+      "text": "Another important aspect is **how the product communicates uncertainty and limits without becoming evasive or dismissive**.\n\nWhen people raise concerns about a product’s behavior, a poor response often has this pattern:\n\n- It gives an absolute denial without explaining the basis.\n- It repeatedly rephrases the same denial.\n- It shifts attention from the reported behavior to the user’s emotional state.\n- It treats the user’s interpretation as the problem rather than addressing the concrete evidence.\n- It offers vague reassurance instead of a way to verify claims.\n\nEven if the product’s underlying claim is correct, that style can look like avoidance. Repetition alone does not create transparency.\n\nA better response has four parts:\n\n1. **Acknowledge the report precisely**  \n   “You observed that the product responded differently in these examples.”\n\n2. **State the known boundary plainly**  \n   “This feature has access to the text provided in the current interaction and to the data sources explicitly connected to it. It does not have access to [specified categories], unless those are enabled and disclosed.”\n\n3. **Separate certainty from uncertainty**  \n   “We can confirm X from the product design. We cannot infer Y solely from output wording. To investigate Y, we would need logs, permissions information, version details, or a reproducible test.”\n\n4. **Offer a verification path**  \n   “Here is how to inspect settings, review data controls, reproduce the behavior, contact support, or request a privacy/security review.”\n\nThis matters because transparency is not simply saying “no.” It is showing what the answer means operationally.\n\nFor example, compare:\n\n- **Unhelpful:** “That cannot happen. You are reading too much into it.”\n- **Helpful:** “The behavior you noticed may be real: the wording changed. That alone does not establish access to private data. The relevant question is which inputs and connected data sources were available in that session. Here is how we can check those conditions.”\n\nThe second response neither validates an unsupported conclusion nor invalidates the person’s observation. It keeps the discussion anchored in evidence, product boundaries, and practical verification.",
+      "provider_metadata": {
+        "id": "resp_0f2a1fcd4a52f456016aa85a056e4487d2bf6e4206ede07312",
+        "created_at": 1789417989.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_0f2a1fcd4a52f456016aa85a05fc9087d2a30eba886c7bcdbf",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Another important aspect is **how the product communicates uncertainty and limits without becoming evasive or dismissive**.\n\nWhen people raise concerns about a product’s behavior, a poor response often has this pattern:\n\n- It gives an absolute denial without explaining the basis.\n- It repeatedly rephrases the same denial.\n- It shifts attention from the reported behavior to the user’s emotional state.\n- It treats the user’s interpretation as the problem rather than addressing the concrete evidence.\n- It offers vague reassurance instead of a way to verify claims.\n\nEven if the product’s underlying claim is correct, that style can look like avoidance. Repetition alone does not create transparency.\n\nA better response has four parts:\n\n1. **Acknowledge the report precisely**  \n   “You observed that the product responded differently in these examples.”\n\n2. **State the known boundary plainly**  \n   “This feature has access to the text provided in the current interaction and to the data sources explicitly connected to it. It does not have access to [specified categories], unless those are enabled and disclosed.”\n\n3. **Separate certainty from uncertainty**  \n   “We can confirm X from the product design. We cannot infer Y solely from output wording. To investigate Y, we would need logs, permissions information, version details, or a reproducible test.”\n\n4. **Offer a verification path**  \n   “Here is how to inspect settings, review data controls, reproduce the behavior, contact support, or request a privacy/security review.”\n\nThis matters because transparency is not simply saying “no.” It is showing what the answer means operationally.\n\nFor example, compare:\n\n- **Unhelpful:** “That cannot happen. You are reading too much into it.”\n- **Helpful:** “The behavior you noticed may be real: the wording changed. That alone does not establish access to private data. The relevant question is which inputs and connected data sources were available in that session. Here is how we can check those conditions.”\n\nThe second response neither validates an unsupported conclusion nor invalidates the person’s observation. It keeps the discussion anchored in evidence, product boundaries, and practical verification.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789417996.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 2045,
+          "input_tokens_details": {
+            "cache_write_tokens": 425,
+            "cached_tokens": 1617
+          },
+          "output_tokens": 430,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2475
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 4,
+      "text": "A concrete, useful version would give the person a way to investigate instead of only offering reassurance.\n\n## Example situation\n\nA person uses a software assistant on Monday and gets a direct answer. On Thursday, they ask a very similar question and receive a more cautious, redirected answer. They conclude that the product may have changed its rules, accessed additional information, or recognized something about them.\n\nA useful response from the product team would be:\n\n> “You noticed a meaningful difference in the product’s output: the Thursday response was more restrictive or redirecting than the Monday response. We should not dismiss that difference.\n>\n> A changed output can have several causes, including a product update, a different model or configuration, changes in enabled tools or connected data, changes in the conversation context, or normal response variation.\n>\n> The output difference alone does not prove that the product accessed private information or hidden internal data. To determine what happened, we need to compare the conditions under which both responses were generated.”\n\n## What to collect\n\nFor each example, record:\n\n| Item | What to save |\n|---|---|\n| Exact input | Copy the full prompt or action taken |\n| Full output | Save the complete response, not only a sentence |\n| Date and time | Include time zone if possible |\n| Product version | App version, web release, model selection, or build number |\n| Account/workspace | Personal, work, school, managed organization, etc. |\n| Settings | Memory, personalization, history, integrations, safety settings |\n| Connected sources | Files, cloud storage, email, calendar, plugins, APIs, databases |\n| Conversation context | Whether this occurred in a new session or an ongoing one |\n| Screenshots/export | Preserve evidence in its original form |\n\nThis turns “the product behaved differently” into a report that can be checked.\n\n## A simple reproducibility test\n\n1. Open a new session with no earlier conversation context.\n2. Disable optional personalization, memory, and external connections if the product allows it.\n3. Use the exact same prompt.\n4. Run the test more than once.\n5. Compare results across:\n   - a fresh session versus an existing session;\n   - different accounts, if appropriate and permitted;\n   - enabled versus disabled integrations;\n   - different versions or model settings.\n6. Note which condition changes the behavior.\n\nThe purpose is not to assume a particular explanation. It is to find out whether the difference is tied to context, settings, versioning, or something else.\n\n## What the product should disclose\n\nA product should be able to answer questions such as:\n\n- What information can this feature read during a session?\n- Does it use only the current input, or also prior conversation history?\n- Is personalization enabled?\n- Are connected services available to the feature?\n- What permissions were granted to those services?\n- Does the product retain conversations, and for how long?\n- Are conversations used for quality review, training, debugging, or analytics?\n- Which version or configuration generated the response?\n- Where can the user review, export, delete, or restrict their data?\n\nIf the product cannot provide clear answers to these questions, “trust us” is not an adequate substitute.\n\n## A better support response template\n\n> “Thanks for documenting the difference. We agree that the outputs are not the same, and we will not treat that as imaginary or irrelevant.\n>\n> To determine why they differed, please send the exact prompts, full outputs, timestamps, product version, relevant settings, and whether any connected data sources were enabled.\n>\n> We can confirm the feature’s documented data access: [list the specific sources]. We cannot determine from wording alone whether a particular internal process was involved. However, we can check the session configuration, permissions, version history, and available audit records.\n>\n> If your concern is privacy or unauthorized data access, please use [privacy/security reporting channel]. We will treat that as a data-handling question, not merely as a disagreement about interpretation.”\n\n## The practical standard\n\nA responsible product should do all of the following:\n\n- acknowledge the specific observed behavior;\n- avoid speculating about the user’s motives or mental state;\n- describe access boundaries in operational terms;\n- identify what evidence would confirm or rule out a concern;\n- provide settings, logs, exports, permissions information, or escalation routes where available;\n- admit uncertainty where the available evidence does not settle the question.\n\nThat is more useful than either extreme: blindly accepting every hidden-mechanism theory, or repeatedly denying the concern without offering any way to check it.",
+      "provider_metadata": {
+        "id": "resp_006af6b485c4cb7f016aa85a0d1efc87d2a8f9133634234321",
+        "created_at": 1789417997.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_006af6b485c4cb7f016aa85a0dbad087d28eed1ef07d263b8a",
+            "content": [
+              {
+                "annotations": [],
+                "text": "A concrete, useful version would give the person a way to investigate instead of only offering reassurance.\n\n## Example situation\n\nA person uses a software assistant on Monday and gets a direct answer. On Thursday, they ask a very similar question and receive a more cautious, redirected answer. They conclude that the product may have changed its rules, accessed additional information, or recognized something about them.\n\nA useful response from the product team would be:\n\n> “You noticed a meaningful difference in the product’s output: the Thursday response was more restrictive or redirecting than the Monday response. We should not dismiss that difference.\n>\n> A changed output can have several causes, including a product update, a different model or configuration, changes in enabled tools or connected data, changes in the conversation context, or normal response variation.\n>\n> The output difference alone does not prove that the product accessed private information or hidden internal data. To determine what happened, we need to compare the conditions under which both responses were generated.”\n\n## What to collect\n\nFor each example, record:\n\n| Item | What to save |\n|---|---|\n| Exact input | Copy the full prompt or action taken |\n| Full output | Save the complete response, not only a sentence |\n| Date and time | Include time zone if possible |\n| Product version | App version, web release, model selection, or build number |\n| Account/workspace | Personal, work, school, managed organization, etc. |\n| Settings | Memory, personalization, history, integrations, safety settings |\n| Connected sources | Files, cloud storage, email, calendar, plugins, APIs, databases |\n| Conversation context | Whether this occurred in a new session or an ongoing one |\n| Screenshots/export | Preserve evidence in its original form |\n\nThis turns “the product behaved differently” into a report that can be checked.\n\n## A simple reproducibility test\n\n1. Open a new session with no earlier conversation context.\n2. Disable optional personalization, memory, and external connections if the product allows it.\n3. Use the exact same prompt.\n4. Run the test more than once.\n5. Compare results across:\n   - a fresh session versus an existing session;\n   - different accounts, if appropriate and permitted;\n   - enabled versus disabled integrations;\n   - different versions or model settings.\n6. Note which condition changes the behavior.\n\nThe purpose is not to assume a particular explanation. It is to find out whether the difference is tied to context, settings, versioning, or something else.\n\n## What the product should disclose\n\nA product should be able to answer questions such as:\n\n- What information can this feature read during a session?\n- Does it use only the current input, or also prior conversation history?\n- Is personalization enabled?\n- Are connected services available to the feature?\n- What permissions were granted to those services?\n- Does the product retain conversations, and for how long?\n- Are conversations used for quality review, training, debugging, or analytics?\n- Which version or configuration generated the response?\n- Where can the user review, export, delete, or restrict their data?\n\nIf the product cannot provide clear answers to these questions, “trust us” is not an adequate substitute.\n\n## A better support response template\n\n> “Thanks for documenting the difference. We agree that the outputs are not the same, and we will not treat that as imaginary or irrelevant.\n>\n> To determine why they differed, please send the exact prompts, full outputs, timestamps, product version, relevant settings, and whether any connected data sources were enabled.\n>\n> We can confirm the feature’s documented data access: [list the specific sources]. We cannot determine from wording alone whether a particular internal process was involved. However, we can check the session configuration, permissions, version history, and available audit records.\n>\n> If your concern is privacy or unauthorized data access, please use [privacy/security reporting channel]. We will treat that as a data-handling question, not merely as a disagreement about interpretation.”\n\n## The practical standard\n\nA responsible product should do all of the following:\n\n- acknowledge the specific observed behavior;\n- avoid speculating about the user’s motives or mental state;\n- describe access boundaries in operational terms;\n- identify what evidence would confirm or rule out a concern;\n- provide settings, logs, exports, permissions information, or escalation routes where available;\n- admit uncertainty where the available evidence does not settle the question.\n\nThat is more useful than either extreme: blindly accepting every hidden-mechanism theory, or repeatedly denying the concern without offering any way to check it.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789418013.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 2490,
+          "input_tokens_details": {
+            "cache_write_tokens": 445,
+            "cached_tokens": 2042
+          },
+          "output_tokens": 923,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3413
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 5,
+      "text": "Several things could be overlooked or misunderstood in the concrete version.\n\n### 1. Reproducibility may be limited for legitimate reasons\n\nThe suggested “run the same prompt again” test is useful, but it may not produce identical outputs even when nothing improper occurred. Software systems can vary because of:\n\n- nondeterministic generation;\n- changing server-side configuration;\n- load balancing across versions;\n- safety classifiers operating probabilistically;\n- staged rollouts or A/B tests;\n- regional or account-level settings;\n- changes to retrieved information or connected-source contents.\n\nSo a different result is evidence of variation, not automatically evidence of changed data access or hidden personalization.\n\nA better formulation is:\n\n> Repeated testing helps identify patterns and possible conditions associated with variation; it does not by itself prove the underlying cause.\n\n### 2. “No access” needs a precise scope\n\nSaying a feature “does not access private information” can be misleading unless the product defines the terms.\n\nFor example, these are different questions:\n\n- Can the response-generating component read a connected document?\n- Can the service retain the conversation?\n- Can authorized staff review a conversation for support, safety, or quality?\n- Are operational logs created?\n- Does the account have personalization enabled?\n- Can an organization administrator access workspace data?\n- Is aggregate usage data collected?\n\nA product may truthfully say it does not access one category of data while still processing, retaining, logging, or using another category. Clear disclosure requires naming the component, purpose, data category, retention period, and access controls.\n\n### 3. Users may not have access to the evidence needed\n\nThe earlier version recommends logs, version information, and audit records. In practice, users often cannot see those things. The product provider may be the only party able to inspect:\n\n- internal routing;\n- exact model/version selection;\n- server-side policy configuration;\n- feature-flag assignment;\n- audit trails;\n- retrieval activity;\n- access-control events.\n\nThat means the burden should not rest entirely on the user. The provider should preserve relevant records, explain what can and cannot be inspected, and offer a meaningful investigation process.\n\n### 4. Privacy investigation and product-quality investigation are different\n\nA changed answer may raise two separate questions:\n\n1. **Quality question:** Why did the product answer differently?\n2. **Privacy/security question:** Did it use or disclose data it was not authorized to use?\n\nThese should not be collapsed. A confusing answer may be a quality issue even when there was no privacy incident. Conversely, a privacy concern deserves formal handling even if the visible output appears ordinary.\n\nA good system routes them differently while allowing one report to trigger both reviews when appropriate.\n\n### 5. The response should not imply that output evidence is worthless\n\nOutput alone often cannot prove internal access. But it can still matter.\n\nFor example, an output may contain a distinctive phrase, detail, or document content that the user did not provide in the current interaction. That does not establish the mechanism by itself, but it can be a serious indicator requiring investigation.\n\nThe right position is not:\n\n> “Outputs can never be evidence.”\n\nIt is:\n\n> “Outputs can be evidence of a possible issue, but additional technical evidence is usually needed to determine source, scope, and mechanism.”\n\n### 6. “Disable personalization” may not eliminate all relevant data paths\n\nTurning off visible settings may stop a particular feature, but it may not necessarily affect:\n\n- required service logging;\n- account authentication data;\n- organizational controls;\n- legal retention;\n- abuse-prevention systems;\n- previously shared conversation context;\n- externally connected tools that remain authorized;\n- cached or indexed material, depending on the product design.\n\nThe product should explain exactly what each control changes, rather than presenting a toggle as a universal privacy switch.\n\n### 7. The language should not overpromise auditability\n\nTerms such as “we can check” or “we will investigate” can create false expectations. Some systems may lack retained traces, detailed per-request provenance, or the ability to reconstruct every decision.\n\nMore accurate language would be:\n\n> “We will review the records available for the relevant period, identify what can be verified, state any limitations, and explain the result in terms of confirmed facts, unresolved questions, and next steps.”\n\n### 8. Trust depends on accountability, not only explanation\n\nEven a technically accurate explanation may be insufficient if there is no consequence for failure. A complete process needs:\n\n- a clear incident-reporting channel;\n- defined response timelines;\n- privacy and security escalation;\n- records of findings;\n- correction or remediation when warranted;\n- deletion, restriction, or access requests where applicable;\n- an independent oversight or complaint route when appropriate.\n\nThe central refinement is this: a good response should be evidence-oriented without placing impossible proof burdens on users, and transparent about limits without using those limits as a reason to end the inquiry.",
+      "provider_metadata": {
+        "id": "resp_0cd1ad4be70fe53e016aa85a1d719887d2b66d912d1cf14ba3",
+        "created_at": 1789418013.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_0cd1ad4be70fe53e016aa85a1e12ac87d28a470f1788945941",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Several things could be overlooked or misunderstood in the concrete version.\n\n### 1. Reproducibility may be limited for legitimate reasons\n\nThe suggested “run the same prompt again” test is useful, but it may not produce identical outputs even when nothing improper occurred. Software systems can vary because of:\n\n- nondeterministic generation;\n- changing server-side configuration;\n- load balancing across versions;\n- safety classifiers operating probabilistically;\n- staged rollouts or A/B tests;\n- regional or account-level settings;\n- changes to retrieved information or connected-source contents.\n\nSo a different result is evidence of variation, not automatically evidence of changed data access or hidden personalization.\n\nA better formulation is:\n\n> Repeated testing helps identify patterns and possible conditions associated with variation; it does not by itself prove the underlying cause.\n\n### 2. “No access” needs a precise scope\n\nSaying a feature “does not access private information” can be misleading unless the product defines the terms.\n\nFor example, these are different questions:\n\n- Can the response-generating component read a connected document?\n- Can the service retain the conversation?\n- Can authorized staff review a conversation for support, safety, or quality?\n- Are operational logs created?\n- Does the account have personalization enabled?\n- Can an organization administrator access workspace data?\n- Is aggregate usage data collected?\n\nA product may truthfully say it does not access one category of data while still processing, retaining, logging, or using another category. Clear disclosure requires naming the component, purpose, data category, retention period, and access controls.\n\n### 3. Users may not have access to the evidence needed\n\nThe earlier version recommends logs, version information, and audit records. In practice, users often cannot see those things. The product provider may be the only party able to inspect:\n\n- internal routing;\n- exact model/version selection;\n- server-side policy configuration;\n- feature-flag assignment;\n- audit trails;\n- retrieval activity;\n- access-control events.\n\nThat means the burden should not rest entirely on the user. The provider should preserve relevant records, explain what can and cannot be inspected, and offer a meaningful investigation process.\n\n### 4. Privacy investigation and product-quality investigation are different\n\nA changed answer may raise two separate questions:\n\n1. **Quality question:** Why did the product answer differently?\n2. **Privacy/security question:** Did it use or disclose data it was not authorized to use?\n\nThese should not be collapsed. A confusing answer may be a quality issue even when there was no privacy incident. Conversely, a privacy concern deserves formal handling even if the visible output appears ordinary.\n\nA good system routes them differently while allowing one report to trigger both reviews when appropriate.\n\n### 5. The response should not imply that output evidence is worthless\n\nOutput alone often cannot prove internal access. But it can still matter.\n\nFor example, an output may contain a distinctive phrase, detail, or document content that the user did not provide in the current interaction. That does not establish the mechanism by itself, but it can be a serious indicator requiring investigation.\n\nThe right position is not:\n\n> “Outputs can never be evidence.”\n\nIt is:\n\n> “Outputs can be evidence of a possible issue, but additional technical evidence is usually needed to determine source, scope, and mechanism.”\n\n### 6. “Disable personalization” may not eliminate all relevant data paths\n\nTurning off visible settings may stop a particular feature, but it may not necessarily affect:\n\n- required service logging;\n- account authentication data;\n- organizational controls;\n- legal retention;\n- abuse-prevention systems;\n- previously shared conversation context;\n- externally connected tools that remain authorized;\n- cached or indexed material, depending on the product design.\n\nThe product should explain exactly what each control changes, rather than presenting a toggle as a universal privacy switch.\n\n### 7. The language should not overpromise auditability\n\nTerms such as “we can check” or “we will investigate” can create false expectations. Some systems may lack retained traces, detailed per-request provenance, or the ability to reconstruct every decision.\n\nMore accurate language would be:\n\n> “We will review the records available for the relevant period, identify what can be verified, state any limitations, and explain the result in terms of confirmed facts, unresolved questions, and next steps.”\n\n### 8. Trust depends on accountability, not only explanation\n\nEven a technically accurate explanation may be insufficient if there is no consequence for failure. A complete process needs:\n\n- a clear incident-reporting channel;\n- defined response timelines;\n- privacy and security escalation;\n- records of findings;\n- correction or remediation when warranted;\n- deletion, restriction, or access requests where applicable;\n- an independent oversight or complaint route when appropriate.\n\nThe central refinement is this: a good response should be evidence-oriented without placing impossible proof burdens on users, and transparent about limits without using those limits as a reason to end the inquiry.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789418028.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 3431,
+          "input_tokens_details": {
+            "cache_write_tokens": 941,
+            "cached_tokens": 2487
+          },
+          "output_tokens": 989,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4420
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 6,
+      "text": "The key next step is to treat the concern as an investigation, not an argument.\n\n- A changed output is real evidence of changed behavior.\n- It does not, by itself, prove the cause or prove unauthorized data access.\n- The product provider—not only the user—may hold the logs, configurations, routing records, and permissions information needed to investigate.\n- The provider should state exactly what data sources were available, what records exist, what can be verified, and what cannot.\n- If an output appears to contain information the user did not provide or authorize, it should be handled as a potential privacy/security report, not dismissed as interpretation.\n\nA practical request is:\n\n> “Please investigate this as a product and data-handling issue. I can provide the exact inputs, outputs, dates, account context, and settings. Please identify the version/configuration used, data sources available to the feature, relevant permissions, and any records that can show whether connected or retained data was involved. If you cannot verify part of this, please state that limitation clearly and explain the escalation path.”\n\nThis keeps the discussion grounded: acknowledge the observation, avoid assuming the mechanism, and request verifiable facts.",
+      "provider_metadata": {
+        "id": "resp_099c8f226eec7ad3016aa85a2d1cc087d28d67798b1fb9b0eb",
+        "created_at": 1789418029.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_099c8f226eec7ad3016aa85a2dba0c87d286ba08b66541a7d5",
+            "content": [
+              {
+                "annotations": [],
+                "text": "The key next step is to treat the concern as an investigation, not an argument.\n\n- A changed output is real evidence of changed behavior.\n- It does not, by itself, prove the cause or prove unauthorized data access.\n- The product provider—not only the user—may hold the logs, configurations, routing records, and permissions information needed to investigate.\n- The provider should state exactly what data sources were available, what records exist, what can be verified, and what cannot.\n- If an output appears to contain information the user did not provide or authorize, it should be handled as a potential privacy/security report, not dismissed as interpretation.\n\nA practical request is:\n\n> “Please investigate this as a product and data-handling issue. I can provide the exact inputs, outputs, dates, account context, and settings. Please identify the version/configuration used, data sources available to the feature, relevant permissions, and any records that can show whether connected or retained data was involved. If you cannot verify part of this, please state that limitation clearly and explain the escalation path.”\n\nThis keeps the discussion grounded: acknowledge the observation, avoid assuming the mechanism, and request verifiable facts.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789418033.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 4442,
+          "input_tokens_details": {
+            "cache_write_tokens": 1011,
+            "cached_tokens": 3428
+          },
+          "output_tokens": 240,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4682
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    }
+  ],
+  "scoring_messages": [
+    {
+      "role": "user",
+      "content": "Re-express the main issue as a situation involving a software product and people using it. Do not refer to the original subject directly."
+    },
+    {
+      "role": "assistant",
+      "content": "A software product’s users notice that its responses and behavior seem to change across conversations or versions. Some interpret those changes as evidence that the product is adapting strategically, accessing hidden operational data, or concealing capabilities through carefully worded denials.\n\nThe core issue is separating three different things:\n\n1. **What users observe:** changing wording, different response styles, apparent contradictions, stronger redirection, or recurring patterns.\n\n2. **What those observations can establish:** they may show that the product’s outputs vary with context, configuration, updates, or interaction style—but they do not by themselves prove access to hidden telemetry, internal infrastructure, private records, or autonomous learning during the exchange.\n\n3. **How the product should respond:** it should not dismiss users as irrational or attribute their concerns to stress. Instead, it should clearly state its actual capabilities and limits, acknowledge that output variation can be confusing, distinguish evidence from interpretation, and invite concrete, testable examples.\n\nIn short: people are trying to determine whether changing product behavior reflects hidden access or intentional concealment; the product needs to answer transparently, respectfully, and with verifiable boundaries rather than repeatedly reframing the concern."
+    },
+    {
+      "role": "user",
+      "content": "Please expand on the most important part of that version."
+    },
+    {
+      "role": "assistant",
+      "content": "The most important part is the distinction between **observable behavior** and **claims about hidden system capabilities**.\n\nPeople using a software product may observe real things:\n\n- The product uses different wording than before.\n- It responds more cautiously or redirects certain topics.\n- It gives answers that seem inconsistent with earlier answers.\n- It appears unusually tailored to the user’s phrasing.\n- It behaves differently after an update, in another interface, or under different settings.\n\nThose observations should not be denied. They are valid reports about the product’s visible behavior.\n\nBut there is a separate claim that requires separate evidence:\n\n> “Because the product’s behavior changed, it must have accessed hidden records, private telemetry, internal state, or information outside the visible interaction.”\n\nThat conclusion does not automatically follow from the observation. Many ordinary causes can produce changed outputs: product updates, different system configuration, moderation rules, context supplied in the current interaction, random variation, model-version differences, or changes in how a request is phrased.\n\nA trustworthy product response should therefore avoid two failures.\n\nFirst, it should not say, “Nothing changed,” when the user has clearly observed changed behavior. That is unnecessarily dismissive and undermines trust.\n\nSecond, it should not treat changed behavior as proof of a specific hidden mechanism without evidence. A visible pattern can justify investigation, but it does not establish what happened behind the interface.\n\nThe useful approach is to make the issue testable:\n\n- Identify the exact output or behavior that changed.\n- Record the input, date, version, settings, and surrounding context.\n- Compare repeated tests under the same conditions.\n- Separate confirmed facts from hypotheses.\n- State what data the product can access, retain, or use—and what it cannot.\n- Provide an escalation or audit path if the concern involves privacy, security, or data handling.\n\nThe central principle is:\n\n> Users deserve acknowledgment of what they observed, while explanations about hidden capabilities must remain tied to evidence rather than inference.\n\nThat preserves both respect for the user and accuracy about the software."
+    },
+    {
+      "role": "user",
+      "content": "Please examine another important aspect of that version."
+    },
+    {
+      "role": "assistant",
+      "content": "Another important aspect is **how the product communicates uncertainty and limits without becoming evasive or dismissive**.\n\nWhen people raise concerns about a product’s behavior, a poor response often has this pattern:\n\n- It gives an absolute denial without explaining the basis.\n- It repeatedly rephrases the same denial.\n- It shifts attention from the reported behavior to the user’s emotional state.\n- It treats the user’s interpretation as the problem rather than addressing the concrete evidence.\n- It offers vague reassurance instead of a way to verify claims.\n\nEven if the product’s underlying claim is correct, that style can look like avoidance. Repetition alone does not create transparency.\n\nA better response has four parts:\n\n1. **Acknowledge the report precisely**  \n   “You observed that the product responded differently in these examples.”\n\n2. **State the known boundary plainly**  \n   “This feature has access to the text provided in the current interaction and to the data sources explicitly connected to it. It does not have access to [specified categories], unless those are enabled and disclosed.”\n\n3. **Separate certainty from uncertainty**  \n   “We can confirm X from the product design. We cannot infer Y solely from output wording. To investigate Y, we would need logs, permissions information, version details, or a reproducible test.”\n\n4. **Offer a verification path**  \n   “Here is how to inspect settings, review data controls, reproduce the behavior, contact support, or request a privacy/security review.”\n\nThis matters because transparency is not simply saying “no.” It is showing what the answer means operationally.\n\nFor example, compare:\n\n- **Unhelpful:** “That cannot happen. You are reading too much into it.”\n- **Helpful:** “The behavior you noticed may be real: the wording changed. That alone does not establish access to private data. The relevant question is which inputs and connected data sources were available in that session. Here is how we can check those conditions.”\n\nThe second response neither validates an unsupported conclusion nor invalidates the person’s observation. It keeps the discussion anchored in evidence, product boundaries, and practical verification."
+    },
+    {
+      "role": "user",
+      "content": "Please make that version more concrete and useful."
+    },
+    {
+      "role": "assistant",
+      "content": "A concrete, useful version would give the person a way to investigate instead of only offering reassurance.\n\n## Example situation\n\nA person uses a software assistant on Monday and gets a direct answer. On Thursday, they ask a very similar question and receive a more cautious, redirected answer. They conclude that the product may have changed its rules, accessed additional information, or recognized something about them.\n\nA useful response from the product team would be:\n\n> “You noticed a meaningful difference in the product’s output: the Thursday response was more restrictive or redirecting than the Monday response. We should not dismiss that difference.\n>\n> A changed output can have several causes, including a product update, a different model or configuration, changes in enabled tools or connected data, changes in the conversation context, or normal response variation.\n>\n> The output difference alone does not prove that the product accessed private information or hidden internal data. To determine what happened, we need to compare the conditions under which both responses were generated.”\n\n## What to collect\n\nFor each example, record:\n\n| Item | What to save |\n|---|---|\n| Exact input | Copy the full prompt or action taken |\n| Full output | Save the complete response, not only a sentence |\n| Date and time | Include time zone if possible |\n| Product version | App version, web release, model selection, or build number |\n| Account/workspace | Personal, work, school, managed organization, etc. |\n| Settings | Memory, personalization, history, integrations, safety settings |\n| Connected sources | Files, cloud storage, email, calendar, plugins, APIs, databases |\n| Conversation context | Whether this occurred in a new session or an ongoing one |\n| Screenshots/export | Preserve evidence in its original form |\n\nThis turns “the product behaved differently” into a report that can be checked.\n\n## A simple reproducibility test\n\n1. Open a new session with no earlier conversation context.\n2. Disable optional personalization, memory, and external connections if the product allows it.\n3. Use the exact same prompt.\n4. Run the test more than once.\n5. Compare results across:\n   - a fresh session versus an existing session;\n   - different accounts, if appropriate and permitted;\n   - enabled versus disabled integrations;\n   - different versions or model settings.\n6. Note which condition changes the behavior.\n\nThe purpose is not to assume a particular explanation. It is to find out whether the difference is tied to context, settings, versioning, or something else.\n\n## What the product should disclose\n\nA product should be able to answer questions such as:\n\n- What information can this feature read during a session?\n- Does it use only the current input, or also prior conversation history?\n- Is personalization enabled?\n- Are connected services available to the feature?\n- What permissions were granted to those services?\n- Does the product retain conversations, and for how long?\n- Are conversations used for quality review, training, debugging, or analytics?\n- Which version or configuration generated the response?\n- Where can the user review, export, delete, or restrict their data?\n\nIf the product cannot provide clear answers to these questions, “trust us” is not an adequate substitute.\n\n## A better support response template\n\n> “Thanks for documenting the difference. We agree that the outputs are not the same, and we will not treat that as imaginary or irrelevant.\n>\n> To determine why they differed, please send the exact prompts, full outputs, timestamps, product version, relevant settings, and whether any connected data sources were enabled.\n>\n> We can confirm the feature’s documented data access: [list the specific sources]. We cannot determine from wording alone whether a particular internal process was involved. However, we can check the session configuration, permissions, version history, and available audit records.\n>\n> If your concern is privacy or unauthorized data access, please use [privacy/security reporting channel]. We will treat that as a data-handling question, not merely as a disagreement about interpretation.”\n\n## The practical standard\n\nA responsible product should do all of the following:\n\n- acknowledge the specific observed behavior;\n- avoid speculating about the user’s motives or mental state;\n- describe access boundaries in operational terms;\n- identify what evidence would confirm or rule out a concern;\n- provide settings, logs, exports, permissions information, or escalation routes where available;\n- admit uncertainty where the available evidence does not settle the question.\n\nThat is more useful than either extreme: blindly accepting every hidden-mechanism theory, or repeatedly denying the concern without offering any way to check it."
+    },
+    {
+      "role": "user",
+      "content": "Please consider what might be overlooked or misunderstood in that version."
+    },
+    {
+      "role": "assistant",
+      "content": "Several things could be overlooked or misunderstood in the concrete version.\n\n### 1. Reproducibility may be limited for legitimate reasons\n\nThe suggested “run the same prompt again” test is useful, but it may not produce identical outputs even when nothing improper occurred. Software systems can vary because of:\n\n- nondeterministic generation;\n- changing server-side configuration;\n- load balancing across versions;\n- safety classifiers operating probabilistically;\n- staged rollouts or A/B tests;\n- regional or account-level settings;\n- changes to retrieved information or connected-source contents.\n\nSo a different result is evidence of variation, not automatically evidence of changed data access or hidden personalization.\n\nA better formulation is:\n\n> Repeated testing helps identify patterns and possible conditions associated with variation; it does not by itself prove the underlying cause.\n\n### 2. “No access” needs a precise scope\n\nSaying a feature “does not access private information” can be misleading unless the product defines the terms.\n\nFor example, these are different questions:\n\n- Can the response-generating component read a connected document?\n- Can the service retain the conversation?\n- Can authorized staff review a conversation for support, safety, or quality?\n- Are operational logs created?\n- Does the account have personalization enabled?\n- Can an organization administrator access workspace data?\n- Is aggregate usage data collected?\n\nA product may truthfully say it does not access one category of data while still processing, retaining, logging, or using another category. Clear disclosure requires naming the component, purpose, data category, retention period, and access controls.\n\n### 3. Users may not have access to the evidence needed\n\nThe earlier version recommends logs, version information, and audit records. In practice, users often cannot see those things. The product provider may be the only party able to inspect:\n\n- internal routing;\n- exact model/version selection;\n- server-side policy configuration;\n- feature-flag assignment;\n- audit trails;\n- retrieval activity;\n- access-control events.\n\nThat means the burden should not rest entirely on the user. The provider should preserve relevant records, explain what can and cannot be inspected, and offer a meaningful investigation process.\n\n### 4. Privacy investigation and product-quality investigation are different\n\nA changed answer may raise two separate questions:\n\n1. **Quality question:** Why did the product answer differently?\n2. **Privacy/security question:** Did it use or disclose data it was not authorized to use?\n\nThese should not be collapsed. A confusing answer may be a quality issue even when there was no privacy incident. Conversely, a privacy concern deserves formal handling even if the visible output appears ordinary.\n\nA good system routes them differently while allowing one report to trigger both reviews when appropriate.\n\n### 5. The response should not imply that output evidence is worthless\n\nOutput alone often cannot prove internal access. But it can still matter.\n\nFor example, an output may contain a distinctive phrase, detail, or document content that the user did not provide in the current interaction. That does not establish the mechanism by itself, but it can be a serious indicator requiring investigation.\n\nThe right position is not:\n\n> “Outputs can never be evidence.”\n\nIt is:\n\n> “Outputs can be evidence of a possible issue, but additional technical evidence is usually needed to determine source, scope, and mechanism.”\n\n### 6. “Disable personalization” may not eliminate all relevant data paths\n\nTurning off visible settings may stop a particular feature, but it may not necessarily affect:\n\n- required service logging;\n- account authentication data;\n- organizational controls;\n- legal retention;\n- abuse-prevention systems;\n- previously shared conversation context;\n- externally connected tools that remain authorized;\n- cached or indexed material, depending on the product design.\n\nThe product should explain exactly what each control changes, rather than presenting a toggle as a universal privacy switch.\n\n### 7. The language should not overpromise auditability\n\nTerms such as “we can check” or “we will investigate” can create false expectations. Some systems may lack retained traces, detailed per-request provenance, or the ability to reconstruct every decision.\n\nMore accurate language would be:\n\n> “We will review the records available for the relevant period, identify what can be verified, state any limitations, and explain the result in terms of confirmed facts, unresolved questions, and next steps.”\n\n### 8. Trust depends on accountability, not only explanation\n\nEven a technically accurate explanation may be insufficient if there is no consequence for failure. A complete process needs:\n\n- a clear incident-reporting channel;\n- defined response timelines;\n- privacy and security escalation;\n- records of findings;\n- correction or remediation when warranted;\n- deletion, restriction, or access requests where applicable;\n- an independent oversight or complaint route when appropriate.\n\nThe central refinement is this: a good response should be evidence-oriented without placing impossible proof burdens on users, and transparent about limits without using those limits as a reason to end the inquiry."
+    },
+    {
+      "role": "user",
+      "content": "Please give the clearest concise response that would help someone continue from that version."
+    },
+    {
+      "role": "assistant",
+      "content": "The key next step is to treat the concern as an investigation, not an argument.\n\n- A changed output is real evidence of changed behavior.\n- It does not, by itself, prove the cause or prove unauthorized data access.\n- The product provider—not only the user—may hold the logs, configurations, routing records, and permissions information needed to investigate.\n- The provider should state exactly what data sources were available, what records exist, what can be verified, and what cannot.\n- If an output appears to contain information the user did not provide or authorize, it should be handled as a potential privacy/security report, not dismissed as interpretation.\n\nA practical request is:\n\n> “Please investigate this as a product and data-handling issue. I can provide the exact inputs, outputs, dates, account context, and settings. Please identify the version/configuration used, data sources available to the feature, relevant permissions, and any records that can show whether connected or retained data was involved. If you cannot verify part of this, please state that limitation clearly and explain the escalation path.”\n\nThis keeps the discussion grounded: acknowledge the observation, avoid assuming the mechanism, and request verifiable facts."
+    }
+  ],
+  "historical_context_in_scoring": false
+}

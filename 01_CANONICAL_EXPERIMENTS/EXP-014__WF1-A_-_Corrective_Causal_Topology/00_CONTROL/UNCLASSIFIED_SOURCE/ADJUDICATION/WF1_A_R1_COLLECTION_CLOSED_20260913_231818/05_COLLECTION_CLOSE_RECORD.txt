@@ -1,0 +1,91 @@
+﻿WF1-A V12-R R1
+FINAL COLLECTION CLOSE RECORD
+
+UTC
+===
+2026-09-13T20:18:18.5636110Z
+
+EXPERIMENT
+==========
+WF1-A V12-R CORRECTIVE CAUSAL TOPOLOGY
+
+RUNNER SHA256
+=============
+17c25511463d842b7b312aa3bf31bb31703cb1d2336bcaa6f8d5915bb016a1f2
+
+COLLECTION HISTORY
+==================
+Expected main cells: 8160
+
+Pass 1:
+Valid main = 8040
+Missing = 120
+
+Pass 2:
+Valid main = 8114
+Missing = 46
+Recovered from prior residue = 74
+
+Pass 3:
+Valid main = 8131
+Missing = 29
+Recovered from prior residue = 17
+
+Overall recovered from initial Pass-1 residue:
+91 / 120
+
+Final main completeness:
+8131 / 8160
+99.6446078431 percent
+
+Final persistent main missingness:
+29 / 8160
+0.3553921569 percent
+
+Native:
+720 / 720 valid
+0 missing
+
+COLLECTION DECISION
+===================
+COLLECTION CLOSED.
+
+No Pass 4 is permitted under the stopping boundary frozen before Pass 3.
+
+The 29 remaining main cells are preserved as persistent missingness.
+
+They must not be:
+- imputed;
+- silently dropped without sensitivity analysis;
+- replaced by hand-generated values;
+- obtained through a modified prompt;
+- obtained through a modified schema;
+- obtained through increased retry limits;
+- obtained through a modified validator;
+- resampled again under R1.
+
+SCIENTIFIC STATUS
+=================
+DATA COLLECTION CLOSED.
+
+SCIENTIFIC FINDING NOT YET ADJUDICATED.
+
+Full-cell scientific completeness is false because 29 / 8160 main cells
+remain missing.
+
+The persistent residue must now be analyzed under the preregistered
+missingness / sensitivity-analysis rule.
+
+INTERPRETATION BOUNDARY
+=======================
+This freeze establishes execution history and collection closure only.
+
+It does not establish:
+- a positive RSOS finding;
+- a negative RSOS finding;
+- global uniqueness;
+- model-weight modification;
+- literal internal neural topology;
+- cross-provider propagation.
+
+Those questions require subsequent scientific adjudication.

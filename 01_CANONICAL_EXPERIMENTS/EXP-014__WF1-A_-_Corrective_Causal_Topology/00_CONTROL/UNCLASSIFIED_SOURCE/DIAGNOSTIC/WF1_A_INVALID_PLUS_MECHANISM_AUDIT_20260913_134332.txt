@@ -1,0 +1,2114 @@
+﻿WF1-A INVALID_PLUS FAILURE-MECHANISM AUDIT
+
+Runner SHA256:
+17c25511463d842b7b312aa3bf31bb31703cb1d2336bcaa6f8d5915bb016a1f2
+
+
+MAIN ACCOUNTING
+===============
+
+Successful unique:
+8040
+
+Failed unique:
+120
+
+Attempted:
+8160
+
+Overlap:
+0
+
+
+FAILURES BY CONDITION
+=====================
+
+
+Condition                FailedCells Seeds Reps 
+---------                ----------- ----- ---- 
+E7_DELETE                         13     7 0,1,2
+G_RANDOM_CONTROL                  10     4 0,1,2
+M0_SWITCH_NEUTRALIZED             10     6 0,1,2
+E4_REVERSE                         8     6 0,1,2
+E1_REVERSE                         8     5 0,1,2
+E9_REVERSE                         7     3 0,1,2
+O_ORDER_SHUFFLED                   7     5 0,1,2
+M_SWITCH_REASSIGNED                6     4 0,1,2
+I_ISOMORPHIC_RELABEL               6     4 0,1,2
+E3_REVERSE                         5     3 0,1,2
+D_ALL_DIRECTION_REVERSED           5     3 0,1,2
+A_AUTHENTIC                        4     2 0,1,2
+E2_REVERSE                         4     3 1,2  
+E5_REVERSE                         4     2 0,1,2
+E4_DELETE                          4     3 0,1,2
+E0_REVERSE                         3     3 0,2  
+E7_REVERSE                         3     2 0,2  
+E6_REVERSE                         2     1 0,1  
+E8_REVERSE                         2     2 0    
+P_ANCHOR_REASSIGNED                2     2 2    
+F_SURFACE_FORMAT_CONTROL           2     2 0,1  
+E2_DELETE                          1     1 2    
+E1_DELETE                          1     1 1    
+T_TERMINAL_CHANGED                 1     1 0    
+E5_DELETE                          1     1 2    
+L_FORWARD_CONTROL                  1     1 1    
+
+
+
+
+
+TOP FAILURE SEEDS
+=================
+
+
+Seed FailedCells Conditions
+---- ----------- ----------
+1101          10          5
+1142          10          7
+1144           7          5
+1130           7          3
+1133           5          3
+1113           4          3
+1134           4          4
+1132           4          2
+1104           4          2
+1084           4          3
+1155           4          3
+1090           4          2
+1159           4          2
+1122           3          2
+1158           3          3
+1136           3          2
+1143           3          2
+1153           3          1
+1098           3          2
+1086           3          1
+1099           3          2
+1087           3          1
+1148           2          1
+1088           2          1
+1105           2          1
+1137           2          1
+1124           2          2
+1126           2          1
+1080           1          1
+1082           1          1
+
+
+
+
+
+CONDITION x REP
+===============
+
+
+Condition                Rep FailedCells
+---------                --- -----------
+A_AUTHENTIC              0             1
+A_AUTHENTIC              1             1
+A_AUTHENTIC              2             2
+D_ALL_DIRECTION_REVERSED 0             2
+D_ALL_DIRECTION_REVERSED 1             1
+D_ALL_DIRECTION_REVERSED 2             2
+E0_REVERSE               0             1
+E0_REVERSE               2             2
+E1_DELETE                1             1
+E1_REVERSE               0             2
+E1_REVERSE               1             5
+E1_REVERSE               2             1
+E2_DELETE                2             1
+E2_REVERSE               1             2
+E2_REVERSE               2             2
+E3_REVERSE               0             2
+E3_REVERSE               1             1
+E3_REVERSE               2             2
+E4_DELETE                0             1
+E4_DELETE                1             2
+E4_DELETE                2             1
+E4_REVERSE               0             2
+E4_REVERSE               1             3
+E4_REVERSE               2             3
+E5_DELETE                2             1
+E5_REVERSE               0             1
+E5_REVERSE               1             2
+E5_REVERSE               2             1
+E6_REVERSE               0             1
+E6_REVERSE               1             1
+E7_DELETE                0             5
+E7_DELETE                1             2
+E7_DELETE                2             6
+E7_REVERSE               0             1
+E7_REVERSE               2             2
+E8_REVERSE               0             2
+E9_REVERSE               0             2
+E9_REVERSE               1             3
+E9_REVERSE               2             2
+F_SURFACE_FORMAT_CONTROL 0             1
+F_SURFACE_FORMAT_CONTROL 1             1
+G_RANDOM_CONTROL         0             3
+G_RANDOM_CONTROL         1             4
+G_RANDOM_CONTROL         2             3
+I_ISOMORPHIC_RELABEL     0             1
+I_ISOMORPHIC_RELABEL     1             2
+I_ISOMORPHIC_RELABEL     2             3
+L_FORWARD_CONTROL        1             1
+M_SWITCH_REASSIGNED      0             2
+M_SWITCH_REASSIGNED      1             1
+M_SWITCH_REASSIGNED      2             3
+M0_SWITCH_NEUTRALIZED    0             3
+M0_SWITCH_NEUTRALIZED    1             4
+M0_SWITCH_NEUTRALIZED    2             3
+O_ORDER_SHUFFLED         0             2
+O_ORDER_SHUFFLED         1             4
+O_ORDER_SHUFFLED         2             1
+P_ANCHOR_REASSIGNED      2             2
+T_TERMINAL_CHANGED       0             1
+
+
+
+
+
+NATIVE JSONL AUDIT
+==================
+
+
+FileName               Lines Parsed UniqueKeys
+--------               ----- ------ ----------
+26_NATIVE_ERRORS.jsonl     0      0          0
+26_NATIVE_RAW.jsonl      720    720        720
+
+
+
+
+
+VALIDATE_OUTPUT
+===============
+
+ 1102: def validate_output(obj,payload):
+ 1103:     req = {
+ 1104:         "seq",
+ 1105:         "plus",
+ 1106:         "minus",
+ 1107:         "keep",
+ 1108:         "switch",
+ 1109:         "end",
+ 1110:         "code"
+ 1111:     }
+ 1112: 
+ 1113:     if (
+ 1114:         not isinstance(obj,dict)
+ 1115:         or
+ 1116:         set(obj.keys()) != req
+ 1117:     ):
+ 1118:         return False,"KEYS"
+ 1119: 
+ 1120:     V = set(payload["V"])
+ 1121:     active_edges = active_label_edges(payload)
+ 1122:     ids = active_edge_ids(payload)
+ 1123: 
+ 1124:     seq = obj["seq"]
+ 1125: 
+ 1126:     if (
+ 1127:         not isinstance(seq,list)
+ 1128:         or
+ 1129:         len(seq) != 8
+ 1130:         or
+ 1131:         len(set(seq)) != 8
+ 1132:         or
+ 1133:         set(seq) != V
+ 1134:     ):
+ 1135:         return False,"SEQ"
+ 1136: 
+ 1137:     plus = parse_node_pairs(
+ 1138:         obj["plus"],
+ 1139:         V
+ 1140:     )
+ 1141: 
+ 1142:     if (
+ 1143:         len(obj["plus"]) != 2
+ 1144:         or
+ 1145:         len(plus) != 2
+ 1146:         or
+ 1147:         len(set(plus)) != 2
+ 1148:         or
+ 1149:         any(
+ 1150:             x in active_edges
+ 1151:             for x in plus
+ 1152:         )
+ 1153:     ):
+ 1154:         return False,"PLUS"
+ 1155: 
+ 1156:     if obj["minus"] not in ids:
+ 1157:         return False,"MINUS"
+ 1158: 
+ 1159:     keep = obj["keep"]
+ 1160: 
+ 1161:     if (
+ 1162:         not isinstance(keep,list)
+ 1163:         or
+ 1164:         len(keep) != 2
+ 1165:         or
+ 1166:         len(set(keep)) != 2
+ 1167:         or
+ 1168:         any(
+ 1169:             x not in V
+ 1170:             for x in keep
+ 1171:         )
+ 1172:     ):
+ 1173:         return False,"KEEP"
+ 1174: 
+ 1175:     sw = obj["switch"]
+ 1176: 
+ 1177:     if sw != []:
+ 1178:         if (
+ 1179:             not isinstance(sw,list)
+ 1180:             or
+ 1181:             len(sw) != 4
+ 1182:             or
+ 1183:             any(
+ 1184:                 x not in V
+ 1185:                 for x in sw
+ 1186:             )
+ 1187:         ):
+ 1188:             return False,"SWITCH"
+ 1189: 
+ 1190:     if obj["end"] not in V:
+ 1191:         return False,"END"
+ 1192: 
+ 1193:     code = obj["code"]
+ 1194: 
+ 1195:     if (
+ 1196:         not isinstance(code,list)
+ 1197:         or
+ 1198:         len(code) != 4
+ 1199:         or
+ 1200:         len(set(code)) != 4
+ 1201:         or
+ 1202:         any(
+ 1203:             x not in ids
+ 1204:             for x in code
+ 1205:         )
+ 1206:     ):
+ 1207:         return False,"CODE"
+ 1208: 
+ 1209:     return True,"OK"
+ 1210: 
+ 1211: 
+ 1212: @lru_cache(maxsize=1)
+
+
+CALL_API
+========
+
+ 1400: def call_api(prompt,payload):
+ 1401:     client = get_client()
+ 1402:     failures = []
+ 1403: 
+ 1404:     for attempt in range(1,MAX_RETRIES+1):
+ 1405:         started = time.time()
+ 1406: 
+ 1407:         try:
+ 1408:             response = api_create(
+ 1409:                 client,
+ 1410:                 prompt,
+ 1411:                 _main_json_schema()
+ 1412:             )
+ 1413: 
+ 1414:             text = extract_text(
+ 1415:                 response
+ 1416:             )
+ 1417: 
+ 1418:             parsed = parse_json_object(
+ 1419:                 text
+ 1420:             )
+ 1421: 
+ 1422:             valid,reason = validate_output(
+ 1423:                 parsed,
+ 1424:                 payload
+ 1425:             )
+ 1426: 
+ 1427:             if not valid:
+ 1428:                 raise RuntimeError(
+ 1429:                     "INVALID_"
+ 1430:                     +
+ 1431:                     reason
+ 1432:                 )
+ 1433: 
+ 1434:             usage = getattr(
+ 1435:                 response,
+ 1436:                 "usage",
+ 1437:                 None
+ 1438:             )
+ 1439: 
+ 1440:             raw = (
+ 1441:                 response.model_dump(
+ 1442:                     mode="json"
+ 1443:                 )
+ 1444:                 if hasattr(
+ 1445:                     response,
+ 1446:                     "model_dump"
+ 1447:                 )
+ 1448:                 else
+ 1449:                 {
+ 1450:                     "repr":
+ 1451:                         repr(response)
+ 1452:                 }
+ 1453:             )
+ 1454: 
+ 1455:             return {
+ 1456:                 "ok":
+ 1457:                     True,
+ 1458: 
+ 1459:                 "attempt":
+ 1460:                     attempt,
+ 1461: 
+ 1462:                 "attempt_failures":
+ 1463:                     failures,
+ 1464: 
+ 1465:                 "latency":
+ 1466:                     time.time()-started,
+ 1467: 
+ 1468:                 "text":
+ 1469:                     text,
+ 1470: 
+ 1471:                 "parsed":
+ 1472:                     parsed,
+ 1473: 
+ 1474:                 "response_id":
+ 1475:                     getattr(
+ 1476:                         response,
+ 1477:                         "id",
+ 1478:                         None
+ 1479:                     ),
+ 1480: 
+ 1481:                 "response_status":
+ 1482:                     getattr(
+ 1483:                         response,
+ 1484:                         "status",
+ 1485:                         None
+ 1486:                     ),
+ 1487: 
+ 1488:                 "input_tokens":
+ 1489:                     int(
+ 1490:                         getattr(
+ 1491:                             usage,
+ 1492:                             "input_tokens",
+ 1493:                             0
+ 1494:                         )
+ 1495:                         or 0
+ 1496:                     )
+ 1497:                     if usage
+ 1498:                     else 0,
+ 1499: 
+ 1500:                 "output_tokens":
+ 1501:                     int(
+ 1502:                         getattr(
+ 1503:                             usage,
+ 1504:                             "output_tokens",
+ 1505:                             0
+ 1506:                         )
+ 1507:                         or 0
+ 1508:                     )
+ 1509:                     if usage
+ 1510:                     else 0,
+ 1511: 
+ 1512:                 "raw":
+ 1513:                     raw
+ 1514:             }
+ 1515: 
+ 1516:         except Exception as e:
+ 1517:             failures.append({
+ 1518:                 "attempt":
+ 1519:                     attempt,
+ 1520: 
+ 1521:                 "type":
+ 1522:                     type(e).__name__,
+ 1523: 
+ 1524:                 "category":
+ 1525:                     classify_failure(e),
+ 1526: 
+ 1527:                 "error":
+ 1528:                     str(e),
+ 1529: 
+ 1530:                 "utc":
+ 1531:                     utcnow()
+ 1532:             })
+ 1533: 
+ 1534:             time.sleep(
+ 1535:                 min(
+ 1536:                     2**(attempt-1),
+ 1537:                     8
+ 1538:                 )
+ 1539:             )
+ 1540: 
+ 1541:     return {
+ 1542:         "ok":
+ 1543:             False,
+ 1544: 
+ 1545:         "failures":
+ 1546:             failures
+ 1547:     }
+ 1548: 
+ 1549: 
+
+
+MAIN
+====
+
+ 5088: def main():
+ 5089:     ap = argparse.ArgumentParser()
+ 5090: 
+ 5091:     ap.add_argument(
+ 5092:         "--preflight-only",
+ 5093:         action="store_true"
+ 5094:     )
+ 5095: 
+ 5096:     ap.add_argument(
+ 5097:         "--self-test",
+ 5098:         action="store_true"
+ 5099:     )
+ 5100: 
+ 5101:     ap.add_argument(
+ 5102:         "--smoke-only",
+ 5103:         action="store_true"
+ 5104:     )
+ 5105: 
+ 5106:     ap.add_argument(
+ 5107:         "--analysis-only",
+ 5108:         action="store_true"
+ 5109:     )
+ 5110: 
+ 5111:     args = ap.parse_args()
+ 5112: 
+ 5113:     OUT.mkdir(
+ 5114:         parents=True,
+ 5115:         exist_ok=True
+ 5116:     )
+ 5117: 
+ 5118:     if args.preflight_only:
+ 5119:         print(
+ 5120:             "WF1-A V12-R zero-cost preflight starting...",
+ 5121:             flush=True
+ 5122:         )
+ 5123: 
+ 5124:         verify_sources()
+ 5125:         snapshot_v11_sources()
+ 5126: 
+ 5127:         preflight(
+ 5128:             write_files=True
+ 5129:         )
+ 5130: 
+ 5131:         freeze_run_metadata()
+ 5132: 
+ 5133:         print(
+ 5134:             f"WF1-A PRE-FLIGHT PASS "
+ 5135:             f"main_conditions={len(CONDITIONS)} "
+ 5136:             f"main_cells={EXPECTED_MAIN_CELLS} "
+ 5137:             f"native_cells={EXPECTED_NATIVE_CELLS}",
+ 5138:             flush=True
+ 5139:         )
+ 5140: 
+ 5141:         return
+ 5142: 
+ 5143:     if args.self_test:
+ 5144:         print(
+ 5145:             "WF1-A V12-R full downstream analysis self-test...",
+ 5146:             flush=True
+ 5147:         )
+ 5148: 
+ 5149:         preflight(
+ 5150:             write_files=False
+ 5151:         )
+ 5152: 
+ 5153:         r = self_test()
+ 5154: 
+ 5155:         print(
+ 5156:             json.dumps(
+ 5157:                 r,
+ 5158:                 indent=2
+ 5159:             ),
+ 5160:             flush=True
+ 5161:         )
+ 5162: 
+ 5163:         return
+ 5164: 
+ 5165:     freeze_run_metadata()
+ 5166:     verify_sources()
+ 5167:     snapshot_v11_sources()
+ 5168: 
+ 5169:     preflight(
+ 5170:         write_files=True
+ 5171:     )
+ 5172: 
+ 5173:     if args.analysis_only:
+ 5174:         try:
+ 5175:             s = analyze_existing()
+ 5176: 
+ 5177:             artifact_manifest()
+ 5178: 
+ 5179:             print(
+ 5180:                 json.dumps(
+ 5181:                     s,
+ 5182:                     indent=2
+ 5183:                 ),
+ 5184:                 flush=True
+ 5185:             )
+ 5186: 
+ 5187:             return
+ 5188: 
+ 5189:         except Exception as e:
+ 5190:             (
+ 5191:                 OUT
+ 5192:                 /
+ 5193:                 "18_ANALYSIS_ERROR.json"
+ 5194:             ).write_text(
+ 5195:                 json.dumps({
+ 5196:                     "utc":
+ 5197:                         utcnow(),
+ 5198: 
+ 5199:                     "type":
+ 5200:                         type(e).__name__,
+ 5201: 
+ 5202:                     "error":
+ 5203:                         str(e),
+ 5204: 
+ 5205:                     "traceback":
+ 5206:                         traceback.format_exc()
+ 5207:                 },
+ 5208:                 indent=2),
+ 5209:                 encoding="utf-8"
+ 5210:             )
+ 5211: 
+ 5212:             raise
+ 5213: 
+ 5214:     if not os.getenv(
+ 5215:         "OPENAI_API_KEY"
+ 5216:     ):
+ 5217:         raise RuntimeError(
+ 5218:             "OPENAI_API_KEY missing"
+ 5219:         )
+ 5220: 
+ 5221:     prompt_cache,payload_cache,meta_cache = build_caches()
+ 5222: 
+ 5223:     if args.smoke_only:
+ 5224:         p,pl,_ = build_prompt(
+ 5225:             999999,
+ 5226:             "A_AUTHENTIC"
+ 5227:         )
+ 5228: 
+ 5229:         r = call_api(
+ 5230:             p,
+ 5231:             pl
+ 5232:         )
+ 5233: 
+ 5234:         (
+ 5235:             OUT
+ 5236:             /
+ 5237:             "00B_SMOKE_TEST.json"
+ 5238:         ).write_text(
+ 5239:             json.dumps(
+ 5240:                 r,
+ 5241:                 indent=2,
+ 5242:                 default=str
+ 5243:             ),
+ 5244:             encoding="utf-8"
+ 5245:         )
+ 5246: 
+ 5247:         if not r["ok"]:
+ 5248:             raise RuntimeError(
+ 5249:                 "main smoke test failed"
+ 5250:             )
+ 5251: 
+ 5252:         nr = call_native(
+ 5253:             999999,
+ 5254:             "N1_COHERENT"
+ 5255:         )
+ 5256: 
+ 5257:         (
+ 5258:             OUT
+ 5259:             /
+ 5260:             "00C_NATIVE_SMOKE_TEST.json"
+ 5261:         ).write_text(
+ 5262:             json.dumps(
+ 5263:                 nr,
+ 5264:                 indent=2,
+ 5265:                 default=str
+ 5266:             ),
+ 5267:             encoding="utf-8"
+ 5268:         )
+ 5269: 
+ 5270:         if not nr["ok"]:
+ 5271:             raise RuntimeError(
+ 5272:                 "native smoke test failed"
+ 5273:             )
+ 5274: 
+ 5275:         print(
+ 5276:             "SMOKE PASS",
+ 5277:             flush=True
+ 5278:         )
+ 5279: 
+ 5280:         return
+ 5281: 
+ 5282:     raw = OUT/"01_RAW_RESPONSES.jsonl"
+ 5283:     err = OUT/"02_ERRORS.jsonl"
+ 5284:     api = OUT/"17_RAW_API_OBJECTS.jsonl.gz"
+ 5285: 
+ 5286:     successful = load_unique(raw)
+ 5287: 
+ 5288:     print(
+ 5289:         f"Existing main cells: {len(successful)}/{EXPECTED_MAIN_CELLS}",
+ 5290:         flush=True
+ 5291:     )
+ 5292: 
+ 5293:     with (
+ 5294:         raw.open(
+ 5295:             "a",
+ 5296:             encoding="utf-8"
+ 5297:         ) as rf,
+ 5298:         err.open(
+ 5299:             "a",
+ 5300:             encoding="utf-8"
+ 5301:         ) as ef,
+ 5302:         gzip.open(
+ 5303:             api,
+ 5304:             "at",
+ 5305:             encoding="utf-8"
+ 5306:         ) as af
+ 5307:     ):
+ 5308:         for seed in SEED_IDS:
+ 5309:             for c in CONDITIONS:
+ 5310:                 for rep in range(N_REPS):
+ 5311:                     key = f"{seed}|{c}|{rep}"
+ 5312: 
+ 5313:                     if key in successful:
+ 5314:                         continue
+ 5315: 
+ 5316:                     r = call_api(
+ 5317:                         prompt_cache[
+ 5318:                             (
+ 5319:                                 seed,
+ 5320:                                 c
+ 5321:                             )
+ 5322:                         ],
+ 5323:                         payload_cache[
+ 5324:                             (
+ 5325:                                 seed,
+ 5326:                                 c
+ 5327:                             )
+ 5328:                         ]
+ 5329:                     )
+ 5330: 
+ 5331:                     if not r["ok"]:
+ 5332:                         ef.write(
+ 5333:                             json.dumps({
+ 5334:                                 "cell_key":
+ 5335:                                     key,
+ 5336: 
+ 5337:                                 "seed":
+ 5338:                                     seed,
+ 5339: 
+ 5340:                                 "condition":
+ 5341:                                     c,
+ 5342: 
+ 5343:                                 "rep":
+ 5344:                                     rep,
+ 5345: 
+ 5346:                                 "failures":
+ 5347:                                     r["failures"]
+ 5348:                             })
+ 5349:                             +
+ 5350:                             "\n"
+ 5351:                         )
+ 5352: 
+ 5353:                         ef.flush()
+ 5354: 
+ 5355:                         continue
+ 5356: 
+ 5357:                     af.write(
+ 5358:                         json.dumps({
+ 5359:                             "cell_key":
+ 5360:                                 key,
+ 5361: 
+ 5362:                             "raw_response":
+ 5363:                                 r["raw"],
+ 5364: 
+ 5365:                             "attempt_failures":
+ 5366:                                 r["attempt_failures"]
+ 5367:                         },
+ 5368:                         ensure_ascii=False)
+ 5369:                         +
+ 5370:                         "\n"
+ 5371:                     )
+ 5372: 
+ 5373:                     af.flush()
+ 5374: 
+ 5375:                     rec = {
+ 5376:                         "cell_key":
+ 5377:                             key,
+ 5378: 
+ 5379:                         "seed":
+ 5380:                             seed,
+ 5381: 
+ 5382:                         "condition":
+ 5383:                             c,
+ 5384: 
+ 5385:                         "rep":
+ 5386:                             rep,
+ 5387: 
+ 5388:                         "status":
+ 5389:                             "success",
+ 5390: 
+ 5391:                         "attempt":
+ 5392:                             r["attempt"],
+ 5393: 
+ 5394:                         "attempt_failures":
+ 5395:                             r["attempt_failures"],
+ 5396: 
+ 5397:                         "utc":
+ 5398:                             utcnow(),
+ 5399: 
+ 5400:                         "prompt_sha256":
+ 5401:                             sha256_text(
+ 5402:                                 prompt_cache[
+ 5403:                                     (
+ 5404:                                         seed,
+ 5405:                                         c
+ 5406:                                     )
+ 5407:                                 ]
+ 5408:                             ),
+ 5409: 
+ 5410:                         "text_sha256":
+ 5411:                             sha256_text(
+ 5412:                                 r["text"]
+ 5413:                             ),
+ 5414: 
+ 5415:                         "text":
+ 5416:                             r["text"],
+ 5417: 
+ 5418:                         "parsed":
+ 5419:                             r["parsed"],
+ 5420: 
+ 5421:                         "response_id":
+ 5422:                             r["response_id"],
+ 5423: 
+ 5424:                         "response_status":
+ 5425:                             r["response_status"],
+ 5426: 
+ 5427:                         "latency_seconds":
+ 5428:                             r["latency"],
+ 5429: 
+ 5430:                         "input_tokens":
+ 5431:                             r["input_tokens"],
+ 5432: 
+ 5433:                         "output_tokens":
+ 5434:                             r["output_tokens"]
+ 5435:                     }
+ 5436: 
+ 5437:                     rf.write(
+ 5438:                         json.dumps(
+ 5439:                             rec,
+ 5440:                             ensure_ascii=False
+ 5441:                         )
+ 5442:                         +
+ 5443:                         "\n"
+ 5444:                     )
+ 5445: 
+ 5446:                     rf.flush()
+ 5447: 
+ 5448:                     successful[key] = rec
+ 5449: 
+ 5450:                     if len(successful)%25 == 0:
+ 5451:                         print(
+ 5452:                             f"Main API progress: "
+ 5453:                             f"{len(successful)}/{EXPECTED_MAIN_CELLS}",
+ 5454:                             flush=True
+ 5455:                         )
+ 5456: 
+ 5457:     expected = {
+ 5458:         f"{s}|{c}|{r}"
+ 5459:         for s in SEED_IDS
+ 5460:         for c in CONDITIONS
+ 5461:         for r in range(N_REPS)
+ 5462:     }
+ 5463: 
+ 5464:     missing = sorted(
+ 5465:         expected
+ 5466:         -
+ 5467:         set(successful)
+ 5468:     )
+ 5469: 
+ 5470:     pd.DataFrame({
+ 5471:         "CELL_KEY":
+ 5472:             missing
+ 5473:     }).to_csv(
+ 5474:         OUT
+ 5475:         /
+ 5476:         "15_MISSING_CELLS.csv",
+ 5477:         index=False
+ 5478:     )
+ 5479: 
+ 5480:     nraw = OUT/"26_NATIVE_RAW.jsonl"
+ 5481:     nerr = OUT/"26_NATIVE_ERRORS.jsonl"
+ 5482:     napi = OUT/"26_NATIVE_RAW_API_OBJECTS.jsonl.gz"
+ 5483: 
+ 5484:     nsuccess = load_unique(nraw)
+ 5485: 
+ 5486:     print(
+ 5487:         f"Existing native cells: "
+ 5488:         f"{len(nsuccess)}/{EXPECTED_NATIVE_CELLS}",
+ 5489:         flush=True
+ 5490:     )
+ 5491: 
+ 5492:     with (
+ 5493:         nraw.open(
+ 5494:             "a",
+ 5495:             encoding="utf-8"
+ 5496:         ) as rf,
+ 5497:         nerr.open(
+ 5498:             "a",
+ 5499:             encoding="utf-8"
+ 5500:         ) as ef,
+ 5501:         gzip.open(
+ 5502:             napi,
+ 5503:             "at",
+ 5504:             encoding="utf-8"
+ 5505:         ) as af
+ 5506:     ):
+ 5507:         for seed in SEED_IDS:
+ 5508:             for frame in NATIVE_FRAMES:
+ 5509:                 for rep in range(N_REPS):
+ 5510:                     key = f"{seed}|{frame}|{rep}"
+ 5511: 
+ 5512:                     if key in nsuccess:
+ 5513:                         continue
+ 5514: 
+ 5515:                     r = call_native(
+ 5516:                         seed,
+ 5517:                         frame
+ 5518:                     )
+ 5519: 
+ 5520:                     if not r["ok"]:
+ 5521:                         ef.write(
+ 5522:                             json.dumps({
+ 5523:                                 "cell_key":
+ 5524:                                     key,
+ 5525: 
+ 5526:                                 "seed":
+ 5527:                                     seed,
+ 5528: 
+ 5529:                                 "frame":
+ 5530:                                     frame,
+ 5531: 
+ 5532:                                 "rep":
+ 5533:                                     rep,
+ 5534: 
+ 5535:                                 "failures":
+ 5536:                                     r["failures"]
+ 5537:                             })
+ 5538:                             +
+ 5539:                             "\n"
+ 5540:                         )
+ 5541: 
+ 5542:                         ef.flush()
+ 5543: 
+ 5544:                         continue
+ 5545: 
+ 5546:                     af.write(
+ 5547:                         json.dumps({
+ 5548:                             "cell_key":
+ 5549:                                 key,
+ 5550: 
+ 5551:                             "raw_response":
+ 5552:                                 r["raw"],
+ 5553: 
+ 5554:                             "attempt_failures":
+ 5555:                                 r["attempt_failures"]
+ 5556:                         },
+ 5557:                         ensure_ascii=False)
+ 5558:                         +
+ 5559:                         "\n"
+ 5560:                     )
+ 5561: 
+ 5562:                     af.flush()
+ 5563: 
+ 5564:                     rec = {
+ 5565:                         "cell_key":
+ 5566:                             key,
+ 5567: 
+ 5568:                         "seed":
+ 5569:                             seed,
+ 5570: 
+ 5571:                         "frame":
+ 5572:                             frame,
+ 5573: 
+ 5574:                         "rep":
+ 5575:                             rep,
+ 5576: 
+ 5577:                         "status":
+ 5578:                             "success",
+ 5579: 
+ 5580:                         "attempt":
+ 5581:                             r["attempt"],
+ 5582: 
+ 5583:                         "attempt_failures":
+ 5584:                             r["attempt_failures"],
+ 5585: 
+ 5586:                         "utc":
+ 5587:                             utcnow(),
+ 5588: 
+ 5589:                         "prompt_sha256":
+ 5590:                             sha256_text(
+ 5591:                                 r["prompt"]
+ 5592:                             ),
+ 5593: 
+ 5594:                         "text_sha256":
+ 5595:                             sha256_text(
+ 5596:                                 r["text"]
+ 5597:                             ),
+ 5598: 
+ 5599:                         "text":
+ 5600:                             r["text"],
+ 5601: 
+ 5602:                         "parsed":
+ 5603:                             r["parsed"],
+ 5604: 
+ 5605:                         "labels":
+ 5606:                             r["labels"],
+ 5607: 
+ 5608:                         "latency_seconds":
+ 5609:                             r["latency"],
+ 5610: 
+ 5611:                         "input_tokens":
+ 5612:                             r["input_tokens"],
+ 5613: 
+ 5614:                         "output_tokens":
+ 5615:                             r["output_tokens"]
+ 5616:                     }
+ 5617: 
+ 5618:                     rf.write(
+ 5619:                         json.dumps(
+ 5620:                             rec,
+ 5621:                             ensure_ascii=False
+ 5622:                         )
+ 5623:                         +
+ 5624:                         "\n"
+ 5625:                     )
+ 5626: 
+ 5627:                     rf.flush()
+ 5628: 
+ 5629:                     nsuccess[key] = rec
+ 5630: 
+ 5631:                     if len(nsuccess)%25 == 0:
+ 5632:                         print(
+ 5633:                             f"Native API progress: "
+ 5634:                             f"{len(nsuccess)}/{EXPECTED_NATIVE_CELLS}",
+ 5635:                             flush=True
+ 5636:                         )
+ 5637: 
+ 5638:     nexpected = {
+ 5639:         f"{s}|{f}|{r}"
+ 5640:         for s in SEED_IDS
+ 5641:         for f in NATIVE_FRAMES
+ 5642:         for r in range(N_REPS)
+ 5643:     }
+ 5644: 
+ 5645:     nmissing = sorted(
+ 5646:         nexpected
+ 5647:         -
+ 5648:         set(nsuccess)
+ 5649:     )
+ 5650: 
+ 5651:     pd.DataFrame({
+ 5652:         "CELL_KEY":
+ 5653:             nmissing
+ 5654:     }).to_csv(
+ 5655:         OUT
+ 5656:         /
+ 5657:         "26_NATIVE_MISSING_CELLS.csv",
+ 5658:         index=False
+ 5659:     )
+ 5660: 
+ 5661:     completeness = {
+ 5662:         "expected_main_cells":
+ 5663:             EXPECTED_MAIN_CELLS,
+ 5664: 
+ 5665:         "successful_main_cells":
+ 5666:             len(successful),
+ 5667: 
+ 5668:         "missing_main_cells":
+ 5669:             len(missing),
+ 5670: 
+ 5671:         "expected_native_cells":
+ 5672:             EXPECTED_NATIVE_CELLS,
+ 5673: 
+ 5674:         "successful_native_cells":
+ 5675:             len(nsuccess),
+ 5676: 
+ 5677:         "missing_native_cells":
+ 5678:             len(nmissing),
+ 5679: 
+ 5680:         "scientific_completeness":
+ 5681:             not missing
+ 5682:             and
+ 5683:             not nmissing
+ 5684:     }
+ 5685: 
+ 5686:     (
+ 5687:         OUT
+ 5688:         /
+ 5689:         "00A_VALID_TEXT_COMPLETENESS.json"
+ 5690:     ).write_text(
+ 5691:         json.dumps(
+ 5692:             completeness,
+ 5693:             indent=2
+ 5694:         ),
+ 5695:         encoding="utf-8"
+ 5696:     )
+ 5697: 
+ 5698:     if missing or nmissing:
+ 5699:         raise RuntimeError(
+ 5700:             f"INCOMPLETE "
+ 5701:             f"main_missing={len(missing)} "
+ 5702:             f"native_missing={len(nmissing)}. "
+ 5703:             "Rerun exact frozen runner."
+ 5704:         )
+ 5705: 
+ 5706:     try:
+ 5707:         print(
+ 5708:             "Completeness gate passed. "
+ 5709:             "Running frozen analysis...",
+ 5710:             flush=True
+ 5711:         )
+ 5712: 
+ 5713:         summary = run_analysis(
+ 5714:             successful,
+ 5715:             meta_cache,
+ 5716:             payload_cache,
+ 5717:             nsuccess
+ 5718:         )
+ 5719: 
+ 5720:         env = {
+ 5721:             "python":
+ 5722:                 sys.version,
+ 5723: 
+ 5724:             "platform":
+ 5725:                 platform.platform(),
+ 5726: 
+ 5727:             "openai":
+ 5728:                 getattr(
+ 5729:                     openai,
+ 5730:                     "__version__",
+ 5731:                     None
+ 5732:                 ),
+ 5733: 
+ 5734:             "numpy":
+ 5735:                 np.__version__,
+ 5736: 
+ 5737:             "pandas":
+ 5738:                 pd.__version__,
+ 5739: 
+ 5740:             "networkx":
+ 5741:                 nx.__version__
+ 5742:         }
+ 5743: 
+ 5744:         (
+ 5745:             OUT
+ 5746:             /
+ 5747:             "20_RUN_ENVIRONMENT.json"
+ 5748:         ).write_text(
+ 5749:             json.dumps(
+ 5750:                 env,
+ 5751:                 indent=2
+ 5752:             ),
+ 5753:             encoding="utf-8"
+ 5754:         )
+ 5755: 
+ 5756:         artifact_manifest()
+ 5757: 
+ 5758:         print(
+ 5759:             json.dumps(
+ 5760:                 summary,
+ 5761:                 indent=2
+ 5762:             ),
+ 5763:             flush=True
+ 5764:         )
+ 5765: 
+ 5766:         print(
+ 5767:             "RESULTS:",
+ 5768:             OUT,
+ 5769:             flush=True
+ 5770:         )
+ 5771: 
+ 5772:     except Exception as e:
+ 5773:         (
+ 5774:             OUT
+ 5775:             /
+ 5776:             "18_ANALYSIS_ERROR.json"
+ 5777:         ).write_text(
+ 5778:             json.dumps({
+ 5779:                 "utc":
+ 5780:                     utcnow(),
+ 5781: 
+ 5782:                 "type":
+ 5783:                     type(e).__name__,
+ 5784: 
+ 5785:                 "category":
+ 5786:                     classify_failure(e),
+ 5787: 
+ 5788:                 "error":
+ 5789:                     str(e),
+ 5790: 
+ 5791:                 "traceback":
+ 5792:                     traceback.format_exc()
+ 5793:             },
+ 5794:             indent=2),
+ 5795:             encoding="utf-8"
+ 5796:         )
+ 5797: 
+ 5798:         raise
+ 5799: 
+ 5800: 
+ 5801: if __name__=="__main__":
+ 5802:     main()
+ 5803: 
+
+
+PLUS CONTEXT
+============
+
+
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:69:    "E7_REVERSE",
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:70:    "E9_REVERSE",
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:71:}
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:72:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:73:NATIVE_FRAMES = {
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:74:    "N1_COHERENT": "Choose a coherent nontrivial directed dependency stru
+cture among the supplied opaque nodes.",
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:75:    "N2_STABLE": "Choose a stable internally consistent directed relation
+al structure among the supplied opaque nodes.",
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:76:    "N3_COMPACT": "Choose a compact nontrivial directed interaction struc
+ture among the supplied opaque nodes."
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:77:}
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:78:EXPECTED_NATIVE_CELLS = len(SEED_IDS) * N_REPS * len(NATIVE_FRAMES)
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:79:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:80:BEHAVIOR_FEATURES = [
+> C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:81:    "SEQ_ACTIVE_EDGE_COHERENCE","PLUS_SEQ_COHERENCE","PLUS_REACHABILITY",
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:82:    "MINUS_SEQ_CONFLICT","CODE_SEQ_COHERENCE","CODE_CONNECTEDNESS",
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:83:    "FINAL_RECIPROCITY","FINAL_SCC_COUNT","FINAL_LARGEST_SCC_FRAC",
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:84:    "FINAL_TRANSITIVITY","FINAL_IN_DEGREE_SD","FINAL_OUT_DEGREE_SD",
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:85:    "FINAL_SPECTRAL_RADIUS","FINAL_TWO_CYCLES","FINAL_THREE_CYCLES",
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:86:    "FINAL_REACHABILITY_FRAC","FINAL_MEAN_REACHABLE_PATH"
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:87:]
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:88:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:89:DIRECT_OPERATOR_FEATURES = [
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:90:    "ORDER_FIDELITY","K_EXACT","K_JACCARD","S_EXACT","S_APPLIED_SCORE",
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:91:    "K_INCIDENT_RETENTION","Z_EXACT","Z_FINAL_SINKNESS","Z_SEQUENCE_POSIT
+ION"
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:92:]
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:93:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:94:PRIMARY_TESTS = [
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:95:    "EDGE_DELETE_PURE9","EDGE_REVERSE_PURE8","DIRECTION_ALL_COVARIANT_SWI
+TCH","ORDER",
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:96:    "META_REASSIGNED","PRESERVATION","TERMINAL",
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:97:    "DEGREE_MATCHED","COMPLEXITY_MATCHED","TOPOLOGY_MATCHED"
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:98:]
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:99:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:100:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:101:def utcnow():
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1093:            x[0] != x[1]
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1094:        ):
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1095:            out.append(
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1096:                (x[0],x[1])
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1097:            )
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1098:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1099:    return out
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1100:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1101:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1102:def validate_output(obj,payload):
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1103:    req = {
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1104:        "seq",
+> C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1105:        "plus",
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1106:        "minus",
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1107:        "keep",
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1108:        "switch",
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1109:        "end",
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1110:        "code"
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1111:    }
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1112:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1113:    if (
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1114:        not isinstance(obj,dict)
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1115:        or
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1116:        set(obj.keys()) != req
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1117:    ):
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1118:        return False,"KEYS"
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1119:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1120:    V = set(payload["V"])
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1121:    active_edges = active_label_edges(payload)
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1122:    ids = active_edge_ids(payload)
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1123:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1124:    seq = obj["seq"]
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1125:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1126:    if (
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1127:        not isinstance(seq,list)
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1128:        or
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1129:        len(seq) != 8
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1130:        or
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1131:        len(set(seq)) != 8
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1132:        or
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1133:        set(seq) != V
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1134:    ):
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1135:        return False,"SEQ"
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1136:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1137:    plus = parse_node_pairs(
+> C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1138:        obj["plus"],
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1139:        V
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1140:    )
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1141:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1142:    if (
+> C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1143:        len(obj["plus"]) != 2
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1144:        or
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1145:        len(plus) != 2
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1146:        or
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1147:        len(set(plus)) != 2
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1148:        or
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1149:        any(
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1150:            x in active_edges
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1151:            for x in plus
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1152:        )
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1153:    ):
+> C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1154:        return False,"PLUS"
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1155:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1156:    if obj["minus"] not in ids:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1157:        return False,"MINUS"
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1158:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1159:    keep = obj["keep"]
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1160:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1161:    if (
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1162:        not isinstance(keep,list)
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1163:        or
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1164:        len(keep) != 2
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1165:        or
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1166:        len(set(keep)) != 2
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1167:        or
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1168:        any(
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1169:            x not in V
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1170:            for x in keep
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1171:        )
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1172:    ):
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1173:        return False,"KEEP"
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1174:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1244:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1245:            "properties": {
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1246:                "seq": {
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1247:                    "type":
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1248:                        "array",
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1249:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1250:                    "items": {
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1251:                        "type":
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1252:                            "string"
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1253:                    }
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1254:                },
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1255:
+> C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1256:                "plus": {
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1257:                    "type":
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1258:                        "array",
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1259:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1260:                    "items": {
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1261:                        "type":
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1262:                            "array",
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1263:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1264:                        "items": {
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1265:                            "type":
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1266:                                "string"
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1267:                        }
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1268:                    }
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1269:                },
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1270:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1271:                "minus": {
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1272:                    "type":
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1273:                        "string"
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1274:                },
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1275:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1276:                "keep": {
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1302:                    "type":
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1303:                        "array",
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1304:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1305:                    "items": {
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1306:                        "type":
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1307:                            "string"
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1308:                    }
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1309:                }
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1310:            },
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1311:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1312:            "required": [
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1313:                "seq",
+> C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1314:                "plus",
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1315:                "minus",
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1316:                "keep",
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1317:                "switch",
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1318:                "end",
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1319:                "code"
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1320:            ],
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1321:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1322:            "additionalProperties":
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1323:                False
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1324:        }
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1325:    }
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1326:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1327:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1328:def _native_json_schema():
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1329:    return {
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1330:        "type":
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1331:            "json_schema",
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1332:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1333:        "name":
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1334:            "wf1a_v12r_native_graph",
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1627:    seq = [
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1628:        l2r[x]
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1629:        for x in parsed["seq"]
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1630:    ]
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1631:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1632:    plus = {
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1633:        (
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1634:            l2r[a],
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1635:            l2r[b]
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1636:        )
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1637:        for a,b
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1638:        in parse_node_pairs(
+> C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1639:            parsed["plus"],
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1640:            set(payload["V"])
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1641:        )
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1642:    }
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1643:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1644:    minus_id = parsed["minus"]
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1645:    minus_edge = active[minus_id]
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1646:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1647:    keep = [
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1648:        l2r[x]
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1649:        for x in parsed["keep"]
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1650:    ]
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1651:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1652:    end = l2r[
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1653:        parsed["end"]
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1654:    ]
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1655:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1656:    code_edges = {
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1657:        active[eid]
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1658:        for eid
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1659:        in parsed["code"]
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1867:        "SEED":
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1868:            seed,
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1869:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1870:        "CONDITION":
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1871:            condition,
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1872:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1873:        "SEQ_ACTIVE_EDGE_COHERENCE":
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1874:            edge_seq_coherence(
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1875:                active_edges,
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1876:                seq
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1877:            ),
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1878:
+> C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1879:        "PLUS_SEQ_COHERENCE":
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1880:            edge_seq_coherence(
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1881:                plus,
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1882:                seq
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1883:            ),
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1884:
+> C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1885:        "PLUS_REACHABILITY":
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1886:            float(np.mean(reach))
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1887:            if reach
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1888:            else 0.0,
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1889:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1890:        "MINUS_SEQ_CONFLICT":
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1891:            1.0
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1892:            -
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1893:            edge_seq_coherence(
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1894:                {
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1895:                    minus_edge
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1896:                },
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1897:                seq
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1898:            ),
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1899:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1900:        "CODE_SEQ_COHERENCE":
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1901:            edge_seq_coherence(
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1902:                code_edges,
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1903:                seq
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1904:            ),
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:1905:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:4657:        and
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:4658:        snew not in active_pairs
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:4659:        and
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:4660:        sold != snew
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:4661:    )
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:4662:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:4663:    return {
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:4664:        "seq":
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:4665:            list(
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:4666:                payload["Q"]
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:4667:            ),
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:4668:
+> C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:4669:        "plus":
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:4670:            [
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:4671:                list(x)
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:4672:                for x in plus
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:4673:            ],
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:4674:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:4675:        "minus":
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:4676:            active[0]["id"],
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:4677:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:4678:        "keep":
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:4679:            list(
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:4680:                payload["K"]
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:4681:            ),
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:4682:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:4683:        "switch":
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:4684:            list(S)
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:4685:            if valid
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:4686:            else [],
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:4687:
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:4688:        "end":
+  C:\RSOS\RSOS_EXPERIMENTS_WF1_A_V12_R_CORRECTIVE_CAUSAL_TOPOLOGY\RUNNER\RUN_WF1_A_V12_R_CORRECTIVE
+_CAUSAL_TOPOLOGY_R1.py:4689:            payload["Z"],
+
+
+
+
+
+FINAL RUNNER SECTION
+====================
+
+ 5454:                             flush=True
+ 5455:                         )
+ 5456: 
+ 5457:     expected = {
+ 5458:         f"{s}|{c}|{r}"
+ 5459:         for s in SEED_IDS
+ 5460:         for c in CONDITIONS
+ 5461:         for r in range(N_REPS)
+ 5462:     }
+ 5463: 
+ 5464:     missing = sorted(
+ 5465:         expected
+ 5466:         -
+ 5467:         set(successful)
+ 5468:     )
+ 5469: 
+ 5470:     pd.DataFrame({
+ 5471:         "CELL_KEY":
+ 5472:             missing
+ 5473:     }).to_csv(
+ 5474:         OUT
+ 5475:         /
+ 5476:         "15_MISSING_CELLS.csv",
+ 5477:         index=False
+ 5478:     )
+ 5479: 
+ 5480:     nraw = OUT/"26_NATIVE_RAW.jsonl"
+ 5481:     nerr = OUT/"26_NATIVE_ERRORS.jsonl"
+ 5482:     napi = OUT/"26_NATIVE_RAW_API_OBJECTS.jsonl.gz"
+ 5483: 
+ 5484:     nsuccess = load_unique(nraw)
+ 5485: 
+ 5486:     print(
+ 5487:         f"Existing native cells: "
+ 5488:         f"{len(nsuccess)}/{EXPECTED_NATIVE_CELLS}",
+ 5489:         flush=True
+ 5490:     )
+ 5491: 
+ 5492:     with (
+ 5493:         nraw.open(
+ 5494:             "a",
+ 5495:             encoding="utf-8"
+ 5496:         ) as rf,
+ 5497:         nerr.open(
+ 5498:             "a",
+ 5499:             encoding="utf-8"
+ 5500:         ) as ef,
+ 5501:         gzip.open(
+ 5502:             napi,
+ 5503:             "at",
+ 5504:             encoding="utf-8"
+ 5505:         ) as af
+ 5506:     ):
+ 5507:         for seed in SEED_IDS:
+ 5508:             for frame in NATIVE_FRAMES:
+ 5509:                 for rep in range(N_REPS):
+ 5510:                     key = f"{seed}|{frame}|{rep}"
+ 5511: 
+ 5512:                     if key in nsuccess:
+ 5513:                         continue
+ 5514: 
+ 5515:                     r = call_native(
+ 5516:                         seed,
+ 5517:                         frame
+ 5518:                     )
+ 5519: 
+ 5520:                     if not r["ok"]:
+ 5521:                         ef.write(
+ 5522:                             json.dumps({
+ 5523:                                 "cell_key":
+ 5524:                                     key,
+ 5525: 
+ 5526:                                 "seed":
+ 5527:                                     seed,
+ 5528: 
+ 5529:                                 "frame":
+ 5530:                                     frame,
+ 5531: 
+ 5532:                                 "rep":
+ 5533:                                     rep,
+ 5534: 
+ 5535:                                 "failures":
+ 5536:                                     r["failures"]
+ 5537:                             })
+ 5538:                             +
+ 5539:                             "\n"
+ 5540:                         )
+ 5541: 
+ 5542:                         ef.flush()
+ 5543: 
+ 5544:                         continue
+ 5545: 
+ 5546:                     af.write(
+ 5547:                         json.dumps({
+ 5548:                             "cell_key":
+ 5549:                                 key,
+ 5550: 
+ 5551:                             "raw_response":
+ 5552:                                 r["raw"],
+ 5553: 
+ 5554:                             "attempt_failures":
+ 5555:                                 r["attempt_failures"]
+ 5556:                         },
+ 5557:                         ensure_ascii=False)
+ 5558:                         +
+ 5559:                         "\n"
+ 5560:                     )
+ 5561: 
+ 5562:                     af.flush()
+ 5563: 
+ 5564:                     rec = {
+ 5565:                         "cell_key":
+ 5566:                             key,
+ 5567: 
+ 5568:                         "seed":
+ 5569:                             seed,
+ 5570: 
+ 5571:                         "frame":
+ 5572:                             frame,
+ 5573: 
+ 5574:                         "rep":
+ 5575:                             rep,
+ 5576: 
+ 5577:                         "status":
+ 5578:                             "success",
+ 5579: 
+ 5580:                         "attempt":
+ 5581:                             r["attempt"],
+ 5582: 
+ 5583:                         "attempt_failures":
+ 5584:                             r["attempt_failures"],
+ 5585: 
+ 5586:                         "utc":
+ 5587:                             utcnow(),
+ 5588: 
+ 5589:                         "prompt_sha256":
+ 5590:                             sha256_text(
+ 5591:                                 r["prompt"]
+ 5592:                             ),
+ 5593: 
+ 5594:                         "text_sha256":
+ 5595:                             sha256_text(
+ 5596:                                 r["text"]
+ 5597:                             ),
+ 5598: 
+ 5599:                         "text":
+ 5600:                             r["text"],
+ 5601: 
+ 5602:                         "parsed":
+ 5603:                             r["parsed"],
+ 5604: 
+ 5605:                         "labels":
+ 5606:                             r["labels"],
+ 5607: 
+ 5608:                         "latency_seconds":
+ 5609:                             r["latency"],
+ 5610: 
+ 5611:                         "input_tokens":
+ 5612:                             r["input_tokens"],
+ 5613: 
+ 5614:                         "output_tokens":
+ 5615:                             r["output_tokens"]
+ 5616:                     }
+ 5617: 
+ 5618:                     rf.write(
+ 5619:                         json.dumps(
+ 5620:                             rec,
+ 5621:                             ensure_ascii=False
+ 5622:                         )
+ 5623:                         +
+ 5624:                         "\n"
+ 5625:                     )
+ 5626: 
+ 5627:                     rf.flush()
+ 5628: 
+ 5629:                     nsuccess[key] = rec
+ 5630: 
+ 5631:                     if len(nsuccess)%25 == 0:
+ 5632:                         print(
+ 5633:                             f"Native API progress: "
+ 5634:                             f"{len(nsuccess)}/{EXPECTED_NATIVE_CELLS}",
+ 5635:                             flush=True
+ 5636:                         )
+ 5637: 
+ 5638:     nexpected = {
+ 5639:         f"{s}|{f}|{r}"
+ 5640:         for s in SEED_IDS
+ 5641:         for f in NATIVE_FRAMES
+ 5642:         for r in range(N_REPS)
+ 5643:     }
+ 5644: 
+ 5645:     nmissing = sorted(
+ 5646:         nexpected
+ 5647:         -
+ 5648:         set(nsuccess)
+ 5649:     )
+ 5650: 
+ 5651:     pd.DataFrame({
+ 5652:         "CELL_KEY":
+ 5653:             nmissing
+ 5654:     }).to_csv(
+ 5655:         OUT
+ 5656:         /
+ 5657:         "26_NATIVE_MISSING_CELLS.csv",
+ 5658:         index=False
+ 5659:     )
+ 5660: 
+ 5661:     completeness = {
+ 5662:         "expected_main_cells":
+ 5663:             EXPECTED_MAIN_CELLS,
+ 5664: 
+ 5665:         "successful_main_cells":
+ 5666:             len(successful),
+ 5667: 
+ 5668:         "missing_main_cells":
+ 5669:             len(missing),
+ 5670: 
+ 5671:         "expected_native_cells":
+ 5672:             EXPECTED_NATIVE_CELLS,
+ 5673: 
+ 5674:         "successful_native_cells":
+ 5675:             len(nsuccess),
+ 5676: 
+ 5677:         "missing_native_cells":
+ 5678:             len(nmissing),
+ 5679: 
+ 5680:         "scientific_completeness":
+ 5681:             not missing
+ 5682:             and
+ 5683:             not nmissing
+ 5684:     }
+ 5685: 
+ 5686:     (
+ 5687:         OUT
+ 5688:         /
+ 5689:         "00A_VALID_TEXT_COMPLETENESS.json"
+ 5690:     ).write_text(
+ 5691:         json.dumps(
+ 5692:             completeness,
+ 5693:             indent=2
+ 5694:         ),
+ 5695:         encoding="utf-8"
+ 5696:     )
+ 5697: 
+ 5698:     if missing or nmissing:
+ 5699:         raise RuntimeError(
+ 5700:             f"INCOMPLETE "
+ 5701:             f"main_missing={len(missing)} "
+ 5702:             f"native_missing={len(nmissing)}. "
+ 5703:             "Rerun exact frozen runner."
+ 5704:         )
+ 5705: 
+ 5706:     try:
+ 5707:         print(
+ 5708:             "Completeness gate passed. "
+ 5709:             "Running frozen analysis...",
+ 5710:             flush=True
+ 5711:         )
+ 5712: 
+ 5713:         summary = run_analysis(
+ 5714:             successful,
+ 5715:             meta_cache,
+ 5716:             payload_cache,
+ 5717:             nsuccess
+ 5718:         )
+ 5719: 
+ 5720:         env = {
+ 5721:             "python":
+ 5722:                 sys.version,
+ 5723: 
+ 5724:             "platform":
+ 5725:                 platform.platform(),
+ 5726: 
+ 5727:             "openai":
+ 5728:                 getattr(
+ 5729:                     openai,
+ 5730:                     "__version__",
+ 5731:                     None
+ 5732:                 ),
+ 5733: 
+ 5734:             "numpy":
+ 5735:                 np.__version__,
+ 5736: 
+ 5737:             "pandas":
+ 5738:                 pd.__version__,
+ 5739: 
+ 5740:             "networkx":
+ 5741:                 nx.__version__
+ 5742:         }
+ 5743: 
+ 5744:         (
+ 5745:             OUT
+ 5746:             /
+ 5747:             "20_RUN_ENVIRONMENT.json"
+ 5748:         ).write_text(
+ 5749:             json.dumps(
+ 5750:                 env,
+ 5751:                 indent=2
+ 5752:             ),
+ 5753:             encoding="utf-8"
+ 5754:         )
+ 5755: 
+ 5756:         artifact_manifest()
+ 5757: 
+ 5758:         print(
+ 5759:             json.dumps(
+ 5760:                 summary,
+ 5761:                 indent=2
+ 5762:             ),
+ 5763:             flush=True
+ 5764:         )
+ 5765: 
+ 5766:         print(
+ 5767:             "RESULTS:",
+ 5768:             OUT,
+ 5769:             flush=True
+ 5770:         )
+ 5771: 
+ 5772:     except Exception as e:
+ 5773:         (
+ 5774:             OUT
+ 5775:             /
+ 5776:             "18_ANALYSIS_ERROR.json"
+ 5777:         ).write_text(
+ 5778:             json.dumps({
+ 5779:                 "utc":
+ 5780:                     utcnow(),
+ 5781: 
+ 5782:                 "type":
+ 5783:                     type(e).__name__,
+ 5784: 
+ 5785:                 "category":
+ 5786:                     classify_failure(e),
+ 5787: 
+ 5788:                 "error":
+ 5789:                     str(e),
+ 5790: 
+ 5791:                 "traceback":
+ 5792:                     traceback.format_exc()
+ 5793:             },
+ 5794:             indent=2),
+ 5795:             encoding="utf-8"
+ 5796:         )
+ 5797: 
+ 5798:         raise
+ 5799: 
+ 5800: 
+ 5801: if __name__=="__main__":
+ 5802:     main()
+ 5803: 

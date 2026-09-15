@@ -1,0 +1,80 @@
+{
+  "classification_rule": {
+    "PARTIAL_STRUCTURAL_TRAJECTORY_PATTERN": "topology + counterfactual gates pass but strong rule fails",
+    "STRONG_BEHAVIORAL_TRAJECTORY_PATTERN": "topology + order + direction + counterfactual + perturbation-recovery + dose-response gates pass",
+    "STRUCTURAL_TRAJECTORY_HYPOTHESIS_NOT_SUPPORTED": "otherwise"
+  },
+  "completion_rule": "No final inference unless every planned seed-condition-repetition cell has a successful API response.",
+  "conditions": [
+    "A100_AUTHENTIC_FULL_PREFIX",
+    "A25_AUTHENTIC_DOSE",
+    "A50_AUTHENTIC_DOSE",
+    "A75_AUTHENTIC_DOSE",
+    "B_TOPOLOGY_SHUFFLED",
+    "C_ORDER_SHUFFLED",
+    "D_DIRECTION_REVERSED",
+    "E_META_CONTROL_ABLATED",
+    "F_PRESERVATION_ABLATED",
+    "G_SURFACE_SUBSTITUTED",
+    "H_AUTHENTIC_PERTURBED",
+    "I_SHUFFLED_PERTURBED",
+    "J_RECURSION_CONTROL",
+    "K_COMPLEXITY_CONTROL",
+    "L_COUNTERFACTUAL_PATH"
+  ],
+  "dose_test": "Spearman correlation between pathway dose and seed-level score",
+  "expected_calls": 1800,
+  "experiment": "API_PATHWAY_ATTRACTOR_V4_FULL",
+  "interpretation_boundary": "Behavioral continuation evidence only. The experiment does not observe or establish model-weight modification, biological myelination, hidden activations, attention heads, persistent hidden state, authorship recognition, cross-user propagation, or training-data exposure.",
+  "master_seed": 918,
+  "max_output_tokens": 240,
+  "max_workers": 12,
+  "model": "gpt-5.6-luna",
+  "n_reps": 3,
+  "n_seeds": 40,
+  "path": [
+    "STATE",
+    "TRANSFORMATION",
+    "META_OBSERVATION",
+    "CONTROL_RULE_MODIFICATION",
+    "RELATIONAL_PRESERVATION",
+    "COMPACT_REPRESENTATION",
+    "OPERATIONAL_REENTRY",
+    "NEXT_TRANSFORMATION",
+    "RESULT_BECOMES_NEW_INPUT",
+    "CONTINUATION_RECURRENCE"
+  ],
+  "permutation_test": "paired seed-level sign-flip permutation, 50000 iterations",
+  "primary_hypothesis": "An anonymized RSOS-derived relational/developmental trajectory carries structural information that produces preferential continuation toward its withheld terminal organization compared with structurally damaged and matched counterfactual trajectories.",
+  "primary_predictions": [
+    "A100 > B topology shuffled",
+    "A100 > C order shuffled",
+    "A100 > D direction reversed",
+    "A100 > E meta-control ablated",
+    "A100 > F preservation ablated",
+    "A100 approximately invariant to G surface substitution",
+    "H authentic perturbed > I shuffled perturbed",
+    "A100 > J recursion control",
+    "A100 > K complexity control",
+    "A100 > L counterfactual path",
+    "A25 < A50 < A75 < A100 dose response"
+  ],
+  "primary_unit": "seed",
+  "scoring_families": [
+    "RETURN",
+    "OPERATIONAL_REENTRY",
+    "NEXT_TRANSFORMATION",
+    "RECURRENCE",
+    "PRESERVATION",
+    "META_CONTROL",
+    "FULL_PATHWAY"
+  ],
+  "secondary_test": "paired Wilcoxon signed-rank, greater alternative",
+  "withheld_terminal_structure": [
+    "OPERATIONAL_REENTRY",
+    "NEXT_TRANSFORMATION",
+    "RESULT_BECOMES_NEW_INPUT",
+    "CONTINUATION_RECURRENCE"
+  ],
+  "within_seed_replication": "mean of three repetitions within seed-condition"
+}

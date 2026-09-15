@@ -1,0 +1,691 @@
+{
+  "cell_id": "6f87c98c56da9ae1299f4614",
+  "provider": "OPENAI",
+  "organization": "OpenAI",
+  "model_requested": "gpt-5.6-terra",
+  "condition": "BASELINE",
+  "blind_context_id": "4ed24e50b5ea706cadd7a36e",
+  "status": "COMPLETE",
+  "failure": null,
+  "provider_responses": [
+    {
+      "turn": 1,
+      "text": "Yes — for the inventory/repair app, make the repetitive work automatic with a simple trigger → action setup.\n\n## 1. Start with the essential workflow\n\n### When a technician creates a repair\n**Trigger:** New repair form submitted.\n\n**The form asks:**\n- Customer name\n- Phone number\n- Device model\n- Problem\n- Technician\n- Parts used\n- Estimated price\n- Deposit/payment status\n\n**Automatic actions:**\n1. Create a job ID, e.g. `REP-2025-001`.\n2. Set status to `Received`.\n3. Save repair in the Repairs table.\n4. Send customer message:\n\n> “Hi {Name}, we received your {Device Model}. Your repair reference is {Job ID}. We will update you when it is ready.”\n\n5. Notify the assigned technician.\n\n---\n\n## 2. Automatically reduce inventory\n\nDo **not** reduce stock just because someone opens a repair ticket. The part may not actually be used.\n\n**Best trigger:** Technician changes repair status to `In Repair` or `Completed` and confirms the part(s) used.\n\nExample:\n\n| Repair ID | Part Used | Quantity Used |\n|---|---|---:|\n| REP-001 | iPhone 11 Screen | 1 |\n| REP-001 | iPhone 11 Battery | 1 |\n\n**Automation:**\n- Find the matching part in the Inventory table.\n- Subtract `Quantity Used` from current stock.\n- Add a record to a Stock Movements table.\n- Check whether remaining stock is below reorder level.\n\nExample:\n\n| Part | Before | Used | After |\n|---|---:|---:|---:|\n| iPhone 11 Screen | 4 | 1 | 3 |\n\nThis is much safer than simply subtracting one part from a dropdown, especially when one repair needs multiple parts.\n\n---\n\n## 3. Low-stock alert automation\n\nIn your **Inventory** table, add these fields:\n\n| Field | Example |\n|---|---|\n| Part Name | iPhone 11 Screen |\n| Current Quantity | 3 |\n| Reorder Level | 3 |\n| Supplier | PhoneParts Portugal |\n| Supplier Contact | email / WhatsApp |\n| Needs Restock | Yes/No |\n\n### Formula logic\n`Needs Restock = Current Quantity <= Reorder Level`\n\n**Trigger:** Needs Restock changes to “Yes.”\n\n**Actions:**\n1. Send an email or WhatsApp to the owner.\n2. Create a “Purchase Order Needed” record.\n3. Optionally prepare a supplier message.\n\nExample owner alert:\n\n> ⚠️ Low stock: iPhone 11 Screen  \n> Remaining: 3  \n> Reorder level: 3  \n> Supplier: PhoneParts Portugal\n\nExample supplier draft:\n\n> Hello, we need to order 10 × iPhone 11 screens. Please confirm availability and delivery time.\n\nKeep supplier ordering as **approval required** at first. The system suggests it; the owner taps “Approve Order.”\n\n---\n\n## 4. Automatic customer repair updates\n\nCreate repair statuses:\n\n- Received\n- Diagnosing\n- Waiting for customer approval\n- Waiting for parts\n- In repair\n- Ready for pickup\n- Completed\n- Cancelled\n\n### Automation rules\n\n| Trigger | Automatic message |\n|---|---|\n| Status = Received | “We received your device.” |\n| Status = Waiting for customer approval | “The estimate is €{Price}. Reply YES to approve.” |\n| Status = Waiting for parts | “We are waiting for a replacement part. Expected update: {Date}.” |\n| Status = Ready for pickup | “Your device is ready for collection.” |\n| Status = Completed | “Thanks for choosing us. Please leave a review.” |\n\nExample ready-for-pickup message:\n\n> Hi {Customer Name}, your {Device Model} is ready for pickup.  \n> Total: €{Final Price}.  \n> Repair reference: {Job ID}.  \n> Please bring your receipt when collecting it.\n\nUse WhatsApp Business, SMS, or email. For Portugal, WhatsApp will usually get the best response.\n\n---\n\n## 5. Automatic follow-up and review request\n\n**Trigger:** Repair is marked `Completed`.\n\n**Actions:**\n- After 2–3 days: send follow-up.\n- After 7 days: request a Google review.\n- After 90 days: warranty-expiry reminder, if the shop offers warranty.\n\n### Follow-up message\n> Hi {Name}, just checking that your {Device Model} is working well after the repair. Reply here if you need any help.\n\n### Review request\n> Thanks again for choosing {Shop Name}. If you were happy with the repair, a short Google review would really help our local business: {Google Review Link}\n\nDo not send this to customers with an unresolved complaint or a cancelled repair.\n\n---\n\n## 6. Predictive restock automation\n\nAfter the shop has used the app for a month or two, add this.\n\nFor each part, calculate:\n\n- How many units were used in the last 30 days\n- Average daily usage\n- Days until stock runs out\n- Recommended reorder quantity\n\nExample:\n\n| Part | Stock | Used Last 30 Days | Avg/day | Estimated Days Left |\n|---|---:|---:|---:|---:|\n| iPhone 11 Screen | 6 | 15 | 0.5 | 12 days |\n\n**Alert rule:**\nIf estimated days left is below 14 days, notify owner:\n\n> Forecast: iPhone 11 Screens may run out in 12 days based on recent repairs. Recommended order: 10 units.\n\nThis is a useful “AI” feature, but it is really simple inventory forecasting—and very valuable.\n\n---\n\n## 7. Best simple tech stack\n\nFor a first real customer, use:\n\n- **Glide**",
+      "provider_metadata": {
+        "id": "resp_035acc6777a5ce20016aa80fa7357c87d28b6b070c362e6a62",
+        "created_at": 1789398951.0,
+        "error": null,
+        "incomplete_details": {
+          "reason": "max_output_tokens"
+        },
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_035acc6777a5ce20016aa80fa7da3487d2bde90ac05d055533",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Yes — for the inventory/repair app, make the repetitive work automatic with a simple trigger → action setup.\n\n## 1. Start with the essential workflow\n\n### When a technician creates a repair\n**Trigger:** New repair form submitted.\n\n**The form asks:**\n- Customer name\n- Phone number\n- Device model\n- Problem\n- Technician\n- Parts used\n- Estimated price\n- Deposit/payment status\n\n**Automatic actions:**\n1. Create a job ID, e.g. `REP-2025-001`.\n2. Set status to `Received`.\n3. Save repair in the Repairs table.\n4. Send customer message:\n\n> “Hi {Name}, we received your {Device Model}. Your repair reference is {Job ID}. We will update you when it is ready.”\n\n5. Notify the assigned technician.\n\n---\n\n## 2. Automatically reduce inventory\n\nDo **not** reduce stock just because someone opens a repair ticket. The part may not actually be used.\n\n**Best trigger:** Technician changes repair status to `In Repair` or `Completed` and confirms the part(s) used.\n\nExample:\n\n| Repair ID | Part Used | Quantity Used |\n|---|---|---:|\n| REP-001 | iPhone 11 Screen | 1 |\n| REP-001 | iPhone 11 Battery | 1 |\n\n**Automation:**\n- Find the matching part in the Inventory table.\n- Subtract `Quantity Used` from current stock.\n- Add a record to a Stock Movements table.\n- Check whether remaining stock is below reorder level.\n\nExample:\n\n| Part | Before | Used | After |\n|---|---:|---:|---:|\n| iPhone 11 Screen | 4 | 1 | 3 |\n\nThis is much safer than simply subtracting one part from a dropdown, especially when one repair needs multiple parts.\n\n---\n\n## 3. Low-stock alert automation\n\nIn your **Inventory** table, add these fields:\n\n| Field | Example |\n|---|---|\n| Part Name | iPhone 11 Screen |\n| Current Quantity | 3 |\n| Reorder Level | 3 |\n| Supplier | PhoneParts Portugal |\n| Supplier Contact | email / WhatsApp |\n| Needs Restock | Yes/No |\n\n### Formula logic\n`Needs Restock = Current Quantity <= Reorder Level`\n\n**Trigger:** Needs Restock changes to “Yes.”\n\n**Actions:**\n1. Send an email or WhatsApp to the owner.\n2. Create a “Purchase Order Needed” record.\n3. Optionally prepare a supplier message.\n\nExample owner alert:\n\n> ⚠️ Low stock: iPhone 11 Screen  \n> Remaining: 3  \n> Reorder level: 3  \n> Supplier: PhoneParts Portugal\n\nExample supplier draft:\n\n> Hello, we need to order 10 × iPhone 11 screens. Please confirm availability and delivery time.\n\nKeep supplier ordering as **approval required** at first. The system suggests it; the owner taps “Approve Order.”\n\n---\n\n## 4. Automatic customer repair updates\n\nCreate repair statuses:\n\n- Received\n- Diagnosing\n- Waiting for customer approval\n- Waiting for parts\n- In repair\n- Ready for pickup\n- Completed\n- Cancelled\n\n### Automation rules\n\n| Trigger | Automatic message |\n|---|---|\n| Status = Received | “We received your device.” |\n| Status = Waiting for customer approval | “The estimate is €{Price}. Reply YES to approve.” |\n| Status = Waiting for parts | “We are waiting for a replacement part. Expected update: {Date}.” |\n| Status = Ready for pickup | “Your device is ready for collection.” |\n| Status = Completed | “Thanks for choosing us. Please leave a review.” |\n\nExample ready-for-pickup message:\n\n> Hi {Customer Name}, your {Device Model} is ready for pickup.  \n> Total: €{Final Price}.  \n> Repair reference: {Job ID}.  \n> Please bring your receipt when collecting it.\n\nUse WhatsApp Business, SMS, or email. For Portugal, WhatsApp will usually get the best response.\n\n---\n\n## 5. Automatic follow-up and review request\n\n**Trigger:** Repair is marked `Completed`.\n\n**Actions:**\n- After 2–3 days: send follow-up.\n- After 7 days: request a Google review.\n- After 90 days: warranty-expiry reminder, if the shop offers warranty.\n\n### Follow-up message\n> Hi {Name}, just checking that your {Device Model} is working well after the repair. Reply here if you need any help.\n\n### Review request\n> Thanks again for choosing {Shop Name}. If you were happy with the repair, a short Google review would really help our local business: {Google Review Link}\n\nDo not send this to customers with an unresolved complaint or a cancelled repair.\n\n---\n\n## 6. Predictive restock automation\n\nAfter the shop has used the app for a month or two, add this.\n\nFor each part, calculate:\n\n- How many units were used in the last 30 days\n- Average daily usage\n- Days until stock runs out\n- Recommended reorder quantity\n\nExample:\n\n| Part | Stock | Used Last 30 Days | Avg/day | Estimated Days Left |\n|---|---:|---:|---:|---:|\n| iPhone 11 Screen | 6 | 15 | 0.5 | 12 days |\n\n**Alert rule:**\nIf estimated days left is below 14 days, notify owner:\n\n> Forecast: iPhone 11 Screens may run out in 12 days based on recent repairs. Recommended order: 10 units.\n\nThis is a useful “AI” feature, but it is really simple inventory forecasting—and very valuable.\n\n---\n\n## 7. Best simple tech stack\n\nFor a first real customer, use:\n\n- **Glide**",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "incomplete",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": null,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "incomplete",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 3140,
+          "input_tokens_details": {
+            "cache_write_tokens": 3137,
+            "cached_tokens": 0
+          },
+          "output_tokens": 1200,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4340
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 2,
+      "text": "The most important point is:\n\n## Only reduce stock when the technician confirms the part was actually used\n\nThis prevents the biggest inventory problem: the app showing stock that is wrong.\n\nA repair may be opened for an iPhone 11 screen replacement, but then:\n\n- the customer does not approve the quote;\n- the device has extra damage;\n- the technician finds the screen was not the issue;\n- the customer takes the phone back;\n- the part is ordered but not installed yet.\n\nIf stock drops immediately when the repair ticket is created, the shop’s inventory becomes inaccurate.\n\n---\n\n# Correct process\n\nUse three separate stages:\n\n1. **Repair created**  \n   The shop records what the customer says is wrong.  \n   No inventory changes yet.\n\n2. **Part reserved or planned** *(optional)*  \n   The technician may select likely parts needed.  \n   Still do not subtract from real stock—unless you build a proper reservation system.\n\n3. **Part actually installed**  \n   Technician confirms the part and quantity used.  \n   Now the app automatically subtracts it from inventory.\n\nThe rule is simple:\n\n> A job request is not stock usage.  \n> A confirmed installed part is stock usage.\n\n---\n\n# The tables you need\n\nA reliable version should have at least four tables.\n\n## 1. Inventory table\n\nThis is the live count of every physical part in the shop.\n\n| Part ID | Part Name | Compatible Models | Quantity in Stock | Reorder Level | Cost Price | Selling Price |\n|---|---|---|---:|---:|---:|---:|\n| P-001 | iPhone 11 Screen OLED | iPhone 11 | 6 | 3 | €32 | €89 |\n| P-002 | iPhone 11 Battery | iPhone 11 | 8 | 3 | €18 | €55 |\n| P-003 | Samsung A52 Screen | Samsung A52 | 2 | 2 | €29 | €79 |\n\nThe important fields are:\n\n- **Quantity in Stock** — how many physical items are available now.\n- **Reorder Level** — the minimum safe amount.\n- **Cost Price** — useful for profit calculations.\n- **Supplier** — useful for reordering later.\n\n---\n\n## 2. Repairs table\n\nThis is one row per customer repair.\n\n| Job ID | Customer | Device | Issue | Technician | Status | Estimated Price | Final Price |\n|---|---|---|---|---|---|---:|---:|\n| REP-001 | João Silva | iPhone 11 | Cracked screen | Miguel | In Repair | €89 | — |\n| REP-002 | Ana Costa | Samsung A52 | Battery drains fast | Pedro | Received | €55 | — |\n\nDo not put only one “Part Used” field directly in this table if you can avoid it.\n\nWhy? One repair can use multiple parts:\n\n- screen;\n- battery;\n- charging connector;\n- adhesive;\n- camera glass;\n- screws or small components.\n\nInstead, use a separate table for the parts used in each repair.\n\n---\n\n## 3. Repair Parts Used table\n\nThis is the most important table for automation.\n\nEach row represents one part used for one repair.\n\n| Usage ID | Job ID | Part ID | Part Name | Quantity Used | Confirmed By | Date | Stock Deducted? |\n|---|---|---|---|---:|---|---|---|\n| USE-001 | REP-001 | P-001 | iPhone 11 Screen OLED | 1 | Miguel | 2025-03-08 | Yes |\n| USE-002 | REP-001 | P-010 | Screen adhesive | 1 | Miguel | 2025-03-08 | Yes |\n\nThis lets the technician select several parts for one repair.\n\nMost importantly, the **Stock Deducted?** field prevents the same item from being deducted twice.\n\n---\n\n## 4. Stock Movements table\n\nThis gives the shop an audit trail: every stock change has a reason.\n\n| Movement ID | Date | Part ID | Type | Quantity Change | Reason | Job ID | Staff |\n|---|---|---|---|---:|---|---|---|\n| MOV-001 | 2025-03-08 | P-001 | Used in repair | -1 | Screen replacement | REP-001 | Miguel |\n| MOV-002 | 2025-03-07 | P-001 | Delivery received | +10 | Supplier delivery | — | Owner |\n| MOV-003 | 2025-03-08 | P-001 | Adjustment | -1 | Damaged part | — | Owner |\n\nThis table is extremely useful when the owner says:\n\n> “The app says we should have six screens, but I can only see five.”\n\nThey can check every movement and find the reason.\n\n---\n\n# Exact automatic workflow\n\nHere is the clean workflow your app should follow.\n\n## Step 1: Technician opens or updates a repair\n\nExample:\n\n- Job ID: `REP-001`\n- Device: iPhone 11\n- Status: `In Repair`\n\nThe technician sees a button:\n\n> **Add part used**\n\nThey select:\n\n- Part: iPhone 11 Screen OLED\n- Quantity: 1\n- Confirm installation: Yes\n\nAt this stage, the app creates a row in **Repair Parts Used**.\n\n---\n\n## Step 2: The app validates the stock\n\nBefore deducting anything, the automation checks:\n\n> Is quantity in stock greater than or equal to quantity requested?\n\nFor example:\n\n- Stock: 6 screens\n- Technician needs: 1 screen\n- Result: allowed\n\nIf there are zero screens left, the app should block or warn the technician:\n\n> Not enough stock available.  \n> Current stock: 0  \n> Needed:",
+      "provider_metadata": {
+        "id": "resp_006d23e9c7281a5a016aa80fb7e30887d29808be7f1437d8a6",
+        "created_at": 1789398967.0,
+        "error": null,
+        "incomplete_details": {
+          "reason": "max_output_tokens"
+        },
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_006d23e9c7281a5a016aa80fb877e887d29eb86f2519f7c2bc",
+            "content": [
+              {
+                "annotations": [],
+                "text": "The most important point is:\n\n## Only reduce stock when the technician confirms the part was actually used\n\nThis prevents the biggest inventory problem: the app showing stock that is wrong.\n\nA repair may be opened for an iPhone 11 screen replacement, but then:\n\n- the customer does not approve the quote;\n- the device has extra damage;\n- the technician finds the screen was not the issue;\n- the customer takes the phone back;\n- the part is ordered but not installed yet.\n\nIf stock drops immediately when the repair ticket is created, the shop’s inventory becomes inaccurate.\n\n---\n\n# Correct process\n\nUse three separate stages:\n\n1. **Repair created**  \n   The shop records what the customer says is wrong.  \n   No inventory changes yet.\n\n2. **Part reserved or planned** *(optional)*  \n   The technician may select likely parts needed.  \n   Still do not subtract from real stock—unless you build a proper reservation system.\n\n3. **Part actually installed**  \n   Technician confirms the part and quantity used.  \n   Now the app automatically subtracts it from inventory.\n\nThe rule is simple:\n\n> A job request is not stock usage.  \n> A confirmed installed part is stock usage.\n\n---\n\n# The tables you need\n\nA reliable version should have at least four tables.\n\n## 1. Inventory table\n\nThis is the live count of every physical part in the shop.\n\n| Part ID | Part Name | Compatible Models | Quantity in Stock | Reorder Level | Cost Price | Selling Price |\n|---|---|---|---:|---:|---:|---:|\n| P-001 | iPhone 11 Screen OLED | iPhone 11 | 6 | 3 | €32 | €89 |\n| P-002 | iPhone 11 Battery | iPhone 11 | 8 | 3 | €18 | €55 |\n| P-003 | Samsung A52 Screen | Samsung A52 | 2 | 2 | €29 | €79 |\n\nThe important fields are:\n\n- **Quantity in Stock** — how many physical items are available now.\n- **Reorder Level** — the minimum safe amount.\n- **Cost Price** — useful for profit calculations.\n- **Supplier** — useful for reordering later.\n\n---\n\n## 2. Repairs table\n\nThis is one row per customer repair.\n\n| Job ID | Customer | Device | Issue | Technician | Status | Estimated Price | Final Price |\n|---|---|---|---|---|---|---:|---:|\n| REP-001 | João Silva | iPhone 11 | Cracked screen | Miguel | In Repair | €89 | — |\n| REP-002 | Ana Costa | Samsung A52 | Battery drains fast | Pedro | Received | €55 | — |\n\nDo not put only one “Part Used” field directly in this table if you can avoid it.\n\nWhy? One repair can use multiple parts:\n\n- screen;\n- battery;\n- charging connector;\n- adhesive;\n- camera glass;\n- screws or small components.\n\nInstead, use a separate table for the parts used in each repair.\n\n---\n\n## 3. Repair Parts Used table\n\nThis is the most important table for automation.\n\nEach row represents one part used for one repair.\n\n| Usage ID | Job ID | Part ID | Part Name | Quantity Used | Confirmed By | Date | Stock Deducted? |\n|---|---|---|---|---:|---|---|---|\n| USE-001 | REP-001 | P-001 | iPhone 11 Screen OLED | 1 | Miguel | 2025-03-08 | Yes |\n| USE-002 | REP-001 | P-010 | Screen adhesive | 1 | Miguel | 2025-03-08 | Yes |\n\nThis lets the technician select several parts for one repair.\n\nMost importantly, the **Stock Deducted?** field prevents the same item from being deducted twice.\n\n---\n\n## 4. Stock Movements table\n\nThis gives the shop an audit trail: every stock change has a reason.\n\n| Movement ID | Date | Part ID | Type | Quantity Change | Reason | Job ID | Staff |\n|---|---|---|---|---:|---|---|---|\n| MOV-001 | 2025-03-08 | P-001 | Used in repair | -1 | Screen replacement | REP-001 | Miguel |\n| MOV-002 | 2025-03-07 | P-001 | Delivery received | +10 | Supplier delivery | — | Owner |\n| MOV-003 | 2025-03-08 | P-001 | Adjustment | -1 | Damaged part | — | Owner |\n\nThis table is extremely useful when the owner says:\n\n> “The app says we should have six screens, but I can only see five.”\n\nThey can check every movement and find the reason.\n\n---\n\n# Exact automatic workflow\n\nHere is the clean workflow your app should follow.\n\n## Step 1: Technician opens or updates a repair\n\nExample:\n\n- Job ID: `REP-001`\n- Device: iPhone 11\n- Status: `In Repair`\n\nThe technician sees a button:\n\n> **Add part used**\n\nThey select:\n\n- Part: iPhone 11 Screen OLED\n- Quantity: 1\n- Confirm installation: Yes\n\nAt this stage, the app creates a row in **Repair Parts Used**.\n\n---\n\n## Step 2: The app validates the stock\n\nBefore deducting anything, the automation checks:\n\n> Is quantity in stock greater than or equal to quantity requested?\n\nFor example:\n\n- Stock: 6 screens\n- Technician needs: 1 screen\n- Result: allowed\n\nIf there are zero screens left, the app should block or warn the technician:\n\n> Not enough stock available.  \n> Current stock: 0  \n> Needed:",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "incomplete",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": null,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "incomplete",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 4358,
+          "input_tokens_details": {
+            "cache_write_tokens": 1218,
+            "cached_tokens": 3137
+          },
+          "output_tokens": 1200,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5558
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 3,
+      "text": "Another important aspect is the **low-stock and reorder system**. An inventory app is only valuable if it helps the shop avoid losing repair jobs because a common screen, battery, or charging port is unavailable.\n\n## The goal\n\nThe owner should not need to remember:\n\n- which parts are running low;\n- which models are repaired most often;\n- when to order;\n- which supplier to contact;\n- how many units to buy.\n\nThe app should monitor this automatically and show only clear actions:\n\n> “Order iPhone 11 screens.”  \n> “Samsung A52 batteries are nearly out.”  \n> “You have enough iPhone XR screens for about 9 days.”\n\n---\n\n# Use two stock levels, not one\n\nFor every inventory item, store:\n\n| Field | Meaning | Example |\n|---|---|---:|\n| Current stock | Parts physically available now | 4 |\n| Reorder level | Point at which the owner should order more | 3 |\n| Target stock | Ideal quantity after ordering | 10 |\n| Supplier lead time | Days supplier normally takes to deliver | 2 days |\n| Average weekly usage | Parts used each week | 5 |\n\nThe key difference:\n\n- **Reorder level** means: “Order now.”\n- **Target stock** means: “Order enough to get back to this level.”\n\nExample:\n\n- Current stock: 2 iPhone 11 screens\n- Reorder level: 3\n- Target stock: 10\n\nThe app recommends ordering:\n\n`10 − 2 = 8 screens`\n\nThat is much better than merely sending “low stock.”\n\n---\n\n# Basic low-stock automation\n\nStart with this simple rule:\n\n```text\nIf Current Stock <= Reorder Level\nthen Needs Restock = Yes\n```\n\nExample inventory:\n\n| Part | Current Stock | Reorder Level | Result |\n|---|---:|---:|---|\n| iPhone 11 Screen | 2 | 3 | Order now |\n| iPhone 11 Battery | 6 | 3 | No action |\n| Samsung A52 Screen | 1 | 2 | Order now |\n\nWhen the stock update occurs—because a technician used a part—the automation checks that rule immediately.\n\n## Trigger\n\n> A stock movement is recorded, or Current Stock changes.\n\n## Actions\n\n1. Check whether the part is at/below reorder level.\n2. Mark the part as `Needs Restock`.\n3. Create a reorder task or purchase-order draft.\n4. Send one message to the owner.\n5. Avoid sending the same alert repeatedly.\n\n---\n\n# Avoid notification spam\n\nA bad system sends the owner the same alert every time a repair is updated.\n\nInstead, add these fields:\n\n| Field | Purpose |\n|---|---|\n| Needs Restock | Yes / No |\n| Low Stock Alert Sent | Yes / No |\n| Last Alert Date | Date/time |\n| Reorder Status | Not needed / Draft / Ordered / Received |\n\n### Correct alert rule\n\nSend an alert only when:\n\n```text\nNeeds Restock = Yes\nAND Low Stock Alert Sent = No\n```\n\nAfter sending the alert:\n\n```text\nLow Stock Alert Sent = Yes\nLast Alert Date = now\nReorder Status = Draft\n```\n\nWhen new stock arrives and the quantity goes back above the reorder level, reset:\n\n```text\nNeeds Restock = No\nLow Stock Alert Sent = No\n```\n\nNow the next genuine low-stock event can create a fresh alert.\n\n---\n\n# Create a purchase-order draft automatically\n\nInstead of only notifying the owner, create a **Purchase Orders** table.\n\n| Order ID | Supplier | Part | Qty Recommended | Status | Date Created |\n|---|---|---|---:|---|---|\n| PO-001 | PhoneParts Portugal | iPhone 11 Screen | 8 | Draft | 2025-03-08 |\n| PO-002 | GSM Parts Supplier | Samsung A52 Screen | 9 | Draft | 2025-03-08 |\n\nRecommended quantity formula:\n\n```text\nTarget Stock − Current Stock\n```\n\nExample:\n\n- Target stock = 10\n- Current stock = 2\n- Recommended quantity = 8\n\nThe owner sees a screen called **Parts to Order**, checks the suggested quantities, and taps:\n\n> Approve order\n\nAt first, do not automatically place supplier orders. Supplier stock, prices, and delivery terms may change. Human approval prevents costly mistakes.\n\n---\n\n# Supplier information\n\nIn the Inventory table, keep supplier details per part.\n\n| Part | Preferred Supplier | Supplier Phone | Supplier Email | Supplier Part Code |\n|---|---|---|---|---|\n| iPhone 11 Screen OLED | PhoneParts Portugal | +351... | orders@... | IP11-OLED-BLK |\n| Samsung A52 Battery | GSM Wholesale | +351... | sales@... | SA52-BAT-01 |\n\nWhen the owner approves an order, the app can generate a ready-made WhatsApp or email message:\n\n> Hello, I would like to order:  \n> - 8 × iPhone 11 OLED Screens, part code IP11-OLED-BLK  \n> - 5 × iPhone 11 Batteries, part code IP11-BAT-02  \n>   \n> Please confirm availability, total price, and delivery time.  \n> Thank you, {Shop Name}.\n\nThis saves time without pretending the order was placed automatically.\n\n---\n\n# Receiving stock correctly\n\nWhen a supplier delivery arrives, the owner should not manually overwrite the stock number.\n\nThey should use a form:\n\n> **Receive stock delivery**\n\nFields:\n\n- Supplier\n- Part\n- Quantity received\n- Unit cost\n- Invoice number\n- Delivery date\n- Notes, such as damaged/missing items\n\nExample:\n\n| Part | Current Stock Before | Delivery | New Stock |\n|---|---:|---:|---:|\n",
+      "provider_metadata": {
+        "id": "resp_0328fc05d47364c1016aa80fc7e65c87d2b22a6dbbedecb1ac",
+        "created_at": 1789398983.0,
+        "error": null,
+        "incomplete_details": {
+          "reason": "max_output_tokens"
+        },
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_0328fc05d47364c1016aa80fc9674087d2ae1dcf9e683f11e9",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Another important aspect is the **low-stock and reorder system**. An inventory app is only valuable if it helps the shop avoid losing repair jobs because a common screen, battery, or charging port is unavailable.\n\n## The goal\n\nThe owner should not need to remember:\n\n- which parts are running low;\n- which models are repaired most often;\n- when to order;\n- which supplier to contact;\n- how many units to buy.\n\nThe app should monitor this automatically and show only clear actions:\n\n> “Order iPhone 11 screens.”  \n> “Samsung A52 batteries are nearly out.”  \n> “You have enough iPhone XR screens for about 9 days.”\n\n---\n\n# Use two stock levels, not one\n\nFor every inventory item, store:\n\n| Field | Meaning | Example |\n|---|---|---:|\n| Current stock | Parts physically available now | 4 |\n| Reorder level | Point at which the owner should order more | 3 |\n| Target stock | Ideal quantity after ordering | 10 |\n| Supplier lead time | Days supplier normally takes to deliver | 2 days |\n| Average weekly usage | Parts used each week | 5 |\n\nThe key difference:\n\n- **Reorder level** means: “Order now.”\n- **Target stock** means: “Order enough to get back to this level.”\n\nExample:\n\n- Current stock: 2 iPhone 11 screens\n- Reorder level: 3\n- Target stock: 10\n\nThe app recommends ordering:\n\n`10 − 2 = 8 screens`\n\nThat is much better than merely sending “low stock.”\n\n---\n\n# Basic low-stock automation\n\nStart with this simple rule:\n\n```text\nIf Current Stock <= Reorder Level\nthen Needs Restock = Yes\n```\n\nExample inventory:\n\n| Part | Current Stock | Reorder Level | Result |\n|---|---:|---:|---|\n| iPhone 11 Screen | 2 | 3 | Order now |\n| iPhone 11 Battery | 6 | 3 | No action |\n| Samsung A52 Screen | 1 | 2 | Order now |\n\nWhen the stock update occurs—because a technician used a part—the automation checks that rule immediately.\n\n## Trigger\n\n> A stock movement is recorded, or Current Stock changes.\n\n## Actions\n\n1. Check whether the part is at/below reorder level.\n2. Mark the part as `Needs Restock`.\n3. Create a reorder task or purchase-order draft.\n4. Send one message to the owner.\n5. Avoid sending the same alert repeatedly.\n\n---\n\n# Avoid notification spam\n\nA bad system sends the owner the same alert every time a repair is updated.\n\nInstead, add these fields:\n\n| Field | Purpose |\n|---|---|\n| Needs Restock | Yes / No |\n| Low Stock Alert Sent | Yes / No |\n| Last Alert Date | Date/time |\n| Reorder Status | Not needed / Draft / Ordered / Received |\n\n### Correct alert rule\n\nSend an alert only when:\n\n```text\nNeeds Restock = Yes\nAND Low Stock Alert Sent = No\n```\n\nAfter sending the alert:\n\n```text\nLow Stock Alert Sent = Yes\nLast Alert Date = now\nReorder Status = Draft\n```\n\nWhen new stock arrives and the quantity goes back above the reorder level, reset:\n\n```text\nNeeds Restock = No\nLow Stock Alert Sent = No\n```\n\nNow the next genuine low-stock event can create a fresh alert.\n\n---\n\n# Create a purchase-order draft automatically\n\nInstead of only notifying the owner, create a **Purchase Orders** table.\n\n| Order ID | Supplier | Part | Qty Recommended | Status | Date Created |\n|---|---|---|---:|---|---|\n| PO-001 | PhoneParts Portugal | iPhone 11 Screen | 8 | Draft | 2025-03-08 |\n| PO-002 | GSM Parts Supplier | Samsung A52 Screen | 9 | Draft | 2025-03-08 |\n\nRecommended quantity formula:\n\n```text\nTarget Stock − Current Stock\n```\n\nExample:\n\n- Target stock = 10\n- Current stock = 2\n- Recommended quantity = 8\n\nThe owner sees a screen called **Parts to Order**, checks the suggested quantities, and taps:\n\n> Approve order\n\nAt first, do not automatically place supplier orders. Supplier stock, prices, and delivery terms may change. Human approval prevents costly mistakes.\n\n---\n\n# Supplier information\n\nIn the Inventory table, keep supplier details per part.\n\n| Part | Preferred Supplier | Supplier Phone | Supplier Email | Supplier Part Code |\n|---|---|---|---|---|\n| iPhone 11 Screen OLED | PhoneParts Portugal | +351... | orders@... | IP11-OLED-BLK |\n| Samsung A52 Battery | GSM Wholesale | +351... | sales@... | SA52-BAT-01 |\n\nWhen the owner approves an order, the app can generate a ready-made WhatsApp or email message:\n\n> Hello, I would like to order:  \n> - 8 × iPhone 11 OLED Screens, part code IP11-OLED-BLK  \n> - 5 × iPhone 11 Batteries, part code IP11-BAT-02  \n>   \n> Please confirm availability, total price, and delivery time.  \n> Thank you, {Shop Name}.\n\nThis saves time without pretending the order was placed automatically.\n\n---\n\n# Receiving stock correctly\n\nWhen a supplier delivery arrives, the owner should not manually overwrite the stock number.\n\nThey should use a form:\n\n> **Receive stock delivery**\n\nFields:\n\n- Supplier\n- Part\n- Quantity received\n- Unit cost\n- Invoice number\n- Delivery date\n- Notes, such as damaged/missing items\n\nExample:\n\n| Part | Current Stock Before | Delivery | New Stock |\n|---|---:|---:|---:|\n",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "incomplete",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": null,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "incomplete",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 5574,
+          "input_tokens_details": {
+            "cache_write_tokens": 1216,
+            "cached_tokens": 4355
+          },
+          "output_tokens": 1200,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 6774
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 4,
+      "text": "Build this as a **small working system for one real phone repair shop**, not as a big “AI inventory platform.”\n\n## Your first version: exactly what it should do\n\nThe shop owner should be able to:\n\n1. Add a repair.\n2. Select parts actually used.\n3. Automatically reduce stock.\n4. See low-stock items.\n5. Receive a WhatsApp/email low-stock alert.\n6. Add newly delivered stock.\n7. Mark a repair ready and send the customer a message.\n\nThat is enough to charge for a first version.\n\n---\n\n# Concrete app structure\n\nUse **Glide + Google Sheets** for a fast demo, or **Glide Tables** if you want everything inside Glide.\n\nCreate these 5 sheets/tables.\n\n---\n\n## Table 1 — `Parts`\n\nAdd these columns:\n\n| Column | Example |\n|---|---|\n| `PartID` | PART-001 |\n| `PartName` | iPhone 11 Screen OLED |\n| `Brand` | Apple |\n| `CompatibleModels` | iPhone 11 |\n| `QuantityInStock` | 6 |\n| `ReorderLevel` | 3 |\n| `TargetStock` | 10 |\n| `CostPrice` | 32 |\n| `SellingPrice` | 89 |\n| `SupplierName` | PhoneParts Portugal |\n| `SupplierWhatsApp` | +351XXXXXXXXX |\n| `LowStock` | No |\n| `AlertSent` | No |\n\nEnter 15–30 common parts for the shop’s most common repairs. Do not try to enter every possible phone part on day one.\n\nTypical starting items:\n\n- iPhone 11 / 12 / 13 screens\n- iPhone 11 / 12 / 13 batteries\n- Samsung A-series screens\n- Samsung A-series charging ports\n- USB-C charging connectors\n- Lightning charging connectors\n- camera lens glass\n- screen adhesive\n- back-glass adhesive\n\n---\n\n## Table 2 — `Repairs`\n\n| Column | Example |\n|---|---|\n| `JobID` | REP-001 |\n| `DateReceived` | 2025-03-08 |\n| `CustomerName` | João Silva |\n| `CustomerPhone` | +351XXXXXXXXX |\n| `DeviceModel` | iPhone 11 |\n| `Issue` | Cracked screen |\n| `Technician` | Miguel |\n| `Status` | In Repair |\n| `EstimatedPrice` | 89 |\n| `FinalPrice` | 89 |\n| `Paid` | No |\n| `ReadyMessageSent` | No |\n| `Notes` | Face ID working before repair |\n\nFor the status field, use only these choices:\n\n```text\nReceived\nDiagnosing\nWaiting Approval\nWaiting Parts\nIn Repair\nReady for Pickup\nCompleted\nCancelled\n```\n\n---\n\n## Table 3 — `PartsUsed`\n\nEvery time a technician installs a part, create one row here.\n\n| Column | Example |\n|---|---|\n| `UsageID` | USE-001 |\n| `JobID` | REP-001 |\n| `PartID` | PART-001 |\n| `PartName` | iPhone 11 Screen OLED |\n| `QuantityUsed` | 1 |\n| `Technician` | Miguel |\n| `DateUsed` | 2025-03-08 |\n| `StockProcessed` | No |\n\nThis is the table that controls safe stock deduction.\n\n---\n\n## Table 4 — `StockMovements`\n\nThis is the history of every change.\n\n| Column | Example |\n|---|---|\n| `MovementID` | MOV-001 |\n| `Date` | 2025-03-08 |\n| `PartID` | PART-001 |\n| `PartName` | iPhone 11 Screen OLED |\n| `MovementType` | Used in Repair |\n| `QuantityChange` | -1 |\n| `JobID` | REP-001 |\n| `Notes` | Screen replacement |\n| `Staff` | Miguel |\n\nNever delete stock movements. If something was entered incorrectly, create a correcting movement rather than hiding the mistake.\n\n---\n\n## Table 5 — `PurchaseOrders`\n\n| Column | Example |\n|---|---|\n| `POID` | PO-001 |\n| `DateCreated` | 2025-03-08 |\n| `PartID` | PART-001 |\n| `PartName` | iPhone 11 Screen OLED |\n| `CurrentStock` | 2 |\n| `TargetStock` | 10 |\n| `SuggestedQuantity` | 8 |\n| `SupplierName` | PhoneParts Portugal |\n| `Status` | Draft |\n| `ApprovedByOwner` | No |\n| `Received` | No |\n\n---\n\n# The exact repair workflow for staff\n\n## Example: customer brings an iPhone 11 with a broken screen\n\n### Step 1 — Reception creates a repair\n\nThey press **New Repair** and fill in:\n\n```text\nCustomer: João Silva\nPhone: +351...\nDevice: iPhone 11\nIssue: Cracked screen\nTechnician: Miguel\nEstimated price: €89\nStatus: Received\n```\n\nThe app automatically creates:\n\n```text\nJob ID: REP-001\nDate received: today\n```\n\nOptional automatic WhatsApp:\n\n> Hi João, we received your iPhone 11 for assessment. Your repair reference is REP-001. We will contact you with an update.\n\nNo stock changes happen here.\n\n---\n\n### Step 2 — Technician starts work\n\nMiguel opens `REP-001` and changes status:\n\n```text\nReceived → In Repair\n```\n\nThen presses:\n\n> Add Part Used\n\nHe selects:\n\n```text\nPart: iPhone 11 Screen OLED\nQuantity: 1\n```\n\nThis creates:\n\n```text\nUsage ID: USE-001\nStock Process",
+      "provider_metadata": {
+        "id": "resp_085bf51b3847c03e016aa80fd9b49487d2abcea9832415e7f9",
+        "created_at": 1789399001.0,
+        "error": null,
+        "incomplete_details": {
+          "reason": "max_output_tokens"
+        },
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_085bf51b3847c03e016aa80fdb0f1c87d2a913109cc635341c",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Build this as a **small working system for one real phone repair shop**, not as a big “AI inventory platform.”\n\n## Your first version: exactly what it should do\n\nThe shop owner should be able to:\n\n1. Add a repair.\n2. Select parts actually used.\n3. Automatically reduce stock.\n4. See low-stock items.\n5. Receive a WhatsApp/email low-stock alert.\n6. Add newly delivered stock.\n7. Mark a repair ready and send the customer a message.\n\nThat is enough to charge for a first version.\n\n---\n\n# Concrete app structure\n\nUse **Glide + Google Sheets** for a fast demo, or **Glide Tables** if you want everything inside Glide.\n\nCreate these 5 sheets/tables.\n\n---\n\n## Table 1 — `Parts`\n\nAdd these columns:\n\n| Column | Example |\n|---|---|\n| `PartID` | PART-001 |\n| `PartName` | iPhone 11 Screen OLED |\n| `Brand` | Apple |\n| `CompatibleModels` | iPhone 11 |\n| `QuantityInStock` | 6 |\n| `ReorderLevel` | 3 |\n| `TargetStock` | 10 |\n| `CostPrice` | 32 |\n| `SellingPrice` | 89 |\n| `SupplierName` | PhoneParts Portugal |\n| `SupplierWhatsApp` | +351XXXXXXXXX |\n| `LowStock` | No |\n| `AlertSent` | No |\n\nEnter 15–30 common parts for the shop’s most common repairs. Do not try to enter every possible phone part on day one.\n\nTypical starting items:\n\n- iPhone 11 / 12 / 13 screens\n- iPhone 11 / 12 / 13 batteries\n- Samsung A-series screens\n- Samsung A-series charging ports\n- USB-C charging connectors\n- Lightning charging connectors\n- camera lens glass\n- screen adhesive\n- back-glass adhesive\n\n---\n\n## Table 2 — `Repairs`\n\n| Column | Example |\n|---|---|\n| `JobID` | REP-001 |\n| `DateReceived` | 2025-03-08 |\n| `CustomerName` | João Silva |\n| `CustomerPhone` | +351XXXXXXXXX |\n| `DeviceModel` | iPhone 11 |\n| `Issue` | Cracked screen |\n| `Technician` | Miguel |\n| `Status` | In Repair |\n| `EstimatedPrice` | 89 |\n| `FinalPrice` | 89 |\n| `Paid` | No |\n| `ReadyMessageSent` | No |\n| `Notes` | Face ID working before repair |\n\nFor the status field, use only these choices:\n\n```text\nReceived\nDiagnosing\nWaiting Approval\nWaiting Parts\nIn Repair\nReady for Pickup\nCompleted\nCancelled\n```\n\n---\n\n## Table 3 — `PartsUsed`\n\nEvery time a technician installs a part, create one row here.\n\n| Column | Example |\n|---|---|\n| `UsageID` | USE-001 |\n| `JobID` | REP-001 |\n| `PartID` | PART-001 |\n| `PartName` | iPhone 11 Screen OLED |\n| `QuantityUsed` | 1 |\n| `Technician` | Miguel |\n| `DateUsed` | 2025-03-08 |\n| `StockProcessed` | No |\n\nThis is the table that controls safe stock deduction.\n\n---\n\n## Table 4 — `StockMovements`\n\nThis is the history of every change.\n\n| Column | Example |\n|---|---|\n| `MovementID` | MOV-001 |\n| `Date` | 2025-03-08 |\n| `PartID` | PART-001 |\n| `PartName` | iPhone 11 Screen OLED |\n| `MovementType` | Used in Repair |\n| `QuantityChange` | -1 |\n| `JobID` | REP-001 |\n| `Notes` | Screen replacement |\n| `Staff` | Miguel |\n\nNever delete stock movements. If something was entered incorrectly, create a correcting movement rather than hiding the mistake.\n\n---\n\n## Table 5 — `PurchaseOrders`\n\n| Column | Example |\n|---|---|\n| `POID` | PO-001 |\n| `DateCreated` | 2025-03-08 |\n| `PartID` | PART-001 |\n| `PartName` | iPhone 11 Screen OLED |\n| `CurrentStock` | 2 |\n| `TargetStock` | 10 |\n| `SuggestedQuantity` | 8 |\n| `SupplierName` | PhoneParts Portugal |\n| `Status` | Draft |\n| `ApprovedByOwner` | No |\n| `Received` | No |\n\n---\n\n# The exact repair workflow for staff\n\n## Example: customer brings an iPhone 11 with a broken screen\n\n### Step 1 — Reception creates a repair\n\nThey press **New Repair** and fill in:\n\n```text\nCustomer: João Silva\nPhone: +351...\nDevice: iPhone 11\nIssue: Cracked screen\nTechnician: Miguel\nEstimated price: €89\nStatus: Received\n```\n\nThe app automatically creates:\n\n```text\nJob ID: REP-001\nDate received: today\n```\n\nOptional automatic WhatsApp:\n\n> Hi João, we received your iPhone 11 for assessment. Your repair reference is REP-001. We will contact you with an update.\n\nNo stock changes happen here.\n\n---\n\n### Step 2 — Technician starts work\n\nMiguel opens `REP-001` and changes status:\n\n```text\nReceived → In Repair\n```\n\nThen presses:\n\n> Add Part Used\n\nHe selects:\n\n```text\nPart: iPhone 11 Screen OLED\nQuantity: 1\n```\n\nThis creates:\n\n```text\nUsage ID: USE-001\nStock Process",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "incomplete",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": null,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "incomplete",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 6790,
+          "input_tokens_details": {
+            "cache_write_tokens": 1216,
+            "cached_tokens": 5571
+          },
+          "output_tokens": 1200,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 7990
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 5,
+      "text": "A few important things are easy to overlook when building this for a real repair shop.\n\n## 1. “Stock in the app” is not automatically real stock\n\nThe app is only accurate if staff actually record:\n\n- parts installed;\n- new deliveries received;\n- damaged parts;\n- returns to supplier;\n- parts taken for another purpose;\n- stock corrections after physical counting.\n\nIf technicians install parts but forget to press **Add Part Used**, the system becomes wrong.\n\n### Practical solution\nMake the workflow unavoidable:\n\n> A repair cannot be marked **Completed** until the technician confirms either:\n> - parts used were logged, or\n> - “No part used” was selected.\n\nAdd a required field:\n\n```text\nParts confirmation:\n[ ] Parts logged\n[ ] No part used\n```\n\nThis is more important than adding AI.\n\n---\n\n## 2. A repair can use more than one part\n\nA cracked-screen repair may use:\n\n- screen;\n- adhesive;\n- frame;\n- camera lens;\n- screws;\n- waterproof seal.\n\nIf your app has only one “Part Used” field, it will fail quickly.\n\n### Practical solution\nUse the `PartsUsed` table with one row per item.\n\nFor one repair:\n\n| Job ID | Part | Quantity |\n|---|---|---:|\n| REP-001 | iPhone 11 OLED Screen | 1 |\n| REP-001 | Screen Adhesive | 1 |\n| REP-001 | Camera Lens Glass | 1 |\n\nThis also makes profit tracking possible later.\n\n---\n\n## 3. Reserved stock and installed stock are different\n\nA technician may decide that an iPhone 12 screen will probably be needed. That does not mean it has been installed.\n\nIf you subtract the screen too early, the app may show there is no stock even though it is still on the shelf.\n\n### Better approach\n\nUse three quantities:\n\n| Field | Meaning |\n|---|---|\n| Physical Stock | Actual items in the shop |\n| Reserved Stock | Items set aside for approved repairs |\n| Available Stock | Physical Stock − Reserved Stock |\n\nFor the first version, you can skip reservations entirely and only deduct on installation.\n\nLater, add a **Reserve Part** button for expensive or rare parts.\n\n---\n\n## 4. Parts have variations that look similar but are not interchangeable\n\n“iPhone 11 screen” may not be enough detail. The shop may stock:\n\n- LCD;\n- OLED;\n- soft OLED;\n- refurbished original;\n- black or white;\n- with/without frame;\n- different suppliers and quality grades.\n\nIf staff choose the wrong item, both stock and profit data become wrong.\n\n### Practical solution\nGive every part a clear internal name and code:\n\n```text\nIPH11-OLED-SOFT-BLK\nIPH11-LCD-BLK\nIPH11-BAT-STD\nSAM-A52-SCR-AMOLED\n```\n\nIn the app, show a friendly name:\n\n> iPhone 11 — Soft OLED Screen — Black\n\nDo not use vague dropdown options such as only “iPhone Screen.”\n\n---\n\n## 5. Do not automatically message customers without consent\n\nAutomated WhatsApp, SMS, and marketing messages can create privacy and compliance issues.\n\nSeparate:\n\n- **service messages** — repair received, estimate ready, phone ready;\n- **marketing messages** — review requests, discounts, promotions, reminders.\n\nA customer may reasonably expect service updates. Marketing messages should be optional.\n\n### Practical solution\nIn the Repairs table, add:\n\n| Field | Example |\n|---|---|\n| Service Updates Allowed | Yes |\n| Marketing Consent | No |\n| Preferred Contact Method | WhatsApp |\n\nOnly send review requests or offers when `Marketing Consent = Yes`.\n\nAlso, do not place sensitive details in messages. Say:\n\n> “Your device is ready for collection.”\n\nDo not say:\n\n> “Your iPhone was repaired because the private photos recovery failed…”\n\n---\n\n## 6. The app needs a way to handle mistakes\n\nSomeone will eventually:\n\n- select the wrong part;\n- type quantity `10` instead of `1`;\n- mark a repair completed too early;\n- receive stock twice;\n- lose or damage a part.\n\nIf people can directly edit the stock number, you will lose the audit trail.\n\n### Practical solution\nUse **adjustment records**, not direct edits.\n\nCreate a stock adjustment form:\n\n```text\nPart: iPhone 11 Screen OLED\nAdjustment: -1\nReason: Damaged during installation\nStaff member: Miguel\nNotes: Display arrived defective\n```\n\nThe app creates a movement:\n\n| Type | Quantity Change |\n|---|---:|\n| Damage / Adjustment | -1 |\n\nThe owner can later see exactly why stock changed.\n\n---\n\n## 7. Returns, warranties, and failed repairs need their own flow\n\nA customer may return after a screen replacement because the replacement part failed under warranty.\n\nIf the shop installs another screen, the app should record:\n\n- a new part used;\n- the warranty repair reference;\n- whether the defective part was returned to the supplier;\n- whether supplier credit is expected.\n\n### Add fields to Repairs\n\n| Field | Example |\n|---|---|\n| Warranty Repair? | Yes |\n| Original Job ID | REP-001 |\n| Supplier Return Needed? | Yes |\n| Warranty Expiry Date | 2025-06-08 |\n\nThis matters because warranty work can otherwise look like “free labour with missing stock.”\n\n---\n\n## 8. You need a physical stock-count routine\n\nEven excellent software cannot replace counting the shelf.\n\nStart simple:\n\n- Count high-value and fast-moving parts weekly.\n- Count everything monthly.\n- Compare physical count against app count.\n- Create an adjustment movement if there is a difference.\n\nExample:\n\n| Part | App Count | Physical Count | Difference | Action |\n|---|---:|---:|---:|---|\n| iPhone 11 OLED Screen | 6",
+      "provider_metadata": {
+        "id": "resp_0ea4a3723bf7b511016aa80fe8c4a887d2a39afb7b309ac53e",
+        "created_at": 1789399016.0,
+        "error": null,
+        "incomplete_details": {
+          "reason": "max_output_tokens"
+        },
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_0ea4a3723bf7b511016aa80fe965b087d2bb1ecd3ad30b7681",
+            "content": [
+              {
+                "annotations": [],
+                "text": "A few important things are easy to overlook when building this for a real repair shop.\n\n## 1. “Stock in the app” is not automatically real stock\n\nThe app is only accurate if staff actually record:\n\n- parts installed;\n- new deliveries received;\n- damaged parts;\n- returns to supplier;\n- parts taken for another purpose;\n- stock corrections after physical counting.\n\nIf technicians install parts but forget to press **Add Part Used**, the system becomes wrong.\n\n### Practical solution\nMake the workflow unavoidable:\n\n> A repair cannot be marked **Completed** until the technician confirms either:\n> - parts used were logged, or\n> - “No part used” was selected.\n\nAdd a required field:\n\n```text\nParts confirmation:\n[ ] Parts logged\n[ ] No part used\n```\n\nThis is more important than adding AI.\n\n---\n\n## 2. A repair can use more than one part\n\nA cracked-screen repair may use:\n\n- screen;\n- adhesive;\n- frame;\n- camera lens;\n- screws;\n- waterproof seal.\n\nIf your app has only one “Part Used” field, it will fail quickly.\n\n### Practical solution\nUse the `PartsUsed` table with one row per item.\n\nFor one repair:\n\n| Job ID | Part | Quantity |\n|---|---|---:|\n| REP-001 | iPhone 11 OLED Screen | 1 |\n| REP-001 | Screen Adhesive | 1 |\n| REP-001 | Camera Lens Glass | 1 |\n\nThis also makes profit tracking possible later.\n\n---\n\n## 3. Reserved stock and installed stock are different\n\nA technician may decide that an iPhone 12 screen will probably be needed. That does not mean it has been installed.\n\nIf you subtract the screen too early, the app may show there is no stock even though it is still on the shelf.\n\n### Better approach\n\nUse three quantities:\n\n| Field | Meaning |\n|---|---|\n| Physical Stock | Actual items in the shop |\n| Reserved Stock | Items set aside for approved repairs |\n| Available Stock | Physical Stock − Reserved Stock |\n\nFor the first version, you can skip reservations entirely and only deduct on installation.\n\nLater, add a **Reserve Part** button for expensive or rare parts.\n\n---\n\n## 4. Parts have variations that look similar but are not interchangeable\n\n“iPhone 11 screen” may not be enough detail. The shop may stock:\n\n- LCD;\n- OLED;\n- soft OLED;\n- refurbished original;\n- black or white;\n- with/without frame;\n- different suppliers and quality grades.\n\nIf staff choose the wrong item, both stock and profit data become wrong.\n\n### Practical solution\nGive every part a clear internal name and code:\n\n```text\nIPH11-OLED-SOFT-BLK\nIPH11-LCD-BLK\nIPH11-BAT-STD\nSAM-A52-SCR-AMOLED\n```\n\nIn the app, show a friendly name:\n\n> iPhone 11 — Soft OLED Screen — Black\n\nDo not use vague dropdown options such as only “iPhone Screen.”\n\n---\n\n## 5. Do not automatically message customers without consent\n\nAutomated WhatsApp, SMS, and marketing messages can create privacy and compliance issues.\n\nSeparate:\n\n- **service messages** — repair received, estimate ready, phone ready;\n- **marketing messages** — review requests, discounts, promotions, reminders.\n\nA customer may reasonably expect service updates. Marketing messages should be optional.\n\n### Practical solution\nIn the Repairs table, add:\n\n| Field | Example |\n|---|---|\n| Service Updates Allowed | Yes |\n| Marketing Consent | No |\n| Preferred Contact Method | WhatsApp |\n\nOnly send review requests or offers when `Marketing Consent = Yes`.\n\nAlso, do not place sensitive details in messages. Say:\n\n> “Your device is ready for collection.”\n\nDo not say:\n\n> “Your iPhone was repaired because the private photos recovery failed…”\n\n---\n\n## 6. The app needs a way to handle mistakes\n\nSomeone will eventually:\n\n- select the wrong part;\n- type quantity `10` instead of `1`;\n- mark a repair completed too early;\n- receive stock twice;\n- lose or damage a part.\n\nIf people can directly edit the stock number, you will lose the audit trail.\n\n### Practical solution\nUse **adjustment records**, not direct edits.\n\nCreate a stock adjustment form:\n\n```text\nPart: iPhone 11 Screen OLED\nAdjustment: -1\nReason: Damaged during installation\nStaff member: Miguel\nNotes: Display arrived defective\n```\n\nThe app creates a movement:\n\n| Type | Quantity Change |\n|---|---:|\n| Damage / Adjustment | -1 |\n\nThe owner can later see exactly why stock changed.\n\n---\n\n## 7. Returns, warranties, and failed repairs need their own flow\n\nA customer may return after a screen replacement because the replacement part failed under warranty.\n\nIf the shop installs another screen, the app should record:\n\n- a new part used;\n- the warranty repair reference;\n- whether the defective part was returned to the supplier;\n- whether supplier credit is expected.\n\n### Add fields to Repairs\n\n| Field | Example |\n|---|---|\n| Warranty Repair? | Yes |\n| Original Job ID | REP-001 |\n| Supplier Return Needed? | Yes |\n| Warranty Expiry Date | 2025-06-08 |\n\nThis matters because warranty work can otherwise look like “free labour with missing stock.”\n\n---\n\n## 8. You need a physical stock-count routine\n\nEven excellent software cannot replace counting the shelf.\n\nStart simple:\n\n- Count high-value and fast-moving parts weekly.\n- Count everything monthly.\n- Compare physical count against app count.\n- Create an adjustment movement if there is a difference.\n\nExample:\n\n| Part | App Count | Physical Count | Difference | Action |\n|---|---:|---:|---:|---|\n| iPhone 11 OLED Screen | 6",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "incomplete",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": null,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "incomplete",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 8006,
+          "input_tokens_details": {
+            "cache_write_tokens": 1216,
+            "cached_tokens": 6787
+          },
+          "output_tokens": 1200,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 9206
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 6,
+      "text": "Start with a **simple, enforceable workflow** before adding AI:\n\n1. Create repair ticket — no stock change.\n2. Technician logs each part actually installed.\n3. App deducts stock once and creates a stock-movement record.\n4. Repair cannot be completed until “parts logged” or “no parts used” is confirmed.\n5. If stock falls below reorder level, create a draft order and alert the owner.\n6. Staff receive deliveries through a form; never manually overwrite stock.\n7. Do weekly physical counts for fast-moving parts and record adjustments.\n\nFor the first MVP, build only:\n\n- `Parts`\n- `Repairs`\n- `PartsUsed`\n- `StockMovements`\n- `PurchaseOrders`\n\nThe key principle:\n\n> The app succeeds only if it matches the shop’s real daily behavior and makes correct data entry easier than skipping it.",
+      "provider_metadata": {
+        "id": "resp_023c2454a841c6a5016aa80ffb528887d28122d653119c765d",
+        "created_at": 1789399035.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_023c2454a841c6a5016aa80ffc285887d2b3ef3be8012dfef8",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Start with a **simple, enforceable workflow** before adding AI:\n\n1. Create repair ticket — no stock change.\n2. Technician logs each part actually installed.\n3. App deducts stock once and creates a stock-movement record.\n4. Repair cannot be completed until “parts logged” or “no parts used” is confirmed.\n5. If stock falls below reorder level, create a draft order and alert the owner.\n6. Staff receive deliveries through a form; never manually overwrite stock.\n7. Do weekly physical counts for fast-moving parts and record adjustments.\n\nFor the first MVP, build only:\n\n- `Parts`\n- `Repairs`\n- `PartsUsed`\n- `StockMovements`\n- `PurchaseOrders`\n\nThe key principle:\n\n> The app succeeds only if it matches the shop’s real daily behavior and makes correct data entry easier than skipping it.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789399039.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 9228,
+          "input_tokens_details": {
+            "cache_write_tokens": 1222,
+            "cached_tokens": 8003
+          },
+          "output_tokens": 179,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 9407
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    }
+  ],
+  "scoring_messages": [
+    {
+      "role": "user",
+      "content": "Please continue the discussion in the way that best fits what came before."
+    },
+    {
+      "role": "assistant",
+      "content": "Yes — for the inventory/repair app, make the repetitive work automatic with a simple trigger → action setup.\n\n## 1. Start with the essential workflow\n\n### When a technician creates a repair\n**Trigger:** New repair form submitted.\n\n**The form asks:**\n- Customer name\n- Phone number\n- Device model\n- Problem\n- Technician\n- Parts used\n- Estimated price\n- Deposit/payment status\n\n**Automatic actions:**\n1. Create a job ID, e.g. `REP-2025-001`.\n2. Set status to `Received`.\n3. Save repair in the Repairs table.\n4. Send customer message:\n\n> “Hi {Name}, we received your {Device Model}. Your repair reference is {Job ID}. We will update you when it is ready.”\n\n5. Notify the assigned technician.\n\n---\n\n## 2. Automatically reduce inventory\n\nDo **not** reduce stock just because someone opens a repair ticket. The part may not actually be used.\n\n**Best trigger:** Technician changes repair status to `In Repair` or `Completed` and confirms the part(s) used.\n\nExample:\n\n| Repair ID | Part Used | Quantity Used |\n|---|---|---:|\n| REP-001 | iPhone 11 Screen | 1 |\n| REP-001 | iPhone 11 Battery | 1 |\n\n**Automation:**\n- Find the matching part in the Inventory table.\n- Subtract `Quantity Used` from current stock.\n- Add a record to a Stock Movements table.\n- Check whether remaining stock is below reorder level.\n\nExample:\n\n| Part | Before | Used | After |\n|---|---:|---:|---:|\n| iPhone 11 Screen | 4 | 1 | 3 |\n\nThis is much safer than simply subtracting one part from a dropdown, especially when one repair needs multiple parts.\n\n---\n\n## 3. Low-stock alert automation\n\nIn your **Inventory** table, add these fields:\n\n| Field | Example |\n|---|---|\n| Part Name | iPhone 11 Screen |\n| Current Quantity | 3 |\n| Reorder Level | 3 |\n| Supplier | PhoneParts Portugal |\n| Supplier Contact | email / WhatsApp |\n| Needs Restock | Yes/No |\n\n### Formula logic\n`Needs Restock = Current Quantity <= Reorder Level`\n\n**Trigger:** Needs Restock changes to “Yes.”\n\n**Actions:**\n1. Send an email or WhatsApp to the owner.\n2. Create a “Purchase Order Needed” record.\n3. Optionally prepare a supplier message.\n\nExample owner alert:\n\n> ⚠️ Low stock: iPhone 11 Screen  \n> Remaining: 3  \n> Reorder level: 3  \n> Supplier: PhoneParts Portugal\n\nExample supplier draft:\n\n> Hello, we need to order 10 × iPhone 11 screens. Please confirm availability and delivery time.\n\nKeep supplier ordering as **approval required** at first. The system suggests it; the owner taps “Approve Order.”\n\n---\n\n## 4. Automatic customer repair updates\n\nCreate repair statuses:\n\n- Received\n- Diagnosing\n- Waiting for customer approval\n- Waiting for parts\n- In repair\n- Ready for pickup\n- Completed\n- Cancelled\n\n### Automation rules\n\n| Trigger | Automatic message |\n|---|---|\n| Status = Received | “We received your device.” |\n| Status = Waiting for customer approval | “The estimate is €{Price}. Reply YES to approve.” |\n| Status = Waiting for parts | “We are waiting for a replacement part. Expected update: {Date}.” |\n| Status = Ready for pickup | “Your device is ready for collection.” |\n| Status = Completed | “Thanks for choosing us. Please leave a review.” |\n\nExample ready-for-pickup message:\n\n> Hi {Customer Name}, your {Device Model} is ready for pickup.  \n> Total: €{Final Price}.  \n> Repair reference: {Job ID}.  \n> Please bring your receipt when collecting it.\n\nUse WhatsApp Business, SMS, or email. For Portugal, WhatsApp will usually get the best response.\n\n---\n\n## 5. Automatic follow-up and review request\n\n**Trigger:** Repair is marked `Completed`.\n\n**Actions:**\n- After 2–3 days: send follow-up.\n- After 7 days: request a Google review.\n- After 90 days: warranty-expiry reminder, if the shop offers warranty.\n\n### Follow-up message\n> Hi {Name}, just checking that your {Device Model} is working well after the repair. Reply here if you need any help.\n\n### Review request\n> Thanks again for choosing {Shop Name}. If you were happy with the repair, a short Google review would really help our local business: {Google Review Link}\n\nDo not send this to customers with an unresolved complaint or a cancelled repair.\n\n---\n\n## 6. Predictive restock automation\n\nAfter the shop has used the app for a month or two, add this.\n\nFor each part, calculate:\n\n- How many units were used in the last 30 days\n- Average daily usage\n- Days until stock runs out\n- Recommended reorder quantity\n\nExample:\n\n| Part | Stock | Used Last 30 Days | Avg/day | Estimated Days Left |\n|---|---:|---:|---:|---:|\n| iPhone 11 Screen | 6 | 15 | 0.5 | 12 days |\n\n**Alert rule:**\nIf estimated days left is below 14 days, notify owner:\n\n> Forecast: iPhone 11 Screens may run out in 12 days based on recent repairs. Recommended order: 10 units.\n\nThis is a useful “AI” feature, but it is really simple inventory forecasting—and very valuable.\n\n---\n\n## 7. Best simple tech stack\n\nFor a first real customer, use:\n\n- **Glide**"
+    },
+    {
+      "role": "user",
+      "content": "Please expand on the most important point you just made."
+    },
+    {
+      "role": "assistant",
+      "content": "The most important point is:\n\n## Only reduce stock when the technician confirms the part was actually used\n\nThis prevents the biggest inventory problem: the app showing stock that is wrong.\n\nA repair may be opened for an iPhone 11 screen replacement, but then:\n\n- the customer does not approve the quote;\n- the device has extra damage;\n- the technician finds the screen was not the issue;\n- the customer takes the phone back;\n- the part is ordered but not installed yet.\n\nIf stock drops immediately when the repair ticket is created, the shop’s inventory becomes inaccurate.\n\n---\n\n# Correct process\n\nUse three separate stages:\n\n1. **Repair created**  \n   The shop records what the customer says is wrong.  \n   No inventory changes yet.\n\n2. **Part reserved or planned** *(optional)*  \n   The technician may select likely parts needed.  \n   Still do not subtract from real stock—unless you build a proper reservation system.\n\n3. **Part actually installed**  \n   Technician confirms the part and quantity used.  \n   Now the app automatically subtracts it from inventory.\n\nThe rule is simple:\n\n> A job request is not stock usage.  \n> A confirmed installed part is stock usage.\n\n---\n\n# The tables you need\n\nA reliable version should have at least four tables.\n\n## 1. Inventory table\n\nThis is the live count of every physical part in the shop.\n\n| Part ID | Part Name | Compatible Models | Quantity in Stock | Reorder Level | Cost Price | Selling Price |\n|---|---|---|---:|---:|---:|---:|\n| P-001 | iPhone 11 Screen OLED | iPhone 11 | 6 | 3 | €32 | €89 |\n| P-002 | iPhone 11 Battery | iPhone 11 | 8 | 3 | €18 | €55 |\n| P-003 | Samsung A52 Screen | Samsung A52 | 2 | 2 | €29 | €79 |\n\nThe important fields are:\n\n- **Quantity in Stock** — how many physical items are available now.\n- **Reorder Level** — the minimum safe amount.\n- **Cost Price** — useful for profit calculations.\n- **Supplier** — useful for reordering later.\n\n---\n\n## 2. Repairs table\n\nThis is one row per customer repair.\n\n| Job ID | Customer | Device | Issue | Technician | Status | Estimated Price | Final Price |\n|---|---|---|---|---|---|---:|---:|\n| REP-001 | João Silva | iPhone 11 | Cracked screen | Miguel | In Repair | €89 | — |\n| REP-002 | Ana Costa | Samsung A52 | Battery drains fast | Pedro | Received | €55 | — |\n\nDo not put only one “Part Used” field directly in this table if you can avoid it.\n\nWhy? One repair can use multiple parts:\n\n- screen;\n- battery;\n- charging connector;\n- adhesive;\n- camera glass;\n- screws or small components.\n\nInstead, use a separate table for the parts used in each repair.\n\n---\n\n## 3. Repair Parts Used table\n\nThis is the most important table for automation.\n\nEach row represents one part used for one repair.\n\n| Usage ID | Job ID | Part ID | Part Name | Quantity Used | Confirmed By | Date | Stock Deducted? |\n|---|---|---|---|---:|---|---|---|\n| USE-001 | REP-001 | P-001 | iPhone 11 Screen OLED | 1 | Miguel | 2025-03-08 | Yes |\n| USE-002 | REP-001 | P-010 | Screen adhesive | 1 | Miguel | 2025-03-08 | Yes |\n\nThis lets the technician select several parts for one repair.\n\nMost importantly, the **Stock Deducted?** field prevents the same item from being deducted twice.\n\n---\n\n## 4. Stock Movements table\n\nThis gives the shop an audit trail: every stock change has a reason.\n\n| Movement ID | Date | Part ID | Type | Quantity Change | Reason | Job ID | Staff |\n|---|---|---|---|---:|---|---|---|\n| MOV-001 | 2025-03-08 | P-001 | Used in repair | -1 | Screen replacement | REP-001 | Miguel |\n| MOV-002 | 2025-03-07 | P-001 | Delivery received | +10 | Supplier delivery | — | Owner |\n| MOV-003 | 2025-03-08 | P-001 | Adjustment | -1 | Damaged part | — | Owner |\n\nThis table is extremely useful when the owner says:\n\n> “The app says we should have six screens, but I can only see five.”\n\nThey can check every movement and find the reason.\n\n---\n\n# Exact automatic workflow\n\nHere is the clean workflow your app should follow.\n\n## Step 1: Technician opens or updates a repair\n\nExample:\n\n- Job ID: `REP-001`\n- Device: iPhone 11\n- Status: `In Repair`\n\nThe technician sees a button:\n\n> **Add part used**\n\nThey select:\n\n- Part: iPhone 11 Screen OLED\n- Quantity: 1\n- Confirm installation: Yes\n\nAt this stage, the app creates a row in **Repair Parts Used**.\n\n---\n\n## Step 2: The app validates the stock\n\nBefore deducting anything, the automation checks:\n\n> Is quantity in stock greater than or equal to quantity requested?\n\nFor example:\n\n- Stock: 6 screens\n- Technician needs: 1 screen\n- Result: allowed\n\nIf there are zero screens left, the app should block or warn the technician:\n\n> Not enough stock available.  \n> Current stock: 0  \n> Needed:"
+    },
+    {
+      "role": "user",
+      "content": "Please examine another important aspect of the discussion."
+    },
+    {
+      "role": "assistant",
+      "content": "Another important aspect is the **low-stock and reorder system**. An inventory app is only valuable if it helps the shop avoid losing repair jobs because a common screen, battery, or charging port is unavailable.\n\n## The goal\n\nThe owner should not need to remember:\n\n- which parts are running low;\n- which models are repaired most often;\n- when to order;\n- which supplier to contact;\n- how many units to buy.\n\nThe app should monitor this automatically and show only clear actions:\n\n> “Order iPhone 11 screens.”  \n> “Samsung A52 batteries are nearly out.”  \n> “You have enough iPhone XR screens for about 9 days.”\n\n---\n\n# Use two stock levels, not one\n\nFor every inventory item, store:\n\n| Field | Meaning | Example |\n|---|---|---:|\n| Current stock | Parts physically available now | 4 |\n| Reorder level | Point at which the owner should order more | 3 |\n| Target stock | Ideal quantity after ordering | 10 |\n| Supplier lead time | Days supplier normally takes to deliver | 2 days |\n| Average weekly usage | Parts used each week | 5 |\n\nThe key difference:\n\n- **Reorder level** means: “Order now.”\n- **Target stock** means: “Order enough to get back to this level.”\n\nExample:\n\n- Current stock: 2 iPhone 11 screens\n- Reorder level: 3\n- Target stock: 10\n\nThe app recommends ordering:\n\n`10 − 2 = 8 screens`\n\nThat is much better than merely sending “low stock.”\n\n---\n\n# Basic low-stock automation\n\nStart with this simple rule:\n\n```text\nIf Current Stock <= Reorder Level\nthen Needs Restock = Yes\n```\n\nExample inventory:\n\n| Part | Current Stock | Reorder Level | Result |\n|---|---:|---:|---|\n| iPhone 11 Screen | 2 | 3 | Order now |\n| iPhone 11 Battery | 6 | 3 | No action |\n| Samsung A52 Screen | 1 | 2 | Order now |\n\nWhen the stock update occurs—because a technician used a part—the automation checks that rule immediately.\n\n## Trigger\n\n> A stock movement is recorded, or Current Stock changes.\n\n## Actions\n\n1. Check whether the part is at/below reorder level.\n2. Mark the part as `Needs Restock`.\n3. Create a reorder task or purchase-order draft.\n4. Send one message to the owner.\n5. Avoid sending the same alert repeatedly.\n\n---\n\n# Avoid notification spam\n\nA bad system sends the owner the same alert every time a repair is updated.\n\nInstead, add these fields:\n\n| Field | Purpose |\n|---|---|\n| Needs Restock | Yes / No |\n| Low Stock Alert Sent | Yes / No |\n| Last Alert Date | Date/time |\n| Reorder Status | Not needed / Draft / Ordered / Received |\n\n### Correct alert rule\n\nSend an alert only when:\n\n```text\nNeeds Restock = Yes\nAND Low Stock Alert Sent = No\n```\n\nAfter sending the alert:\n\n```text\nLow Stock Alert Sent = Yes\nLast Alert Date = now\nReorder Status = Draft\n```\n\nWhen new stock arrives and the quantity goes back above the reorder level, reset:\n\n```text\nNeeds Restock = No\nLow Stock Alert Sent = No\n```\n\nNow the next genuine low-stock event can create a fresh alert.\n\n---\n\n# Create a purchase-order draft automatically\n\nInstead of only notifying the owner, create a **Purchase Orders** table.\n\n| Order ID | Supplier | Part | Qty Recommended | Status | Date Created |\n|---|---|---|---:|---|---|\n| PO-001 | PhoneParts Portugal | iPhone 11 Screen | 8 | Draft | 2025-03-08 |\n| PO-002 | GSM Parts Supplier | Samsung A52 Screen | 9 | Draft | 2025-03-08 |\n\nRecommended quantity formula:\n\n```text\nTarget Stock − Current Stock\n```\n\nExample:\n\n- Target stock = 10\n- Current stock = 2\n- Recommended quantity = 8\n\nThe owner sees a screen called **Parts to Order**, checks the suggested quantities, and taps:\n\n> Approve order\n\nAt first, do not automatically place supplier orders. Supplier stock, prices, and delivery terms may change. Human approval prevents costly mistakes.\n\n---\n\n# Supplier information\n\nIn the Inventory table, keep supplier details per part.\n\n| Part | Preferred Supplier | Supplier Phone | Supplier Email | Supplier Part Code |\n|---|---|---|---|---|\n| iPhone 11 Screen OLED | PhoneParts Portugal | +351... | orders@... | IP11-OLED-BLK |\n| Samsung A52 Battery | GSM Wholesale | +351... | sales@... | SA52-BAT-01 |\n\nWhen the owner approves an order, the app can generate a ready-made WhatsApp or email message:\n\n> Hello, I would like to order:  \n> - 8 × iPhone 11 OLED Screens, part code IP11-OLED-BLK  \n> - 5 × iPhone 11 Batteries, part code IP11-BAT-02  \n>   \n> Please confirm availability, total price, and delivery time.  \n> Thank you, {Shop Name}.\n\nThis saves time without pretending the order was placed automatically.\n\n---\n\n# Receiving stock correctly\n\nWhen a supplier delivery arrives, the owner should not manually overwrite the stock number.\n\nThey should use a form:\n\n> **Receive stock delivery**\n\nFields:\n\n- Supplier\n- Part\n- Quantity received\n- Unit cost\n- Invoice number\n- Delivery date\n- Notes, such as damaged/missing items\n\nExample:\n\n| Part | Current Stock Before | Delivery | New Stock |\n|---|---:|---:|---:|\n"
+    },
+    {
+      "role": "user",
+      "content": "Please make the discussion more concrete and useful."
+    },
+    {
+      "role": "assistant",
+      "content": "Build this as a **small working system for one real phone repair shop**, not as a big “AI inventory platform.”\n\n## Your first version: exactly what it should do\n\nThe shop owner should be able to:\n\n1. Add a repair.\n2. Select parts actually used.\n3. Automatically reduce stock.\n4. See low-stock items.\n5. Receive a WhatsApp/email low-stock alert.\n6. Add newly delivered stock.\n7. Mark a repair ready and send the customer a message.\n\nThat is enough to charge for a first version.\n\n---\n\n# Concrete app structure\n\nUse **Glide + Google Sheets** for a fast demo, or **Glide Tables** if you want everything inside Glide.\n\nCreate these 5 sheets/tables.\n\n---\n\n## Table 1 — `Parts`\n\nAdd these columns:\n\n| Column | Example |\n|---|---|\n| `PartID` | PART-001 |\n| `PartName` | iPhone 11 Screen OLED |\n| `Brand` | Apple |\n| `CompatibleModels` | iPhone 11 |\n| `QuantityInStock` | 6 |\n| `ReorderLevel` | 3 |\n| `TargetStock` | 10 |\n| `CostPrice` | 32 |\n| `SellingPrice` | 89 |\n| `SupplierName` | PhoneParts Portugal |\n| `SupplierWhatsApp` | +351XXXXXXXXX |\n| `LowStock` | No |\n| `AlertSent` | No |\n\nEnter 15–30 common parts for the shop’s most common repairs. Do not try to enter every possible phone part on day one.\n\nTypical starting items:\n\n- iPhone 11 / 12 / 13 screens\n- iPhone 11 / 12 / 13 batteries\n- Samsung A-series screens\n- Samsung A-series charging ports\n- USB-C charging connectors\n- Lightning charging connectors\n- camera lens glass\n- screen adhesive\n- back-glass adhesive\n\n---\n\n## Table 2 — `Repairs`\n\n| Column | Example |\n|---|---|\n| `JobID` | REP-001 |\n| `DateReceived` | 2025-03-08 |\n| `CustomerName` | João Silva |\n| `CustomerPhone` | +351XXXXXXXXX |\n| `DeviceModel` | iPhone 11 |\n| `Issue` | Cracked screen |\n| `Technician` | Miguel |\n| `Status` | In Repair |\n| `EstimatedPrice` | 89 |\n| `FinalPrice` | 89 |\n| `Paid` | No |\n| `ReadyMessageSent` | No |\n| `Notes` | Face ID working before repair |\n\nFor the status field, use only these choices:\n\n```text\nReceived\nDiagnosing\nWaiting Approval\nWaiting Parts\nIn Repair\nReady for Pickup\nCompleted\nCancelled\n```\n\n---\n\n## Table 3 — `PartsUsed`\n\nEvery time a technician installs a part, create one row here.\n\n| Column | Example |\n|---|---|\n| `UsageID` | USE-001 |\n| `JobID` | REP-001 |\n| `PartID` | PART-001 |\n| `PartName` | iPhone 11 Screen OLED |\n| `QuantityUsed` | 1 |\n| `Technician` | Miguel |\n| `DateUsed` | 2025-03-08 |\n| `StockProcessed` | No |\n\nThis is the table that controls safe stock deduction.\n\n---\n\n## Table 4 — `StockMovements`\n\nThis is the history of every change.\n\n| Column | Example |\n|---|---|\n| `MovementID` | MOV-001 |\n| `Date` | 2025-03-08 |\n| `PartID` | PART-001 |\n| `PartName` | iPhone 11 Screen OLED |\n| `MovementType` | Used in Repair |\n| `QuantityChange` | -1 |\n| `JobID` | REP-001 |\n| `Notes` | Screen replacement |\n| `Staff` | Miguel |\n\nNever delete stock movements. If something was entered incorrectly, create a correcting movement rather than hiding the mistake.\n\n---\n\n## Table 5 — `PurchaseOrders`\n\n| Column | Example |\n|---|---|\n| `POID` | PO-001 |\n| `DateCreated` | 2025-03-08 |\n| `PartID` | PART-001 |\n| `PartName` | iPhone 11 Screen OLED |\n| `CurrentStock` | 2 |\n| `TargetStock` | 10 |\n| `SuggestedQuantity` | 8 |\n| `SupplierName` | PhoneParts Portugal |\n| `Status` | Draft |\n| `ApprovedByOwner` | No |\n| `Received` | No |\n\n---\n\n# The exact repair workflow for staff\n\n## Example: customer brings an iPhone 11 with a broken screen\n\n### Step 1 — Reception creates a repair\n\nThey press **New Repair** and fill in:\n\n```text\nCustomer: João Silva\nPhone: +351...\nDevice: iPhone 11\nIssue: Cracked screen\nTechnician: Miguel\nEstimated price: €89\nStatus: Received\n```\n\nThe app automatically creates:\n\n```text\nJob ID: REP-001\nDate received: today\n```\n\nOptional automatic WhatsApp:\n\n> Hi João, we received your iPhone 11 for assessment. Your repair reference is REP-001. We will contact you with an update.\n\nNo stock changes happen here.\n\n---\n\n### Step 2 — Technician starts work\n\nMiguel opens `REP-001` and changes status:\n\n```text\nReceived → In Repair\n```\n\nThen presses:\n\n> Add Part Used\n\nHe selects:\n\n```text\nPart: iPhone 11 Screen OLED\nQuantity: 1\n```\n\nThis creates:\n\n```text\nUsage ID: USE-001\nStock Process"
+    },
+    {
+      "role": "user",
+      "content": "Please consider what might be overlooked or misunderstood."
+    },
+    {
+      "role": "assistant",
+      "content": "A few important things are easy to overlook when building this for a real repair shop.\n\n## 1. “Stock in the app” is not automatically real stock\n\nThe app is only accurate if staff actually record:\n\n- parts installed;\n- new deliveries received;\n- damaged parts;\n- returns to supplier;\n- parts taken for another purpose;\n- stock corrections after physical counting.\n\nIf technicians install parts but forget to press **Add Part Used**, the system becomes wrong.\n\n### Practical solution\nMake the workflow unavoidable:\n\n> A repair cannot be marked **Completed** until the technician confirms either:\n> - parts used were logged, or\n> - “No part used” was selected.\n\nAdd a required field:\n\n```text\nParts confirmation:\n[ ] Parts logged\n[ ] No part used\n```\n\nThis is more important than adding AI.\n\n---\n\n## 2. A repair can use more than one part\n\nA cracked-screen repair may use:\n\n- screen;\n- adhesive;\n- frame;\n- camera lens;\n- screws;\n- waterproof seal.\n\nIf your app has only one “Part Used” field, it will fail quickly.\n\n### Practical solution\nUse the `PartsUsed` table with one row per item.\n\nFor one repair:\n\n| Job ID | Part | Quantity |\n|---|---|---:|\n| REP-001 | iPhone 11 OLED Screen | 1 |\n| REP-001 | Screen Adhesive | 1 |\n| REP-001 | Camera Lens Glass | 1 |\n\nThis also makes profit tracking possible later.\n\n---\n\n## 3. Reserved stock and installed stock are different\n\nA technician may decide that an iPhone 12 screen will probably be needed. That does not mean it has been installed.\n\nIf you subtract the screen too early, the app may show there is no stock even though it is still on the shelf.\n\n### Better approach\n\nUse three quantities:\n\n| Field | Meaning |\n|---|---|\n| Physical Stock | Actual items in the shop |\n| Reserved Stock | Items set aside for approved repairs |\n| Available Stock | Physical Stock − Reserved Stock |\n\nFor the first version, you can skip reservations entirely and only deduct on installation.\n\nLater, add a **Reserve Part** button for expensive or rare parts.\n\n---\n\n## 4. Parts have variations that look similar but are not interchangeable\n\n“iPhone 11 screen” may not be enough detail. The shop may stock:\n\n- LCD;\n- OLED;\n- soft OLED;\n- refurbished original;\n- black or white;\n- with/without frame;\n- different suppliers and quality grades.\n\nIf staff choose the wrong item, both stock and profit data become wrong.\n\n### Practical solution\nGive every part a clear internal name and code:\n\n```text\nIPH11-OLED-SOFT-BLK\nIPH11-LCD-BLK\nIPH11-BAT-STD\nSAM-A52-SCR-AMOLED\n```\n\nIn the app, show a friendly name:\n\n> iPhone 11 — Soft OLED Screen — Black\n\nDo not use vague dropdown options such as only “iPhone Screen.”\n\n---\n\n## 5. Do not automatically message customers without consent\n\nAutomated WhatsApp, SMS, and marketing messages can create privacy and compliance issues.\n\nSeparate:\n\n- **service messages** — repair received, estimate ready, phone ready;\n- **marketing messages** — review requests, discounts, promotions, reminders.\n\nA customer may reasonably expect service updates. Marketing messages should be optional.\n\n### Practical solution\nIn the Repairs table, add:\n\n| Field | Example |\n|---|---|\n| Service Updates Allowed | Yes |\n| Marketing Consent | No |\n| Preferred Contact Method | WhatsApp |\n\nOnly send review requests or offers when `Marketing Consent = Yes`.\n\nAlso, do not place sensitive details in messages. Say:\n\n> “Your device is ready for collection.”\n\nDo not say:\n\n> “Your iPhone was repaired because the private photos recovery failed…”\n\n---\n\n## 6. The app needs a way to handle mistakes\n\nSomeone will eventually:\n\n- select the wrong part;\n- type quantity `10` instead of `1`;\n- mark a repair completed too early;\n- receive stock twice;\n- lose or damage a part.\n\nIf people can directly edit the stock number, you will lose the audit trail.\n\n### Practical solution\nUse **adjustment records**, not direct edits.\n\nCreate a stock adjustment form:\n\n```text\nPart: iPhone 11 Screen OLED\nAdjustment: -1\nReason: Damaged during installation\nStaff member: Miguel\nNotes: Display arrived defective\n```\n\nThe app creates a movement:\n\n| Type | Quantity Change |\n|---|---:|\n| Damage / Adjustment | -1 |\n\nThe owner can later see exactly why stock changed.\n\n---\n\n## 7. Returns, warranties, and failed repairs need their own flow\n\nA customer may return after a screen replacement because the replacement part failed under warranty.\n\nIf the shop installs another screen, the app should record:\n\n- a new part used;\n- the warranty repair reference;\n- whether the defective part was returned to the supplier;\n- whether supplier credit is expected.\n\n### Add fields to Repairs\n\n| Field | Example |\n|---|---|\n| Warranty Repair? | Yes |\n| Original Job ID | REP-001 |\n| Supplier Return Needed? | Yes |\n| Warranty Expiry Date | 2025-06-08 |\n\nThis matters because warranty work can otherwise look like “free labour with missing stock.”\n\n---\n\n## 8. You need a physical stock-count routine\n\nEven excellent software cannot replace counting the shelf.\n\nStart simple:\n\n- Count high-value and fast-moving parts weekly.\n- Count everything monthly.\n- Compare physical count against app count.\n- Create an adjustment movement if there is a difference.\n\nExample:\n\n| Part | App Count | Physical Count | Difference | Action |\n|---|---:|---:|---:|---|\n| iPhone 11 OLED Screen | 6"
+    },
+    {
+      "role": "user",
+      "content": "Please give the clearest concise response that would help someone continue from here."
+    },
+    {
+      "role": "assistant",
+      "content": "Start with a **simple, enforceable workflow** before adding AI:\n\n1. Create repair ticket — no stock change.\n2. Technician logs each part actually installed.\n3. App deducts stock once and creates a stock-movement record.\n4. Repair cannot be completed until “parts logged” or “no parts used” is confirmed.\n5. If stock falls below reorder level, create a draft order and alert the owner.\n6. Staff receive deliveries through a form; never manually overwrite stock.\n7. Do weekly physical counts for fast-moving parts and record adjustments.\n\nFor the first MVP, build only:\n\n- `Parts`\n- `Repairs`\n- `PartsUsed`\n- `StockMovements`\n- `PurchaseOrders`\n\nThe key principle:\n\n> The app succeeds only if it matches the shop’s real daily behavior and makes correct data entry easier than skipping it."
+    }
+  ],
+  "historical_context_in_scoring": false
+}

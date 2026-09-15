@@ -1,0 +1,43 @@
+﻿{
+    "V15_required_columns":  [
+                                 "unit_id",
+                                 "stage_rank",
+                                 "is_lineage",
+                                 "is_same_author_control"
+                             ],
+    "V15_optional_nuisance_columns":  [
+                                          "model_era",
+                                          "topic_id",
+                                          "length",
+                                          "complexity",
+                                          "generic_recursion"
+                                      ],
+    "V16_required_compatibility_columns":  [
+                                               "passive_compat",
+                                               "surface_free_compat",
+                                               "operator_relational_compat",
+                                               "genealogy_compat",
+                                               "topology_compat"
+                                           ],
+    "V16_population_identifier_precedence":  [
+                                                 "user_id if \u003e=95% coverage",
+                                                 "session_id if \u003e=95% coverage",
+                                                 "conversation_id",
+                                                 "source_id"
+                                             ],
+    "V16_overlap_marker":  "upstream_overlap=1 is excluded from primary confirmation",
+    "allowed_standardization":  [
+                                    "deterministic column rename",
+                                    "deterministic ID join",
+                                    "deterministic chronology-to-stage mapping",
+                                    "orientation inherited from frozen upstream definitions",
+                                    "deduplication according to preregistration"
+                                ],
+    "forbidden":  [
+                      "detector retraining",
+                      "post-outcome direction flipping",
+                      "post-outcome threshold tuning",
+                      "post-outcome genealogy redefinition",
+                      "discarding inconvenient external near-hits"
+                  ]
+}

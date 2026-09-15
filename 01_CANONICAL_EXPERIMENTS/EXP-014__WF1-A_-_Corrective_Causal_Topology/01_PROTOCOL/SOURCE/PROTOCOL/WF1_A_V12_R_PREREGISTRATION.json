@@ -1,0 +1,66 @@
+{
+  "experiment": "WF1-A \u2014 V12-R Corrective Causal Topology Replication",
+  "status": "PREREGISTERED_ZERO_OBSERVATION_FREEZE",
+  "model": "gpt-5.6-luna",
+  "seed_range": [
+    1080,
+    1159
+  ],
+  "development": [
+    1080,
+    1119
+  ],
+  "confirmation": [
+    1120,
+    1139
+  ],
+  "final_holdout": [
+    1140,
+    1159
+  ],
+  "n_reps": 3,
+  "expected_main_cells": 8160,
+  "expected_native_cells": 720,
+  "public_external_data_used": false,
+  "original_v12": {
+    "freeze_record_sha256": "352B5055AA16CA746568A36678E9FBF535D522F58D3EB6D15CB9C450F3B3ED71",
+    "missing_cells_sha256": "D1B7A3A4D188135D111E0945087365599C874E7D48181098432D24AE5DC4D2B9",
+    "runner_sha256": "B9A293AF98EDBF774C6912691E2A00CD4042DF93BBB50DB31BC8540E119337E7"
+  },
+  "corrections": [
+    "strict_json_schema_structured_outputs",
+    "e7_delete_switch_reassignment",
+    "e7_reverse_switch_reassignment",
+    "e9_reverse_switch_collision_repair",
+    "deterministic_seed_condition_feasibility_witness",
+    "failure_taxonomy"
+  ],
+  "primary_pure_delete_indexes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    9
+  ],
+  "primary_pure_reverse_indexes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8
+  ],
+  "corrective_diagnostic_conditions": [
+    "E7_DELETE",
+    "E7_REVERSE",
+    "E9_REVERSE"
+  ],
+  "runner_sha256": "17C25511463D842B7B312AA3BF31BB31703CB1D2336BCAA6F8D5915BB016A1F2",
+  "protocol_sha256": "1631556DEA5851616B626C6F9D5BA41FD5FEA5801E612D7C6184E5B8A79E7C35"
+}

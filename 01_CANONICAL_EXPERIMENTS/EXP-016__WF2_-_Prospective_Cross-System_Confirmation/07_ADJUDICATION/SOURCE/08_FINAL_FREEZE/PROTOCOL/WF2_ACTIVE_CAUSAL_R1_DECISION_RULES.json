@@ -1,0 +1,130 @@
+{
+  "active_track_mixed": "Exactly 1 provider passes, or strong-gate components disagree materially across providers.",
+  "active_track_negative": "No provider passes AND at least 2 providers show reversal on both aggregate lesion families.",
+  "active_track_positive": "At least 2 of the 3 preregistered providers pass the provider strong gate.",
+  "cell_count": 1680,
+  "historical_profile_secondary_checks": {
+    "expected_positive_direction": [
+      "D_ALL_DIRECTION_REVERSED",
+      "O_ORDER_SHUFFLED",
+      "M_SWITCH_REASSIGNED"
+    ],
+    "historically_nonpositive_primary_contrasts": [
+      "P_ANCHOR_REASSIGNED",
+      "T_TERMINAL_CHANGED"
+    ],
+    "historically_nonreplicated_individual_edge": "E8_REVERSE"
+  },
+  "historical_source_model": "gpt-5.6-luna",
+  "important_design_note": "This is a prospective cross-provider replication, not a literal repetition of the original three-rep WF1-A Luna experiment. Provider replication replaces within-cell repetition as the principal new replication axis.",
+  "interpretation_boundary": "Black-box behavioral structural evidence only. Model-native module is an indirect output-based proxy, not direct inspection of weights, activations, hidden circuits, training data, or global uniqueness.",
+  "otherwise": "NULL_INCONCLUSIVE",
+  "prospective_models": {
+    "ANTHROPIC": {
+      "model": "claude-sonnet-5",
+      "role": "INDEPENDENT_PROVIDER_REPLICATION"
+    },
+    "GOOGLE": {
+      "model": "gemini-3.8-flash",
+      "role": "INDEPENDENT_PROVIDER_REPLICATION"
+    },
+    "OPENAI": {
+      "model": "gpt-5.6-terra",
+      "role": "WITHIN_PROVIDER_NEW_MODEL_REPLICATION"
+    }
+  },
+  "provider_strong_gate": {
+    "hard_control_auc": ">= 0.85",
+    "pure8_reverse": "mean excess distance > 0 and one-sided sign-flip p < 0.01",
+    "pure9_delete": "mean excess distance > 0 and one-sided sign-flip p < 0.01",
+    "specificity": "R, X and Y each excess distance > 0 with Holm-adjusted p < 0.01"
+  },
+  "responses_per_seed_condition_provider": 1,
+  "scientific_role": "Prospective cross-provider replication of the strongest frozen WF1-A causal/relational-topology authority. This is separate from, and cannot rescue, the passive V13/V14/V17 track.",
+  "seeds": [
+    1140,
+    1141,
+    1142,
+    1143,
+    1144,
+    1145,
+    1146,
+    1147,
+    1148,
+    1149,
+    1150,
+    1151,
+    1152,
+    1153,
+    1154,
+    1155,
+    1156,
+    1157,
+    1158,
+    1159
+  ],
+  "selected_conditions": [
+    "A_AUTHENTIC",
+    "I_ISOMORPHIC_RELABEL",
+    "F_SURFACE_FORMAT_CONTROL",
+    "D_ALL_DIRECTION_REVERSED",
+    "O_ORDER_SHUFFLED",
+    "M_SWITCH_REASSIGNED",
+    "P_ANCHOR_REASSIGNED",
+    "T_TERMINAL_CHANGED",
+    "R_DEGREE_MATCHED_REWIRE",
+    "X_COMPLEXITY_MATCHED",
+    "Y_TOPOLOGY_MATCHED",
+    "E0_DELETE",
+    "E1_DELETE",
+    "E2_DELETE",
+    "E3_DELETE",
+    "E4_DELETE",
+    "E5_DELETE",
+    "E6_DELETE",
+    "E8_DELETE",
+    "E9_DELETE",
+    "E0_REVERSE",
+    "E1_REVERSE",
+    "E2_REVERSE",
+    "E3_REVERSE",
+    "E4_REVERSE",
+    "E5_REVERSE",
+    "E6_REVERSE",
+    "E8_REVERSE"
+  ],
+  "source_partition": "WF1-A original final-holdout seeds 1140-1159",
+  "strong_gate_families": {
+    "pure_delete": [
+      "E0_DELETE",
+      "E1_DELETE",
+      "E2_DELETE",
+      "E3_DELETE",
+      "E4_DELETE",
+      "E5_DELETE",
+      "E6_DELETE",
+      "E8_DELETE",
+      "E9_DELETE"
+    ],
+    "pure_reverse": [
+      "E0_REVERSE",
+      "E1_REVERSE",
+      "E2_REVERSE",
+      "E3_REVERSE",
+      "E4_REVERSE",
+      "E5_REVERSE",
+      "E6_REVERSE",
+      "E8_REVERSE"
+    ],
+    "specificity": [
+      "R_DEGREE_MATCHED_REWIRE",
+      "X_COMPLEXITY_MATCHED",
+      "Y_TOPOLOGY_MATCHED"
+    ],
+    "surface_nuisance": [
+      "A_AUTHENTIC",
+      "I_ISOMORPHIC_RELABEL",
+      "F_SURFACE_FORMAT_CONTROL"
+    ]
+  }
+}

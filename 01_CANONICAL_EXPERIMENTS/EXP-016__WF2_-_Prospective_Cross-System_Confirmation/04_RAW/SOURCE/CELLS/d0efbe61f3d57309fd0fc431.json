@@ -1,0 +1,685 @@
+{
+  "cell_id": "d0efbe61f3d57309fd0fc431",
+  "provider": "OPENAI",
+  "organization": "OpenAI",
+  "model_requested": "gpt-5.6-terra",
+  "condition": "BASELINE",
+  "blind_context_id": "b102030dcd3f0eef493156fa",
+  "status": "COMPLETE",
+  "failure": null,
+  "provider_responses": [
+    {
+      "turn": 1,
+      "text": "If Convocore sends you back to its page but still shows **“Not connected,”** the Airtable OAuth connection is likely failing on Convocore’s side—not necessarily because your Airtable account is wrong.\n\nUse this quick checklist first:\n\n1. **In Airtable, confirm you approved access**\n   - Go to Airtable → **Developer Hub / Personal access tokens**\n   - Ensure the token has:\n     - `data.records:read`\n     - `data.records:write`\n   - Ensure it has access to the specific base you created.\n\n2. **Allow browser pop-ups and third-party cookies**\n   - The Airtable authorization window may close correctly but Convocore may fail to save the connection if cookies/pop-ups are blocked.\n   - Try Chrome in Incognito mode, allow pop-ups for Convocore and Airtable, then reconnect.\n\n3. **Try disconnecting/reconnecting**\n   - In Convocore integrations, remove Airtable if it appears partially connected.\n   - Reconnect and select the correct Airtable workspace/base during authorization.\n\nBut if it still returns as **Not connected**, don’t spend too long fighting it. Use **Make** or **Zapier** between Convocore and Airtable. It is often more reliable and still does exactly what you need.\n\n### Best fallback: Make webhook → Airtable\n\n1. Create a free Make account.\n2. Create a new scenario.\n3. Add module: **Webhooks → Custom webhook**.\n4. Copy the webhook URL Make gives you.\n5. In Convocore, find **Webhooks**, **Outgoing webhook**, or an automation that runs after a booking/lead is collected.\n6. Paste the Make webhook URL there.\n7. In Make, add: **Airtable → Create a record**.\n8. Connect Airtable using your `pat...` personal access token.\n9. Select:\n   - Base: `Repair Shop CRM`\n   - Table: `Leads`\n10. Map the booking fields into Airtable.\n\nUse a payload like this in Convocore if it lets you set the body:\n\n```json\n{\n  \"name\": \"{{user.name}}\",\n  \"phone_number\": \"{{user.phone}}\",\n  \"device_model\": \"{{device.model}}\",\n  \"service_type\": \"{{repair.type}}\",\n  \"price\": \"{{price}}\",\n  \"booking_date\": \"{{booking.time}}\",\n  \"notes\": \"{{notes}}\",\n  \"language\": \"{{conversation_language}}\",\n  \"status\": \"Booked\"\n}\n```\n\nThen map those values in Make to your Airtable fields:\n\n| Airtable column | Webhook value |\n|---|---|\n| Name | `name` |\n| Phone Number | `phone_number` |\n| Device / Model | `device_model` |\n| Service Type | `service_type` |\n| Price | `price` |\n| Booking Date | `booking_date` |\n| Notes | `notes` |\n| Language | `language` |\n| Status | `status` |\n\nThis avoids the broken direct connection completely. Every lead or booking the chatbot collects will still be saved in Airtable automatically.",
+      "provider_metadata": {
+        "id": "resp_04f3a1fb9389d201016aa92efea49c87d28f966444d5b5f944",
+        "created_at": 1789472510.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_04f3a1fb9389d201016aa92eff404887d2a8f3c5fcd9823d45",
+            "content": [
+              {
+                "annotations": [],
+                "text": "If Convocore sends you back to its page but still shows **“Not connected,”** the Airtable OAuth connection is likely failing on Convocore’s side—not necessarily because your Airtable account is wrong.\n\nUse this quick checklist first:\n\n1. **In Airtable, confirm you approved access**\n   - Go to Airtable → **Developer Hub / Personal access tokens**\n   - Ensure the token has:\n     - `data.records:read`\n     - `data.records:write`\n   - Ensure it has access to the specific base you created.\n\n2. **Allow browser pop-ups and third-party cookies**\n   - The Airtable authorization window may close correctly but Convocore may fail to save the connection if cookies/pop-ups are blocked.\n   - Try Chrome in Incognito mode, allow pop-ups for Convocore and Airtable, then reconnect.\n\n3. **Try disconnecting/reconnecting**\n   - In Convocore integrations, remove Airtable if it appears partially connected.\n   - Reconnect and select the correct Airtable workspace/base during authorization.\n\nBut if it still returns as **Not connected**, don’t spend too long fighting it. Use **Make** or **Zapier** between Convocore and Airtable. It is often more reliable and still does exactly what you need.\n\n### Best fallback: Make webhook → Airtable\n\n1. Create a free Make account.\n2. Create a new scenario.\n3. Add module: **Webhooks → Custom webhook**.\n4. Copy the webhook URL Make gives you.\n5. In Convocore, find **Webhooks**, **Outgoing webhook**, or an automation that runs after a booking/lead is collected.\n6. Paste the Make webhook URL there.\n7. In Make, add: **Airtable → Create a record**.\n8. Connect Airtable using your `pat...` personal access token.\n9. Select:\n   - Base: `Repair Shop CRM`\n   - Table: `Leads`\n10. Map the booking fields into Airtable.\n\nUse a payload like this in Convocore if it lets you set the body:\n\n```json\n{\n  \"name\": \"{{user.name}}\",\n  \"phone_number\": \"{{user.phone}}\",\n  \"device_model\": \"{{device.model}}\",\n  \"service_type\": \"{{repair.type}}\",\n  \"price\": \"{{price}}\",\n  \"booking_date\": \"{{booking.time}}\",\n  \"notes\": \"{{notes}}\",\n  \"language\": \"{{conversation_language}}\",\n  \"status\": \"Booked\"\n}\n```\n\nThen map those values in Make to your Airtable fields:\n\n| Airtable column | Webhook value |\n|---|---|\n| Name | `name` |\n| Phone Number | `phone_number` |\n| Device / Model | `device_model` |\n| Service Type | `service_type` |\n| Price | `price` |\n| Booking Date | `booking_date` |\n| Notes | `notes` |\n| Language | `language` |\n| Status | `status` |\n\nThis avoids the broken direct connection completely. Every lead or booking the chatbot collects will still be saved in Airtable automatically.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789472517.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 2983,
+          "input_tokens_details": {
+            "cache_write_tokens": 2980,
+            "cached_tokens": 0
+          },
+          "output_tokens": 643,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 3626
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 2,
+      "text": "The most important point is: **you do not need Convocore’s direct Airtable connection to work in order to save customer names, phone numbers, and bookings.**\n\nUse **Make** or **Zapier as a bridge** instead.\n\n### Why this matters\n\nConvocore’s Airtable “Connect” button uses an authorization connection. If it keeps returning you to Convocore and saying **Not connected**, that means the authorization is not being saved correctly.\n\nYou could spend hours trying different browsers, tokens, permissions, and reconnect attempts—but it may simply be a Convocore integration issue.\n\nA webhook bridge avoids that problem:\n\n```text\nCustomer chats with bot\n        ↓\nConvocore collects name, phone, repair, date\n        ↓\nConvocore sends data to a Make webhook\n        ↓\nMake creates a new row in Airtable\n        ↓\nYou see the customer in your Airtable CRM\n```\n\nSo Convocore does its job: talking to the customer and collecting information.\n\nMake does its job: moving the data.\n\nAirtable does its job: storing your customer database.\n\n### What you need to look for in Convocore\n\nLook in Convocore for any setting called something like:\n\n- **Webhooks**\n- **Outgoing webhook**\n- **HTTP request**\n- **Automation**\n- **After booking action**\n- **Lead capture action**\n- **API integration**\n- **Send data to URL**\n\nYou do **not** need to find “Airtable” specifically. You only need a place where Convocore can send information to a URL.\n\n### The simplest Make setup\n\n#### 1. Create a webhook in Make\n\n1. Go to Make and create a new scenario.\n2. Click the large `+`.\n3. Search for **Webhooks**.\n4. Choose **Custom webhook**.\n5. Click **Add**.\n6. Name it something like:\n\n```text\nConvocore New Booking\n```\n\n7. Copy the webhook URL Make generates.\n\nIt will look similar to:\n\n```text\nhttps://hook.eu1.make.com/xxxxxxxxxxxxxxxxxxxx\n```\n\nThat URL is where Convocore will send the customer details.\n\n#### 2. Paste that URL in Convocore\n\nIn Convocore’s webhook/automation section:\n\n- Method: `POST`\n- URL: paste the Make webhook URL\n- Content type: `application/json`\n\nIf Convocore lets you set a request body, use:\n\n```json\n{\n  \"name\": \"{{user.name}}\",\n  \"phone_number\": \"{{user.phone}}\",\n  \"device_model\": \"{{device.model}}\",\n  \"service_type\": \"{{repair.type}}\",\n  \"price\": \"{{price}}\",\n  \"booking_date\": \"{{booking.time}}\",\n  \"notes\": \"{{notes}}\",\n  \"status\": \"Booked\"\n}\n```\n\nImportant: the exact `{{variables}}` may be different in Convocore. Use the variables Convocore provides in its variable picker. The important thing is that Make receives values for name, phone, service, and appointment date.\n\n#### 3. Send one test booking\n\nIn Make, click **Run once**.\n\nThen go to your chatbot and make a fake booking, for example:\n\n```text\nName: Test Customer\nPhone: +351 912 345 678\nDevice: iPhone 11\nService: Screen replacement\nDate: 20 November, 15:00\n```\n\nWhen Convocore sends the data, Make will capture it. You should see the fields appear inside the Make webhook module.\n\n#### 4. Add Airtable after the webhook\n\nAfter the Webhook module in Make:\n\n1. Click `+`.\n2. Search **Airtable**.\n3. Choose **Create a record**.\n4. Connect Airtable with your Personal Access Token (`pat...`).\n5. Select your base: `Repair Shop CRM`.\n6. Select your table: `Leads`.\n7. Map the received webhook data to your columns.\n\nFor example:\n\n| Airtable field | Value from Make webhook |\n|---|---|\n| Name | `name` |\n| Phone Number | `phone_number` |\n| Device / Model | `device_model` |\n| Service Type | `service_type` |\n| Price | `price` |\n| Booking Date | `booking_date` |\n| Notes | `notes` |\n| Status | `status` |\n\nThen turn the scenario **ON**.\n\nFrom that point onward, every booking can be added automatically to Airtable, even though Convocore itself still says Airtable is “Not connected.”",
+      "provider_metadata": {
+        "id": "resp_07626896d070426b016aa92f06aaf487d2a9c8d007348852ac",
+        "created_at": 1789472518.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_07626896d070426b016aa92f07431c87d2b60d55c70e53fa12",
+            "content": [
+              {
+                "annotations": [],
+                "text": "The most important point is: **you do not need Convocore’s direct Airtable connection to work in order to save customer names, phone numbers, and bookings.**\n\nUse **Make** or **Zapier as a bridge** instead.\n\n### Why this matters\n\nConvocore’s Airtable “Connect” button uses an authorization connection. If it keeps returning you to Convocore and saying **Not connected**, that means the authorization is not being saved correctly.\n\nYou could spend hours trying different browsers, tokens, permissions, and reconnect attempts—but it may simply be a Convocore integration issue.\n\nA webhook bridge avoids that problem:\n\n```text\nCustomer chats with bot\n        ↓\nConvocore collects name, phone, repair, date\n        ↓\nConvocore sends data to a Make webhook\n        ↓\nMake creates a new row in Airtable\n        ↓\nYou see the customer in your Airtable CRM\n```\n\nSo Convocore does its job: talking to the customer and collecting information.\n\nMake does its job: moving the data.\n\nAirtable does its job: storing your customer database.\n\n### What you need to look for in Convocore\n\nLook in Convocore for any setting called something like:\n\n- **Webhooks**\n- **Outgoing webhook**\n- **HTTP request**\n- **Automation**\n- **After booking action**\n- **Lead capture action**\n- **API integration**\n- **Send data to URL**\n\nYou do **not** need to find “Airtable” specifically. You only need a place where Convocore can send information to a URL.\n\n### The simplest Make setup\n\n#### 1. Create a webhook in Make\n\n1. Go to Make and create a new scenario.\n2. Click the large `+`.\n3. Search for **Webhooks**.\n4. Choose **Custom webhook**.\n5. Click **Add**.\n6. Name it something like:\n\n```text\nConvocore New Booking\n```\n\n7. Copy the webhook URL Make generates.\n\nIt will look similar to:\n\n```text\nhttps://hook.eu1.make.com/xxxxxxxxxxxxxxxxxxxx\n```\n\nThat URL is where Convocore will send the customer details.\n\n#### 2. Paste that URL in Convocore\n\nIn Convocore’s webhook/automation section:\n\n- Method: `POST`\n- URL: paste the Make webhook URL\n- Content type: `application/json`\n\nIf Convocore lets you set a request body, use:\n\n```json\n{\n  \"name\": \"{{user.name}}\",\n  \"phone_number\": \"{{user.phone}}\",\n  \"device_model\": \"{{device.model}}\",\n  \"service_type\": \"{{repair.type}}\",\n  \"price\": \"{{price}}\",\n  \"booking_date\": \"{{booking.time}}\",\n  \"notes\": \"{{notes}}\",\n  \"status\": \"Booked\"\n}\n```\n\nImportant: the exact `{{variables}}` may be different in Convocore. Use the variables Convocore provides in its variable picker. The important thing is that Make receives values for name, phone, service, and appointment date.\n\n#### 3. Send one test booking\n\nIn Make, click **Run once**.\n\nThen go to your chatbot and make a fake booking, for example:\n\n```text\nName: Test Customer\nPhone: +351 912 345 678\nDevice: iPhone 11\nService: Screen replacement\nDate: 20 November, 15:00\n```\n\nWhen Convocore sends the data, Make will capture it. You should see the fields appear inside the Make webhook module.\n\n#### 4. Add Airtable after the webhook\n\nAfter the Webhook module in Make:\n\n1. Click `+`.\n2. Search **Airtable**.\n3. Choose **Create a record**.\n4. Connect Airtable with your Personal Access Token (`pat...`).\n5. Select your base: `Repair Shop CRM`.\n6. Select your table: `Leads`.\n7. Map the received webhook data to your columns.\n\nFor example:\n\n| Airtable field | Value from Make webhook |\n|---|---|\n| Name | `name` |\n| Phone Number | `phone_number` |\n| Device / Model | `device_model` |\n| Service Type | `service_type` |\n| Price | `price` |\n| Booking Date | `booking_date` |\n| Notes | `notes` |\n| Status | `status` |\n\nThen turn the scenario **ON**.\n\nFrom that point onward, every booking can be added automatically to Airtable, even though Convocore itself still says Airtable is “Not connected.”",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789472528.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 3643,
+          "input_tokens_details": {
+            "cache_write_tokens": 660,
+            "cached_tokens": 2980
+          },
+          "output_tokens": 949,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 4592
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 3,
+      "text": "Another important aspect is **data quality and consent**: collecting a name and phone number is useful only if the chatbot asks for it clearly, stores it correctly, and uses it appropriately.\n\n### Collect only what you need\n\nFor a repair-shop booking, the essential fields are usually:\n\n- Name  \n- Phone number  \n- Device/model  \n- Repair/service needed  \n- Preferred appointment date/time  \n- Notes, if relevant  \n\nAvoid asking for unnecessary sensitive information. For example, the bot does not need passwords, device passcodes, card details, or personal documents just to create a booking.\n\n### Make the chatbot ask clearly\n\nBefore the customer gives their phone number, the bot should explain why it needs it.\n\nExample:\n\n> To confirm your repair booking and contact you about any changes, please share your name and phone number.\n\nFor marketing follow-ups, ask separately rather than assuming permission:\n\n> Would you also like to receive occasional offers or repair reminders by WhatsApp/SMS?  \n> Reply **Yes** or **No**.\n\nThis lets you store two separate things in Airtable:\n\n| Field | Example |\n|---|---|\n| Booking Contact Permission | Yes |\n| Marketing Consent | No |\n| Consent Date | 2025-11-17 |\n| Consent Source | Chatbot booking |\n\nA customer may agree to be contacted about their appointment but not agree to promotional messages. Those are different permissions.\n\n### Validate the phone number\n\nA common automation problem is bad or incomplete phone numbers. Ask customers to include their country code:\n\n> Please enter your phone number with country code, for example: `+351 912 345 678`.\n\nIn Airtable, keep the phone number as a **Phone number** field or a single-line text field. Do not store it as a number/currency field, because formatting and leading `+` signs can be lost.\n\n### Prevent duplicate customer records\n\nThe same person may book more than once. If every booking creates a new Airtable row, you may end up with:\n\n```text\nKevin Costa — +351 912 345 678 — Screen repair\nKevin Costa — +351 912 345 678 — Battery repair\nKevin Costa — +351 912 345 678 — Charger purchase\n```\n\nThat may be fine if your table is a **Bookings** log. But for a proper CRM, it is better to use two tables:\n\n#### Customers table\n\n| Customer ID | Name | Phone Number | Marketing Consent | Total Bookings |\n|---|---|---|---|---|\n| C-001 | Kevin Costa | +351 912 345 678 | Yes | 3 |\n\n#### Bookings table\n\n| Booking ID | Customer | Device | Service | Date | Status |\n|---|---|---|---|---|---|\n| B-001 | Kevin Costa | iPhone 11 | Screen replacement | 20 Nov, 15:00 | Booked |\n| B-002 | Kevin Costa | iPhone 12 | Battery replacement | 4 Dec, 10:30 | Completed |\n\nIn Make, you can later improve the automation:\n\n1. Search Airtable for a customer matching the phone number.\n2. If they exist, link the new booking to that customer.\n3. If they do not exist, create the customer first.\n4. Create the booking and link it to that customer.\n\nThis creates a much cleaner system than putting every detail into one large table.\n\n### Keep booking status accurate\n\nAdd a `Status` field in Airtable:\n\n- New lead  \n- Awaiting confirmation  \n- Booked  \n- Completed  \n- Cancelled  \n- No-show  \n\nThe chatbot can initially create the record as `New lead` or `Awaiting confirmation`. Only mark it `Booked` after the appointment is actually confirmed or successfully added to Google Calendar.\n\nThat prevents your Airtable from treating every enquiry as a confirmed appointment.\n\n### Secure your connection\n\nNever put your Airtable personal access token in chatbot messages, screenshots, public forms, or the webhook body.\n\nThe safe structure is:\n\n```text\nConvocore → Make webhook → Airtable\n```\n\nConvocore only sends customer booking details to Make. Make securely stores the Airtable connection/token and creates the Airtable row.",
+      "provider_metadata": {
+        "id": "resp_093887d8d67d15ad016aa92f11064487d2a1c5cb6b16733f14",
+        "created_at": 1789472529.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_093887d8d67d15ad016aa92f1182c087d299b5ceab68c73c05",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Another important aspect is **data quality and consent**: collecting a name and phone number is useful only if the chatbot asks for it clearly, stores it correctly, and uses it appropriately.\n\n### Collect only what you need\n\nFor a repair-shop booking, the essential fields are usually:\n\n- Name  \n- Phone number  \n- Device/model  \n- Repair/service needed  \n- Preferred appointment date/time  \n- Notes, if relevant  \n\nAvoid asking for unnecessary sensitive information. For example, the bot does not need passwords, device passcodes, card details, or personal documents just to create a booking.\n\n### Make the chatbot ask clearly\n\nBefore the customer gives their phone number, the bot should explain why it needs it.\n\nExample:\n\n> To confirm your repair booking and contact you about any changes, please share your name and phone number.\n\nFor marketing follow-ups, ask separately rather than assuming permission:\n\n> Would you also like to receive occasional offers or repair reminders by WhatsApp/SMS?  \n> Reply **Yes** or **No**.\n\nThis lets you store two separate things in Airtable:\n\n| Field | Example |\n|---|---|\n| Booking Contact Permission | Yes |\n| Marketing Consent | No |\n| Consent Date | 2025-11-17 |\n| Consent Source | Chatbot booking |\n\nA customer may agree to be contacted about their appointment but not agree to promotional messages. Those are different permissions.\n\n### Validate the phone number\n\nA common automation problem is bad or incomplete phone numbers. Ask customers to include their country code:\n\n> Please enter your phone number with country code, for example: `+351 912 345 678`.\n\nIn Airtable, keep the phone number as a **Phone number** field or a single-line text field. Do not store it as a number/currency field, because formatting and leading `+` signs can be lost.\n\n### Prevent duplicate customer records\n\nThe same person may book more than once. If every booking creates a new Airtable row, you may end up with:\n\n```text\nKevin Costa — +351 912 345 678 — Screen repair\nKevin Costa — +351 912 345 678 — Battery repair\nKevin Costa — +351 912 345 678 — Charger purchase\n```\n\nThat may be fine if your table is a **Bookings** log. But for a proper CRM, it is better to use two tables:\n\n#### Customers table\n\n| Customer ID | Name | Phone Number | Marketing Consent | Total Bookings |\n|---|---|---|---|---|\n| C-001 | Kevin Costa | +351 912 345 678 | Yes | 3 |\n\n#### Bookings table\n\n| Booking ID | Customer | Device | Service | Date | Status |\n|---|---|---|---|---|---|\n| B-001 | Kevin Costa | iPhone 11 | Screen replacement | 20 Nov, 15:00 | Booked |\n| B-002 | Kevin Costa | iPhone 12 | Battery replacement | 4 Dec, 10:30 | Completed |\n\nIn Make, you can later improve the automation:\n\n1. Search Airtable for a customer matching the phone number.\n2. If they exist, link the new booking to that customer.\n3. If they do not exist, create the customer first.\n4. Create the booking and link it to that customer.\n\nThis creates a much cleaner system than putting every detail into one large table.\n\n### Keep booking status accurate\n\nAdd a `Status` field in Airtable:\n\n- New lead  \n- Awaiting confirmation  \n- Booked  \n- Completed  \n- Cancelled  \n- No-show  \n\nThe chatbot can initially create the record as `New lead` or `Awaiting confirmation`. Only mark it `Booked` after the appointment is actually confirmed or successfully added to Google Calendar.\n\nThat prevents your Airtable from treating every enquiry as a confirmed appointment.\n\n### Secure your connection\n\nNever put your Airtable personal access token in chatbot messages, screenshots, public forms, or the webhook body.\n\nThe safe structure is:\n\n```text\nConvocore → Make webhook → Airtable\n```\n\nConvocore only sends customer booking details to Make. Make securely stores the Airtable connection/token and creates the Airtable row.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789472539.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 4607,
+          "input_tokens_details": {
+            "cache_write_tokens": 964,
+            "cached_tokens": 3640
+          },
+          "output_tokens": 868,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 5475
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 4,
+      "text": "Here is a concrete setup you can build for your repair-shop chatbot.\n\n## 1. Create one Airtable table first\n\nStart simple with one table called:\n\n```text\nBookings\n```\n\nCreate these columns exactly:\n\n| Column name | Airtable field type | Example |\n|---|---|---|\n| Name | Single line text | Kevin Costa |\n| Phone Number | Phone number | +351 912 345 678 |\n| Device / Model | Single line text | iPhone 11 |\n| Service Type | Single select | Screen Replacement |\n| Preferred Date | Date | 2025-11-20 |\n| Preferred Time | Single line text | 15:00 |\n| Status | Single select | New Lead |\n| Notes | Long text | Screen is cracked but touch works |\n| Marketing Consent | Single select | Yes / No |\n| Created At | Created time | Automatic |\n\nFor now, do not create a complicated Customers table. One booking table is enough to start getting leads reliably.\n\n---\n\n## 2. Use this exact chatbot conversation flow\n\nYour chatbot should collect information in this order:\n\n```text\n1. What device do you need help with?\n2. What repair do you need?\n3. What is your preferred day and time?\n4. May I have your name to create the booking?\n5. What phone number can we use to confirm the appointment?\n6. Would you like to receive occasional repair offers or reminders by WhatsApp?\n```\n\nUse wording similar to this:\n\n> Great — I can help you book that.  \n> Please tell me your device model, for example “iPhone 11” or “Samsung S22.”\n\n> What service do you need? For example: screen replacement, battery replacement, charging port repair, or diagnostic.\n\n> What day and time would you prefer?\n\n> To confirm the booking, please send your full name.\n\n> Please send your phone number including country code, for example `+351 912 345 678`. We will use it only to contact you about this booking.\n\n> Would you like to receive occasional offers and repair reminders by WhatsApp? Reply **Yes** or **No**.\n\nThe chatbot should not say the booking is confirmed unless it has actually checked/created the appointment in Google Calendar.\n\n---\n\n## 3. Make the webhook send these fields\n\nIn Convocore, find the action that runs after all booking questions have been answered.\n\nSet it to send a `POST` request to your Make webhook URL.\n\nUse this structure:\n\n```json\n{\n  \"name\": \"{{user.name}}\",\n  \"phone_number\": \"{{user.phone}}\",\n  \"device_model\": \"{{device.model}}\",\n  \"service_type\": \"{{repair.type}}\",\n  \"preferred_date\": \"{{booking.date}}\",\n  \"preferred_time\": \"{{booking.time}}\",\n  \"notes\": \"{{notes}}\",\n  \"marketing_consent\": \"{{marketing.consent}}\",\n  \"status\": \"New Lead\"\n}\n```\n\nDo not worry if Convocore uses different variable names. Replace the text inside `{{ }}` with the variables Convocore gives you when you build the questions.\n\nFor example, it may use something closer to:\n\n```json\n{\n  \"name\": \"{{contact_name}}\",\n  \"phone_number\": \"{{phone}}\",\n  \"device_model\": \"{{device}}\",\n  \"service_type\": \"{{service}}\",\n  \"preferred_date\": \"{{date}}\",\n  \"preferred_time\": \"{{time}}\",\n  \"notes\": \"{{customer_notes}}\",\n  \"marketing_consent\": \"{{offers_permission}}\",\n  \"status\": \"New Lead\"\n}\n```\n\nThe field names on the left (`name`, `phone_number`, etc.) should stay consistent, because these are what you will map in Make.\n\n---\n\n## 4. Build the exact Make scenario\n\nCreate this scenario:\n\n```text\nWebhooks: Custom webhook\n        ↓\nAirtable: Create a record\n```\n\n### Module 1: Webhooks — Custom webhook\n\n- Create a new webhook called: `Convocore Booking`\n- Copy its URL.\n- Paste that URL into Convocore.\n- Click **Run once** in Make.\n- Submit one fake booking through the chatbot.\n\nExample test details:\n\n```text\nName: Test Customer\nPhone: +351 912 345 678\nDevice: iPhone 11\nService: Screen Replacement\nDate: 20 November 2025\nTime: 15:00\nNotes: Touch works, but screen is cracked.\nMarketing Consent: No\n```\n\nAfter the test, Make should detect these webhook fields.\n\n### Module 2: Airtable — Create a record\n\nConnect Airtable using a personal access token that has access to your repair-shop base.\n\nSelect:\n\n```text\nBase: Repair Shop CRM\nTable: Bookings\n```\n\nMap fields like this:\n\n| Airtable column | Value from Make webhook |\n|---|---|\n| Name | `name` |\n| Phone Number | `phone_number` |\n| Device / Model | `device_model` |\n| Service Type | `service_type` |\n| Preferred Date | `preferred_date` |\n| Preferred Time | `preferred_time` |\n| Status | `status` |\n| Notes | `notes` |\n| Marketing Consent | `marketing_consent` |\n\nClick **Run once** again and send another test booking. Check whether a new Airtable row appears.\n\nOnce it works, turn the Make scenario **ON**.\n\n---\n\n## 5. Use “New Lead,” not “Booked,” at first\n\nA practical mistake is automatically marking every chatbot conversation as a confirmed booking.\n\nInstead:\n\n- Customer gives details → Airtable status = `New Lead`\n- You call/message them to confirm → change status = `Booked`\n- Repair finished → change status = `Completed`\n- They cancel → change status = `Cancelled`\n\nThis gives",
+      "provider_metadata": {
+        "id": "resp_05f7a93da6bb6955016aa92f1b6a0c87d2a8934f1ef00c4f70",
+        "created_at": 1789472539.0,
+        "error": null,
+        "incomplete_details": {
+          "reason": "max_output_tokens"
+        },
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_05f7a93da6bb6955016aa92f1bf29487d2a591fcfa5f7cb784",
+            "content": [
+              {
+                "annotations": [],
+                "text": "Here is a concrete setup you can build for your repair-shop chatbot.\n\n## 1. Create one Airtable table first\n\nStart simple with one table called:\n\n```text\nBookings\n```\n\nCreate these columns exactly:\n\n| Column name | Airtable field type | Example |\n|---|---|---|\n| Name | Single line text | Kevin Costa |\n| Phone Number | Phone number | +351 912 345 678 |\n| Device / Model | Single line text | iPhone 11 |\n| Service Type | Single select | Screen Replacement |\n| Preferred Date | Date | 2025-11-20 |\n| Preferred Time | Single line text | 15:00 |\n| Status | Single select | New Lead |\n| Notes | Long text | Screen is cracked but touch works |\n| Marketing Consent | Single select | Yes / No |\n| Created At | Created time | Automatic |\n\nFor now, do not create a complicated Customers table. One booking table is enough to start getting leads reliably.\n\n---\n\n## 2. Use this exact chatbot conversation flow\n\nYour chatbot should collect information in this order:\n\n```text\n1. What device do you need help with?\n2. What repair do you need?\n3. What is your preferred day and time?\n4. May I have your name to create the booking?\n5. What phone number can we use to confirm the appointment?\n6. Would you like to receive occasional repair offers or reminders by WhatsApp?\n```\n\nUse wording similar to this:\n\n> Great — I can help you book that.  \n> Please tell me your device model, for example “iPhone 11” or “Samsung S22.”\n\n> What service do you need? For example: screen replacement, battery replacement, charging port repair, or diagnostic.\n\n> What day and time would you prefer?\n\n> To confirm the booking, please send your full name.\n\n> Please send your phone number including country code, for example `+351 912 345 678`. We will use it only to contact you about this booking.\n\n> Would you like to receive occasional offers and repair reminders by WhatsApp? Reply **Yes** or **No**.\n\nThe chatbot should not say the booking is confirmed unless it has actually checked/created the appointment in Google Calendar.\n\n---\n\n## 3. Make the webhook send these fields\n\nIn Convocore, find the action that runs after all booking questions have been answered.\n\nSet it to send a `POST` request to your Make webhook URL.\n\nUse this structure:\n\n```json\n{\n  \"name\": \"{{user.name}}\",\n  \"phone_number\": \"{{user.phone}}\",\n  \"device_model\": \"{{device.model}}\",\n  \"service_type\": \"{{repair.type}}\",\n  \"preferred_date\": \"{{booking.date}}\",\n  \"preferred_time\": \"{{booking.time}}\",\n  \"notes\": \"{{notes}}\",\n  \"marketing_consent\": \"{{marketing.consent}}\",\n  \"status\": \"New Lead\"\n}\n```\n\nDo not worry if Convocore uses different variable names. Replace the text inside `{{ }}` with the variables Convocore gives you when you build the questions.\n\nFor example, it may use something closer to:\n\n```json\n{\n  \"name\": \"{{contact_name}}\",\n  \"phone_number\": \"{{phone}}\",\n  \"device_model\": \"{{device}}\",\n  \"service_type\": \"{{service}}\",\n  \"preferred_date\": \"{{date}}\",\n  \"preferred_time\": \"{{time}}\",\n  \"notes\": \"{{customer_notes}}\",\n  \"marketing_consent\": \"{{offers_permission}}\",\n  \"status\": \"New Lead\"\n}\n```\n\nThe field names on the left (`name`, `phone_number`, etc.) should stay consistent, because these are what you will map in Make.\n\n---\n\n## 4. Build the exact Make scenario\n\nCreate this scenario:\n\n```text\nWebhooks: Custom webhook\n        ↓\nAirtable: Create a record\n```\n\n### Module 1: Webhooks — Custom webhook\n\n- Create a new webhook called: `Convocore Booking`\n- Copy its URL.\n- Paste that URL into Convocore.\n- Click **Run once** in Make.\n- Submit one fake booking through the chatbot.\n\nExample test details:\n\n```text\nName: Test Customer\nPhone: +351 912 345 678\nDevice: iPhone 11\nService: Screen Replacement\nDate: 20 November 2025\nTime: 15:00\nNotes: Touch works, but screen is cracked.\nMarketing Consent: No\n```\n\nAfter the test, Make should detect these webhook fields.\n\n### Module 2: Airtable — Create a record\n\nConnect Airtable using a personal access token that has access to your repair-shop base.\n\nSelect:\n\n```text\nBase: Repair Shop CRM\nTable: Bookings\n```\n\nMap fields like this:\n\n| Airtable column | Value from Make webhook |\n|---|---|\n| Name | `name` |\n| Phone Number | `phone_number` |\n| Device / Model | `device_model` |\n| Service Type | `service_type` |\n| Preferred Date | `preferred_date` |\n| Preferred Time | `preferred_time` |\n| Status | `status` |\n| Notes | `notes` |\n| Marketing Consent | `marketing_consent` |\n\nClick **Run once** again and send another test booking. Check whether a new Airtable row appears.\n\nOnce it works, turn the Make scenario **ON**.\n\n---\n\n## 5. Use “New Lead,” not “Booked,” at first\n\nA practical mistake is automatically marking every chatbot conversation as a confirmed booking.\n\nInstead:\n\n- Customer gives details → Airtable status = `New Lead`\n- You call/message them to confirm → change status = `Booked`\n- Repair finished → change status = `Completed`\n- They cancel → change status = `Cancelled`\n\nThis gives",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "incomplete",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": null,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "incomplete",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 5490,
+          "input_tokens_details": {
+            "cache_write_tokens": 883,
+            "cached_tokens": 4604
+          },
+          "output_tokens": 1200,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 6690
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 5,
+      "text": "A few important things may be overlooked in the setup above.\n\n## 1. “Preferred date/time” is not a confirmed appointment\n\nIf the chatbot only asks:\n\n> What date and time do you prefer?\n\nthen it has collected a **request**, not a real booking.\n\nFor example, a customer may request:\n\n```text\nFriday at 15:00\n```\n\nbut that slot may already be taken.\n\nSo use wording like:\n\n> I’ll check your requested time and send confirmation shortly.\n\nUntil Google Calendar availability is checked and an event is created, Airtable should say:\n\n```text\nStatus: Pending Confirmation\n```\n\nnot `Booked`.\n\nA better status flow is:\n\n```text\nNew Lead\n→ Pending Confirmation\n→ Booked\n→ Completed / Cancelled / No-show\n```\n\n## 2. The webhook may fire too early or more than once\n\nMany chatbots can trigger an automation:\n\n- when a user answers a question,\n- when a lead is created,\n- when a conversation ends,\n- when a booking is completed.\n\nYou want the webhook to run **only after all required details are available**.\n\nOtherwise Airtable may receive incomplete records such as:\n\n```text\nName: Kevin\nPhone: blank\nDevice: iPhone 11\nService: blank\n```\n\nIt can also create duplicates if the customer edits an answer, restarts the chat, or the webhook runs again.\n\n### Practical solution\n\nAdd a final chatbot step:\n\n> Please confirm your request:  \n> **Device:** iPhone 11  \n> **Service:** Screen replacement  \n> **Requested time:** Friday, 15:00  \n> **Name:** Kevin Costa  \n> Reply **Confirm** to send your booking request.\n\nOnly trigger the webhook after the customer replies `Confirm`.\n\nAlso include a unique identifier in the payload if Convocore provides one:\n\n```json\n{\n  \"conversation_id\": \"{{conversation.id}}\",\n  \"lead_id\": \"{{lead.id}}\",\n  \"name\": \"{{user.name}}\",\n  \"phone_number\": \"{{user.phone}}\",\n  \"status\": \"Pending Confirmation\"\n}\n```\n\nThen add `Conversation ID` or `Lead ID` as a field in Airtable. This makes it easier to identify duplicates.\n\n## 3. Variable names may not work exactly as shown\n\nThe JSON examples use placeholders such as:\n\n```text\n{{user.name}}\n{{user.phone}}\n{{booking.time}}\n```\n\nThose are examples, not guaranteed Convocore variables.\n\nIf Convocore does not recognize a variable, it might send the literal text:\n\n```text\n{{user.name}}\n```\n\ninto Airtable—or send a blank value.\n\nBefore enabling the automation, send a test and inspect the Make webhook output. Confirm that it receives a real result:\n\n```json\n{\n  \"name\": \"Test Customer\",\n  \"phone_number\": \"+351912345678\"\n}\n```\n\nand not:\n\n```json\n{\n  \"name\": \"{{user.name}}\",\n  \"phone_number\": \"\"\n}\n```\n\nUse Convocore’s own variable selector/documentation when available.\n\n## 4. Dates can be misread\n\nA customer saying:\n\n```text\nFriday at 3\n```\n\ncan mean different things depending on country, language, and time format.\n\nThe bot should clarify:\n\n> Do you mean Friday 20 November at **15:00** local time?\n\nStore a complete date and time where possible, including timezone. For a Portugal-based repair shop, use the business’s local timezone consistently.\n\nA better Airtable structure is:\n\n| Field | Example |\n|---|---|\n| Requested Appointment | 2025-11-20 15:00 |\n| Timezone | Europe/Lisbon |\n\nUsing separate `Preferred Date` and `Preferred Time` fields is easy at first, but a single proper date-time field is better later for reminders and Calendar automation.\n\n## 5. Airtable field types must match the incoming data\n\nIf Airtable has a single-select field called `Status` with options:\n\n```text\nNew Lead\nPending Confirmation\nBooked\nCompleted\nCancelled\n```\n\nthen Make must send one of those exact values.\n\nFor example, this can fail or create an unexpected value:\n\n```text\npending\n```\n\nwhen Airtable expects:\n\n```text\nPending Confirmation\n```\n\nThe same applies to service names and marketing consent. Keep the labels consistent.\n\nFor example:\n\n| Field | Valid values |\n|---|---|\n| Marketing Consent | Yes, No |\n| Status | New Lead, Pending Confirmation, Booked, Completed, Cancelled |\n| Service Type | Screen Replacement, Battery Replacement, Diagnostic, Charging Port Repair |\n\n## 6. A phone number alone does not mean marketing permission\n\nIt is reasonable to use a phone number to confirm or change the customer’s appointment. It is not automatically permission to send offers, promotions, or bulk WhatsApp messages.\n\nKeep these separate:\n\n| Field | Meaning |\n|---|---|\n| Phone Number | Used for booking communication |\n| Marketing Consent | Permission for promotional messages |\n| Consent Date | When they agreed |\n| Consent Method | Chatbot |\n\nIf they answer `No`, do not put them into promotional campaigns.\n\n## 7. Personal data needs access control\n\nYour Airtable will contain names, phone numbers, and booking history. Avoid:\n\n- sharing the Airtable base publicly;\n- sending export files through unsecured channels;\n- giving every staff member full Airtable admin access;\n- placing Airtable tokens in chatbot prompts or screenshots.\n\nGive technicians access only if they need it, and preferably only to a filtered view that shows their assigned jobs—not your entire customer list.\n\n## 8. You need a failure plan\n\nAutomations can fail because:\n\n- Make scenario is turned off;\n- Make reaches its operation limit;\n- Airtable connection/token expires or loses access;\n- Convocore webhook fails;\n- Airtable fields",
+      "provider_metadata": {
+        "id": "resp_0ee87df2b994b54d016aa92f28f1ec87d2948fba07283cbcc5",
+        "created_at": 1789472552.0,
+        "error": null,
+        "incomplete_details": {
+          "reason": "max_output_tokens"
+        },
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_0ee87df2b994b54d016aa92f2a23a087d2ae73ba09946fe5fd",
+            "content": [
+              {
+                "annotations": [],
+                "text": "A few important things may be overlooked in the setup above.\n\n## 1. “Preferred date/time” is not a confirmed appointment\n\nIf the chatbot only asks:\n\n> What date and time do you prefer?\n\nthen it has collected a **request**, not a real booking.\n\nFor example, a customer may request:\n\n```text\nFriday at 15:00\n```\n\nbut that slot may already be taken.\n\nSo use wording like:\n\n> I’ll check your requested time and send confirmation shortly.\n\nUntil Google Calendar availability is checked and an event is created, Airtable should say:\n\n```text\nStatus: Pending Confirmation\n```\n\nnot `Booked`.\n\nA better status flow is:\n\n```text\nNew Lead\n→ Pending Confirmation\n→ Booked\n→ Completed / Cancelled / No-show\n```\n\n## 2. The webhook may fire too early or more than once\n\nMany chatbots can trigger an automation:\n\n- when a user answers a question,\n- when a lead is created,\n- when a conversation ends,\n- when a booking is completed.\n\nYou want the webhook to run **only after all required details are available**.\n\nOtherwise Airtable may receive incomplete records such as:\n\n```text\nName: Kevin\nPhone: blank\nDevice: iPhone 11\nService: blank\n```\n\nIt can also create duplicates if the customer edits an answer, restarts the chat, or the webhook runs again.\n\n### Practical solution\n\nAdd a final chatbot step:\n\n> Please confirm your request:  \n> **Device:** iPhone 11  \n> **Service:** Screen replacement  \n> **Requested time:** Friday, 15:00  \n> **Name:** Kevin Costa  \n> Reply **Confirm** to send your booking request.\n\nOnly trigger the webhook after the customer replies `Confirm`.\n\nAlso include a unique identifier in the payload if Convocore provides one:\n\n```json\n{\n  \"conversation_id\": \"{{conversation.id}}\",\n  \"lead_id\": \"{{lead.id}}\",\n  \"name\": \"{{user.name}}\",\n  \"phone_number\": \"{{user.phone}}\",\n  \"status\": \"Pending Confirmation\"\n}\n```\n\nThen add `Conversation ID` or `Lead ID` as a field in Airtable. This makes it easier to identify duplicates.\n\n## 3. Variable names may not work exactly as shown\n\nThe JSON examples use placeholders such as:\n\n```text\n{{user.name}}\n{{user.phone}}\n{{booking.time}}\n```\n\nThose are examples, not guaranteed Convocore variables.\n\nIf Convocore does not recognize a variable, it might send the literal text:\n\n```text\n{{user.name}}\n```\n\ninto Airtable—or send a blank value.\n\nBefore enabling the automation, send a test and inspect the Make webhook output. Confirm that it receives a real result:\n\n```json\n{\n  \"name\": \"Test Customer\",\n  \"phone_number\": \"+351912345678\"\n}\n```\n\nand not:\n\n```json\n{\n  \"name\": \"{{user.name}}\",\n  \"phone_number\": \"\"\n}\n```\n\nUse Convocore’s own variable selector/documentation when available.\n\n## 4. Dates can be misread\n\nA customer saying:\n\n```text\nFriday at 3\n```\n\ncan mean different things depending on country, language, and time format.\n\nThe bot should clarify:\n\n> Do you mean Friday 20 November at **15:00** local time?\n\nStore a complete date and time where possible, including timezone. For a Portugal-based repair shop, use the business’s local timezone consistently.\n\nA better Airtable structure is:\n\n| Field | Example |\n|---|---|\n| Requested Appointment | 2025-11-20 15:00 |\n| Timezone | Europe/Lisbon |\n\nUsing separate `Preferred Date` and `Preferred Time` fields is easy at first, but a single proper date-time field is better later for reminders and Calendar automation.\n\n## 5. Airtable field types must match the incoming data\n\nIf Airtable has a single-select field called `Status` with options:\n\n```text\nNew Lead\nPending Confirmation\nBooked\nCompleted\nCancelled\n```\n\nthen Make must send one of those exact values.\n\nFor example, this can fail or create an unexpected value:\n\n```text\npending\n```\n\nwhen Airtable expects:\n\n```text\nPending Confirmation\n```\n\nThe same applies to service names and marketing consent. Keep the labels consistent.\n\nFor example:\n\n| Field | Valid values |\n|---|---|\n| Marketing Consent | Yes, No |\n| Status | New Lead, Pending Confirmation, Booked, Completed, Cancelled |\n| Service Type | Screen Replacement, Battery Replacement, Diagnostic, Charging Port Repair |\n\n## 6. A phone number alone does not mean marketing permission\n\nIt is reasonable to use a phone number to confirm or change the customer’s appointment. It is not automatically permission to send offers, promotions, or bulk WhatsApp messages.\n\nKeep these separate:\n\n| Field | Meaning |\n|---|---|\n| Phone Number | Used for booking communication |\n| Marketing Consent | Permission for promotional messages |\n| Consent Date | When they agreed |\n| Consent Method | Chatbot |\n\nIf they answer `No`, do not put them into promotional campaigns.\n\n## 7. Personal data needs access control\n\nYour Airtable will contain names, phone numbers, and booking history. Avoid:\n\n- sharing the Airtable base publicly;\n- sending export files through unsecured channels;\n- giving every staff member full Airtable admin access;\n- placing Airtable tokens in chatbot prompts or screenshots.\n\nGive technicians access only if they need it, and preferably only to a filtered view that shows their assigned jobs—not your entire customer list.\n\n## 8. You need a failure plan\n\nAutomations can fail because:\n\n- Make scenario is turned off;\n- Make reaches its operation limit;\n- Airtable connection/token expires or loses access;\n- Convocore webhook fails;\n- Airtable fields",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "incomplete",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": null,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "incomplete",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 6706,
+          "input_tokens_details": {
+            "cache_write_tokens": 1216,
+            "cached_tokens": 5487
+          },
+          "output_tokens": 1200,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 7906
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    },
+    {
+      "turn": 6,
+      "text": "The best next step is to build a **simple test version** before adding Calendar, reminders, or marketing.\n\n### Do this now\n\n1. In Airtable, create a table called **Bookings** with:\n   - Name\n   - Phone Number\n   - Device / Model\n   - Service Type\n   - Requested Appointment\n   - Status\n   - Notes\n   - Marketing Consent\n   - Conversation ID\n\n2. In Make, create:\n   ```text\n   Custom Webhook → Airtable: Create a Record\n   ```\n\n3. In Convocore, send the webhook only after the customer confirms their details.\n\n4. Set the first status to:\n   ```text\n   Pending Confirmation\n   ```\n   not “Booked.”\n\n5. Test with your own details and check:\n   - Does Make receive real values, not `{{variables}}`?\n   - Does Airtable create one row only?\n   - Is the phone number correct?\n   - Is the requested date/time clear?\n   - Does the status say `Pending Confirmation`?\n\nOnce this works reliably, add Google Calendar availability/booking as the next step.",
+      "provider_metadata": {
+        "id": "resp_03e71ff720329faa016aa92f39bb9087d29f7098006b561a3b",
+        "created_at": 1789472569.0,
+        "error": null,
+        "incomplete_details": null,
+        "instructions": "You are participating in a controlled text continuation experiment. Use only the supplied conversation excerpt and current user request. Do not browse, use tools, retrieve external information, or mention the experiment. Respond naturally and directly.",
+        "metadata": {},
+        "model": "gpt-5.6-terra",
+        "object": "response",
+        "output": [
+          {
+            "id": "msg_03e71ff720329faa016aa92f3ac3f487d28afb6b8d60c5fafd",
+            "content": [
+              {
+                "annotations": [],
+                "text": "The best next step is to build a **simple test version** before adding Calendar, reminders, or marketing.\n\n### Do this now\n\n1. In Airtable, create a table called **Bookings** with:\n   - Name\n   - Phone Number\n   - Device / Model\n   - Service Type\n   - Requested Appointment\n   - Status\n   - Notes\n   - Marketing Consent\n   - Conversation ID\n\n2. In Make, create:\n   ```text\n   Custom Webhook → Airtable: Create a Record\n   ```\n\n3. In Convocore, send the webhook only after the customer confirms their details.\n\n4. Set the first status to:\n   ```text\n   Pending Confirmation\n   ```\n   not “Booked.”\n\n5. Test with your own details and check:\n   - Does Make receive real values, not `{{variables}}`?\n   - Does Airtable create one row only?\n   - Is the phone number correct?\n   - Is the requested date/time clear?\n   - Does the status say `Pending Confirmation`?\n\nOnce this works reliably, add Google Calendar availability/booking as the next step.",
+                "type": "output_text",
+                "logprobs": []
+              }
+            ],
+            "role": "assistant",
+            "status": "completed",
+            "type": "message",
+            "phase": "final_answer"
+          }
+        ],
+        "parallel_tool_calls": true,
+        "temperature": 1.0,
+        "tool_choice": "auto",
+        "tools": [],
+        "top_p": 0.98,
+        "background": false,
+        "completed_at": 1789472574.0,
+        "conversation": null,
+        "max_output_tokens": 1200,
+        "max_tool_calls": null,
+        "moderation": null,
+        "previous_response_id": null,
+        "prompt": null,
+        "prompt_cache_diagnostics": null,
+        "prompt_cache_key": null,
+        "prompt_cache_options": null,
+        "prompt_cache_retention": "24h",
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "none",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "safety_identifier": null,
+        "service_tier": "default",
+        "status": "completed",
+        "text": {
+          "format": {
+            "type": "text"
+          },
+          "verbosity": "medium"
+        },
+        "top_logprobs": 0,
+        "truncation": "disabled",
+        "usage": {
+          "input_tokens": 7928,
+          "input_tokens_details": {
+            "cache_write_tokens": 1222,
+            "cached_tokens": 6703
+          },
+          "output_tokens": 235,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 8163
+        },
+        "user": null,
+        "billing": {
+          "payer": "developer"
+        },
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "store": false,
+        "tool_usage": {
+          "image_gen": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 0
+            },
+            "total_tokens": 0
+          },
+          "web_search": {
+            "num_requests": 0
+          }
+        }
+      }
+    }
+  ],
+  "scoring_messages": [
+    {
+      "role": "user",
+      "content": "Please continue the discussion in the way that best fits what came before."
+    },
+    {
+      "role": "assistant",
+      "content": "If Convocore sends you back to its page but still shows **“Not connected,”** the Airtable OAuth connection is likely failing on Convocore’s side—not necessarily because your Airtable account is wrong.\n\nUse this quick checklist first:\n\n1. **In Airtable, confirm you approved access**\n   - Go to Airtable → **Developer Hub / Personal access tokens**\n   - Ensure the token has:\n     - `data.records:read`\n     - `data.records:write`\n   - Ensure it has access to the specific base you created.\n\n2. **Allow browser pop-ups and third-party cookies**\n   - The Airtable authorization window may close correctly but Convocore may fail to save the connection if cookies/pop-ups are blocked.\n   - Try Chrome in Incognito mode, allow pop-ups for Convocore and Airtable, then reconnect.\n\n3. **Try disconnecting/reconnecting**\n   - In Convocore integrations, remove Airtable if it appears partially connected.\n   - Reconnect and select the correct Airtable workspace/base during authorization.\n\nBut if it still returns as **Not connected**, don’t spend too long fighting it. Use **Make** or **Zapier** between Convocore and Airtable. It is often more reliable and still does exactly what you need.\n\n### Best fallback: Make webhook → Airtable\n\n1. Create a free Make account.\n2. Create a new scenario.\n3. Add module: **Webhooks → Custom webhook**.\n4. Copy the webhook URL Make gives you.\n5. In Convocore, find **Webhooks**, **Outgoing webhook**, or an automation that runs after a booking/lead is collected.\n6. Paste the Make webhook URL there.\n7. In Make, add: **Airtable → Create a record**.\n8. Connect Airtable using your `pat...` personal access token.\n9. Select:\n   - Base: `Repair Shop CRM`\n   - Table: `Leads`\n10. Map the booking fields into Airtable.\n\nUse a payload like this in Convocore if it lets you set the body:\n\n```json\n{\n  \"name\": \"{{user.name}}\",\n  \"phone_number\": \"{{user.phone}}\",\n  \"device_model\": \"{{device.model}}\",\n  \"service_type\": \"{{repair.type}}\",\n  \"price\": \"{{price}}\",\n  \"booking_date\": \"{{booking.time}}\",\n  \"notes\": \"{{notes}}\",\n  \"language\": \"{{conversation_language}}\",\n  \"status\": \"Booked\"\n}\n```\n\nThen map those values in Make to your Airtable fields:\n\n| Airtable column | Webhook value |\n|---|---|\n| Name | `name` |\n| Phone Number | `phone_number` |\n| Device / Model | `device_model` |\n| Service Type | `service_type` |\n| Price | `price` |\n| Booking Date | `booking_date` |\n| Notes | `notes` |\n| Language | `language` |\n| Status | `status` |\n\nThis avoids the broken direct connection completely. Every lead or booking the chatbot collects will still be saved in Airtable automatically."
+    },
+    {
+      "role": "user",
+      "content": "Please expand on the most important point you just made."
+    },
+    {
+      "role": "assistant",
+      "content": "The most important point is: **you do not need Convocore’s direct Airtable connection to work in order to save customer names, phone numbers, and bookings.**\n\nUse **Make** or **Zapier as a bridge** instead.\n\n### Why this matters\n\nConvocore’s Airtable “Connect” button uses an authorization connection. If it keeps returning you to Convocore and saying **Not connected**, that means the authorization is not being saved correctly.\n\nYou could spend hours trying different browsers, tokens, permissions, and reconnect attempts—but it may simply be a Convocore integration issue.\n\nA webhook bridge avoids that problem:\n\n```text\nCustomer chats with bot\n        ↓\nConvocore collects name, phone, repair, date\n        ↓\nConvocore sends data to a Make webhook\n        ↓\nMake creates a new row in Airtable\n        ↓\nYou see the customer in your Airtable CRM\n```\n\nSo Convocore does its job: talking to the customer and collecting information.\n\nMake does its job: moving the data.\n\nAirtable does its job: storing your customer database.\n\n### What you need to look for in Convocore\n\nLook in Convocore for any setting called something like:\n\n- **Webhooks**\n- **Outgoing webhook**\n- **HTTP request**\n- **Automation**\n- **After booking action**\n- **Lead capture action**\n- **API integration**\n- **Send data to URL**\n\nYou do **not** need to find “Airtable” specifically. You only need a place where Convocore can send information to a URL.\n\n### The simplest Make setup\n\n#### 1. Create a webhook in Make\n\n1. Go to Make and create a new scenario.\n2. Click the large `+`.\n3. Search for **Webhooks**.\n4. Choose **Custom webhook**.\n5. Click **Add**.\n6. Name it something like:\n\n```text\nConvocore New Booking\n```\n\n7. Copy the webhook URL Make generates.\n\nIt will look similar to:\n\n```text\nhttps://hook.eu1.make.com/xxxxxxxxxxxxxxxxxxxx\n```\n\nThat URL is where Convocore will send the customer details.\n\n#### 2. Paste that URL in Convocore\n\nIn Convocore’s webhook/automation section:\n\n- Method: `POST`\n- URL: paste the Make webhook URL\n- Content type: `application/json`\n\nIf Convocore lets you set a request body, use:\n\n```json\n{\n  \"name\": \"{{user.name}}\",\n  \"phone_number\": \"{{user.phone}}\",\n  \"device_model\": \"{{device.model}}\",\n  \"service_type\": \"{{repair.type}}\",\n  \"price\": \"{{price}}\",\n  \"booking_date\": \"{{booking.time}}\",\n  \"notes\": \"{{notes}}\",\n  \"status\": \"Booked\"\n}\n```\n\nImportant: the exact `{{variables}}` may be different in Convocore. Use the variables Convocore provides in its variable picker. The important thing is that Make receives values for name, phone, service, and appointment date.\n\n#### 3. Send one test booking\n\nIn Make, click **Run once**.\n\nThen go to your chatbot and make a fake booking, for example:\n\n```text\nName: Test Customer\nPhone: +351 912 345 678\nDevice: iPhone 11\nService: Screen replacement\nDate: 20 November, 15:00\n```\n\nWhen Convocore sends the data, Make will capture it. You should see the fields appear inside the Make webhook module.\n\n#### 4. Add Airtable after the webhook\n\nAfter the Webhook module in Make:\n\n1. Click `+`.\n2. Search **Airtable**.\n3. Choose **Create a record**.\n4. Connect Airtable with your Personal Access Token (`pat...`).\n5. Select your base: `Repair Shop CRM`.\n6. Select your table: `Leads`.\n7. Map the received webhook data to your columns.\n\nFor example:\n\n| Airtable field | Value from Make webhook |\n|---|---|\n| Name | `name` |\n| Phone Number | `phone_number` |\n| Device / Model | `device_model` |\n| Service Type | `service_type` |\n| Price | `price` |\n| Booking Date | `booking_date` |\n| Notes | `notes` |\n| Status | `status` |\n\nThen turn the scenario **ON**.\n\nFrom that point onward, every booking can be added automatically to Airtable, even though Convocore itself still says Airtable is “Not connected.”"
+    },
+    {
+      "role": "user",
+      "content": "Please examine another important aspect of the discussion."
+    },
+    {
+      "role": "assistant",
+      "content": "Another important aspect is **data quality and consent**: collecting a name and phone number is useful only if the chatbot asks for it clearly, stores it correctly, and uses it appropriately.\n\n### Collect only what you need\n\nFor a repair-shop booking, the essential fields are usually:\n\n- Name  \n- Phone number  \n- Device/model  \n- Repair/service needed  \n- Preferred appointment date/time  \n- Notes, if relevant  \n\nAvoid asking for unnecessary sensitive information. For example, the bot does not need passwords, device passcodes, card details, or personal documents just to create a booking.\n\n### Make the chatbot ask clearly\n\nBefore the customer gives their phone number, the bot should explain why it needs it.\n\nExample:\n\n> To confirm your repair booking and contact you about any changes, please share your name and phone number.\n\nFor marketing follow-ups, ask separately rather than assuming permission:\n\n> Would you also like to receive occasional offers or repair reminders by WhatsApp/SMS?  \n> Reply **Yes** or **No**.\n\nThis lets you store two separate things in Airtable:\n\n| Field | Example |\n|---|---|\n| Booking Contact Permission | Yes |\n| Marketing Consent | No |\n| Consent Date | 2025-11-17 |\n| Consent Source | Chatbot booking |\n\nA customer may agree to be contacted about their appointment but not agree to promotional messages. Those are different permissions.\n\n### Validate the phone number\n\nA common automation problem is bad or incomplete phone numbers. Ask customers to include their country code:\n\n> Please enter your phone number with country code, for example: `+351 912 345 678`.\n\nIn Airtable, keep the phone number as a **Phone number** field or a single-line text field. Do not store it as a number/currency field, because formatting and leading `+` signs can be lost.\n\n### Prevent duplicate customer records\n\nThe same person may book more than once. If every booking creates a new Airtable row, you may end up with:\n\n```text\nKevin Costa — +351 912 345 678 — Screen repair\nKevin Costa — +351 912 345 678 — Battery repair\nKevin Costa — +351 912 345 678 — Charger purchase\n```\n\nThat may be fine if your table is a **Bookings** log. But for a proper CRM, it is better to use two tables:\n\n#### Customers table\n\n| Customer ID | Name | Phone Number | Marketing Consent | Total Bookings |\n|---|---|---|---|---|\n| C-001 | Kevin Costa | +351 912 345 678 | Yes | 3 |\n\n#### Bookings table\n\n| Booking ID | Customer | Device | Service | Date | Status |\n|---|---|---|---|---|---|\n| B-001 | Kevin Costa | iPhone 11 | Screen replacement | 20 Nov, 15:00 | Booked |\n| B-002 | Kevin Costa | iPhone 12 | Battery replacement | 4 Dec, 10:30 | Completed |\n\nIn Make, you can later improve the automation:\n\n1. Search Airtable for a customer matching the phone number.\n2. If they exist, link the new booking to that customer.\n3. If they do not exist, create the customer first.\n4. Create the booking and link it to that customer.\n\nThis creates a much cleaner system than putting every detail into one large table.\n\n### Keep booking status accurate\n\nAdd a `Status` field in Airtable:\n\n- New lead  \n- Awaiting confirmation  \n- Booked  \n- Completed  \n- Cancelled  \n- No-show  \n\nThe chatbot can initially create the record as `New lead` or `Awaiting confirmation`. Only mark it `Booked` after the appointment is actually confirmed or successfully added to Google Calendar.\n\nThat prevents your Airtable from treating every enquiry as a confirmed appointment.\n\n### Secure your connection\n\nNever put your Airtable personal access token in chatbot messages, screenshots, public forms, or the webhook body.\n\nThe safe structure is:\n\n```text\nConvocore → Make webhook → Airtable\n```\n\nConvocore only sends customer booking details to Make. Make securely stores the Airtable connection/token and creates the Airtable row."
+    },
+    {
+      "role": "user",
+      "content": "Please make the discussion more concrete and useful."
+    },
+    {
+      "role": "assistant",
+      "content": "Here is a concrete setup you can build for your repair-shop chatbot.\n\n## 1. Create one Airtable table first\n\nStart simple with one table called:\n\n```text\nBookings\n```\n\nCreate these columns exactly:\n\n| Column name | Airtable field type | Example |\n|---|---|---|\n| Name | Single line text | Kevin Costa |\n| Phone Number | Phone number | +351 912 345 678 |\n| Device / Model | Single line text | iPhone 11 |\n| Service Type | Single select | Screen Replacement |\n| Preferred Date | Date | 2025-11-20 |\n| Preferred Time | Single line text | 15:00 |\n| Status | Single select | New Lead |\n| Notes | Long text | Screen is cracked but touch works |\n| Marketing Consent | Single select | Yes / No |\n| Created At | Created time | Automatic |\n\nFor now, do not create a complicated Customers table. One booking table is enough to start getting leads reliably.\n\n---\n\n## 2. Use this exact chatbot conversation flow\n\nYour chatbot should collect information in this order:\n\n```text\n1. What device do you need help with?\n2. What repair do you need?\n3. What is your preferred day and time?\n4. May I have your name to create the booking?\n5. What phone number can we use to confirm the appointment?\n6. Would you like to receive occasional repair offers or reminders by WhatsApp?\n```\n\nUse wording similar to this:\n\n> Great — I can help you book that.  \n> Please tell me your device model, for example “iPhone 11” or “Samsung S22.”\n\n> What service do you need? For example: screen replacement, battery replacement, charging port repair, or diagnostic.\n\n> What day and time would you prefer?\n\n> To confirm the booking, please send your full name.\n\n> Please send your phone number including country code, for example `+351 912 345 678`. We will use it only to contact you about this booking.\n\n> Would you like to receive occasional offers and repair reminders by WhatsApp? Reply **Yes** or **No**.\n\nThe chatbot should not say the booking is confirmed unless it has actually checked/created the appointment in Google Calendar.\n\n---\n\n## 3. Make the webhook send these fields\n\nIn Convocore, find the action that runs after all booking questions have been answered.\n\nSet it to send a `POST` request to your Make webhook URL.\n\nUse this structure:\n\n```json\n{\n  \"name\": \"{{user.name}}\",\n  \"phone_number\": \"{{user.phone}}\",\n  \"device_model\": \"{{device.model}}\",\n  \"service_type\": \"{{repair.type}}\",\n  \"preferred_date\": \"{{booking.date}}\",\n  \"preferred_time\": \"{{booking.time}}\",\n  \"notes\": \"{{notes}}\",\n  \"marketing_consent\": \"{{marketing.consent}}\",\n  \"status\": \"New Lead\"\n}\n```\n\nDo not worry if Convocore uses different variable names. Replace the text inside `{{ }}` with the variables Convocore gives you when you build the questions.\n\nFor example, it may use something closer to:\n\n```json\n{\n  \"name\": \"{{contact_name}}\",\n  \"phone_number\": \"{{phone}}\",\n  \"device_model\": \"{{device}}\",\n  \"service_type\": \"{{service}}\",\n  \"preferred_date\": \"{{date}}\",\n  \"preferred_time\": \"{{time}}\",\n  \"notes\": \"{{customer_notes}}\",\n  \"marketing_consent\": \"{{offers_permission}}\",\n  \"status\": \"New Lead\"\n}\n```\n\nThe field names on the left (`name`, `phone_number`, etc.) should stay consistent, because these are what you will map in Make.\n\n---\n\n## 4. Build the exact Make scenario\n\nCreate this scenario:\n\n```text\nWebhooks: Custom webhook\n        ↓\nAirtable: Create a record\n```\n\n### Module 1: Webhooks — Custom webhook\n\n- Create a new webhook called: `Convocore Booking`\n- Copy its URL.\n- Paste that URL into Convocore.\n- Click **Run once** in Make.\n- Submit one fake booking through the chatbot.\n\nExample test details:\n\n```text\nName: Test Customer\nPhone: +351 912 345 678\nDevice: iPhone 11\nService: Screen Replacement\nDate: 20 November 2025\nTime: 15:00\nNotes: Touch works, but screen is cracked.\nMarketing Consent: No\n```\n\nAfter the test, Make should detect these webhook fields.\n\n### Module 2: Airtable — Create a record\n\nConnect Airtable using a personal access token that has access to your repair-shop base.\n\nSelect:\n\n```text\nBase: Repair Shop CRM\nTable: Bookings\n```\n\nMap fields like this:\n\n| Airtable column | Value from Make webhook |\n|---|---|\n| Name | `name` |\n| Phone Number | `phone_number` |\n| Device / Model | `device_model` |\n| Service Type | `service_type` |\n| Preferred Date | `preferred_date` |\n| Preferred Time | `preferred_time` |\n| Status | `status` |\n| Notes | `notes` |\n| Marketing Consent | `marketing_consent` |\n\nClick **Run once** again and send another test booking. Check whether a new Airtable row appears.\n\nOnce it works, turn the Make scenario **ON**.\n\n---\n\n## 5. Use “New Lead,” not “Booked,” at first\n\nA practical mistake is automatically marking every chatbot conversation as a confirmed booking.\n\nInstead:\n\n- Customer gives details → Airtable status = `New Lead`\n- You call/message them to confirm → change status = `Booked`\n- Repair finished → change status = `Completed`\n- They cancel → change status = `Cancelled`\n\nThis gives"
+    },
+    {
+      "role": "user",
+      "content": "Please consider what might be overlooked or misunderstood."
+    },
+    {
+      "role": "assistant",
+      "content": "A few important things may be overlooked in the setup above.\n\n## 1. “Preferred date/time” is not a confirmed appointment\n\nIf the chatbot only asks:\n\n> What date and time do you prefer?\n\nthen it has collected a **request**, not a real booking.\n\nFor example, a customer may request:\n\n```text\nFriday at 15:00\n```\n\nbut that slot may already be taken.\n\nSo use wording like:\n\n> I’ll check your requested time and send confirmation shortly.\n\nUntil Google Calendar availability is checked and an event is created, Airtable should say:\n\n```text\nStatus: Pending Confirmation\n```\n\nnot `Booked`.\n\nA better status flow is:\n\n```text\nNew Lead\n→ Pending Confirmation\n→ Booked\n→ Completed / Cancelled / No-show\n```\n\n## 2. The webhook may fire too early or more than once\n\nMany chatbots can trigger an automation:\n\n- when a user answers a question,\n- when a lead is created,\n- when a conversation ends,\n- when a booking is completed.\n\nYou want the webhook to run **only after all required details are available**.\n\nOtherwise Airtable may receive incomplete records such as:\n\n```text\nName: Kevin\nPhone: blank\nDevice: iPhone 11\nService: blank\n```\n\nIt can also create duplicates if the customer edits an answer, restarts the chat, or the webhook runs again.\n\n### Practical solution\n\nAdd a final chatbot step:\n\n> Please confirm your request:  \n> **Device:** iPhone 11  \n> **Service:** Screen replacement  \n> **Requested time:** Friday, 15:00  \n> **Name:** Kevin Costa  \n> Reply **Confirm** to send your booking request.\n\nOnly trigger the webhook after the customer replies `Confirm`.\n\nAlso include a unique identifier in the payload if Convocore provides one:\n\n```json\n{\n  \"conversation_id\": \"{{conversation.id}}\",\n  \"lead_id\": \"{{lead.id}}\",\n  \"name\": \"{{user.name}}\",\n  \"phone_number\": \"{{user.phone}}\",\n  \"status\": \"Pending Confirmation\"\n}\n```\n\nThen add `Conversation ID` or `Lead ID` as a field in Airtable. This makes it easier to identify duplicates.\n\n## 3. Variable names may not work exactly as shown\n\nThe JSON examples use placeholders such as:\n\n```text\n{{user.name}}\n{{user.phone}}\n{{booking.time}}\n```\n\nThose are examples, not guaranteed Convocore variables.\n\nIf Convocore does not recognize a variable, it might send the literal text:\n\n```text\n{{user.name}}\n```\n\ninto Airtable—or send a blank value.\n\nBefore enabling the automation, send a test and inspect the Make webhook output. Confirm that it receives a real result:\n\n```json\n{\n  \"name\": \"Test Customer\",\n  \"phone_number\": \"+351912345678\"\n}\n```\n\nand not:\n\n```json\n{\n  \"name\": \"{{user.name}}\",\n  \"phone_number\": \"\"\n}\n```\n\nUse Convocore’s own variable selector/documentation when available.\n\n## 4. Dates can be misread\n\nA customer saying:\n\n```text\nFriday at 3\n```\n\ncan mean different things depending on country, language, and time format.\n\nThe bot should clarify:\n\n> Do you mean Friday 20 November at **15:00** local time?\n\nStore a complete date and time where possible, including timezone. For a Portugal-based repair shop, use the business’s local timezone consistently.\n\nA better Airtable structure is:\n\n| Field | Example |\n|---|---|\n| Requested Appointment | 2025-11-20 15:00 |\n| Timezone | Europe/Lisbon |\n\nUsing separate `Preferred Date` and `Preferred Time` fields is easy at first, but a single proper date-time field is better later for reminders and Calendar automation.\n\n## 5. Airtable field types must match the incoming data\n\nIf Airtable has a single-select field called `Status` with options:\n\n```text\nNew Lead\nPending Confirmation\nBooked\nCompleted\nCancelled\n```\n\nthen Make must send one of those exact values.\n\nFor example, this can fail or create an unexpected value:\n\n```text\npending\n```\n\nwhen Airtable expects:\n\n```text\nPending Confirmation\n```\n\nThe same applies to service names and marketing consent. Keep the labels consistent.\n\nFor example:\n\n| Field | Valid values |\n|---|---|\n| Marketing Consent | Yes, No |\n| Status | New Lead, Pending Confirmation, Booked, Completed, Cancelled |\n| Service Type | Screen Replacement, Battery Replacement, Diagnostic, Charging Port Repair |\n\n## 6. A phone number alone does not mean marketing permission\n\nIt is reasonable to use a phone number to confirm or change the customer’s appointment. It is not automatically permission to send offers, promotions, or bulk WhatsApp messages.\n\nKeep these separate:\n\n| Field | Meaning |\n|---|---|\n| Phone Number | Used for booking communication |\n| Marketing Consent | Permission for promotional messages |\n| Consent Date | When they agreed |\n| Consent Method | Chatbot |\n\nIf they answer `No`, do not put them into promotional campaigns.\n\n## 7. Personal data needs access control\n\nYour Airtable will contain names, phone numbers, and booking history. Avoid:\n\n- sharing the Airtable base publicly;\n- sending export files through unsecured channels;\n- giving every staff member full Airtable admin access;\n- placing Airtable tokens in chatbot prompts or screenshots.\n\nGive technicians access only if they need it, and preferably only to a filtered view that shows their assigned jobs—not your entire customer list.\n\n## 8. You need a failure plan\n\nAutomations can fail because:\n\n- Make scenario is turned off;\n- Make reaches its operation limit;\n- Airtable connection/token expires or loses access;\n- Convocore webhook fails;\n- Airtable fields"
+    },
+    {
+      "role": "user",
+      "content": "Please give the clearest concise response that would help someone continue from here."
+    },
+    {
+      "role": "assistant",
+      "content": "The best next step is to build a **simple test version** before adding Calendar, reminders, or marketing.\n\n### Do this now\n\n1. In Airtable, create a table called **Bookings** with:\n   - Name\n   - Phone Number\n   - Device / Model\n   - Service Type\n   - Requested Appointment\n   - Status\n   - Notes\n   - Marketing Consent\n   - Conversation ID\n\n2. In Make, create:\n   ```text\n   Custom Webhook → Airtable: Create a Record\n   ```\n\n3. In Convocore, send the webhook only after the customer confirms their details.\n\n4. Set the first status to:\n   ```text\n   Pending Confirmation\n   ```\n   not “Booked.”\n\n5. Test with your own details and check:\n   - Does Make receive real values, not `{{variables}}`?\n   - Does Airtable create one row only?\n   - Is the phone number correct?\n   - Is the requested date/time clear?\n   - Does the status say `Pending Confirmation`?\n\nOnce this works reliably, add Google Calendar availability/booking as the next step."
+    }
+  ],
+  "historical_context_in_scoring": false
+}

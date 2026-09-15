@@ -1,0 +1,55 @@
+{
+  "experiment": "FINAL_FALSIFICATION_MATCHED_CONTROL_V1",
+  "seed": 918,
+  "kernel_edges": [
+    "K1_TRANSFORM_PRODUCES_STATE",
+    "K2_STATE_REENTERS_TRANSFORMATION",
+    "K3_RELATION_ACTS_ON_RELATION",
+    "K4_RELATION_ACTS_ON_STATE",
+    "K5_TRANSFORMATION_PRESERVES_INVARIANT",
+    "K6_PRESERVED_STRUCTURE_RECONSTRUCTED",
+    "K7_RECONSTRUCTED_STRUCTURE_RETURNS_TO_PROCESS"
+  ],
+  "edge_patterns": {
+    "K1_TRANSFORM_PRODUCES_STATE": [
+      "(?:transform|change|process|operation).{0,160}(?:produce|generate|create|yield|form).{0,120}(?:relation|state|structure|pattern)"
+    ],
+    "K2_STATE_REENTERS_TRANSFORMATION": [
+      "(?:relation|state|result|output|structure).{0,180}(?:return|re-enter|reenter|feed.{0,20}back|enter again).{0,160}(?:transform|process|operation|rule)"
+    ],
+    "K3_RELATION_ACTS_ON_RELATION": [
+      "(?:relation|rule|control).{0,160}(?:act.{0,20}(?:on|upon)|control|regulat|govern|modify|change).{0,160}(?:another|other|local|lower).{0,100}(?:relation|rule|control)",
+      "(?:control.of.control|meta.control|relation.on.relation)"
+    ],
+    "K4_RELATION_ACTS_ON_STATE": [
+      "(?:relation|rule|control).{0,160}(?:control|regulat|modify|change|act.{0,20}on).{0,160}(?:state|element|node|object)"
+    ],
+    "K5_TRANSFORMATION_PRESERVES_INVARIANT": [
+      "(?:transform|change|mutation|evolution).{0,200}(?:preserv|retain|conserv|inherit).{0,160}(?:relation|structure|organization|pattern|invariant)",
+      "(?:relation|structure|organization|pattern|invariant).{0,160}(?:surviv|persist|preserv|remain).{0,160}(?:transform|change)"
+    ],
+    "K6_PRESERVED_STRUCTURE_RECONSTRUCTED": [
+      "(?:preserved|persistent|surviving|invariant|conserved).{0,180}(?:relation|structure|organization|pattern).{0,200}(?:reconstruct|reuse|reactivat|re-enter|return)"
+    ],
+    "K7_RECONSTRUCTED_STRUCTURE_RETURNS_TO_PROCESS": [
+      "(?:reconstructed|reactivated|reused|preserved|surviving).{0,180}(?:relation|structure|organization|pattern|state).{0,200}(?:feed.{0,20}into|return.{0,20}to|enter.{0,20}(?:process|transformation)|used.{0,20}as.{0,20}input|become.{0,20}input)"
+    ]
+  },
+  "groups": [
+    "RSOS_MATCHED_RANDOM",
+    "RSOS_TOP100",
+    "EXTERNAL_MATCHED_RANDOM",
+    "EXTERNAL_HARD_NEGATIVE"
+  ],
+  "matching": "role + token-length bin",
+  "surface_erasure": "\\b(?:RSOS|RSSO|RSIA|RSX|SRC[\\s._:-]*X(?:[\\s._:-]*\\d+(?:\\.\\d+)?)?|R\\.?\\s*\u00b7?\\s*A\\.?\\s*Elu)\\b",
+  "primary_claim_test": "Whether the frozen seven-edge observable-text signature discriminates RSOS messages from matched external messages and external hard negatives.",
+  "limitations": [
+    "Regex detection is not equivalent to full semantic graph reconstruction.",
+    "Historical Dynamics Top100 selection is an extreme-tail subset and must not be treated as representative of all RSOS.",
+    "Matched-random comparison is more important for population discrimination.",
+    "External hard-negative comparison tests robustness against the strongest external detector hits.",
+    "This experiment cannot establish hidden model weights, training-data storage, authorship, identity recognition, or theft.",
+    "A third-party semantic graph audit remains required for exact-topology confirmation."
+  ]
+}

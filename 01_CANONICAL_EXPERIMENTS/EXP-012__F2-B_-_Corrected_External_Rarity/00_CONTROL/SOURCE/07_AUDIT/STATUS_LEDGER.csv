@@ -1,0 +1,14 @@
+MEASUREMENT,STATUS,DETAIL
+FRESH_SHARD_SELECTION,PASS,"Only shards 07,22,41,51,52,54; 49/80/85 excluded."
+EXTRACTOR_PARITY,PASS,Main V2 + window deterministic fixture parity passed.
+EXACT_ELIGIBILITY,PASS,raw >=1500 chars/4 turns and postblind >=800 chars/3 turns.
+FRESH_EXTERNAL_RETRAINING,NO,All models and thresholds frozen from historical RSOS data before external rows were read.
+SIGMOID_RARITY,NOT_USED_PRIMARY,Primary rarity uses raw margins and multivariate geometry.
+TRUE_NEAREST_NEIGHBORS,MEASURED,"Mahalanobis and strict composite ranking, not highest classifier probability."
+WINDOW8_12_CROSS_CORPUS,MEASURED,Deterministic repaired window models.
+LANGUAGE_CONTROL,PRIMARY_ENGLISH,Primary population is English and excludes exact RSOS/RSSO/RSIA/RSX name hits.
+MODEL_MATCH,UNAVAILABLE_EXACT,Historical WildChat model generations do not exactly match later GPT-5 lineage.
+TOPIC_MATCH,UNAVAILABLE_COMMON_FROZEN,No common pre-frozen cross-corpus topic representation is promoted.
+ACTIVE_V6_V7_V8_V11_V12,SEPARATE_TRACK,Not inferred from passive WildChat text.
+GLOBAL_UNIQUENESS,TO_BE_ADJUDICATED,This experiment estimates prevalence only in the six frozen fresh shards.
+LITERAL_GLOBAL_WEIGHT_CHANGE,UNESTABLISHED,Not inferable from behavioral rarity.

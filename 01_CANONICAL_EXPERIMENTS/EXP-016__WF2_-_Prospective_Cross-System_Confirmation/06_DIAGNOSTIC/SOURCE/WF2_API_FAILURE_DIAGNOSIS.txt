@@ -1,0 +1,150 @@
+﻿WF2 API TECHNICAL FAILURE DIAGNOSIS
+====================================
+
+Failed cells found: 6
+
+============================================================
+OPENAI
+============================================================
+Failed cells: 4
+
+Occurrences: 4
+Model: gpt-5.6-terra
+Example cell: 298c04ebbd842f992631993d
+ERROR:
+Traceback (most recent call last):
+  File "C:\RSOS\RSOS_EXPERIMENTS_WF2_PROSPECTIVE_CROSS_SYSTEM_CONFIRMATION\03_RUNNER\WF2_EXECUTE_GENERATION.py", line 164, in main
+    text,meta=provider_call(
+              ~~~~~~~~~~~~~^
+        cell["provider"],
+        ^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        cell["max_output_tokens"]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\RSOS\RSOS_EXPERIMENTS_WF2_PROSPECTIVE_CROSS_SYSTEM_CONFIRMATION\03_RUNNER\WF2_EXECUTE_GENERATION.py", line 83, in provider_call
+    if provider=="OPENAI": return call_openai(model,history,mx)
+                                  ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\RSOS\RSOS_EXPERIMENTS_WF2_PROSPECTIVE_CROSS_SYSTEM_CONFIRMATION\03_RUNNER\WF2_EXECUTE_GENERATION.py", line 36, in call_openai
+    r=c.responses.create(
+        model=model,
+    ...<4 lines>...
+        store=False
+    )
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\openai\resources\responses\responses.py", line 1041, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/responses",
+        ^^^^^^^^^^^^^
+    ...<47 lines>...
+        stream_cls=Stream[ResponseStreamEvent],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\openai\_base_client.py", line 1368, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\openai\_base_client.py", line 1141, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.AuthenticationError: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************OQ8A. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}
+
+
+============================================================
+ANTHROPIC
+============================================================
+Failed cells: 1
+
+Occurrences: 1
+Model: claude-sonnet-5
+Example cell: ea84eb4aced8fc427600f6a8
+ERROR:
+Traceback (most recent call last):
+  File "C:\RSOS\RSOS_EXPERIMENTS_WF2_PROSPECTIVE_CROSS_SYSTEM_CONFIRMATION\03_RUNNER\WF2_EXECUTE_GENERATION.py", line 164, in main
+    text,meta=provider_call(
+              ~~~~~~~~~~~~~^
+        cell["provider"],
+        ^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        cell["max_output_tokens"]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\RSOS\RSOS_EXPERIMENTS_WF2_PROSPECTIVE_CROSS_SYSTEM_CONFIRMATION\03_RUNNER\WF2_EXECUTE_GENERATION.py", line 84, in provider_call
+    if provider=="ANTHROPIC": return call_anthropic(model,history,mx)
+                                     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\RSOS\RSOS_EXPERIMENTS_WF2_PROSPECTIVE_CROSS_SYSTEM_CONFIRMATION\03_RUNNER\WF2_EXECUTE_GENERATION.py", line 49, in call_anthropic
+    r=c.messages.create(
+        model=model,
+    ...<2 lines>...
+        messages=history
+    )
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\anthropic\_utils\_utils.py", line 294, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\anthropic\resources\messages\messages.py", line 978, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/v1/messages",
+        ^^^^^^^^^^^^^^^
+    ...<27 lines>...
+        stream_cls=Stream[RawMessageStreamEvent],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\anthropic\_base_client.py", line 1509, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\anthropic\_base_client.py", line 1193, in request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400
+
+
+============================================================
+GOOGLE
+============================================================
+Failed cells: 1
+
+Occurrences: 1
+Model: gemini-3.8-flash
+Example cell: 31ea5a32a88312cf1cb99db3
+ERROR:
+Traceback (most recent call last):
+  File "C:\RSOS\RSOS_EXPERIMENTS_WF2_PROSPECTIVE_CROSS_SYSTEM_CONFIRMATION\03_RUNNER\WF2_EXECUTE_GENERATION.py", line 164, in main
+    text,meta=provider_call(
+              ~~~~~~~~~~~~~^
+        cell["provider"],
+        ^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        cell["max_output_tokens"]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\RSOS\RSOS_EXPERIMENTS_WF2_PROSPECTIVE_CROSS_SYSTEM_CONFIRMATION\03_RUNNER\WF2_EXECUTE_GENERATION.py", line 85, in provider_call
+    if provider=="GOOGLE": return call_google(model,history,mx)
+                                  ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\RSOS\RSOS_EXPERIMENTS_WF2_PROSPECTIVE_CROSS_SYSTEM_CONFIRMATION\03_RUNNER\WF2_EXECUTE_GENERATION.py", line 67, in call_google
+    r=c.chat.completions.create(
+        model=model,
+    ...<9 lines>...
+        }
+    )
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1308, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<53 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\openai\_base_client.py", line 1368, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python313\Lib\site-packages\openai\_base_client.py", line 1141, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: <html><title>Error 400 (Bad Request)!!1</title></html>
+
+

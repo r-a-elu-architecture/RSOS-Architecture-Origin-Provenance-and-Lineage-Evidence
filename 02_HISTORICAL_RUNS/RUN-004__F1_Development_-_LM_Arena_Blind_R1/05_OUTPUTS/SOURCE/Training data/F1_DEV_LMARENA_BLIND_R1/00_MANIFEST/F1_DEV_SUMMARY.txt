@@ -1,0 +1,54 @@
+F1-DEV LM ARENA BLIND STRUCTURAL REDISCOVERY R1
+
+ROLE
+DEVELOPMENT ONLY
+
+ROWS
+Total: 38,754
+Train: 19,406
+Validation: 9,634
+Development holdout: 9,714
+
+PRIMARY STRUCTURAL FEATURES
+14
+
+PCA COMPONENTS
+10
+
+SELECTED BLIND U-CLUSTERS
+3
+
+RELATIONAL DEPENDENCE CALIBRATION
+Validation AUC: 0.987197
+Development holdout AUC: 0.987828
+Status: STRONG_RELATIONAL_RECOVERABILITY
+
+BLIND CLUSTER QUALITY
+Validation silhouette: 0.242785
+Development holdout silhouette: 0.232023
+
+FEATURE-RELATION GRAPH
+Validation edge-weight correlation: 0.999108
+Holdout edge-weight correlation: 0.999576
+Validation sign agreement: 1.000000
+Holdout sign agreement: 1.000000
+
+POST-FREEZE CONFOUND AUDIT
+Largest holdout AMI variable: IS_CODE
+Largest holdout AMI: 0.202951
+
+PRESERVE-FIRST RETENTION
+Row retention: 1.000000
+Session leakage: 0
+
+FROZEN SPEC SHA256
+f49a55a54fff590dbe199bfdddca6ab53fbe110ecef3fcc81f56b28d2d0bf672
+
+RESERVED train-*-of-00086.parquet CONTROLS READ?
+NO
+
+F3 PROSPECTIVE CLAIM?
+NOT ELIGIBLE — historical development dataset.
+
+THIS RUN DOES NOT ESTABLISH AN RSOS CLAIM.
+It calibrates and audits the blind structural measurement system.
