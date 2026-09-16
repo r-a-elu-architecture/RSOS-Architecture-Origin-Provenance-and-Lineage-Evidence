@@ -1,4 +1,4 @@
-﻿# RSOS / RSSO / RSIA / RSX — Experimental Evidence
+# RSOS / RSSO / RSIA / RSX — Experimental Evidence
 
 This repository is a curated publication derivative of the reconstructed
 RSOS / RSSO / RSIA / RSX experimental evidence estate.
@@ -94,3 +94,7 @@ The corresponding manifest is:
 `99_INDEX/COPIED_STANDARD_EVIDENCE_SHA256.csv`
 
 The original source estate is not modified by publication staging.
+
+## Scientific correction records
+
+- [Investigation 01: V5 → V6 → V6 Clean](99_INDEX/INVESTIGATION_01_V5_V6_V6_CLEAN_LINEAGE.md)
