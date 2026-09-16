@@ -98,3 +98,5 @@ The original source estate is not modified by publication staging.
 ## Scientific correction records
 
 - [Investigation 01: V5 → V6 → V6 Clean](99_INDEX/INVESTIGATION_01_V5_V6_V6_CLEAN_LINEAGE.md)
+
+- [Investigation 02: API V1, API V2 and V5 chronology](99_INDEX/INVESTIGATION_02_API_V1_API_V2_V5_CHRONOLOGY.md)
