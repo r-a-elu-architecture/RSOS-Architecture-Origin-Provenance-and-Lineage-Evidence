@@ -112,3 +112,4 @@ The original source estate is not modified by publication staging.
 - [EXP-006 V8 factor-label collision and scientific authority](01_CANONICAL_EXPERIMENTS/EXP-006__V8_-_Compositional_Structural_Control/07_ADJUDICATION/EXP-006_V8_FACTOR_LABEL_COLLISION_AUTHORITY_ADDENDUM_20260918.md)
 - [EXP-007 V9 transport scientific authority](01_CANONICAL_EXPERIMENTS/EXP-007__V9_-_Representational_Transport_Operator/07_ADJUDICATION/EXP-007_V9_TRANSPORT_AUTHORITY_ADDENDUM_20260918.md)
 - [EXP-008 V6 Clean identity and scientific authority](01_CANONICAL_EXPERIMENTS/EXP-008__V11_-_Relational_Graph_Structural_Metric_Clean_Repair/07_ADJUDICATION/EXP-008_V6_CLEAN_IDENTITY_AND_AUTHORITY_ADDENDUM_20260918.md)
+- [EXP-009 V12 original results and scientific authority](01_CANONICAL_EXPERIMENTS/EXP-009__V12_-_Relational_Topology_Causal_Map/07_ADJUDICATION/EXP-009_V12_ORIGINAL_RESULTS_AUTHORITY_ADDENDUM_20260918.md)
