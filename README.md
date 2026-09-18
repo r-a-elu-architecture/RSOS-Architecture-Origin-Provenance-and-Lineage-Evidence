@@ -115,3 +115,4 @@ The original source estate is not modified by publication staging.
 - [EXP-009 V12 original results and scientific authority](01_CANONICAL_EXPERIMENTS/EXP-009__V12_-_Relational_Topology_Causal_Map/07_ADJUDICATION/EXP-009_V12_ORIGINAL_RESULTS_AUTHORITY_ADDENDUM_20260918.md)
 - [EXP-010 F1 final authority and reproducibility](01_CANONICAL_EXPERIMENTS/EXP-010__F1_-_Blind_Longitudinal_Rediscovery_Final/07_ADJUDICATION/EXP-010_F1_FINAL_AUTHORITY_ADDENDUM_20260918.md)
 - [EXP-011 F2-A external rarity and scientific authority](01_CANONICAL_EXPERIMENTS/EXP-011__F2_-_External_Population_Rarity/07_ADJUDICATION/EXP-011_F2_A_EXTERNAL_RARITY_AUTHORITY_ADDENDUM_20260918.md)
+- [EXP-012 F2-B corrected external rarity and authority](01_CANONICAL_EXPERIMENTS/EXP-012__F2-B_-_Corrected_External_Rarity/07_ADJUDICATION/EXP-012_F2_B_CORRECTED_RARITY_AUTHORITY_ADDENDUM_20260918.md)
