@@ -117,3 +117,4 @@ The original source estate is not modified by publication staging.
 - [EXP-011 F2-A external rarity and scientific authority](01_CANONICAL_EXPERIMENTS/EXP-011__F2_-_External_Population_Rarity/07_ADJUDICATION/EXP-011_F2_A_EXTERNAL_RARITY_AUTHORITY_ADDENDUM_20260918.md)
 - [EXP-012 F2-B corrected external rarity and authority](01_CANONICAL_EXPERIMENTS/EXP-012__F2-B_-_Corrected_External_Rarity/07_ADJUDICATION/EXP-012_F2_B_CORRECTED_RARITY_AUTHORITY_ADDENDUM_20260918.md)
 - [EXP-013 WF1-P0 discovery and feature-freeze authority](01_CANONICAL_EXPERIMENTS/EXP-013__WF1-P0_-_Historical_Corpus_Bridge/07_ADJUDICATION/EXP-013_WF1_P0_DISCOVERY_AND_FEATURE_FREEZE_AUTHORITY_ADDENDUM_20260918.md)
+- [EXP-014 WF1-A corrective topology authority and missingness](01_CANONICAL_EXPERIMENTS/EXP-014__WF1-A_-_Corrective_Causal_Topology/07_ADJUDICATION/EXP-014_WF1_A_CORRECTIVE_TOPOLOGY_AUTHORITY_ADDENDUM_20260918.md)
