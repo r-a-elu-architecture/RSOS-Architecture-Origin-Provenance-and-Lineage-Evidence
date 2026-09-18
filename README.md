@@ -119,3 +119,4 @@ The original source estate is not modified by publication staging.
 - [EXP-013 WF1-P0 discovery and feature-freeze authority](01_CANONICAL_EXPERIMENTS/EXP-013__WF1-P0_-_Historical_Corpus_Bridge/07_ADJUDICATION/EXP-013_WF1_P0_DISCOVERY_AND_FEATURE_FREEZE_AUTHORITY_ADDENDUM_20260918.md)
 - [EXP-014 WF1-A corrective topology authority and missingness](01_CANONICAL_EXPERIMENTS/EXP-014__WF1-A_-_Corrective_Causal_Topology/07_ADJUDICATION/EXP-014_WF1_A_CORRECTIVE_TOPOLOGY_AUTHORITY_ADDENDUM_20260918.md)
 - [EXP-015 WF1-B external-population authority and reproducibility audit](01_CANONICAL_EXPERIMENTS/EXP-015__WF1-B_-_External_Population_Confirmation/07_ADJUDICATION/EXP-015_WF1_B_EXTERNAL_POPULATION_AUTHORITY_ADDENDUM_20260918.md)
+- [EXP-016 WF2 final scientific and custody authority](01_CANONICAL_EXPERIMENTS/EXP-016__WF2_-_Prospective_Cross-System_Confirmation/07_ADJUDICATION/EXP-016_WF2_FINAL_SCIENTIFIC_AND_CUSTODY_AUTHORITY_ADDENDUM_20260918.md)
