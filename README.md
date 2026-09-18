@@ -105,3 +105,4 @@ The original source estate is not modified by publication staging.
 ## Experiment authority addenda
 
 - [EXP-001 Response Validity and Historical Authority](01_CANONICAL_EXPERIMENTS/EXP-001__V5_-_Forest_Forensic_Full/07_ADJUDICATION/EXP-001_RESPONSE_VALIDITY_ADDENDUM_20260917.md)
+- [EXP-002 V6 correction and scientific authority](01_CANONICAL_EXPERIMENTS/EXP-002__V6_-_Structural_Fingerprint_Vector/07_ADJUDICATION/EXP-002_V6_CORRECTION_AUTHORITY_ADDENDUM_20260918.md)
