@@ -100,3 +100,8 @@ The original source estate is not modified by publication staging.
 - [Investigation 01: V5 → V6 → V6 Clean](99_INDEX/INVESTIGATION_01_V5_V6_V6_CLEAN_LINEAGE.md)
 
 - [Investigation 02: API V1, API V2 and V5 chronology](99_INDEX/INVESTIGATION_02_API_V1_API_V2_V5_CHRONOLOGY.md)
+
+
+## Experiment authority addenda
+
+- [EXP-001 Response Validity and Historical Authority](01_CANONICAL_EXPERIMENTS/EXP-001__V5_-_Forest_Forensic_Full/07_ADJUDICATION/EXP-001_RESPONSE_VALIDITY_ADDENDUM_20260917.md)
