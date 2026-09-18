@@ -109,3 +109,4 @@ The original source estate is not modified by publication staging.
 - [EXP-003 API V1 historical authority correction](01_CANONICAL_EXPERIMENTS/EXP-003__API_Fingerprint_Experiment_V1/07_ADJUDICATION/EXP-003_API_V1_AUTHORITY_ADDENDUM_20260918.md)
 - [EXP-004 API V2 execution and scientific authority](01_CANONICAL_EXPERIMENTS/EXP-004__API_Fingerprint_Experiment_V2/07_ADJUDICATION/EXP-004_API_V2_EXECUTION_AUTHORITY_ADDENDUM_20260918.md)
 - [EXP-005 V7 cross-model scientific authority](01_CANONICAL_EXPERIMENTS/EXP-005__V7_-_Cross-Model_Deployment_Localization/07_ADJUDICATION/EXP-005_V7_CROSS_MODEL_AUTHORITY_ADDENDUM_20260918.md)
+- [EXP-006 V8 factor-label collision and scientific authority](01_CANONICAL_EXPERIMENTS/EXP-006__V8_-_Compositional_Structural_Control/07_ADJUDICATION/EXP-006_V8_FACTOR_LABEL_COLLISION_AUTHORITY_ADDENDUM_20260918.md)
