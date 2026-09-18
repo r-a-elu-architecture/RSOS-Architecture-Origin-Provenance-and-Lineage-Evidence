@@ -121,3 +121,4 @@ The original source estate is not modified by publication staging.
 - [EXP-015 WF1-B external-population authority and reproducibility audit](01_CANONICAL_EXPERIMENTS/EXP-015__WF1-B_-_External_Population_Confirmation/07_ADJUDICATION/EXP-015_WF1_B_EXTERNAL_POPULATION_AUTHORITY_ADDENDUM_20260918.md)
 - [EXP-016 WF2 final scientific and custody authority](01_CANONICAL_EXPERIMENTS/EXP-016__WF2_-_Prospective_Cross-System_Confirmation/07_ADJUDICATION/EXP-016_WF2_FINAL_SCIENTIFIC_AND_CUSTODY_AUTHORITY_ADDENDUM_20260918.md)
 - [EXP-015 R3 adapter recovery and parity follow-up](01_CANONICAL_EXPERIMENTS/EXP-015__WF1-B_-_External_Population_Confirmation/07_ADJUDICATION/EXP-015_WF1_B_R3_ADAPTER_RECOVERY_FOLLOWUP_20260918.md)
+- [Repository-wide 16-experiment closure audit](99_INDEX/REPOSITORY_CLOSURE_AUDIT_20260918.md)
